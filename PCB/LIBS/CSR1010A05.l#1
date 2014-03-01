@@ -87,7 +87,6 @@
 <vertex x="1" y="2.5"/>
 <vertex x="0.65" y="2.85"/>
 </polygon>
-<rectangle x1="-0.45" y1="-0.1" x2="1.05" y2="0.5" layer="1"/>
 <polygon width="0.05" layer="1" spacing="0.1">
 <vertex x="2.025" y="3.225"/>
 <vertex x="2.025" y="3.075"/>
@@ -131,7 +130,6 @@
 <vertex x="-2.275" y="-0.8"/>
 <vertex x="-2.275" y="-1.075"/>
 </polygon>
-<rectangle x1="-0.5" y1="-1.1" x2="-0.4" y2="-0.1" layer="1"/>
 <polygon width="0.05" layer="1" spacing="0.1">
 <vertex x="-2.275" y="3.875"/>
 <vertex x="-2.125" y="3.875"/>

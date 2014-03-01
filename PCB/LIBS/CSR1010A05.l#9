@@ -70,15 +70,15 @@
 <smd name="PIO[8]/DEBUG_MISO" x="1.85" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="PIO[9]" x="1.85" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="SMPS_LX" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="VDD_CORE@1" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="VDD_CORE" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="I2C_SDA" x="-0.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="I2C_SCL" x="-0.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="PIO[2]" x="0.3" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="RF" x="-2.75" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="VDD_REG_IN" x="-2.75" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="VDD_CORE" x="-2.75" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="WAKE" x="-2.75" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="XTAL_32K_IN" x="-2.75" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="P$27" x="-2.75" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="P$28" x="-2.75" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="P$29" x="-2.75" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="XTAL_32K_OUT" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <polygon width="0.05" layer="1" spacing="0.1">
 <vertex x="2.025" y="3.225"/>
@@ -165,90 +165,45 @@
 </packages>
 <symbols>
 <symbol name="CSR1010A05-IQQM-R">
+<wire x1="38.1" y1="58.42" x2="35.56" y2="60.96" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="30.48" x2="-33.02" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="-33.02" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
-<pin name="VDD_BAT" x="-38.1" y="25.4" visible="pin" length="middle" direction="out"/>
-<pin name="XTAL_32K_OUT" x="-38.1" y="17.78" visible="pin" length="middle" direction="out"/>
-<pin name="XTAL_32K_IN" x="-38.1" y="10.16" visible="pin" length="middle" direction="out"/>
-<pin name="WAKE" x="-38.1" y="2.54" visible="pin" length="middle" direction="out"/>
-<pin name="VDD_CORE" x="-38.1" y="-5.08" visible="pin" length="middle" direction="out"/>
-<pin name="VDD_REG_IN" x="-38.1" y="-12.7" visible="pin" length="middle" direction="out"/>
-<pin name="RF" x="-38.1" y="-20.32" visible="pin" length="middle" direction="out"/>
-<pin name="VDD_XTAL" x="-38.1" y="-27.94" visible="pin" length="middle" direction="out"/>
+<pin name="VDD_BAT" x="-38.1" y="25.4" length="middle" direction="out"/>
+<pin name="XTAL_32K_OUT" x="-38.1" y="17.78" length="middle" direction="out"/>
+<pin name="XTAL_32K_IN" x="-38.1" y="10.16" length="middle" direction="out"/>
+<pin name="WAKE" x="-38.1" y="2.54" length="middle" direction="out"/>
+<pin name="VDD_CORE" x="-38.1" y="-5.08" length="middle" direction="out"/>
+<pin name="VDD_REG_IN" x="-38.1" y="-12.7" length="middle" direction="out"/>
+<pin name="RF" x="-38.1" y="-20.32" length="middle" direction="out"/>
+<pin name="VDD_XTAL" x="-38.1" y="-27.94" length="middle" direction="out"/>
 <wire x1="-33.02" y1="30.48" x2="30.48" y2="30.48" width="0.254" layer="94"/>
 <wire x1="30.48" y1="30.48" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
-<pin name="XTAL_16M_OUT" x="-27.94" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="XTAL_16M_IN" x="-20.32" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="AIO[2]" x="-12.7" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="AIO[1]" x="-5.08" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="AIO[0]" x="2.54" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[0]/UART_TX" x="10.16" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[1]/UART_RX" x="17.78" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[3]/SF_DIN" x="25.4" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[4]/SF_CS#" x="35.56" y="-27.94" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[5]/DEBUG_CLK" x="35.56" y="-20.32" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[6]/DEBUG_CS#" x="35.56" y="-12.7" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[7]/DEBUG_MOSI" x="35.56" y="-5.08" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="VDD_PADS" x="35.56" y="2.54" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[8]/DEBUG_MISO" x="35.56" y="10.16" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[9]" x="35.56" y="17.78" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[10]" x="35.56" y="25.4" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[11]" x="25.4" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="SPI_PIO#" x="17.78" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="PIO[2]" x="10.16" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="I2C_SCL" x="2.54" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="I2C_SDA" x="-5.08" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="SMPS_LX" x="-20.32" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="VDD_BAT_SMPS" x="-27.94" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="VDD_CORE@1" x="-12.7" y="35.56" visible="pin" length="middle" rot="R270"/>
+<pin name="XTAL_16M_OUT" x="-27.94" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="XTAL_16M_IN" x="-20.32" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="AIO[2]" x="-12.7" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="AIO[1]" x="-5.08" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="AIO[0]" x="2.54" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[0]/UART_TX" x="10.16" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[1]/UART_RX" x="17.78" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[3]/SF_DIN" x="25.4" y="-38.1" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[4]/SF_CS#" x="35.56" y="-27.94" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[5]/DEBUG_CLK" x="35.56" y="-20.32" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[6]/DEBUG_CS#" x="35.56" y="-12.7" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[7]/DEBUG_MOSI" x="35.56" y="-5.08" length="middle" direction="out" rot="R180"/>
+<pin name="VDD_PADS" x="35.56" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[8]/DEBUG_MISO" x="35.56" y="10.16" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[9]" x="35.56" y="17.78" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[10]" x="35.56" y="25.4" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[11]" x="25.4" y="35.56" length="middle" direction="out" rot="R270"/>
+<pin name="SPI_PIO#" x="17.78" y="35.56" length="middle" direction="out" rot="R270"/>
+<pin name="PIO[2]" x="10.16" y="35.56" length="middle" direction="out" rot="R270"/>
+<pin name="I2C_SCL" x="2.54" y="35.56" length="middle" direction="out" rot="R270"/>
+<pin name="I2C_SDA" x="-5.08" y="35.56" length="middle" direction="out" rot="R270"/>
+<pin name="SMPS_LX" x="-20.32" y="35.56" length="middle" direction="out" rot="R270"/>
+<pin name="VDD_BAT_SMPS" x="-27.94" y="35.56" length="middle" direction="out" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="CSR1010A05-IQQM-R">
-<gates>
-<gate name="G$1" symbol="CSR1010A05-IQQM-R" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CSR1010A05-IQQM-R">
-<connects>
-<connect gate="G$1" pin="AIO[0]" pad="AIO[0]"/>
-<connect gate="G$1" pin="AIO[1]" pad="AIO[1]"/>
-<connect gate="G$1" pin="AIO[2]" pad="AIO[2]"/>
-<connect gate="G$1" pin="I2C_SCL" pad="I2C_SCL"/>
-<connect gate="G$1" pin="I2C_SDA" pad="I2C_SDA"/>
-<connect gate="G$1" pin="PIO[0]/UART_TX" pad="PIO[0]/UART_TX"/>
-<connect gate="G$1" pin="PIO[10]" pad="PIO[10]"/>
-<connect gate="G$1" pin="PIO[11]" pad="PIO[11]"/>
-<connect gate="G$1" pin="PIO[1]/UART_RX" pad="PIO[1]/UART_RX"/>
-<connect gate="G$1" pin="PIO[2]" pad="PIO[2]"/>
-<connect gate="G$1" pin="PIO[3]/SF_DIN" pad="PIO[3]/SF_DIN"/>
-<connect gate="G$1" pin="PIO[4]/SF_CS#" pad="PIO[4]/SF_CS#"/>
-<connect gate="G$1" pin="PIO[5]/DEBUG_CLK" pad="PIO[5]/DEBUG_CLK"/>
-<connect gate="G$1" pin="PIO[6]/DEBUG_CS#" pad="PIO[6]/DEBUG_CS#"/>
-<connect gate="G$1" pin="PIO[7]/DEBUG_MOSI" pad="PIO[7]/DEBUG_MOSI"/>
-<connect gate="G$1" pin="PIO[8]/DEBUG_MISO" pad="PIO[8]/DEBUG_MISO"/>
-<connect gate="G$1" pin="PIO[9]" pad="PIO[9]"/>
-<connect gate="G$1" pin="RF" pad="RF"/>
-<connect gate="G$1" pin="SMPS_LX" pad="SMPS_LX"/>
-<connect gate="G$1" pin="SPI_PIO#" pad="SPI_PIO#"/>
-<connect gate="G$1" pin="VDD_BAT" pad="VDD_BAT"/>
-<connect gate="G$1" pin="VDD_BAT_SMPS" pad="VDD_BAT_SMPS"/>
-<connect gate="G$1" pin="VDD_CORE" pad="VDD_CORE"/>
-<connect gate="G$1" pin="VDD_PADS" pad="VDD_PADS"/>
-<connect gate="G$1" pin="VDD_REG_IN" pad="VDD_REG_IN"/>
-<connect gate="G$1" pin="VDD_XTAL" pad="VDD_XTAL"/>
-<connect gate="G$1" pin="WAKE" pad="WAKE"/>
-<connect gate="G$1" pin="XTAL_16M_IN" pad="XTAL_16M_IN"/>
-<connect gate="G$1" pin="XTAL_16M_OUT" pad="XTAL_16M_OUT"/>
-<connect gate="G$1" pin="XTAL_32K_IN" pad="XTAL_32K_IN"/>
-<connect gate="G$1" pin="XTAL_32K_OUT" pad="XTAL_32K_OUT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 </drawing>

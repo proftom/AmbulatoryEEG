@@ -57,29 +57,29 @@
 <library>
 <packages>
 <package name="CSR1010A05-IQQM-R">
-<smd name="P$1" x="-1.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$2" x="-1.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$3" x="-0.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$4" x="-0.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$5" x="0.3" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$6" x="0.8" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$9" x="1.85" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$10" x="1.85" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$11" x="1.85" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$12" x="1.85" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$13" x="1.85" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$14" x="1.85" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$17" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$18" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$19" x="-0.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$20" x="-0.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$21" x="0.3" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$25" x="-2.75" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$26" x="-2.75" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="XTAL_16M_IN" x="-1.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="AIO[2]" x="-1.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="AIO[1]" x="-0.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="AIO[0]" x="-0.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[0]/UART_TX" x="0.3" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[1]/UART_RX" x="0.8" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[4]/SF_CS#" x="1.85" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[6]/DEBUG_CS#" x="1.85" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[7]/DEBUG_MOSI" x="1.85" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="VDD_PADS" x="1.85" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[8]/DEBUG_MISO" x="1.85" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[9]" x="1.85" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="SMPS_LX" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="VDD_CORE" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="I2C_SDA" x="-0.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="I2C_SCL" x="-0.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[2]" x="0.3" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="RF" x="-2.75" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="VDD_REG_IN" x="-2.75" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$27" x="-2.75" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$28" x="-2.75" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$29" x="-2.75" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$30" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="XTAL_32K_OUT" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <polygon width="0.05" layer="1" spacing="0.1">
 <vertex x="2.025" y="3.225"/>
 <vertex x="2.025" y="3.075"/>
@@ -87,7 +87,7 @@
 <vertex x="1.675" y="3.15"/>
 <vertex x="1.75" y="3.225"/>
 </polygon>
-<smd name="P$16" x="0.8" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="SPI_PIO#" x="0.8" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <polygon width="0.05" layer="1" spacing="0.1">
 <vertex x="1.225" y="3.875"/>
 <vertex x="1.225" y="3.525"/>
@@ -144,6 +144,13 @@
 <vertex x="1.025" y="2.875"/>
 <vertex x="1.025" y="-0.075"/>
 </polygon>
+<wire x1="-2.925" y1="3.525" x2="-2.925" y2="-1.075" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="-1.075" x2="2.025" y2="-1.075" width="0.05" layer="21"/>
+<wire x1="2.025" y1="-1.075" x2="2.025" y2="3.875" width="0.05" layer="21"/>
+<wire x1="2.025" y1="3.875" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
+<wire x1="-2.575" y1="3.875" x2="-2.925" y2="3.875" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="3.875" x2="-2.925" y2="3.525" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="3.525" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
 </package>
 </packages>
 <symbols>

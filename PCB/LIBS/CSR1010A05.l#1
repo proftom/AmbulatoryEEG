@@ -69,8 +69,8 @@
 <smd name="P$12" x="1.85" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$13" x="1.85" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$14" x="1.85" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$17" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="P$18" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="SMPS_LX" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="VDD_CORE" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="P$19" x="-0.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="P$20" x="-0.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
 <smd name="P$21" x="0.3" y="3.7" dx="0.186" dy="0.4" layer="1"/>
@@ -79,14 +79,7 @@
 <smd name="P$27" x="-2.75" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$28" x="-2.75" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <smd name="P$29" x="-2.75" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$30" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<polygon width="0.1" layer="1" spacing="0.1">
-<vertex x="-1.9" y="2.85"/>
-<vertex x="-1.9" y="-0.05"/>
-<vertex x="1" y="-0.05"/>
-<vertex x="1" y="2.5"/>
-<vertex x="0.65" y="2.85"/>
-</polygon>
+<smd name="XTAL_32K_OUT" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
 <polygon width="0.05" layer="1" spacing="0.1">
 <vertex x="2.025" y="3.225"/>
 <vertex x="2.025" y="3.075"/>
@@ -144,6 +137,20 @@
 <vertex x="-2.65" y="3.225"/>
 <vertex x="-2.925" y="3.225"/>
 </polygon>
+<polygon width="0.05" layer="1" spacing="0.1">
+<vertex x="-1.925" y="-0.075"/>
+<vertex x="-1.925" y="2.5"/>
+<vertex x="-1.55" y="2.875"/>
+<vertex x="1.025" y="2.875"/>
+<vertex x="1.025" y="-0.075"/>
+</polygon>
+<wire x1="-2.925" y1="3.525" x2="-2.925" y2="-1.075" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="-1.075" x2="2.025" y2="-1.075" width="0.05" layer="21"/>
+<wire x1="2.025" y1="-1.075" x2="2.025" y2="3.875" width="0.05" layer="21"/>
+<wire x1="2.025" y1="3.875" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
+<wire x1="-2.575" y1="3.875" x2="-2.925" y2="3.875" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="3.875" x2="-2.925" y2="3.525" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="3.525" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
 </package>
 </packages>
 <symbols>

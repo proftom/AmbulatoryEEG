@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,12 +39,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -681,24 +681,6 @@ at 30/04/2012 16:26:10</description>
 <text x="-3.4544" y="1.27" size="2.0828" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-3.4544" y="-3.175" size="2.0828" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
 </package>
-<package name="CAPC3225X170N">
-<smd name="1" x="-1.4986" y="0" dx="1.1176" dy="2.6924" layer="1"/>
-<smd name="2" x="1.4986" y="0" dx="1.1176" dy="2.6924" layer="1"/>
-<wire x1="-0.6096" y1="-1.3462" x2="0.6096" y2="-1.3462" width="0.1524" layer="21"/>
-<wire x1="0.6096" y1="1.3462" x2="-0.6096" y2="1.3462" width="0.1524" layer="21"/>
-<wire x1="-0.9398" y1="-1.3462" x2="-0.9398" y2="1.3462" width="0.1524" layer="51"/>
-<wire x1="-0.9398" y1="1.3462" x2="-1.7018" y2="1.3462" width="0.1524" layer="51"/>
-<wire x1="-1.7018" y1="-1.3462" x2="-0.9398" y2="-1.3462" width="0.1524" layer="51"/>
-<wire x1="0.9398" y1="1.3462" x2="0.9398" y2="-1.3462" width="0.1524" layer="51"/>
-<wire x1="0.9398" y1="-1.3462" x2="1.7018" y2="-1.3462" width="0.1524" layer="51"/>
-<wire x1="1.7018" y1="1.3462" x2="0.9398" y2="1.3462" width="0.1524" layer="51"/>
-<wire x1="-0.9398" y1="-1.3462" x2="0.9398" y2="-1.3462" width="0.1524" layer="51"/>
-<wire x1="1.7018" y1="-1.3462" x2="1.7018" y2="1.3462" width="0.1524" layer="51"/>
-<wire x1="0.9398" y1="1.3462" x2="-0.9398" y2="1.3462" width="0.1524" layer="51"/>
-<wire x1="-1.7018" y1="1.3462" x2="-1.7018" y2="-1.3462" width="0.1524" layer="51"/>
-<text x="-4.7752" y="2.159" size="2.0828" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-5.461" y="-4.1402" size="2.0828" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
-</package>
 <package name="CAPC2012X130N">
 <smd name="1" x="-0.9144" y="0" dx="1.1176" dy="1.4478" layer="1"/>
 <smd name="2" x="0.9144" y="0" dx="1.1176" dy="1.4478" layer="1"/>
@@ -714,6 +696,24 @@ at 30/04/2012 16:26:10</description>
 <wire x1="-1.1176" y1="0.7366" x2="-1.1176" y2="-0.7366" width="0.1524" layer="51"/>
 <text x="-4.4958" y="1.4732" size="2.0828" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-5.7404" y="-3.7338" size="2.0828" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+</package>
+<package name="CAPC3225X127N">
+<smd name="1" x="-1.4986" y="0" dx="1.1176" dy="2.6924" layer="1"/>
+<smd name="2" x="1.4986" y="0" dx="1.1176" dy="2.6924" layer="1"/>
+<wire x1="-0.6096" y1="-1.3462" x2="0.6096" y2="-1.3462" width="0.1524" layer="21"/>
+<wire x1="0.6096" y1="1.3462" x2="-0.6096" y2="1.3462" width="0.1524" layer="21"/>
+<wire x1="-0.9398" y1="-1.3462" x2="-0.9398" y2="1.3462" width="0.1524" layer="51"/>
+<wire x1="-0.9398" y1="1.3462" x2="-1.7018" y2="1.3462" width="0.1524" layer="51"/>
+<wire x1="-1.7018" y1="-1.3462" x2="-0.9398" y2="-1.3462" width="0.1524" layer="51"/>
+<wire x1="0.9398" y1="1.3462" x2="0.9398" y2="-1.3462" width="0.1524" layer="51"/>
+<wire x1="0.9398" y1="-1.3462" x2="1.7018" y2="-1.3462" width="0.1524" layer="51"/>
+<wire x1="1.7018" y1="1.3462" x2="0.9398" y2="1.3462" width="0.1524" layer="51"/>
+<wire x1="-0.9398" y1="-1.3462" x2="0.9398" y2="-1.3462" width="0.1524" layer="51"/>
+<wire x1="1.7018" y1="-1.3462" x2="1.7018" y2="1.3462" width="0.1524" layer="51"/>
+<wire x1="0.9398" y1="1.3462" x2="-0.9398" y2="1.3462" width="0.1524" layer="51"/>
+<wire x1="-1.7018" y1="1.3462" x2="-1.7018" y2="-1.3462" width="0.1524" layer="51"/>
+<text x="-4.699" y="1.8288" size="2.0828" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-5.7658" y="-3.8862" size="2.0828" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -831,31 +831,6 @@ at 30/04/2012 16:26:10</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="1210AC103KAZ1A" prefix="C">
-<description>Capacitor 1210</description>
-<gates>
-<gate name="A" symbol="CAPH" x="0" y="0" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="CAPC3225X170N">
-<connects>
-<connect gate="A" pin="C1" pad="1"/>
-<connect gate="A" pin="C2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="1210AC103KAZ1A" constant="no"/>
-<attribute name="OC_FARNELL" value="1604908" constant="no"/>
-<attribute name="OC_NEWARK" value="54M5358" constant="no"/>
-<attribute name="SUPPLIER" value="AVX" constant="no"/>
-<attribute name="TOLERANCE" value="±10%" constant="no"/>
-<attribute name="VALUE" value="10000pF" constant="no"/>
-<attribute name="VOLTAGERATING" value="1000V (1kV)" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="UQCL2A1R0BAT2A/500" prefix="C">
 <description>Capacitor 0402</description>
 <gates>
@@ -901,6 +876,31 @@ at 30/04/2012 16:26:10</description>
 <attribute name="TOLERANCE" value="±20%" constant="no"/>
 <attribute name="VALUE" value="10pF" constant="no"/>
 <attribute name="VOLTAGERATING" value="1000V (1kV)" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="12107C102JAT2A" prefix="C">
+<description>Capacitor 1210</description>
+<gates>
+<gate name="A" symbol="CAPH" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="CAPC3225X127N">
+<connects>
+<connect gate="A" pin="C1" pad="1"/>
+<connect gate="A" pin="C2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="12107C102JAT2A" constant="no"/>
+<attribute name="OC_FARNELL" value="-" constant="no"/>
+<attribute name="OC_NEWARK" value="56J0850" constant="no"/>
+<attribute name="SUPPLIER" value="AVX" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="VALUE" value="1000PF" constant="no"/>
+<attribute name="VOLTAGERATING" value="500V" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1034,6 +1034,54 @@ www.isabellenhuette.de&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="TSX3225">
+<packages>
+<package name="TSX3225">
+<smd name="2" x="1" y="-0.75" dx="1" dy="0.8" layer="1"/>
+<smd name="3" x="1" y="0.75" dx="1" dy="0.8" layer="1"/>
+<smd name="4" x="-1" y="0.75" dx="1" dy="0.8" layer="1"/>
+<smd name="1" x="-1" y="-0.75" dx="1" dy="0.8" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TSX3225">
+<pin name="GND@1" x="-7.62" y="0.762" visible="pin" length="middle"/>
+<pin name="GND@2" x="-7.62" y="-1.016" visible="pin" length="middle"/>
+<wire x1="-1" y1="0.5" x2="-1" y2="-0.5" width="0.254" layer="94"/>
+<wire x1="-1" y1="-0.5" x2="1" y2="-0.5" width="0.254" layer="94"/>
+<wire x1="1" y1="-0.5" x2="1" y2="0.5" width="0.254" layer="94"/>
+<wire x1="1" y1="0.5" x2="-1" y2="0.5" width="0.254" layer="94"/>
+<wire x1="-1" y1="1" x2="1" y2="1" width="0.254" layer="94"/>
+<wire x1="-1" y1="-1" x2="1" y2="-1" width="0.254" layer="94"/>
+<pin name="P$3" x="0" y="6" visible="pin" length="middle" rot="R270"/>
+<pin name="P$4" x="0" y="-6" visible="pin" length="middle" rot="R90"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="1.778" width="0.127" layer="94"/>
+<wire x1="-2.54" y1="1.778" x2="2.54" y2="1.778" width="0.127" layer="94"/>
+<wire x1="2.54" y1="1.778" x2="2.54" y2="-1.778" width="0.127" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="2.54" y2="-1.778" width="0.127" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TSX3225">
+<gates>
+<gate name="G$1" symbol="TSX3225" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSX3225">
+<connects>
+<connect gate="G$1" pin="GND@1" pad="2"/>
+<connect gate="G$1" pin="GND@2" pad="4"/>
+<connect gate="G$1" pin="P$3" pad="1"/>
+<connect gate="G$1" pin="P$4" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1067,7 +1115,7 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="U$1" library="CSR1010A05" deviceset="CSR1010A05-IQQM-R" device=""/>
 <part name="VDD1" library="supply1" deviceset="VDD" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="C2" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="4.7uH"/>
+<part name="L2" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="Ferrite Core (MMZ1005Y152C)"/>
 <part name="C3" library="AVX_By_element14_Batch_1" deviceset="UQCL2A150JAT2A/500" device="" value="15pF"/>
 <part name="C4" library="AVX_By_element14_Batch_1" deviceset="UQCL2A8R2CAT2A/500" device="" value="8.2pF"/>
 <part name="C5" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="10pF"/>
@@ -1076,7 +1124,6 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="AVX_By_element14_Batch_1" deviceset="UQCL2A0R5BAT2A/500" device="" value="0.5pF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="C8" library="AVX_By_element14_Batch_1" deviceset="1210AC103KAZ1A" device="" value="4.7uH"/>
 <part name="C9" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="33p"/>
 <part name="C10" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="4u7"/>
 <part name="C11" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="470n"/>
@@ -1096,6 +1143,8 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="R2" library="resistor-shunt" deviceset="BVS" device=""/>
 <part name="C18" library="AVX_By_element14_Batch_1" deviceset="0805AA100MAT1A" device="" value="47uF"/>
 <part name="C19" library="AVX_By_element14_Batch_1" deviceset="0805AA100MAT1A" device="" value="47n"/>
+<part name="L1" library="AVX_By_element14_Batch_1" deviceset="12107C102JAT2A" device="" value="4.7uH"/>
+<part name="U$3" library="TSX3225" deviceset="TSX3225" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1127,16 +1176,15 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="U$1" gate="G$1" x="-58.42" y="55.88"/>
 <instance part="VDD1" gate="G$1" x="78.74" y="119.38"/>
 <instance part="GND2" gate="1" x="27.94" y="-71.12"/>
-<instance part="C2" gate="A" x="-119.38" y="83.82" rot="R90"/>
-<instance part="C3" gate="A" x="-86.36" y="0" rot="R90"/>
-<instance part="C4" gate="A" x="-78.74" y="0" rot="R90"/>
+<instance part="L2" gate="A" x="-119.38" y="83.82" rot="R90"/>
+<instance part="C3" gate="A" x="-91.44" y="0" rot="R90"/>
+<instance part="C4" gate="A" x="-76.2" y="0" rot="R90"/>
 <instance part="C5" gate="A" x="-116.84" y="73.66" rot="R180"/>
 <instance part="C6" gate="A" x="-116.84" y="66.04" rot="R180"/>
-<instance part="GND3" gate="1" x="-82.804" y="-2.54"/>
+<instance part="GND3" gate="1" x="-83.82" y="-7.366"/>
 <instance part="GND4" gate="1" x="-129.54" y="60.96"/>
 <instance part="C7" gate="A" x="-106.68" y="27.94" rot="R90"/>
 <instance part="GND5" gate="1" x="-106.68" y="25.4"/>
-<instance part="C8" gate="A" x="-142.24" y="43.18"/>
 <instance part="C9" gate="A" x="-129.54" y="73.66" rot="R90"/>
 <instance part="C10" gate="A" x="-121.92" y="12.7" rot="R90"/>
 <instance part="C11" gate="A" x="-137.16" y="12.7" rot="R90"/>
@@ -1156,6 +1204,8 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="R2" gate="G$1" x="-40.64" y="-12.7" rot="R90"/>
 <instance part="C18" gate="A" x="-154.94" y="101.6" rot="R90"/>
 <instance part="C19" gate="A" x="-144.78" y="101.6" rot="R90"/>
+<instance part="L1" gate="A" x="-134.62" y="43.18" rot="R180"/>
+<instance part="U$3" gate="G$1" x="-83.82" y="10.16" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1270,18 +1320,6 @@ www.isabellenhuette.de&lt;p&gt;
 <junction x="76.2" y="91.44"/>
 </segment>
 <segment>
-<pinref part="C3" gate="A" pin="C1"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="-82.804" y1="0" x2="-86.36" y2="0" width="0.1524" layer="91"/>
-<junction x="-82.804" y="0"/>
-<pinref part="C4" gate="A" pin="C1"/>
-<wire x1="-78.74" y1="0" x2="-82.804" y2="0" width="0.1524" layer="91"/>
-<pinref part="C14" gate="A" pin="C1"/>
-<wire x1="-99.06" y1="12.7" x2="-99.06" y2="0" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="0" x2="-86.36" y2="0" width="0.1524" layer="91"/>
-<junction x="-86.36" y="0"/>
-</segment>
-<segment>
 <pinref part="C11" gate="A" pin="C1"/>
 <pinref part="C10" gate="A" pin="C1"/>
 <wire x1="-137.16" y1="12.7" x2="-131.064" y2="12.7" width="0.1524" layer="91"/>
@@ -1359,6 +1397,28 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="-81.28" y1="119.38" x2="-68.58" y2="119.38" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND@1"/>
+<pinref part="U$3" gate="G$1" pin="GND@2"/>
+<wire x1="-84.582" y1="2.54" x2="-83.82" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="2.54" x2="-82.804" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="2.54" x2="-83.82" y2="0" width="0.1524" layer="91"/>
+<junction x="-83.82" y="2.54"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="-83.82" y1="0" x2="-83.82" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-2.54" x2="-83.82" y2="-4.826" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-4.826" x2="-83.82" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-83.82" y="-4.826"/>
+<pinref part="C3" gate="A" pin="C1"/>
+<wire x1="-91.44" y1="0" x2="-83.82" y2="0" width="0.1524" layer="91"/>
+<junction x="-83.82" y="0"/>
+<pinref part="C4" gate="A" pin="C1"/>
+<wire x1="-83.82" y1="0" x2="-76.2" y2="0" width="0.1524" layer="91"/>
+<pinref part="C14" gate="A" pin="C1"/>
+<wire x1="-99.06" y1="12.7" x2="-99.06" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-2.54" x2="-83.82" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="-83.82" y="-2.54"/>
+</segment>
 </net>
 <net name="N$17" class="0">
 <segment>
@@ -1374,19 +1434,6 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-55.88" y1="91.44" x2="-55.88" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="SCL"/>
 <wire x1="35.56" y1="104.14" x2="-55.88" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="C3" gate="A" pin="C2"/>
-<pinref part="U$1" gate="G$1" pin="XTAL_16M_OUT"/>
-<wire x1="-86.36" y1="7.62" x2="-86.36" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$30" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="XTAL_16M_IN"/>
-<wire x1="-78.74" y1="17.78" x2="-78.74" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -1420,8 +1467,8 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="U$1" gate="G$1" pin="SMPS_LX"/>
 <wire x1="-78.74" y1="96.52" x2="-78.74" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="96.52" x2="-147.32" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="C8" gate="A" pin="C1"/>
 <wire x1="-147.32" y1="43.18" x2="-142.24" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="L1" gate="A" pin="C2"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1586,7 +1633,7 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="C9" gate="A" pin="C2"/>
 <pinref part="U$1" gate="G$1" pin="VDD_BAT"/>
 <wire x1="-129.54" y1="81.28" x2="-119.38" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="C2" gate="A" pin="C1"/>
+<pinref part="L2" gate="A" pin="C1"/>
 <wire x1="-119.38" y1="81.28" x2="-96.52" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="83.82" x2="-119.38" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-119.38" y="81.28"/>
@@ -1601,7 +1648,7 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-129.54" y1="109.22" x2="-137.16" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="C16" gate="A" pin="C1"/>
 <junction x="-137.16" y="109.22"/>
-<pinref part="C2" gate="A" pin="C2"/>
+<pinref part="L2" gate="A" pin="C2"/>
 <wire x1="-119.38" y1="91.44" x2="-119.38" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="109.22" x2="-86.36" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-119.38" y="109.22"/>
@@ -1668,17 +1715,39 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="U$1" gate="G$1" pin="VDD_REG_IN"/>
 <wire x1="-129.54" y1="20.32" x2="-121.92" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="43.18" x2="-129.54" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="C8" gate="A" pin="C2"/>
 <wire x1="-129.54" y1="43.18" x2="-134.62" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-129.54" y1="20.32" x2="-129.54" y2="43.18" width="0.1524" layer="91"/>
 <junction x="-129.54" y="20.32"/>
 <junction x="-129.54" y="43.18"/>
+<pinref part="L1" gate="A" pin="C1"/>
 </segment>
 </net>
 <net name="N$40" class="0">
 <segment>
 <pinref part="C12" gate="A" pin="C2"/>
 <wire x1="-76.2" y1="116.84" x2="-76.2" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="XTAL_16M_OUT"/>
+<wire x1="-86.36" y1="17.78" x2="-91.44" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="C3" gate="A" pin="C2"/>
+<wire x1="-91.44" y1="17.78" x2="-91.44" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="10.16" x2="-91.44" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-89.916" y1="10.16" x2="-91.44" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-91.44" y="10.16"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="XTAL_16M_IN"/>
+<wire x1="-78.74" y1="17.78" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="C4" gate="A" pin="C2"/>
+<wire x1="-76.2" y1="17.78" x2="-76.2" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="10.16" x2="-76.2" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="10.16" x2="-78.74" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-76.2" y="10.16"/>
 </segment>
 </net>
 </nets>

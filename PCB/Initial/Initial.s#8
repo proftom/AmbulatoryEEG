@@ -840,6 +840,31 @@ at 30/04/2012 16:26:10</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="UQCL2A1R0BAT2A/500" prefix="C">
+<description>Capacitor 0402</description>
+<gates>
+<gate name="A" symbol="CAPH" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="CAPC1005X60N">
+<connects>
+<connect gate="A" pin="C1" pad="2"/>
+<connect gate="A" pin="C2" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="UQCL2A1R0BAT2A/500" constant="no"/>
+<attribute name="OC_FARNELL" value="-" constant="no"/>
+<attribute name="OC_NEWARK" value="32T8778" constant="no"/>
+<attribute name="SUPPLIER" value="AVX" constant="no"/>
+<attribute name="TOLERANCE" value="±.1 pF" constant="no"/>
+<attribute name="VALUE" value="1pF" constant="no"/>
+<attribute name="VOLTAGERATING" value="200V" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -875,8 +900,8 @@ at 30/04/2012 16:26:10</description>
 <part name="U$1" library="CSR1010A05" deviceset="CSR1010A05-IQQM-R" device=""/>
 <part name="VDD1" library="supply1" deviceset="VDD" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="10pF"/>
-<part name="C2" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="10pF"/>
+<part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="47u"/>
+<part name="C2" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="4.7uH"/>
 <part name="C3" library="AVX_By_element14_Batch_1" deviceset="UQCL2A150JAT2A/500" device="" value="15pF"/>
 <part name="C4" library="AVX_By_element14_Batch_1" deviceset="UQCL2A8R2CAT2A/500" device="" value="8.2pF"/>
 <part name="C5" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="10pF"/>
@@ -894,6 +919,12 @@ at 30/04/2012 16:26:10</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="C14" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="470n"/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="C15" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="47n"/>
+<part name="C16" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="47n"/>
+<part name="C17" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="4u7"/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -923,8 +954,8 @@ at 30/04/2012 16:26:10</description>
 <instance part="U$1" gate="G$1" x="-58.42" y="55.88"/>
 <instance part="VDD1" gate="G$1" x="78.74" y="119.38"/>
 <instance part="GND2" gate="1" x="-15.24" y="-27.94"/>
-<instance part="C1" gate="A" x="-109.22" y="119.38" rot="R90"/>
-<instance part="C2" gate="A" x="-93.98" y="119.38" rot="R90"/>
+<instance part="C1" gate="A" x="-154.94" y="101.6" rot="R90"/>
+<instance part="C2" gate="A" x="-119.38" y="83.82" rot="R90"/>
 <instance part="C3" gate="A" x="-86.36" y="0" rot="R90"/>
 <instance part="C4" gate="A" x="-78.74" y="0" rot="R90"/>
 <instance part="C5" gate="A" x="-116.84" y="73.66" rot="R180"/>
@@ -933,7 +964,7 @@ at 30/04/2012 16:26:10</description>
 <instance part="GND4" gate="1" x="-129.54" y="60.96"/>
 <instance part="C7" gate="A" x="-106.68" y="27.94" rot="R90"/>
 <instance part="GND5" gate="1" x="-106.68" y="25.4"/>
-<instance part="C8" gate="A" x="-152.4" y="81.28"/>
+<instance part="C8" gate="A" x="-142.24" y="43.18"/>
 <instance part="C9" gate="A" x="-129.54" y="73.66" rot="R90"/>
 <instance part="C10" gate="A" x="-121.92" y="12.7" rot="R90"/>
 <instance part="C11" gate="A" x="-137.16" y="12.7" rot="R90"/>
@@ -942,6 +973,12 @@ at 30/04/2012 16:26:10</description>
 <instance part="GND6" gate="1" x="-17.78" y="114.3"/>
 <instance part="GND7" gate="1" x="-131.064" y="10.16"/>
 <instance part="C14" gate="A" x="-99.06" y="12.7" rot="R90"/>
+<instance part="GND8" gate="1" x="-114.3" y="55.88"/>
+<instance part="GND9" gate="1" x="-165.1" y="27.94"/>
+<instance part="C15" gate="A" x="-144.78" y="109.22" rot="R270"/>
+<instance part="C16" gate="A" x="-137.16" y="109.22" rot="R270"/>
+<instance part="C17" gate="A" x="-129.54" y="109.22" rot="R270"/>
+<instance part="GND10" gate="1" x="-154.94" y="99.06"/>
 </instances>
 <busses>
 </busses>
@@ -1198,6 +1235,25 @@ at 30/04/2012 16:26:10</description>
 <pinref part="C7" gate="A" pin="C1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="WAKE"/>
+<wire x1="-96.52" y1="58.42" x2="-114.3" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-106.68" y1="35.56" x2="-165.1" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="RF"/>
+<pinref part="C7" gate="A" pin="C2"/>
+<wire x1="-96.52" y1="35.56" x2="-106.68" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="-165.1" y1="35.56" x2="-165.1" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C1" gate="A" pin="C1"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="C17" gate="A" pin="C2"/>
+<wire x1="-154.94" y1="101.6" x2="-129.54" y2="101.6" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VDD" class="0">
 <segment>
@@ -1285,6 +1341,8 @@ at 30/04/2012 16:26:10</description>
 <wire x1="-129.54" y1="20.32" x2="-137.16" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C10" gate="A" pin="C2"/>
 <wire x1="-137.16" y1="20.32" x2="-121.92" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="C8" gate="A" pin="C2"/>
+<wire x1="-129.54" y1="43.18" x2="-134.62" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -1299,21 +1357,43 @@ at 30/04/2012 16:26:10</description>
 <segment>
 <pinref part="C9" gate="A" pin="C2"/>
 <pinref part="U$1" gate="G$1" pin="VDD_BAT"/>
-<wire x1="-129.54" y1="81.28" x2="-96.52" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-129.54" y1="81.28" x2="-119.38" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="C2" gate="A" pin="C1"/>
+<wire x1="-119.38" y1="81.28" x2="-96.52" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="83.82" x2="-119.38" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$37" class="0">
+<net name="N$19" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="WAKE"/>
-<wire x1="-96.52" y1="58.42" x2="-114.3" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="96.52" x2="-78.74" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="SMPS_LX"/>
+<wire x1="-78.74" y1="96.52" x2="-78.74" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="96.52" x2="-147.32" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="C8" gate="A" pin="C1"/>
+<wire x1="-147.32" y1="43.18" x2="-142.24" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
-<wire x1="-106.68" y1="35.56" x2="-165.1" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="RF"/>
-<pinref part="C7" gate="A" pin="C2"/>
-<wire x1="-96.52" y1="35.56" x2="-106.68" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C17" gate="A" pin="C1"/>
+<pinref part="C15" gate="A" pin="C1"/>
+<wire x1="-129.54" y1="109.22" x2="-137.16" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="C16" gate="A" pin="C1"/>
+<wire x1="-137.16" y1="109.22" x2="-144.78" y2="109.22" width="0.1524" layer="91"/>
+<junction x="-137.16" y="109.22"/>
+<pinref part="C1" gate="A" pin="C2"/>
+<wire x1="-154.94" y1="109.22" x2="-144.78" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="C2" gate="A" pin="C2"/>
+<wire x1="-119.38" y1="91.44" x2="-119.38" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="109.22" x2="-129.54" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="VDD_PADS"/>
+<wire x1="-22.86" y1="58.42" x2="-15.24" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="58.42" x2="-15.24" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="93.98" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="VDD_BAT_SMPS"/>
+<wire x1="-86.36" y1="91.44" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-86.36" y1="93.98" x2="-86.36" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-86.36" y1="109.22" x2="-119.38" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

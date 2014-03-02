@@ -983,15 +983,6 @@ at 30/04/2012 16:26:10</description>
 <busses>
 </busses>
 <nets>
-<net name="N$20" class="0">
-<segment>
-<pinref part="ADC1" gate="A" pin="VREF"/>
-<pinref part="ADC0" gate="A" pin="VREF"/>
-<wire x1="71.12" y1="10.16" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="63.5" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$21" class="0">
 <segment>
 <pinref part="ADC1" gate="A" pin="CLK"/>
@@ -1354,8 +1345,9 @@ at 30/04/2012 16:26:10</description>
 <net name="VDD" class="0">
 <segment>
 <pinref part="ADC1" gate="A" pin="VDD"/>
-<wire x1="78.74" y1="66.04" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="66.04" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="ADC0" gate="A" pin="VDD"/>
+<wire x1="78.74" y1="60.96" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="66.04" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="VCC"/>
 <wire x1="66.04" y1="111.76" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
@@ -1365,6 +1357,15 @@ at 30/04/2012 16:26:10</description>
 <pinref part="VDD1" gate="G$1" pin="VDD"/>
 <wire x1="78.74" y1="111.76" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
 <junction x="78.74" y="111.76"/>
+<pinref part="ADC1" gate="A" pin="VREF"/>
+<pinref part="ADC0" gate="A" pin="VREF"/>
+<wire x1="71.12" y1="10.16" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="63.5" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="60.96" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
+<junction x="81.28" y="60.96"/>
+<junction x="78.74" y="60.96"/>
 </segment>
 </net>
 <net name="N$26" class="0">

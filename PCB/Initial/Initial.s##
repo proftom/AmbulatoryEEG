@@ -1311,11 +1311,9 @@ www.isabellenhuette.de&lt;p&gt;
 <text x="-38.1" y="-10.16" size="1.778" layer="91">Solder jumpers</text>
 <text x="-190.5" y="62.23" size="1.778" layer="91">50 ohms RF</text>
 <text x="-190.5" y="58.42" size="1.778" layer="91">Inductor Coils</text>
-<text x="-190.5" y="54.61" size="1.778" layer="91">mini 8 pin connector</text>
 <text x="-190.5" y="50.8" size="1.778" layer="91">check SPI will work</text>
 <text x="-190.5" y="46.99" size="1.778" layer="91">add test pads</text>
 <text x="-190.5" y="43.18" size="1.778" layer="91">Push button</text>
-<text x="-190.5" y="39.37" size="1.778" layer="91">CAP for I2C</text>
 </plain>
 <instances>
 <instance part="ADC1" gate="A" x="50.8" y="50.8" rot="R180"/>

@@ -1,0 +1,51 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+PADS       halfmoon                 21mm          18mm          21mm          18mm          21mm          18mm  T         90.00 No component fitted
+WAKE       halfmoon                 12mm          18mm          12mm          18mm          12mm          18mm  T         90.00 No component fitted
+GND1       halfmoon                 19mm          18mm          19mm          18mm          19mm          18mm  T         90.00 No component fitted
+RFGND      halfmoon                  9mm           0mm           9mm           0mm           9mm           0mm  T         90.00 No component fitted
+R1         0402                   18.8mm        15.7mm        18.8mm        15.7mm        18.8mm        16.2mm  T        270.00 47k            
+U2         SO-8                   21.9mm        13.5mm        21.9mm        13.5mm      23.805mm        16.3mm  T        270.00 AT24C512C-SSHD 
+X1         CRYSTAL_TSX11          14.1mm         2.7mm        14.1mm         2.7mm        15.2mm         3.5mm  T        180.00 16MHz          
+L1         1210                   15.3mm       14.15mm        15.3mm       14.15mm     13.8875mm       14.15mm  T        360.00 4u7            
+C4         0402                   14.3mm        10.7mm        14.3mm        10.7mm        14.3mm        10.2mm  T         90.00 47n            
+C1         0402                   20.1mm         7.2mm        20.1mm         7.2mm        20.1mm         6.7mm  T         90.00 47n            
+C10        0402                   18.8mm        13.7mm        18.8mm        13.7mm        18.8mm        13.2mm  T         90.00 1u0            
+C18        0402                   11.8mm         3.8mm        11.8mm         3.8mm        11.8mm         4.3mm  T        270.00 470n           
+C8         0402                   12.7mm      13.525mm        12.7mm      13.525mm        12.7mm      14.025mm  T        270.00 2u2            
+C7         0402                   14.9mm       12.25mm        14.9mm       12.25mm        15.4mm       12.25mm  T        180.00 2u2            
+C9         0402                   11.6mm           7mm        11.6mm           7mm        12.1mm           7mm  T        180.00 470n           
+C2         0805                   12.9mm        16.4mm        12.9mm        16.4mm        13.9mm        16.4mm  T        180.00 47u            
+C11        0402                   16.4mm         2.7mm        16.4mm         2.7mm        16.4mm         3.2mm  T        270.00 8p2            
+C12        0402                   11.5mm          12mm        11.5mm          12mm        11.5mm        11.5mm  T         90.00 10p            
+C13        0402                    8.8mm          12mm         8.8mm          12mm         8.8mm        11.5mm  T         90.00 10p            
+C14        0402                   11.8mm           2mm        11.8mm           2mm        11.8mm         1.5mm  T         90.00 15p            
+L2         0402                    9.7mm         5.8mm         9.7mm         5.8mm        10.2mm         5.8mm  T        180.00 5n1            
+C5         0402                   12.5mm        10.7mm        12.5mm        10.7mm        12.5mm        10.2mm  T         90.00 33p            
+X2         CRYSTAL_SSP-T7-F        10.1mm        13.7mm        10.1mm        13.7mm       10.55mm       10.55mm  T         90.00 32.768kHz      
+C15        0402                     11mm         5.3mm          11mm         5.3mm          11mm         5.8mm  T        270.00 2p7            
+U1         CSR1000_Robinson_QFN32     16.4875mm           7mm        16.5mm           7mm        14.2mm       8.775mm  T          0.00 CSR1000        
+C17        0402                   11.6mm         7.9mm        11.6mm         7.9mm        12.1mm         7.9mm  T        180.00 150n           
+C6         0402                   17.1mm        11.8mm        17.1mm        11.8mm        17.1mm        11.3mm  T         90.00 470n           
+L3         0402                 13.375mm      10.725mm      13.375mm      10.725mm      13.375mm      11.225mm  T        270.00 MMZ1005Y152C   
+AIO0       halfmoon                 15mm           0mm          15mm           0mm          15mm           0mm  T         90.00 No component fitted
+AIO1       halfmoon                 13mm           0mm          13mm           0mm          13mm           0mm  T         90.00 No component fitted
+AIO2       halfmoon                 11mm           0mm          11mm           0mm          11mm           0mm  T         90.00 No component fitted
+PIO0       halfmoon                 17mm           0mm          17mm           0mm          17mm           0mm  T         90.00 No component fitted
+PIO1       halfmoon                 19mm           0mm          19mm           0mm          19mm           0mm  T         90.00 No component fitted
+PIO3       halfmoon                 21mm           0mm          21mm           0mm          21mm           0mm  T         90.00 No component fitted
+PIO4       halfmoon                 23mm           0mm          23mm           0mm          23mm           0mm  T         90.00 No component fitted
+PIO5       halfmoon               25.5mm           3mm        25.5mm           3mm        25.5mm           3mm  T        180.00 No component fitted
+PIO6       halfmoon               25.5mm           5mm        25.5mm           5mm        25.5mm           5mm  T        180.00 No component fitted
+PIO7       halfmoon               25.5mm           7mm        25.5mm           7mm        25.5mm           7mm  T        180.00 No component fitted
+PIO8       halfmoon               25.5mm           9mm        25.5mm           9mm        25.5mm           9mm  T        180.00 No component fitted
+PIO9       halfmoon               25.5mm          11mm        25.5mm          11mm        25.5mm          11mm  T        180.00 No component fitted
+PIO10      halfmoon               25.5mm          13mm        25.5mm          13mm        25.5mm          13mm  T        180.00 No component fitted
+PIO11      halfmoon               25.5mm      15.025mm        25.5mm      15.025mm        25.5mm      15.025mm  T        180.00 No component fitted
+3V3        halfmoon                 17mm          18mm          17mm          18mm          17mm          18mm  T         90.00 No component fitted
+GND4       halfmoon                 15mm          18mm          15mm          18mm          15mm          18mm  T        270.00 No component fitted
+C3         0402                   13.2mm         5.3mm        13.2mm         5.3mm        13.2mm         5.8mm  T        270.00 0p5            
+SPIPION    halfmoon                 23mm          18mm          23mm          18mm          23mm          18mm  T        270.00 No component fitted
+C16        0805                   16.6mm        16.4mm        16.6mm        16.4mm        15.6mm        16.4mm  T        360.00 47u            
+C19        0402                    8.4mm         5.3mm         8.4mm         5.3mm         8.4mm         5.8mm  T        270.00 NF             
+

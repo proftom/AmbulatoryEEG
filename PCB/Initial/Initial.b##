@@ -492,6 +492,49 @@ www.isabellenhuette.de&lt;p&gt;
 </package>
 </packages>
 </library>
+<library name="SSP-T7-F">
+<packages>
+<package name="SSP-T7-F">
+<smd name="1" x="-0.6" y="0.3" dx="1.2" dy="0.6" layer="1"/>
+<smd name="4" x="-0.6" y="1.2" dx="1.2" dy="0.6" layer="1"/>
+<smd name="2" x="5.7" y="0.3" dx="1.2" dy="0.6" layer="1"/>
+<smd name="3" x="5.7" y="1.2" dx="1.2" dy="0.6" layer="1"/>
+</package>
+</packages>
+</library>
+<library name="BATTERY_2996">
+<packages>
+<package name="BATTERY_2996">
+<smd name="POS@1" x="-17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
+<smd name="POS@2" x="17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
+<smd name="NEG" x="0" y="0" dx="3.175" dy="3.175" layer="1"/>
+<text x="2.54" y="2.54" size="1.27" layer="21">-</text>
+<text x="-20.32" y="2.54" size="1.27" layer="21">+</text>
+<text x="19.05" y="2.54" size="1.27" layer="21">+</text>
+</package>
+</packages>
+</library>
+<library name="wirepad">
+<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="1,6/0,8">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<wire x1="-0.762" y1="0.762" x2="-0.508" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.508" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.508" x2="0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="0.508" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.508" y1="-0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.762" x2="-0.762" y2="-0.508" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.635" width="0.1524" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.8128" diameter="1.6002" shape="octagon"/>
+<text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -678,194 +721,208 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="ADC1" library="Microchip_By_element14_Batch_1" package="SOIC127P600X175-16N" value="MCP3008-I/SL" x="44.45" y="8.89">
-<attribute name="PACKAGE" value="SOIC16" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="19C7201" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="MCP3008-I/SL" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="Microchip" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="1292241" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="ADC1" library="Microchip_By_element14_Batch_1" package="SOIC127P600X175-16N" value="MCP3008-I/SL" x="38.1" y="6.35">
+<attribute name="PACKAGE" value="SOIC16" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="19C7201" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MCP3008-I/SL" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="Microchip" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="1292241" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U2" library="ATMEL-AT24C512C-SHD-B" package="SOIC127P798X216-8N" value="AT24C512C-SHD-B" x="26.67" y="24.13">
-<attribute name="PACKAGE" value="8SOIC-Wide" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="68T4124" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="AT24C512C-SHD-B" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="ATMEL" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="1972003 " x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="U2" library="ATMEL-AT24C512C-SHD-B" package="SOIC127P798X216-8N" value="AT24C512C-SHD-B" x="20.32" y="21.59">
+<attribute name="PACKAGE" value="8SOIC-Wide" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="68T4124" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="AT24C512C-SHD-B" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="ATMEL" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="1972003 " x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="ADC0" library="Microchip_By_element14_Batch_1" package="SOIC127P600X175-16N" value="MCP3008-I/SL" x="67.31" y="8.89">
-<attribute name="PACKAGE" value="SOIC16" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="19C7201" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="MCP3008-I/SL" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="Microchip" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="1292241" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="ADC0" library="Microchip_By_element14_Batch_1" package="SOIC127P600X175-16N" value="MCP3008-I/SL" x="60.96" y="6.35">
+<attribute name="PACKAGE" value="SOIC16" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="19C7201" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MCP3008-I/SL" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="Microchip" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="1292241" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="CH7" library="solpad" package="LSP10" value="LSP10" x="64.77" y="76.2"/>
-<element name="CH5" library="solpad" package="LSP10" value="LSP10" x="74.93" y="76.2"/>
-<element name="CH4" library="solpad" package="LSP10" value="LSP10" x="80.01" y="76.2"/>
-<element name="CH3" library="solpad" package="LSP10" value="LSP10" x="26.67" y="71.12"/>
-<element name="CH2" library="solpad" package="LSP10" value="LSP10" x="31.75" y="71.12"/>
-<element name="CH1" library="solpad" package="LSP10" value="LSP10" x="36.83" y="71.12"/>
-<element name="CH0" library="solpad" package="LSP10" value="LSP10" x="41.91" y="71.12"/>
-<element name="CH6" library="solpad" package="LSP10" value="LSP10" x="69.85" y="76.2"/>
-<element name="CH15" library="solpad" package="LSP10" value="LSP10" x="53.34" y="71.12"/>
-<element name="CH13" library="solpad" package="LSP10" value="LSP10" x="66.04" y="71.12"/>
-<element name="CH12" library="solpad" package="LSP10" value="LSP10" x="72.39" y="71.12"/>
-<element name="CH11" library="solpad" package="LSP10" value="LSP10" x="46.99" y="71.12"/>
-<element name="CH10" library="solpad" package="LSP10" value="LSP10" x="78.74" y="71.12"/>
-<element name="CH9" library="solpad" package="LSP10" value="LSP10" x="54.61" y="76.2"/>
-<element name="CH8" library="solpad" package="LSP10" value="LSP10" x="59.69" y="76.2"/>
-<element name="CH14" library="solpad" package="LSP10" value="LSP10" x="59.69" y="71.12"/>
-<element name="U$1" library="CSR1010A05" package="CSR1010A05-IQQM-R" value="CSR1010A05-IQQM-R" x="53.34" y="36.83"/>
-<element name="L2" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="Ferrite Core (MMZ1005Y152C)" x="44.45" y="46.99">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="CH7" library="solpad" package="LSP10" value="LSP10" x="25.4" y="74.93"/>
+<element name="CH5" library="solpad" package="LSP10" value="LSP10" x="35.56" y="74.93"/>
+<element name="CH4" library="solpad" package="LSP10" value="LSP10" x="40.64" y="74.93"/>
+<element name="CH3" library="solpad" package="LSP10" value="LSP10" x="45.72" y="74.93"/>
+<element name="CH2" library="solpad" package="LSP10" value="LSP10" x="50.8" y="74.93"/>
+<element name="CH1" library="solpad" package="LSP10" value="LSP10" x="55.88" y="74.93"/>
+<element name="CH0" library="solpad" package="LSP10" value="LSP10" x="60.96" y="74.93"/>
+<element name="CH6" library="solpad" package="LSP10" value="LSP10" x="30.48" y="74.93"/>
+<element name="CH15" library="solpad" package="LSP10" value="LSP10" x="72.39" y="74.93"/>
+<element name="CH13" library="solpad" package="LSP10" value="LSP10" x="17.78" y="68.58"/>
+<element name="CH12" library="solpad" package="LSP10" value="LSP10" x="24.13" y="68.58"/>
+<element name="CH11" library="solpad" package="LSP10" value="LSP10" x="66.04" y="74.93"/>
+<element name="CH10" library="solpad" package="LSP10" value="LSP10" x="30.48" y="68.58"/>
+<element name="CH9" library="solpad" package="LSP10" value="LSP10" x="15.24" y="74.93"/>
+<element name="CH8" library="solpad" package="LSP10" value="LSP10" x="20.32" y="74.93"/>
+<element name="CH14" library="solpad" package="LSP10" value="LSP10" x="11.43" y="68.58"/>
+<element name="U$1" library="CSR1010A05" package="CSR1010A05-IQQM-R" value="CSR1010A05-IQQM-R" x="46.99" y="34.29"/>
+<element name="L2" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="Ferrite Core (MMZ1005Y152C)" x="38.1" y="44.45">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C3" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="15pF" x="69.85" y="55.88">
-<attribute name="OC_NEWARK" value="32T8795" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A150JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C3" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="15pF" x="72.39" y="53.34">
+<attribute name="OC_NEWARK" value="32T8795" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A150JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C4" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="8.2pF" x="34.29" y="46.99">
-<attribute name="OC_NEWARK" value="32T8828" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±.25 pF" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A8R2CAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C4" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="8.2pF" x="27.94" y="44.45">
+<attribute name="OC_NEWARK" value="32T8828" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±.25 pF" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A8R2CAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C5" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="10pF" x="60.96" y="55.88">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C5" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="10pF" x="63.5" y="53.34">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C6" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="10pF" x="52.07" y="55.88">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C6" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="10pF" x="54.61" y="53.34">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C7" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="0.5pF" x="78.74" y="55.88">
-<attribute name="OC_NEWARK" value="32T8767" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±.1 pF" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A0R5BAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C7" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="0.5pF" x="17.78" y="44.45">
+<attribute name="OC_NEWARK" value="32T8767" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±.1 pF" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A0R5BAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C9" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="33p" x="48.26" y="64.77">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C9" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="33p" x="50.8" y="62.23">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C10" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="4u7" x="71.12" y="64.77">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C10" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="4u7" x="73.66" y="62.23">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C11" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="470n" x="43.18" y="55.88">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C11" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="470n" x="45.72" y="53.34">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C12" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="470n" x="34.29" y="55.88">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C12" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="470n" x="36.83" y="53.34">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C13" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="150n" x="25.4" y="55.88">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C13" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="150n" x="27.94" y="53.34">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C14" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="470n" x="78.74" y="64.77">
-<attribute name="OC_NEWARK" value="32T8791" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A100JAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C14" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="470n" x="19.05" y="53.34">
+<attribute name="OC_NEWARK" value="32T8791" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A100JAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C16" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="47n" x="63.5" y="64.77">
-<attribute name="OC_NEWARK" value="32T8778" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±.1 pF" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A1R0BAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C16" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="47n" x="66.04" y="62.23">
+<attribute name="OC_NEWARK" value="32T8778" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±.1 pF" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A1R0BAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C17" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="4u7" x="55.88" y="64.77">
-<attribute name="OC_NEWARK" value="32T8778" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±.1 pF" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A1R0BAT2A/500" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C17" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="4u7" x="58.42" y="62.23">
+<attribute name="OC_NEWARK" value="32T8778" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±.1 pF" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="UQCL2A1R0BAT2A/500" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" package="8PIN_SMT_CONNECTOR" value="8PIN_SMT_CONNECTOR" x="82.55" y="26.67"/>
-<element name="R1" library="resistor-shunt" package="BVS" value="" x="38.1" y="63.5">
-<attribute name="OC_NEWARK" value="unknown" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" package="8PIN_SMT_CONNECTOR" value="8PIN_SMT_CONNECTOR" x="76.2" y="24.13"/>
+<element name="R1" library="resistor-shunt" package="BVS" value="" x="40.64" y="60.96">
+<attribute name="OC_NEWARK" value="unknown" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R2" library="resistor-shunt" package="BVS" value="" x="26.67" y="63.5">
-<attribute name="OC_NEWARK" value="unknown" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="R2" library="resistor-shunt" package="BVS" value="" x="29.21" y="60.96">
+<attribute name="OC_NEWARK" value="unknown" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C18" library="AVX_By_element14_Batch_1" package="CAPC2012X130N" value="47uF" x="71.12" y="38.1">
-<attribute name="OC_NEWARK" value="18M6883" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±20%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="0805AA100MAT1A" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="1000V (1kV)" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C18" library="AVX_By_element14_Batch_1" package="CAPC2012X130N" value="47uF" x="64.77" y="35.56">
+<attribute name="OC_NEWARK" value="18M6883" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="0805AA100MAT1A" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="1000V (1kV)" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C19" library="AVX_By_element14_Batch_1" package="CAPC2012X130N" value="47n" x="62.23" y="38.1">
-<attribute name="OC_NEWARK" value="18M6883" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±20%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="0805AA100MAT1A" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="1000V (1kV)" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="C19" library="AVX_By_element14_Batch_1" package="CAPC2012X130N" value="47n" x="55.88" y="35.56">
+<attribute name="OC_NEWARK" value="18M6883" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="0805AA100MAT1A" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="1000V (1kV)" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L1" library="AVX_By_element14_Batch_1" package="CAPC3225X127N" value="4.7uH" x="80.01" y="38.1">
-<attribute name="OC_NEWARK" value="56J0850" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="12107C102JAT2A" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="500V" x="96.52" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="96.52" y="0" size="1.778" layer="27" display="off"/>
+<element name="L1" library="AVX_By_element14_Batch_1" package="CAPC3225X127N" value="4.7uH" x="73.66" y="35.56">
+<attribute name="OC_NEWARK" value="56J0850" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="12107C102JAT2A" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGERATING" value="500V" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U$3" library="TSX3225" package="TSX3225" value="TSX3225" x="50.8" y="76.2"/>
+<element name="U$3" library="TSX3225" package="TSX3225" value="TSX3225" x="27.94" y="80.01"/>
+<element name="U$4" library="SSP-T7-F" package="SSP-T7-F" value="SSP-T7-F" x="31.75" y="80.01"/>
+<element name="U$5" library="BATTERY_2996" package="BATTERY_2996" value="BATTERY_2996" x="55.88" y="68.58"/>
+<element name="PAD1" library="wirepad" package="1,6/0,8" value="" x="72.39" y="80.01"/>
+<element name="PAD2" library="wirepad" package="1,6/0,8" value="" x="66.04" y="80.01"/>
+<element name="PAD3" library="wirepad" package="1,6/0,8" value="" x="59.69" y="80.01"/>
+<element name="PAD4" library="wirepad" package="1,6/0,8" value="" x="53.34" y="80.01"/>
+<element name="PAD5" library="wirepad" package="1,6/0,8" value="" x="46.99" y="80.01"/>
+<element name="R3" library="resistor-shunt" package="BVS" value="" x="17.78" y="60.96">
+<attribute name="OC_NEWARK" value="unknown" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="90.17" y="-2.54" size="1.778" layer="27" display="off"/>
+</element>
+<element name="PAD6" library="wirepad" package="1,6/0,8" value="" x="40.64" y="80.01"/>
 </elements>
 <signals>
 <signal name="N$21">
@@ -873,35 +930,37 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="PIO[5]/DEBUG_CLK"/>
 <contactref element="ADC0" pad="13"/>
 <contactref element="U$2" pad="3"/>
-<wire x1="55.19" y1="36.98" x2="63.5" y2="27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="69.6722" y1="9.525" x2="63.5" y2="27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="46.8122" y1="9.525" x2="69.6722" y2="9.525" width="0" layer="19" extent="1-1"/>
+<wire x1="57.15" y1="25.4" x2="48.84" y2="34.44" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="6.985" x2="57.15" y2="25.4" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="6.985" x2="63.3222" y2="6.985" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$22">
 <contactref element="ADC0" pad="12"/>
 <contactref element="U$2" pad="5"/>
 <contactref element="U$1" pad="PIO[8]/DEBUG_MISO"/>
-<wire x1="63.5" y1="25.4" x2="55.19" y2="38.98" width="0" layer="19" extent="1-1"/>
-<wire x1="69.6722" y1="8.255" x2="63.5" y2="25.4" width="0" layer="19" extent="1-1"/>
+<contactref element="ADC1" pad="12"/>
+<wire x1="57.15" y1="22.86" x2="48.84" y2="36.44" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="5.715" x2="57.15" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="5.715" x2="63.3222" y2="5.715" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$23">
 <contactref element="ADC1" pad="11"/>
 <contactref element="ADC0" pad="11"/>
 <contactref element="U$1" pad="PIO[7]/DEBUG_MOSI"/>
 <contactref element="U$2" pad="2"/>
-<wire x1="55.19" y1="37.98" x2="63.5" y2="29.21" width="0" layer="19" extent="1-1"/>
-<wire x1="69.6722" y1="6.985" x2="63.5" y2="29.21" width="0" layer="19" extent="1-1"/>
-<wire x1="46.8122" y1="6.985" x2="69.6722" y2="6.985" width="0" layer="19" extent="1-1"/>
+<wire x1="57.15" y1="26.67" x2="48.84" y2="35.44" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="4.445" x2="57.15" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="4.445" x2="63.3222" y2="4.445" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$24">
 <contactref element="ADC1" pad="10"/>
 <contactref element="U$1" pad="PIO[9]"/>
-<wire x1="46.8122" y1="5.715" x2="55.19" y2="39.48" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="3.175" x2="48.84" y2="36.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$25">
 <contactref element="ADC0" pad="10"/>
 <contactref element="U$1" pad="PIO[4]/SF_CS#"/>
-<wire x1="69.6722" y1="5.715" x2="55.19" y2="36.48" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="3.175" x2="48.84" y2="33.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="ADC1" pad="9"/>
@@ -919,9 +978,10 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="WAKE"/>
 <contactref element="U$1" pad="RF"/>
 <contactref element="C7" pad="1"/>
+<contactref element="C18" pad="1"/>
+<contactref element="U$5" pad="NEG"/>
 <contactref element="C17" pad="1"/>
 <contactref element="C16" pad="1"/>
-<contactref element="C18" pad="1"/>
 <contactref element="C19" pad="1"/>
 <contactref element="C9" pad="2"/>
 <contactref element="C5" pad="1"/>
@@ -937,153 +997,154 @@ design rules under a new name.</description>
 <contactref element="C3" pad="2"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C14" pad="2"/>
-<wire x1="50.8" y1="33.02" x2="50.8" y2="19.05" width="0.254" layer="1"/>
-<wire x1="63.5" y1="21.59" x2="63.5" y2="19.05" width="0.254" layer="1"/>
-<wire x1="60.96" y1="35.56" x2="63.5" y2="33.02" width="0.254" layer="1"/>
-<wire x1="60.96" y1="38.1" x2="60.96" y2="35.56" width="0.254" layer="1"/>
-<wire x1="60.96" y1="38.1" x2="61.3156" y2="38.1" width="0.254" layer="1"/>
-<wire x1="64.77" y1="33.02" x2="69.85" y2="38.1" width="0.254" layer="1"/>
-<wire x1="63.5" y1="33.02" x2="64.77" y2="33.02" width="0.254" layer="1"/>
-<wire x1="69.85" y1="38.1" x2="70.2056" y2="38.1" width="0.254" layer="1"/>
-<wire x1="64.77" y1="21.59" x2="63.5" y2="21.59" width="0.254" layer="1"/>
-<wire x1="64.77" y1="33.02" x2="64.77" y2="21.59" width="0.254" layer="1"/>
-<wire x1="60.96" y1="33.02" x2="50.8" y2="33.02" width="0.254" layer="1"/>
-<wire x1="60.96" y1="35.56" x2="60.96" y2="33.02" width="0.254" layer="1"/>
-<wire x1="71.6026" y1="64.77" x2="79.2226" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="63.0174" y1="64.77" x2="71.6026" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="55.3974" y1="64.77" x2="63.0174" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="48.7426" y1="64.77" x2="55.3974" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="79.2226" y1="55.88" x2="79.2226" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="78.2574" y1="55.88" x2="79.2226" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="70.3326" y1="55.88" x2="78.2574" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="60.4774" y1="55.88" x2="63.0174" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="51.5874" y1="55.88" x2="60.4774" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="43.6626" y1="55.88" x2="51.5874" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="51.8" y1="75.45" x2="48.7426" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="49.8" y1="76.95" x2="51.8" y2="75.45" width="0" layer="19" extent="1-1"/>
-<wire x1="34.7726" y1="46.99" x2="43.6626" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="24.9174" y1="55.88" x2="34.7726" y2="46.99" width="0" layer="19" extent="1-1"/>
-<wire x1="50.59" y1="38.48" x2="51.5874" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="50.59" y1="36.98" x2="50.59" y2="38.48" width="0" layer="19" extent="1-1"/>
-<wire x1="50.8" y1="33.02" x2="50.59" y2="36.98" width="0" layer="19" extent="1-1"/>
-<wire x1="46.8122" y1="10.795" x2="50.8" y2="19.05" width="0" layer="19" extent="1-1"/>
-<wire x1="46.8122" y1="4.445" x2="46.8122" y2="10.795" width="0" layer="19" extent="1-1"/>
-<wire x1="69.6722" y1="10.795" x2="63.5" y2="19.05" width="0" layer="19" extent="1-1"/>
-<wire x1="69.6722" y1="4.445" x2="69.6722" y2="10.795" width="0" layer="19" extent="1-1"/>
-<wire x1="30.3784" y1="24.765" x2="50.8" y2="19.05" width="0" layer="19" extent="1-1"/>
-<wire x1="22.9616" y1="24.765" x2="30.3784" y2="24.765" width="0" layer="19" extent="1-1"/>
-<wire x1="22.9616" y1="26.035" x2="22.9616" y2="24.765" width="0" layer="19" extent="1-1"/>
-<wire x1="22.9616" y1="23.495" x2="22.9616" y2="24.765" width="0" layer="19" extent="1-1"/>
-<wire x1="22.9616" y1="22.225" x2="22.9616" y2="23.495" width="0" layer="19" extent="1-1"/>
+<wire x1="57.15" y1="16.51" x2="44.45" y2="16.51" width="0.254" layer="1"/>
+<wire x1="44.45" y1="16.51" x2="44.45" y2="30.48" width="0.254" layer="1"/>
+<wire x1="57.15" y1="16.51" x2="57.15" y2="19.05" width="0.254" layer="1"/>
+<wire x1="54.61" y1="33.02" x2="55.88" y2="31.75" width="0.254" layer="1"/>
+<wire x1="55.88" y1="31.75" x2="57.15" y2="30.48" width="0.254" layer="1"/>
+<wire x1="54.61" y1="35.56" x2="54.61" y2="33.02" width="0.254" layer="1"/>
+<wire x1="54.61" y1="35.56" x2="54.9656" y2="35.56" width="0.254" layer="1"/>
+<wire x1="58.42" y1="30.48" x2="63.5" y2="35.56" width="0.254" layer="1"/>
+<wire x1="57.15" y1="30.48" x2="58.42" y2="30.48" width="0.254" layer="1"/>
+<wire x1="63.5" y1="35.56" x2="63.8556" y2="35.56" width="0.254" layer="1"/>
+<wire x1="55.88" y1="31.75" x2="55.88" y2="68.58" width="0.254" layer="1"/>
+<wire x1="58.42" y1="19.05" x2="57.15" y2="19.05" width="0.254" layer="1"/>
+<wire x1="58.42" y1="30.48" x2="58.42" y2="19.05" width="0.254" layer="1"/>
+<wire x1="65.5574" y1="62.23" x2="74.1426" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="57.9374" y1="62.23" x2="65.5574" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="51.2826" y1="62.23" x2="57.9374" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="55.88" y1="68.58" x2="57.9374" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="44.24" y1="34.44" x2="44.45" y2="30.48" width="0" layer="19" extent="1-1"/>
+<wire x1="44.24" y1="35.94" x2="44.24" y2="34.44" width="0" layer="19" extent="1-1"/>
+<wire x1="72.8726" y1="53.34" x2="74.1426" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="8.255" x2="44.45" y2="16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="1.905" x2="40.4622" y2="8.255" width="0" layer="19" extent="1-1"/>
+<wire x1="63.0174" y1="53.34" x2="65.5574" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="54.1274" y1="53.34" x2="63.0174" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="46.2026" y1="53.34" x2="54.1274" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="8.255" x2="57.15" y2="16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="1.905" x2="63.3222" y2="8.255" width="0" layer="19" extent="1-1"/>
+<wire x1="28.4226" y1="44.45" x2="44.24" y2="35.94" width="0" layer="19" extent="1-1"/>
+<wire x1="27.4574" y1="53.34" x2="28.4226" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="19.5326" y1="53.34" x2="27.4574" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="18.2626" y1="44.45" x2="19.5326" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="17.2974" y1="44.45" x2="18.2626" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="16.6116" y1="23.495" x2="17.2974" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="16.6116" y1="22.225" x2="16.6116" y2="23.495" width="0" layer="19" extent="1-1"/>
+<wire x1="16.6116" y1="20.955" x2="16.6116" y2="22.225" width="0" layer="19" extent="1-1"/>
+<wire x1="16.6116" y1="19.685" x2="16.6116" y2="20.955" width="0" layer="19" extent="1-1"/>
+<wire x1="24.0284" y1="22.225" x2="16.6116" y2="22.225" width="0" layer="19" extent="1-1"/>
+<wire x1="28.94" y1="79.26" x2="27.4574" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="26.94" y1="80.76" x2="28.94" y2="79.26" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$17">
 <contactref element="U2" pad="5"/>
 <contactref element="U$1" pad="I2C_SDA"/>
-<wire x1="30.3784" y1="22.225" x2="52.64" y2="40.53" width="0" layer="19" extent="1-1"/>
+<wire x1="24.0284" y1="19.685" x2="46.29" y2="37.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$18">
 <contactref element="U$1" pad="I2C_SCL"/>
 <contactref element="U2" pad="6"/>
-<wire x1="30.3784" y1="23.495" x2="53.14" y2="40.53" width="0" layer="19" extent="1-1"/>
+<wire x1="24.0284" y1="20.955" x2="46.79" y2="37.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$28">
 <contactref element="U$1" pad="VDD_CORE"/>
 <contactref element="U$1" pad="VDD_CORE@1"/>
 <contactref element="C12" pad="2"/>
 <contactref element="C13" pad="2"/>
-<wire x1="50.59" y1="37.98" x2="52.14" y2="40.53" width="0" layer="19" extent="1-1"/>
-<wire x1="34.7726" y1="55.88" x2="52.14" y2="40.53" width="0" layer="19" extent="1-1"/>
-<wire x1="25.8826" y1="55.88" x2="34.7726" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="28.4226" y1="53.34" x2="37.3126" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="45.79" y1="37.99" x2="37.3126" y2="53.34" width="0" layer="19" extent="1-1"/>
+<wire x1="44.24" y1="35.44" x2="45.79" y2="37.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$35">
 <contactref element="U$1" pad="VDD_XTAL"/>
 <contactref element="C14" pad="1"/>
-<wire x1="50.59" y1="36.48" x2="78.2574" y2="64.77" width="0" layer="19" extent="1-1"/>
+<wire x1="18.5674" y1="53.34" x2="44.24" y2="33.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$19">
 <contactref element="U$1" pad="SMPS_LX"/>
 <contactref element="L1" pad="2"/>
-<wire x1="51.64" y1="40.53" x2="81.5086" y2="38.1" width="0" layer="19" extent="1-1"/>
+<wire x1="45.29" y1="37.99" x2="75.1586" y2="35.56" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="ADC0" pad="8"/>
 <contactref element="CH7" pad="MP"/>
-<wire x1="64.9478" y1="4.445" x2="64.77" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="1.905" x2="25.4" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="CH6" pad="MP"/>
 <contactref element="ADC0" pad="7"/>
-<wire x1="64.9478" y1="5.715" x2="69.85" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="3.175" x2="30.48" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="ADC0" pad="6"/>
 <contactref element="CH5" pad="MP"/>
-<wire x1="64.9478" y1="6.985" x2="74.93" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="4.445" x2="35.56" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="ADC0" pad="5"/>
 <contactref element="CH4" pad="MP"/>
-<wire x1="64.9478" y1="8.255" x2="80.01" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="5.715" x2="40.64" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="ADC0" pad="4"/>
 <contactref element="CH3" pad="MP"/>
-<wire x1="64.9478" y1="9.525" x2="26.67" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="6.985" x2="45.72" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="ADC0" pad="3"/>
 <contactref element="CH2" pad="MP"/>
-<wire x1="64.9478" y1="10.795" x2="31.75" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="8.255" x2="50.8" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="ADC0" pad="2"/>
 <contactref element="CH1" pad="MP"/>
-<wire x1="64.9478" y1="12.065" x2="36.83" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="9.525" x2="55.88" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="ADC0" pad="1"/>
 <contactref element="CH0" pad="MP"/>
-<wire x1="64.9478" y1="13.335" x2="41.91" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="58.5978" y1="10.795" x2="60.96" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="ADC1" pad="8"/>
 <contactref element="CH15" pad="MP"/>
-<wire x1="42.0878" y1="4.445" x2="53.34" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="1.905" x2="72.39" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="ADC1" pad="7"/>
 <contactref element="CH14" pad="MP"/>
-<wire x1="42.0878" y1="5.715" x2="59.69" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="3.175" x2="11.43" y2="68.58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
 <contactref element="ADC1" pad="6"/>
 <contactref element="CH13" pad="MP"/>
-<wire x1="42.0878" y1="6.985" x2="66.04" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="4.445" x2="17.78" y2="68.58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$12">
 <contactref element="ADC1" pad="5"/>
 <contactref element="CH12" pad="MP"/>
-<wire x1="42.0878" y1="8.255" x2="72.39" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="5.715" x2="24.13" y2="68.58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
 <contactref element="ADC1" pad="4"/>
 <contactref element="CH11" pad="MP"/>
-<wire x1="42.0878" y1="9.525" x2="46.99" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="6.985" x2="66.04" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$14">
 <contactref element="ADC1" pad="3"/>
 <contactref element="CH10" pad="MP"/>
-<wire x1="42.0878" y1="10.795" x2="78.74" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="8.255" x2="30.48" y2="68.58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="ADC1" pad="2"/>
 <contactref element="CH9" pad="MP"/>
-<wire x1="42.0878" y1="12.065" x2="54.61" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="9.525" x2="15.24" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$16">
 <contactref element="ADC1" pad="1"/>
 <contactref element="CH8" pad="MP"/>
-<wire x1="42.0878" y1="13.335" x2="59.69" y2="76.2" width="0" layer="19" extent="1-1"/>
+<wire x1="35.7378" y1="10.795" x2="20.32" y2="74.93" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VDD">
 <contactref element="ADC1" pad="16"/>
@@ -1091,29 +1152,27 @@ design rules under a new name.</description>
 <contactref element="U2" pad="8"/>
 <contactref element="ADC1" pad="15"/>
 <contactref element="ADC0" pad="15"/>
+<contactref element="R3" pad="2"/>
 <contactref element="U$2" pad="1"/>
-<wire x1="69.6722" y1="13.335" x2="63.5" y2="30.48" width="0" layer="19" extent="1-1"/>
-<wire x1="69.6722" y1="12.065" x2="69.6722" y2="13.335" width="0" layer="19" extent="1-1"/>
-<wire x1="46.8122" y1="13.335" x2="69.6722" y2="13.335" width="0" layer="19" extent="1-1"/>
-<wire x1="46.8122" y1="12.065" x2="46.8122" y2="13.335" width="0" layer="19" extent="1-1"/>
-<wire x1="30.3784" y1="26.035" x2="46.8122" y2="13.335" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$26">
-<contactref element="U$1" pad="XTAL_32K_OUT"/>
-<contactref element="C5" pad="2"/>
-<wire x1="50.59" y1="39.48" x2="61.4426" y2="55.88" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$27">
-<contactref element="U$1" pad="XTAL_32K_IN"/>
-<contactref element="C6" pad="2"/>
-<wire x1="50.59" y1="38.98" x2="52.5526" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="53.34" y1="31.75" x2="57.15" y2="27.94" width="0.254" layer="1"/>
+<wire x1="53.34" y1="57.15" x2="53.34" y2="31.75" width="0.254" layer="1"/>
+<wire x1="46.99" y1="63.5" x2="53.34" y2="57.15" width="0.254" layer="1"/>
+<wire x1="46.99" y1="64.77" x2="46.99" y2="63.5" width="0.254" layer="1"/>
+<wire x1="22.86" y1="64.77" x2="46.99" y2="64.77" width="0.254" layer="1"/>
+<wire x1="22.86" y1="60.96" x2="22.86" y2="64.77" width="0.254" layer="1"/>
+<wire x1="22.86" y1="60.96" x2="21.9202" y2="60.96" width="0.254" layer="1"/>
+<wire x1="63.3222" y1="10.795" x2="57.15" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="63.3222" y1="9.525" x2="63.3222" y2="10.795" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="10.795" x2="63.3222" y2="10.795" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4622" y1="9.525" x2="40.4622" y2="10.795" width="0" layer="19" extent="1-1"/>
+<wire x1="24.0284" y1="23.495" x2="40.4622" y2="10.795" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$32">
 <contactref element="C9" pad="1"/>
 <contactref element="U$1" pad="VDD_BAT"/>
 <contactref element="L2" pad="2"/>
-<wire x1="44.9326" y1="46.99" x2="47.7774" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="50.59" y1="39.98" x2="44.9326" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="38.5826" y1="44.45" x2="50.3174" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="44.24" y1="37.44" x2="38.5826" y2="44.45" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$34">
 <contactref element="U$1" pad="VDD_PADS"/>
@@ -1123,61 +1182,64 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="VDD_BAT_SMPS"/>
 <contactref element="C19" pad="2"/>
 <contactref element="C18" pad="2"/>
-<wire x1="68.58" y1="43.18" x2="63.5" y2="38.1" width="0.254" layer="1"/>
-<wire x1="72.39" y1="43.18" x2="68.58" y2="43.18" width="0.254" layer="1"/>
-<wire x1="72.39" y1="38.1" x2="72.39" y2="43.18" width="0.254" layer="1"/>
-<wire x1="63.5" y1="38.1" x2="63.1444" y2="38.1" width="0.254" layer="1"/>
-<wire x1="72.39" y1="38.1" x2="72.0344" y2="38.1" width="0.254" layer="1"/>
-<wire x1="56.3626" y1="64.77" x2="63.9826" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="43.9674" y1="46.99" x2="56.3626" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="51.14" y1="40.53" x2="43.9674" y2="46.99" width="0" layer="19" extent="1-1"/>
-<wire x1="55.19" y1="38.48" x2="51.14" y2="40.53" width="0" layer="19" extent="1-1"/>
-<wire x1="63.1444" y1="38.1" x2="55.19" y2="38.48" width="0" layer="19" extent="1-1"/>
+<contactref element="U$5" pad="POS@1"/>
+<wire x1="62.23" y1="40.64" x2="57.15" y2="35.56" width="0.254" layer="1"/>
+<wire x1="66.04" y1="40.64" x2="62.23" y2="40.64" width="0.254" layer="1"/>
+<wire x1="66.04" y1="35.56" x2="66.04" y2="40.64" width="0.254" layer="1"/>
+<wire x1="57.15" y1="35.56" x2="56.7944" y2="35.56" width="0.254" layer="1"/>
+<wire x1="66.04" y1="35.56" x2="65.6844" y2="35.56" width="0.254" layer="1"/>
+<wire x1="53.34" y1="68.58" x2="38.4175" y2="68.58" width="0.254" layer="1"/>
+<wire x1="53.34" y1="69.85" x2="53.34" y2="68.58" width="0.254" layer="1"/>
+<wire x1="54.61" y1="71.12" x2="53.34" y2="69.85" width="0.254" layer="1"/>
+<wire x1="62.23" y1="71.12" x2="54.61" y2="71.12" width="0.254" layer="1"/>
+<wire x1="62.23" y1="40.64" x2="62.23" y2="71.12" width="0.254" layer="1"/>
+<wire x1="58.9026" y1="62.23" x2="66.5226" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="53.34" y1="68.58" x2="58.9026" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="48.84" y1="35.94" x2="56.7944" y2="35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="44.79" y1="37.99" x2="48.84" y2="35.94" width="0" layer="19" extent="1-1"/>
+<wire x1="37.6174" y1="44.45" x2="44.79" y2="37.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$31">
 <contactref element="U$1" pad="PIO[6]/DEBUG_CS#"/>
 <contactref element="U$2" pad="4"/>
-<wire x1="63.5" y1="26.67" x2="55.19" y2="37.48" width="0" layer="19" extent="1-1"/>
+<wire x1="57.15" y1="24.13" x2="48.84" y2="34.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$20">
 <contactref element="U$2" pad="6"/>
 <contactref element="R1" pad="2"/>
-<wire x1="62.23" y1="24.13" x2="63.5" y2="24.13" width="0.254" layer="1"/>
-<wire x1="62.23" y1="31.75" x2="62.23" y2="24.13" width="0.254" layer="1"/>
-<wire x1="62.23" y1="43.18" x2="62.23" y2="31.75" width="0.254" layer="16"/>
-<wire x1="43.18" y1="62.23" x2="62.23" y2="43.18" width="0.254" layer="1"/>
-<wire x1="43.18" y1="63.5" x2="43.18" y2="62.23" width="0.254" layer="1"/>
-<wire x1="43.18" y1="63.5" x2="42.2402" y2="63.5" width="0.254" layer="1"/>
-<via x="62.23" y="31.75" extent="1-16" drill="0.6096"/>
-<via x="62.23" y="43.18" extent="1-16" drill="0.6096"/>
+<wire x1="52.07" y1="21.59" x2="57.15" y2="21.59" width="0.254" layer="1"/>
+<wire x1="52.07" y1="54.61" x2="52.07" y2="21.59" width="0.254" layer="1"/>
+<wire x1="45.72" y1="60.96" x2="52.07" y2="54.61" width="0.254" layer="1"/>
+<wire x1="45.72" y1="60.96" x2="44.7802" y2="60.96" width="0.254" layer="1"/>
 </signal>
 <signal name="N$36">
 <contactref element="U$2" pad="7"/>
 <contactref element="R2" pad="2"/>
-<wire x1="52.07" y1="22.86" x2="63.5" y2="22.86" width="0.254" layer="1"/>
-<wire x1="52.07" y1="17.78" x2="52.07" y2="22.86" width="0.254" layer="1"/>
-<wire x1="31.75" y1="17.78" x2="52.07" y2="17.78" width="0.254" layer="1"/>
-<wire x1="31.75" y1="63.5" x2="31.75" y2="17.78" width="0.254" layer="1"/>
-<wire x1="31.75" y1="63.5" x2="30.8102" y2="63.5" width="0.254" layer="1"/>
+<wire x1="50.8" y1="20.32" x2="57.15" y2="20.32" width="0.254" layer="1"/>
+<wire x1="50.8" y1="41.91" x2="50.8" y2="20.32" width="0.254" layer="1"/>
+<wire x1="35.56" y1="57.15" x2="50.8" y2="41.91" width="0.254" layer="1"/>
+<wire x1="34.29" y1="57.15" x2="35.56" y2="57.15" width="0.254" layer="1"/>
+<wire x1="34.29" y1="60.96" x2="34.29" y2="57.15" width="0.254" layer="1"/>
+<wire x1="34.29" y1="60.96" x2="33.3502" y2="60.96" width="0.254" layer="1"/>
 </signal>
 <signal name="N$37">
 <contactref element="R1" pad="1"/>
 <contactref element="U$1" pad="PIO[0]/UART_TX"/>
-<wire x1="53.64" y1="35.93" x2="33.9598" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="47.29" y1="33.39" x2="36.4998" y2="60.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$38">
 <contactref element="U$1" pad="PIO[1]/UART_RX"/>
 <contactref element="R2" pad="1"/>
-<wire x1="22.5298" y1="63.5" x2="54.14" y2="35.93" width="0" layer="19" extent="1-1"/>
+<wire x1="47.79" y1="33.39" x2="25.0698" y2="60.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$39">
 <contactref element="C11" pad="1"/>
 <contactref element="C10" pad="1"/>
 <contactref element="U$1" pad="VDD_REG_IN"/>
 <contactref element="L1" pad="1"/>
-<wire x1="78.5114" y1="38.1" x2="70.6374" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="50.59" y1="37.48" x2="78.5114" y2="38.1" width="0" layer="19" extent="1-1"/>
-<wire x1="42.6974" y1="55.88" x2="50.59" y2="37.48" width="0" layer="19" extent="1-1"/>
+<wire x1="72.1614" y1="35.56" x2="73.1774" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="44.24" y1="34.94" x2="72.1614" y2="35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="45.2374" y1="53.34" x2="44.24" y2="34.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$40">
 <contactref element="C12" pad="1"/>
@@ -1185,12 +1247,62 @@ design rules under a new name.</description>
 <signal name="N$29">
 <contactref element="U$1" pad="XTAL_16M_OUT"/>
 <contactref element="C3" pad="1"/>
-<wire x1="51.14" y1="35.93" x2="69.3674" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="44.79" y1="33.39" x2="71.9074" y2="53.34" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$30">
 <contactref element="U$1" pad="XTAL_16M_IN"/>
 <contactref element="C4" pad="1"/>
-<wire x1="33.8074" y1="46.99" x2="51.64" y2="35.93" width="0" layer="19" extent="1-1"/>
+<wire x1="27.4574" y1="44.45" x2="45.29" y2="33.39" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$26">
+<contactref element="C5" pad="2"/>
+<contactref element="U$1" pad="XTAL_32K_OUT"/>
+<wire x1="44.24" y1="36.94" x2="63.9826" y2="53.34" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$27">
+<contactref element="C6" pad="2"/>
+<contactref element="U$4" pad="1"/>
+<contactref element="U$1" pad="XTAL_32K_IN"/>
+<wire x1="55.0926" y1="53.34" x2="31.15" y2="80.31" width="0" layer="19" extent="1-1"/>
+<wire x1="44.24" y1="36.44" x2="55.0926" y2="53.34" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$33">
+<contactref element="U$1" pad="AIO[2]"/>
+<contactref element="PAD1" pad="1"/>
+<wire x1="45.79" y1="33.39" x2="72.39" y2="80.01" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$41">
+<contactref element="U$1" pad="AIO[1]"/>
+<contactref element="PAD2" pad="1"/>
+<wire x1="46.29" y1="33.39" x2="66.04" y2="80.01" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$42">
+<contactref element="U$1" pad="AIO[0]"/>
+<contactref element="PAD3" pad="1"/>
+<wire x1="46.79" y1="33.39" x2="59.69" y2="80.01" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$43">
+<contactref element="U$1" pad="PIO[3]/SF_DIN"/>
+<contactref element="PAD4" pad="1"/>
+<wire x1="48.29" y1="33.39" x2="53.34" y2="80.01" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$44">
+<contactref element="U$1" pad="PIO[10]"/>
+<contactref element="PAD5" pad="1"/>
+<wire x1="48.84" y1="37.44" x2="46.99" y2="80.01" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$45">
+<contactref element="U$1" pad="SPI_PIO#"/>
+<contactref element="R3" pad="1"/>
+<wire x1="13.6398" y1="60.96" x2="47.79" y2="37.99" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$46">
+<contactref element="U$1" pad="PIO[2]"/>
+</signal>
+<signal name="N$47">
+<contactref element="U$1" pad="PIO[11]"/>
+<contactref element="PAD6" pad="1"/>
+<wire x1="48.29" y1="37.99" x2="40.64" y2="80.01" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

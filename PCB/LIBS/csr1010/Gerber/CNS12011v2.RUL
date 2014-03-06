@@ -1,0 +1,16 @@
+DRC Rules Export File for PCB: C:\PCB\Cognidox\12011\Rev2 CAD\CAD_Files\PCB\CNS12011v2.PcbDoc
+RuleKind=Clearance|RuleName=Clearance_RF_1|Scope=Board|Minimum=3.94
+RuleKind=Clearance|RuleName=Clearance_poly_edge_top|Scope=Board|Minimum=15.75
+RuleKind=Clearance|RuleName=USB to Poly|Scope=Board|Minimum=11.81
+RuleKind=Clearance|RuleName=Clearance_Poly|Scope=Board|Minimum=5.91
+RuleKind=Clearance|RuleName=Clearance_Mid1_Via|Scope=Board|Minimum=2.95
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=3.94
+RuleKind=Width|RuleName=Width_1|Scope=Board|Minimum=5.12
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=3.94
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=3.15
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing_Via|Scope=Board|Minimum=1.97
+RuleKind=MinimumAnnularRing|RuleName=MiniAnnRing_Mounting|Scope=Board|Minimum=0.00
+RuleKind=MinimumAnnularRing|RuleName=MinAnRing_Brkout|Scope=Board|Minimum=-39.37
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=3.94
+RuleKind=ShortCircuit|RuleName=ShortCircuit_1|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance_Poly_outers|Scope=Board|Minimum=7.87

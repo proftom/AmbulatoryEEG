@@ -1173,6 +1173,54 @@ www.isabellenhuette.de&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="wirepad">
+<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="1,6/0,8">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<wire x1="-0.762" y1="0.762" x2="-0.508" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.762" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.508" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.508" x2="0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="0.508" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.508" y1="-0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-0.762" x2="-0.762" y2="-0.508" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.635" width="0.1524" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.8128" diameter="1.6002" shape="octagon"/>
+<text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PAD">
+<wire x1="-1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" width="0.254" layer="94"/>
+<text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
+<text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="P" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="1,6/0,8" prefix="PAD" uservalue="yes">
+<description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
+<gates>
+<gate name="P" symbol="PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1,6/0,8">
+<connects>
+<connect gate="P" pin="P" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1238,12 +1286,26 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="U$3" library="TSX3225" deviceset="TSX3225" device=""/>
 <part name="U$4" library="SSP-T7-F" deviceset="SSP-T7-F" device=""/>
 <part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
+<part name="PAD1" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD2" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD3" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD4" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PAD5" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="R3" library="resistor-shunt" deviceset="BVS" device=""/>
+<part name="PAD6" library="wirepad" deviceset="1,6/0,8" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-38.1" y="-7.62" size="1.778" layer="91">Optional</text>
 <text x="-38.1" y="-10.16" size="1.778" layer="91">Solder jumpers</text>
+<text x="-190.5" y="62.23" size="1.778" layer="91">50 ohms RF</text>
+<text x="-190.5" y="58.42" size="1.778" layer="91">Inductor Coils</text>
+<text x="-190.5" y="54.61" size="1.778" layer="91">mini 8 pin connector</text>
+<text x="-190.5" y="50.8" size="1.778" layer="91">check SPI will work</text>
+<text x="-190.5" y="46.99" size="1.778" layer="91">add test pads</text>
+<text x="-190.5" y="43.18" size="1.778" layer="91">Push button</text>
+<text x="-190.5" y="39.37" size="1.778" layer="91">CAP for I2C</text>
 </plain>
 <instances>
 <instance part="ADC1" gate="A" x="50.8" y="50.8" rot="R180"/>
@@ -1301,6 +1363,13 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="U$3" gate="G$1" x="-83.82" y="10.16" rot="R90"/>
 <instance part="U$4" gate="G$1" x="-100.33" y="69.85" rot="R270"/>
 <instance part="U$5" gate="G$1" x="-172.72" y="101.6"/>
+<instance part="PAD1" gate="P" x="-71.12" y="15.24" rot="R90"/>
+<instance part="PAD2" gate="P" x="-63.5" y="15.24" rot="R90"/>
+<instance part="PAD3" gate="P" x="-55.88" y="15.24" rot="R90"/>
+<instance part="PAD4" gate="P" x="-33.02" y="15.24" rot="R90"/>
+<instance part="PAD5" gate="P" x="-20.32" y="81.28" rot="MR0"/>
+<instance part="R3" gate="G$1" x="1.27" y="85.09" rot="R180"/>
+<instance part="PAD6" gate="P" x="-33.02" y="95.25" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1693,8 +1762,9 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="78.74" y1="66.04" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="ADC0" gate="A" pin="VDD"/>
 <wire x1="78.74" y1="60.96" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="66.04" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="66.04" x2="78.74" y2="85.09" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="VCC"/>
+<wire x1="78.74" y1="85.09" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="111.76" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="66.04" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
 <junction x="78.74" y="66.04"/>
@@ -1711,6 +1781,9 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="81.28" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
 <junction x="81.28" y="60.96"/>
 <junction x="78.74" y="60.96"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="6.35" y1="85.09" x2="78.74" y2="85.09" width="0.1524" layer="91"/>
+<junction x="78.74" y="85.09"/>
 </segment>
 <segment>
 <pinref part="VDD2" gate="G$1" pin="VDD"/>
@@ -1862,6 +1935,61 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="U$1" gate="G$1" pin="XTAL_32K_IN"/>
 <wire x1="-100.33" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-100.33" y="66.04"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="AIO[2]"/>
+<pinref part="PAD1" gate="P" pin="P"/>
+</segment>
+</net>
+<net name="N$41" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="AIO[1]"/>
+<pinref part="PAD2" gate="P" pin="P"/>
+</segment>
+</net>
+<net name="N$42" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="AIO[0]"/>
+<pinref part="PAD3" gate="P" pin="P"/>
+</segment>
+</net>
+<net name="N$43" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIO[3]/SF_DIN"/>
+<pinref part="PAD4" gate="P" pin="P"/>
+</segment>
+</net>
+<net name="N$44" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIO[10]"/>
+<pinref part="PAD5" gate="P" pin="P"/>
+</segment>
+</net>
+<net name="N$45" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SPI_PIO#"/>
+<wire x1="-40.64" y1="91.44" x2="-40.64" y2="97.79" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="97.79" x2="-5.08" y2="97.79" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="97.79" x2="-5.08" y2="85.09" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-5.08" y1="85.09" x2="-3.81" y2="85.09" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$46" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIO[2]"/>
+<wire x1="-48.26" y1="91.44" x2="-48.26" y2="120.65" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="120.65" x2="69.85" y2="120.65" width="0.1524" layer="91"/>
+<wire x1="69.85" y1="120.65" x2="69.85" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$47" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIO[11]"/>
+<pinref part="PAD6" gate="P" pin="P"/>
+<wire x1="-33.02" y1="91.44" x2="-33.02" y2="92.71" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

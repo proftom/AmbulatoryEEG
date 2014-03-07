@@ -908,72 +908,6 @@ at 30/04/2012 16:26:10</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="MINI_SMT_8_PIN_CONNECTOR">
-<packages>
-<package name="8PIN_SMT_CONNECTOR">
-<smd name="1" x="-19.05" y="3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="2" x="-19.05" y="2.54" dx="1.27" dy="0.635" layer="1"/>
-<smd name="3" x="-19.05" y="1.27" dx="1.27" dy="0.635" layer="1"/>
-<smd name="4" x="-19.05" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="5" x="-19.05" y="-1.27" dx="1.27" dy="0.635" layer="1"/>
-<smd name="6" x="-19.05" y="-2.54" dx="1.27" dy="0.635" layer="1"/>
-<smd name="7" x="-19.05" y="-3.81" dx="1.27" dy="0.635" layer="1"/>
-<smd name="8" x="-19.05" y="-5.08" dx="1.27" dy="0.635" layer="1"/>
-<smd name="CASE@1" x="-19.05" y="-7.62" dx="1.27" dy="0.635" layer="1"/>
-<smd name="CASE@4" x="-19.05" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="CASE@3" x="-31.75" y="6.35" dx="1.27" dy="0.635" layer="1"/>
-<smd name="CASE@2" x="-31.75" y="-7.62" dx="1.27" dy="0.635" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="8PIN_SMT_CONNECTOR">
-<pin name="VCHG" x="-12.7" y="12.7" length="middle"/>
-<pin name="SPI_MOSI" x="-12.7" y="10.16" length="middle"/>
-<pin name="SPI_CLK" x="-12.7" y="7.62" length="middle"/>
-<pin name="SPI_CSB" x="-12.7" y="5.08" length="middle"/>
-<pin name="SPI_MISO" x="-12.7" y="2.54" length="middle"/>
-<pin name="SER-" x="-12.7" y="0" length="middle"/>
-<pin name="SER+" x="-12.7" y="-2.54" length="middle"/>
-<pin name="GND" x="-12.7" y="-5.08" length="middle"/>
-<wire x1="-7.62" y1="15.24" x2="-7.62" y2="-17.78" width="0.254" layer="94"/>
-<wire x1="7.62" y1="15.24" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
-<wire x1="7.62" y1="15.24" x2="7.62" y2="-17.78" width="0.254" layer="94"/>
-<pin name="CASE" x="-12.7" y="-7.62" length="middle"/>
-<pin name="CASE@2" x="-12.7" y="-10.16" length="middle"/>
-<pin name="CASE@3" x="-12.7" y="-12.7" length="middle"/>
-<pin name="CASE@4" x="-12.7" y="-15.24" length="middle"/>
-<wire x1="7.62" y1="-17.78" x2="-7.62" y2="-17.78" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="8PIN_SMT_CONNECTOR">
-<gates>
-<gate name="G$1" symbol="8PIN_SMT_CONNECTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="8PIN_SMT_CONNECTOR">
-<connects>
-<connect gate="G$1" pin="CASE" pad="CASE@1"/>
-<connect gate="G$1" pin="CASE@2" pad="CASE@2"/>
-<connect gate="G$1" pin="CASE@3" pad="CASE@3"/>
-<connect gate="G$1" pin="CASE@4" pad="CASE@4"/>
-<connect gate="G$1" pin="GND" pad="8"/>
-<connect gate="G$1" pin="SER+" pad="7"/>
-<connect gate="G$1" pin="SER-" pad="6"/>
-<connect gate="G$1" pin="SPI_CLK" pad="3"/>
-<connect gate="G$1" pin="SPI_CSB" pad="4"/>
-<connect gate="G$1" pin="SPI_MISO" pad="5"/>
-<connect gate="G$1" pin="SPI_MOSI" pad="2"/>
-<connect gate="G$1" pin="VCHG" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="resistor-shunt">
 <description>&lt;b&gt;Isabellenhuette SMD Shunt Resistors&lt;/b&gt;&lt;p&gt;
 www.isabellenhuette.de&lt;p&gt;
@@ -1221,6 +1155,80 @@ www.isabellenhuette.de&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="MINI_SMT_8_PIN_CONNECTOR">
+<packages>
+<package name="8PIN_SMT_CONNECTOR">
+<smd name="1" x="-31.8" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="2" x="-31.35" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="3" x="-30.9" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="5" x="-30" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="4" x="-30.45" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="7" x="-29.1" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="6" x="-29.55" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<smd name="8" x="-28.65" y="4.1" dx="0.26" dy="1.2" layer="1"/>
+<text x="-28.2" y="4.8" size="1.27" layer="25">8</text>
+<text x="-33.1" y="4.9" size="1.27" layer="25">1</text>
+<hole x="-33.2" y="4.025" drill="0.6"/>
+<hole x="-33.175" y="0" drill="0.6"/>
+<pad name="12" x="-33.2" y="4.025" drill="0.6" shape="long" rot="R90"/>
+<pad name="11" x="-33.175" y="0" drill="0.6" shape="long" rot="R90"/>
+<hole x="-27.3" y="0" drill="0.6"/>
+<hole x="-27.3" y="4.025" drill="0.6"/>
+<pad name="10" x="-27.3" y="0" drill="0.6" shape="long" rot="R90"/>
+<pad name="9" x="-27.3" y="4.025" drill="0.6" shape="long" rot="R90"/>
+<hole x="-28.725" y="2.65" drill="0.6"/>
+<hole x="-31.725" y="2.65" drill="0.6"/>
+</package>
+</packages>
+<symbols>
+<symbol name="8PIN_SMT_CONNECTOR">
+<pin name="VCHG" x="-12.7" y="12.7" length="middle"/>
+<pin name="SPI_MOSI" x="-12.7" y="10.16" length="middle"/>
+<pin name="SPI_CLK" x="-12.7" y="7.62" length="middle"/>
+<pin name="SPI_CSB" x="-12.7" y="5.08" length="middle"/>
+<pin name="SPI_MISO" x="-12.7" y="2.54" length="middle"/>
+<pin name="SER-" x="-12.7" y="0" length="middle"/>
+<pin name="SER+" x="-12.7" y="-2.54" length="middle"/>
+<pin name="GND" x="-12.7" y="-5.08" length="middle"/>
+<wire x1="-7.62" y1="15.24" x2="-7.62" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="7.62" y1="15.24" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
+<wire x1="7.62" y1="15.24" x2="7.62" y2="-17.78" width="0.254" layer="94"/>
+<pin name="CASE" x="-12.7" y="-7.62" length="middle"/>
+<pin name="CASE@2" x="-12.7" y="-10.16" length="middle"/>
+<pin name="CASE@3" x="-12.7" y="-12.7" length="middle"/>
+<pin name="CASE@4" x="-12.7" y="-15.24" length="middle"/>
+<wire x1="7.62" y1="-17.78" x2="-7.62" y2="-17.78" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="8PIN_SMT_CONNECTOR">
+<gates>
+<gate name="G$1" symbol="8PIN_SMT_CONNECTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="8PIN_SMT_CONNECTOR">
+<connects>
+<connect gate="G$1" pin="CASE" pad="9"/>
+<connect gate="G$1" pin="CASE@2" pad="10"/>
+<connect gate="G$1" pin="CASE@3" pad="11"/>
+<connect gate="G$1" pin="CASE@4" pad="12"/>
+<connect gate="G$1" pin="GND" pad="8"/>
+<connect gate="G$1" pin="SER+" pad="7"/>
+<connect gate="G$1" pin="SER-" pad="6"/>
+<connect gate="G$1" pin="SPI_CLK" pad="3"/>
+<connect gate="G$1" pin="SPI_CSB" pad="4"/>
+<connect gate="G$1" pin="SPI_MISO" pad="5"/>
+<connect gate="G$1" pin="SPI_MOSI" pad="2"/>
+<connect gate="G$1" pin="VCHG" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1276,7 +1284,6 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="C16" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="47n"/>
 <part name="C17" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="4u7"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
 <part name="VDD2" library="supply1" deviceset="VDD" device=""/>
 <part name="R1" library="resistor-shunt" deviceset="BVS" device=""/>
 <part name="R2" library="resistor-shunt" deviceset="BVS" device=""/>
@@ -1295,6 +1302,10 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="PAD6" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
+<part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
+<part name="R4" library="resistor-shunt" deviceset="BVS" device=""/>
+<part name="VPLUS" library="solpad" deviceset="LSP10" device="" value="Vrail"/>
+<part name="VGND" library="solpad" deviceset="LSP10" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1303,11 +1314,10 @@ www.isabellenhuette.de&lt;p&gt;
 <text x="-38.1" y="-10.16" size="1.778" layer="91">Solder jumpers</text>
 <text x="-190.5" y="62.23" size="1.778" layer="91">50 ohms RF</text>
 <text x="-190.5" y="58.42" size="1.778" layer="91">Inductor Coils</text>
-<text x="-190.5" y="54.61" size="1.778" layer="91">mini 8 pin connector</text>
 <text x="-190.5" y="50.8" size="1.778" layer="91">check SPI will work</text>
 <text x="-190.5" y="46.99" size="1.778" layer="91">add test pads</text>
 <text x="-190.5" y="43.18" size="1.778" layer="91">Push button</text>
-<text x="-190.5" y="39.37" size="1.778" layer="91">CAP for I2C</text>
+<text x="-116.84" y="38.1" size="1.778" layer="91">place C7 close to pin 7</text>
 </plain>
 <instances>
 <instance part="ADC1" gate="A" x="50.8" y="50.8" rot="R180"/>
@@ -1355,8 +1365,7 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="C16" gate="A" x="-137.16" y="109.22" rot="R270"/>
 <instance part="C17" gate="A" x="-129.54" y="109.22" rot="R270"/>
 <instance part="GND10" gate="1" x="-154.94" y="91.44"/>
-<instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
-<instance part="VDD2" gate="G$1" x="30.48" y="-25.4"/>
+<instance part="VDD2" gate="G$1" x="30.48" y="-17.78"/>
 <instance part="R1" gate="G$1" x="-48.26" y="-12.7" rot="R90"/>
 <instance part="R2" gate="G$1" x="-40.64" y="-12.7" rot="R90"/>
 <instance part="C18" gate="A" x="-154.94" y="101.6" rot="R90"/>
@@ -1374,6 +1383,10 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="PAD6" gate="P" x="-33.02" y="95.25" rot="R270"/>
 <instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
 <instance part="C1" gate="A" x="73.152" y="108.204" rot="R90"/>
+<instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
+<instance part="R4" gate="G$1" x="30.48" y="-27.94" rot="R90"/>
+<instance part="VPLUS" gate="1" x="-157.48" y="114.3" rot="R270"/>
+<instance part="VGND" gate="1" x="-154.94" y="71.12" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1391,8 +1404,8 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="27.94" y1="-10.16" x2="30.48" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-10.16" x2="27.94" y2="-40.64" width="0.1524" layer="91"/>
 <junction x="27.94" y="-10.16"/>
-<pinref part="U$2" gate="G$1" pin="SPI_CLK"/>
 <wire x1="27.94" y1="-40.64" x2="30.48" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SPI_CLK"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -1400,7 +1413,6 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="ADC0" gate="A" pin="DOUT"/>
 <wire x1="25.4" y1="5.08" x2="30.48" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="5.08" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="SPI_MISO"/>
 <wire x1="25.4" y1="-45.72" x2="30.48" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="5.08" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
 <junction x="25.4" y="5.08"/>
@@ -1410,6 +1422,7 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="ADC1" gate="A" pin="DOUT"/>
 <wire x1="30.48" y1="58.42" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
 <junction x="25.4" y="58.42"/>
+<pinref part="U$2" gate="G$1" pin="SPI_MISO"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -1426,8 +1439,8 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="22.86" y1="50.8" x2="-22.86" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="27.94" x2="22.86" y2="-38.1" width="0.1524" layer="91"/>
 <junction x="22.86" y="27.94"/>
-<pinref part="U$2" gate="G$1" pin="SPI_MOSI"/>
 <wire x1="22.86" y1="-38.1" x2="30.48" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SPI_MOSI"/>
 </segment>
 </net>
 <net name="N$24" class="0">
@@ -1531,6 +1544,8 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-157.48" y1="71.12" x2="-157.48" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-157.48" y1="93.98" x2="-154.94" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-154.94" y="93.98"/>
+<pinref part="VGND" gate="1" pin="MP"/>
+<junction x="-157.48" y="71.12"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -1547,24 +1562,24 @@ www.isabellenhuette.de&lt;p&gt;
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="27.94" y1="-68.58" x2="27.94" y2="-63.5" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="CASE@4"/>
 <wire x1="30.48" y1="-63.5" x2="27.94" y2="-63.5" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
 <wire x1="30.48" y1="-53.34" x2="27.94" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-53.34" x2="27.94" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="27.94" y="-63.5"/>
-<pinref part="U$2" gate="G$1" pin="CASE@3"/>
 <wire x1="27.94" y1="-55.88" x2="27.94" y2="-58.42" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-58.42" x2="27.94" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-60.96" x2="27.94" y2="-63.5" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="-60.96" x2="27.94" y2="-60.96" width="0.1524" layer="91"/>
 <junction x="27.94" y="-60.96"/>
-<pinref part="U$2" gate="G$1" pin="CASE@2"/>
 <wire x1="30.48" y1="-58.42" x2="27.94" y2="-58.42" width="0.1524" layer="91"/>
 <junction x="27.94" y="-58.42"/>
-<pinref part="U$2" gate="G$1" pin="CASE"/>
 <wire x1="30.48" y1="-55.88" x2="27.94" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="27.94" y="-55.88"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="U$2" gate="G$1" pin="CASE"/>
+<pinref part="U$2" gate="G$1" pin="CASE@2"/>
+<pinref part="U$2" gate="G$1" pin="CASE@3"/>
+<pinref part="U$2" gate="G$1" pin="CASE@4"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="GND@1"/>
@@ -1802,9 +1817,9 @@ www.isabellenhuette.de&lt;p&gt;
 <junction x="78.74" y="85.09"/>
 </segment>
 <segment>
+<pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="VDD2" gate="G$1" pin="VDD"/>
-<pinref part="U$2" gate="G$1" pin="VCHG"/>
-<wire x1="30.48" y1="-27.94" x2="30.48" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="-22.86" x2="30.48" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -1844,8 +1859,12 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-144.78" y1="109.22" x2="-154.94" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-144.78" y="109.22"/>
 <pinref part="U$5" gate="G$1" pin="POS"/>
-<wire x1="-154.94" y1="109.22" x2="-162.56" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="109.22" x2="-160.02" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-154.94" y="109.22"/>
+<pinref part="VPLUS" gate="1" pin="MP"/>
+<wire x1="-160.02" y1="109.22" x2="-162.56" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-160.02" y1="114.3" x2="-160.02" y2="109.22" width="0.1524" layer="91"/>
+<junction x="-160.02" y="109.22"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -1853,26 +1872,26 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="U$1" gate="G$1" pin="PIO[6]/DEBUG_CS#"/>
 <wire x1="-22.86" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="43.18" x2="20.32" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="SPI_CSB"/>
 <wire x1="20.32" y1="-43.18" x2="30.48" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SPI_CSB"/>
 </segment>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="SER-"/>
 <wire x1="30.48" y1="-48.26" x2="-40.64" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="-48.26" x2="-48.26" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-48.26" y1="-17.78" x2="-48.26" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SER-"/>
 </segment>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="SER+"/>
 <wire x1="-40.64" y1="-43.18" x2="-33.02" y2="-50.8" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-50.8" x2="30.48" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="-43.18" x2="-40.64" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SER+"/>
 </segment>
 </net>
 <net name="N$37" class="0">
@@ -2012,6 +2031,13 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="U$5" gate="G$1" pin="NEG"/>
 <pinref part="U$6" gate="G$1" pin="POS"/>
 <wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$40" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="VCHG"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="-35.56" x2="30.48" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

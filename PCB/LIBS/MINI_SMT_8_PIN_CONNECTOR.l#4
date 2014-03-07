@@ -98,20 +98,6 @@
 </gates>
 <devices>
 <device name="" package="8PIN_SMT_CONNECTOR">
-<connects>
-<connect gate="G$1" pin="CASE" pad="CASE@1"/>
-<connect gate="G$1" pin="CASE@2" pad="CASE@2"/>
-<connect gate="G$1" pin="CASE@3" pad="CASE@3"/>
-<connect gate="G$1" pin="CASE@4" pad="CASE@4"/>
-<connect gate="G$1" pin="GND" pad="8"/>
-<connect gate="G$1" pin="SER+" pad="7"/>
-<connect gate="G$1" pin="SER-" pad="6"/>
-<connect gate="G$1" pin="SPI_CLK" pad="3"/>
-<connect gate="G$1" pin="SPI_CSB" pad="4"/>
-<connect gate="G$1" pin="SPI_MISO" pad="5"/>
-<connect gate="G$1" pin="SPI_MOSI" pad="2"/>
-<connect gate="G$1" pin="VCHG" pad="1"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>

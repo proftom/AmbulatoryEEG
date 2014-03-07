@@ -205,9 +205,43 @@
 <devicesets>
 <deviceset name="CSR1010A05-IQQM-R">
 <gates>
+<gate name="G$1" symbol="CSR1010A05-IQQM-R" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="CSR1010A05-IQQM-R">
+<connects>
+<connect gate="G$1" pin="AIO[0]" pad="AIO[0]"/>
+<connect gate="G$1" pin="AIO[1]" pad="AIO[1]"/>
+<connect gate="G$1" pin="AIO[2]" pad="AIO[2]"/>
+<connect gate="G$1" pin="I2C_SCL" pad="I2C_SCL"/>
+<connect gate="G$1" pin="I2C_SDA" pad="I2C_SDA"/>
+<connect gate="G$1" pin="PIO[0]/UART_TX" pad="PIO[0]/UART_TX"/>
+<connect gate="G$1" pin="PIO[10]" pad="PIO[10]"/>
+<connect gate="G$1" pin="PIO[11]" pad="PIO[11]"/>
+<connect gate="G$1" pin="PIO[1]/UART_RX" pad="PIO[1]/UART_RX"/>
+<connect gate="G$1" pin="PIO[2]" pad="PIO[2]"/>
+<connect gate="G$1" pin="PIO[3]/SF_DIN" pad="PIO[3]/SF_DIN"/>
+<connect gate="G$1" pin="PIO[4]/SF_CS#" pad="PIO[4]/SF_CS#"/>
+<connect gate="G$1" pin="PIO[5]/DEBUG_CLK" pad="PIO[5]/DEBUG_CLK"/>
+<connect gate="G$1" pin="PIO[6]/DEBUG_CS#" pad="PIO[6]/DEBUG_CS#"/>
+<connect gate="G$1" pin="PIO[7]/DEBUG_MOSI" pad="PIO[7]/DEBUG_MOSI"/>
+<connect gate="G$1" pin="PIO[8]/DEBUG_MISO" pad="PIO[8]/DEBUG_MISO"/>
+<connect gate="G$1" pin="PIO[9]" pad="PIO[9]"/>
+<connect gate="G$1" pin="RF" pad="RF"/>
+<connect gate="G$1" pin="SMPS_LX" pad="SMPS_LX"/>
+<connect gate="G$1" pin="SPI_PIO#" pad="SPI_PIO#"/>
+<connect gate="G$1" pin="VDD_BAT" pad="VDD_BAT"/>
+<connect gate="G$1" pin="VDD_BAT_SMPS" pad="VDD_BAT_SMPS"/>
+<connect gate="G$1" pin="VDD_CORE" pad="VDD_CORE"/>
+<connect gate="G$1" pin="VDD_PADS" pad="VDD_PADS"/>
+<connect gate="G$1" pin="VDD_REG_IN" pad="VDD_REG_IN"/>
+<connect gate="G$1" pin="VDD_XTAL" pad="VDD_XTAL"/>
+<connect gate="G$1" pin="WAKE" pad="WAKE"/>
+<connect gate="G$1" pin="XTAL_16M_IN" pad="XTAL_16M_IN"/>
+<connect gate="G$1" pin="XTAL_16M_OUT" pad="XTAL_16M_OUT"/>
+<connect gate="G$1" pin="XTAL_32K_IN" pad="XTAL_32K_IN"/>
+<connect gate="G$1" pin="XTAL_32K_OUT" pad="XTAL_32K_OUT"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

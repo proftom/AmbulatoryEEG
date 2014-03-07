@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -165,7 +165,6 @@
 </packages>
 <symbols>
 <symbol name="CSR1010A05-IQQM-R">
-<wire x1="38.1" y1="58.42" x2="35.56" y2="60.96" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="30.48" x2="-33.02" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="-33.02" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
 <pin name="VDD_BAT" x="-38.1" y="25.4" length="middle" direction="out"/>
@@ -206,7 +205,6 @@
 <devicesets>
 <deviceset name="CSR1010A05-IQQM-R">
 <gates>
-<gate name="G$1" symbol="CSR1010A05-IQQM-R" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="CSR1010A05-IQQM-R">

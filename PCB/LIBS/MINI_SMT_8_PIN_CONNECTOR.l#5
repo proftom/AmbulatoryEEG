@@ -56,46 +56,61 @@
 </layers>
 <library>
 <packages>
-<package name="BATTERY_2996">
-<smd name="POS@1" x="-17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
-<smd name="POS@2" x="17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
-<smd name="NEG" x="0" y="0" dx="3.175" dy="3.175" layer="1"/>
-<text x="2.54" y="2.54" size="1.27" layer="21">-</text>
-<text x="-20.32" y="2.54" size="1.27" layer="21">+</text>
-<text x="19.05" y="2.54" size="1.27" layer="21">+</text>
+<package name="8PIN_SMT_CONNECTOR">
+<smd name="1" x="-19.05" y="3.81" dx="1.27" dy="0.635" layer="1"/>
+<smd name="2" x="-19.05" y="2.54" dx="1.27" dy="0.635" layer="1"/>
+<smd name="3" x="-19.05" y="1.27" dx="1.27" dy="0.635" layer="1"/>
+<smd name="4" x="-19.05" y="0" dx="1.27" dy="0.635" layer="1"/>
+<smd name="5" x="-19.05" y="-1.27" dx="1.27" dy="0.635" layer="1"/>
+<smd name="6" x="-19.05" y="-2.54" dx="1.27" dy="0.635" layer="1"/>
+<smd name="7" x="-19.05" y="-3.81" dx="1.27" dy="0.635" layer="1"/>
+<smd name="8" x="-19.05" y="-5.08" dx="1.27" dy="0.635" layer="1"/>
+<smd name="CASE@1" x="-19.05" y="-7.62" dx="1.27" dy="0.635" layer="1"/>
+<smd name="CASE@4" x="-19.05" y="6.35" dx="1.27" dy="0.635" layer="1"/>
+<smd name="CASE@3" x="-31.75" y="6.35" dx="1.27" dy="0.635" layer="1"/>
+<smd name="CASE@2" x="-31.75" y="-7.62" dx="1.27" dy="0.635" layer="1"/>
 </package>
 </packages>
 <symbols>
-<symbol name="BATTERY_2996">
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="7.62" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<text x="-5.08" y="5.08" size="1.27" layer="94">+</text>
-<text x="5.842" y="7.62" size="1.27" layer="94">+</text>
-<text x="5.842" y="-7.62" size="1.27" layer="94">-</text>
-<pin name="POS" x="10.16" y="7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="NEG" x="10.16" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<symbol name="8PIN_SMT_CONNECTOR">
+<pin name="VCHG" x="-12.7" y="12.7" length="middle"/>
+<pin name="SPI_MOSI" x="-12.7" y="10.16" length="middle"/>
+<pin name="SPI_CLK" x="-12.7" y="7.62" length="middle"/>
+<pin name="SPI_CSB" x="-12.7" y="5.08" length="middle"/>
+<pin name="SPI_MISO" x="-12.7" y="2.54" length="middle"/>
+<pin name="SER-" x="-12.7" y="0" length="middle"/>
+<pin name="SER+" x="-12.7" y="-2.54" length="middle"/>
+<pin name="GND" x="-12.7" y="-5.08" length="middle"/>
+<wire x1="-7.62" y1="15.24" x2="-7.62" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="7.62" y1="15.24" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
+<wire x1="7.62" y1="15.24" x2="7.62" y2="-17.78" width="0.254" layer="94"/>
+<pin name="CASE" x="-12.7" y="-7.62" length="middle"/>
+<pin name="CASE@2" x="-12.7" y="-10.16" length="middle"/>
+<pin name="CASE@3" x="-12.7" y="-12.7" length="middle"/>
+<pin name="CASE@4" x="-12.7" y="-15.24" length="middle"/>
+<wire x1="7.62" y1="-17.78" x2="-7.62" y2="-17.78" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BATTERY_2996">
+<deviceset name="8PIN_SMT_CONNECTOR">
 <gates>
-<gate name="G$1" symbol="BATTERY_2996" x="0" y="0"/>
+<gate name="G$1" symbol="8PIN_SMT_CONNECTOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="BATTERY_2996">
+<device name="" package="8PIN_SMT_CONNECTOR">
 <connects>
-<connect gate="G$1" pin="NEG" pad="NEG"/>
-<connect gate="G$1" pin="POS" pad="POS@1"/>
+<connect gate="G$1" pin="CASE" pad="CASE@1"/>
+<connect gate="G$1" pin="CASE@2" pad="CASE@2"/>
+<connect gate="G$1" pin="CASE@3" pad="CASE@3"/>
+<connect gate="G$1" pin="CASE@4" pad="CASE@4"/>
+<connect gate="G$1" pin="GND" pad="8"/>
+<connect gate="G$1" pin="SER+" pad="7"/>
+<connect gate="G$1" pin="SER-" pad="6"/>
+<connect gate="G$1" pin="SPI_CLK" pad="3"/>
+<connect gate="G$1" pin="SPI_CSB" pad="4"/>
+<connect gate="G$1" pin="SPI_MISO" pad="5"/>
+<connect gate="G$1" pin="SPI_MOSI" pad="2"/>
+<connect gate="G$1" pin="VCHG" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>

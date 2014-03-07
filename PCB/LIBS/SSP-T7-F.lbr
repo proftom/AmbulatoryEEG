@@ -65,14 +65,14 @@
 </packages>
 <symbols>
 <symbol name="SSP-T7-F">
-<pin name="P$1" x="0" y="0" visible="pin" rot="R270"/>
-<pin name="P$2" x="0" y="-18.5" visible="pin" rot="R90"/>
-<wire x1="-2" y1="-7.75" x2="2" y2="-7.75" width="0.1" layer="94"/>
-<wire x1="2" y1="-8.5" x2="-2" y2="-8.5" width="0.1" layer="94"/>
-<wire x1="-2" y1="-8.5" x2="-2" y2="-10" width="0.1" layer="94"/>
-<wire x1="-2" y1="-10" x2="2" y2="-10" width="0.1" layer="94"/>
-<wire x1="2" y1="-10" x2="2" y2="-8.5" width="0.1" layer="94"/>
-<wire x1="2" y1="-10.75" x2="-2" y2="-10.75" width="0.1" layer="94"/>
+<wire x1="-2" y1="1.648" x2="2" y2="1.648" width="0.1" layer="94"/>
+<wire x1="2" y1="0.898" x2="-2" y2="0.898" width="0.1" layer="94"/>
+<wire x1="-2" y1="0.898" x2="-2" y2="-0.602" width="0.1" layer="94"/>
+<wire x1="-2" y1="-0.602" x2="2" y2="-0.602" width="0.1" layer="94"/>
+<wire x1="2" y1="-0.602" x2="2" y2="0.898" width="0.1" layer="94"/>
+<wire x1="2" y1="-1.352" x2="-2" y2="-1.352" width="0.1" layer="94"/>
+<pin name="P$2" x="0" y="-6.35" length="middle" rot="R90"/>
+<pin name="P$1" x="0" y="6.858" length="middle" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>

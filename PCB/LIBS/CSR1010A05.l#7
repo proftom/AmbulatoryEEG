@@ -165,7 +165,6 @@
 </packages>
 <symbols>
 <symbol name="CSR1010A05-IQQM-R">
-<wire x1="38.1" y1="58.42" x2="35.56" y2="60.96" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="30.48" x2="-33.02" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="-33.02" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
 <pin name="VDD_BAT" x="-38.1" y="25.4" length="middle" direction="out"/>

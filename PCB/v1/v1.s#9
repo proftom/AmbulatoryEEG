@@ -1292,13 +1292,13 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="U$3" library="TSX3225" deviceset="TSX3225" device=""/>
 <part name="U$4" library="SSP-T7-F" deviceset="SSP-T7-F" device=""/>
 <part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
-<part name="PAD1" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PAD2" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PAD3" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PAD4" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PAD5" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="AIO2" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="AIO1" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="AIO0" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PIO3" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PIO10" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="R3" library="resistor-shunt" deviceset="BVS" device=""/>
-<part name="PAD6" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PIO11" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
 <part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
@@ -1312,7 +1312,7 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="MOSI" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="SF" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="CS" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PAD14" library="wirepad" deviceset="1,6/0,8" device=""/>
+<part name="PIO4" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="WAKE" library="solpad" deviceset="LSP10" device="" value="Vrail"/>
 </parts>
 <sheets>
@@ -1391,13 +1391,13 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="U$3" gate="G$1" x="-83.82" y="10.16" rot="R90"/>
 <instance part="U$4" gate="G$1" x="-100.33" y="69.85" rot="R270"/>
 <instance part="U$5" gate="G$1" x="-172.72" y="101.6"/>
-<instance part="PAD1" gate="P" x="-71.12" y="15.24" rot="R90"/>
-<instance part="PAD2" gate="P" x="-63.5" y="15.24" rot="R90"/>
-<instance part="PAD3" gate="P" x="-55.88" y="15.24" rot="R90"/>
-<instance part="PAD4" gate="P" x="-33.02" y="15.24" rot="R90"/>
-<instance part="PAD5" gate="P" x="-20.32" y="81.28" rot="MR0"/>
+<instance part="AIO2" gate="P" x="-71.12" y="15.24" rot="R90"/>
+<instance part="AIO1" gate="P" x="-63.5" y="15.24" rot="R90"/>
+<instance part="AIO0" gate="P" x="-55.88" y="15.24" rot="R90"/>
+<instance part="PIO3" gate="P" x="-33.02" y="15.24" rot="R90"/>
+<instance part="PIO10" gate="P" x="-20.32" y="81.28" rot="MR0"/>
 <instance part="R3" gate="G$1" x="1.27" y="85.09" rot="R180"/>
-<instance part="PAD6" gate="P" x="-33.02" y="95.25" rot="R270"/>
+<instance part="PIO11" gate="P" x="-33.02" y="95.25" rot="R270"/>
 <instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
 <instance part="C1" gate="A" x="73.152" y="108.204" rot="R90"/>
 <instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
@@ -1411,7 +1411,7 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="MOSI" gate="P" x="-7.62" y="53.34" rot="R270"/>
 <instance part="SF" gate="P" x="-7.62" y="38.1" rot="R270"/>
 <instance part="CS" gate="P" x="-7.62" y="45.72" rot="R270"/>
-<instance part="PAD14" gate="P" x="-7.62" y="-2.54" rot="R270"/>
+<instance part="PIO4" gate="P" x="-7.62" y="-2.54" rot="R270"/>
 <instance part="WAKE" gate="1" x="-104.14" y="58.42" rot="R90"/>
 </instances>
 <busses>
@@ -1496,7 +1496,7 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-22.86" y1="27.94" x2="-15.24" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="27.94" x2="-15.24" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-5.08" x2="-7.62" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="PAD14" gate="P" pin="P"/>
+<pinref part="PIO4" gate="P" pin="P"/>
 <wire x1="-7.62" y1="-5.08" x2="22.86" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="-7.62" y="-5.08"/>
 </segment>
@@ -2011,31 +2011,31 @@ www.isabellenhuette.de&lt;p&gt;
 <net name="N$33" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="AIO[2]"/>
-<pinref part="PAD1" gate="P" pin="P"/>
+<pinref part="AIO2" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$41" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="AIO[1]"/>
-<pinref part="PAD2" gate="P" pin="P"/>
+<pinref part="AIO1" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$42" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="AIO[0]"/>
-<pinref part="PAD3" gate="P" pin="P"/>
+<pinref part="AIO0" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$43" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIO[3]/SF_DIN"/>
-<pinref part="PAD4" gate="P" pin="P"/>
+<pinref part="PIO3" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$44" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIO[10]"/>
-<pinref part="PAD5" gate="P" pin="P"/>
+<pinref part="PIO10" gate="P" pin="P"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -2068,7 +2068,7 @@ www.isabellenhuette.de&lt;p&gt;
 <net name="N$47" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIO[11]"/>
-<pinref part="PAD6" gate="P" pin="P"/>
+<pinref part="PIO11" gate="P" pin="P"/>
 <wire x1="-33.02" y1="91.44" x2="-33.02" y2="92.71" width="0.1524" layer="91"/>
 </segment>
 </net>

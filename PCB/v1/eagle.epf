@@ -349,7 +349,7 @@ UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/TSX3225.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="154 78 753 477"
+Loc="649 312 1248 711"
 State=1
 Number=0
 

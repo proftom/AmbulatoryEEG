@@ -1918,23 +1918,22 @@ www.isabellenhuette.de&lt;p&gt;
 <segment>
 <pinref part="C5" gate="A" pin="C1"/>
 <pinref part="U$1" gate="G$1" pin="XTAL_32K_OUT"/>
-<wire x1="-120.65" y1="73.66" x2="-115.57" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="P$2"/>
-<wire x1="-115.57" y1="73.66" x2="-96.52" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-115.57" y1="69.85" x2="-115.57" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-115.57" y="73.66"/>
+<wire x1="-120.65" y1="73.66" x2="-102.362" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="P$1"/>
+<wire x1="-102.362" y1="73.66" x2="-96.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-102.362" y1="69.85" x2="-102.362" y2="73.66" width="0.1524" layer="91"/>
+<junction x="-102.362" y="73.66"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
 <pinref part="C6" gate="A" pin="C1"/>
-<wire x1="-120.65" y1="66.04" x2="-97.79" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-120.65" y1="66.04" x2="-115.57" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="XTAL_32K_IN"/>
-<wire x1="-97.79" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-97.79" y1="69.85" x2="-97.79" y2="66.04" width="0.1524" layer="91"/>
-<junction x="-97.79" y="66.04"/>
-<pinref part="U$4" gate="G$1" pin="P$1"/>
-<wire x1="-102.362" y1="69.85" x2="-97.79" y2="69.85" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="P$2"/>
+<wire x1="-115.57" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-115.57" y1="69.85" x2="-115.57" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-115.57" y="66.04"/>
 </segment>
 </net>
 <net name="N$45" class="0">

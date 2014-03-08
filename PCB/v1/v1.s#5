@@ -1933,9 +1933,10 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-120.65" y1="66.04" x2="-97.79" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="XTAL_32K_IN"/>
 <wire x1="-97.79" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-102.87" y1="69.85" x2="-97.79" y2="69.85" width="0.1524" layer="91"/>
 <wire x1="-97.79" y1="69.85" x2="-97.79" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-97.79" y="66.04"/>
+<pinref part="U$4" gate="G$1" pin="P$1"/>
+<wire x1="-102.362" y1="69.85" x2="-97.79" y2="69.85" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$45" class="0">

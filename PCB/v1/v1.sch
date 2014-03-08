@@ -1733,8 +1733,6 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <part name="AIO1" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="AIO0" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="PIO3" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PIO10" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="PIO11" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
 <part name="VPLUS" library="solpad" deviceset="LSP10" device="" value="Vrail"/>
 <part name="VGND" library="solpad" deviceset="LSP10" device=""/>
@@ -1832,8 +1830,6 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <instance part="AIO1" gate="P" x="-63.5" y="15.24" rot="R90"/>
 <instance part="AIO0" gate="P" x="-55.88" y="15.24" rot="R90"/>
 <instance part="PIO3" gate="P" x="-33.02" y="10.16" rot="R90"/>
-<instance part="PIO10" gate="P" x="-20.32" y="81.28" rot="MR0"/>
-<instance part="PIO11" gate="P" x="-27.94" y="91.44" rot="R180"/>
 <instance part="C1" gate="A" x="73.152" y="108.204" rot="R90"/>
 <instance part="VPLUS" gate="1" x="-157.48" y="114.3" rot="R270"/>
 <instance part="VGND" gate="1" x="-154.94" y="71.12" rot="R270"/>
@@ -2448,13 +2444,6 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <pinref part="U$1" gate="G$1" pin="PIO[2]"/>
 </segment>
 </net>
-<net name="N$47" class="0">
-<segment>
-<pinref part="PIO11" gate="P" pin="P"/>
-<wire x1="-33.02" y1="91.44" x2="-30.48" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PIO[11]"/>
-</segment>
-</net>
 <net name="N$48" class="0">
 <segment>
 <wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
@@ -2528,12 +2517,6 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <segment>
 <pinref part="AIO0" gate="P" pin="P"/>
 <pinref part="U$1" gate="G$1" pin="AIO[0]"/>
-</segment>
-</net>
-<net name="N$42" class="0">
-<segment>
-<pinref part="PIO10" gate="P" pin="P"/>
-<pinref part="U$1" gate="G$1" pin="PIO[10]"/>
 </segment>
 </net>
 <net name="N$43" class="0">

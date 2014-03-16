@@ -8,22 +8,22 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -32,8 +32,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -41,12 +41,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -820,57 +820,6 @@ www.isabellenhuette.de&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="BATTERY_2996">
-<packages>
-<package name="BATTERY_2996">
-<smd name="POS@1" x="-17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
-<smd name="POS@2" x="17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
-<smd name="NEG" x="0" y="0" dx="3.175" dy="3.175" layer="1"/>
-<text x="2.54" y="2.54" size="1.27" layer="21">-</text>
-<text x="-20.32" y="2.54" size="1.27" layer="21">+</text>
-<text x="19.05" y="2.54" size="1.27" layer="21">+</text>
-</package>
-</packages>
-<symbols>
-<symbol name="BATTERY_2996">
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="7.62" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<text x="-5.08" y="5.08" size="1.27" layer="94">+</text>
-<text x="5.842" y="7.62" size="1.27" layer="94">+</text>
-<text x="5.842" y="-7.62" size="1.27" layer="94">-</text>
-<pin name="POS" x="10.16" y="7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="NEG" x="10.16" y="-7.62" visible="pin" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BATTERY_2996">
-<gates>
-<gate name="G$1" symbol="BATTERY_2996" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BATTERY_2996">
-<connects>
-<connect gate="G$1" pin="NEG" pad="NEG"/>
-<connect gate="G$1" pin="POS" pad="POS@1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="wirepad">
 <description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -1182,6 +1131,60 @@ www.isabellenhuette.de&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="BATTERY_2996">
+<packages>
+<package name="BATTERY_2996">
+<smd name="POS@1" x="-7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
+<smd name="POS@2" x="7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
+<smd name="NEG" x="0" y="0" dx="3.96" dy="3.96" layer="1"/>
+<wire x1="-6" y1="6" x2="-6" y2="-6" width="0.127" layer="21"/>
+<wire x1="-6" y1="-6" x2="6" y2="-6" width="0.127" layer="21"/>
+<wire x1="6" y1="-6" x2="6" y2="6" width="0.127" layer="21"/>
+<wire x1="6" y1="6" x2="-6" y2="6" width="0.127" layer="21"/>
+<hole x="-7.5" y="0" drill="1.32"/>
+<hole x="7.5" y="0" drill="1.32"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BATTERY_2996">
+<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<text x="-5.08" y="5.08" size="1.27" layer="94">+</text>
+<text x="5.842" y="7.62" size="1.27" layer="94">+</text>
+<text x="5.842" y="-7.62" size="1.27" layer="94">-</text>
+<pin name="POS" x="10.16" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="NEG" x="10.16" y="-7.62" visible="pin" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BATTERY_2996">
+<gates>
+<gate name="G$1" symbol="BATTERY_2996" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BATTERY_2996">
+<connects>
+<connect gate="G$1" pin="NEG" pad="NEG"/>
+<connect gate="G$1" pin="POS" pad="POS@1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1242,7 +1245,6 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="C19" library="AVX_By_element14_Batch_1" deviceset="0805AA100MAT1A" device="" value="47n"/>
 <part name="L1" library="AVX_By_element14_Batch_1" deviceset="12107C102JAT2A" device="" value="4.7uH"/>
 <part name="U$3" library="TSX3225" deviceset="TSX3225" device=""/>
-<part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="AIO2" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="AIO1" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="AIO0" library="wirepad" deviceset="1,6/0,8" device=""/>
@@ -1250,7 +1252,6 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="PIO10" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="R3" library="resistor-shunt" deviceset="BVS" device=""/>
 <part name="PIO11" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
 <part name="R4" library="resistor-shunt" deviceset="BVS" device=""/>
 <part name="VPLUS" library="solpad" deviceset="LSP10" device="" value="Vrail"/>
@@ -1267,6 +1268,8 @@ www.isabellenhuette.de&lt;p&gt;
 <part name="U$1" library="CSR1010A05" deviceset="CSR1010A05-IQQM-R" device=""/>
 <part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
 <part name="U$4" library="SSP-T7-F" deviceset="SSP-T7-F" device=""/>
+<part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
+<part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1341,7 +1344,6 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="C19" gate="A" x="-144.78" y="101.6" rot="R90"/>
 <instance part="L1" gate="A" x="-134.62" y="43.18" rot="R180"/>
 <instance part="U$3" gate="G$1" x="-83.82" y="10.16" rot="R90"/>
-<instance part="U$5" gate="G$1" x="-172.72" y="101.6"/>
 <instance part="AIO2" gate="P" x="-71.12" y="15.24" rot="R90"/>
 <instance part="AIO1" gate="P" x="-63.5" y="15.24" rot="R90"/>
 <instance part="AIO0" gate="P" x="-55.88" y="15.24" rot="R90"/>
@@ -1349,7 +1351,6 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="PIO10" gate="P" x="-20.32" y="81.28" rot="MR0"/>
 <instance part="R3" gate="G$1" x="1.27" y="85.09" rot="R180"/>
 <instance part="PIO11" gate="P" x="-27.94" y="91.44" rot="R180"/>
-<instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
 <instance part="C1" gate="A" x="73.152" y="108.204" rot="R90"/>
 <instance part="R4" gate="G$1" x="30.48" y="-27.94" rot="R90"/>
 <instance part="VPLUS" gate="1" x="-157.48" y="114.3" rot="R270"/>
@@ -1366,6 +1367,8 @@ www.isabellenhuette.de&lt;p&gt;
 <instance part="U$1" gate="G$1" x="-58.42" y="55.88"/>
 <instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
 <instance part="U$4" gate="G$1" x="-109.22" y="69.85" rot="R270"/>
+<instance part="U$5" gate="G$1" x="-172.72" y="101.6"/>
+<instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
 </instances>
 <busses>
 </busses>
@@ -1500,13 +1503,8 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-109.22" y1="27.94" x2="-109.22" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-109.22" y1="35.56" x2="-165.1" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C7" gate="A" pin="C2"/>
-<wire x1="-96.52" y1="35.56" x2="-109.22" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="-165.1" y1="35.56" x2="-165.1" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-109.22" y="35.56"/>
-<pinref part="U$1" gate="G$1" pin="RF"/>
 </segment>
 <segment>
 <pinref part="C18" gate="A" pin="C1"/>
@@ -1521,13 +1519,13 @@ www.isabellenhuette.de&lt;p&gt;
 <wire x1="-154.94" y1="101.6" x2="-144.78" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-154.94" y="101.6"/>
 <junction x="-144.78" y="101.6"/>
-<pinref part="U$6" gate="G$1" pin="NEG"/>
 <wire x1="-162.56" y1="71.12" x2="-157.48" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-157.48" y1="71.12" x2="-157.48" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-157.48" y1="93.98" x2="-154.94" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-154.94" y="93.98"/>
 <pinref part="VGND" gate="1" pin="MP"/>
 <junction x="-157.48" y="71.12"/>
+<pinref part="U$6" gate="G$1" pin="NEG"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -1822,7 +1820,6 @@ www.isabellenhuette.de&lt;p&gt;
 <pinref part="C18" gate="A" pin="C2"/>
 <wire x1="-144.78" y1="109.22" x2="-154.94" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-144.78" y="109.22"/>
-<pinref part="U$5" gate="G$1" pin="POS"/>
 <wire x1="-154.94" y1="109.22" x2="-160.02" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-154.94" y="109.22"/>
 <pinref part="VPLUS" gate="1" pin="MP"/>
@@ -1831,6 +1828,7 @@ www.isabellenhuette.de&lt;p&gt;
 <junction x="-160.02" y="109.22"/>
 <pinref part="U$1" gate="G$1" pin="VDD_PADS"/>
 <pinref part="U$1" gate="G$1" pin="VDD_BAT_SMPS"/>
+<pinref part="U$5" gate="G$1" pin="POS"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -1918,25 +1916,23 @@ www.isabellenhuette.de&lt;p&gt;
 <segment>
 <pinref part="C5" gate="A" pin="C1"/>
 <pinref part="U$1" gate="G$1" pin="XTAL_32K_OUT"/>
-<wire x1="-120.65" y1="73.66" x2="-105.41" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-120.65" y1="73.66" x2="-115.57" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="P$2"/>
-<wire x1="-105.41" y1="73.66" x2="-96.52" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-115.57" y1="69.85" x2="-115.57" y2="72.39" width="0.1524" layer="91"/>
-<wire x1="-115.57" y1="72.39" x2="-105.41" y2="72.39" width="0.1524" layer="91"/>
-<wire x1="-105.41" y1="72.39" x2="-105.41" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-105.41" y="73.66"/>
+<wire x1="-115.57" y1="73.66" x2="-96.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-115.57" y1="69.85" x2="-115.57" y2="73.66" width="0.1524" layer="91"/>
+<junction x="-115.57" y="73.66"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
 <pinref part="C6" gate="A" pin="C1"/>
-<wire x1="-120.65" y1="66.04" x2="-97.79" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="XTAL_32K_IN"/>
-<wire x1="-97.79" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-97.79" y1="69.85" x2="-97.79" y2="66.04" width="0.1524" layer="91"/>
-<junction x="-97.79" y="66.04"/>
+<wire x1="-120.65" y1="66.04" x2="-102.108" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="P$1"/>
-<wire x1="-102.362" y1="69.85" x2="-97.79" y2="69.85" width="0.1524" layer="91"/>
+<wire x1="-102.108" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-102.362" y1="69.85" x2="-102.108" y2="69.85" width="0.1524" layer="91"/>
+<wire x1="-102.108" y1="69.85" x2="-102.108" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-102.108" y="66.04"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -1975,9 +1971,9 @@ www.isabellenhuette.de&lt;p&gt;
 </net>
 <net name="N$48" class="0">
 <segment>
+<wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="NEG"/>
 <pinref part="U$6" gate="G$1" pin="POS"/>
-<wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -2052,6 +2048,13 @@ www.isabellenhuette.de&lt;p&gt;
 <segment>
 <pinref part="PIO10" gate="P" pin="P"/>
 <pinref part="U$1" gate="G$1" pin="PIO[10]"/>
+</segment>
+</net>
+<net name="N$43" class="0">
+<segment>
+<pinref part="C7" gate="A" pin="C2"/>
+<wire x1="-96.52" y1="35.56" x2="-109.22" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="RF"/>
 </segment>
 </net>
 </nets>

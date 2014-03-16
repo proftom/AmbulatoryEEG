@@ -346,10 +346,11 @@ UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/CSR1010A05.lbr"
 UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/MINI_SMT_8_PIN_CONNECTOR.lbr"
 UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/SSP-T7-F.lbr"
 UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/TSX3225.lbr"
+UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/ant-planar-1.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="157 324 756 723"
+Loc="340 74 1283 687"
 State=2
 Number=0
 

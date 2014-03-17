@@ -498,6 +498,60 @@ at 30/04/2012 16:26:10</description>
 </package>
 </packages>
 </library>
+<library name="ant-planar-1">
+<description>2.45GHz planar PCB antenna based on TI Application Note SWRA117D.
+Pins at bottom left, so use in top left of PCB.
+The antenna must not face a ground plate, but the GND pin must be attached to a ground plate.
+Library created by Olivier Biot.</description>
+<packages>
+<package name="SWRA117D_LEFT">
+<description>2.45GHz antenna as per TI Application Note SWRA117D</description>
+<wire x1="-0.5" y1="-0.4" x2="14.7" y2="-0.4" width="0" layer="20"/>
+<wire x1="14.7" y1="-0.4" x2="14.7" y2="5.7" width="0" layer="20"/>
+<wire x1="14.7" y1="5.7" x2="-0.5" y2="5.7" width="0" layer="20"/>
+<wire x1="-0.5" y1="5.7" x2="-0.5" y2="-0.4" width="0" layer="20"/>
+<pad name="GND" x="0.45" y="0.25" drill="0.8" shape="square"/>
+<smd name="RF" x="2.55" y="0.51" dx="1.016" dy="0.508" layer="1" rot="R90"/>
+<text x="4.5" y="1.4" size="0.6096" layer="25">2.45GHz Antenna</text>
+<text x="2.85" y="1.35" size="0.6096" layer="25" rot="R90">RF</text>
+<text x="0.75" y="1.35" size="0.6096" layer="25" rot="R90">GND</text>
+<text x="4.5" y="0.5" size="0.6096" layer="25">TI (SWRA117D)</text>
+<text x="0.635" y="3.175" size="1.016" layer="21">&gt;NAME</text>
+<rectangle x1="-0.5" y1="0.5" x2="14.7" y2="5.7" layer="39"/>
+<rectangle x1="-0.5" y1="0.5" x2="14.7" y2="5.7" layer="40"/>
+<polygon width="0" layer="1">
+<vertex x="0" y="0"/>
+<vertex x="0" y="5.4"/>
+<vertex x="5" y="5.4"/>
+<vertex x="5" y="2.76"/>
+<vertex x="7" y="2.76"/>
+<vertex x="7" y="5.4"/>
+<vertex x="9.7" y="5.4"/>
+<vertex x="9.7" y="2.76"/>
+<vertex x="11.7" y="2.76"/>
+<vertex x="11.7" y="5.4"/>
+<vertex x="14.4" y="5.4"/>
+<vertex x="14.4" y="0.96"/>
+<vertex x="13.9" y="0.96"/>
+<vertex x="13.9" y="4.9"/>
+<vertex x="12.2" y="4.9"/>
+<vertex x="12.2" y="2.26"/>
+<vertex x="9.2" y="2.26"/>
+<vertex x="9.2" y="4.9"/>
+<vertex x="7.5" y="4.9"/>
+<vertex x="7.5" y="2.26"/>
+<vertex x="4.5" y="2.26"/>
+<vertex x="4.5" y="4.9"/>
+<vertex x="2.8" y="4.9"/>
+<vertex x="2.8" y="0"/>
+<vertex x="2.3" y="0"/>
+<vertex x="2.3" y="4.9"/>
+<vertex x="0.9" y="4.9"/>
+<vertex x="0.9" y="0"/>
+</polygon>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -902,6 +956,7 @@ design rules under a new name.</description>
 <attribute name="SPICEMODEL" value="NONE" x="4.1717" y="10.40475" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="4.1717" y="10.40475" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
+<element name="U$7" library="ant-planar-1" package="SWRA117D_LEFT" value="ANTENNA_1LEFT" x="-0.75" y="-7.5"/>
 </elements>
 <signals>
 <signal name="VCC">

@@ -63,6 +63,7 @@
 <wire x1="53" y1="0" x2="53.0294" y2="38.9786" width="0" layer="20"/>
 <wire x1="53.0294" y1="38.9786" x2="-0.00635" y2="38.98895" width="0" layer="20"/>
 <wire x1="-0.00635" y1="38.98895" x2="0" y2="0" width="0" layer="20"/>
+<rectangle x1="34.25" y1="29.75" x2="43.01" y2="37.37" layer="16"/>
 </plain>
 <libraries>
 <library name="Microchip_By_element14_Batch_1">
@@ -815,13 +816,13 @@ design rules under a new name.</description>
 <attribute name="VOLTAGERATING" value="200V" x="-13.49825" y="-11.42925" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="-" x="-13.49825" y="-11.42925" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C7" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="0.5pF" x="31.27895" y="26.062">
-<attribute name="OC_NEWARK" value="32T8767" x="103.66895" y="-18.388" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±.1 pF" x="103.66895" y="-18.388" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="UQCL2A0R5BAT2A/500" x="103.66895" y="-18.388" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="AVX" x="103.66895" y="-18.388" size="1.778" layer="27" display="off"/>
-<attribute name="VOLTAGERATING" value="200V" x="103.66895" y="-18.388" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="-" x="103.66895" y="-18.388" size="1.778" layer="27" display="off"/>
+<element name="C7" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="0.5pF" x="32.438" y="27.27895" rot="R90">
+<attribute name="OC_NEWARK" value="32T8767" x="76.888" y="99.66895" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="±.1 pF" x="76.888" y="99.66895" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="UQCL2A0R5BAT2A/500" x="76.888" y="99.66895" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SUPPLIER" value="AVX" x="76.888" y="99.66895" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VOLTAGERATING" value="200V" x="76.888" y="99.66895" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_FARNELL" value="-" x="76.888" y="99.66895" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C9" library="AVX_By_element14_Batch_1" package="CAPC1005X60N" value="33p" x="37.75" y="21.47" rot="R90">
 <attribute name="OC_NEWARK" value="32T8791" x="99.98" y="53.22" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1170,10 +1171,6 @@ design rules under a new name.</description>
 <wire x1="30.9363" y1="29.1863" x2="31.31" y2="28.8126" width="0.25" layer="1"/>
 <wire x1="30.5023" y1="27.90495" x2="30.5023" y2="28.7523" width="0.25" layer="1"/>
 <wire x1="30.5023" y1="28.7523" x2="30.9363" y2="29.1863" width="0.25" layer="1"/>
-<wire x1="31.76155" y1="26.062" x2="31.76155" y2="26.26155" width="0.25" layer="1"/>
-<wire x1="31.76155" y1="26.26155" x2="32.25" y2="26.75" width="0.25" layer="1"/>
-<wire x1="32.25" y1="26.75" x2="32.25" y2="28.5" width="0.25" layer="1"/>
-<wire x1="32.25" y1="28.5" x2="32.125" y2="28.625" width="0.25" layer="1"/>
 <wire x1="32.125" y1="28.625" x2="32" y2="28.75" width="0.25" layer="1"/>
 <wire x1="32" y1="28.75" x2="31.3726" y2="28.75" width="0.25" layer="1"/>
 <wire x1="31.3726" y1="28.75" x2="31.31" y2="28.8126" width="0.25" layer="1"/>
@@ -1271,7 +1268,13 @@ design rules under a new name.</description>
 <wire x1="39.84175" y1="25.09175" x2="40" y2="25.25" width="0.25" layer="1"/>
 <wire x1="40" y1="25.25" x2="45.25" y2="25.25" width="0.25" layer="1"/>
 <wire x1="45.25" y1="25.25" x2="45.5" y2="25" width="0.25" layer="1"/>
-<wire x1="6" y1="4.25" x2="7.004740625" y2="2.612" width="0" layer="19" extent="1-1"/>
+<wire x1="32.125" y1="28.625" x2="32.438" y2="28.312" width="0.25" layer="1"/>
+<wire x1="32.438" y1="28.312" x2="32.438" y2="27.76155" width="0.25" layer="1"/>
+<wire x1="45.25" y1="25.25" x2="45" y2="29.5" width="0" layer="19" extent="1-16"/>
+<wire x1="1.25" y1="1.5" x2="1.129740625" y2="2.612" width="0" layer="19" extent="1-1"/>
+<wire x1="36.665" y1="3.4616" x2="35.5" y2="3.3566" width="0" layer="19" extent="1-1"/>
+<wire x1="7.004740625" y1="2.612" x2="6" y2="4.25" width="0" layer="19" extent="1-1"/>
+<wire x1="32.438" y1="27.76155" x2="39.84175" y2="25.09175" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$28">
 <contactref element="C12" pad="2"/>
@@ -1621,8 +1624,7 @@ design rules under a new name.</description>
 <wire x1="42.875" y1="15.75" x2="40.125" y2="15.75" width="0.25" layer="1"/>
 <wire x1="42.875" y1="19.125" x2="42.875" y2="15.75" width="0.25" layer="1"/>
 <wire x1="46.375" y1="20.75" x2="45.5" y2="20.75" width="0.25" layer="1"/>
-<wire x1="46.375" y1="24.5" x2="46.375" y2="24.25" width="0.25" layer="1"/>
-<wire x1="46.375" y1="24.25" x2="46.375" y2="20.75" width="0.25" layer="1"/>
+<wire x1="46.375" y1="25.375" x2="46.375" y2="20.75" width="0.25" layer="1"/>
 <wire x1="40.125" y1="15.75" x2="40.06" y2="15.7274" width="0.25" layer="1"/>
 <wire x1="42.875" y1="19.125" x2="43" y2="19.25" width="0.25" layer="1"/>
 <wire x1="43" y1="19.25" x2="44" y2="19.25" width="0.25" layer="1"/>
@@ -1630,7 +1632,6 @@ design rules under a new name.</description>
 <wire x1="34.1" y1="25.35" x2="38.25" y2="29.5" width="0.25" layer="1"/>
 <wire x1="38.25" y1="29.5" x2="42.25" y2="29.5" width="0.25" layer="1"/>
 <wire x1="42.25" y1="29.5" x2="46.375" y2="25.375" width="0.25" layer="1"/>
-<wire x1="46.375" y1="25.375" x2="46.375" y2="24.5" width="0.25" layer="1"/>
 </signal>
 <signal name="N$29">
 <contactref element="C3" pad="1"/>
@@ -1796,8 +1797,8 @@ design rules under a new name.</description>
 <signal name="N$43">
 <contactref element="C7" pad="1"/>
 <contactref element="U$1" pad="RF"/>
-<wire x1="29.25" y1="25.85" x2="30.58435" y2="25.85" width="0.25" layer="1"/>
-<wire x1="30.58435" y1="25.85" x2="30.79635" y2="26.062" width="0.25" layer="1"/>
+<wire x1="29.25" y1="25.85" x2="31.49165" y2="25.85" width="0.25" layer="1"/>
+<wire x1="31.49165" y1="25.85" x2="32.438" y2="26.79635" width="0.25" layer="1"/>
 </signal>
 <signal name="N$48">
 <contactref element="U$5" pad="NEG"/>
@@ -1867,9 +1868,13 @@ design rules under a new name.</description>
 <via x="10.75" y="18.25" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="N$74">
-<wire x1="32" y1="26" x2="33.75" y2="26" width="0.25" layer="1"/>
-<wire x1="33.75" y1="26" x2="38" y2="30.25" width="0.25" layer="1"/>
-<wire x1="38" y1="30.25" x2="38" y2="31" width="0.25" layer="1"/>
+<wire x1="32" y1="26" x2="33.75" y2="26" width="0" layer="19" extent="1-16"/>
+<wire x1="33.75" y1="26" x2="38" y2="30.25" width="0" layer="19" extent="1-16"/>
+<wire x1="38" y1="31" x2="38" y2="30.25" width="0.25" layer="1"/>
+<wire x1="38" y1="30.25" x2="34.5" y2="26.75" width="0.25" layer="1"/>
+<wire x1="34.5" y1="26.75" x2="32.5" y2="26.75" width="0.25" layer="1"/>
+<wire x1="32.25" y1="26.75" x2="32.5" y2="26.75" width="0.25" layer="1"/>
+<wire x1="32.5" y1="26.75" x2="38" y2="30.25" width="0" layer="19" extent="1-16"/>
 </signal>
 </signals>
 </board>

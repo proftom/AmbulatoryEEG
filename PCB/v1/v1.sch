@@ -1072,60 +1072,6 @@ at 30/04/2012 16:26:10</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="BATTERY_2996">
-<packages>
-<package name="BATTERY_2996">
-<smd name="POS@1" x="-7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
-<smd name="POS@2" x="7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
-<smd name="NEG" x="0" y="0" dx="3.96" dy="3.96" layer="1"/>
-<wire x1="-6" y1="6" x2="-6" y2="-6" width="0.127" layer="21"/>
-<wire x1="-6" y1="-6" x2="6" y2="-6" width="0.127" layer="21"/>
-<wire x1="6" y1="-6" x2="6" y2="6" width="0.127" layer="21"/>
-<wire x1="6" y1="6" x2="-6" y2="6" width="0.127" layer="21"/>
-<hole x="-7.5" y="0" drill="1.32"/>
-<hole x="7.5" y="0" drill="1.32"/>
-</package>
-</packages>
-<symbols>
-<symbol name="BATTERY_2996">
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="7.62" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<text x="-5.08" y="5.08" size="1.27" layer="94">+</text>
-<text x="5.842" y="7.62" size="1.27" layer="94">+</text>
-<text x="5.842" y="-7.62" size="1.27" layer="94">-</text>
-<pin name="POS" x="10.16" y="7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="NEG" x="10.16" y="-7.62" visible="pin" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BATTERY_2996">
-<gates>
-<gate name="G$1" symbol="BATTERY_2996" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BATTERY_2996">
-<connects>
-<connect gate="G$1" pin="NEG" pad="NEG"/>
-<connect gate="G$1" pin="POS" pad="POS@1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="eagle-ltspice">
 <description>Default symbols for import LTspice schematics&lt;p&gt;
 2012-10-29 alf@cadsoft.de&lt;br&gt;</description>
@@ -1809,6 +1755,58 @@ Library created by Olivier Biot.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="BATTERY_2996">
+<packages>
+<package name="BATTERY_2996">
+<smd name="POS@1" x="-7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
+<smd name="POS@2" x="7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
+<smd name="NEG" x="0" y="0" dx="3.96" dy="3.96" layer="1"/>
+<wire x1="-6" y1="6" x2="-6" y2="-6" width="0.127" layer="21"/>
+<wire x1="-6" y1="-6" x2="6" y2="-6" width="0.127" layer="21"/>
+<wire x1="6" y1="-6" x2="6" y2="6" width="0.127" layer="21"/>
+<wire x1="6" y1="6" x2="-6" y2="6" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BATTERY_2996">
+<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<text x="-5.08" y="5.08" size="1.27" layer="94">+</text>
+<text x="5.842" y="7.62" size="1.27" layer="94">+</text>
+<text x="5.842" y="-7.62" size="1.27" layer="94">-</text>
+<pin name="POS" x="10.16" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="NEG" x="10.16" y="-7.62" visible="pin" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BATTERY_2996">
+<gates>
+<gate name="G$1" symbol="BATTERY_2996" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BATTERY_2996">
+<connects>
+<connect gate="G$1" pin="NEG" pad="NEG"/>
+<connect gate="G$1" pin="POS" pad="POS@1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1886,13 +1884,13 @@ Library created by Olivier Biot.</description>
 <part name="U$1" library="CSR1010A05" deviceset="CSR1010A05-IQQM-R" device=""/>
 <part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
 <part name="U$4" library="SSP-T7-F" deviceset="SSP-T7-F" device=""/>
-<part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
-<part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="R5" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R6" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R7" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R8" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="U$7" library="ant-planar-1" deviceset="ANTENNA_1" device="LEFT"/>
+<part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
+<part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1974,13 +1972,13 @@ Library created by Olivier Biot.</description>
 <instance part="U$1" gate="G$1" x="-58.42" y="55.88"/>
 <instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
 <instance part="U$4" gate="G$1" x="-109.22" y="69.85" rot="R270"/>
-<instance part="U$5" gate="G$1" x="-172.72" y="101.6"/>
-<instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
 <instance part="R5" gate="G$1" x="1.27" y="85.09"/>
 <instance part="R6" gate="G$1" x="-40.64" y="-12.7" rot="R90"/>
 <instance part="R7" gate="G$1" x="-48.26" y="-12.7" rot="R90"/>
 <instance part="R8" gate="G$1" x="30.48" y="-27.94" rot="R90"/>
 <instance part="U$7" gate="G$1" x="-157.48" y="45.72"/>
+<instance part="U$5" gate="G$1" x="-172.72" y="78.74"/>
+<instance part="U$6" gate="G$1" x="-172.72" y="101.6"/>
 </instances>
 <busses>
 </busses>
@@ -2145,8 +2143,8 @@ Library created by Olivier Biot.</description>
 <junction x="-154.94" y="93.98"/>
 <pinref part="VGND" gate="1" pin="MP"/>
 <junction x="-157.48" y="71.12"/>
-<pinref part="U$6" gate="G$1" pin="NEG"/>
 <wire x1="-144.78" y1="101.6" x2="-137.16" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="NEG"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -2440,7 +2438,7 @@ Library created by Olivier Biot.</description>
 <junction x="-160.02" y="109.22"/>
 <pinref part="U$1" gate="G$1" pin="VDD_PADS"/>
 <pinref part="U$1" gate="G$1" pin="VDD_BAT_SMPS"/>
-<pinref part="U$5" gate="G$1" pin="POS"/>
+<pinref part="U$6" gate="G$1" pin="POS"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -2577,8 +2575,8 @@ Library created by Olivier Biot.</description>
 <net name="N$48" class="0">
 <segment>
 <wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="NEG"/>
-<pinref part="U$6" gate="G$1" pin="POS"/>
+<pinref part="U$5" gate="G$1" pin="POS"/>
+<pinref part="U$6" gate="G$1" pin="NEG"/>
 </segment>
 </net>
 <net name="N$40" class="0">

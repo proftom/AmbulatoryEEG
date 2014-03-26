@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Repository/AmbulatoryEEG/PCB/v1/v1.brd
 
-Start at      : 23:36:23 (16/03/2014)
-End at        : 23:36:25 (16/03/2014)
+Start at      : 16:42:42 (17/03/2014)
+End at        : 16:42:44 (17/03/2014)
 Elapsed time  : 00:00:02
 
-Signals       :    80   RoutingGrid: 4.92126 mil  Layers: 2
-Connections   :   114   predefined:  110 ( 39 Vias )
+Signals       :    98   RoutingGrid: 4.92126 mil  Layers: 2
+Connections   :   114   predefined:  110 ( 55 Vias )
 
-Router memory :   632256
+Router memory :   655040
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:01  00:00:00  00:00:00  00:00:00  00:00:01
+Time per pass     :  00:00:00  00:00:01  00:00:00  00:00:01  00:00:00
 Number of Ripups  :         0         0         0         0         0
 max. Level        :         1         0         0         0         0
 max. Total        :         0         0         0         0         0
 
-Routed            :         1         1         1         1         1
-Vias              :         0         0         0         0         0
-Resolution        :    97.4 %    97.4 %    97.4 %    97.4 %    97.4 %
+Routed            :         2         2         2         2         2
+Vias              :         3         1         1         1         1
+Resolution        :    98.2 %    98.2 %    98.2 %    98.2 %    98.2 %
 
-Final             : 96.5% finished. Polygons may have fallen apart.
+Final             : 97.4% finished. Polygons may have fallen apart.

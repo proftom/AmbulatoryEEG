@@ -1996,7 +1996,6 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <pinref part="C16" gate="A" pin="C2"/>
 <wire x1="-129.54" y1="101.6" x2="-137.16" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-137.16" y="101.6"/>
-<wire x1="-137.16" y1="101.6" x2="-144.78" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="C19" gate="A" pin="C1"/>
 <wire x1="-154.94" y1="101.6" x2="-144.78" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-154.94" y="101.6"/>
@@ -2008,6 +2007,7 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <pinref part="VGND" gate="1" pin="MP"/>
 <junction x="-157.48" y="71.12"/>
 <pinref part="U$6" gate="G$1" pin="NEG"/>
+<wire x1="-144.78" y1="101.6" x2="-137.16" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>

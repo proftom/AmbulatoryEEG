@@ -15,19 +15,19 @@
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
@@ -65,19 +65,15 @@
 <wire x1="-0.00635" y1="38.98895" x2="0" y2="0" width="0" layer="20"/>
 <text x="49" y="0.75" size="1.778" layer="1">V1</text>
 <text x="53.75" y="13" size="1.778" layer="16" rot="MR270">T Morrison</text>
-<rectangle x1="46.75" y1="21" x2="54.5" y2="38.5" layer="16"/>
-<rectangle x1="42" y1="35.25" x2="51.25" y2="38.5" layer="16"/>
-<rectangle x1="47" y1="18.5" x2="54.5" y2="21" layer="16"/>
-<rectangle x1="44.25" y1="27.5" x2="47" y2="33.75" layer="16"/>
-<rectangle x1="45.5" y1="25.5" x2="47.5" y2="27.75" layer="16"/>
-<rectangle x1="44.5" y1="29.5" x2="49.25" y2="34.75" layer="1"/>
-<rectangle x1="46.75" y1="18.5" x2="54.25" y2="23" layer="1"/>
-<rectangle x1="53.5" y1="18.5" x2="54.5" y2="23" layer="1"/>
-<rectangle x1="46.75" y1="23" x2="49.25" y2="29.75" layer="1"/>
-<rectangle x1="44.5" y1="28" x2="47.25" y2="29.75" layer="1"/>
-<rectangle x1="44.5" y1="27.75" x2="47.25" y2="28" layer="1"/>
-<rectangle x1="46.5" y1="25.75" x2="47.25" y2="28" layer="1"/>
-<rectangle x1="46.25" y1="26" x2="46.75" y2="28" layer="1"/>
+<rectangle x1="44.25" y1="18.75" x2="54.5" y2="38.5" layer="16"/>
+<rectangle x1="42.75" y1="35.75" x2="45.5" y2="38.5" layer="16"/>
+<rectangle x1="44.25" y1="29.75" x2="49.75" y2="34.5" layer="1"/>
+<rectangle x1="46.75" y1="18.75" x2="54.25" y2="23" layer="1"/>
+<rectangle x1="46.75" y1="23" x2="49" y2="30.25" layer="1"/>
+<rectangle x1="44.25" y1="28" x2="47.75" y2="29.75" layer="1"/>
+<rectangle x1="46.25" y1="26.25" x2="47.5" y2="28.25" layer="1"/>
+<rectangle x1="44.75" y1="27.75" x2="46.75" y2="28.25" layer="1"/>
+<rectangle x1="42.25" y1="36.75" x2="47.75" y2="38.5" layer="1"/>
 </plain>
 <libraries>
 <library name="Microchip_By_element14_Batch_1">
@@ -1016,7 +1012,7 @@ design rules under a new name.</description>
 <via x="20" y="16" extent="1-16" drill="0.4"/>
 <wire x1="20" y1="16" x2="21" y2="16" width="0.25" layer="1"/>
 <wire x1="21" y1="16" x2="21.4" y2="15.6" width="0.25" layer="1"/>
-<wire x1="21.4" y1="15.6" x2="23.15" y2="15.6" width="0" layer="19" extent="1-1"/>
+<wire x1="21.4" y1="15.6" x2="23.15" y2="15.6" width="0.25" layer="1"/>
 </signal>
 <signal name="N$22">
 <contactref element="ADC0" pad="12"/>
@@ -1305,7 +1301,6 @@ design rules under a new name.</description>
 <contactref element="U$5" pad="NEG"/>
 <wire x1="6" y1="4.25" x2="7.004740625" y2="2.612" width="0" layer="19" extent="1-1"/>
 <wire x1="33.27" y1="30.79" x2="35" y2="31.75" width="0" layer="19" extent="1-16"/>
-<via x="35" y="31.75" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="N$28">
 <contactref element="C12" pad="2"/>

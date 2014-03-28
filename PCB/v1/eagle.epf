@@ -347,10 +347,11 @@ UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/MINI_SMT_8_PIN_CONNECTOR.lbr"
 UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/SSP-T7-F.lbr"
 UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/TSX3225.lbr"
 UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/ant-planar-1.lbr"
+UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/AD7997.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="935 259 1877 872"
+Loc="288 287 1230 900"
 State=2
 Number=0
 

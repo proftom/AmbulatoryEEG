@@ -2115,6 +2115,15 @@ Library created by Olivier Biot.</description>
 <wire x1="-109.22" y1="27.94" x2="-109.22" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="C10" gate="A" pin="C1"/>
+<pinref part="C11" gate="A" pin="C1"/>
+<wire x1="-137.16" y1="20.32" x2="-129.54" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="-129.54" y1="17.78" x2="-129.54" y2="20.32" width="0.1524" layer="91"/>
+<junction x="-129.54" y="20.32"/>
+<wire x1="-129.54" y1="20.32" x2="-121.92" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="-152.4" y1="33.02" x2="-152.4" y2="27.94" width="0.1524" layer="91"/>
 </segment>
@@ -2206,15 +2215,6 @@ Library created by Olivier Biot.</description>
 <wire x1="-76.2" y1="121.92" x2="-68.58" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="119.38" x2="-76.2" y2="119.38" width="0.1524" layer="91"/>
 <junction x="-76.2" y="119.38"/>
-</segment>
-<segment>
-<pinref part="C11" gate="A" pin="C1"/>
-<pinref part="C10" gate="A" pin="C1"/>
-<wire x1="-137.16" y1="20.32" x2="-129.54" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="-129.54" y1="20.32" x2="-121.92" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-129.54" y1="17.78" x2="-129.54" y2="20.32" width="0.1524" layer="91"/>
-<junction x="-129.54" y="20.32"/>
 </segment>
 </net>
 <net name="N$28" class="0">

@@ -809,155 +809,6 @@ at 30/04/2012 16:26:10</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="CSR1010A05">
-<packages>
-<package name="CSR1010A05-IQQM-R">
-<smd name="XTAL_16M_IN" x="-1.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="AIO[2]" x="-1.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="AIO[1]" x="-0.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="AIO[0]" x="-0.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="PIO[0]/UART_TX" x="0.3" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="PIO[1]/UART_RX" x="0.8" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
-<smd name="PIO[5]/DEBUG_CLK" x="1.85" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="PIO[6]/DEBUG_CS#" x="1.85" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="PIO[7]/DEBUG_MOSI" x="1.85" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="VDD_PADS" x="1.85" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="PIO[8]/DEBUG_MISO" x="1.85" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="PIO[9]" x="1.85" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="SMPS_LX" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="VDD_CORE@1" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="I2C_SDA" x="-0.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="I2C_SCL" x="-0.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="PIO[2]" x="0.3" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<smd name="RF" x="-2.75" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="VDD_REG_IN" x="-2.75" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="VDD_CORE" x="-2.75" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="WAKE" x="-2.75" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="XTAL_32K_IN" x="-2.75" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="XTAL_32K_OUT" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
-<smd name="SPI_PIO#" x="0.8" y="3.7" dx="0.186" dy="0.4" layer="1"/>
-<polygon width="0.05" layer="1" spacing="0.1">
-<vertex x="1.225" y="3.875"/>
-<vertex x="1.225" y="3.525"/>
-<vertex x="1.3" y="3.525"/>
-<vertex x="1.375" y="3.6"/>
-<vertex x="1.375" y="3.875"/>
-</polygon>
-<polygon width="0.05" layer="1" spacing="0.1">
-<vertex x="-1.925" y="-0.075"/>
-<vertex x="-1.925" y="2.5"/>
-<vertex x="-1.55" y="2.875"/>
-<vertex x="1.025" y="2.875"/>
-<vertex x="1.025" y="-0.075"/>
-</polygon>
-<wire x1="-2.925" y1="3.525" x2="-2.925" y2="-1.075" width="0.05" layer="21"/>
-<wire x1="-2.925" y1="-1.075" x2="2.025" y2="-1.075" width="0.05" layer="21"/>
-<wire x1="2.025" y1="-1.075" x2="2.025" y2="3.875" width="0.05" layer="21"/>
-<wire x1="2.025" y1="3.875" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
-<wire x1="-2.575" y1="3.875" x2="-2.925" y2="3.875" width="0.05" layer="21"/>
-<wire x1="-2.925" y1="3.875" x2="-2.925" y2="3.525" width="0.05" layer="21"/>
-<wire x1="-2.925" y1="3.525" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
-<text x="-2.95" y="4" size="1.27" layer="25">&gt;Name</text>
-<text x="-2.9" y="-2.45" size="1.27" layer="27">value</text>
-<smd name="XTAL_16M_OUT" x="-2.2" y="-0.9" dx="0.2" dy="0.4" layer="1"/>
-<smd name="VDD_BAT_SMPS" x="-2.2" y="3.7" dx="0.2" dy="0.4" layer="1"/>
-<smd name="PIO[11]" x="1.3" y="3.7" dx="0.2" dy="0.4" layer="1"/>
-<smd name="PIO[3]/SF_DIN" x="1.3" y="-0.9" dx="0.2" dy="0.4" layer="1"/>
-<smd name="VDD_XTAL" x="-2.75" y="-0.35" dx="0.2" dy="0.4" layer="1" rot="R90"/>
-<smd name="PIO[4]/SF_CS#" x="1.85" y="-0.35" dx="0.2" dy="0.4" layer="1" rot="R90"/>
-<smd name="PIO[10]" x="1.85" y="3.15" dx="0.2" dy="0.4" layer="1" rot="R90"/>
-<smd name="VDD_BAT" x="-2.75" y="3.15" dx="0.2" dy="0.4" layer="1" rot="R90"/>
-</package>
-</packages>
-<symbols>
-<symbol name="CSR1010A05-IQQM-R">
-<wire x1="-33.02" y1="30.48" x2="-33.02" y2="-33.02" width="0.254" layer="94"/>
-<wire x1="-33.02" y1="-33.02" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
-<pin name="VDD_BAT" x="-38.1" y="25.4" visible="pin" length="middle" direction="out"/>
-<pin name="XTAL_32K_OUT" x="-38.1" y="17.78" visible="pin" length="middle" direction="out"/>
-<pin name="XTAL_32K_IN" x="-38.1" y="10.16" visible="pin" length="middle" direction="out"/>
-<pin name="WAKE" x="-38.1" y="2.54" visible="pin" length="middle" direction="out"/>
-<pin name="VDD_CORE" x="-38.1" y="-5.08" visible="pin" length="middle" direction="out"/>
-<pin name="VDD_REG_IN" x="-38.1" y="-12.7" visible="pin" length="middle" direction="out"/>
-<pin name="RF" x="-38.1" y="-20.32" visible="pin" length="middle" direction="out"/>
-<pin name="VDD_XTAL" x="-38.1" y="-27.94" visible="pin" length="middle" direction="out"/>
-<wire x1="-33.02" y1="30.48" x2="30.48" y2="30.48" width="0.254" layer="94"/>
-<wire x1="30.48" y1="30.48" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
-<pin name="XTAL_16M_OUT" x="-27.94" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="XTAL_16M_IN" x="-20.32" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="AIO[2]" x="-12.7" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="AIO[1]" x="-5.08" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="AIO[0]" x="2.54" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[0]/UART_TX" x="10.16" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[1]/UART_RX" x="17.78" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[3]/SF_DIN" x="25.4" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
-<pin name="PIO[4]/SF_CS#" x="35.56" y="-27.94" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[5]/DEBUG_CLK" x="35.56" y="-20.32" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[6]/DEBUG_CS#" x="35.56" y="-12.7" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[7]/DEBUG_MOSI" x="35.56" y="-5.08" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="VDD_PADS" x="35.56" y="2.54" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[8]/DEBUG_MISO" x="35.56" y="10.16" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[9]" x="35.56" y="17.78" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[10]" x="35.56" y="25.4" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="PIO[11]" x="25.4" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="SPI_PIO#" x="17.78" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="PIO[2]" x="10.16" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="I2C_SCL" x="2.54" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="I2C_SDA" x="-5.08" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="SMPS_LX" x="-20.32" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="VDD_BAT_SMPS" x="-27.94" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
-<pin name="VDD_CORE@1" x="-12.7" y="35.56" visible="pin" length="middle" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="CSR1010A05-IQQM-R">
-<gates>
-<gate name="G$1" symbol="CSR1010A05-IQQM-R" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CSR1010A05-IQQM-R">
-<connects>
-<connect gate="G$1" pin="AIO[0]" pad="AIO[0]"/>
-<connect gate="G$1" pin="AIO[1]" pad="AIO[1]"/>
-<connect gate="G$1" pin="AIO[2]" pad="AIO[2]"/>
-<connect gate="G$1" pin="I2C_SCL" pad="I2C_SCL"/>
-<connect gate="G$1" pin="I2C_SDA" pad="I2C_SDA"/>
-<connect gate="G$1" pin="PIO[0]/UART_TX" pad="PIO[0]/UART_TX"/>
-<connect gate="G$1" pin="PIO[10]" pad="PIO[10]"/>
-<connect gate="G$1" pin="PIO[11]" pad="PIO[11]"/>
-<connect gate="G$1" pin="PIO[1]/UART_RX" pad="PIO[1]/UART_RX"/>
-<connect gate="G$1" pin="PIO[2]" pad="PIO[2]"/>
-<connect gate="G$1" pin="PIO[3]/SF_DIN" pad="PIO[3]/SF_DIN"/>
-<connect gate="G$1" pin="PIO[4]/SF_CS#" pad="PIO[4]/SF_CS#"/>
-<connect gate="G$1" pin="PIO[5]/DEBUG_CLK" pad="PIO[5]/DEBUG_CLK"/>
-<connect gate="G$1" pin="PIO[6]/DEBUG_CS#" pad="PIO[6]/DEBUG_CS#"/>
-<connect gate="G$1" pin="PIO[7]/DEBUG_MOSI" pad="PIO[7]/DEBUG_MOSI"/>
-<connect gate="G$1" pin="PIO[8]/DEBUG_MISO" pad="PIO[8]/DEBUG_MISO"/>
-<connect gate="G$1" pin="PIO[9]" pad="PIO[9]"/>
-<connect gate="G$1" pin="RF" pad="RF"/>
-<connect gate="G$1" pin="SMPS_LX" pad="SMPS_LX"/>
-<connect gate="G$1" pin="SPI_PIO#" pad="SPI_PIO#"/>
-<connect gate="G$1" pin="VDD_BAT" pad="VDD_BAT"/>
-<connect gate="G$1" pin="VDD_BAT_SMPS" pad="VDD_BAT_SMPS"/>
-<connect gate="G$1" pin="VDD_CORE" pad="VDD_CORE"/>
-<connect gate="G$1" pin="VDD_CORE@1" pad="VDD_CORE@1"/>
-<connect gate="G$1" pin="VDD_PADS" pad="VDD_PADS"/>
-<connect gate="G$1" pin="VDD_REG_IN" pad="VDD_REG_IN"/>
-<connect gate="G$1" pin="VDD_XTAL" pad="VDD_XTAL"/>
-<connect gate="G$1" pin="WAKE" pad="WAKE"/>
-<connect gate="G$1" pin="XTAL_16M_IN" pad="XTAL_16M_IN"/>
-<connect gate="G$1" pin="XTAL_16M_OUT" pad="XTAL_16M_OUT"/>
-<connect gate="G$1" pin="XTAL_32K_IN" pad="XTAL_32K_IN"/>
-<connect gate="G$1" pin="XTAL_32K_OUT" pad="XTAL_32K_OUT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="MINI_SMT_8_PIN_CONNECTOR">
 <packages>
 <package name="8PIN_SMT_CONNECTOR">
@@ -1807,6 +1658,187 @@ Library created by Olivier Biot.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="CSR1010A05">
+<packages>
+<package name="CSR1010A05-IQQM-R">
+<smd name="XTAL_16M_IN" x="-1.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="AIO[2]" x="-1.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="AIO[1]" x="-0.7" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="AIO[0]" x="-0.2" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[0]/UART_TX" x="0.3" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[1]/UART_RX" x="0.8" y="-0.9" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[5]/DEBUG_CLK" x="1.85" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[6]/DEBUG_CS#" x="1.85" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[7]/DEBUG_MOSI" x="1.85" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="VDD_PADS" x="1.85" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[8]/DEBUG_MISO" x="1.85" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[9]" x="1.85" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="SMPS_LX" x="-1.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="VDD_CORE@1" x="-1.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="I2C_SDA" x="-0.7" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="I2C_SCL" x="-0.2" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="PIO[2]" x="0.3" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<smd name="RF" x="-2.75" y="0.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="VDD_REG_IN" x="-2.75" y="0.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="VDD_CORE" x="-2.75" y="1.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="WAKE" x="-2.75" y="1.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="XTAL_32K_IN" x="-2.75" y="2.15" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="XTAL_32K_OUT" x="-2.75" y="2.65" dx="0.186" dy="0.4" layer="1" rot="R90"/>
+<smd name="SPI_PIO#" x="0.8" y="3.7" dx="0.186" dy="0.4" layer="1"/>
+<polygon width="0.05" layer="1" spacing="0.1">
+<vertex x="1.225" y="3.875"/>
+<vertex x="1.225" y="3.525"/>
+<vertex x="1.3" y="3.525"/>
+<vertex x="1.375" y="3.6"/>
+<vertex x="1.375" y="3.875"/>
+</polygon>
+<polygon width="0.05" layer="1" spacing="0.1">
+<vertex x="-1.925" y="-0.075"/>
+<vertex x="-1.925" y="2.5"/>
+<vertex x="-1.55" y="2.875"/>
+<vertex x="1.025" y="2.875"/>
+<vertex x="1.025" y="-0.075"/>
+</polygon>
+<wire x1="-2.925" y1="3.525" x2="-2.925" y2="-1.075" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="-1.075" x2="2.025" y2="-1.075" width="0.05" layer="21"/>
+<wire x1="2.025" y1="-1.075" x2="2.025" y2="3.875" width="0.05" layer="21"/>
+<wire x1="2.025" y1="3.875" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
+<wire x1="-2.575" y1="3.875" x2="-2.925" y2="3.875" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="3.875" x2="-2.925" y2="3.525" width="0.05" layer="21"/>
+<wire x1="-2.925" y1="3.525" x2="-2.575" y2="3.875" width="0.05" layer="21"/>
+<text x="-2.95" y="4" size="1.27" layer="25">&gt;Name</text>
+<text x="-2.9" y="-2.45" size="1.27" layer="27">value</text>
+<smd name="XTAL_16M_OUT" x="-2.2" y="-0.9" dx="0.2" dy="0.4" layer="1"/>
+<smd name="VDD_BAT_SMPS" x="-2.2" y="3.7" dx="0.2" dy="0.4" layer="1"/>
+<smd name="PIO[11]" x="1.3" y="3.7" dx="0.2" dy="0.4" layer="1"/>
+<smd name="PIO[3]/SF_DIN" x="1.3" y="-0.9" dx="0.2" dy="0.4" layer="1"/>
+<smd name="VDD_XTAL" x="-2.75" y="-0.35" dx="0.2" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[4]/SF_CS#" x="1.85" y="-0.35" dx="0.2" dy="0.4" layer="1" rot="R90"/>
+<smd name="PIO[10]" x="1.85" y="3.15" dx="0.2" dy="0.4" layer="1" rot="R90"/>
+<smd name="VDD_BAT" x="-2.75" y="3.15" dx="0.2" dy="0.4" layer="1" rot="R90"/>
+<wire x1="-2.7" y1="3.15" x2="-3.1" y2="3.15" width="0.2" layer="1"/>
+<wire x1="-2.75" y1="2.65" x2="-3.1" y2="2.65" width="0.2" layer="1"/>
+<wire x1="-2.7" y1="2.15" x2="-3.1" y2="2.15" width="0.2" layer="1"/>
+<wire x1="-2.75" y1="1.65" x2="-3.1" y2="1.65" width="0.2" layer="1"/>
+<wire x1="-2.7" y1="1.15" x2="-3.1" y2="1.15" width="0.2" layer="1"/>
+<wire x1="-2.7" y1="0.65" x2="-3.1" y2="0.65" width="0.2" layer="1"/>
+<wire x1="-2.75" y1="0.15" x2="-3.1" y2="0.15" width="0.2" layer="1"/>
+<wire x1="-2.75" y1="-0.35" x2="-3.1" y2="-0.35" width="0.2" layer="1"/>
+<wire x1="-2.2" y1="3.65" x2="-2.2" y2="4.05" width="0.2" layer="1"/>
+<wire x1="-1.7" y1="3.65" x2="-1.7" y2="4.05" width="0.2" layer="1"/>
+<wire x1="-1.2" y1="3.7" x2="-1.2" y2="4.05" width="0.2" layer="1"/>
+<wire x1="-0.7" y1="3.7" x2="-0.7" y2="4.05" width="0.2" layer="1"/>
+<wire x1="-0.2" y1="3.7" x2="-0.2" y2="4.05" width="0.2" layer="1"/>
+<wire x1="0.3" y1="3.7" x2="0.3" y2="4.05" width="0.2" layer="1"/>
+<wire x1="0.8" y1="3.7" x2="0.8" y2="4.05" width="0.2" layer="1"/>
+<wire x1="1.3" y1="3.7" x2="1.3" y2="4.05" width="0.2" layer="1"/>
+<wire x1="1.9" y1="3.15" x2="2.25" y2="3.15" width="0.2" layer="1"/>
+<wire x1="1.9" y1="2.65" x2="2.25" y2="2.65" width="0.2" layer="1"/>
+<wire x1="1.9" y1="2.15" x2="2.25" y2="2.15" width="0.2" layer="1"/>
+<wire x1="1.9" y1="1.65" x2="2.25" y2="1.65" width="0.2" layer="1"/>
+<wire x1="1.9" y1="1.15" x2="2.25" y2="1.15" width="0.2" layer="1"/>
+<wire x1="1.85" y1="0.65" x2="2.25" y2="0.65" width="0.2" layer="1"/>
+<wire x1="1.9" y1="0.15" x2="2.3" y2="0.15" width="0.2" layer="1"/>
+<wire x1="1.85" y1="-0.35" x2="2.3" y2="-0.35" width="0.2" layer="1"/>
+<wire x1="-2.2" y1="-0.95" x2="-2.2" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="-1.7" y1="-0.95" x2="-1.7" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="-1.2" y1="-0.9" x2="-1.2" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="-0.7" y1="-0.9" x2="-0.7" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="-0.2" y1="-0.9" x2="-0.2" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="0.3" y1="-0.9" x2="0.3" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="0.8" y1="-0.9" x2="0.8" y2="-1.25" width="0.2" layer="1"/>
+<wire x1="1.3" y1="-0.95" x2="1.3" y2="-1.25" width="0.2" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CSR1010A05-IQQM-R">
+<wire x1="-33.02" y1="30.48" x2="-33.02" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="-33.02" y1="-33.02" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
+<pin name="VDD_BAT" x="-38.1" y="25.4" visible="pin" length="middle" direction="out"/>
+<pin name="XTAL_32K_OUT" x="-38.1" y="17.78" visible="pin" length="middle" direction="out"/>
+<pin name="XTAL_32K_IN" x="-38.1" y="10.16" visible="pin" length="middle" direction="out"/>
+<pin name="WAKE" x="-38.1" y="2.54" visible="pin" length="middle" direction="out"/>
+<pin name="VDD_CORE" x="-38.1" y="-5.08" visible="pin" length="middle" direction="out"/>
+<pin name="VDD_REG_IN" x="-38.1" y="-12.7" visible="pin" length="middle" direction="out"/>
+<pin name="RF" x="-38.1" y="-20.32" visible="pin" length="middle" direction="out"/>
+<pin name="VDD_XTAL" x="-38.1" y="-27.94" visible="pin" length="middle" direction="out"/>
+<wire x1="-33.02" y1="30.48" x2="30.48" y2="30.48" width="0.254" layer="94"/>
+<wire x1="30.48" y1="30.48" x2="30.48" y2="-33.02" width="0.254" layer="94"/>
+<pin name="XTAL_16M_OUT" x="-27.94" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="XTAL_16M_IN" x="-20.32" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="AIO[2]" x="-12.7" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="AIO[1]" x="-5.08" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="AIO[0]" x="2.54" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[0]/UART_TX" x="10.16" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[1]/UART_RX" x="17.78" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[3]/SF_DIN" x="25.4" y="-38.1" visible="pin" length="middle" direction="out" rot="R90"/>
+<pin name="PIO[4]/SF_CS#" x="35.56" y="-27.94" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[5]/DEBUG_CLK" x="35.56" y="-20.32" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[6]/DEBUG_CS#" x="35.56" y="-12.7" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[7]/DEBUG_MOSI" x="35.56" y="-5.08" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="VDD_PADS" x="35.56" y="2.54" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[8]/DEBUG_MISO" x="35.56" y="10.16" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[9]" x="35.56" y="17.78" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[10]" x="35.56" y="25.4" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="PIO[11]" x="25.4" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="SPI_PIO#" x="17.78" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="PIO[2]" x="10.16" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="I2C_SCL" x="2.54" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="I2C_SDA" x="-5.08" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="SMPS_LX" x="-20.32" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="VDD_BAT_SMPS" x="-27.94" y="35.56" visible="pin" length="middle" direction="out" rot="R270"/>
+<pin name="VDD_CORE@1" x="-12.7" y="35.56" visible="pin" length="middle" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CSR1010A05-IQQM-R">
+<gates>
+<gate name="G$1" symbol="CSR1010A05-IQQM-R" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CSR1010A05-IQQM-R">
+<connects>
+<connect gate="G$1" pin="AIO[0]" pad="AIO[0]"/>
+<connect gate="G$1" pin="AIO[1]" pad="AIO[1]"/>
+<connect gate="G$1" pin="AIO[2]" pad="AIO[2]"/>
+<connect gate="G$1" pin="I2C_SCL" pad="I2C_SCL"/>
+<connect gate="G$1" pin="I2C_SDA" pad="I2C_SDA"/>
+<connect gate="G$1" pin="PIO[0]/UART_TX" pad="PIO[0]/UART_TX"/>
+<connect gate="G$1" pin="PIO[10]" pad="PIO[10]"/>
+<connect gate="G$1" pin="PIO[11]" pad="PIO[11]"/>
+<connect gate="G$1" pin="PIO[1]/UART_RX" pad="PIO[1]/UART_RX"/>
+<connect gate="G$1" pin="PIO[2]" pad="PIO[2]"/>
+<connect gate="G$1" pin="PIO[3]/SF_DIN" pad="PIO[3]/SF_DIN"/>
+<connect gate="G$1" pin="PIO[4]/SF_CS#" pad="PIO[4]/SF_CS#"/>
+<connect gate="G$1" pin="PIO[5]/DEBUG_CLK" pad="PIO[5]/DEBUG_CLK"/>
+<connect gate="G$1" pin="PIO[6]/DEBUG_CS#" pad="PIO[6]/DEBUG_CS#"/>
+<connect gate="G$1" pin="PIO[7]/DEBUG_MOSI" pad="PIO[7]/DEBUG_MOSI"/>
+<connect gate="G$1" pin="PIO[8]/DEBUG_MISO" pad="PIO[8]/DEBUG_MISO"/>
+<connect gate="G$1" pin="PIO[9]" pad="PIO[9]"/>
+<connect gate="G$1" pin="RF" pad="RF"/>
+<connect gate="G$1" pin="SMPS_LX" pad="SMPS_LX"/>
+<connect gate="G$1" pin="SPI_PIO#" pad="SPI_PIO#"/>
+<connect gate="G$1" pin="VDD_BAT" pad="VDD_BAT"/>
+<connect gate="G$1" pin="VDD_BAT_SMPS" pad="VDD_BAT_SMPS"/>
+<connect gate="G$1" pin="VDD_CORE" pad="VDD_CORE"/>
+<connect gate="G$1" pin="VDD_CORE@1" pad="VDD_CORE@1"/>
+<connect gate="G$1" pin="VDD_PADS" pad="VDD_PADS"/>
+<connect gate="G$1" pin="VDD_REG_IN" pad="VDD_REG_IN"/>
+<connect gate="G$1" pin="VDD_XTAL" pad="VDD_XTAL"/>
+<connect gate="G$1" pin="WAKE" pad="WAKE"/>
+<connect gate="G$1" pin="XTAL_16M_IN" pad="XTAL_16M_IN"/>
+<connect gate="G$1" pin="XTAL_16M_OUT" pad="XTAL_16M_OUT"/>
+<connect gate="G$1" pin="XTAL_32K_IN" pad="XTAL_32K_IN"/>
+<connect gate="G$1" pin="XTAL_32K_OUT" pad="XTAL_32K_OUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1881,15 +1913,16 @@ Library created by Olivier Biot.</description>
 <part name="CS" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="PIO4" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="WAKE" library="solpad" deviceset="LSP10" device="" value="Vrail"/>
-<part name="U$1" library="CSR1010A05" deviceset="CSR1010A05-IQQM-R" device=""/>
 <part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
 <part name="U$4" library="SSP-T7-F" deviceset="SSP-T7-F" device=""/>
 <part name="R5" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R6" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R7" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R8" library="eagle-ltspice" deviceset="R" device="R1206"/>
-<part name="U$7" library="ant-planar-1" deviceset="ANTENNA_1" device="LEFT"/>
+<part name="GND" library="ant-planar-1" deviceset="ANTENNA_1" device="LEFT"/>
+<part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
+<part name="U$1" library="CSR1010A05" deviceset="CSR1010A05-IQQM-R" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1968,15 +2001,16 @@ Library created by Olivier Biot.</description>
 <instance part="CS" gate="P" x="-7.62" y="45.72" rot="R270"/>
 <instance part="PIO4" gate="P" x="-7.62" y="-2.54" rot="R270"/>
 <instance part="WAKE" gate="1" x="-104.14" y="58.42" rot="R90"/>
-<instance part="U$1" gate="G$1" x="-58.42" y="55.88"/>
 <instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
 <instance part="U$4" gate="G$1" x="-109.22" y="69.85" rot="R270"/>
 <instance part="R5" gate="G$1" x="1.27" y="85.09"/>
 <instance part="R6" gate="G$1" x="-40.64" y="-12.7" rot="R90"/>
 <instance part="R7" gate="G$1" x="-48.26" y="-12.7" rot="R90"/>
 <instance part="R8" gate="G$1" x="30.48" y="-27.94" rot="R90"/>
-<instance part="U$7" gate="G$1" x="-157.48" y="45.72"/>
-<instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
+<instance part="GND" gate="G$1" x="-157.48" y="45.72"/>
+<instance part="U$5" gate="G$1" x="-172.72" y="78.74"/>
+<instance part="U$6" gate="G$1" x="-172.72" y="101.6"/>
+<instance part="U$1" gate="G$1" x="-58.42" y="55.88"/>
 </instances>
 <busses>
 </busses>
@@ -2142,7 +2176,7 @@ Library created by Olivier Biot.</description>
 <pinref part="VGND" gate="1" pin="MP"/>
 <junction x="-157.48" y="71.12"/>
 <wire x1="-144.78" y1="101.6" x2="-137.16" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="NEG"/>
+<pinref part="U$5" gate="G$1" pin="NEG"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -2434,6 +2468,7 @@ Library created by Olivier Biot.</description>
 <wire x1="-160.02" y1="109.22" x2="-162.56" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="-160.02" y1="114.3" x2="-160.02" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-160.02" y="109.22"/>
+<pinref part="U$6" gate="G$1" pin="POS"/>
 <pinref part="U$1" gate="G$1" pin="VDD_PADS"/>
 <pinref part="U$1" gate="G$1" pin="VDD_BAT_SMPS"/>
 </segment>
@@ -2446,8 +2481,8 @@ Library created by Olivier Biot.</description>
 <wire x1="20.32" y1="-43.18" x2="30.48" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="CS" gate="P" pin="P"/>
 <junction x="-7.62" y="43.18"/>
-<pinref part="U$1" gate="G$1" pin="PIO[6]/DEBUG_CS#"/>
 <pinref part="U$2" gate="G$1" pin="SPI_CSB"/>
+<pinref part="U$1" gate="G$1" pin="PIO[6]/DEBUG_CS#"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -2471,15 +2506,15 @@ Library created by Olivier Biot.</description>
 <net name="N$37" class="0">
 <segment>
 <wire x1="-48.26" y1="-7.62" x2="-48.26" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PIO[0]/UART_TX"/>
 <pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="PIO[0]/UART_TX"/>
 </segment>
 </net>
 <net name="N$38" class="0">
 <segment>
 <wire x1="-40.64" y1="17.78" x2="-40.64" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PIO[1]/UART_RX"/>
 <pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="PIO[1]/UART_RX"/>
 </segment>
 </net>
 <net name="N$39" class="0">
@@ -2522,24 +2557,24 @@ Library created by Olivier Biot.</description>
 <net name="N$26" class="0">
 <segment>
 <pinref part="C5" gate="A" pin="C1"/>
-<pinref part="U$1" gate="G$1" pin="XTAL_32K_OUT"/>
 <wire x1="-120.65" y1="73.66" x2="-115.57" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="P$2"/>
 <wire x1="-115.57" y1="73.66" x2="-96.52" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-115.57" y1="69.85" x2="-115.57" y2="73.66" width="0.1524" layer="91"/>
 <junction x="-115.57" y="73.66"/>
+<pinref part="U$1" gate="G$1" pin="XTAL_32K_OUT"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
 <pinref part="C6" gate="A" pin="C1"/>
-<pinref part="U$1" gate="G$1" pin="XTAL_32K_IN"/>
 <wire x1="-120.65" y1="66.04" x2="-102.108" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="P$1"/>
 <wire x1="-102.108" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-102.362" y1="69.85" x2="-102.108" y2="69.85" width="0.1524" layer="91"/>
 <wire x1="-102.108" y1="69.85" x2="-102.108" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-102.108" y="66.04"/>
+<pinref part="U$1" gate="G$1" pin="XTAL_32K_IN"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -2548,8 +2583,8 @@ Library created by Olivier Biot.</description>
 <wire x1="-40.64" y1="97.79" x2="-5.08" y2="97.79" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="97.79" x2="-5.08" y2="85.09" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="85.09" x2="-3.81" y2="85.09" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SPI_PIO#"/>
 <pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="SPI_PIO#"/>
 </segment>
 </net>
 <net name="N$46" class="0">
@@ -2557,8 +2592,8 @@ Library created by Olivier Biot.</description>
 <wire x1="-48.26" y1="91.44" x2="-48.26" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="120.65" x2="-12.7" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="120.65" x2="69.85" y2="120.65" width="0.1524" layer="91"/>
-<wire x1="69.85" y1="120.65" x2="69.85" y2="111.75" width="0.1524" layer="91"/>
-<wire x1="66.01" y1="111.75" x2="69.85" y2="111.75" width="0.1524" layer="91"/>
+<wire x1="69.85" y1="120.65" x2="69.85" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="69.85" y1="111.76" x2="69.85" y2="111.75" width="0.1524" layer="91"/>
 <wire x1="69.85" y1="120.65" x2="73.152" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="73.152" y1="120.65" x2="73.152" y2="115.824" width="0.1524" layer="91"/>
 <junction x="69.85" y="120.65"/>
@@ -2567,12 +2602,16 @@ Library created by Olivier Biot.</description>
 <wire x1="-12.7" y1="124.46" x2="-12.7" y2="120.65" width="0.1524" layer="91"/>
 <junction x="-12.7" y="120.65"/>
 <pinref part="U$1" gate="G$1" pin="PIO[2]"/>
+<pinref part="U2" gate="A" pin="VCC"/>
+<wire x1="66.04" y1="111.76" x2="69.85" y2="111.76" width="0.1524" layer="91"/>
+<junction x="69.85" y="111.76"/>
 </segment>
 </net>
 <net name="N$48" class="0">
 <segment>
 <wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="POS"/>
+<pinref part="U$5" gate="G$1" pin="POS"/>
+<pinref part="U$6" gate="G$1" pin="NEG"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -2597,8 +2636,8 @@ Library created by Olivier Biot.</description>
 <wire x1="-7.62" y1="35.56" x2="-22.86" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="35.56" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
 <junction x="-7.62" y="35.56"/>
-<pinref part="U$1" gate="G$1" pin="PIO[5]/DEBUG_CLK"/>
 <pinref part="U$2" gate="G$1" pin="SPI_CLK"/>
+<pinref part="U$1" gate="G$1" pin="PIO[5]/DEBUG_CLK"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -2609,8 +2648,8 @@ Library created by Olivier Biot.</description>
 <wire x1="15.24" y1="66.04" x2="15.24" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="-7.62" y="66.04"/>
 <wire x1="15.24" y1="-45.72" x2="30.48" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PIO[8]/DEBUG_MISO"/>
 <pinref part="U$2" gate="G$1" pin="SPI_MISO"/>
+<pinref part="U$1" gate="G$1" pin="PIO[8]/DEBUG_MISO"/>
 </segment>
 </net>
 <net name="N$50" class="0">
@@ -2621,8 +2660,17 @@ Library created by Olivier Biot.</description>
 <wire x1="17.78" y1="50.8" x2="17.78" y2="-38.1" width="0.1524" layer="91"/>
 <junction x="-7.62" y="50.8"/>
 <wire x1="17.78" y1="-38.1" x2="30.48" y2="-38.1" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PIO[7]/DEBUG_MOSI"/>
 <pinref part="U$2" gate="G$1" pin="SPI_MOSI"/>
+<pinref part="U$1" gate="G$1" pin="PIO[7]/DEBUG_MOSI"/>
+</segment>
+</net>
+<net name="N$43" class="0">
+<segment>
+<pinref part="C7" gate="A" pin="C2"/>
+<wire x1="-96.52" y1="35.56" x2="-109.22" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="35.56" x2="-152.4" y2="35.56" width="0.1524" layer="91"/>
+<junction x="-109.22" y="35.56"/>
+<pinref part="U$1" gate="G$1" pin="RF"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -2641,15 +2689,6 @@ Library created by Olivier Biot.</description>
 <segment>
 <pinref part="AIO0" gate="P" pin="P"/>
 <pinref part="U$1" gate="G$1" pin="AIO[0]"/>
-</segment>
-</net>
-<net name="N$43" class="0">
-<segment>
-<pinref part="C7" gate="A" pin="C2"/>
-<wire x1="-96.52" y1="35.56" x2="-109.22" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="RF"/>
-<wire x1="-109.22" y1="35.56" x2="-152.4" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-109.22" y="35.56"/>
 </segment>
 </net>
 </nets>

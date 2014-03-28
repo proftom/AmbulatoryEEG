@@ -2654,7 +2654,7 @@ Library created by Olivier Biot.</description>
 <pinref part="C7" gate="A" pin="C2"/>
 <wire x1="-96.52" y1="35.56" x2="-109.22" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="RF"/>
-<wire x1="-109.22" y1="35.56" x2="-152.4" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="35.56" x2="-109.22" y2="35.56" width="0.1524" layer="91"/>
 <junction x="-109.22" y="35.56"/>
 </segment>
 </net>

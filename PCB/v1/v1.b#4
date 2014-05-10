@@ -16,7 +16,7 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
@@ -24,7 +24,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -64,11 +64,42 @@
 <wire x1="55.0294" y1="38.9786" x2="-0.00635" y2="38.98895" width="0" layer="20"/>
 <wire x1="-0.00635" y1="38.98895" x2="0" y2="0" width="0" layer="20"/>
 <text x="53.75" y="13" size="1.778" layer="16" rot="MR270">T Morrison</text>
-<rectangle x1="2.25" y1="6.25" x2="5.5" y2="6.75" layer="29"/>
 <rectangle x1="30.25" y1="31" x2="34.25" y2="34" layer="29"/>
 <text x="48.75" y="0.75" size="1.778" layer="1">V2</text>
 <rectangle x1="25.25" y1="23" x2="28.67" y2="26.26" layer="1"/>
-<rectangle x1="24" y1="21.75" x2="29.75" y2="27.5" layer="29"/>
+<rectangle x1="23.925" y1="26.15" x2="24.955" y2="26.555" layer="29"/>
+<rectangle x1="23.895" y1="25.655" x2="24.94" y2="26.04" layer="29"/>
+<rectangle x1="23.88" y1="25.16" x2="24.955" y2="25.54" layer="29"/>
+<rectangle x1="23.895" y1="24.655" x2="24.94" y2="25.04" layer="29"/>
+<rectangle x1="23.91" y1="24.135" x2="24.95" y2="24.55" layer="29"/>
+<rectangle x1="23.9" y1="23.66" x2="24.955" y2="24.045" layer="29"/>
+<rectangle x1="23.9" y1="23.155" x2="24.95" y2="23.545" layer="29"/>
+<rectangle x1="23.9" y1="22.65" x2="24.935" y2="23.03" layer="29"/>
+<rectangle x1="28.95" y1="26.145" x2="29.98" y2="26.55" layer="29"/>
+<rectangle x1="28.92" y1="25.65" x2="29.965" y2="26.035" layer="29"/>
+<rectangle x1="28.905" y1="25.155" x2="29.98" y2="25.535" layer="29"/>
+<rectangle x1="28.92" y1="24.65" x2="29.965" y2="25.035" layer="29"/>
+<rectangle x1="28.935" y1="24.13" x2="29.975" y2="24.545" layer="29"/>
+<rectangle x1="28.925" y1="23.655" x2="29.98" y2="24.04" layer="29"/>
+<rectangle x1="28.925" y1="23.15" x2="29.975" y2="23.54" layer="29"/>
+<rectangle x1="28.925" y1="22.645" x2="29.96" y2="23.025" layer="29"/>
+<rectangle x1="24.6825" y1="26.9425" x2="25.7125" y2="27.3475" layer="29" rot="R90"/>
+<rectangle x1="25.18" y1="26.93" x2="26.225" y2="27.315" layer="29" rot="R90"/>
+<rectangle x1="25.6625" y1="26.9325" x2="26.7375" y2="27.3125" layer="29" rot="R90"/>
+<rectangle x1="26.18" y1="26.93" x2="27.225" y2="27.315" layer="29" rot="R90"/>
+<rectangle x1="26.6875" y1="26.9275" x2="27.7275" y2="27.3425" layer="29" rot="R90"/>
+<rectangle x1="27.17" y1="26.94" x2="28.225" y2="27.325" layer="29" rot="R90"/>
+<rectangle x1="27.675" y1="26.935" x2="28.725" y2="27.325" layer="29" rot="R90"/>
+<rectangle x1="28.1925" y1="26.9325" x2="29.2275" y2="27.3125" layer="29" rot="R90"/>
+<rectangle x1="24.6825" y1="21.8825" x2="25.7125" y2="22.2875" layer="29" rot="R90"/>
+<rectangle x1="25.18" y1="21.87" x2="26.225" y2="22.255" layer="29" rot="R90"/>
+<rectangle x1="25.6625" y1="21.8725" x2="26.7375" y2="22.2525" layer="29" rot="R90"/>
+<rectangle x1="26.18" y1="21.87" x2="27.225" y2="22.255" layer="29" rot="R90"/>
+<rectangle x1="26.6875" y1="21.8675" x2="27.7275" y2="22.2825" layer="29" rot="R90"/>
+<rectangle x1="27.17" y1="21.88" x2="28.225" y2="22.265" layer="29" rot="R90"/>
+<rectangle x1="27.675" y1="21.875" x2="28.725" y2="22.265" layer="29" rot="R90"/>
+<rectangle x1="28.1925" y1="21.8725" x2="29.2275" y2="22.2525" layer="29" rot="R90"/>
+<rectangle x1="2.275" y1="6.015" x2="5.44" y2="6.825" layer="29"/>
 </plain>
 <libraries>
 <library name="Microchip_By_element14_Batch_1">

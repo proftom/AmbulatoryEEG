@@ -2592,8 +2592,8 @@ Library created by Olivier Biot.</description>
 <wire x1="-48.26" y1="91.44" x2="-48.26" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="120.65" x2="-12.7" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="120.65" x2="69.85" y2="120.65" width="0.1524" layer="91"/>
-<wire x1="69.85" y1="120.65" x2="69.85" y2="111.75" width="0.1524" layer="91"/>
-<wire x1="66.01" y1="111.75" x2="69.85" y2="111.75" width="0.1524" layer="91"/>
+<wire x1="69.85" y1="120.65" x2="69.85" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="69.85" y1="111.76" x2="69.85" y2="111.75" width="0.1524" layer="91"/>
 <wire x1="69.85" y1="120.65" x2="73.152" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="73.152" y1="120.65" x2="73.152" y2="115.824" width="0.1524" layer="91"/>
 <junction x="69.85" y="120.65"/>
@@ -2602,6 +2602,9 @@ Library created by Olivier Biot.</description>
 <wire x1="-12.7" y1="124.46" x2="-12.7" y2="120.65" width="0.1524" layer="91"/>
 <junction x="-12.7" y="120.65"/>
 <pinref part="U$1" gate="G$1" pin="PIO[2]"/>
+<pinref part="U2" gate="A" pin="VCC"/>
+<wire x1="66.04" y1="111.76" x2="69.85" y2="111.76" width="0.1524" layer="91"/>
+<junction x="69.85" y="111.76"/>
 </segment>
 </net>
 <net name="N$48" class="0">

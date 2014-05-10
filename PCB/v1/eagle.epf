@@ -351,7 +351,7 @@ UsedLibrary="C:/Repository/AmbulatoryEEG/PCB/LIBS/AD7997.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="288 287 1230 900"
+Loc="-1837 258 -895 871"
 State=2
 Number=0
 

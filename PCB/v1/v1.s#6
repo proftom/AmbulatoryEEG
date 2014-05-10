@@ -1888,7 +1888,7 @@ Library created by Olivier Biot.</description>
 <part name="R6" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R7" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R8" library="eagle-ltspice" deviceset="R" device="R1206"/>
-<part name="U$7" library="ant-planar-1" deviceset="ANTENNA_1" device="LEFT"/>
+<part name="GND" library="ant-planar-1" deviceset="ANTENNA_1" device="LEFT"/>
 <part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 </parts>
@@ -1976,7 +1976,7 @@ Library created by Olivier Biot.</description>
 <instance part="R6" gate="G$1" x="-40.64" y="-12.7" rot="R90"/>
 <instance part="R7" gate="G$1" x="-48.26" y="-12.7" rot="R90"/>
 <instance part="R8" gate="G$1" x="30.48" y="-27.94" rot="R90"/>
-<instance part="U$7" gate="G$1" x="-157.48" y="45.72"/>
+<instance part="GND" gate="G$1" x="-157.48" y="45.72"/>
 <instance part="U$5" gate="G$1" x="-172.72" y="78.74"/>
 <instance part="U$6" gate="G$1" x="-172.72" y="101.6"/>
 </instances>

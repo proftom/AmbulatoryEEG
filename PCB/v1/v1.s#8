@@ -1889,6 +1889,7 @@ Library created by Olivier Biot.</description>
 <part name="R7" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="R8" library="eagle-ltspice" deviceset="R" device="R1206"/>
 <part name="U$7" library="ant-planar-1" deviceset="ANTENNA_1" device="LEFT"/>
+<part name="U$5" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 <part name="U$6" library="BATTERY_2996" deviceset="BATTERY_2996" device=""/>
 </parts>
 <sheets>
@@ -1976,7 +1977,8 @@ Library created by Olivier Biot.</description>
 <instance part="R7" gate="G$1" x="-48.26" y="-12.7" rot="R90"/>
 <instance part="R8" gate="G$1" x="30.48" y="-27.94" rot="R90"/>
 <instance part="U$7" gate="G$1" x="-157.48" y="45.72"/>
-<instance part="U$6" gate="G$1" x="-172.72" y="78.74"/>
+<instance part="U$5" gate="G$1" x="-172.72" y="78.74"/>
+<instance part="U$6" gate="G$1" x="-172.72" y="101.6"/>
 </instances>
 <busses>
 </busses>
@@ -2142,7 +2144,7 @@ Library created by Olivier Biot.</description>
 <pinref part="VGND" gate="1" pin="MP"/>
 <junction x="-157.48" y="71.12"/>
 <wire x1="-144.78" y1="101.6" x2="-137.16" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="NEG"/>
+<pinref part="U$5" gate="G$1" pin="NEG"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -2436,6 +2438,7 @@ Library created by Olivier Biot.</description>
 <junction x="-160.02" y="109.22"/>
 <pinref part="U$1" gate="G$1" pin="VDD_PADS"/>
 <pinref part="U$1" gate="G$1" pin="VDD_BAT_SMPS"/>
+<pinref part="U$6" gate="G$1" pin="POS"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -2572,7 +2575,8 @@ Library created by Olivier Biot.</description>
 <net name="N$48" class="0">
 <segment>
 <wire x1="-162.56" y1="93.98" x2="-162.56" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="POS"/>
+<pinref part="U$5" gate="G$1" pin="POS"/>
+<pinref part="U$6" gate="G$1" pin="NEG"/>
 </segment>
 </net>
 <net name="N$40" class="0">

@@ -2404,7 +2404,7 @@ Library created by Olivier Biot.</description>
 <junction x="142.24" y="137.16"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="VDD_CORE" class="0">
 <segment>
 <wire x1="-71.12" y1="99.06" x2="-72.644" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-72.644" y1="99.06" x2="-99.06" y2="99.06" width="0.1524" layer="91"/>

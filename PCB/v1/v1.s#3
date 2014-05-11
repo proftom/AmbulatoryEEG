@@ -10196,8 +10196,6 @@ Metric Code Size 5664</description>
 <part name="VDD2" library="supply1" deviceset="VDD" device=""/>
 <part name="L1" library="AVX_By_element14_Batch_1" deviceset="12107C102JAT2A" device="" value="4.7uH"/>
 <part name="C1" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
-<part name="SDA" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="SCL" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="WAKE" library="solpad" deviceset="LSP10" device="" value="Vrail"/>
 <part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
 <part name="U$4" library="SSP-T7-F" deviceset="SSP-T7-F" device=""/>
@@ -10262,8 +10260,6 @@ Metric Code Size 5664</description>
 <instance part="VDD2" gate="G$1" x="30.48" y="-17.78"/>
 <instance part="L1" gate="A" x="-134.62" y="43.18" rot="R180"/>
 <instance part="C1" gate="A" x="73.152" y="108.204" rot="R90"/>
-<instance part="SDA" gate="P" x="-38.1" y="114.3" rot="R270"/>
-<instance part="SCL" gate="P" x="-38.1" y="106.68" rot="R270"/>
 <instance part="WAKE" gate="1" x="-104.14" y="58.42" rot="R90"/>
 <instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
 <instance part="U$4" gate="G$1" x="-109.22" y="69.85" rot="R270"/>
@@ -10295,10 +10291,7 @@ Metric Code Size 5664</description>
 <wire x1="-55.88" y1="91.44" x2="-55.88" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="SCL"/>
 <wire x1="35.56" y1="104.14" x2="33.02" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="SCL" gate="P" pin="P"/>
-<wire x1="33.02" y1="104.14" x2="-38.1" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="104.14" x2="-55.88" y2="104.14" width="0.1524" layer="91"/>
-<junction x="-38.1" y="104.14"/>
+<wire x1="33.02" y1="104.14" x2="-55.88" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="I2C_SCL"/>
 <wire x1="134.62" y1="157.48" x2="139.7" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="157.48" x2="139.7" y2="182.88" width="0.1524" layer="91"/>
@@ -10312,11 +10305,8 @@ Metric Code Size 5664</description>
 <segment>
 <pinref part="U2" gate="A" pin="SDA"/>
 <wire x1="35.56" y1="111.76" x2="27.94" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="111.76" x2="-38.1" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="111.76" x2="-63.5" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="111.76" x2="-63.5" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="91.44" x2="-63.5" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="SDA" gate="P" pin="P"/>
-<junction x="-38.1" y="111.76"/>
 <pinref part="U$1" gate="G$1" pin="I2C_SDA"/>
 <junction x="27.94" y="111.76"/>
 <wire x1="27.94" y1="111.76" x2="27.94" y2="187.96" width="0.1524" layer="91"/>
@@ -10500,7 +10490,7 @@ Metric Code Size 5664</description>
 <wire x1="142.24" y1="170.18" x2="134.62" y2="170.18" width="0.1524" layer="91"/>
 <junction x="134.62" y="170.18"/>
 <pinref part="C15" gate="A" pin="C1"/>
-<wire x1="81.28" y1="149.86" x2="91.44" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="149.86" x2="86.36" y2="149.86" width="0.1524" layer="91"/>
 <junction x="91.44" y="149.86"/>
 <pinref part="U$5" gate="G$1" pin="AGND@1"/>
 <pinref part="U$5" gate="G$1" pin="AGND@2"/>
@@ -10526,6 +10516,9 @@ Metric Code Size 5664</description>
 <junction x="134.62" y="116.84"/>
 <wire x1="142.24" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
 <junction x="134.62" y="121.92"/>
+<pinref part="C20" gate="A" pin="C1"/>
+<wire x1="91.44" y1="149.86" x2="86.36" y2="149.86" width="0.1524" layer="91"/>
+<junction x="86.36" y="149.86"/>
 </segment>
 </net>
 <net name="VDD_CORE" class="0">

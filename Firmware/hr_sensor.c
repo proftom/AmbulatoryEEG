@@ -56,7 +56,7 @@
 /* Time after which HR Measurements will be transmitted to the connected 
  * host.
  */
-#define HR_MEAS_TIME                   (TIME)(7500)
+#define HR_MEAS_TIME                   (TIME)(10000)
 
 /* Magic value to check the sanity of NVM region used by the application */
 #define NVM_SANITY_MAGIC               (0xAB04)
@@ -175,7 +175,7 @@ static uint8* receivedHRMeasReading(uint8 *p_length);
 
 /* RR value generator */
 static void hrMeasTimerHandler(timer_id tid);
-static void hrMeasTimerHandler2(timer_id tid);
+/*static void hrMeasTimerHandler2(timer_id tid);*/
 
 #ifdef ENABLE_DORMANT_MODE_FUNCTIONALITY
 /* This function contains handles the timer expiry for the timer which the 
@@ -186,8 +186,8 @@ static void hrMeasTimerHandler2(timer_id tid);
 static void idleDormantTimerExpiryHandler(timer_id tid);
 #endif /* ENABLE_DORMANT_MODE_FUNCTIONALITY */
 
-static uint8 writeASCIICodedNumber(uint32 value);
-/*============================================================================*
+/*static uint8 writeASCIICodedNumber(uint32 value);
+============================================================================*
  *  Private Function Implementations
  *============================================================================*/
 
@@ -437,10 +437,10 @@ static void hrMeasTimerHandler(timer_id tid)
     }
 
 }
-
+/* 
 static void hrMeasTimerHandler2(timer_id tid)
 {
-    /*Handling signal as per current state */
+
     switch(g_hr_data.state)
     {
         case app_state_connected:
@@ -456,20 +456,18 @@ static void hrMeasTimerHandler2(timer_id tid)
 
         case app_state_disconnecting:
         {
-            /* Do nothing in this state as the device has triggered 
-             * disconnect 
-             */
+
             g_hr_data.hr_meas_tid = TIMER_INVALID;
         }
         break;
 
         default:
-            /* Control should never come here */
+            
             ReportPanic(app_panic_invalid_state);
         break;
     }
 
-}
+} */
 
 #ifdef NO_ACTUAL_MEASUREMENT
 
@@ -1719,33 +1717,7 @@ static void handleSignalGattAccessInd(GATT_ACCESS_IND_T *p_event_data)
  *----------------------------------------------------------------------------
 static uint8 meas_report[20] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};*/
 
-static uint8 writeASCIICodedNumber(uint32 value)
-{
-#define BUFFER_SIZE 11          /* Buffer size required to hold maximum value */
-    
-    uint8  i = BUFFER_SIZE;     /* Loop counter */
-    uint32 remainder = value;   /* Remaining value to send */
-    char   buffer[BUFFER_SIZE]; /* Buffer for ASCII string */
 
-    /* Ensure the string is correctly terminated */    
-    buffer[--i] = '\0';
-    
-    /* Loop at least once and until the whole value has been converted */
-    do
-    {
-        /* Convert the unit value into ASCII and store in the buffer */
-        buffer[--i] = (remainder % 10) + '0';
-        
-        /* Shift the value right one decimal */
-        remainder /= 10;
-    } while (remainder > 0);
-
-    /* Send the string to the UART */
-    DebugWriteString(buffer + i);
-    
-    /* Return length of ASCII string sent to UART */
-    return (BUFFER_SIZE - 1) - i;
-}
 
 static void handleSignalLsRadioEventInd(void)
 {
@@ -1804,22 +1776,22 @@ static void handleSignalLsRadioEventInd(void)
             /* Delete the already running Hr Measurement timer and start a new 
              * one.*/
              
-            TimerDelete(g_hr_data.hr_meas_tid);
-            credits++;
-            writeASCIICodedNumber(credits); 
             
-            /*
+            /*writeASCIICodedNumber(credits++); 
+            
+            
                        
-            DebugWriteString("\n\r");*/
+            DebugWriteString("\n\r");
             
             if (credits >= 8) {
                 
                 DebugWriteString("\n\rAll credits restored");                                
                 credits = 8;
-            }               
-            g_hr_data.hr_meas_tid = TimerCreate((HR_MEAS_TIME - (7 * MILLISECOND)- timer_value),
+            } */        
+            TimerDelete(g_hr_data.hr_meas_tid);
+            g_hr_data.hr_meas_tid = TimerCreate(5000/*(HR_MEAS_TIME - (6 * MILLISECOND)- timer_value)*/,
                                  TRUE, 
-                                 hrMeasTimerHandler2);  
+                                 hrMeasTimerHandler);  
                      /**/
             
 

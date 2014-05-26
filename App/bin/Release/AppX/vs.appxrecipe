@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DAVINCI</Machine>
+    <WindowsUser>Thomas</WindowsUser>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>Microsoft.SDKSamples.BluetoothGattHeartRate.CS</PackageIdentityName>
+    <RegisteredManifestChecksum>B97BA574DC1531EF2A060B34DF6BA0962F9CBA75FC7AF607FADDF1F4B92F63F4</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>Microsoft.SDKSamples.BluetoothGattHeartRate.CS_1.0.0.0_neutral__8wekyb3d8bbwe</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>Microsoft.SDKSamples.BluetoothGattHeartRate.CS_8wekyb3d8bbwe!SDKSample.App</RegisteredUserModeAppID>
+    <RegisteredPackageID>Microsoft.SDKSamples.BluetoothGattHeartRate.CS</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Thomas\Desktop\C#\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-25T12:14:03.296</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\BluetoothGattHeartRate.exe">
+      <PackagePath>BluetoothGattHeartRate.exe</PackagePath>
+      <Modified>2014-05-25T12:14:03.076</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\microsoft-sdk.png">
+      <PackagePath>Assets\microsoft-sdk.png</PackagePath>
+      <Modified>2014-01-14T23:08:14.561</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\placeholder-sdk.png">
+      <PackagePath>Assets\placeholder-sdk.png</PackagePath>
+      <Modified>2014-01-14T23:08:14.571</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\smallTile-sdk.png">
+      <PackagePath>Assets\smallTile-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-01-14T23:08:14.637</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\splash-sdk.png">
+      <PackagePath>Assets\splash-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-01-14T23:08:14.695</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\squareTile-sdk.png">
+      <PackagePath>Assets\squareTile-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-01-14T23:08:14.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\storeLogo-sdk.png">
+      <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-01-14T23:08:14.806</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\tile-sdk.png">
+      <PackagePath>Assets\tile-sdk.png</PackagePath>
+      <Modified>2014-01-14T23:08:14.857</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\windows-sdk.png">
+      <PackagePath>Assets\windows-sdk.png</PackagePath>
+      <Modified>2014-01-14T23:08:14.909</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\Scenario3.xbf">
+      <PackagePath>Scenario3.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\Scenario2.xbf">
+      <PackagePath>Scenario2.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\Scenario1.xbf">
+      <PackagePath>Scenario1.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\Common\StandardStyles.xbf">
+      <PackagePath>Common\StandardStyles.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\Sample-Utils\SampleTemplateStyles.xbf">
+      <PackagePath>Sample-Utils\SampleTemplateStyles.xbf</PackagePath>
+      <Modified>2014-05-25T12:14:02.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-05-25T12:14:03.242</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

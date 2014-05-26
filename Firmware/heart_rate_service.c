@@ -18,7 +18,7 @@
 #include <gatt.h>
 #include <gatt_prim.h>
 #include <buf_utils.h>
-
+#include <debug.h>          /* Simple host interface to the UART driver */
 /*============================================================================*
  *  Local Header Files
  *============================================================================*/
@@ -27,7 +27,7 @@
 #include "heart_rate_service.h"
 #include "app_gatt_db.h"
 #include "nvm_access.h"
-
+#include "hr_sensor_hw.h"
 /*============================================================================*
  *  Private Data Types
  *============================================================================*/
@@ -75,7 +75,7 @@ typedef struct
 /* Heart Rate service data instance */
 static HR_SERV_DATA_T g_hr_serv_data;
 
-
+int credits = 8;
 /* Heart Rate Control Point Type */
 typedef enum
 {
@@ -311,41 +311,19 @@ static uint8 meas_report[20] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,1
 extern void HeartRateSendMeasValue(uint16 ucid, uint8 hrm_length, 
                                    uint8 *p_hr_meas)
 {
-
+int i = 0;
      meas_report[1] = test++;
-    
-    GattCharValueNotification(ucid, 
-                              HANDLE_HEART_RATE_MEASUREMENT, 
-                              (uint16)20, 
-                              meas_report);  /* heart rate */
+    if(credits < 8)
+        return;
+       DebugWriteString("\n\rTransmit..");  
+    for (i = 0; i < credits; i++) {
+       
         GattCharValueNotification(ucid, 
-                              HANDLE_HEART_RATE_MEASUREMENT, 
-                              (uint16)20, 
-                              meas_report);  /* heart rate */
-            GattCharValueNotification(ucid, 
-                              HANDLE_HEART_RATE_MEASUREMENT, 
-                              (uint16)20, 
-                              meas_report);  /* heart rate */
-                GattCharValueNotification(ucid, 
-                              HANDLE_HEART_RATE_MEASUREMENT, 
-                              (uint16)20, 
-                              meas_report);  /* heart rate */
-                    GattCharValueNotification(ucid, 
-                  HANDLE_HEART_RATE_MEASUREMENT, 
-                  (uint16)20, 
-                  meas_report);  /* heart rate */
-                                        GattCharValueNotification(ucid, 
-                  HANDLE_HEART_RATE_MEASUREMENT, 
-                  (uint16)20, 
-                  meas_report);  /* heart rate */
-                                                          GattCharValueNotification(ucid, 
-                  HANDLE_HEART_RATE_MEASUREMENT, 
-                  (uint16)20, 
-                  meas_report);  /* heart rate */
-                                        GattCharValueNotification(ucid, 
-                  HANDLE_HEART_RATE_MEASUREMENT, 
-                  (uint16)20, 
-                  meas_report);  /* heart rate */
+              HANDLE_HEART_RATE_MEASUREMENT, 
+              (uint16)20, 
+              meas_report);  /* heart rate */
+    }
+    credits = 0;
 
 }
 

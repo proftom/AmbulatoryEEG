@@ -1,1 +1,1 @@
-C:\Users\Thomas\Desktop\C#\BluetoothGattHeartRate.csproj;neutral
+C:\Repository\AmbulatoryEEG\App\BluetoothGattHeartRate.csproj;neutral

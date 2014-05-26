@@ -14,84 +14,84 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Thomas\Desktop\C#\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-01-14T23:08:53.043</Modified>
+      <Modified>2014-05-26T15:32:30.700</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\BluetoothGattHeartRate.exe">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\BluetoothGattHeartRate.exe">
       <PackagePath>BluetoothGattHeartRate.exe</PackagePath>
-      <Modified>2014-05-26T12:04:53.684</Modified>
+      <Modified>2014-05-26T15:32:30.472</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\microsoft-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
-      <Modified>2014-01-14T23:08:14.561</Modified>
+      <Modified>2014-05-26T15:30:46.771</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\placeholder-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\placeholder-sdk.png">
       <PackagePath>Assets\placeholder-sdk.png</PackagePath>
-      <Modified>2014-01-14T23:08:14.571</Modified>
+      <Modified>2014-05-26T15:30:46.772</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\smallTile-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\smallTile-sdk.png">
       <PackagePath>Assets\smallTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-01-14T23:08:14.637</Modified>
+      <Modified>2014-05-26T15:30:46.773</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\splash-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\splash-sdk.png">
       <PackagePath>Assets\splash-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-01-14T23:08:14.695</Modified>
+      <Modified>2014-05-26T15:30:46.774</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\squareTile-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\squareTile-sdk.png">
       <PackagePath>Assets\squareTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-01-14T23:08:14.750</Modified>
+      <Modified>2014-05-26T15:30:46.774</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\storeLogo-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\storeLogo-sdk.png">
       <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-01-14T23:08:14.806</Modified>
+      <Modified>2014-05-26T15:30:46.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\tile-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\tile-sdk.png">
       <PackagePath>Assets\tile-sdk.png</PackagePath>
-      <Modified>2014-01-14T23:08:14.857</Modified>
+      <Modified>2014-05-26T15:30:46.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\windows-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\windows-sdk.png">
       <PackagePath>Assets\windows-sdk.png</PackagePath>
-      <Modified>2014-01-14T23:08:14.909</Modified>
+      <Modified>2014-05-26T15:30:46.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.432</Modified>
+      <Modified>2014-05-26T15:30:46.853</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Scenario3.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Scenario3.xbf">
       <PackagePath>Scenario3.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.435</Modified>
+      <Modified>2014-05-26T15:30:46.881</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Scenario2.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Scenario2.xbf">
       <PackagePath>Scenario2.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.438</Modified>
+      <Modified>2014-05-26T15:30:46.879</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Scenario1.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Scenario1.xbf">
       <PackagePath>Scenario1.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.440</Modified>
+      <Modified>2014-05-26T15:30:46.877</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.443</Modified>
+      <Modified>2014-05-26T15:30:46.871</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Common\StandardStyles.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.445</Modified>
+      <Modified>2014-05-26T15:32:30.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
       <PackagePath>Sample-Utils\SampleTemplateStyles.xbf</PackagePath>
-      <Modified>2014-01-14T23:08:52.447</Modified>
+      <Modified>2014-05-26T15:32:30.241</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-01-14T23:08:52.935</Modified>
+      <Modified>2014-05-26T15:32:30.643</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

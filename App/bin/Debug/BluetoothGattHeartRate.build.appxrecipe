@@ -8,65 +8,65 @@
     <PackageIdentityName>Microsoft.SDKSamples.BluetoothGattHeartRate.CS</PackageIdentityName>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Thomas\Desktop\C#\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\BluetoothGattHeartRate.exe">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\BluetoothGattHeartRate.exe">
       <PackagePath>BluetoothGattHeartRate.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\microsoft-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\placeholder-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\placeholder-sdk.png">
       <PackagePath>Assets\placeholder-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\smallTile-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\smallTile-sdk.png">
       <PackagePath>Assets\smallTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\splash-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\splash-sdk.png">
       <PackagePath>Assets\splash-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\squareTile-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\squareTile-sdk.png">
       <PackagePath>Assets\squareTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\storeLogo-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\storeLogo-sdk.png">
       <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\tile-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\tile-sdk.png">
       <PackagePath>Assets\tile-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\Assets\windows-sdk.png">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\windows-sdk.png">
       <PackagePath>Assets\windows-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Scenario3.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Scenario3.xbf">
       <PackagePath>Scenario3.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Scenario2.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Scenario2.xbf">
       <PackagePath>Scenario2.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Scenario1.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Scenario1.xbf">
       <PackagePath>Scenario1.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Common\StandardStyles.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
       <PackagePath>Sample-Utils\SampleTemplateStyles.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Desktop\C#\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

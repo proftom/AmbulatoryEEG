@@ -132,3 +132,5 @@ extern void WriteHRServiceDataInNvm(void);
 #endif /* NVM_TYPE_FLASH */
 
 #endif /* __HEART_RATE_SERVICE_H__ */
+
+extern int credits;

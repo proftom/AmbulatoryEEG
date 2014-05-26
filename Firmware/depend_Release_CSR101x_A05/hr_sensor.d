@@ -43,4 +43,6 @@ depend_Release_CSR101x_A05/hr_sensor.o: hr_sensor.c \
   user_config.h hr_sensor_hw.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bluetooth.h \
   depend_Release_CSR101x_A05/app_gatt_db.h nvm_access.h \
-  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/status.h
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/status.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/debug.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/uart.h

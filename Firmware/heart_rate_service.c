@@ -312,13 +312,15 @@ extern void HeartRateSendMeasValue(uint16 ucid, uint8 hrm_length,
                                    uint8 *p_hr_meas)
 {
 int i = 0;
-     meas_report[1] = test++;
+     
     if(credits < 8)
         return;
-       DebugWriteString("\n\rTransmit..");  
+        
+    meas_report[1] = test++;
+    
     for (i = 0; i < credits; i++) {
-       
-        GattCharValueNotification(ucid, 
+       /*DebugWriteString("\n\rTransmit.."); */
+       GattCharValueNotification(ucid, 
               HANDLE_HEART_RATE_MEASUREMENT, 
               (uint16)20, 
               meas_report);  /* heart rate */

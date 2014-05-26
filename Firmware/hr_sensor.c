@@ -175,6 +175,7 @@ static uint8* receivedHRMeasReading(uint8 *p_length);
 
 /* RR value generator */
 static void hrMeasTimerHandler(timer_id tid);
+static void hrMeasTimerHandler2(timer_id tid);
 
 #ifdef ENABLE_DORMANT_MODE_FUNCTIONALITY
 /* This function contains handles the timer expiry for the timer which the 
@@ -415,6 +416,39 @@ static void hrMeasTimerHandler(timer_id tid)
             if(tid == g_hr_data.hr_meas_tid)
             {
                 g_hr_data.hr_meas_tid = TIMER_INVALID;
+                sendHRMeasurement();
+            }
+        }
+        break;
+
+        case app_state_disconnecting:
+        {
+            /* Do nothing in this state as the device has triggered 
+             * disconnect 
+             */
+            g_hr_data.hr_meas_tid = TIMER_INVALID;
+        }
+        break;
+
+        default:
+            /* Control should never come here */
+            ReportPanic(app_panic_invalid_state);
+        break;
+    }
+
+}
+
+static void hrMeasTimerHandler2(timer_id tid)
+{
+    /*Handling signal as per current state */
+    switch(g_hr_data.state)
+    {
+        case app_state_connected:
+        {
+            if(tid == g_hr_data.hr_meas_tid)
+            {
+                g_hr_data.hr_meas_tid = TIMER_INVALID;
+                credits = 8;
                 sendHRMeasurement();
             }
         }
@@ -1768,24 +1802,25 @@ static void handleSignalLsRadioEventInd(void)
         case app_state_connected:
         {
             /* Delete the already running Hr Measurement timer and start a new 
-             * one.
+             * one.*/
              
-            TimerDelete(g_hr_data.hr_meas_tid);*/
-
+            TimerDelete(g_hr_data.hr_meas_tid);
             credits++;
-            writeASCIICodedNumber(credits);
-            DebugWriteString("\n\r");
+            writeASCIICodedNumber(credits); 
+            
+            /*
+                       
+            DebugWriteString("\n\r");*/
+            
             if (credits >= 8) {
-                DebugWriteString("\n\rAll credits restored");
-                writeASCIICodedNumber(credits);
-                SoundBuzzer(buzzer_beep_short);
-                credits = 8;
                 
-
-            }
-                     /*g_hr_data.hr_meas_tid = TimerCreate((HR_MEAS_TIME - (5 * MILLISECOND)- timer_value),
+                DebugWriteString("\n\rAll credits restored");                                
+                credits = 8;
+            }               
+            g_hr_data.hr_meas_tid = TimerCreate((HR_MEAS_TIME - (7 * MILLISECOND)- timer_value),
                                  TRUE, 
-                                 hrMeasTimerHandler);*/
+                                 hrMeasTimerHandler2);  
+                     /**/
             
 
         }
@@ -1844,9 +1879,9 @@ static void sendHRMeasurement(void)
         p_hr_meas_data = receivedHRMeasReading(&hr_meas_len);
 #endif /* !NO_ACTUAL_MEASUREMENT */
     
-        if(hr_meas_len)
+        /*if(hr_meas_len)
         {
-            /* Send the Heart Rate Measurement notification. */
+             Send the Heart Rate Measurement notification. */
             HeartRateSendMeasValue(g_hr_data.st_ucid, 
                                                    hr_meas_len, 
                                                    p_hr_meas_data);
@@ -1856,8 +1891,8 @@ static void sendHRMeasurement(void)
              * measurements to transmit
              */
             ResetIdleTimer();
-#endif /* !NO_ACTUAL_MEASUREMENT */
-        }
+#endif /* !NO_ACTUAL_MEASUREMENT 
+        }*/
 
         /* Start a timer to schedule the next HR Measurement transmission 
          * after timer HR_MEAS_TIME. If the application gets a radio event

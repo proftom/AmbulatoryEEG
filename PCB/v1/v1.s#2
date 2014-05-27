@@ -7905,10 +7905,7 @@ Metric Code Size 5664</description>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
 <part name="R11" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
-<part name="R12" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
-<part name="R13" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
 <part name="VDD4" library="supply1" deviceset="VDD" device=""/>
-<part name="VDD5" library="supply1" deviceset="VDD" device=""/>
 <part name="U$7" library="BATTERY_2996_2" deviceset="BATTERY_2996" device=""/>
 <part name="U$8" library="BATTERY_2996_2" deviceset="BATTERY_2996" device=""/>
 <part name="U$9" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
@@ -8011,10 +8008,7 @@ Metric Code Size 5664</description>
 <instance part="GND14" gate="1" x="81.28" y="63.5"/>
 <instance part="R10" gate="G$1" x="170.18" y="165.1" rot="R270"/>
 <instance part="R11" gate="G$1" x="177.8" y="165.1" rot="R270"/>
-<instance part="R12" gate="G$1" x="170.18" y="99.06" rot="R270"/>
-<instance part="R13" gate="G$1" x="177.8" y="99.06" rot="R270"/>
 <instance part="VDD4" gate="G$1" x="172.72" y="175.26"/>
-<instance part="VDD5" gate="G$1" x="172.72" y="109.22"/>
 <instance part="U$7" gate="G$1" x="-193.04" y="116.84"/>
 <instance part="U$8" gate="G$1" x="-193.04" y="142.24"/>
 <instance part="U$9" gate="G$1" x="162.56" y="68.58" rot="R270"/>
@@ -8062,6 +8056,9 @@ Metric Code Size 5664</description>
 <junction x="160.02" y="157.48"/>
 <pinref part="U$6" gate="G$1" pin="SCL"/>
 <wire x1="160.02" y1="93.98" x2="147.32" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="170.18" y1="157.48" x2="170.18" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="157.48" x2="160.02" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -8081,6 +8078,9 @@ Metric Code Size 5664</description>
 <wire x1="147.32" y1="88.9" x2="162.56" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="88.9" x2="162.56" y2="152.4" width="0.1524" layer="91"/>
 <junction x="162.56" y="152.4"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="177.8" y1="152.4" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="152.4" x2="177.8" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -8443,10 +8443,6 @@ Metric Code Size 5664</description>
 <wire x1="99.06" y1="73.66" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="96.52" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
 <junction x="99.06" y="96.52"/>
-</segment>
-<segment>
-<pinref part="VDD5" gate="G$1" pin="VDD"/>
-<wire x1="172.72" y1="106.68" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="VDD4" gate="G$1" pin="VDD"/>
@@ -8831,24 +8827,6 @@ Metric Code Size 5664</description>
 <wire x1="106.68" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$108" class="0">
-<segment>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="170.18" y1="157.48" x2="170.18" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$110" class="0">
-<segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="152.4" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$113" class="0">
-<segment>
-<pinref part="R13" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="88.9" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$137" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="V2_IN"/>
@@ -8887,6 +8865,13 @@ Metric Code Size 5664</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="AIO[0]"/>
 <pinref part="U$30" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$108" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="170.18" y1="170.18" x2="177.8" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

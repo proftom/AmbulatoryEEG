@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -57,12 +57,13 @@
 <library>
 <packages>
 <package name="BATTERY_2996">
-<smd name="POS@1" x="-17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
-<smd name="POS@2" x="17.4625" y="0" dx="3.175" dy="3.175" layer="1"/>
-<smd name="NEG" x="0" y="0" dx="3.175" dy="3.175" layer="1"/>
-<text x="2.54" y="2.54" size="1.27" layer="21">-</text>
-<text x="-20.32" y="2.54" size="1.27" layer="21">+</text>
-<text x="19.05" y="2.54" size="1.27" layer="21">+</text>
+<smd name="POS@1" x="-7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
+<smd name="POS@2" x="7.4625" y="0" dx="3.18" dy="3.18" layer="1"/>
+<smd name="NEG" x="0" y="0" dx="3.96" dy="3.96" layer="1"/>
+<wire x1="-6" y1="6" x2="-6" y2="-6" width="0.127" layer="21"/>
+<wire x1="-6" y1="-6" x2="6" y2="-6" width="0.127" layer="21"/>
+<wire x1="6" y1="-6" x2="6" y2="6" width="0.127" layer="21"/>
+<wire x1="6" y1="6" x2="-6" y2="6" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>

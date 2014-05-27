@@ -16,16 +16,16 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -112,6 +112,7 @@
 <rectangle x1="22.385" y1="5.46" x2="23.295" y2="5.655" layer="29"/>
 <rectangle x1="11.25" y1="20.25" x2="14.39" y2="20.495" layer="1"/>
 <text x="4.25" y="36.25" size="1.778" layer="16" rot="MR0">V3</text>
+<rectangle x1="11.25" y1="20.21" x2="14.395" y2="23.5" layer="29"/>
 </plain>
 <libraries>
 <library name="ATMEL-AT24C512C-SHD-B">
@@ -3254,10 +3255,10 @@ design rules under a new name.</description>
 <wire x1="5.040378125" y1="21.45961875" x2="5.040378125" y2="21.540378125" width="0.25" layer="1"/>
 <wire x1="14.75" y1="10.5" x2="14.75" y2="11.75" width="1" layer="1"/>
 <wire x1="14.75" y1="10.5" x2="14.75" y2="11.75" width="1" layer="16"/>
-<wire x1="18.665" y1="38.36" x2="18.665" y2="38.365" width="0" layer="19" extent="1-16"/>
-<wire x1="14.75" y1="10.5" x2="14.75" y2="10.5" width="0" layer="19" extent="1-16"/>
 <wire x1="15" y1="12.5" x2="14.75" y2="12.25" width="0.25" layer="1"/>
 <wire x1="14.75" y1="12.25" x2="14.75" y2="11.75" width="0.25" layer="1"/>
+<wire x1="18.665" y1="38.36" x2="18.665" y2="38.365" width="0" layer="19" extent="1-16"/>
+<wire x1="14.75" y1="10.5" x2="14.75" y2="10.5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="VDD_CORE">
 <contactref element="C12" pad="2"/>
@@ -3527,7 +3528,6 @@ design rules under a new name.</description>
 <signal name="N$40">
 <contactref element="U$2" pad="1"/>
 <contactref element="R6" pad="2"/>
-<wire x1="21.788" y1="19.754740625" x2="22.504740625" y2="19.754740625" width="0" layer="19" extent="1-16"/>
 <wire x1="20" y1="20.85" x2="20" y2="18.5" width="0.5" layer="16"/>
 <via x="20" y="18.5" extent="1-16" drill="0.35"/>
 <wire x1="20" y1="18.5" x2="21.17" y2="19.625" width="0.5" layer="1"/>
@@ -3988,8 +3988,8 @@ design rules under a new name.</description>
 <wire x1="23.5" y1="12" x2="23" y2="11.25" width="0.15" layer="1" curve="-282.339087"/>
 </signal>
 <signal name="N$131">
-<wire x1="22.5" y1="11.75" x2="22" y2="11.25" width="0.15" layer="1"/>
-<wire x1="22" y1="11.25" x2="22.5" y2="11.5" width="0.15" layer="1"/>
+<wire x1="22.5" y1="11.75" x2="21.75" y2="10.75" width="0.15" layer="1"/>
+<wire x1="21.75" y1="10.75" x2="22.5" y2="11.5" width="0.15" layer="1"/>
 </signal>
 <signal name="N$132">
 <wire x1="22.75" y1="12" x2="22.75" y2="11.75" width="0.15" layer="1"/>

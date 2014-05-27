@@ -96,7 +96,7 @@
 <device name="" package="BATTERY_2996">
 <connects>
 <connect gate="G$1" pin="NEG" pad="NEG"/>
-<connect gate="G$1" pin="POS" pad="POS@1"/>
+<connect gate="G$1" pin="POS" pad="POS@1 POS@2"/>
 </connects>
 <technologies>
 <technology name=""/>

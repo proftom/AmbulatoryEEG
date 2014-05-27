@@ -7903,12 +7903,6 @@ Metric Code Size 5664</description>
 <part name="C25" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
 <part name="C26" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="0.1u"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="R10" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
-<part name="R11" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
-<part name="R12" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
-<part name="R13" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
-<part name="VDD4" library="supply1" deviceset="VDD" device=""/>
-<part name="VDD5" library="supply1" deviceset="VDD" device=""/>
 <part name="U$7" library="BATTERY_2996_2" deviceset="BATTERY_2996" device=""/>
 <part name="U$8" library="BATTERY_2996_2" deviceset="BATTERY_2996" device=""/>
 <part name="U$9" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
@@ -7934,6 +7928,7 @@ Metric Code Size 5664</description>
 <part name="U$29" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
 <part name="U$30" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
 <part name="U$2" library="MINI_SMT_8_PIN_CONNECTOR" deviceset="8PIN_SMT_CONNECTOR" device=""/>
+<part name="U$31" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8008,12 +8003,6 @@ Metric Code Size 5664</description>
 <instance part="C25" gate="A" x="81.28" y="66.04" rot="R90"/>
 <instance part="C26" gate="A" x="88.9" y="66.04" rot="R90"/>
 <instance part="GND14" gate="1" x="81.28" y="63.5"/>
-<instance part="R10" gate="G$1" x="170.18" y="165.1" rot="R270"/>
-<instance part="R11" gate="G$1" x="177.8" y="165.1" rot="R270"/>
-<instance part="R12" gate="G$1" x="170.18" y="99.06" rot="R270"/>
-<instance part="R13" gate="G$1" x="177.8" y="99.06" rot="R270"/>
-<instance part="VDD4" gate="G$1" x="172.72" y="175.26"/>
-<instance part="VDD5" gate="G$1" x="172.72" y="109.22"/>
 <instance part="U$7" gate="G$1" x="-193.04" y="116.84"/>
 <instance part="U$8" gate="G$1" x="-193.04" y="142.24"/>
 <instance part="U$9" gate="G$1" x="162.56" y="68.58" rot="R270"/>
@@ -8039,6 +8028,7 @@ Metric Code Size 5664</description>
 <instance part="U$29" gate="G$1" x="-63.5" y="12.7" rot="R180"/>
 <instance part="U$30" gate="G$1" x="-55.88" y="12.7" rot="R180"/>
 <instance part="U$2" gate="G$1" x="43.18" y="-48.26"/>
+<instance part="U$31" gate="G$1" x="-109.22" y="58.42" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -8442,14 +8432,6 @@ Metric Code Size 5664</description>
 <wire x1="99.06" y1="96.52" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
 <junction x="99.06" y="96.52"/>
 </segment>
-<segment>
-<pinref part="VDD5" gate="G$1" pin="VDD"/>
-<wire x1="172.72" y1="106.68" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="VDD4" gate="G$1" pin="VDD"/>
-<wire x1="172.72" y1="172.72" x2="172.72" y2="170.18" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$32" class="0">
 <segment>
@@ -8594,6 +8576,9 @@ Metric Code Size 5664</description>
 <wire x1="-96.52" y1="58.42" x2="-101.6" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="WAKE"/>
 <pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="U$31" gate="G$1" pin="P$1"/>
+<wire x1="-101.6" y1="58.42" x2="-104.14" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-101.6" y="58.42"/>
 </segment>
 </net>
 <net name="N$51" class="0">
@@ -8824,24 +8809,6 @@ Metric Code Size 5664</description>
 <pinref part="U$6" gate="G$1" pin="V7_IN"/>
 <pinref part="U$16" gate="G$1" pin="P$1"/>
 <wire x1="106.68" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$108" class="0">
-<segment>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="170.18" y1="157.48" x2="170.18" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$110" class="0">
-<segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="152.4" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$113" class="0">
-<segment>
-<pinref part="R13" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="88.9" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$137" class="0">

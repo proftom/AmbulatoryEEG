@@ -7956,10 +7956,6 @@ Metric Code Size 5664</description>
 <part name="C25" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="1u"/>
 <part name="C26" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="0.1u"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="MISO21" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="MISO22" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="MISO23" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="MISO24" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
 <part name="R11" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
 <part name="R12" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
@@ -7984,6 +7980,10 @@ Metric Code Size 5664</description>
 <part name="U$22" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
 <part name="U$23" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
 <part name="U$24" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
+<part name="U$25" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
+<part name="U$26" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
+<part name="U$27" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
+<part name="U$28" library="TEST_POINT_0.5mm" deviceset="TEST_POINT_0.5MM" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8061,10 +8061,6 @@ Metric Code Size 5664</description>
 <instance part="C25" gate="A" x="81.28" y="66.04" rot="R90"/>
 <instance part="C26" gate="A" x="88.9" y="66.04" rot="R90"/>
 <instance part="GND14" gate="1" x="81.28" y="63.5"/>
-<instance part="MISO21" gate="P" x="7.62" y="-35.56" rot="R270"/>
-<instance part="MISO22" gate="P" x="27.94" y="2.54" rot="R180"/>
-<instance part="MISO23" gate="P" x="27.94" y="7.62" rot="R180"/>
-<instance part="MISO24" gate="P" x="27.94" y="12.7" rot="R180"/>
 <instance part="R10" gate="G$1" x="170.18" y="165.1" rot="R270"/>
 <instance part="R11" gate="G$1" x="177.8" y="165.1" rot="R270"/>
 <instance part="R12" gate="G$1" x="170.18" y="99.06" rot="R270"/>
@@ -8089,6 +8085,10 @@ Metric Code Size 5664</description>
 <instance part="U$22" gate="G$1" x="96.52" y="127" rot="R90"/>
 <instance part="U$23" gate="G$1" x="96.52" y="121.92" rot="R90"/>
 <instance part="U$24" gate="G$1" x="96.52" y="116.84" rot="R90"/>
+<instance part="U$25" gate="G$1" x="30.48" y="12.7" rot="R270"/>
+<instance part="U$26" gate="G$1" x="30.48" y="7.62" rot="R270"/>
+<instance part="U$27" gate="G$1" x="30.48" y="2.54" rot="R270"/>
+<instance part="U$28" gate="G$1" x="7.62" y="-33.02"/>
 </instances>
 <busses>
 </busses>
@@ -8497,9 +8497,9 @@ Metric Code Size 5664</description>
 <wire x1="20.32" y1="-43.18" x2="30.48" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SPI_CSB"/>
 <pinref part="U$1" gate="G$1" pin="PIO[6]/DEBUG_CS#"/>
-<pinref part="MISO22" gate="P" pin="P"/>
 <wire x1="25.4" y1="2.54" x2="20.32" y2="2.54" width="0.1524" layer="91"/>
 <junction x="20.32" y="2.54"/>
+<pinref part="U$27" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -8631,9 +8631,9 @@ Metric Code Size 5664</description>
 <wire x1="2.54" y1="35.56" x2="-22.86" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SPI_CLK"/>
 <pinref part="U$1" gate="G$1" pin="PIO[5]/DEBUG_CLK"/>
-<pinref part="MISO21" gate="P" pin="P"/>
 <wire x1="7.62" y1="-38.1" x2="7.62" y2="-40.64" width="0.1524" layer="91"/>
 <junction x="7.62" y="-40.64"/>
+<pinref part="U$28" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -8646,7 +8646,7 @@ Metric Code Size 5664</description>
 <pinref part="U$1" gate="G$1" pin="PIO[8]/DEBUG_MISO"/>
 <wire x1="25.4" y1="12.7" x2="15.24" y2="12.7" width="0.1524" layer="91"/>
 <junction x="15.24" y="12.7"/>
-<pinref part="MISO24" gate="P" pin="P"/>
+<pinref part="U$25" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$50" class="0">
@@ -8657,9 +8657,9 @@ Metric Code Size 5664</description>
 <wire x1="17.78" y1="-38.1" x2="30.48" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SPI_MOSI"/>
 <pinref part="U$1" gate="G$1" pin="PIO[7]/DEBUG_MOSI"/>
-<pinref part="MISO23" gate="P" pin="P"/>
 <wire x1="25.4" y1="7.62" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
 <junction x="17.78" y="7.62"/>
+<pinref part="U$26" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$43" class="0">

@@ -321,7 +321,7 @@ int i = 0;
     for (i = 0; i < 8; i++) {
        /*DebugWriteString("\n\rTransmit.."); */
        GattCharValueNotification(ucid, 
-              HANDLE_HEART_RATE_MEASUREMENT, 
+              HANDLE_EEG_RATE_MEASUREMENT, 
               (uint16)20, 
               meas_report);   
     }

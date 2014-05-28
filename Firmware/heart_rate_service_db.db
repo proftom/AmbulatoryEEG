@@ -31,8 +31,8 @@ primary_service {
      */
 
     characteristic {
-        uuid : UUID_HEART_RATE_MEASUREMENT,
-        name : "HEART_RATE_MEASUREMENT",
+        uuid : UUID_EEG_RATE_MEASUREMENT,
+        name : "EEG_RATE_MEASUREMENT",
         properties : notify,
         flags : FLAG_IRQ,
         size_value : 0x11,

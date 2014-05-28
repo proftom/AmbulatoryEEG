@@ -31,7 +31,7 @@
 
 #define UUID_EEG_SERVICE                              0x180D
 
-#define UUID_HEART_RATE_MEASUREMENT                   0x2A37
+#define UUID_EEG_RATE_MEASUREMENT                   0x2A37
 
 #define UUID_HEART_RATE_BODY_SENSOR_LOCATION          0x2A38
 

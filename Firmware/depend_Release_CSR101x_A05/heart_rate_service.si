@@ -432,7 +432,7 @@
  320:heart_rate_service.c ****     for (i = 0; i < 8; i++) {
  321:heart_rate_service.c ****        /*DebugWriteString("\n\rTransmit.."); */
  322:heart_rate_service.c ****        GattCharValueNotification(ucid, 
- 323:heart_rate_service.c ****               HANDLE_HEART_RATE_MEASUREMENT, 
+ 323:heart_rate_service.c ****               HANDLE_EEG_RATE_MEASUREMENT, 
  324:heart_rate_service.c ****               (uint16)20, 
  325:heart_rate_service.c ****               meas_report);   
  326:heart_rate_service.c ****     }

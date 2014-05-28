@@ -84,7 +84,7 @@ namespace BluetoothGattHeartRate
                     GattCharacteristicUuids.HeartRateControlPoint)[0];
                  
                 DataWriter writer = new DataWriter();
-                writer.WriteByte(1);
+                writer.WriteByte(2);
 
                 GattCommunicationStatus status = await heartRateControlPointCharacteristic.WriteValueAsync(
                     writer.DetachBuffer());

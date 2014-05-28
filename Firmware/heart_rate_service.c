@@ -420,6 +420,7 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
             if((client_config == gatt_client_config_notification) ||
                (client_config == gatt_client_config_none))
             {
+                            DebugWriteString("\n\rHello!");
                 /* Store the new client configuration */
                 g_hr_serv_data.hr_meas_client_config = client_config;
 
@@ -459,9 +460,13 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
             /* Check if the HR client has reset the expended energy. */
             if(cntl_point_val == hr_control_point_reset_energy)
             {
+                DebugWriteString("\n\rWritingShit");
                 /* Yes, it has. Make a note of it. */
                 g_hr_serv_data.energy_expended = 0;
                 g_hr_serv_data.reset_energy_expended_received = TRUE;
+            }
+            else if (cntl_point_val == 0x2) {
+                DebugWriteString("\n\rSomething else written!");
             }
             else /* Reserved Value */
             {

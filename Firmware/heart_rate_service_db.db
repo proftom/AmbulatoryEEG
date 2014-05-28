@@ -23,7 +23,7 @@
 
 primary_service {
     uuid : UUID_EEG_SERVICE,
-    name : "HEART_RATE_SERVICE",
+    name : "EEG_SERVICE",
 
     /* Heart Rate Measurement characteristic supports IRQ flag, thereby reads 
      * and writes on characteristic configuration descriptor and notifications 
@@ -46,7 +46,7 @@ primary_service {
     characteristic {
         uuid : UUID_EEG_ACQUISITION_RATE,
         name : "EEG_ACQUISITION_RATE",
-        properties : read,
+        properties : [read, write],
         flags : FLAG_IRQ,
         size_value : 0x01,
         value : DEFAULT_ACQUISITION_RATE

@@ -627,8 +627,8 @@
  112      00 F8 
  113 0006 01 10       		.loc 1 511 0
  114                 		ld	AL,@$XAP_AH
- 507:heart_rate_service.c ****     return ((handle >= HANDLE_HEART_RATE_SERVICE) &&
- 508:heart_rate_service.c ****             (handle <= HANDLE_HEART_RATE_SERVICE_END))
+ 507:heart_rate_service.c ****     return ((handle >= HANDLE_EEG_SERVICE) &&
+ 508:heart_rate_service.c ****             (handle <= HANDLE_EEG_SERVICE_END))
  509:heart_rate_service.c ****             ? TRUE : FALSE;
  510:heart_rate_service.c **** }
  115                 	a	0,X

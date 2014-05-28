@@ -505,8 +505,8 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
 
 extern bool HeartRateCheckHandleRange(uint16 handle)
 {
-    return ((handle >= HANDLE_HEART_RATE_SERVICE) &&
-            (handle <= HANDLE_HEART_RATE_SERVICE_END))
+    return ((handle >= HANDLE_EEG_SERVICE) &&
+            (handle <= HANDLE_EEG_SERVICE_END))
             ? TRUE : FALSE;
 }
 

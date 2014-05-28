@@ -82,7 +82,7 @@ primary_service {
 
 primary_service {
     uuid : 0x180D,
-    name : "HEART_RATE_SERVICE",
+    name : "EEG_SERVICE",
 
 
 
@@ -105,7 +105,7 @@ primary_service {
     characteristic {
         uuid : 0x2A38,
         name : "EEG_ACQUISITION_RATE",
-        properties : read,
+        properties : [read, write],
         flags : FLAG_IRQ,
         size_value : 0x01,
         value : 0xFF

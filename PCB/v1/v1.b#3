@@ -123,8 +123,8 @@
 <text x="27.1" y="15.5" size="0.8128" layer="21" rot="R90">CON</text>
 <wire x1="19.9" y1="5.7" x2="19.4" y2="4.9" width="0.15" layer="21" curve="-284.620874"/>
 <wire x1="19.8" y1="5.7" x2="19.46" y2="5.11" width="0.15" layer="21" curve="279.162347"/>
-<wire x1="18.75" y1="5.25" x2="18.2" y2="4.1" width="0.15" layer="21"/>
-<wire x1="18.2" y1="4.1" x2="18.9" y2="5.2" width="0.15" layer="21"/>
+<wire x1="18.815" y1="5.29" x2="18.2" y2="4.1" width="0.15" layer="21"/>
+<wire x1="18.2" y1="4.1" x2="18.95" y2="5.17" width="0.15" layer="21"/>
 <wire x1="19.9" y1="4.2" x2="19.9" y2="3.6" width="0.15" layer="21"/>
 <wire x1="19.9" y1="3.5" x2="19.6" y2="3.2" width="0.15" layer="21"/>
 <wire x1="19.8" y1="3.5" x2="19.5" y2="3.5" width="0.15" layer="21"/>
@@ -154,11 +154,9 @@
 <wire x1="20.8" y1="6.9" x2="21.2" y2="7.3" width="0.1" layer="21" curve="-90"/>
 <wire x1="21.2" y1="7.3" x2="21.4" y2="7.3" width="0.1" layer="21"/>
 <wire x1="21.4" y1="7.3" x2="21.5" y2="7.2" width="0.1" layer="21" curve="-90"/>
-<wire x1="21.7" y1="5.8" x2="21.8" y2="5.7" width="0.1" layer="21" curve="-90"/>
-<wire x1="21.8" y1="5.7" x2="21.8" y2="5.6" width="0.1" layer="21"/>
-<wire x1="21.2" y1="5.8" x2="21.1" y2="5.7" width="0.1" layer="21" curve="90"/>
-<wire x1="21.1" y1="5.7" x2="21.1" y2="5.6" width="0.1" layer="21"/>
-<wire x1="21.5" y1="5.7" x2="21.5" y2="5.6" width="0.1" layer="21"/>
+<wire x1="21.7" y1="5.8" x2="21.76" y2="5.605" width="0.1" layer="21" curve="-90"/>
+<wire x1="21.2" y1="5.8" x2="21.2" y2="5.6" width="0.1" layer="21" curve="90"/>
+<wire x1="21.495" y1="5.74" x2="21.5" y2="5.6" width="0.1" layer="21"/>
 </plain>
 <libraries>
 <library name="ATMEL-AT24C512C-SHD-B">
@@ -3226,7 +3224,7 @@ design rules under a new name.</description>
 <vertex x="0.2" y="0.2"/>
 <vertex x="27.8" y="0.2"/>
 <vertex x="27.9" y="36.85"/>
-<vertex x="-8.1" y="38.45"/>
+<vertex x="0.2" y="36.75"/>
 </polygon>
 <contactref element="C2" pad="2"/>
 <contactref element="C8" pad="2"/>
@@ -4054,27 +4052,14 @@ design rules under a new name.</description>
 <signal name="N$114">
 </signal>
 <signal name="N$130">
-<wire x1="31.55" y1="9.5" x2="31.8" y2="10" width="0.15" layer="1" curve="-296.565051"/>
-<wire x1="31.8" y1="10" x2="31.3" y2="9.25" width="0.15" layer="1" curve="-282.339087"/>
 </signal>
 <signal name="N$131">
-<wire x1="30.8" y1="9.75" x2="30.05" y2="8.75" width="0.15" layer="1"/>
-<wire x1="30.05" y1="8.75" x2="30.8" y2="9.5" width="0.15" layer="1"/>
 </signal>
 <signal name="N$132">
-<wire x1="31.05" y1="10" x2="31.05" y2="9.75" width="0.15" layer="1"/>
 </signal>
 <signal name="N$133">
-<wire x1="31.8" y1="8.5" x2="31.8" y2="8.25" width="0.1" layer="1"/>
-<wire x1="31.8" y1="8.25" x2="31.55" y2="8" width="0.1" layer="1"/>
-<wire x1="31.8" y1="8" x2="31.8" y2="8.25" width="0.1" layer="1"/>
-<wire x1="31.8" y1="8.25" x2="32.05" y2="8" width="0.1" layer="1"/>
 </signal>
 <signal name="N$134">
-<wire x1="32.3" y1="8.5" x2="32.3" y2="8" width="0.1" layer="1"/>
-<wire x1="32.3" y1="8" x2="32.05" y2="7.75" width="0.1" layer="1"/>
-<wire x1="32.3" y1="7.75" x2="32.3" y2="8" width="0.1" layer="1"/>
-<wire x1="32.3" y1="8" x2="32.55" y2="7.75" width="0.1" layer="1"/>
 </signal>
 <signal name="N$139">
 <contactref element="U$5" pad="P$07"/>

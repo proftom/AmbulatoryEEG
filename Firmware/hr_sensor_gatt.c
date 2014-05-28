@@ -581,8 +581,8 @@ extern uint16 GetSupported16BitUUIDServiceList(uint8 *p_service_uuid_ad)
     /* Add 16-bit UUID for supported main service  */
     p_service_uuid_ad[i++] = AD_TYPE_SERVICE_UUID_16BIT_LIST;
 
-    p_service_uuid_ad[i++] = LE8_L(UUID_HEART_RATE_SERVICE);
-    p_service_uuid_ad[i++] = LE8_H(UUID_HEART_RATE_SERVICE);
+    p_service_uuid_ad[i++] = LE8_L(UUID_EEG_SERVICE);
+    p_service_uuid_ad[i++] = LE8_H(UUID_EEG_SERVICE);
 
     return ((uint16)i);
 

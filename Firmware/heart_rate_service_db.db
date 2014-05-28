@@ -22,7 +22,7 @@
  */
 
 primary_service {
-    uuid : UUID_HEART_RATE_SERVICE,
+    uuid : UUID_EEG_SERVICE,
     name : "HEART_RATE_SERVICE",
 
     /* Heart Rate Measurement characteristic supports IRQ flag, thereby reads 

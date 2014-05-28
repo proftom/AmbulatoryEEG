@@ -613,11 +613,11 @@
   27                 		st	AL,@(0,X)
   28 0004 00 26       		.loc 1 584 0
  582:hr_sensor_gatt.c **** 
- 583:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_L(UUID_HEART_RATE_SERVICE);
+ 583:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_L(UUID_EEG_SERVICE);
   29                 	AL,#0x000d
   30 0005 0D 14       		st	AL,@(0x0001,X)
   31 0006 01 26       		.loc 1 585 0
- 584:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_H(UUID_HEART_RATE_SERVICE);
+ 584:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_H(UUID_EEG_SERVICE);
   32                 		AL,#0x0018
   33 0007 18 14       		st	AL,@(0x0002,X)
   34 0008 02 26       		.loc 1 589 0

@@ -30,7 +30,7 @@
                 select the heart rate device from the list, and then observe data coming from your device.
             </TextBlock>
             
-            <Button x:ConnectionId='0' x:Name="RunButton" Grid.Row="1" Content="Run" Margin="0,0,10,0"                        />
+            <Button x:ConnectionId='3' x:Name="RunButton" Grid.Row="1" Content="Run" Margin="0,0,10,0"                        />
 
             <!-- Add Storyboards to the visual states below as necessary for supporting the various layouts for the input section -->
             <VisualStateManager.VisualStateGroups>
@@ -49,7 +49,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <TextBlock Name="statusTextBlock" Style="{StaticResource BasicTextStyle}"/>
-            <ListBox x:ConnectionId='0' Grid.Row="1" x:Name="DevicesListBox" Visibility="Collapsed"                                                   >
+            <ListBox x:ConnectionId='1' Grid.Row="1" x:Name="DevicesListBox" Visibility="Collapsed"                                                   >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Name}"/>
@@ -66,7 +66,7 @@
                         <ColumnDefinition Width="7*"/>
                         <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
-                    <local:ChartControl x:Name="outputDataChart" Width="1024" Height="500" Margin="20" SizeChanged="outputDataChart_SizeChanged"/>
+                    <local:ChartControl x:ConnectionId='2' x:Name="outputDataChart" Width="1024" Height="500" Margin="20"                                          />
                     <ListBox Grid.Column="1" Name="outputListBox" Margin="20" MinWidth="200"/>
                 </Grid>
             </Grid>

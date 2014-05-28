@@ -13,6 +13,7 @@ using SDKTemplate;
 using System;
 using System.Text;
 using Windows.Storage.Streams;
+using System.Threading;
 
 using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.GenericAttributeProfile;
@@ -21,6 +22,13 @@ using Windows.Devices.Enumeration.Pnp;
 
 namespace BluetoothGattHeartRate
 {
+
+    class Test
+    {
+
+
+
+    }
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -103,7 +111,12 @@ namespace BluetoothGattHeartRate
             //Start notifications
             await accData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
 
+            while(true)
+            {
 
+            };
+            
+            
             //var accConfig = service.GetCharacteristics(new Guid("00002A37-0000-1000-8000-00805f9b34fb"))[0];
             ////Write 1 to start accelerometer sensor  
 

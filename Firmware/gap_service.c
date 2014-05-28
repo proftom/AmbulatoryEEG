@@ -58,8 +58,8 @@ static GAP_DATA_T g_gap_data;
 /* Default device name - Added two for storing AD Type and Null ('\0') */ 
 uint8 g_device_name[DEVICE_NAME_MAX_LENGTH + 2] = {
 AD_TYPE_LOCAL_NAME_COMPLETE, 
-'C', 'S', 'R', ' ', 
-'H', 'R', ' ', 'S', 'e', 'n', 's', 'o', 'r', '\0'};
+'E', 'E', 'G', ' ', 
+'S', 'e', 'n', 's', 'o', 'r', '\0'};
 
 /*============================================================================*
  *  Private Definitions

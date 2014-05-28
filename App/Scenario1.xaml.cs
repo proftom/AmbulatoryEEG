@@ -11,6 +11,8 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using SDKTemplate;
 using System;
+using System.Text;
+using Windows.Storage.Streams;
 
 using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.GenericAttributeProfile;
@@ -84,10 +86,29 @@ namespace BluetoothGattHeartRate
             //ds.
             //Guid d = new Guid("BE33641E-CE86-84C4-6B8A-2AF02A83687F");
             //ds.Uuid = "BE33641E-CE86-84C4-6B8A-2AF02A83687F";             
-            var devices = await DeviceInformation.FindAllAsync( //GattDeviceService.GetDeviceSelectorFromUuid(d));
-                GattDeviceService.GetDeviceSelectorFromUuid(GattServiceUuids.HeartRate),
-                new string[] { "System.Devices.ContainerId" });
+            //var devices = await DeviceInformation.FindAllAsync( //GattDeviceService.GetDeviceSelectorFromUuid(d));
+            //    GattDeviceService.GetDeviceSelectorFromUuid(GattServiceUuids.HeartRate),
+            //    new string[] { "System.Devices.ContainerId" });
+            //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(GattServiceUuids.GenericAccess));
+            //Find devices that expose the service (health)
+            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("0000180d-0000-1000-8000-00805f9b34fb")));
+            var service = await GattDeviceService.FromIdAsync(devices[0].Id);
+            //////var characteristic = service.GetCharacteristics(GattCharacteristic.ConvertShortIdToUuid(0x2A00))[0];
+            //////var deviceNameBytes = (await characteristic.ReadValueAsync()).Value;
+            //////var deviceName = Encoding.UTF8.GetString(deviceNameBytes, 0, deviceNameBytes.Length);  
+            //////var x = Windows.Security.Cryptography.CryptographicBuffer.ConvertBinaryToString(Windows.Security.Cryptography.BinaryStringEncoding.Utf8, deviceNameBytes);
+            //////Get  the char (0x2A37)
+            var accData = service.GetCharacteristics(new Guid("00002A37-0000-1000-8000-00805f9b34fb"))[0];
+            accData.ValueChanged += accData_ValueChanged;
+            //Start notifications
+            await accData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
 
+
+            //var accConfig = service.GetCharacteristics(new Guid("00002A37-0000-1000-8000-00805f9b34fb"))[0];
+            ////Write 1 to start accelerometer sensor  
+
+            //await accConfig.WriteValueAsync(Windows.Security.Cryptography.CryptographicBuffer.CreateFromByteArray(new byte[] { 1 }));
+            //Get the accelerometer configuration characteristic  
             DevicesListBox.Items.Clear();
 
             if (devices.Count > 0)
@@ -106,6 +127,15 @@ namespace BluetoothGattHeartRate
             }
             RunButton.IsEnabled = true;
         }
+
+        async void accData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
+        {
+            var data = new byte[args.CharacteristicValue.Length];
+            DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
+            //Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray((await sender.ReadValueAsync()).Value, out values);
+            System.Diagnostics.Debug.WriteLine("Data: {0}", data[1]);
+            //var x = data[0];
+        }  
 
         private async void DevicesListBox_SelectionChanged(object sender, SelectionChangedEventArgs args)
         {

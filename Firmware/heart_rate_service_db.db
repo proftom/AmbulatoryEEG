@@ -1,7 +1,5 @@
 /******************************************************************************
- *  Copyright Cambridge Silicon Radio Limited 2012-2014
- *  Part of CSR uEnergy SDK 2.3.0
- *  Application version 2.3.0.0
+ *  Thomas Morrison 2014
  *
  *  FILE
  *      heart_rate_service_db.db
@@ -17,15 +15,11 @@
 
 #include "heart_rate_service_uuids.h"
 
-/* For service details, refer http://developer.bluetooth.org/gatt/services/
- * Pages/ServiceViewer.aspx?u=org.bluetooth.service.heart_rate.xml
- */
-
 primary_service {
     uuid : UUID_EEG_SERVICE,
     name : "EEG_SERVICE",
 
-    /* Heart Rate Measurement characteristic supports IRQ flag, thereby reads 
+    /* EEG Measurement characteristic supports IRQ flag, thereby reads 
      * and writes on characteristic configuration descriptor and notifications 
      * on characteristic value are handled by application. 
      */
@@ -52,7 +46,7 @@ primary_service {
         value : DEFAULT_ACQUISITION_RATE
     },
 
-    /* Heart Rate Control Point characteristic supports IRQ flag, thereby 
+    /* EEG measurement characteristic supports IRQ flag, thereby 
      * writes on characteristic value are handled by application. 
      */
 

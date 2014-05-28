@@ -295,15 +295,15 @@ namespace BluetoothGattHeartRate
         {
 
             var data = new byte[args.CharacteristicValue.Length];
-            lock (thisLock)
-            {
+            //lock (thisLock)
+            //{
                
                 DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
                //if (h % 5000 == 0)                
                 System.Diagnostics.Debug.WriteLine("{0},{1},{2}", DateTime.UtcNow.ToString("mm:ss.ffffff"), data[1], h);
 
                h++;
-            }
+            //}
             //String.Format("{0},{1},{2}\n", DateTime.UtcNow.ToString("mm:ss.ffffff"), data[1], h++)
             //List<String> test = new List<string>(); test.Add("test");
             //await FileIO.WriteLinesAsync(sf, test);

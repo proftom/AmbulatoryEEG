@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\BluetoothGattHeartRate.exe">
       <PackagePath>BluetoothGattHeartRate.exe</PackagePath>
-      <Modified>2014-05-28T19:44:38.966</Modified>
+      <Modified>2014-05-28T20:55:26.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>

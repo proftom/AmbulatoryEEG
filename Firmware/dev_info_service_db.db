@@ -34,7 +34,7 @@ primary_service {
         properties : read,
         flags : FLAG_IRQ,
         name : "DEVICE_INFO_SERIAL_NUMBER",
-        value : "BLE-HR SENSOR-001"
+        value : "BLE-EEG SENSOR-001"
     },
     
     /* Hardware revision characteristic */
@@ -52,7 +52,7 @@ primary_service {
         properties : read,
         flags : FLAG_IRQ,
         name : "DEVICE_INFO_FIRMWARE_REVISION",
-        value : "CSR uEnergy SDK 2.3.0"
+        value : "EEG Firmware v0.1"
     },
     
     /* Software revision characteristic */
@@ -61,7 +61,7 @@ primary_service {
         properties : read,
         flags : FLAG_IRQ,
         name : "DEVICE_INFO_SOFTWARE_REVISION",
-        value : "Application version 2.3.0.0"
+        value : "Application version 0.1"
     },
     
     /* Manufacturer name characteristic */
@@ -70,7 +70,7 @@ primary_service {
         properties : read,
         flags : FLAG_IRQ,
         name : "DEVICE_INFO_MANUFACTURER_NAME",
-        value : "Cambridge Silicon Radio"
+        value : "Thomas A Morrison"
     },
     
     /* PNP ID characteristic */

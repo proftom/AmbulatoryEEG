@@ -39,8 +39,8 @@
   15:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd501, 0x0000,
   16:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0004: Characteristic Declaration 2a01 */
   17:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0205, 0x0001, 0x2a00,
-  18:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0005: @. */
-  19:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd402, 0x4003,
+  18:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0005: .. */
+  19:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd402, 0x0000,
   20:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0006: Characteristic Declaration 2a04 */
   21:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0207, 0x0004, 0x2a00,
   22:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0007: ......X. */
@@ -60,7 +60,7 @@
   36:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000e: . */
   37:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd401, 0xff00,
   38:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000f: Characteristic Declaration 2a39 */
-  39:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0810, 0x0039, 0x2a00,
+  39:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0a10, 0x0039, 0x2a00,
   40:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0010: . */
   41:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd401, 0x0000,
   42:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0011: Primary Service 180f */
@@ -75,24 +75,24 @@
   51:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0x0a18,
   52:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0016: Characteristic Declaration 2a25 */
   53:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0217, 0x0025, 0x2a00,
-  54:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0017: BLE-HR SENSOR-001 */
-  55:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd411, 0x424c, 0x452d, 0x4852, 0x2053, 0x454e, 0x534f, 0x522d, 0x3030, 0x3100,
+  54:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0017: BLE-EEG SENSOR-001 */
+  55:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd412, 0x424c, 0x452d, 0x4545, 0x4720, 0x5345, 0x4e53, 0x4f52, 0x2d30, 0x3031,
   56:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0018: Characteristic Declaration 2a27 */
   57:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0219, 0x0027, 0x2a00,
   58:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0019: CSR101x A05 */
   59:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd40b, 0x4353, 0x5231, 0x3031, 0x7820, 0x4130, 0x3500,
   60:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001a: Characteristic Declaration 2a26 */
   61:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x021b, 0x0026, 0x2a00,
-  62:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001b: CSR uEnergy SDK 2.3.0 */
-  63:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd415, 0x4353, 0x5220, 0x7545, 0x6e65, 0x7267, 0x7920, 0x5344, 0x4b20, 0x322e, 0x332e, 0x3000,
+  62:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001b: EEG Firmware v0.1 */
+  63:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd411, 0x4545, 0x4720, 0x4669, 0x726d, 0x7761, 0x7265, 0x2076, 0x302e, 0x3100,
   64:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001c: Characteristic Declaration 2a28 */
   65:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x021d, 0x0028, 0x2a00,
-  66:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001d: Application version 2.3.0.0 */
-  67:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd41b, 0x4170, 0x706c, 0x6963, 0x6174, 0x696f, 0x6e20, 0x7665, 0x7273, 0x696f, 0x6e20, 0x322e,
+  66:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001d: Application version 0.1 */
+  67:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd417, 0x4170, 0x706c, 0x6963, 0x6174, 0x696f, 0x6e20, 0x7665, 0x7273, 0x696f, 0x6e20, 0x302e,
   68:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001e: Characteristic Declaration 2a29 */
   69:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x021f, 0x0029, 0x2a00,
-  70:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001f: Cambridge Silicon Radio */
-  71:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd417, 0x4361, 0x6d62, 0x7269, 0x6467, 0x6520, 0x5369, 0x6c69, 0x636f, 0x6e20, 0x5261, 0x6469,
+  70:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 001f: Thomas A Morrison */
+  71:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd411, 0x5468, 0x6f6d, 0x6173, 0x2041, 0x204d, 0x6f72, 0x7269, 0x736f, 0x6e00,
   72:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0020: Characteristic Declaration 2a50 */
   73:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0221, 0x0050, 0x2a00,
   74:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0021: ...L... */
@@ -107,8 +107,8 @@
   23                 		ld	X,@$XAP_AL
   24 0001 00 00 00 19 		.loc 1 81 0
   80:depend_Release_CSR101x_A05/app_gatt_db.c ****     *len = sizeof(gattDatabase);
-  25                 	AL,#0x0097
-  26 0003 01 00 97 14 	.LVL1:
+  25                 	AL,#0x0090
+  26 0003 01 00 90 14 	.LVL1:
   27                 		st	AL,@(0,X)
   28 0005 00 26       		.loc 1 83 0
   81:depend_Release_CSR101x_A05/app_gatt_db.c ****     return gattDatabase;
@@ -123,7 +123,7 @@
   36                 		.global	gattDatabase
   37                 		.section	.data.gattDatabase,"aw",@progbits
   38                 		.type	gattDatabase, @object
-  39                 		.size	gattDatabase, 151
+  39                 		.size	gattDatabase, 144
   40                 	gattDatabase:
   41                 		.word	0x0002
   42 0000 00 02       		.word	0x0018
@@ -138,8 +138,8 @@
   51 0009 02 05       		.word	0x0001
   52 000a 00 01       		.word	0x2a00
   53 000b 2A 00       		.word	0xd402
-  54 000c D4 02       		.word	0x4003
-  55 000d 40 03       		.word	0x3005
+  54 000c D4 02       		.word	0x0000
+  55 000d 00 00       		.word	0x3005
   56 000e 30 05       		.word	0x0207
   57 000f 02 07       		.word	0x0004
   58 0010 00 04       		.word	0x2a00
@@ -174,8 +174,8 @@
   87 002d 2A 00       		.word	0xd401
   88 002e D4 01       		.word	0xff00
   89 002f FF 00       		.word	0x3005
-  90 0030 30 05       		.word	0x0810
-  91 0031 08 10       		.word	0x0039
+  90 0030 30 05       		.word	0x0a10
+  91 0031 0A 10       		.word	0x0039
   92 0032 00 39       		.word	0x2a00
   93 0033 2A 00       		.word	0xd401
   94 0034 D4 01       		.word	0x0000
@@ -194,17 +194,17 @@
  107 0041 30 05       		.word	0x0217
  108 0042 02 17       		.word	0x0025
  109 0043 00 25       		.word	0x2a00
- 110 0044 2A 00       		.word	0xd411
- 111 0045 D4 11       		.word	0x424c
+ 110 0044 2A 00       		.word	0xd412
+ 111 0045 D4 12       		.word	0x424c
  112 0046 42 4C       		.word	0x452d
- 113 0047 45 2D       		.word	0x4852
- 114 0048 48 52       		.word	0x2053
- 115 0049 20 53       		.word	0x454e
- 116 004a 45 4E       		.word	0x534f
- 117 004b 53 4F       		.word	0x522d
- 118 004c 52 2D       		.word	0x3030
- 119 004d 30 30       		.word	0x3100
- 120 004e 31 00       		.word	0x3005
+ 113 0047 45 2D       		.word	0x4545
+ 114 0048 45 45       		.word	0x4720
+ 115 0049 47 20       		.word	0x5345
+ 116 004a 53 45       		.word	0x4e53
+ 117 004b 4E 53       		.word	0x4f52
+ 118 004c 4F 52       		.word	0x2d30
+ 119 004d 2D 30       		.word	0x3031
+ 120 004e 30 31       		.word	0x3005
  121 004f 30 05       		.word	0x0219
  122 0050 02 19       		.word	0x0027
  123 0051 00 27       		.word	0x2a00
@@ -219,449 +219,442 @@
  132 005a 30 05       		.word	0x021b
  133 005b 02 1B       		.word	0x0026
  134 005c 00 26       		.word	0x2a00
- 135 005d 2A 00       		.word	0xd415
- 136 005e D4 15       		.word	0x4353
- 137 005f 43 53       		.word	0x5220
- 138 0060 52 20       		.word	0x7545
- 139 0061 75 45       		.word	0x6e65
- 140 0062 6E 65       		.word	0x7267
- 141 0063 72 67       		.word	0x7920
- 142 0064 79 20       		.word	0x5344
- 143 0065 53 44       		.word	0x4b20
- 144 0066 4B 20       		.word	0x322e
- 145 0067 32 2E       		.word	0x332e
- 146 0068 33 2E       		.word	0x3000
- 147 0069 30 00       		.word	0x3005
- 148 006a 30 05       		.word	0x021d
- 149 006b 02 1D       		.word	0x0028
- 150 006c 00 28       		.word	0x2a00
- 151 006d 2A 00       		.word	0xd41b
- 152 006e D4 1B       		.word	0x4170
- 153 006f 41 70       		.word	0x706c
- 154 0070 70 6C       		.word	0x6963
- 155 0071 69 63       		.word	0x6174
- 156 0072 61 74       		.word	0x696f
- 157 0073 69 6F       		.word	0x6e20
- 158 0074 6E 20       		.word	0x7665
- 159 0075 76 65       		.word	0x7273
- 160 0076 72 73       		.word	0x696f
- 161 0077 69 6F       		.word	0x6e20
- 162 0078 6E 20       		.word	0x322e
- 163 0079 32 2E       		.word	0x332e
- 164 007a 33 2E       		.word	0x302e
- 165 007b 30 2E       		.word	0x3000
- 166 007c 30 00       		.word	0x3005
- 167 007d 30 05       		.word	0x021f
- 168 007e 02 1F       		.word	0x0029
- 169 007f 00 29       		.word	0x2a00
- 170 0080 2A 00       		.word	0xd417
- 171 0081 D4 17       		.word	0x4361
- 172 0082 43 61       		.word	0x6d62
- 173 0083 6D 62       		.word	0x7269
- 174 0084 72 69       		.word	0x6467
- 175 0085 64 67       		.word	0x6520
- 176 0086 65 20       		.word	0x5369
- 177 0087 53 69       		.word	0x6c69
- 178 0088 6C 69       		.word	0x636f
- 179 0089 63 6F       		.word	0x6e20
- 180 008a 6E 20       		.word	0x5261
- 181 008b 52 61       		.word	0x6469
- 182 008c 64 69       		.word	0x6f00
- 183 008d 6F 00       		.word	0x3005
- 184 008e 30 05       		.word	0x0221
- 185 008f 02 21       		.word	0x0050
- 186 0090 00 50       		.word	0x2a00
- 187 0091 2A 00       		.word	0xd407
- 188 0092 D4 07       		.word	0x010a
- 189 0093 01 0A       		.word	0x004c
- 190 0094 00 4C       		.word	0x0100
- 191 0095 01 00       		.word	0x0100
- 192 0096 01 00       		.section	.debug_frame,"",@progbits
- 193                 	.Lframe0:
- 194                 		.4byte	.LECIE0-.LSCIE0
- 195 0000 00 00 00 00 	.LSCIE0:
- 196                 		.4byte	0xffffffff
- 197 0002 FF FF FF FF 		.1byte	0x1
- 198 0004 01          		.ascii "\000"
- 199 0004 00          		.1byte	0x1
- 200 0005 01          		.1byte	0x7f
- 201 0005 7F          		.1byte	0x3
- 202 0006 03          		.1byte	0xc
- 203 0006 0C          		.1byte	0x5
- 204 0007 05          		.1byte	0x0
- 205 0007 00          		.p2align	2
- 206                 	.LECIE0:
- 207                 	.LSFDE0:
- 208                 		.4byte	.LEFDE0-.LASFDE0
- 209 0008 00 00 00 00 	.LASFDE0:
- 210                 		.4byte	.Lframe0
- 211 000a 00 00 00 00 		.4byte	.LFB2
- 212 000c 00 00 00 00 		.4byte	.LFE2-.LFB2
- 213 000e 00 00 00 00 		.1byte	0x4
- 214 0010 41          		.4byte	.LCFI0-.LFB2
- 215                 		.1byte	0xe
- 216 0010 0E          		.1byte	0x1
- 217 0011 01          		.1byte	0x83
- 218 0011 83          		.1byte	0x1
- 219 0012 01          		.p2align	2
- 220 0012 00 00 00    	.LEFDE0:
- 221                 		.text
- 222                 	.Letext0:
- 223                 		.section	.debug_loc,"",@progbits
- 224                 	.Ldebug_loc0:
- 225                 	.LLST0:
- 226                 		.4byte	.LFB2
- 227 0000 00 00 00 00 		.4byte	.LCFI0
- 228 0002 00 00 00 00 		.2byte	0x1
- 229 0004 00 01       		.1byte	0x55
- 230 0005 55          		.4byte	.LCFI0
- 231 0005 00 00 00 00 		.4byte	.LFE2
- 232 0007 00 00 00 00 		.2byte	0x2
- 233 0009 00 02       		.1byte	0x75
- 234 000a 75          		.1byte	0x1
- 235 000b 01          		.4byte	0x0
- 236 000b 00 00 00 00 		.4byte	0x0
- 237 000d 00 00 00 00 	.LLST1:
- 238                 		.4byte	.LVL0
- 239 000f 00 00 00 00 		.4byte	.LVL1
- 240 0011 00 00 00 00 		.2byte	0x1
- 241 0013 00 01       		.1byte	0x51
- 242 0014 51          		.4byte	.LVL1
- 243 0015 00 00 00 00 		.4byte	.LVL2
- 244 0017 00 00 00 00 		.2byte	0x1
- 245 0019 00 01       		.1byte	0x53
- 246 001a 53          		.4byte	0x0
- 247 001a 00 00 00 00 		.4byte	0x0
- 248 001c 00 00 00 00 		.file 2 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h"
- 249                 		.section	.debug_info
- 250                 		.4byte	0xba
- 251 0000 00 00 00 BA 		.2byte	0x2
- 252 0002 00 02       		.4byte	.Ldebug_abbrev0
- 253 0003 00 00 00 00 		.1byte	0x4
- 254 0005 04          		.1byte	0x1
- 255 0005 01          		.4byte	.LASF7
- 256 0006 00 00 00 00 		.1byte	0x1
- 257 0008 01          		.4byte	.LASF8
- 258 0008 00 00 00 00 		.4byte	.LASF9
- 259 000a 00 00 00 00 		.4byte	0x0
- 260 000c 00 00 00 00 		.4byte	0x0
- 261 000e 00 00 00 00 		.4byte	.Ldebug_ranges0+0x0
- 262 0010 00 00 00 00 		.4byte	.Ldebug_line0
- 263 0012 00 00 00 00 		.1byte	0x2
- 264 0014 02          		.1byte	0x2
- 265 0015 02          		.1byte	0x8
- 266 0015 08          		.4byte	.LASF0
- 267 0016 00 00 00 00 		.1byte	0x3
- 268 0018 03          		.4byte	.LASF10
- 269 0018 00 00 00 00 		.1byte	0x2
- 270 001a 02          		.1byte	0x1f
- 271 001b 1F          		.4byte	0x3b
- 272 001b 00 00 00 3B 		.1byte	0x2
- 273 001d 02          		.1byte	0x2
- 274 001e 02          		.1byte	0x7
- 275 001e 07          		.4byte	.LASF1
- 276 001f 00 00 00 00 		.1byte	0x2
- 277 0021 02          		.1byte	0x4
- 278 0021 04          		.1byte	0x7
- 279 0022 07          		.4byte	.LASF2
- 280 0022 00 00 00 00 		.1byte	0x2
- 281 0024 02          		.1byte	0x2
- 282 0025 02          		.1byte	0x6
- 283 0025 06          		.4byte	.LASF3
- 284 0026 00 00 00 00 		.1byte	0x2
- 285 0028 02          		.1byte	0x2
- 286 0028 02          		.1byte	0x5
- 287 0029 05          		.4byte	.LASF4
- 288 0029 00 00 00 00 		.1byte	0x2
- 289 002b 02          		.1byte	0x4
- 290 002c 04          		.1byte	0x5
- 291 002c 05          		.4byte	.LASF5
- 292 002d 00 00 00 00 		.1byte	0x2
- 293 002f 02          		.1byte	0x2
- 294 002f 02          		.1byte	0x7
- 295 0030 07          		.4byte	.LASF6
- 296 0030 00 00 00 00 		.1byte	0x4
- 297 0032 04          		.1byte	0x2
- 298 0033 02          		.1byte	0x7
- 299 0033 07          		.1byte	0x5
- 300 0034 05          		.1byte	0x2
- 301 0034 02          		.4byte	0x30
- 302 0035 00 00 00 30 		.1byte	0x6
- 303 0037 06          		.1byte	0x1
- 304 0037 01          		.4byte	.LASF11
- 305 0038 00 00 00 00 		.1byte	0x1
- 306 003a 01          		.1byte	0x50
- 307 003a 50          		.1byte	0x1
- 308 003b 01          		.4byte	0x68
- 309 003b 00 00 00 68 		.4byte	.LFB2
- 310 003d 00 00 00 00 		.4byte	.LFE2
- 311 003f 00 00 00 00 		.4byte	.LLST0
- 312 0041 00 00 00 00 		.4byte	0x9b
- 313 0043 00 00 00 9B 		.1byte	0x7
- 314 0045 07          		.ascii "len\000"
- 315 0046 6C 65 6E 00 		.1byte	0x1
- 316 0048 01          		.1byte	0x4f
- 317 0048 4F          		.4byte	0x68
- 318 0049 00 00 00 68 		.4byte	.LLST1
- 319 004b 00 00 00 00 		.1byte	0x0
- 320 004d 00          		.1byte	0x8
- 321 004d 08          		.4byte	0x30
- 322 004e 00 00 00 30 		.4byte	0xab
- 323 0050 00 00 00 AB 		.1byte	0x9
- 324 0052 09          		.4byte	0x65
- 325 0052 00 00 00 65 		.1byte	0x96
- 326 0054 96          		.1byte	0x0
- 327 0055 00          		.1byte	0xa
- 328 0055 0A          		.4byte	.LASF12
- 329 0056 00 00 00 00 		.1byte	0x1
- 330 0058 01          		.1byte	0xa
- 331 0058 0A          		.4byte	0x9b
- 332 0059 00 00 00 9B 		.1byte	0x1
- 333 005b 01          		.1byte	0x5
- 334 005b 05          		.1byte	0x3
- 335 005c 03          		.4byte	gattDatabase
- 336 005c 00 00 00 00 		.1byte	0x0
- 337 005e 00          		.section	.debug_abbrev
- 338                 		.1byte	0x1
- 339 0000 01          		.1byte	0x11
- 340 0000 11          		.1byte	0x1
- 341 0001 01          		.1byte	0x25
- 342 0001 25          		.1byte	0xe
- 343 0002 0E          		.1byte	0x13
- 344 0002 13          		.1byte	0xb
- 345 0003 0B          		.1byte	0x3
- 346 0003 03          		.1byte	0xe
- 347 0004 0E          		.1byte	0x1b
- 348 0004 1B          		.1byte	0xe
- 349 0005 0E          		.1byte	0x11
- 350 0005 11          		.1byte	0x1
- 351 0006 01          		.1byte	0x52
- 352 0006 52          		.1byte	0x1
- 353 0007 01          		.1byte	0x55
- 354 0007 55          		.1byte	0x6
- 355 0008 06          		.1byte	0x10
- 356 0008 10          		.1byte	0x6
- 357 0009 06          		.1byte	0x0
- 358 0009 00          		.1byte	0x0
- 359 000a 00          		.1byte	0x2
- 360 000a 02          		.1byte	0x24
- 361 000b 24          		.1byte	0x0
- 362 000b 00          		.1byte	0xb
- 363 000c 0B          		.1byte	0xb
- 364 000c 0B          		.1byte	0x3e
- 365 000d 3E          		.1byte	0xb
- 366 000d 0B          		.1byte	0x3
- 367 000e 03          		.1byte	0xe
- 368 000e 0E          		.1byte	0x0
- 369 000f 00          		.1byte	0x0
- 370 000f 00          		.1byte	0x3
- 371 0010 03          		.1byte	0x16
- 372 0010 16          		.1byte	0x0
- 373 0011 00          		.1byte	0x3
- 374 0011 03          		.1byte	0xe
- 375 0012 0E          		.1byte	0x3a
- 376 0012 3A          		.1byte	0xb
- 377 0013 0B          		.1byte	0x3b
- 378 0013 3B          		.1byte	0xb
- 379 0014 0B          		.1byte	0x49
- 380 0014 49          		.1byte	0x13
- 381 0015 13          		.1byte	0x0
- 382 0015 00          		.1byte	0x0
- 383 0016 00          		.1byte	0x4
- 384 0016 04          		.1byte	0x24
- 385 0017 24          		.1byte	0x0
- 386 0017 00          		.1byte	0xb
- 387 0018 0B          		.1byte	0xb
- 388 0018 0B          		.1byte	0x3e
- 389 0019 3E          		.1byte	0xb
- 390 0019 0B          		.1byte	0x0
- 391 001a 00          		.1byte	0x0
- 392 001a 00          		.1byte	0x5
- 393 001b 05          		.1byte	0xf
- 394 001b 0F          		.1byte	0x0
- 395 001c 00          		.1byte	0xb
- 396 001c 0B          		.1byte	0xb
- 397 001d 0B          		.1byte	0x49
- 398 001d 49          		.1byte	0x13
- 399 001e 13          		.1byte	0x0
- 400 001e 00          		.1byte	0x0
- 401 001f 00          		.1byte	0x6
- 402 001f 06          		.1byte	0x2e
- 403 0020 2E          		.1byte	0x1
- 404 0020 01          		.1byte	0x3f
- 405 0021 3F          		.1byte	0xc
- 406 0021 0C          		.1byte	0x3
- 407 0022 03          		.1byte	0xe
- 408 0022 0E          		.1byte	0x3a
- 409 0023 3A          		.1byte	0xb
- 410 0023 0B          		.1byte	0x3b
- 411 0024 3B          		.1byte	0xb
- 412 0024 0B          		.1byte	0x27
- 413 0025 27          		.1byte	0xc
- 414 0025 0C          		.1byte	0x49
- 415 0026 49          		.1byte	0x13
- 416 0026 13          		.1byte	0x11
- 417 0027 11          		.1byte	0x1
- 418 0027 01          		.1byte	0x12
- 419 0028 12          		.1byte	0x1
- 420 0028 01          		.1byte	0x40
- 421 0029 40          		.1byte	0x6
- 422 0029 06          		.1byte	0x1
- 423 002a 01          		.1byte	0x13
- 424 002a 13          		.1byte	0x0
- 425 002b 00          		.1byte	0x0
- 426 002b 00          		.1byte	0x7
- 427 002c 07          		.1byte	0x5
- 428 002c 05          		.1byte	0x0
- 429 002d 00          		.1byte	0x3
- 430 002d 03          		.1byte	0x8
- 431 002e 08          		.1byte	0x3a
- 432 002e 3A          		.1byte	0xb
- 433 002f 0B          		.1byte	0x3b
- 434 002f 3B          		.1byte	0xb
- 435 0030 0B          		.1byte	0x49
- 436 0030 49          		.1byte	0x13
- 437 0031 13          		.1byte	0x2
- 438 0031 02          		.1byte	0x6
- 439 0032 06          		.1byte	0x0
- 440 0032 00          		.1byte	0x0
- 441 0033 00          		.1byte	0x8
- 442 0033 08          		.1byte	0x1
- 443 0034 01          		.1byte	0x1
- 444 0034 01          		.1byte	0x49
- 445 0035 49          		.1byte	0x13
- 446 0035 13          		.1byte	0x1
- 447 0036 01          		.1byte	0x13
- 448 0036 13          		.1byte	0x0
- 449 0037 00          		.1byte	0x0
- 450 0037 00          		.1byte	0x9
- 451 0038 09          		.1byte	0x21
- 452 0038 21          		.1byte	0x0
- 453 0039 00          		.1byte	0x49
- 454 0039 49          		.1byte	0x13
- 455 003a 13          		.1byte	0x2f
- 456 003a 2F          		.1byte	0xb
- 457 003b 0B          		.1byte	0x0
- 458 003b 00          		.1byte	0x0
- 459 003c 00          		.1byte	0xa
- 460 003c 0A          		.1byte	0x34
- 461 003d 34          		.1byte	0x0
- 462 003d 00          		.1byte	0x3
- 463 003e 03          		.1byte	0xe
- 464 003e 0E          		.1byte	0x3a
- 465 003f 3A          		.1byte	0xb
- 466 003f 0B          		.1byte	0x3b
- 467 0040 3B          		.1byte	0xb
- 468 0040 0B          		.1byte	0x49
- 469 0041 49          		.1byte	0x13
- 470 0041 13          		.1byte	0x3f
- 471 0042 3F          		.1byte	0xc
- 472 0042 0C          		.1byte	0x2
- 473 0043 02          		.1byte	0xa
- 474 0043 0A          		.1byte	0x0
- 475 0044 00          		.1byte	0x0
- 476 0044 00          		.1byte	0x0
- 477 0045 00          		.section	.debug_pubnames,"",@progbits
- 478                 		.4byte	0x33
- 479 0000 00 00 00 33 		.2byte	0x2
- 480 0002 00 02       		.4byte	.Ldebug_info0
- 481 0003 00 00 00 00 		.4byte	0xbe
- 482 0005 00 00 00 BE 		.4byte	0x6e
- 483 0007 00 00 00 6E 		.ascii "GattGetDatabase\000"
- 484 0009 47 61 74 74 		.4byte	0xab
- 484      47 65 74 44 
- 484      61 74 61 62 
- 484      61 73 65 00 
- 485 0011 00 00 00 AB 		.ascii "gattDatabase\000"
- 486 0013 67 61 74 74 		.4byte	0x0
- 486      44 61 74 61 
- 486      62 61 73 65 
- 486      00 
- 487 0019 00 00 00 00 		.section	.debug_aranges,"",@progbits
- 488                 		.4byte	0x1c
- 489 0000 00 00 00 1C 		.2byte	0x2
- 490 0002 00 02       		.4byte	.Ldebug_info0
- 491 0003 00 00 00 00 		.1byte	0x4
- 492 0005 04          		.1byte	0x0
- 493 0005 00          		.2byte	0x0
- 494 0006 00 00       		.2byte	0x0
- 495 0007 00 00       		.4byte	.LFB2
- 496 0008 00 00 00 00 		.4byte	.LFE2-.LFB2
- 497 000a 00 00 00 00 		.4byte	0x0
- 498 000c 00 00 00 00 		.4byte	0x0
- 499 000e 00 00 00 00 		.section	.debug_ranges,"",@progbits
- 500                 	.Ldebug_ranges0:
- 501                 		.4byte	.Ltext0
- 502 0000 00 00 00 00 		.4byte	.Letext0
- 503 0002 00 00 00 00 		.4byte	.LFB2
- 504 0004 00 00 00 00 		.4byte	.LFE2
- 505 0006 00 00 00 00 		.4byte	0x0
- 506 0008 00 00 00 00 		.4byte	0x0
- 507 000a 00 00 00 00 		.section	.debug_str,"MS",@progbits,1
- 508                 	.LASF12:
- 509                 		.ascii "gattDatabase\000"
- 510 0000 67 61 74 74 	.LASF6:
- 510      44 61 74 61 
- 510      62 61 73 65 
- 510      00 
- 511                 		.ascii "unsigned int\000"
- 512 0006 75 6E 73 69 	.LASF2:
- 512      67 6E 65 64 
- 512      20 69 6E 74 
- 512      00 
- 513                 		.ascii "long unsigned int\000"
- 514 000d 6C 6F 6E 67 	.LASF3:
- 514      20 75 6E 73 
- 514      69 67 6E 65 
- 514      64 20 69 6E 
- 514      74 00 
- 515                 		.ascii "signed char\000"
- 516 0016 73 69 67 6E 	.LASF1:
- 516      65 64 20 63 
- 516      68 61 72 00 
- 517                 		.ascii "short unsigned int\000"
- 518 001c 73 68 6F 72 	.LASF4:
- 518      74 20 75 6E 
- 518      73 69 67 6E 
- 518      65 64 20 69 
- 518      6E 74 00 
- 519                 		.ascii "short int\000"
- 520 0025 73 68 6F 72 	.LASF8:
- 520      74 20 69 6E 
- 520      74 00 
- 521                 		.ascii "depend_Release_CSR101x_A05/app_gatt_db.c\000"
- 522 002a 64 65 70 65 	.LASF0:
- 522      6E 64 5F 52 
- 522      65 6C 65 61 
- 522      73 65 5F 43 
- 522      53 52 31 30 
- 523                 		.ascii "unsigned char\000"
- 524 003f 75 6E 73 69 	.LASF5:
- 524      67 6E 65 64 
- 524      20 63 68 61 
- 524      72 00 
- 525                 		.ascii "long int\000"
- 526 0046 6C 6F 6E 67 	.LASF7:
- 526      20 69 6E 74 
- 526      00 
- 527                 		.ascii "GNU C 4.3.4 CSR version 22 for xap [1468380]\000"
- 528 004a 47 4E 55 20 	.LASF11:
- 528      43 20 34 2E 
- 528      33 2E 34 20 
- 528      43 53 52 20 
- 528      76 65 72 73 
- 529                 		.ascii "GattGetDatabase\000"
- 530 0061 47 61 74 74 	.LASF10:
- 530      47 65 74 44 
- 530      61 74 61 62 
- 530      61 73 65 00 
- 531                 		.ascii "uint16\000"
- 532 0069 75 69 6E 74 	.LASF9:
- 532      31 36 00 
- 533                 		.ascii "C:\\Repository\\AmbulatoryEEG\\Firmware\000"
- 534 006c 43 3A 5C 52 		.ident	"GCC: (GNU) 4.3.4 CSR version 22 for xap [1468380]"
- 534      65 70 6F 73 
- 534      69 74 6F 72 
- 534      79 5C 41 6D 
- 534      62 75 6C 61 
- 535                 	...
+ 135 005d 2A 00       		.word	0xd411
+ 136 005e D4 11       		.word	0x4545
+ 137 005f 45 45       		.word	0x4720
+ 138 0060 47 20       		.word	0x4669
+ 139 0061 46 69       		.word	0x726d
+ 140 0062 72 6D       		.word	0x7761
+ 141 0063 77 61       		.word	0x7265
+ 142 0064 72 65       		.word	0x2076
+ 143 0065 20 76       		.word	0x302e
+ 144 0066 30 2E       		.word	0x3100
+ 145 0067 31 00       		.word	0x3005
+ 146 0068 30 05       		.word	0x021d
+ 147 0069 02 1D       		.word	0x0028
+ 148 006a 00 28       		.word	0x2a00
+ 149 006b 2A 00       		.word	0xd417
+ 150 006c D4 17       		.word	0x4170
+ 151 006d 41 70       		.word	0x706c
+ 152 006e 70 6C       		.word	0x6963
+ 153 006f 69 63       		.word	0x6174
+ 154 0070 61 74       		.word	0x696f
+ 155 0071 69 6F       		.word	0x6e20
+ 156 0072 6E 20       		.word	0x7665
+ 157 0073 76 65       		.word	0x7273
+ 158 0074 72 73       		.word	0x696f
+ 159 0075 69 6F       		.word	0x6e20
+ 160 0076 6E 20       		.word	0x302e
+ 161 0077 30 2E       		.word	0x3100
+ 162 0078 31 00       		.word	0x3005
+ 163 0079 30 05       		.word	0x021f
+ 164 007a 02 1F       		.word	0x0029
+ 165 007b 00 29       		.word	0x2a00
+ 166 007c 2A 00       		.word	0xd411
+ 167 007d D4 11       		.word	0x5468
+ 168 007e 54 68       		.word	0x6f6d
+ 169 007f 6F 6D       		.word	0x6173
+ 170 0080 61 73       		.word	0x2041
+ 171 0081 20 41       		.word	0x204d
+ 172 0082 20 4D       		.word	0x6f72
+ 173 0083 6F 72       		.word	0x7269
+ 174 0084 72 69       		.word	0x736f
+ 175 0085 73 6F       		.word	0x6e00
+ 176 0086 6E 00       		.word	0x3005
+ 177 0087 30 05       		.word	0x0221
+ 178 0088 02 21       		.word	0x0050
+ 179 0089 00 50       		.word	0x2a00
+ 180 008a 2A 00       		.word	0xd407
+ 181 008b D4 07       		.word	0x010a
+ 182 008c 01 0A       		.word	0x004c
+ 183 008d 00 4C       		.word	0x0100
+ 184 008e 01 00       		.word	0x0100
+ 185 008f 01 00       		.section	.debug_frame,"",@progbits
+ 186                 	.Lframe0:
+ 187                 		.4byte	.LECIE0-.LSCIE0
+ 188 0000 00 00 00 00 	.LSCIE0:
+ 189                 		.4byte	0xffffffff
+ 190 0002 FF FF FF FF 		.1byte	0x1
+ 191 0004 01          		.ascii "\000"
+ 192 0004 00          		.1byte	0x1
+ 193 0005 01          		.1byte	0x7f
+ 194 0005 7F          		.1byte	0x3
+ 195 0006 03          		.1byte	0xc
+ 196 0006 0C          		.1byte	0x5
+ 197 0007 05          		.1byte	0x0
+ 198 0007 00          		.p2align	2
+ 199                 	.LECIE0:
+ 200                 	.LSFDE0:
+ 201                 		.4byte	.LEFDE0-.LASFDE0
+ 202 0008 00 00 00 00 	.LASFDE0:
+ 203                 		.4byte	.Lframe0
+ 204 000a 00 00 00 00 		.4byte	.LFB2
+ 205 000c 00 00 00 00 		.4byte	.LFE2-.LFB2
+ 206 000e 00 00 00 00 		.1byte	0x4
+ 207 0010 41          		.4byte	.LCFI0-.LFB2
+ 208                 		.1byte	0xe
+ 209 0010 0E          		.1byte	0x1
+ 210 0011 01          		.1byte	0x83
+ 211 0011 83          		.1byte	0x1
+ 212 0012 01          		.p2align	2
+ 213 0012 00 00 00    	.LEFDE0:
+ 214                 		.text
+ 215                 	.Letext0:
+ 216                 		.section	.debug_loc,"",@progbits
+ 217                 	.Ldebug_loc0:
+ 218                 	.LLST0:
+ 219                 		.4byte	.LFB2
+ 220 0000 00 00 00 00 		.4byte	.LCFI0
+ 221 0002 00 00 00 00 		.2byte	0x1
+ 222 0004 00 01       		.1byte	0x55
+ 223 0005 55          		.4byte	.LCFI0
+ 224 0005 00 00 00 00 		.4byte	.LFE2
+ 225 0007 00 00 00 00 		.2byte	0x2
+ 226 0009 00 02       		.1byte	0x75
+ 227 000a 75          		.1byte	0x1
+ 228 000b 01          		.4byte	0x0
+ 229 000b 00 00 00 00 		.4byte	0x0
+ 230 000d 00 00 00 00 	.LLST1:
+ 231                 		.4byte	.LVL0
+ 232 000f 00 00 00 00 		.4byte	.LVL1
+ 233 0011 00 00 00 00 		.2byte	0x1
+ 234 0013 00 01       		.1byte	0x51
+ 235 0014 51          		.4byte	.LVL1
+ 236 0015 00 00 00 00 		.4byte	.LVL2
+ 237 0017 00 00 00 00 		.2byte	0x1
+ 238 0019 00 01       		.1byte	0x53
+ 239 001a 53          		.4byte	0x0
+ 240 001a 00 00 00 00 		.4byte	0x0
+ 241 001c 00 00 00 00 		.file 2 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h"
+ 242                 		.section	.debug_info
+ 243                 		.4byte	0xba
+ 244 0000 00 00 00 BA 		.2byte	0x2
+ 245 0002 00 02       		.4byte	.Ldebug_abbrev0
+ 246 0003 00 00 00 00 		.1byte	0x4
+ 247 0005 04          		.1byte	0x1
+ 248 0005 01          		.4byte	.LASF7
+ 249 0006 00 00 00 00 		.1byte	0x1
+ 250 0008 01          		.4byte	.LASF8
+ 251 0008 00 00 00 00 		.4byte	.LASF9
+ 252 000a 00 00 00 00 		.4byte	0x0
+ 253 000c 00 00 00 00 		.4byte	0x0
+ 254 000e 00 00 00 00 		.4byte	.Ldebug_ranges0+0x0
+ 255 0010 00 00 00 00 		.4byte	.Ldebug_line0
+ 256 0012 00 00 00 00 		.1byte	0x2
+ 257 0014 02          		.1byte	0x2
+ 258 0015 02          		.1byte	0x8
+ 259 0015 08          		.4byte	.LASF0
+ 260 0016 00 00 00 00 		.1byte	0x3
+ 261 0018 03          		.4byte	.LASF10
+ 262 0018 00 00 00 00 		.1byte	0x2
+ 263 001a 02          		.1byte	0x1f
+ 264 001b 1F          		.4byte	0x3b
+ 265 001b 00 00 00 3B 		.1byte	0x2
+ 266 001d 02          		.1byte	0x2
+ 267 001e 02          		.1byte	0x7
+ 268 001e 07          		.4byte	.LASF1
+ 269 001f 00 00 00 00 		.1byte	0x2
+ 270 0021 02          		.1byte	0x4
+ 271 0021 04          		.1byte	0x7
+ 272 0022 07          		.4byte	.LASF2
+ 273 0022 00 00 00 00 		.1byte	0x2
+ 274 0024 02          		.1byte	0x2
+ 275 0025 02          		.1byte	0x6
+ 276 0025 06          		.4byte	.LASF3
+ 277 0026 00 00 00 00 		.1byte	0x2
+ 278 0028 02          		.1byte	0x2
+ 279 0028 02          		.1byte	0x5
+ 280 0029 05          		.4byte	.LASF4
+ 281 0029 00 00 00 00 		.1byte	0x2
+ 282 002b 02          		.1byte	0x4
+ 283 002c 04          		.1byte	0x5
+ 284 002c 05          		.4byte	.LASF5
+ 285 002d 00 00 00 00 		.1byte	0x2
+ 286 002f 02          		.1byte	0x2
+ 287 002f 02          		.1byte	0x7
+ 288 0030 07          		.4byte	.LASF6
+ 289 0030 00 00 00 00 		.1byte	0x4
+ 290 0032 04          		.1byte	0x2
+ 291 0033 02          		.1byte	0x7
+ 292 0033 07          		.1byte	0x5
+ 293 0034 05          		.1byte	0x2
+ 294 0034 02          		.4byte	0x30
+ 295 0035 00 00 00 30 		.1byte	0x6
+ 296 0037 06          		.1byte	0x1
+ 297 0037 01          		.4byte	.LASF11
+ 298 0038 00 00 00 00 		.1byte	0x1
+ 299 003a 01          		.1byte	0x50
+ 300 003a 50          		.1byte	0x1
+ 301 003b 01          		.4byte	0x68
+ 302 003b 00 00 00 68 		.4byte	.LFB2
+ 303 003d 00 00 00 00 		.4byte	.LFE2
+ 304 003f 00 00 00 00 		.4byte	.LLST0
+ 305 0041 00 00 00 00 		.4byte	0x9b
+ 306 0043 00 00 00 9B 		.1byte	0x7
+ 307 0045 07          		.ascii "len\000"
+ 308 0046 6C 65 6E 00 		.1byte	0x1
+ 309 0048 01          		.1byte	0x4f
+ 310 0048 4F          		.4byte	0x68
+ 311 0049 00 00 00 68 		.4byte	.LLST1
+ 312 004b 00 00 00 00 		.1byte	0x0
+ 313 004d 00          		.1byte	0x8
+ 314 004d 08          		.4byte	0x30
+ 315 004e 00 00 00 30 		.4byte	0xab
+ 316 0050 00 00 00 AB 		.1byte	0x9
+ 317 0052 09          		.4byte	0x65
+ 318 0052 00 00 00 65 		.1byte	0x8f
+ 319 0054 8F          		.1byte	0x0
+ 320 0055 00          		.1byte	0xa
+ 321 0055 0A          		.4byte	.LASF12
+ 322 0056 00 00 00 00 		.1byte	0x1
+ 323 0058 01          		.1byte	0xa
+ 324 0058 0A          		.4byte	0x9b
+ 325 0059 00 00 00 9B 		.1byte	0x1
+ 326 005b 01          		.1byte	0x5
+ 327 005b 05          		.1byte	0x3
+ 328 005c 03          		.4byte	gattDatabase
+ 329 005c 00 00 00 00 		.1byte	0x0
+ 330 005e 00          		.section	.debug_abbrev
+ 331                 		.1byte	0x1
+ 332 0000 01          		.1byte	0x11
+ 333 0000 11          		.1byte	0x1
+ 334 0001 01          		.1byte	0x25
+ 335 0001 25          		.1byte	0xe
+ 336 0002 0E          		.1byte	0x13
+ 337 0002 13          		.1byte	0xb
+ 338 0003 0B          		.1byte	0x3
+ 339 0003 03          		.1byte	0xe
+ 340 0004 0E          		.1byte	0x1b
+ 341 0004 1B          		.1byte	0xe
+ 342 0005 0E          		.1byte	0x11
+ 343 0005 11          		.1byte	0x1
+ 344 0006 01          		.1byte	0x52
+ 345 0006 52          		.1byte	0x1
+ 346 0007 01          		.1byte	0x55
+ 347 0007 55          		.1byte	0x6
+ 348 0008 06          		.1byte	0x10
+ 349 0008 10          		.1byte	0x6
+ 350 0009 06          		.1byte	0x0
+ 351 0009 00          		.1byte	0x0
+ 352 000a 00          		.1byte	0x2
+ 353 000a 02          		.1byte	0x24
+ 354 000b 24          		.1byte	0x0
+ 355 000b 00          		.1byte	0xb
+ 356 000c 0B          		.1byte	0xb
+ 357 000c 0B          		.1byte	0x3e
+ 358 000d 3E          		.1byte	0xb
+ 359 000d 0B          		.1byte	0x3
+ 360 000e 03          		.1byte	0xe
+ 361 000e 0E          		.1byte	0x0
+ 362 000f 00          		.1byte	0x0
+ 363 000f 00          		.1byte	0x3
+ 364 0010 03          		.1byte	0x16
+ 365 0010 16          		.1byte	0x0
+ 366 0011 00          		.1byte	0x3
+ 367 0011 03          		.1byte	0xe
+ 368 0012 0E          		.1byte	0x3a
+ 369 0012 3A          		.1byte	0xb
+ 370 0013 0B          		.1byte	0x3b
+ 371 0013 3B          		.1byte	0xb
+ 372 0014 0B          		.1byte	0x49
+ 373 0014 49          		.1byte	0x13
+ 374 0015 13          		.1byte	0x0
+ 375 0015 00          		.1byte	0x0
+ 376 0016 00          		.1byte	0x4
+ 377 0016 04          		.1byte	0x24
+ 378 0017 24          		.1byte	0x0
+ 379 0017 00          		.1byte	0xb
+ 380 0018 0B          		.1byte	0xb
+ 381 0018 0B          		.1byte	0x3e
+ 382 0019 3E          		.1byte	0xb
+ 383 0019 0B          		.1byte	0x0
+ 384 001a 00          		.1byte	0x0
+ 385 001a 00          		.1byte	0x5
+ 386 001b 05          		.1byte	0xf
+ 387 001b 0F          		.1byte	0x0
+ 388 001c 00          		.1byte	0xb
+ 389 001c 0B          		.1byte	0xb
+ 390 001d 0B          		.1byte	0x49
+ 391 001d 49          		.1byte	0x13
+ 392 001e 13          		.1byte	0x0
+ 393 001e 00          		.1byte	0x0
+ 394 001f 00          		.1byte	0x6
+ 395 001f 06          		.1byte	0x2e
+ 396 0020 2E          		.1byte	0x1
+ 397 0020 01          		.1byte	0x3f
+ 398 0021 3F          		.1byte	0xc
+ 399 0021 0C          		.1byte	0x3
+ 400 0022 03          		.1byte	0xe
+ 401 0022 0E          		.1byte	0x3a
+ 402 0023 3A          		.1byte	0xb
+ 403 0023 0B          		.1byte	0x3b
+ 404 0024 3B          		.1byte	0xb
+ 405 0024 0B          		.1byte	0x27
+ 406 0025 27          		.1byte	0xc
+ 407 0025 0C          		.1byte	0x49
+ 408 0026 49          		.1byte	0x13
+ 409 0026 13          		.1byte	0x11
+ 410 0027 11          		.1byte	0x1
+ 411 0027 01          		.1byte	0x12
+ 412 0028 12          		.1byte	0x1
+ 413 0028 01          		.1byte	0x40
+ 414 0029 40          		.1byte	0x6
+ 415 0029 06          		.1byte	0x1
+ 416 002a 01          		.1byte	0x13
+ 417 002a 13          		.1byte	0x0
+ 418 002b 00          		.1byte	0x0
+ 419 002b 00          		.1byte	0x7
+ 420 002c 07          		.1byte	0x5
+ 421 002c 05          		.1byte	0x0
+ 422 002d 00          		.1byte	0x3
+ 423 002d 03          		.1byte	0x8
+ 424 002e 08          		.1byte	0x3a
+ 425 002e 3A          		.1byte	0xb
+ 426 002f 0B          		.1byte	0x3b
+ 427 002f 3B          		.1byte	0xb
+ 428 0030 0B          		.1byte	0x49
+ 429 0030 49          		.1byte	0x13
+ 430 0031 13          		.1byte	0x2
+ 431 0031 02          		.1byte	0x6
+ 432 0032 06          		.1byte	0x0
+ 433 0032 00          		.1byte	0x0
+ 434 0033 00          		.1byte	0x8
+ 435 0033 08          		.1byte	0x1
+ 436 0034 01          		.1byte	0x1
+ 437 0034 01          		.1byte	0x49
+ 438 0035 49          		.1byte	0x13
+ 439 0035 13          		.1byte	0x1
+ 440 0036 01          		.1byte	0x13
+ 441 0036 13          		.1byte	0x0
+ 442 0037 00          		.1byte	0x0
+ 443 0037 00          		.1byte	0x9
+ 444 0038 09          		.1byte	0x21
+ 445 0038 21          		.1byte	0x0
+ 446 0039 00          		.1byte	0x49
+ 447 0039 49          		.1byte	0x13
+ 448 003a 13          		.1byte	0x2f
+ 449 003a 2F          		.1byte	0xb
+ 450 003b 0B          		.1byte	0x0
+ 451 003b 00          		.1byte	0x0
+ 452 003c 00          		.1byte	0xa
+ 453 003c 0A          		.1byte	0x34
+ 454 003d 34          		.1byte	0x0
+ 455 003d 00          		.1byte	0x3
+ 456 003e 03          		.1byte	0xe
+ 457 003e 0E          		.1byte	0x3a
+ 458 003f 3A          		.1byte	0xb
+ 459 003f 0B          		.1byte	0x3b
+ 460 0040 3B          		.1byte	0xb
+ 461 0040 0B          		.1byte	0x49
+ 462 0041 49          		.1byte	0x13
+ 463 0041 13          		.1byte	0x3f
+ 464 0042 3F          		.1byte	0xc
+ 465 0042 0C          		.1byte	0x2
+ 466 0043 02          		.1byte	0xa
+ 467 0043 0A          		.1byte	0x0
+ 468 0044 00          		.1byte	0x0
+ 469 0044 00          		.1byte	0x0
+ 470 0045 00          		.section	.debug_pubnames,"",@progbits
+ 471                 		.4byte	0x33
+ 472 0000 00 00 00 33 		.2byte	0x2
+ 473 0002 00 02       		.4byte	.Ldebug_info0
+ 474 0003 00 00 00 00 		.4byte	0xbe
+ 475 0005 00 00 00 BE 		.4byte	0x6e
+ 476 0007 00 00 00 6E 		.ascii "GattGetDatabase\000"
+ 477 0009 47 61 74 74 		.4byte	0xab
+ 477      47 65 74 44 
+ 477      61 74 61 62 
+ 477      61 73 65 00 
+ 478 0011 00 00 00 AB 		.ascii "gattDatabase\000"
+ 479 0013 67 61 74 74 		.4byte	0x0
+ 479      44 61 74 61 
+ 479      62 61 73 65 
+ 479      00 
+ 480 0019 00 00 00 00 		.section	.debug_aranges,"",@progbits
+ 481                 		.4byte	0x1c
+ 482 0000 00 00 00 1C 		.2byte	0x2
+ 483 0002 00 02       		.4byte	.Ldebug_info0
+ 484 0003 00 00 00 00 		.1byte	0x4
+ 485 0005 04          		.1byte	0x0
+ 486 0005 00          		.2byte	0x0
+ 487 0006 00 00       		.2byte	0x0
+ 488 0007 00 00       		.4byte	.LFB2
+ 489 0008 00 00 00 00 		.4byte	.LFE2-.LFB2
+ 490 000a 00 00 00 00 		.4byte	0x0
+ 491 000c 00 00 00 00 		.4byte	0x0
+ 492 000e 00 00 00 00 		.section	.debug_ranges,"",@progbits
+ 493                 	.Ldebug_ranges0:
+ 494                 		.4byte	.Ltext0
+ 495 0000 00 00 00 00 		.4byte	.Letext0
+ 496 0002 00 00 00 00 		.4byte	.LFB2
+ 497 0004 00 00 00 00 		.4byte	.LFE2
+ 498 0006 00 00 00 00 		.4byte	0x0
+ 499 0008 00 00 00 00 		.4byte	0x0
+ 500 000a 00 00 00 00 		.section	.debug_str,"MS",@progbits,1
+ 501                 	.LASF12:
+ 502                 		.ascii "gattDatabase\000"
+ 503 0000 67 61 74 74 	.LASF6:
+ 503      44 61 74 61 
+ 503      62 61 73 65 
+ 503      00 
+ 504                 		.ascii "unsigned int\000"
+ 505 0006 75 6E 73 69 	.LASF2:
+ 505      67 6E 65 64 
+ 505      20 69 6E 74 
+ 505      00 
+ 506                 		.ascii "long unsigned int\000"
+ 507 000d 6C 6F 6E 67 	.LASF3:
+ 507      20 75 6E 73 
+ 507      69 67 6E 65 
+ 507      64 20 69 6E 
+ 507      74 00 
+ 508                 		.ascii "signed char\000"
+ 509 0016 73 69 67 6E 	.LASF1:
+ 509      65 64 20 63 
+ 509      68 61 72 00 
+ 510                 		.ascii "short unsigned int\000"
+ 511 001c 73 68 6F 72 	.LASF4:
+ 511      74 20 75 6E 
+ 511      73 69 67 6E 
+ 511      65 64 20 69 
+ 511      6E 74 00 
+ 512                 		.ascii "short int\000"
+ 513 0025 73 68 6F 72 	.LASF8:
+ 513      74 20 69 6E 
+ 513      74 00 
+ 514                 		.ascii "depend_Release_CSR101x_A05/app_gatt_db.c\000"
+ 515 002a 64 65 70 65 	.LASF0:
+ 515      6E 64 5F 52 
+ 515      65 6C 65 61 
+ 515      73 65 5F 43 
+ 515      53 52 31 30 
+ 516                 		.ascii "unsigned char\000"
+ 517 003f 75 6E 73 69 	.LASF5:
+ 517      67 6E 65 64 
+ 517      20 63 68 61 
+ 517      72 00 
+ 518                 		.ascii "long int\000"
+ 519 0046 6C 6F 6E 67 	.LASF7:
+ 519      20 69 6E 74 
+ 519      00 
+ 520                 		.ascii "GNU C 4.3.4 CSR version 22 for xap [1468380]\000"
+ 521 004a 47 4E 55 20 	.LASF11:
+ 521      43 20 34 2E 
+ 521      33 2E 34 20 
+ 521      43 53 52 20 
+ 521      76 65 72 73 
+ 522                 		.ascii "GattGetDatabase\000"
+ 523 0061 47 61 74 74 	.LASF10:
+ 523      47 65 74 44 
+ 523      61 74 61 62 
+ 523      61 73 65 00 
+ 524                 		.ascii "uint16\000"
+ 525 0069 75 69 6E 74 	.LASF9:
+ 525      31 36 00 
+ 526                 		.ascii "C:\\Repository\\AmbulatoryEEG\\Firmware\000"
+ 527 006c 43 3A 5C 52 		.ident	"GCC: (GNU) 4.3.4 CSR version 22 for xap [1468380]"
+ 527      65 70 6F 73 
+ 527      69 74 6F 72 
+ 527      79 5C 41 6D 
+ 527      62 75 6C 61 
+ 528                 	...

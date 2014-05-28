@@ -12,8 +12,8 @@
  *      to produce ATT flat data base.
  *
  *****************************************************************************/
-#ifndef __HEART_RATE_SERVICE_DB__
-#define __HEART_RATE_SERVICE_DB__
+#ifndef __EEG_SERVICE_DB__
+#define __EEG_SERVICE_DB__
 
 #include "heart_rate_service_uuids.h"
 
@@ -59,10 +59,10 @@ primary_service {
     characteristic {
         uuid : UUID_EEG_CHANNELS,
         name : "EEG_CHANNELS",
-        properties : write,
+        properties : [write, read],
         flags : FLAG_IRQ,
         size_value : 0x01,
         value : 0x00
     }
 },
-#endif /* __HEART_RATE_SERVICE_DB__ */
+#endif /* __EEG_SERVICE_DB__ */

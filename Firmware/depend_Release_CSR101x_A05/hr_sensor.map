@@ -792,28 +792,28 @@ LOAD C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\rom_img.elf
                 0x00003a9a                DATA_BSS_APP_END = .
                 0x00000108                BSS_APP_SIZE = (DATA_BSS_APP_END - DATA_BSS_APP_START)
 
-.data           0x00003a9a       0xf3
+.data           0x00003a9a       0xec
                 0x00003a9a                DATA_DATA_START = .
  *(.data)
  *(.data.*)
  .data.gattDatabase
-                0x00003a9a       0x97 depend_Release_CSR101x_A05\app_gatt_db.o
+                0x00003a9a       0x90 depend_Release_CSR101x_A05\app_gatt_db.o
                 0x00003a9a                gattDatabase
  .data.g_device_name
-                0x00003b31       0x16 depend_Release_CSR101x_A05\gap_service.o
-                0x00003b31                g_device_name
+                0x00003b2a       0x16 depend_Release_CSR101x_A05\gap_service.o
+                0x00003b2a                g_device_name
  .data.meas_report
-                0x00003b47       0x14 depend_Release_CSR101x_A05\heart_rate_service.o
+                0x00003b40       0x14 depend_Release_CSR101x_A05\heart_rate_service.o
  .data.pending_pdu_acks
-                0x00003b5b        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george_ll.o)
-                0x00003b5b                ___libgatt_lib_db_4611
+                0x00003b54        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george_ll.o)
+                0x00003b54                ___libgatt_lib_db_4611
  .data.tgap_con_param_update
-                0x00003b5c        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_timer.o)
-                0x00003b5c                ___libgatt_lib_db_4656
+                0x00003b55        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_timer.o)
+                0x00003b55                ___libgatt_lib_db_4656
  .data.patch_table_data
-                0x00003b5d       0x30 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(sw_patch_ram.o)
-                0x00003b5d                ___libgatt_lib_db_4542
-                0x00003b8d                DATA_DATA_END = .
+                0x00003b56       0x30 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(sw_patch_ram.o)
+                0x00003b56                ___libgatt_lib_db_4542
+                0x00003b86                DATA_DATA_END = .
                 0x0000ef80                . = DATA_PERSIST_START
 
 PERSIST_MEM

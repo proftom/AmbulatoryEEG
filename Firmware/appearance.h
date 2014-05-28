@@ -38,7 +38,7 @@
 #define APPEARANCE_TAG_VALUE                    0x0200
 
 /* Generic Heart Rate Sensor appearance value */
-#define APPEARANCE_HR_SENSOR_VALUE              0x0340
+#define APPEARANCE_HR_SENSOR_VALUE              0x0000
 
 /* Thermometer appearance value */
 #define APPEARANCE_THERMOMETER_VALUE            0x0300

@@ -31,25 +31,25 @@ primary_service {
      */
 
     characteristic {
-        uuid : UUID_EEG_RATE_MEASUREMENT,
-        name : "EEG_RATE_MEASUREMENT",
+        uuid : UUID_EEG_MEASUREMENT,
+        name : "EEG_MEASUREMENT",
         properties : notify,
         flags : FLAG_IRQ,
         size_value : 0x11,
 
         client_config {
             flags : FLAG_IRQ,
-            name : "HEART_RATE_MEASUREMENT_C_CFG"
+            name : "EEG_MEASUREMENT_C_CFG"
         }
     },
 
     characteristic {
-        uuid : UUID_HEART_RATE_BODY_SENSOR_LOCATION,
-        name : "BODY_SENSOR_LOCATION",
+        uuid : UUID_EEG_ACQUISITION_RATE,
+        name : "EEG_ACQUISITION_RATE",
         properties : read,
         flags : FLAG_IRQ,
         size_value : 0x01,
-        value : CURRENT_BODY_SENSOR_LOCATION_VALUE
+        value : DEFAULT_ACQUISITION_RATE
     },
 
     /* Heart Rate Control Point characteristic supports IRQ flag, thereby 
@@ -57,8 +57,8 @@ primary_service {
      */
 
     characteristic {
-        uuid : UUID_HEART_RATE_CONTROL_POINT,
-        name : "HEART_RATE_CONTROL_POINT",
+        uuid : UUID_EEG_CHANNELS,
+        name : "EEG_CHANNELS",
         properties : write,
         flags : FLAG_IRQ,
         size_value : 0x01,

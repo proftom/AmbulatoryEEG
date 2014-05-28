@@ -31,11 +31,13 @@
 
 #define UUID_EEG_SERVICE                              0x180D
 
-#define UUID_EEG_RATE_MEASUREMENT                   0x2A37
+#define UUID_EEG_MEASUREMENT                     0x2A37
 
-#define UUID_HEART_RATE_BODY_SENSOR_LOCATION          0x2A38
+#define UUID_EEG_ACQUISITION_RATE          0x2A38
 
-#define UUID_HEART_RATE_CONTROL_POINT                 0x2A39
+#define UUID_EEG_CHANNELS                 0x2A39
+
+#define DEFAULT_ACQUISITION_RATE 			0xFF
 
 /* Heart Rate Sensor Location characteristic values */
 
@@ -58,7 +60,7 @@
 /* A user should change the following macro expansion to change the body 
  * location of HR sensor.
  */
-#define CURRENT_BODY_SENSOR_LOCATION_VALUE            BODY_SENSOR_LOCATION_CHEST
+#define CURRENT_EEG_ACQUISITION_RATE_VALUE            BODY_SENSOR_LOCATION_CHEST
 
 
 #endif /* __HEART_RATE_SERVICE_UUID_H__ */

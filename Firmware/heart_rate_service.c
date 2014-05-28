@@ -321,7 +321,7 @@ int i = 0;
     for (i = 0; i < 8; i++) {
        /*DebugWriteString("\n\rTransmit.."); */
        GattCharValueNotification(ucid, 
-              HANDLE_EEG_RATE_MEASUREMENT, 
+              HANDLE_EEG_MEASUREMENT, 
               (uint16)20, 
               meas_report);   
     }
@@ -357,7 +357,7 @@ extern void HeartRateHandleAccessRead(GATT_ACCESS_IND_T *p_ind)
         /* Client configuration of the Heart Rate Measurement Characteristic is 
          * being read.
          */
-        case HANDLE_HEART_RATE_MEASUREMENT_C_CFG:
+        case HANDLE_EEG_MEASUREMENT_C_CFG:
         {
             p_val = value;
 
@@ -408,7 +408,7 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
         /* Heart Rate measurement characteristic client configuration is being 
          * written 
          */
-        case HANDLE_HEART_RATE_MEASUREMENT_C_CFG:
+        case HANDLE_EEG_MEASUREMENT_C_CFG:
         {
             client_config = BufReadUint16(&p_value);
 
@@ -451,8 +451,8 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
             break;
         }
 
-        /* Heart Rate Control point is being written */
-        case HANDLE_HEART_RATE_CONTROL_POINT:
+        /* EEG channels Control point is being written */
+        case HANDLE_EEG_CHANNELS:
         {
             /* Extract the written value */
             uint8 cntl_point_val = BufReadUint8(&p_value);

@@ -432,7 +432,7 @@
  320:heart_rate_service.c ****     for (i = 0; i < 8; i++) {
  321:heart_rate_service.c ****        /*DebugWriteString("\n\rTransmit.."); */
  322:heart_rate_service.c ****        GattCharValueNotification(ucid, 
- 323:heart_rate_service.c ****               HANDLE_EEG_RATE_MEASUREMENT, 
+ 323:heart_rate_service.c ****               HANDLE_EEG_MEASUREMENT, 
  324:heart_rate_service.c ****               (uint16)20, 
  325:heart_rate_service.c ****               meas_report);   
  326:heart_rate_service.c ****     }
@@ -468,7 +468,7 @@
  356:heart_rate_service.c ****         /* Client configuration of the Heart Rate Measurement Characteristic is 
  357:heart_rate_service.c ****          * being read.
  358:heart_rate_service.c ****          */
- 359:heart_rate_service.c ****         case HANDLE_HEART_RATE_MEASUREMENT_C_CFG:
+ 359:heart_rate_service.c ****         case HANDLE_EEG_MEASUREMENT_C_CFG:
  360:heart_rate_service.c ****         {
  361:heart_rate_service.c ****             p_val = value;
  362:heart_rate_service.c **** 
@@ -519,7 +519,7 @@
  407:heart_rate_service.c ****         /* Heart Rate measurement characteristic client configuration is being 
  408:heart_rate_service.c ****          * written 
  409:heart_rate_service.c ****          */
- 410:heart_rate_service.c ****         case HANDLE_HEART_RATE_MEASUREMENT_C_CFG:
+ 410:heart_rate_service.c ****         case HANDLE_EEG_MEASUREMENT_C_CFG:
  411:heart_rate_service.c ****         {
  412:heart_rate_service.c ****             client_config = BufReadUint16(&p_value);
  413:heart_rate_service.c **** 
@@ -562,8 +562,8 @@
  450:heart_rate_service.c ****             break;
  451:heart_rate_service.c ****         }
  452:heart_rate_service.c **** 
- 453:heart_rate_service.c ****         /* Heart Rate Control point is being written */
- 454:heart_rate_service.c ****         case HANDLE_HEART_RATE_CONTROL_POINT:
+ 453:heart_rate_service.c ****         /* EEG channels Control point is being written */
+ 454:heart_rate_service.c ****         case HANDLE_EEG_CHANNELS:
  455:heart_rate_service.c ****         {
  456:heart_rate_service.c ****             /* Extract the written value */
  457:heart_rate_service.c ****             uint8 cntl_point_val = BufReadUint8(&p_value);

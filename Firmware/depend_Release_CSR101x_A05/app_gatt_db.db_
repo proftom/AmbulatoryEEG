@@ -91,24 +91,24 @@ primary_service {
 
     characteristic {
         uuid : 0x2A37,
-        name : "EEG_RATE_MEASUREMENT",
+        name : "EEG_MEASUREMENT",
         properties : notify,
         flags : FLAG_IRQ,
         size_value : 0x11,
 
         client_config {
             flags : FLAG_IRQ,
-            name : "HEART_RATE_MEASUREMENT_C_CFG"
+            name : "EEG_MEASUREMENT_C_CFG"
         }
     },
 
     characteristic {
         uuid : 0x2A38,
-        name : "BODY_SENSOR_LOCATION",
+        name : "EEG_ACQUISITION_RATE",
         properties : read,
         flags : FLAG_IRQ,
         size_value : 0x01,
-        value : 0x01
+        value : 0xFF
     },
 
 
@@ -117,7 +117,7 @@ primary_service {
 
     characteristic {
         uuid : 0x2A39,
-        name : "HEART_RATE_CONTROL_POINT",
+        name : "EEG_CHANNELS",
         properties : write,
         flags : FLAG_IRQ,
         size_value : 0x01,

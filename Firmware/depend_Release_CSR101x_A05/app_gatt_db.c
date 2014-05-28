@@ -35,7 +35,7 @@ uint16 gattDatabase[] = {
     /* 000d: Characteristic Declaration 2a38 */
     0x3005, 0x020e, 0x0038, 0x2a00,
     /* 000e: . */
-    0xd401, 0x0100,
+    0xd401, 0xff00,
     /* 000f: Characteristic Declaration 2a39 */
     0x3005, 0x0810, 0x0039, 0x2a00,
     /* 0010: . */

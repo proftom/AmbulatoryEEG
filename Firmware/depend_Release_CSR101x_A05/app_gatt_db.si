@@ -58,7 +58,7 @@
   34:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000d: Characteristic Declaration 2a38 */
   35:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x020e, 0x0038, 0x2a00,
   36:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000e: . */
-  37:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd401, 0x0100,
+  37:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd401, 0xff00,
   38:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000f: Characteristic Declaration 2a39 */
   39:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0810, 0x0039, 0x2a00,
   40:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0010: . */
@@ -172,8 +172,8 @@
   85 002b 02 0E       		.word	0x0038
   86 002c 00 38       		.word	0x2a00
   87 002d 2A 00       		.word	0xd401
-  88 002e D4 01       		.word	0x0100
-  89 002f 01 00       		.word	0x3005
+  88 002e D4 01       		.word	0xff00
+  89 002f FF 00       		.word	0x3005
   90 0030 30 05       		.word	0x0810
   91 0031 08 10       		.word	0x0039
   92 0032 00 39       		.word	0x2a00

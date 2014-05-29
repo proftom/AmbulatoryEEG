@@ -35,7 +35,7 @@
 #include "app_gatt.h"
 #include "appearance.h"
 #include "gap_service.h"
-#include "heart_rate_service.h"
+#include "eeg_service.h"
 #include "battery_service.h"
 #include "heart_rate_service_uuids.h"
 #include "battery_uuids.h"

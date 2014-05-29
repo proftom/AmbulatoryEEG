@@ -1,4 +1,4 @@
-depend_Release_CSR101x_A05/hr_sensor.o: hr_sensor.c \
+depend_Release_CSR101x_A05/eeg_sensor.o: eeg_sensor.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/main.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/macros.h \

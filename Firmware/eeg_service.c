@@ -24,7 +24,7 @@
  *============================================================================*/
 
 #include "app_gatt.h"
-#include "heart_rate_service.h"
+#include "eeg_service.h"
 #include "app_gatt_db.h"
 #include "nvm_access.h"
 #include "hr_sensor_hw.h"

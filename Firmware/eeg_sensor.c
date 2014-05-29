@@ -34,7 +34,7 @@
  *============================================================================*/
 
 #include "app_gatt.h"
-#include "heart_rate_service.h"
+#include "eeg_service.h"
 #include "gap_service.h"
 #include "battery_service.h"
 #include "hr_sensor.h"

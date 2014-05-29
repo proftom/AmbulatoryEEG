@@ -3,10 +3,10 @@
   <extension name="c" />
   <file path="battery_service.c" />
   <file path="gap_service.c" />
-  <file path="heart_rate_service.c" />
-  <file path="hr_sensor.c" />
-  <file path="hr_sensor_gatt.c" />
-  <file path="hr_sensor_hw.c" />
+  <file path="eeg_service.c" />
+  <file path="eeg_sensor.c" />
+  <file path="eeg_sensor_gatt.c" />
+  <file path="eeg_sensor_hw.c" />
   <file path="nvm_access.c" />
   <file path="dev_info_service.c" />
  </folder>
@@ -21,7 +21,7 @@
   <file path="gap_service.h" />
   <file path="gap_uuids.h" />
   <file path="gatt_service_uuids.h" />
-  <file path="heart_rate_service.h" />
+  <file path="eeg_service.h" />
   <file path="heart_rate_service_uuids.h" />
   <file path="hr_sensor.h" />
   <file path="hr_sensor_gatt.h" />

@@ -4,7 +4,7 @@
  *  Application version 2.3.0.0
  *
  *  FILE
- *      heart_rate_service.h
+ *      eeg_service.h
  *
  *  DESCRIPTION
  *      Header definitions for heart rate service

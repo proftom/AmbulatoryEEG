@@ -26,6 +26,9 @@ using Windows.Storage.Streams;
 
 using Windows.UI.Popups;
 
+using System.Net;
+
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace Electroencephalograph
@@ -179,12 +182,20 @@ namespace Electroencephalograph
             sliderTimer.Tick += async (snd,evn) =>
                 {
                     sliderTimer.Stop();
-                    await eegService.Instance.SetChannelMapAsync( (ushort) (0x0014));
+                    
+                    await eegService.Instance.SetChannelMapAsync((ushort) (acqRate.Value*10));
 
                 };
 
             sliderTimer.Start();
             
+        }
+
+        public static ushort SwapUInt16(ushort v)
+        {
+
+            return (ushort)(((v & 0xff) << 8) | ((v >> 8) & 0xff));
+
         }
 
 

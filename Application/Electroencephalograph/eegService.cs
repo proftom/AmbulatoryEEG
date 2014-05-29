@@ -51,9 +51,20 @@ namespace Electroencephalograph
         {
             var acqusitionCharacteristic = service.GetCharacteristics(new Guid("00000EE3-0000-1000-8000-00805f9b34fb"))[0];
             DataWriter writer = new DataWriter();
-            writer.WriteInt16((Int16) map);
+            //Endianess of reciever data inverted
+            writer.WriteInt16((Int16) SwapUInt16(map));
             var status = await acqusitionCharacteristic.WriteValueAsync(writer.DetachBuffer());
             
+        }
+
+        public async Task SetAcquisitionRateAsync(UInt16 rate)
+        {
+            var acqusitionCharacteristic = service.GetCharacteristics(new Guid("00000EE2-0000-1000-8000-00805f9b34fb"))[0];
+            DataWriter writer = new DataWriter();
+            //Endianess of reciever data inverted
+            writer.WriteInt16((Int16) SwapUInt16(rate));
+            var status = await acqusitionCharacteristic.WriteValueAsync(writer.DetachBuffer());
+
         }
 
         /// <summary>
@@ -80,6 +91,14 @@ namespace Electroencephalograph
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
             System.Diagnostics.Debug.WriteLine(data[1]);
         }
+
+        public ushort SwapUInt16(ushort v)
+        {
+
+            return (ushort)(((v & 0xff) << 8) | ((v >> 8) & 0xff));
+
+        }
+
 
     }
 

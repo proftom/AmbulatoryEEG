@@ -24,8 +24,8 @@ uint16 gattDatabase[] = {
     0xd408, 0x0800, 0x0800, 0x0000, 0x5802,
     /* 0008: Primary Service 1801 */
     0x0002, 0x0118,
-    /* 0009: Primary Service 180d */
-    0x0002, 0x0d18,
+    /* 0009: Primary Service 480d */
+    0x0002, 0x0d48,
     /* 000a: Characteristic Declaration 2a37 */
     0x3005, 0x100b, 0x0037, 0x2a00,
     /* 000b: ................. */

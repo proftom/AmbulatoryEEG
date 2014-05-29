@@ -618,8 +618,8 @@
   30 0005 0D 14       		st	AL,@(0x0001,X)
   31 0006 01 26       		.loc 1 585 0
  584:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_H(UUID_EEG_SERVICE);
-  32                 		AL,#0x0018
-  33 0007 18 14       		st	AL,@(0x0002,X)
+  32                 		AL,#0x0048
+  33 0007 48 14       		st	AL,@(0x0002,X)
   34 0008 02 26       		.loc 1 589 0
  585:hr_sensor_gatt.c **** 
  586:hr_sensor_gatt.c ****     return ((uint16)i);

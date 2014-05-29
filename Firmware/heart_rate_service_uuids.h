@@ -29,7 +29,7 @@
 
 /* UUIDs for Heart Rate Service and Characteristics*/
 
-#define UUID_EEG_SERVICE                              0x180D
+#define UUID_EEG_SERVICE                              0x480D
 
 #define UUID_EEG_MEASUREMENT                     0x2A37
 

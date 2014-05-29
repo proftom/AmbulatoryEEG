@@ -99,7 +99,7 @@ namespace BluetoothGattHeartRate
             //    new string[] { "System.Devices.ContainerId" });
             //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(GattServiceUuids.GenericAccess));
             //Find devices that expose the service (health)
-            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("0000180d-0000-1000-8000-00805f9b34fb")));
+            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("0000480d-0000-1000-8000-00805f9b34fb")));
             var service = await GattDeviceService.FromIdAsync(devices[0].Id);
             //////var characteristic = service.GetCharacteristics(GattCharacteristic.ConvertShortIdToUuid(0x2A00))[0];
             //////var deviceNameBytes = (await characteristic.ReadValueAsync()).Value;

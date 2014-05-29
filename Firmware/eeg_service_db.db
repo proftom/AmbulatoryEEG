@@ -1,0 +1,62 @@
+/******************************************************************************
+ *  Thomas Morrison 2014
+ *
+ *  FILE
+ *      eeg_service_db.db
+ *
+ *  DESCRIPTION
+ *      This file defines the EEG service in JSON format. This file is 
+ *      included in the main application data base file which is used 
+ *      to produce ATT flat data base.
+ *
+ *****************************************************************************/
+#ifndef __EEG_SERVICE_DB__
+#define __EEG_SERVICE_DB__
+
+#include "eeg_service_uuids.h"
+
+primary_service {
+    uuid : UUID_EEG_SERVICE,
+    name : "EEG_SERVICE",
+
+    /* EEG Measurement characteristic supports IRQ flag, thereby reads 
+     * and writes on characteristic configuration descriptor and notifications 
+     * on characteristic value are handled by application. 
+     */
+
+    characteristic {
+        uuid : UUID_EEG_MEASUREMENT,
+        name : "EEG_MEASUREMENT",
+        properties : notify,
+        flags : FLAG_IRQ,
+        size_value : 0x11,
+
+        client_config {
+            flags : FLAG_IRQ,
+            name : "EEG_MEASUREMENT_C_CFG"
+        }
+    },
+
+    characteristic {
+        uuid : UUID_EEG_ACQUISITION_RATE,
+        name : "EEG_ACQUISITION_RATE",
+        properties : [read, write],
+        flags : FLAG_IRQ,
+        size_value : 0x01,
+        value : DEFAULT_ACQUISITION_RATE
+    },
+
+    /* EEG measurement characteristic supports IRQ flag, thereby 
+     * writes on characteristic value are handled by application. 
+     */
+
+    characteristic {
+        uuid : UUID_EEG_CHANNELS,
+        name : "EEG_CHANNELS",
+        properties : [write, read],
+        flags : FLAG_IRQ,
+        size_value : 0x01,
+        value : 0x00
+    }
+},
+#endif /* __EEG_SERVICE_DB__ */

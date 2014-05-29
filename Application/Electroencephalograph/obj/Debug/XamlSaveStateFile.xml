@@ -1,0 +1,7 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\thomas\documents\visual studio 2013\projects\electroencephalograph\electroencephalograph\obj\debug\intermediatexaml\electroencephalograph.exe" HashGuid="dbbc176a-a2b2-f9e5-dd4a-f464a323d56a" />
+    <ReferenceAssembly PathName="c:\repository\ambulatoryeeg\application\packages\winrtxamltoolkit.controls.datavisualization.1.6.1.3\lib\netcore451\winrtxamltoolkit.controls.datavisualization.dll" HashGuid="be684ae2-5628-42c1-f25a-53d124102458" />
+    <ReferenceAssembly PathName="c:\repository\ambulatoryeeg\application\packages\winrtxamltoolkit.1.6.1.3\lib\netcore451\winrtxamltoolkit.dll" HashGuid="a4cdc2c2-a01c-5ec1-da22-75d5d070a5d3" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

@@ -77,7 +77,7 @@ primary_service {
 # 17 "heart_rate_service_db.db" 2
 
 primary_service {
-    uuid : 0x480D,
+    uuid : 0x0EE4,
     name : "EEG_SERVICE",
 
 
@@ -86,7 +86,7 @@ primary_service {
 
 
     characteristic {
-        uuid : 0x2A37,
+        uuid : 0x0EE1,
         name : "EEG_MEASUREMENT",
         properties : notify,
         flags : FLAG_IRQ,
@@ -99,7 +99,7 @@ primary_service {
     },
 
     characteristic {
-        uuid : 0x2A38,
+        uuid : 0x0EE2,
         name : "EEG_ACQUISITION_RATE",
         properties : [read, write],
         flags : FLAG_IRQ,
@@ -112,7 +112,7 @@ primary_service {
 
 
     characteristic {
-        uuid : 0x2A39,
+        uuid : 0x0EE3,
         name : "EEG_CHANNELS",
         properties : [write, read],
         flags : FLAG_IRQ,

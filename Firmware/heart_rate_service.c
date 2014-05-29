@@ -197,23 +197,9 @@ extern bool IsHeartRateNotifyEnabled(void)
 
 extern void HeartRateIncEnergyExpended(uint16 energy_exp)
 {
-    /* Energy expended in Kilo Joules */
 
-    if(((uint32)g_hr_serv_data.energy_expended + energy_exp) > 
-                            MAX_ENERGY_EXPENDED_IN_KJOULES)
-    {
-        /* Since Energy Expended is a UINT16, the highest value that can be 
-         * represented is 65535 kilo Joules. If the maximum value of 65535 
-         * kilo Joules is attained (0xFFFF), the field value should remain at 
-         * 0xFFFF so that the client can be made aware that a reset of the 
-         * Energy Expended Field is require.
-         */
-        g_hr_serv_data.energy_expended = MAX_ENERGY_EXPENDED_IN_KJOULES;
-    }
-    else
-    {
         g_hr_serv_data.energy_expended += energy_exp;
-    }
+    
 
 }
 

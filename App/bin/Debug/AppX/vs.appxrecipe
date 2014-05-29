@@ -6,7 +6,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>Microsoft.SDKSamples.BluetoothGattHeartRate.CS</PackageIdentityName>
-    <RegisteredManifestChecksum>FD00F196F4973D4CF64F9AA0E9F7DD9C83F4D4CB7CAFC5EDBDFB220718E32F57</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>EFF56F3544B6CBD58795BBFBC60C8489063AF02283211FE4DEF45FC9C36E6104</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>Microsoft.SDKSamples.BluetoothGattHeartRate.CS_1.0.0.0_neutral__8wekyb3d8bbwe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>Microsoft.SDKSamples.BluetoothGattHeartRate.CS_8wekyb3d8bbwe!SDKSample.App</RegisteredUserModeAppID>
     <RegisteredPackageID>Microsoft.SDKSamples.BluetoothGattHeartRate.CS</RegisteredPackageID>
@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-05-29T10:13:45.961</Modified>
+      <Modified>2014-05-29T10:49:34.563</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\BluetoothGattHeartRate.exe">
       <PackagePath>BluetoothGattHeartRate.exe</PackagePath>
-      <Modified>2014-05-29T10:13:32.986</Modified>
+      <Modified>2014-05-29T10:55:51.398</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
@@ -91,7 +91,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\App\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-05-29T10:13:45.910</Modified>
+      <Modified>2014-05-29T10:49:34.513</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -11,8 +11,8 @@
  *
  *****************************************************************************/
 
-#ifndef __HEART_RATE_SERVICE_UUID_H__
-#define __HEART_RATE_SERVICE_UUID_H__
+#ifndef __EEG_SERVICE_UUID_H__
+#define __EEG_SERVICE_UUID_H__
 
 /*============================================================================*
  *  Public Definitions
@@ -29,16 +29,16 @@
 
 /* UUIDs for Heart Rate Service and Characteristics*/
 
-#define UUID_EEG_SERVICE                              0x480D
+#define UUID_EEG_SERVICE                              0x0EE4
 
-#define UUID_EEG_MEASUREMENT                     0x2A37
+#define UUID_EEG_MEASUREMENT                     0x0EE1
 
-#define UUID_EEG_ACQUISITION_RATE          0x2A38
+#define UUID_EEG_ACQUISITION_RATE          0x0EE2
 
-#define UUID_EEG_CHANNELS                 0x2A39
+#define UUID_EEG_CHANNELS                 0x0EE3
 
 #define DEFAULT_ACQUISITION_RATE 			0xFF
 
 
 
-#endif /* __HEART_RATE_SERVICE_UUID_H__ */
+#endif /* __EEG_SERVICE_UUID_H__ */

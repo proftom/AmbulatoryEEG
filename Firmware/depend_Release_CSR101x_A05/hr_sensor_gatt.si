@@ -614,20 +614,20 @@
   28 0004 00 26       		.loc 1 584 0
  582:hr_sensor_gatt.c **** 
  583:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_L(UUID_EEG_SERVICE);
-  29                 	AL,#0x000d
-  30 0005 0D 14       		st	AL,@(0x0001,X)
-  31 0006 01 26       		.loc 1 585 0
+  29                 	AL,#0x00e4
+  30 0005 01 00 E4 14 		st	AL,@(0x0001,X)
+  31 0007 01 26       		.loc 1 585 0
  584:hr_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_H(UUID_EEG_SERVICE);
-  32                 		AL,#0x0048
-  33 0007 48 14       		st	AL,@(0x0002,X)
-  34 0008 02 26       		.loc 1 589 0
+  32                 		AL,#0x000e
+  33 0008 0E 14       		st	AL,@(0x0002,X)
+  34 0009 02 26       		.loc 1 589 0
  585:hr_sensor_gatt.c **** 
  586:hr_sensor_gatt.c ****     return ((uint16)i);
  587:hr_sensor_gatt.c **** 
  588:hr_sensor_gatt.c **** }
   35                 		AL,#0x0003
-  36 0009 03 14       		leave	#0x0001
-  37 000a 01 0F       	.LVL2:
+  36 000a 03 14       		leave	#0x0001
+  37 000b 01 0F       	.LVL2:
   38                 	.LFE9:
   39                 		.size	GetSupported16BitUUIDServiceList, .-GetSupported16BitUUIDServiceList
   40                 		.global	__size_of_GetSupported16BitUUIDServiceList

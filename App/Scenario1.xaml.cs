@@ -99,14 +99,14 @@ namespace BluetoothGattHeartRate
             //    new string[] { "System.Devices.ContainerId" });
             //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(GattServiceUuids.GenericAccess));
             //Find devices that expose the service (health)
-            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("0000480d-0000-1000-8000-00805f9b34fb")));
+            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("00000EE4-0000-1000-8000-00805f9b34fb")));
             var service = await GattDeviceService.FromIdAsync(devices[0].Id);
             //////var characteristic = service.GetCharacteristics(GattCharacteristic.ConvertShortIdToUuid(0x2A00))[0];
             //////var deviceNameBytes = (await characteristic.ReadValueAsync()).Value;
             //////var deviceName = Encoding.UTF8.GetString(deviceNameBytes, 0, deviceNameBytes.Length);  
             //////var x = Windows.Security.Cryptography.CryptographicBuffer.ConvertBinaryToString(Windows.Security.Cryptography.BinaryStringEncoding.Utf8, deviceNameBytes);
             //////Get  the char (0x2A37)
-            var accData = service.GetCharacteristics(new Guid("00002A37-0000-1000-8000-00805f9b34fb"))[0];
+            var accData = service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
             accData.ValueChanged += accData_ValueChanged;
             //Start notifications
             await accData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);

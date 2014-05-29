@@ -11,8 +11,8 @@
  *
  ******************************************************************************/
 
-#ifndef __HEART_RATE_SERVICE_H__
-#define __HEART_RATE_SERVICE_H__
+#ifndef __EEG_SERVICE_H__
+#define __EEG_SERVICE_H__
 
 /*============================================================================*
  *  SDK Header Files
@@ -60,7 +60,7 @@
 /* As per section 3.1.1.3 of HR service spec ver 1.0, maximum value of 
  * Energy expended characteristic is 65535 (0xFFFF) Kile Joules
  */
-#define MAX_ENERGY_EXPENDED_IN_KJOULES  (0xFFFF)
+
 
 
 /*============================================================================*
@@ -131,6 +131,6 @@ extern void ClearTheEnergyExpendedResetFlag(void);
 extern void WriteHRServiceDataInNvm(void);
 #endif /* NVM_TYPE_FLASH */
 
-#endif /* __HEART_RATE_SERVICE_H__ */
+#endif /* __EEG_SERVICE_H__ */
 
 extern int credits;

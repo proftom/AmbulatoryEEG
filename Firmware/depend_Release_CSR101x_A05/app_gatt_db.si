@@ -47,20 +47,20 @@
   23:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd408, 0x0800, 0x0800, 0x0000, 0x5802,
   24:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0008: Primary Service 1801 */
   25:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0x0118,
-  26:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0009: Primary Service 480d */
-  27:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0x0d48,
-  28:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000a: Characteristic Declaration 2a37 */
-  29:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x100b, 0x0037, 0x2a00,
+  26:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0009: Primary Service 0ee4 */
+  27:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0xe40e,
+  28:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000a: Characteristic Declaration 0ee1 */
+  29:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x100b, 0x00e1, 0x0e00,
   30:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000b: ................. */
   31:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd411, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
   32:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000c: Client Characteristic Configuration */
   33:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x6400,
-  34:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000d: Characteristic Declaration 2a38 */
-  35:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0a0e, 0x0038, 0x2a00,
+  34:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000d: Characteristic Declaration 0ee2 */
+  35:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0a0e, 0x00e2, 0x0e00,
   36:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000e: . */
   37:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd401, 0xff00,
-  38:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000f: Characteristic Declaration 2a39 */
-  39:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0a10, 0x0039, 0x2a00,
+  38:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000f: Characteristic Declaration 0ee3 */
+  39:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x0a10, 0x00e3, 0x0e00,
   40:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0010: . */
   41:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd401, 0x0000,
   42:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0011: Primary Service 180f */
@@ -151,12 +151,12 @@
   64 0016 58 02       		.word	0x0002
   65 0017 00 02       		.word	0x0118
   66 0018 01 18       		.word	0x0002
-  67 0019 00 02       		.word	0x0d48
-  68 001a 0D 48       		.word	0x3005
+  67 0019 00 02       		.word	0xe40e
+  68 001a E4 0E       		.word	0x3005
   69 001b 30 05       		.word	0x100b
-  70 001c 10 0B       		.word	0x0037
-  71 001d 00 37       		.word	0x2a00
-  72 001e 2A 00       		.word	0xd411
+  70 001c 10 0B       		.word	0x00e1
+  71 001d 00 E1       		.word	0x0e00
+  72 001e 0E 00       		.word	0xd411
   73 001f D4 11       		.word	0x0000
   74 0020 00 00       		.word	0x0000
   75 0021 00 00       		.word	0x0000
@@ -169,15 +169,15 @@
   82 0028 00 00       		.word	0x6400
   83 0029 64 00       		.word	0x3005
   84 002a 30 05       		.word	0x0a0e
-  85 002b 0A 0E       		.word	0x0038
-  86 002c 00 38       		.word	0x2a00
-  87 002d 2A 00       		.word	0xd401
+  85 002b 0A 0E       		.word	0x00e2
+  86 002c 00 E2       		.word	0x0e00
+  87 002d 0E 00       		.word	0xd401
   88 002e D4 01       		.word	0xff00
   89 002f FF 00       		.word	0x3005
   90 0030 30 05       		.word	0x0a10
-  91 0031 0A 10       		.word	0x0039
-  92 0032 00 39       		.word	0x2a00
-  93 0033 2A 00       		.word	0xd401
+  91 0031 0A 10       		.word	0x00e3
+  92 0032 00 E3       		.word	0x0e00
+  93 0033 0E 00       		.word	0xd401
   94 0034 D4 01       		.word	0x0000
   95 0035 00 00       		.word	0x0002
   96 0036 00 02       		.word	0x0f18

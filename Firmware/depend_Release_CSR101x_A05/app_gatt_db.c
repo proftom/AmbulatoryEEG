@@ -24,20 +24,20 @@ uint16 gattDatabase[] = {
     0xd408, 0x0800, 0x0800, 0x0000, 0x5802,
     /* 0008: Primary Service 1801 */
     0x0002, 0x0118,
-    /* 0009: Primary Service 480d */
-    0x0002, 0x0d48,
-    /* 000a: Characteristic Declaration 2a37 */
-    0x3005, 0x100b, 0x0037, 0x2a00,
+    /* 0009: Primary Service 0ee4 */
+    0x0002, 0xe40e,
+    /* 000a: Characteristic Declaration 0ee1 */
+    0x3005, 0x100b, 0x00e1, 0x0e00,
     /* 000b: ................. */
     0xd411, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
     /* 000c: Client Characteristic Configuration */
     0x6400,
-    /* 000d: Characteristic Declaration 2a38 */
-    0x3005, 0x0a0e, 0x0038, 0x2a00,
+    /* 000d: Characteristic Declaration 0ee2 */
+    0x3005, 0x0a0e, 0x00e2, 0x0e00,
     /* 000e: . */
     0xd401, 0xff00,
-    /* 000f: Characteristic Declaration 2a39 */
-    0x3005, 0x0a10, 0x0039, 0x2a00,
+    /* 000f: Characteristic Declaration 0ee3 */
+    0x3005, 0x0a10, 0x00e3, 0x0e00,
     /* 0010: . */
     0xd401, 0x0000,
     /* 0011: Primary Service 180f */

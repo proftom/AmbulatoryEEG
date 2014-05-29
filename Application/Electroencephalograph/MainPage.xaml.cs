@@ -179,7 +179,7 @@ namespace Electroencephalograph
             sliderTimer.Tick += async (snd,evn) =>
                 {
                     sliderTimer.Stop();
-                    await eegService.Instance.SetChannelMapAsync( (ushort) (acqRate.Value*10));
+                    await eegService.Instance.SetChannelMapAsync( (ushort) (0x0014));
 
                 };
 

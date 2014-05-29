@@ -441,17 +441,17 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
         case HANDLE_EEG_CHANNELS:
         {
             /* Extract the written value */
-            uint8 cntl_point_val = BufReadUint8(&p_value);
-
+            uint16 cntl_point_val = BufReadUint16(&p_value);
+DebugWriteString("\n\rLooking for shit");
             /* Check if the HR client has reset the expended energy. */
-            if(cntl_point_val == 0x14)
+            if(cntl_point_val == 0x0014)
             {
                 DebugWriteString("\n\rWritingShit");
                 /* Yes, it has. Make a note of it. */
                 g_hr_serv_data.energy_expended = 0;
                 g_hr_serv_data.reset_energy_expended_received = TRUE;
             }
-            else if (cntl_point_val == 10) {
+            else if (cntl_point_val == 0x1400) {
                 DebugWriteString("\n\rSomething else written!");
             }
             else /* Reserved Value */

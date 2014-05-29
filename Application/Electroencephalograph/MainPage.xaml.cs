@@ -20,8 +20,11 @@ using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.GenericAttributeProfile;
 using Windows.Devices.Enumeration;
 using Windows.Devices.Enumeration.Pnp;
+
 using System.Text;
 using Windows.Storage.Streams;
+
+using Windows.UI.Popups;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -130,25 +133,61 @@ namespace Electroencephalograph
             financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
             financialStuffList.Add(new FinancialStuff() { Name = "BBRY", Amount = 6 });
             (LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
+            //(LineChart.Series[1] as LineSeries).ItemsSource = financialStuffList;
         }
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
         {
-            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("00000EE4-0000-1000-8000-00805f9b34fb")));
-            var service = await GattDeviceService.FromIdAsync(devices[0].Id);
-            var accData = service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
-            accData.ValueChanged += accData_ValueChanged;
+            //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("00000EE4-0000-1000-8000-00805f9b34fb")));
+            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x0EE4));
+            
+            if (devices.Count < 1)
+            {
+                await new MessageDialog("Could not locate any EEG devices in the vinicity").ShowAsync();
+                return;
+            }
+
+            //By default connect to the first EEG service found
+            eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
+
+            //var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];            
+            //eegData.ValueChanged += eegData_ValueChanged;
             //Start notifications
-            await accData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
+            //await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
+            
         }
 
-        async void accData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
+        async void eegData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
         {
             var data = new byte[args.CharacteristicValue.Length];
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
             //Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray((await sender.ReadValueAsync()).Value, out values);
             System.Diagnostics.Debug.WriteLine("Data: {0}", data[1]);
             //var x = data[0];
-        }  
+        }
+
+
+        private DispatcherTimer sliderTimer = null;
+        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            if (sliderTimer != null)
+                sliderTimer.Stop();
+
+            sliderTimer = new DispatcherTimer();
+
+            sliderTimer.Interval = new TimeSpan(0, 0, 0, 0, 200);
+            sliderTimer.Tick += async (snd,evn) =>
+                {
+                    sliderTimer.Stop();
+                    await eegService.Instance.SetChannelMapAsync( (ushort) (acqRate.Value*10));
+
+                };
+
+            sliderTimer.Start();
+            
+        }
+
+
+
     }
 }

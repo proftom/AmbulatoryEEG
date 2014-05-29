@@ -444,24 +444,29 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
             uint8 cntl_point_val = BufReadUint8(&p_value);
 
             /* Check if the HR client has reset the expended energy. */
-            if(cntl_point_val == hr_control_point_reset_energy)
+            if(cntl_point_val == 0x14)
             {
                 DebugWriteString("\n\rWritingShit");
                 /* Yes, it has. Make a note of it. */
                 g_hr_serv_data.energy_expended = 0;
                 g_hr_serv_data.reset_energy_expended_received = TRUE;
             }
-            else if (cntl_point_val == 0x2) {
+            else if (cntl_point_val == 10) {
                 DebugWriteString("\n\rSomething else written!");
             }
             else /* Reserved Value */
             {
-                rc  = gatt_status_desc_improper_config;
+               /* rc  = gatt_status_desc_improper_config;*/
             }
 
             break;
         }
-
+		
+		case HANDLE_EEG_ACQUISITION_RATE:
+		{
+			DebugWriteString("\n\rAcq Rate");
+		}
+		
         default:
         {
             /* Write is not permitted on any other characteristic/attribute */

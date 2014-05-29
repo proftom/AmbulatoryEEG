@@ -90,7 +90,7 @@
                     <TextBlock FontSize="13" HorizontalAlignment="Center">Channels</TextBlock>
                 </StackPanel>
                 <AppBarSeparator Width="14"/>
-                <Slider Width="300" VerticalAlignment="Center"/>
+                <Slider x:ConnectionId='3' Width="300" VerticalAlignment="Center" Name="acqRate"                                   />
                 <AppBarButton Label="Save" Icon="Save" />
             </StackPanel>
         </AppBar>

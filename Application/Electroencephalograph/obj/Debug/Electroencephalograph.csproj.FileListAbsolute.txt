@@ -40,17 +40,6 @@ c:\users\thomas\documents\visual studio 2013\Projects\Electroencephalograph\Elec
 c:\users\thomas\documents\visual studio 2013\Projects\Electroencephalograph\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri.xml
 c:\users\thomas\documents\visual studio 2013\Projects\Electroencephalograph\Electroencephalograph\obj\Debug\ProjectArchitectures.txt
 c:\users\thomas\documents\visual studio 2013\Projects\Electroencephalograph\Electroencephalograph\obj\Debug\Electroencephalograph.csprojResolveAssemblyReference.cache
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.csprojResolveAssemblyReference.cache
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.g.i.cs
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.g.cs
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\MainPage.g.i.cs
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\MainPage.g.cs
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\XamlTypeInfo.g.cs
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.xaml
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.xbf
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\XamlSaveStateFile.xml
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.exe
-C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.pdb
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\App.xbf
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\MainPage.xbf
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.exe
@@ -62,8 +51,18 @@ C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\WinRTXam
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\WinRTXamlToolkit.dll
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\WinRTXamlToolkit.pri
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.g.i.cs
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.g.cs
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\MainPage.g.i.cs
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\MainPage.g.cs
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\XamlTypeInfo.g.cs
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.xaml
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\MainPage.xaml
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\App.xbf
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\MainPage.xbf
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\XamlSaveStateFile.xml
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.exe
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.pdb
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\en-US\WinRTXamlToolkit.Controls.DataVisualization.Properties.Resources.resw
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.csproj.GenerateResource.Cache
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri

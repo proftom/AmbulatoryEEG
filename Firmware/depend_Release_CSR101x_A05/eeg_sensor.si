@@ -62,7 +62,7 @@
   38:eeg_sensor.c  **** #include "battery_service.h"
   39:eeg_sensor.c  **** #include "eeg_sensor.h"
   40:eeg_sensor.c  **** #include "eeg_sensor_hw.h"
-  41:eeg_sensor.c  **** #include "hr_sensor_gatt.h"
+  41:eeg_sensor.c  **** #include "eeg_sensor_gatt.h"
   42:eeg_sensor.c  **** #include "app_gatt_db.h"
   43:eeg_sensor.c  **** #include "nvm_access.h"
   44:eeg_sensor.c  **** #include "user_config.h"

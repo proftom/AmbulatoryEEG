@@ -24,7 +24,7 @@
  *============================================================================*/
 
 #include "eeg_sensor.h"
-#include "hr_sensor_gatt.h"
+#include "eeg_sensor_gatt.h"
 #include "eeg_sensor_hw.h"
 #include "eeg_service.h"
 #include "app_gatt_db.h"

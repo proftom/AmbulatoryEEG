@@ -53,7 +53,7 @@
   29:eeg_sensor_gatt.c ****  *============================================================================*/
   30:eeg_sensor_gatt.c **** 
   31:eeg_sensor_gatt.c **** #include "eeg_sensor.h"
-  32:eeg_sensor_gatt.c **** #include "hr_sensor_gatt.h"
+  32:eeg_sensor_gatt.c **** #include "eeg_sensor_gatt.h"
   33:eeg_sensor_gatt.c **** #include "app_gatt_db.h"
   34:eeg_sensor_gatt.c **** #include "app_gatt.h"
   35:eeg_sensor_gatt.c **** #include "appearance.h"

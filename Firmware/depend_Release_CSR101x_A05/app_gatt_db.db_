@@ -71,10 +71,10 @@ primary_service {
 
 },
 # 18 "app_gatt_db.db" 2
-# 1 "heart_rate_service_db.db" 1
-# 16 "heart_rate_service_db.db"
+# 1 "eeg_service_db.db" 1
+# 16 "eeg_service_db.db"
 # 1 "eeg_service_uuids.h" 1
-# 17 "heart_rate_service_db.db" 2
+# 17 "eeg_service_db.db" 2
 
 primary_service {
     uuid : 0x0EE4,

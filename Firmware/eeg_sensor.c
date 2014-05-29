@@ -39,7 +39,7 @@
 #include "battery_service.h"
 #include "eeg_sensor.h"
 #include "eeg_sensor_hw.h"
-#include "hr_sensor_gatt.h"
+#include "eeg_sensor_gatt.h"
 #include "app_gatt_db.h"
 #include "nvm_access.h"
 #include "user_config.h"

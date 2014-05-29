@@ -30,7 +30,7 @@ depend_Release_CSR101x_A05/hr_sensor_gatt.o: hr_sensor_gatt.c \
   eeg_sensor.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bt_event_types.h \
-  hr_sensor_gatt.h \
+  eeg_sensor_gatt.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/time.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/gatt_prim.h \
   user_config.h depend_Release_CSR101x_A05/app_gatt_db.h \

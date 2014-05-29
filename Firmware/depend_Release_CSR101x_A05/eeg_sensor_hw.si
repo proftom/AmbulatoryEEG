@@ -47,7 +47,7 @@
   23:eeg_sensor_hw.c ****  *============================================================================*/
   24:eeg_sensor_hw.c **** 
   25:eeg_sensor_hw.c **** #include "eeg_sensor.h"
-  26:eeg_sensor_hw.c **** #include "hr_sensor_gatt.h"
+  26:eeg_sensor_hw.c **** #include "eeg_sensor_gatt.h"
   27:eeg_sensor_hw.c **** #include "eeg_sensor_hw.h"
   28:eeg_sensor_hw.c **** #include "eeg_service.h"
   29:eeg_sensor_hw.c **** #include "app_gatt_db.h"

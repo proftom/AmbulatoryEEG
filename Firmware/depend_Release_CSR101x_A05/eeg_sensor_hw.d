@@ -18,7 +18,7 @@ depend_Release_CSR101x_A05/eeg_sensor_hw.o: eeg_sensor_hw.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/ls_types.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/ls_err.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/gap_types.h \
-  hr_sensor_gatt.h \
+  eeg_sensor_gatt.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/time.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/gatt_prim.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/att_prim.h \

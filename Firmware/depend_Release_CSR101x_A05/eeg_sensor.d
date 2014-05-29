@@ -38,7 +38,7 @@ depend_Release_CSR101x_A05/eeg_sensor.o: eeg_sensor.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
   eeg_service.h gap_service.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bt_event_types.h \
-  gap_conn_params.h battery_service.h eeg_sensor.h hr_sensor_gatt.h \
+  gap_conn_params.h battery_service.h eeg_sensor.h eeg_sensor_gatt.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/time.h \
   user_config.h eeg_sensor_hw.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bluetooth.h \

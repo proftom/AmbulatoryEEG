@@ -15,6 +15,6 @@
 
 #include "gap_service_db.db"
 #include "gatt_service_db.db"
-#include "heart_rate_service_db.db"
+#include "eeg_service_db.db"
 #include "battery_service_db.db"
 #include "dev_info_service_db.db"

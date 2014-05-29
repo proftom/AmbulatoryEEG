@@ -30,7 +30,7 @@
  *============================================================================*/
 
 #include "eeg_sensor.h"
-#include "hr_sensor_gatt.h"
+#include "eeg_sensor_gatt.h"
 #include "app_gatt_db.h"
 #include "app_gatt.h"
 #include "appearance.h"

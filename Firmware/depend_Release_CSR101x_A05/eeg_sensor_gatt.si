@@ -52,7 +52,7 @@
   28:eeg_sensor_gatt.c ****  *  Local Header Files
   29:eeg_sensor_gatt.c ****  *============================================================================*/
   30:eeg_sensor_gatt.c **** 
-  31:eeg_sensor_gatt.c **** #include "hr_sensor.h"
+  31:eeg_sensor_gatt.c **** #include "eeg_sensor.h"
   32:eeg_sensor_gatt.c **** #include "hr_sensor_gatt.h"
   33:eeg_sensor_gatt.c **** #include "app_gatt_db.h"
   34:eeg_sensor_gatt.c **** #include "app_gatt.h"
@@ -60,7 +60,7 @@
   36:eeg_sensor_gatt.c **** #include "gap_service.h"
   37:eeg_sensor_gatt.c **** #include "eeg_service.h"
   38:eeg_sensor_gatt.c **** #include "battery_service.h"
-  39:eeg_sensor_gatt.c **** #include "heart_rate_service_uuids.h"
+  39:eeg_sensor_gatt.c **** #include "eeg_service_uuids.h"
   40:eeg_sensor_gatt.c **** #include "battery_uuids.h"
   41:eeg_sensor_gatt.c **** #include "dev_info_service.h"
   42:eeg_sensor_gatt.c **** 
@@ -1800,7 +1800,7 @@
  965 00f4 00 00 00 00 		.file 8 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/gap_types.h"
  966 00f6 00 00 00 00 		.file 9 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bt_event_types.h"
  967 00f8 00 02       		.file 10 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/timer.h"
- 968 00f9 76          		.file 11 "hr_sensor.h"
+ 968 00f9 76          		.file 11 "eeg_sensor.h"
  969 00fa 03          		.file 12 "app_gatt.h"
  970 00fa 00 00 00 00 		.section	.debug_info
  971 00fc 00 00 00 00 		.4byte	0x1444

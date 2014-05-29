@@ -9,7 +9,7 @@ depend_Release_CSR101x_A05/eeg_sensor_hw.o: eeg_sensor_hw.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/pio_ctrlr.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/timer.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/time.h \
-  hr_sensor.h \
+  eeg_sensor.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bt_event_types.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/core_event_types.h \
@@ -23,7 +23,7 @@ depend_Release_CSR101x_A05/eeg_sensor_hw.o: eeg_sensor_hw.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/gatt_prim.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/att_prim.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bt_event_types.h \
-  user_config.h hr_sensor_hw.h \
+  user_config.h eeg_sensor_hw.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bluetooth.h \
   eeg_service.h app_gatt.h depend_Release_CSR101x_A05/app_gatt_db.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/main.h \

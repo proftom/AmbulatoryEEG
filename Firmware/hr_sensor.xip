@@ -22,10 +22,10 @@
   <file path="gap_uuids.h" />
   <file path="gatt_service_uuids.h" />
   <file path="eeg_service.h" />
-  <file path="heart_rate_service_uuids.h" />
-  <file path="hr_sensor.h" />
+  <file path="eeg_service_uuids.h" />
+  <file path="eeg_sensor.h" />
   <file path="hr_sensor_gatt.h" />
-  <file path="hr_sensor_hw.h" />
+  <file path="eeg_sensor_hw.h" />
   <file path="nvm_access.h" />
   <file path="user_config.h" />
   <file path="dev_info_service.h" />

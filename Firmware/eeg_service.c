@@ -4,7 +4,7 @@
  *  Application version 2.3.0.0
  *
  *  FILE
- *      heart_rate_service.c
+ *      eeg_service.c
  *
  * DESCRIPTION
  *      This file defines routines for using Heart rate service.
@@ -27,7 +27,7 @@
 #include "eeg_service.h"
 #include "app_gatt_db.h"
 #include "nvm_access.h"
-#include "hr_sensor_hw.h"
+#include "eeg_sensor_hw.h"
 /*============================================================================*
  *  Private Data Types
  *============================================================================*/

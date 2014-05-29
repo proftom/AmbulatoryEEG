@@ -46,9 +46,9 @@
   22:eeg_sensor_hw.c ****  *  Local Header Files
   23:eeg_sensor_hw.c ****  *============================================================================*/
   24:eeg_sensor_hw.c **** 
-  25:eeg_sensor_hw.c **** #include "hr_sensor.h"
+  25:eeg_sensor_hw.c **** #include "eeg_sensor.h"
   26:eeg_sensor_hw.c **** #include "hr_sensor_gatt.h"
-  27:eeg_sensor_hw.c **** #include "hr_sensor_hw.h"
+  27:eeg_sensor_hw.c **** #include "eeg_sensor_hw.h"
   28:eeg_sensor_hw.c **** #include "eeg_service.h"
   29:eeg_sensor_hw.c **** #include "app_gatt_db.h"
   30:eeg_sensor_hw.c **** #include "app_gatt.h"
@@ -1166,7 +1166,7 @@
  573 0086 00 00 00 00 		.file 2 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h"
  574 0088 00 02       		.file 3 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/pio.h"
  575 0089 75          		.file 4 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/timer.h"
- 576 008a 08          		.file 5 "hr_sensor_hw.h"
+ 576 008a 08          		.file 5 "eeg_sensor_hw.h"
  577 008a 00 00 00 00 		.file 6 "app_gatt.h"
  578 008c 00 00 00 00 		.section	.debug_info
  579                 		.4byte	0x39b

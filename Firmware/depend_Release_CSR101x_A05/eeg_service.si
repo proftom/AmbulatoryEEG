@@ -27,7 +27,7 @@
    3:eeg_service.c ****  *  Application version 2.3.0.0
    4:eeg_service.c ****  *
    5:eeg_service.c ****  *  FILE
-   6:eeg_service.c ****  *      heart_rate_service.c
+   6:eeg_service.c ****  *      eeg_service.c
    7:eeg_service.c ****  *
    8:eeg_service.c ****  * DESCRIPTION
    9:eeg_service.c ****  *      This file defines routines for using Heart rate service.
@@ -50,7 +50,7 @@
   26:eeg_service.c **** #include "eeg_service.h"
   27:eeg_service.c **** #include "app_gatt_db.h"
   28:eeg_service.c **** #include "nvm_access.h"
-  29:eeg_service.c **** #include "hr_sensor_hw.h"
+  29:eeg_service.c **** #include "eeg_sensor_hw.h"
   30:eeg_service.c **** /*============================================================================*
   31:eeg_service.c ****  *  Private Data Types
   32:eeg_service.c ****  *============================================================================*/

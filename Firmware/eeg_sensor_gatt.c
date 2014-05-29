@@ -29,7 +29,7 @@
  *  Local Header Files
  *============================================================================*/
 
-#include "hr_sensor.h"
+#include "eeg_sensor.h"
 #include "hr_sensor_gatt.h"
 #include "app_gatt_db.h"
 #include "app_gatt.h"
@@ -37,7 +37,7 @@
 #include "gap_service.h"
 #include "eeg_service.h"
 #include "battery_service.h"
-#include "heart_rate_service_uuids.h"
+#include "eeg_service_uuids.h"
 #include "battery_uuids.h"
 #include "dev_info_service.h"
 

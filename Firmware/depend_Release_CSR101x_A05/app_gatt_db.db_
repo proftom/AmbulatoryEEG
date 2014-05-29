@@ -73,7 +73,7 @@ primary_service {
 # 18 "app_gatt_db.db" 2
 # 1 "heart_rate_service_db.db" 1
 # 16 "heart_rate_service_db.db"
-# 1 "heart_rate_service_uuids.h" 1
+# 1 "eeg_service_uuids.h" 1
 # 17 "heart_rate_service_db.db" 2
 
 primary_service {

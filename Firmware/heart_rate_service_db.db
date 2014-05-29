@@ -13,7 +13,7 @@
 #ifndef __EEG_SERVICE_DB__
 #define __EEG_SERVICE_DB__
 
-#include "heart_rate_service_uuids.h"
+#include "eeg_service_uuids.h"
 
 primary_service {
     uuid : UUID_EEG_SERVICE,

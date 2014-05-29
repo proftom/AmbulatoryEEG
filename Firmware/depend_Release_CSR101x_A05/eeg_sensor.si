@@ -60,8 +60,8 @@
   36:eeg_sensor.c  **** #include "eeg_service.h"
   37:eeg_sensor.c  **** #include "gap_service.h"
   38:eeg_sensor.c  **** #include "battery_service.h"
-  39:eeg_sensor.c  **** #include "hr_sensor.h"
-  40:eeg_sensor.c  **** #include "hr_sensor_hw.h"
+  39:eeg_sensor.c  **** #include "eeg_sensor.h"
+  40:eeg_sensor.c  **** #include "eeg_sensor_hw.h"
   41:eeg_sensor.c  **** #include "hr_sensor_gatt.h"
   42:eeg_sensor.c  **** #include "app_gatt_db.h"
   43:eeg_sensor.c  **** #include "nvm_access.h"
@@ -5898,8 +5898,8 @@
  2411 027a 55          		.file 14 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/timer.h"
  2412 027a 00 00 00 00 		.file 15 "C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/security.h"
  2413 027c 00 00 00 00 		.file 16 "app_gatt.h"
- 2414 027e 00 02       		.file 17 "hr_sensor.h"
- 2415 027f 75          		.file 18 "hr_sensor_hw.h"
+ 2414 027e 00 02       		.file 17 "eeg_sensor.h"
+ 2415 027f 75          		.file 18 "eeg_sensor_hw.h"
  2416 0280 02          		.section	.debug_info
  2417 0280 00 00 00 00 		.4byte	0x3310
  2418 0282 00 00 00 00 		.2byte	0x2

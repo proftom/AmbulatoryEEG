@@ -27,7 +27,7 @@ depend_Release_CSR101x_A05/eeg_service.o: eeg_service.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/sleep.h \
   nvm_access.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/status.h \
-  hr_sensor_hw.h \
+  eeg_sensor_hw.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bluetooth.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/timer.h \
   user_config.h

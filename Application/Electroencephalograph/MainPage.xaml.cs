@@ -31,6 +31,8 @@ using System.Net;
 using System.Collections.ObjectModel;
 
 using Windows.UI.Core;
+
+using Windows.System.Threading;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace Electroencephalograph
@@ -122,7 +124,7 @@ namespace Electroencephalograph
 
         public class FinancialStuff
         {
-            public int Name { get; set; }
+            public String Name { get; set; }
             public int Amount { get; set; }
         }
 
@@ -160,53 +162,79 @@ namespace Electroencephalograph
             eegData.ValueChanged += eegData_ValueChanged;
             //Start notifications
             await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
+            TimerElapsedHandler f = new TimerElapsedHandler(batchUpdate);
+            periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0,400));
             
         }
 
         private CoreDispatcher cd;
-        List<int> lst = new List<int>();
+        List<FinancialStuff> lst = new List<FinancialStuff>();
         async void eegData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
         {
             var data = new byte[args.CharacteristicValue.Length];
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
-            AddItem<FinancialStuff>(financialStuffList, new FinancialStuff() { Name = 1, Amount = data[1] });
-            //cd = financialStuffList;
-            //cd.RunAsync(CoreDispatcherPriority.Normal,
-            //    () => financialStuffList.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] })
-            //    );
-            //Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray((await sender.ReadValueAsync()).Value, out values);
-            //SmartDispatcher.BeginInvoke(() => financialStuffList.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] }));
-//            await System.Threading.Tasks.Task.Factory.StartNew(() =>
-//                {
-//financialStuffList.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] });
-//                }
-//                ).ContinueWith( t=>
-//                {
 
-//                }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+
+
+            var s = Convert.ToString(data[2], 2).PadLeft(8, '0');
+            var s2 = Convert.ToString(data[1], 2).PadLeft(8, '0');
+
+            //System.Diagnostics.Debug.WriteLine("{0} {1} {2}", data[0], s, s2);
+                lst.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] });
             
-            //lst.Add(data[1]);
-            //var disp = Window.Current.Dispatcher;
-            //await Dispatcher.RunAsync(
-            //    Windows.UI.Core.CoreDispatcherPriority.High, 
-            //    ((Action)(() => (LineChart.Series[0] as LineSeries).ItemsSource = lst)));
-            //System.Threading.Tasks.Task.Run((Action)(() => (LineChart.Series[0] as LineSeries).ItemsSource = lst));
-            //disp.
-            //System.Threading.Tasks.DCoreDispatcher.((Action)(() => (LineChart.Series[0] as LineSeries).ItemsSource = lst));
-            //System.Diagnostics.Debug.WriteLine("Data: {0}", data[1]);
-            //var x = data[0];
         }
 
-        public async void AddItem<T>(ObservableCollection<T> oc, T item)
+        private void batchUpdate(ThreadPoolTimer source)
         {
-            if (Dispatcher.HasThreadAccess)
+            
+                AddItem<FinancialStuff>(financialStuffList, lst);                        
+
+        }
+
+        //Need to update the data perdioically
+        private Windows.System.Threading.ThreadPoolTimer periodicTimer = null;
+        public class LineSeriesEx : LineSeries
+        {
+            protected override DataPoint CreateDataPoint()
             {
-                oc.Add(item);
+                return new EmptyDataPoint();
             }
-            else
+        }
+
+        public class EmptyDataPoint : DataPoint
+        {
+            // As the method name says, this DataPoint is empty.
+        }
+
+        public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
+        {
+            //Get current state of list 
+            lock (items)
             {
-                Dispatcher.RunAsync(CoreDispatcherPriority.Low, () => { oc.Add(item); });
+
+                if (Dispatcher.HasThreadAccess)
+                {
+                    foreach (T item in items)
+                        oc.Add(item);
+
+                }
+                else
+                {
+                    Dispatcher.RunAsync(CoreDispatcherPriority.Low, () =>
+                    {
+
+                        oc.Clear();
+                        for (int i = (items.Count - 100 > 0 ? items.Count - 100 : 0); i < items.Count; i++)
+                        {
+                            System.Diagnostics.Debug.WriteLine("another {0}", items.Count());
+                            oc.Add(items[i]);
+                        }
+                        lst.Clear();
+                        //System.Diagnostics.Debug.WriteLine("done");
+                    });
+                }
             }
+            
         }
 
 

@@ -18,7 +18,9 @@
 #include <gatt.h>
 #include <gatt_prim.h>
 #include <buf_utils.h>
-#include <debug.h>          /* Simple host interface to the UART driver */
+#include <debug.h>
+#include <aio.h>
+/* Simple host interface to the UART driver */
 /*============================================================================*
  *  Local Header Files
  *============================================================================*/
@@ -54,8 +56,12 @@ typedef struct
 
     /* Offset at which Battery data is stored in NVM */
     uint16                         nvm_offset;
+    
+    uint16                         channel_map; 
+    
+    uint16                          acquisition_rate;
 
-} HR_SERV_DATA_T;
+} EEG_SERV_DATA_T;
 
 
     
@@ -73,7 +79,7 @@ typedef struct
  *============================================================================*/
 
 /* Heart Rate service data instance */
-static HR_SERV_DATA_T g_hr_serv_data;
+static EEG_SERV_DATA_T g_eeg_serv_data;
 
 int credits = 8;
 /* Heart Rate Control Point Type */
@@ -121,7 +127,7 @@ extern void HRDataInit(void)
 {
     if(!AppIsDeviceBonded())
     {
-        g_hr_serv_data.hr_meas_client_config = gatt_client_config_none;
+        g_eeg_serv_data.hr_meas_client_config = gatt_client_config_none;
     }
 
     /* As per section 3.1.1.3 of HR Service spec ver 1.0, "The energy expended 
@@ -133,9 +139,9 @@ extern void HRDataInit(void)
      */
 
     /* Write Energy Expended to NVM */
-    Nvm_Write(&g_hr_serv_data.energy_expended, 
-              sizeof(g_hr_serv_data.energy_expended),
-              g_hr_serv_data.nvm_offset + 
+    Nvm_Write(&g_eeg_serv_data.energy_expended, 
+              sizeof(g_eeg_serv_data.energy_expended),
+              g_eeg_serv_data.nvm_offset + 
               HR_NVM_ENERGY_EXPENDED_OFFSET);
 
 
@@ -158,8 +164,8 @@ extern void HRDataInit(void)
 extern void HRInitChipReset(void)
 {
     /* Reset energy expended value at chip reset for initialisation */
-    g_hr_serv_data.energy_expended = 0;
-    g_hr_serv_data.reset_energy_expended_received = FALSE;
+    g_eeg_serv_data.energy_expended = 0;
+    g_eeg_serv_data.reset_energy_expended_received = FALSE;
 }
 
 
@@ -178,7 +184,7 @@ extern void HRInitChipReset(void)
 
 extern bool IsHeartRateNotifyEnabled(void)
 {
-    return (g_hr_serv_data.hr_meas_client_config & 
+    return (g_eeg_serv_data.hr_meas_client_config & 
                     gatt_client_config_notification);
 }
 
@@ -198,7 +204,7 @@ extern bool IsHeartRateNotifyEnabled(void)
 extern void HeartRateIncEnergyExpended(uint16 energy_exp)
 {
 
-        g_hr_serv_data.energy_expended += energy_exp;
+        g_eeg_serv_data.energy_expended += energy_exp;
     
 
 }
@@ -218,7 +224,7 @@ extern void HeartRateIncEnergyExpended(uint16 energy_exp)
 
 extern uint16 HeartRateGetEnergyExpended(void)
 {
-    return g_hr_serv_data.energy_expended;
+    return g_eeg_serv_data.energy_expended;
 }
 
 
@@ -238,16 +244,16 @@ extern uint16 HeartRateGetEnergyExpended(void)
 extern void HeartRateReadDataFromNVM(bool nvm_fresh_start, uint16 *p_offset)
 {
 
-     g_hr_serv_data.nvm_offset = *p_offset;
+     g_eeg_serv_data.nvm_offset = *p_offset;
 
     /* Read NVM only if devices are bonded */
     if(AppIsDeviceBonded())
     {
 
         /* Read Heart Rate Measurement Client Configuration */
-        Nvm_Read((uint16*)&g_hr_serv_data.hr_meas_client_config,
-                 sizeof(g_hr_serv_data.hr_meas_client_config),
-                 g_hr_serv_data.nvm_offset +
+        Nvm_Read((uint16*)&g_eeg_serv_data.hr_meas_client_config,
+                 sizeof(g_eeg_serv_data.hr_meas_client_config),
+                 g_eeg_serv_data.nvm_offset +
                  HR_NVM_HR_MEAS_CLIENT_CONFIG_OFFSET);
 
     }
@@ -258,17 +264,17 @@ extern void HeartRateReadDataFromNVM(bool nvm_fresh_start, uint16 *p_offset)
          * energy expended value [initialised in HRInitChipReset() function]
          */
 
-        Nvm_Write(&g_hr_serv_data.energy_expended, 
-                 sizeof(g_hr_serv_data.energy_expended),
-                 g_hr_serv_data.nvm_offset +
+        Nvm_Write(&g_eeg_serv_data.energy_expended, 
+                 sizeof(g_eeg_serv_data.energy_expended),
+                 g_eeg_serv_data.nvm_offset +
                  HR_NVM_ENERGY_EXPENDED_OFFSET);
     }
     else
     {
         /* Read Energy Expended charcteristic value */
-        Nvm_Read(&g_hr_serv_data.energy_expended,
-                 sizeof(g_hr_serv_data.energy_expended),
-                 g_hr_serv_data.nvm_offset +
+        Nvm_Read(&g_eeg_serv_data.energy_expended,
+                 sizeof(g_eeg_serv_data.energy_expended),
+                 g_eeg_serv_data.nvm_offset +
                  HR_NVM_ENERGY_EXPENDED_OFFSET);
     }
 
@@ -303,8 +309,13 @@ int i = 0;
         return;*/
         
     meas_report[1] = test++;
-    
-    for (i = 0; i < 8; i++) {
+
+    uint16 testy  =  AioRead((aio_select) 1);
+    meas_report[1] = testy;
+    uint16* add = &testy;
+    add++;
+    meas_report[2] = *add;
+    for (i = 0; i < 1; i++) {
        /*DebugWriteString("\n\rTransmit.."); */
        GattCharValueNotification(ucid, 
               HANDLE_EEG_MEASUREMENT, 
@@ -348,7 +359,7 @@ extern void HeartRateHandleAccessRead(GATT_ACCESS_IND_T *p_ind)
             p_val = value;
 
             /* copy the client configuration value in response buffer */
-            BufWriteUint16(&p_val, g_hr_serv_data.hr_meas_client_config);
+            BufWriteUint16(&p_val, g_eeg_serv_data.hr_meas_client_config);
         }
         break;
 
@@ -405,10 +416,9 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
              */
             if((client_config == gatt_client_config_notification) ||
                (client_config == gatt_client_config_none))
-            {
-                            DebugWriteString("\n\rHello!");
+            {                            
                 /* Store the new client configuration */
-                g_hr_serv_data.hr_meas_client_config = client_config;
+                g_eeg_serv_data.hr_meas_client_config = client_config;
 
                 /* Write Heart Rate Measurement Client configuration to NVM if 
                  * the device is bonded.
@@ -417,7 +427,7 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
                 {
                      Nvm_Write((uint16*)&client_config,
                               sizeof(client_config),
-                              g_hr_serv_data.nvm_offset + 
+                              g_eeg_serv_data.nvm_offset + 
                               HR_NVM_HR_MEAS_CLIENT_CONFIG_OFFSET);
                 }
 
@@ -441,30 +451,15 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
         case HANDLE_EEG_CHANNELS:
         {
             /* Extract the written value */
-            uint16 cntl_point_val = BufReadUint16(&p_value);
-DebugWriteString("\n\rLooking for shit");
-            /* Check if the HR client has reset the expended energy. */
-            if(cntl_point_val == 0x0014)
-            {
-                DebugWriteString("\n\rWritingShit");
-                /* Yes, it has. Make a note of it. */
-                g_hr_serv_data.energy_expended = 0;
-                g_hr_serv_data.reset_energy_expended_received = TRUE;
-            }
-            else if (cntl_point_val == 0x1400) {
-                DebugWriteString("\n\rSomething else written!");
-            }
-            else /* Reserved Value */
-            {
-               /* rc  = gatt_status_desc_improper_config;*/
-            }
-
+            g_eeg_serv_data.channel_map = BufReadUint16(&p_value);
             break;
         }
 		
 		case HANDLE_EEG_ACQUISITION_RATE:
 		{
-			DebugWriteString("\n\rAcq Rate");
+            g_eeg_serv_data.acquisition_rate = BufReadUint16(&p_value);
+			DebugWriteString("\n\rAcq Rate changed");
+            break;
 		}
 		
         default:
@@ -524,9 +519,9 @@ extern void HeartRateBondingNotify(void)
         /* Write to NVM the client configuration value of HR measurement 
          * state if it was configured prior to bonding 
          */
-        Nvm_Write((uint16*)&g_hr_serv_data.hr_meas_client_config, 
-                  sizeof(g_hr_serv_data.hr_meas_client_config),
-                  g_hr_serv_data.nvm_offset + 
+        Nvm_Write((uint16*)&g_eeg_serv_data.hr_meas_client_config, 
+                  sizeof(g_eeg_serv_data.hr_meas_client_config),
+                  g_eeg_serv_data.nvm_offset + 
                   HR_NVM_HR_MEAS_CLIENT_CONFIG_OFFSET);
     }
 
@@ -548,7 +543,7 @@ extern void HeartRateBondingNotify(void)
 
 extern bool HasExpendedEnergyBeenReset(void)
 {
-    return(g_hr_serv_data.reset_energy_expended_received);
+    return(g_eeg_serv_data.reset_energy_expended_received);
 }
 
 /*----------------------------------------------------------------------------*
@@ -565,7 +560,7 @@ extern bool HasExpendedEnergyBeenReset(void)
 
 extern void ClearTheEnergyExpendedResetFlag(void)
 {
-    g_hr_serv_data.reset_energy_expended_received = FALSE;
+    g_eeg_serv_data.reset_energy_expended_received = FALSE;
 }
 
 
@@ -585,15 +580,15 @@ extern void ClearTheEnergyExpendedResetFlag(void)
 extern void WriteHRServiceDataInNvm(void)
 {
     /* Write to NVM the client configuration value. */
-    Nvm_Write((uint16*)&g_hr_serv_data.hr_meas_client_config, 
-              sizeof(g_hr_serv_data.hr_meas_client_config),
-              g_hr_serv_data.nvm_offset + 
+    Nvm_Write((uint16*)&g_eeg_serv_data.hr_meas_client_config, 
+              sizeof(g_eeg_serv_data.hr_meas_client_config),
+              g_eeg_serv_data.nvm_offset + 
               HR_NVM_HR_MEAS_CLIENT_CONFIG_OFFSET);
 
     /* Write Energy Expended to NVM */
-    Nvm_Write(&g_hr_serv_data.energy_expended, 
-              sizeof(g_hr_serv_data.energy_expended),
-              g_hr_serv_data.nvm_offset + 
+    Nvm_Write(&g_eeg_serv_data.energy_expended, 
+              sizeof(g_eeg_serv_data.energy_expended),
+              g_eeg_serv_data.nvm_offset + 
               HR_NVM_ENERGY_EXPENDED_OFFSET);
 
 }

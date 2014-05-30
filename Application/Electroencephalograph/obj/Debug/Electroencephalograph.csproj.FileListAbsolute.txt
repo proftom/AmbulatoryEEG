@@ -82,6 +82,9 @@ C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXam
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri.xml
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\ProjectArchitectures.txt
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Electroencephalograph.csprojResolveAssemblyReference.cache
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Sparrow.Chart.WinRT.45.dll
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Sparrow.Chart.WinRT.45.xml
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Sparrow.Chart.WinRT.45.pri
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\layout.resfiles
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\layout.resfiles.intermediate
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\Resources.resfiles
@@ -90,3 +93,4 @@ C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXam
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\pri.resfiles.intermediate
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\priconfig.xml
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\priconfig.xml.intermediate
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\Sparrow.Chart.WinRT.45.pri.xml

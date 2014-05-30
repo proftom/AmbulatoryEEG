@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.exe">
       <PackagePath>Electroencephalograph.exe</PackagePath>
-      <Modified>2014-05-30T12:58:54.495</Modified>
+      <Modified>2014-05-30T23:45:25.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization.dll">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization.dll</PackagePath>
@@ -63,7 +63,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-05-30T12:21:54.232</Modified>
+      <Modified>2014-05-30T23:45:25.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
       <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
@@ -267,7 +267,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-05-30T12:58:54.672</Modified>
+      <Modified>2014-05-30T23:42:05.056</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

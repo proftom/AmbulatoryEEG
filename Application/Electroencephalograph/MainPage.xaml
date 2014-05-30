@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
     x:Name="pageRoot"
+    xmlns:sparrow="using:Sparrow.Chart"
     x:Class="Electroencephalograph.MainPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d" Background="Blue" Loaded="pageRoot_Loaded">
@@ -47,9 +48,30 @@
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
 
         </Grid>
+        
         <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="618" Grid.Row="1">
-            <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" />
+            <Charting:LineSeries Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"  />
+            <Charting:Chart.Palette>
+                <Charting:ResourceDictionaryCollection>
+
+                    <ResourceDictionary>
+
+                        <Style
+            x:Key="DataPointStyle"
+            TargetType="Control">
+
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="Opacity" Value="0" />
+                        </Style>
+                    </ResourceDictionary>
+                </Charting:ResourceDictionaryCollection>
+            </Charting:Chart.Palette>
         </Charting:Chart>
+        
+        
+        
+        
         
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -59,6 +81,8 @@
                 <StackPanel Orientation="Horizontal"/>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
             </Grid>
+        <sparrow:SparrowChart HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
 
     </Grid>
     <Page.BottomAppBar>

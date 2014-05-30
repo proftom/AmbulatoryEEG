@@ -28,7 +28,9 @@ using Windows.UI.Popups;
 
 using System.Net;
 
+using System.Collections.ObjectModel;
 
+using Windows.UI.Core;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace Electroencephalograph
@@ -120,30 +122,31 @@ namespace Electroencephalograph
 
         public class FinancialStuff
         {
-            public string Name { get; set; }
+            public int Name { get; set; }
             public int Amount { get; set; }
         }
- 
 
+        ObservableCollection<FinancialStuff> financialStuffList = new ObservableCollection<FinancialStuff>();
         private void pageRoot_Loaded(object sender, RoutedEventArgs e)
         {
             //List<int> test = new List<int>();
             //for (int i = 0; i < 100; i++)
             //    test.Add(i);
-            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
-            financialStuffList.Add(new FinancialStuff() { Name = "MSFT", Amount = 10 });
-            financialStuffList.Add(new FinancialStuff() { Name = "AAPL", Amount = 200 });
-            financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
-            financialStuffList.Add(new FinancialStuff() { Name = "BBRY", Amount = 6 });
+            
+            //financialStuffList.Add(new FinancialStuff() { Name = "MSFT", Amount = 10 });
+            //financialStuffList.Add(new FinancialStuff() { Name = "AAPL", Amount = 200 });
+            //financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
+            
             (LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
             //(LineChart.Series[1] as LineSeries).ItemsSource = financialStuffList;
         }
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
         {
+            
             //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("00000EE4-0000-1000-8000-00805f9b34fb")));
             var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x0EE4));
-            
+
             if (devices.Count < 1)
             {
                 await new MessageDialog("Could not locate any EEG devices in the vinicity").ShowAsync();
@@ -153,20 +156,57 @@ namespace Electroencephalograph
             //By default connect to the first EEG service found
             eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
 
-            //var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];            
-            //eegData.ValueChanged += eegData_ValueChanged;
+            var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
+            eegData.ValueChanged += eegData_ValueChanged;
             //Start notifications
-            //await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
+            await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
             
         }
 
+        private CoreDispatcher cd;
+        List<int> lst = new List<int>();
         async void eegData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
         {
             var data = new byte[args.CharacteristicValue.Length];
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
+            AddItem<FinancialStuff>(financialStuffList, new FinancialStuff() { Name = 1, Amount = data[1] });
+            //cd = financialStuffList;
+            //cd.RunAsync(CoreDispatcherPriority.Normal,
+            //    () => financialStuffList.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] })
+            //    );
             //Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray((await sender.ReadValueAsync()).Value, out values);
-            System.Diagnostics.Debug.WriteLine("Data: {0}", data[1]);
+            //SmartDispatcher.BeginInvoke(() => financialStuffList.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] }));
+//            await System.Threading.Tasks.Task.Factory.StartNew(() =>
+//                {
+//financialStuffList.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] });
+//                }
+//                ).ContinueWith( t=>
+//                {
+
+//                }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+            
+            //lst.Add(data[1]);
+            //var disp = Window.Current.Dispatcher;
+            //await Dispatcher.RunAsync(
+            //    Windows.UI.Core.CoreDispatcherPriority.High, 
+            //    ((Action)(() => (LineChart.Series[0] as LineSeries).ItemsSource = lst)));
+            //System.Threading.Tasks.Task.Run((Action)(() => (LineChart.Series[0] as LineSeries).ItemsSource = lst));
+            //disp.
+            //System.Threading.Tasks.DCoreDispatcher.((Action)(() => (LineChart.Series[0] as LineSeries).ItemsSource = lst));
+            //System.Diagnostics.Debug.WriteLine("Data: {0}", data[1]);
             //var x = data[0];
+        }
+
+        public async void AddItem<T>(ObservableCollection<T> oc, T item)
+        {
+            if (Dispatcher.HasThreadAccess)
+            {
+                oc.Add(item);
+            }
+            else
+            {
+                Dispatcher.RunAsync(CoreDispatcherPriority.Low, () => { oc.Add(item); });
+            }
         }
 
 
@@ -178,6 +218,8 @@ namespace Electroencephalograph
 
             sliderTimer = new DispatcherTimer();
 
+            //As to not flood the radio with every change, when the slider is 
+            //left for 200 milliseconds, it sends an update
             sliderTimer.Interval = new TimeSpan(0, 0, 0, 0, 200);
             sliderTimer.Tick += async (snd,evn) =>
                 {
@@ -200,5 +242,65 @@ namespace Electroencephalograph
 
 
 
+    }
+
+    public static class SmartDispatcher
+    {
+        private static CoreDispatcher _instance;
+        private static void RequireInstance()
+        {
+            try
+            {
+                _instance = Window.Current.CoreWindow.Dispatcher;
+
+            }
+            catch (Exception e)
+            {
+                throw new InvalidOperationException("The first time SmartDispatcher is used must be from a user interface thread. Consider having the application call Initialize, with or without an instance.", e);
+            }
+
+            if (_instance == null)
+            {
+                throw new InvalidOperationException("Unable to find a suitable Dispatcher instance.");
+            }
+        }
+
+        public static void Initialize(CoreDispatcher dispatcher)
+        {
+            if (dispatcher == null)
+            {
+                throw new ArgumentNullException("dispatcher");
+            }
+
+            _instance = dispatcher;
+        }
+
+        public static bool CheckAccess()
+        {
+            if (_instance == null)
+            {
+                RequireInstance();
+            }
+            return _instance.HasThreadAccess;
+        }
+
+        public static void BeginInvoke(Action a)
+        {
+            if (_instance == null)
+            {
+                RequireInstance();
+            }
+
+            // If the current thread is the user interface thread, skip the
+            // dispatcher and directly invoke the Action.
+            if (CheckAccess())
+            {
+                a();
+            }
+            else
+            {
+                _instance.RunAsync(CoreDispatcherPriority.Normal, () => { a(); });
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@
 
         </Grid>
         <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="618" Grid.Row="1">
-            <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"/>
+            <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" />
         </Charting:Chart>
         
             <Grid>

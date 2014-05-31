@@ -274,6 +274,36 @@ namespace Electroencephalograph
         private async void ch_Click(object sender, RoutedEventArgs e)
         {
             UInt16 channel_map = Convert.ToUInt16(ch1.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch2.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch3.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch4.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch5.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch6.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch7.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch8.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch9.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch10.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch11.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch12.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch13.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch14.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch15.IsChecked);
+            channel_map = (UInt16)(channel_map << 1);
+            channel_map += Convert.ToUInt16(ch16.IsChecked);
             await eegService.Instance.SetChannelMapAsync(channel_map);
         }
 

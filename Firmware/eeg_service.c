@@ -340,7 +340,7 @@ extern void acquireData(timer_id tid) {
                                  acquireData); 
     
 
-        meas_report[3] = channelsActive;
+    meas_report[3] = channelsActive;
     
 }
 

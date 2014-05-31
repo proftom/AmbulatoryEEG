@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\repository\ambulatoryeeg\application\electroencephalograph\obj\debug\intermediatexaml\electroencephalograph.exe" HashGuid="492b397c-2ed7-e52f-4d9a-e300ea5146c8" />
+    <LocalAssembly PathName="c:\repository\ambulatoryeeg\application\electroencephalograph\obj\debug\intermediatexaml\electroencephalograph.exe" HashGuid="6204ec89-7b89-1fc3-5f57-65807c6a41fa" />
     <ReferenceAssembly PathName="c:\repository\ambulatoryeeg\application\packages\winrtxamltoolkit.controls.datavisualization.1.6.1.3\lib\netcore451\winrtxamltoolkit.controls.datavisualization.dll" HashGuid="be684ae2-5628-42c1-f25a-53d124102458" />
     <ReferenceAssembly PathName="c:\repository\ambulatoryeeg\application\packages\winrtxamltoolkit.1.6.1.3\lib\netcore451\winrtxamltoolkit.dll" HashGuid="a4cdc2c2-a01c-5ec1-da22-75d5d070a5d3" />
   </ReferenceAssemblyList>

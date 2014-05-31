@@ -13,7 +13,7 @@
     mc:Ignorable="d" Background="Blue" Loaded="pageRoot_Loaded">
 
     <Page.Resources>
-        <x:String x:Key="AppName">EEG</x:String>
+        <x:String x:Key="AppName">Electroencephalography</x:String>
     </Page.Resources>
 
     <Page.BottomAppBar>
@@ -47,7 +47,7 @@
                     </TextBlock>
                 </StackPanel>
                 <AppBarSeparator Width="14"/>
-                <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"/>
+                <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"  />
                 <AppBarButton Label="Save" Icon="Save" />
             </StackPanel>
         </AppBar>

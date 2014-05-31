@@ -82,3 +82,11 @@ C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXam
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri.xml
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\ProjectArchitectures.txt
 C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.build.appxrecipe
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\layout.resfiles
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\layout.resfiles.intermediate
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\Resources.resfiles
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\Resources.resfiles.intermediate
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\pri.resfiles
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\pri.resfiles.intermediate
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\priconfig.xml
+C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\obj\Debug\WinRTXamlToolkit.Controls.DataVisualization\priconfig.xml.intermediate

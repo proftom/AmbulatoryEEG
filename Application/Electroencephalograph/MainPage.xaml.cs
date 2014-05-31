@@ -256,7 +256,7 @@ namespace Electroencephalograph
                 {
                     sliderTimer.Stop();
                     
-                    await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value*10));
+                    await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value));
 
                 };
 
@@ -273,6 +273,7 @@ namespace Electroencephalograph
 
         private async void ch_Click(object sender, RoutedEventArgs e)
         {
+            //A little bit n00b, but it'll do 
             UInt16 channel_map = Convert.ToUInt16(ch1.IsChecked);
             channel_map = (UInt16)(channel_map << 1);
             channel_map += Convert.ToUInt16(ch2.IsChecked);

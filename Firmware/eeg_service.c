@@ -59,7 +59,9 @@ typedef struct
     
     uint16                         channel_map; 
     
-    uint16                          acquisition_rate;
+    uint16                         acquisition_rate;
+    
+    timer_id                       acq_tmr;
 
 } EEG_SERV_DATA_T;
 
@@ -326,6 +328,21 @@ int i = 0;
 
 }
 
+extern int count(int a){ return a == 0 ? 0 : 1 + count(a&(a-1)); }
+
+extern void acquireData(timer_id tid) {
+    
+    uint8 channelsActive = count(g_eeg_serv_data.channel_map);
+    
+    /*TimerDelete(g_eeg_serv_data.acq_tmr);*/
+    g_eeg_serv_data.acq_tmr = TimerCreate((uint32) (1000000/g_eeg_serv_data.acquisition_rate),
+                                 TRUE, 
+                                 acquireData); 
+    
+
+        meas_report[3] = channelsActive;
+    
+}
 
 /*----------------------------------------------------------------------------*
  *  NAME
@@ -452,12 +469,16 @@ extern void HeartRateHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
         {
             /* Extract the written value */
             g_eeg_serv_data.channel_map = BufReadUint16(&p_value);
+            DebugWriteString("\n\rChannel map updated");
             break;
         }
 		
 		case HANDLE_EEG_ACQUISITION_RATE:
 		{
             g_eeg_serv_data.acquisition_rate = BufReadUint16(&p_value);
+            g_eeg_serv_data.acq_tmr = TimerCreate((uint32) (1000000/g_eeg_serv_data.acquisition_rate),
+                                 TRUE, 
+                                 acquireData); 
 			DebugWriteString("\n\rAcq Rate changed");
             break;
 		}

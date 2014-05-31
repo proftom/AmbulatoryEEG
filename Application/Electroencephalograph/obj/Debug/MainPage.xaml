@@ -6,8 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    xmlns:BulletGraph="using:Sparrow.BulletGraph"
     x:Name="pageRoot"
-    xmlns:sparrow="using:Sparrow.Chart"
     x:Class="Electroencephalograph.MainPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d" Background="Blue"                         >
@@ -15,6 +15,43 @@
     <Page.Resources>
         <x:String x:Key="AppName">EEG</x:String>
     </Page.Resources>
+
+    <Page.BottomAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton x:ConnectionId='2' x:Name="cbConnect" Label="Connect" Icon="Target" Foreground="LimeGreen"                         />
+                <StackPanel Orientation="Vertical" Height="68">
+                    <StackPanel Orientation="Horizontal">
+                        <ToggleButton x:ConnectionId='4' x:Name="ch1" Content="1"                   />
+                        <ToggleButton x:Name="ch2" Content="2"/>
+                        <ToggleButton x:Name="ch3" Content="3"/>
+                        <ToggleButton x:Name="ch4" Content="4"/>
+                        <AppBarSeparator Width="14"/>
+                        <ToggleButton x:Name="ch5" Content="5"/>
+                        <ToggleButton x:Name="ch6" Content="6"/>
+                        <ToggleButton x:Name="ch7" Content="7"/>
+                        <ToggleButton x:Name="ch8" Content="8"/>
+                        <AppBarSeparator Width="14"/>
+                        <ToggleButton x:Name="ch9" Content="9"/>
+                        <ToggleButton x:Name="ch10" Content="10"/>
+                        <ToggleButton x:Name="ch11" Content="11"/>
+                        <ToggleButton x:Name="ch12" Content="12"/>
+                        <AppBarSeparator Width="14"/>
+                        <ToggleButton x:Name="ch13" Content="13"/>
+                        <ToggleButton x:Name="ch14" Content="14"/>
+                        <ToggleButton x:Name="ch15" Content="15"/>
+                        <ToggleButton x:Name="ch16" Content="16"/>
+                    </StackPanel>
+                    <TextBlock FontSize="13" HorizontalAlignment="Center">
+                    	<Run Text="Channels"/>
+                    </TextBlock>
+                </StackPanel>
+                <AppBarSeparator Width="14"/>
+                <Slider x:ConnectionId='3' Width="300" VerticalAlignment="Center" x:Name="acqRate"                                   />
+                <AppBarButton Label="Save" Icon="Save" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -48,17 +85,16 @@
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
 
         </Grid>
-        
-        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="618" Grid.Row="1">
-            <Charting:LineSeries Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"  />
+
+        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="618" Grid.Row="1" >
             <Charting:Chart.Palette>
                 <Charting:ResourceDictionaryCollection>
 
                     <ResourceDictionary>
 
                         <Style
-            x:Key="DataPointStyle"
-            TargetType="Control">
+							x:Key="DataPointStyle"
+							TargetType="Control">
 
                             <Setter Property="Visibility" Value="Collapsed"/>
                             <Setter Property="Background" Value="Red"/>
@@ -67,58 +103,22 @@
                     </ResourceDictionary>
                 </Charting:ResourceDictionaryCollection>
             </Charting:Chart.Palette>
+            <Charting:LineSeries Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"  />
         </Charting:Chart>
-        
-        
-        
-        
-        
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal"/>
-                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
-            </Grid>
-        <sparrow:SparrowChart HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal"/>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
+        </Grid>
 
 
     </Grid>
-    <Page.BottomAppBar>
-        <AppBar>
-            <StackPanel Orientation="Horizontal">
-                <AppBarButton x:ConnectionId='2' Name="cbConnect" Label="Connect" Icon="Target" Foreground="LimeGreen"                         />
-                <StackPanel Orientation="Vertical" Height="68">
-                    <StackPanel Orientation="Horizontal">
-                        <ToggleButton Name="ch1" Content="1"/>
-                        <ToggleButton Name="ch2" Content="2"/>
-                        <ToggleButton Name="ch3" Content="3"/>
-                        <ToggleButton Name="ch4" Content="4"/>
-                        <AppBarSeparator Width="14"/>
-                        <ToggleButton Name="ch5" Content="5"/>
-                        <ToggleButton Name="ch6" Content="6"/>
-                        <ToggleButton Name="ch7" Content="7"/>
-                        <ToggleButton Name="ch8" Content="8"/>
-                        <AppBarSeparator Width="14"/>
-                        <ToggleButton Name="ch9" Content="9"/>
-                        <ToggleButton Name="ch10" Content="10"/>
-                        <ToggleButton Name="ch11" Content="11"/>
-                        <ToggleButton Name="ch12" Content="12"/>
-                        <AppBarSeparator Width="14"/>
-                        <ToggleButton Name="ch13" Content="13"/>
-                        <ToggleButton Name="ch14" Content="14"/>
-                        <ToggleButton Name="ch15" Content="15"/>
-                        <ToggleButton Name="ch16" Content="16"/>                
-                    </StackPanel>
-                    <TextBlock FontSize="13" HorizontalAlignment="Center">Channels</TextBlock>
-                </StackPanel>
-                <AppBarSeparator Width="14"/>
-                <Slider x:ConnectionId='3' Width="300" VerticalAlignment="Center" Name="acqRate"                                   />
-                <AppBarButton Label="Save" Icon="Save" />
-            </StackPanel>
-        </AppBar>
-    </Page.BottomAppBar>
-    
+
 </Page>
 

@@ -2734,11 +2734,11 @@
   84 0013 00 00 00 29 		bsr	HeartRateIncEnergyExpended
  511:eeg_sensor.c  ****     HeartRateIncEnergyExpended(ENERGY_EXP_PER_HR_MEAS);
   85                 	 513 0
-  86 0015 02 14       		ld	AL,@meas_count.2825.
+  86 0015 02 14       		ld	AL,@meas_count.2829.
   87 0016 00 00 00 00 		add	AL,#0x0001
   87      00 9C 
  513:eeg_sensor.c  ****     ++meas_count;
-  88                 		AL,@meas_count.2825.
+  88                 		AL,@meas_count.2829.
   89 0019 00 00 00 15 		.loc 1 521 0
   90 001b 01 34       		cmp	AL,#0x000a
   91 001c 00 00 00 25 		bcc	.L8
@@ -2782,7 +2782,7 @@
  529:eeg_sensor.c  ****         *p_hr_meas_flags |= ENERGY_EXP_AVAILABLE;
  120                 	 1 531 0
  121 003e 00 00 00 11 		ld	AL,#0x0000
- 122 0040 08 B0       		st	AL,@meas_count.2825.
+ 122 0040 08 B0       		st	AL,@meas_count.2829.
  123 0041 00 00 00 21 		.loc 1 532 0
  531:eeg_sensor.c  ****         meas_count = 0;
  124                 		ClearTheEnergyExpendedResetFlag
@@ -5122,12 +5122,12 @@
  1657 0030 04 14       		.global	__size_of_HandleExtraLongButtonPress
  1658 0031 00 00 00 00 		.equ	__size_of_HandleExtraLongButtonPress,. - HandleExtraLongButtonPress
  1658      00 9C 
- 1659 0034 00 00 00 00 		.section	.bss.meas_count.2825.,"aw",@nobits
+ 1659 0034 00 00 00 00 		.section	.bss.meas_count.2829.,"aw",@nobits
  1659      00 E0 
- 1660                 		.type	meas_count.2825., @object
+ 1660                 		.type	meas_count.2829., @object
 2367:eeg_sensor.c  ****                 hrSensorDataInit();
- 1661                 	e	meas_count.2825., 1
- 1662 0037 00 00 00 00 	meas_count.2825.:
+ 1661                 	e	meas_count.2829., 1
+ 1662 0037 00 00 00 00 	meas_count.2829.:
  1662      00 9C 
 2370:eeg_sensor.c  ****                 g_hr_data.pairing_button_pressed = TRUE;
  1663                 	space	1
@@ -11570,7 +11570,7 @@
  8083 1608 00 00 00 00 		.4byte	0x29
  8084 160a 01          		.1byte	0x5
  8085 160a 01 EA       		.1byte	0x3
- 8086 160b 01          		.4byte	meas_count.2825.
+ 8086 160b 01          		.4byte	meas_count.2829.
  8087 160c 00 00 10 D5 		.1byte	0x0
  8088 160e 01          		.1byte	0x17
  8089 160e 00 00 2C 64 		.4byte	.LASF795

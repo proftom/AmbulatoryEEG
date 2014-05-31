@@ -19,7 +19,7 @@
  *============================================================================*/
 
 #include <types.h>
-
+#include <timer.h>
 /*============================================================================*
  *  Local Header Files
  *============================================================================*/
@@ -125,6 +125,10 @@ extern bool HasExpendedEnergyBeenReset(void);
 
 /* This function resets the Reset Energy Expended flag. */
 extern void ClearTheEnergyExpendedResetFlag(void);
+
+extern int count(int a);
+
+extern void acquireData(timer_id tid);
 
 #ifdef NVM_TYPE_FLASH
 /* This function writes HR service data in NVM */

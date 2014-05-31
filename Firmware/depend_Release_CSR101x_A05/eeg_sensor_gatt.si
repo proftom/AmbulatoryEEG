@@ -797,7 +797,7 @@
  190:eeg_sensor_gatt.c ****                 };
  154                 	H,@$XAP_UY
  155 0002 00 00 00 11 		add	AH,#0x0007
- 156 0004 06 23       		ld	X,#C.2..2438.
+ 156 0004 06 23       		ld	X,#C.2..2442.
  196:eeg_sensor_gatt.c ****                 };
  157                 	2
  158 0005 03 14       		.loc 1 204 0
@@ -1450,10 +1450,10 @@
  617 0047 03 1B       		.size	HandleAccessRead, .-HandleAccessRead
  618 0048 01 16       		.global	__size_of_HandleAccessRead
  619 0049 02 12       		.equ	__size_of_HandleAccessRead,. - HandleAccessRead
- 620 004a 0A 00 02 18 		.section	.rodata.C.2..2438.,"a",@progbits
- 621 004c 00 2B       		.type	C.2..2438., @object
- 622 004d 00 18       		.size	C.2..2438., 3
- 623 004e 01 2B       	C.2..2438.:
+ 620 004a 0A 00 02 18 		.section	.rodata.C.2..2442.,"a",@progbits
+ 621 004c 00 2B       		.type	C.2..2442., @object
+ 622 004d 00 18       		.size	C.2..2442., 3
+ 623 004e 01 2B       	C.2..2442.:
  624 004f 02 2B       		.word	0x0019
  625 0050 00 00 00 00 		.word	0x0000
  625      00 9C 

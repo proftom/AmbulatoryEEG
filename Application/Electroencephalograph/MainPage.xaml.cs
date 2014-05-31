@@ -139,14 +139,12 @@ namespace Electroencephalograph
             //financialStuffList.Add(new FinancialStuff() { Name = "AAPL", Amount = 200 });
             //financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
             
-            (LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
+            //(LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
             //(LineChart.Series[1] as LineSeries).ItemsSource = financialStuffList;
         }
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
-        {
-            
-            //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(new Guid("00000EE4-0000-1000-8000-00805f9b34fb")));
+        {            
             var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x0EE4));
 
             if (devices.Count < 1)
@@ -179,8 +177,11 @@ namespace Electroencephalograph
             var s = Convert.ToString(data[2], 2).PadLeft(8, '0');
             var s2 = Convert.ToString(data[1], 2).PadLeft(8, '0');
 
-            //System.Diagnostics.Debug.WriteLine("{0} {1} {2}", data[0], s, s2);
+            System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", data[0], s, s2, data[3]);
+            lock (lst)
+            {
                 lst.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] });
+            }
             
         }
 
@@ -226,10 +227,12 @@ namespace Electroencephalograph
                         oc.Clear();
                         for (int i = (items.Count - 100 > 0 ? items.Count - 100 : 0); i < items.Count; i++)
                         {
-                            System.Diagnostics.Debug.WriteLine("another {0}", items.Count());
+                            //System.Diagnostics.Debug.WriteLine("another {0}", items.Count());
                             oc.Add(items[i]);
                         }
+                        System.Diagnostics.Debug.WriteLine("another {0}", items.Count());
                         lst.Clear();
+                        
                         //System.Diagnostics.Debug.WriteLine("done");
                     });
                 }
@@ -253,7 +256,7 @@ namespace Electroencephalograph
                 {
                     sliderTimer.Stop();
                     
-                    await eegService.Instance.SetChannelMapAsync((ushort) (acqRate.Value*10));
+                    await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value*10));
 
                 };
 
@@ -266,6 +269,12 @@ namespace Electroencephalograph
 
             return (ushort)(((v & 0xff) << 8) | ((v >> 8) & 0xff));
 
+        }
+
+        private async void ch_Click(object sender, RoutedEventArgs e)
+        {
+            UInt16 channel_map = Convert.ToUInt16(ch1.IsChecked);
+            await eegService.Instance.SetChannelMapAsync(channel_map);
         }
 
 

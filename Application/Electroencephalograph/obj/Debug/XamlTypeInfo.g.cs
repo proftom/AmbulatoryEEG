@@ -148,7 +148,7 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[77];
+            _typeNameTable = new string[45];
             _typeNameTable[0] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Control";
             _typeNameTable[2] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>";
@@ -169,65 +169,33 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             _typeNameTable[17] = "System.Collections.ObjectModel.ObservableCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
             _typeNameTable[18] = "System.Collections.ObjectModel.ReadOnlyCollection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>";
             _typeNameTable[19] = "Windows.UI.Xaml.Style";
-            _typeNameTable[20] = "Sparrow.Chart.SparrowChart";
-            _typeNameTable[21] = "Sparrow.Chart.SeriesCollection";
-            _typeNameTable[22] = "System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.SeriesBase>";
-            _typeNameTable[23] = "System.Collections.ObjectModel.Collection`1<Sparrow.Chart.SeriesBase>";
-            _typeNameTable[24] = "Sparrow.Chart.SeriesBase";
-            _typeNameTable[25] = "Sparrow.Chart.XAxis";
-            _typeNameTable[26] = "Sparrow.Chart.AxisBase";
-            _typeNameTable[27] = "Windows.UI.Xaml.Controls.Canvas";
-            _typeNameTable[28] = "Windows.UI.Xaml.Controls.Panel";
+            _typeNameTable[20] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection";
+            _typeNameTable[21] = "Int32";
+            _typeNameTable[22] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries";
+            _typeNameTable[23] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>";
+            _typeNameTable[24] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes";
+            _typeNameTable[25] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes";
+            _typeNameTable[26] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries";
+            _typeNameTable[27] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series";
+            _typeNameTable[28] = "String";
             _typeNameTable[29] = "Boolean";
-            _typeNameTable[30] = "Sparrow.Chart.YAxis";
-            _typeNameTable[31] = "Sparrow.Chart.PartsCollection";
-            _typeNameTable[32] = "System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.SeriesPartBase>";
-            _typeNameTable[33] = "System.Collections.ObjectModel.Collection`1<Sparrow.Chart.SeriesPartBase>";
-            _typeNameTable[34] = "Sparrow.Chart.SeriesPartBase";
-            _typeNameTable[35] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[36] = "Windows.UI.Xaml.Media.Brush";
-            _typeNameTable[37] = "Double";
-            _typeNameTable[38] = "Sparrow.Chart.PointsCollection";
-            _typeNameTable[39] = "System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.ChartPoint>";
-            _typeNameTable[40] = "System.Collections.ObjectModel.Collection`1<Sparrow.Chart.ChartPoint>";
-            _typeNameTable[41] = "Sparrow.Chart.ChartPoint";
-            _typeNameTable[42] = "String";
-            _typeNameTable[43] = "Sparrow.Chart.Axes";
-            _typeNameTable[44] = "System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.AxisBase>";
-            _typeNameTable[45] = "System.Collections.ObjectModel.Collection`1<Sparrow.Chart.AxisBase>";
-            _typeNameTable[46] = "Sparrow.Chart.TickPosition";
-            _typeNameTable[47] = "Int32";
-            _typeNameTable[48] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[49] = "Sparrow.Chart.Legend";
-            _typeNameTable[50] = "Windows.UI.Xaml.Controls.ItemsControl";
-            _typeNameTable[51] = "Sparrow.Chart.Theme";
-            _typeNameTable[52] = "Sparrow.Chart.OverlayMode";
-            _typeNameTable[53] = "System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>";
-            _typeNameTable[54] = "Sparrow.Chart.RenderingMode";
-            _typeNameTable[55] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[56] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries";
-            _typeNameTable[57] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>";
-            _typeNameTable[58] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes";
-            _typeNameTable[59] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes";
-            _typeNameTable[60] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries";
-            _typeNameTable[61] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series";
-            _typeNameTable[62] = "Windows.UI.Xaml.Media.PointCollection";
-            _typeNameTable[63] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis";
-            _typeNameTable[64] = "System.Nullable`1<Int32>";
-            _typeNameTable[65] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[66] = "System.Collections.IEnumerable";
-            _typeNameTable[67] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence";
-            _typeNameTable[68] = "Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
-            _typeNameTable[69] = "TimeSpan";
-            _typeNameTable[70] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost";
-            _typeNameTable[71] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection";
-            _typeNameTable[72] = "Electroencephalograph.MainPage";
-            _typeNameTable[73] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[74] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[75] = "Electroencephalograph.Common.ObservableDictionary";
-            _typeNameTable[76] = "Electroencephalograph.Common.NavigationHelper";
+            _typeNameTable[30] = "Windows.UI.Xaml.Media.PointCollection";
+            _typeNameTable[31] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis";
+            _typeNameTable[32] = "System.Nullable`1<Int32>";
+            _typeNameTable[33] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[34] = "System.Collections.IEnumerable";
+            _typeNameTable[35] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence";
+            _typeNameTable[36] = "Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
+            _typeNameTable[37] = "TimeSpan";
+            _typeNameTable[38] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost";
+            _typeNameTable[39] = "Electroencephalograph.MainPage";
+            _typeNameTable[40] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[41] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[42] = "Electroencephalograph.Common.ObservableDictionary";
+            _typeNameTable[43] = "Electroencephalograph.Common.NavigationHelper";
+            _typeNameTable[44] = "Windows.UI.Xaml.DependencyObject";
 
-            _typeTable = new global::System.Type[77];
+            _typeTable = new global::System.Type[45];
             _typeTable[0] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Control);
             _typeTable[2] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>);
@@ -248,63 +216,31 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             _typeTable[17] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
             _typeTable[18] = typeof(global::System.Collections.ObjectModel.ReadOnlyCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>);
             _typeTable[19] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[20] = typeof(global::Sparrow.Chart.SparrowChart);
-            _typeTable[21] = typeof(global::Sparrow.Chart.SeriesCollection);
-            _typeTable[22] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.SeriesBase>);
-            _typeTable[23] = typeof(global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.SeriesBase>);
-            _typeTable[24] = typeof(global::Sparrow.Chart.SeriesBase);
-            _typeTable[25] = typeof(global::Sparrow.Chart.XAxis);
-            _typeTable[26] = typeof(global::Sparrow.Chart.AxisBase);
-            _typeTable[27] = typeof(global::Windows.UI.Xaml.Controls.Canvas);
-            _typeTable[28] = typeof(global::Windows.UI.Xaml.Controls.Panel);
+            _typeTable[20] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection);
+            _typeTable[21] = typeof(global::System.Int32);
+            _typeTable[22] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries);
+            _typeTable[23] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>);
+            _typeTable[24] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes);
+            _typeTable[25] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes);
+            _typeTable[26] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries);
+            _typeTable[27] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series);
+            _typeTable[28] = typeof(global::System.String);
             _typeTable[29] = typeof(global::System.Boolean);
-            _typeTable[30] = typeof(global::Sparrow.Chart.YAxis);
-            _typeTable[31] = typeof(global::Sparrow.Chart.PartsCollection);
-            _typeTable[32] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.SeriesPartBase>);
-            _typeTable[33] = typeof(global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.SeriesPartBase>);
-            _typeTable[34] = typeof(global::Sparrow.Chart.SeriesPartBase);
-            _typeTable[35] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[36] = typeof(global::Windows.UI.Xaml.Media.Brush);
-            _typeTable[37] = typeof(global::System.Double);
-            _typeTable[38] = typeof(global::Sparrow.Chart.PointsCollection);
-            _typeTable[39] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.ChartPoint>);
-            _typeTable[40] = typeof(global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.ChartPoint>);
-            _typeTable[41] = typeof(global::Sparrow.Chart.ChartPoint);
-            _typeTable[42] = typeof(global::System.String);
-            _typeTable[43] = typeof(global::Sparrow.Chart.Axes);
-            _typeTable[44] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.AxisBase>);
-            _typeTable[45] = typeof(global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.AxisBase>);
-            _typeTable[46] = typeof(global::Sparrow.Chart.TickPosition);
-            _typeTable[47] = typeof(global::System.Int32);
-            _typeTable[48] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[49] = typeof(global::Sparrow.Chart.Legend);
-            _typeTable[50] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
-            _typeTable[51] = typeof(global::Sparrow.Chart.Theme);
-            _typeTable[52] = typeof(global::Sparrow.Chart.OverlayMode);
-            _typeTable[53] = typeof(global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>);
-            _typeTable[54] = typeof(global::Sparrow.Chart.RenderingMode);
-            _typeTable[55] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[56] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries);
-            _typeTable[57] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>);
-            _typeTable[58] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes);
-            _typeTable[59] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes);
-            _typeTable[60] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries);
-            _typeTable[61] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series);
-            _typeTable[62] = typeof(global::Windows.UI.Xaml.Media.PointCollection);
-            _typeTable[63] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis);
-            _typeTable[64] = typeof(global::System.Nullable<global::System.Int32>);
-            _typeTable[65] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[66] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[67] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence);
-            _typeTable[68] = typeof(global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase);
-            _typeTable[69] = typeof(global::System.TimeSpan);
-            _typeTable[70] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost);
-            _typeTable[71] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection);
-            _typeTable[72] = typeof(global::Electroencephalograph.MainPage);
-            _typeTable[73] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[74] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[75] = typeof(global::Electroencephalograph.Common.ObservableDictionary);
-            _typeTable[76] = typeof(global::Electroencephalograph.Common.NavigationHelper);
+            _typeTable[30] = typeof(global::Windows.UI.Xaml.Media.PointCollection);
+            _typeTable[31] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis);
+            _typeTable[32] = typeof(global::System.Nullable<global::System.Int32>);
+            _typeTable[33] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[34] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[35] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence);
+            _typeTable[36] = typeof(global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase);
+            _typeTable[37] = typeof(global::System.TimeSpan);
+            _typeTable[38] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost);
+            _typeTable[39] = typeof(global::Electroencephalograph.MainPage);
+            _typeTable[40] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[41] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[42] = typeof(global::Electroencephalograph.Common.ObservableDictionary);
+            _typeTable[43] = typeof(global::Electroencephalograph.Common.NavigationHelper);
+            _typeTable[44] = typeof(global::Windows.UI.Xaml.DependencyObject);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -348,27 +284,10 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
         private object Activate_14_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>(); }
         private object Activate_15_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxisListener>(); }
         private object Activate_17_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis>(); }
-        private object Activate_20_SparrowChart() { return new global::Sparrow.Chart.SparrowChart(); }
-        private object Activate_21_SeriesCollection() { return new global::Sparrow.Chart.SeriesCollection(); }
-        private object Activate_22_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.SeriesBase>(); }
-        private object Activate_23_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.SeriesBase>(); }
-        private object Activate_31_PartsCollection() { return new global::Sparrow.Chart.PartsCollection(); }
-        private object Activate_32_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.SeriesPartBase>(); }
-        private object Activate_33_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.SeriesPartBase>(); }
-        private object Activate_34_SeriesPartBase() { return new global::Sparrow.Chart.SeriesPartBase(); }
-        private object Activate_38_PointsCollection() { return new global::Sparrow.Chart.PointsCollection(); }
-        private object Activate_39_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.ChartPoint>(); }
-        private object Activate_40_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.ChartPoint>(); }
-        private object Activate_41_ChartPoint() { return new global::Sparrow.Chart.ChartPoint(); }
-        private object Activate_43_Axes() { return new global::Sparrow.Chart.Axes(); }
-        private object Activate_44_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Sparrow.Chart.AxisBase>(); }
-        private object Activate_45_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Sparrow.Chart.AxisBase>(); }
-        private object Activate_49_Legend() { return new global::Sparrow.Chart.Legend(); }
-        private object Activate_53_List() { return new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>(); }
-        private object Activate_56_LineSeries() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries(); }
-        private object Activate_71_ResourceDictionaryCollection() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection(); }
-        private object Activate_72_MainPage() { return new global::Electroencephalograph.MainPage(); }
-        private object Activate_75_ObservableDictionary() { return new global::Electroencephalograph.Common.ObservableDictionary(); }
+        private object Activate_20_ResourceDictionaryCollection() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection(); }
+        private object Activate_22_LineSeries() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries(); }
+        private object Activate_39_MainPage() { return new global::Electroencephalograph.MainPage(); }
+        private object Activate_42_ObservableDictionary() { return new global::Electroencephalograph.Common.ObservableDictionary(); }
         private void VectorAdd_2_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>)instance;
@@ -423,91 +342,13 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             var newItem = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_21_SeriesCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.SeriesBase>)instance;
-            var newItem = (global::Sparrow.Chart.SeriesBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_22_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.SeriesBase>)instance;
-            var newItem = (global::Sparrow.Chart.SeriesBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_23_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.SeriesBase>)instance;
-            var newItem = (global::Sparrow.Chart.SeriesBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_31_PartsCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.SeriesPartBase>)instance;
-            var newItem = (global::Sparrow.Chart.SeriesPartBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_32_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.SeriesPartBase>)instance;
-            var newItem = (global::Sparrow.Chart.SeriesPartBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_33_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.SeriesPartBase>)instance;
-            var newItem = (global::Sparrow.Chart.SeriesPartBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_38_PointsCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.ChartPoint>)instance;
-            var newItem = (global::Sparrow.Chart.ChartPoint)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_39_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.ChartPoint>)instance;
-            var newItem = (global::Sparrow.Chart.ChartPoint)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_40_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.ChartPoint>)instance;
-            var newItem = (global::Sparrow.Chart.ChartPoint)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_43_Axes(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.AxisBase>)instance;
-            var newItem = (global::Sparrow.Chart.AxisBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_44_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.AxisBase>)instance;
-            var newItem = (global::Sparrow.Chart.AxisBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_45_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Sparrow.Chart.AxisBase>)instance;
-            var newItem = (global::Sparrow.Chart.AxisBase)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_53_List(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.Media.Brush>)instance;
-            var newItem = (global::Windows.UI.Xaml.Media.Brush)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_71_ResourceDictionaryCollection(object instance, object item)
+        private void VectorAdd_20_ResourceDictionaryCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.ResourceDictionary>)instance;
             var newItem = (global::Windows.UI.Xaml.ResourceDictionary)item;
             collection.Add(newItem);
         }
-        private void MapAdd_75_ObservableDictionary(object instance, object key, object item)
+        private void MapAdd_42_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -660,292 +501,26 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  Sparrow.Chart.SparrowChart
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_20_SparrowChart;
-                userType.SetContentPropertyName("Sparrow.Chart.SparrowChart.Series");
-                userType.AddMemberName("Series");
-                userType.AddMemberName("XAxis");
-                userType.AddMemberName("XAxes");
-                userType.AddMemberName("YAxes");
-                userType.AddMemberName("YAxis");
-                userType.AddMemberName("AxisHeight");
-                userType.AddMemberName("AxisWidth");
-                userType.AddMemberName("IsRefresh");
-                userType.AddMemberName("Legend");
-                userType.AddMemberName("Theme");
-                userType.AddMemberName("OverlayMode");
-                userType.AddMemberName("Brushes");
-                userType.AddMemberName("ContainerBorderStyle");
-                userType.AddMemberName("RenderingMode");
-                userType.AddMemberName("SeriesMarginPercentage");
+            case 20:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection
+                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>"));
+                userType.Activator = Activate_20_ResourceDictionaryCollection;
+                userType.CollectionAdd = VectorAdd_20_ResourceDictionaryCollection;
                 xamlType = userType;
                 break;
 
-            case 21:   //  Sparrow.Chart.SeriesCollection
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.SeriesBase>"));
-                userType.CollectionAdd = VectorAdd_21_SeriesCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 22:   //  System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.SeriesBase>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Sparrow.Chart.SeriesBase>"));
-                userType.Activator = Activate_22_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_22_ObservableCollection;
-                xamlType = userType;
-                break;
-
-            case 23:   //  System.Collections.ObjectModel.Collection`1<Sparrow.Chart.SeriesBase>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_23_Collection;
-                userType.CollectionAdd = VectorAdd_23_Collection;
-                xamlType = userType;
-                break;
-
-            case 24:   //  Sparrow.Chart.SeriesBase
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.AddMemberName("XAxis");
-                userType.AddMemberName("IsRefresh");
-                userType.AddMemberName("YAxis");
-                userType.AddMemberName("Parts");
-                userType.AddMemberName("UseSinglePart");
-                userType.AddMemberName("Chart");
-                userType.AddMemberName("Stroke");
-                userType.AddMemberName("Points");
-                userType.AddMemberName("XPath");
-                userType.AddMemberName("Label");
-                userType.AddMemberName("StrokeThickness");
-                xamlType = userType;
-                break;
-
-            case 25:   //  Sparrow.Chart.XAxis
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Sparrow.Chart.AxisBase"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 26:   //  Sparrow.Chart.AxisBase
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Canvas"));
-                userType.AddMemberName("ZoomOffset");
-                userType.AddMemberName("ZoomCoefficient");
-                userType.AddMemberName("MinValue");
-                userType.AddMemberName("MaxValue");
-                userType.AddMemberName("Interval");
-                userType.AddMemberName("AxisLineStyle");
-                userType.AddMemberName("StringFormat");
-                userType.AddMemberName("MinorLineSize");
-                userType.AddMemberName("MinorLineStyle");
-                userType.AddMemberName("MajorLineStyle");
-                userType.AddMemberName("MajorLineSize");
-                userType.AddMemberName("MajorTicksPosition");
-                userType.AddMemberName("MinorTicksPosition");
-                userType.AddMemberName("ShowMajorTicks");
-                userType.AddMemberName("MinorTicksCount");
-                userType.AddMemberName("Header");
-                userType.AddMemberName("HeaderTemplate");
-                userType.AddMemberName("Chart");
-                userType.AddMemberName("LabelTemplate");
-                userType.AddMemberName("LabelAngle");
-                userType.AddMemberName("ShowCrossLines");
-                userType.AddMemberName("ShowMinorCrossLines");
-                userType.AddMemberName("MinorCrossLineStyle");
-                userType.AddMemberName("CrossLineStyle");
-                userType.AddMemberName("Series");
-                xamlType = userType;
-                break;
-
-            case 27:   //  Windows.UI.Xaml.Controls.Canvas
+            case 21:   //  Int32
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 28:   //  Windows.UI.Xaml.Controls.Panel
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 29:   //  Boolean
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 30:   //  Sparrow.Chart.YAxis
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Sparrow.Chart.AxisBase"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 31:   //  Sparrow.Chart.PartsCollection
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.SeriesPartBase>"));
-                userType.CollectionAdd = VectorAdd_31_PartsCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 32:   //  System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.SeriesPartBase>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Sparrow.Chart.SeriesPartBase>"));
-                userType.Activator = Activate_32_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_32_ObservableCollection;
-                xamlType = userType;
-                break;
-
-            case 33:   //  System.Collections.ObjectModel.Collection`1<Sparrow.Chart.SeriesPartBase>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_33_Collection;
-                userType.CollectionAdd = VectorAdd_33_Collection;
-                xamlType = userType;
-                break;
-
-            case 34:   //  Sparrow.Chart.SeriesPartBase
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_34_SeriesPartBase;
-                userType.AddMemberName("Stroke");
-                userType.AddMemberName("StrokeThickness");
-                xamlType = userType;
-                break;
-
-            case 35:   //  Windows.UI.Xaml.FrameworkElement
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 36:   //  Windows.UI.Xaml.Media.Brush
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 37:   //  Double
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 38:   //  Sparrow.Chart.PointsCollection
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.ChartPoint>"));
-                userType.CollectionAdd = VectorAdd_38_PointsCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 39:   //  System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.ChartPoint>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Sparrow.Chart.ChartPoint>"));
-                userType.Activator = Activate_39_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_39_ObservableCollection;
-                xamlType = userType;
-                break;
-
-            case 40:   //  System.Collections.ObjectModel.Collection`1<Sparrow.Chart.ChartPoint>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_40_Collection;
-                userType.CollectionAdd = VectorAdd_40_Collection;
-                xamlType = userType;
-                break;
-
-            case 41:   //  Sparrow.Chart.ChartPoint
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_41_ChartPoint;
-                xamlType = userType;
-                break;
-
-            case 42:   //  String
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 43:   //  Sparrow.Chart.Axes
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.AxisBase>"));
-                userType.CollectionAdd = VectorAdd_43_Axes;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 44:   //  System.Collections.ObjectModel.ObservableCollection`1<Sparrow.Chart.AxisBase>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Sparrow.Chart.AxisBase>"));
-                userType.Activator = Activate_44_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_44_ObservableCollection;
-                xamlType = userType;
-                break;
-
-            case 45:   //  System.Collections.ObjectModel.Collection`1<Sparrow.Chart.AxisBase>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_45_Collection;
-                userType.CollectionAdd = VectorAdd_45_Collection;
-                xamlType = userType;
-                break;
-
-            case 46:   //  Sparrow.Chart.TickPosition
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Inside", global::Sparrow.Chart.TickPosition.Inside);
-                userType.AddEnumValue("Cross", global::Sparrow.Chart.TickPosition.Cross);
-                userType.AddEnumValue("Outside", global::Sparrow.Chart.TickPosition.Outside);
-                xamlType = userType;
-                break;
-
-            case 47:   //  Int32
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 48:   //  Windows.UI.Xaml.DataTemplate
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 49:   //  Sparrow.Chart.Legend
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ItemsControl"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 50:   //  Windows.UI.Xaml.Controls.ItemsControl
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 51:   //  Sparrow.Chart.Theme
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Arctic", global::Sparrow.Chart.Theme.Arctic);
-                userType.AddEnumValue("Autmn", global::Sparrow.Chart.Theme.Autmn);
-                userType.AddEnumValue("Cold", global::Sparrow.Chart.Theme.Cold);
-                userType.AddEnumValue("Flower", global::Sparrow.Chart.Theme.Flower);
-                userType.AddEnumValue("Forest", global::Sparrow.Chart.Theme.Forest);
-                userType.AddEnumValue("Grayscale", global::Sparrow.Chart.Theme.Grayscale);
-                userType.AddEnumValue("Ground", global::Sparrow.Chart.Theme.Ground);
-                userType.AddEnumValue("Lialac", global::Sparrow.Chart.Theme.Lialac);
-                userType.AddEnumValue("Natural", global::Sparrow.Chart.Theme.Natural);
-                userType.AddEnumValue("Pastel", global::Sparrow.Chart.Theme.Pastel);
-                userType.AddEnumValue("Rainbow", global::Sparrow.Chart.Theme.Rainbow);
-                userType.AddEnumValue("Spring", global::Sparrow.Chart.Theme.Spring);
-                userType.AddEnumValue("Summer", global::Sparrow.Chart.Theme.Summer);
-                userType.AddEnumValue("Warm", global::Sparrow.Chart.Theme.Warm);
-                userType.AddEnumValue("Metro", global::Sparrow.Chart.Theme.Metro);
-                userType.AddEnumValue("Custom", global::Sparrow.Chart.Theme.Custom);
-                xamlType = userType;
-                break;
-
-            case 52:   //  Sparrow.Chart.OverlayMode
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("AxisFirst", global::Sparrow.Chart.OverlayMode.AxisFirst);
-                userType.AddEnumValue("SeriesFirst", global::Sparrow.Chart.OverlayMode.SeriesFirst);
-                xamlType = userType;
-                break;
-
-            case 53:   //  System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_53_List;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 54:   //  Sparrow.Chart.RenderingMode
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Default", global::Sparrow.Chart.RenderingMode.Default);
-                xamlType = userType;
-                break;
-
-            case 55:   //  Windows.UI.Xaml.DependencyObject
-                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 56:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries
+            case 22:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>"));
-                userType.Activator = Activate_56_LineSeries;
+                userType.Activator = Activate_22_LineSeries;
                 userType.AddMemberName("Points");
                 userType.AddMemberName("PolylineStyle");
                 xamlType = userType;
                 break;
 
-            case 57:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>
+            case 23:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes"));
                 userType.AddMemberName("DependentRangeAxis");
                 userType.AddMemberName("IndependentAxis");
@@ -954,18 +529,18 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 58:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes
+            case 24:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes"));
                 userType.AddMemberName("GlobalSeriesIndex");
                 xamlType = userType;
                 break;
 
-            case 59:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes
+            case 25:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries"));
                 xamlType = userType;
                 break;
 
-            case 60:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries
+            case 26:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series"));
                 userType.AddMemberName("IndependentValuePath");
                 userType.AddMemberName("DependentValuePath");
@@ -982,7 +557,7 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 61:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Series
+            case 27:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Series
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.AddMemberName("SeriesHost");
                 userType.AddMemberName("LegendItems");
@@ -990,33 +565,41 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 62:   //  Windows.UI.Xaml.Media.PointCollection
+            case 28:   //  String
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 63:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis
+            case 29:   //  Boolean
+                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 30:   //  Windows.UI.Xaml.Media.PointCollection
+                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 31:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 64:   //  System.Nullable`1<Int32>
+            case 32:   //  System.Nullable`1<Int32>
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 65:   //  Windows.UI.Xaml.Data.Binding
+            case 33:   //  Windows.UI.Xaml.Data.Binding
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 66:   //  System.Collections.IEnumerable
+            case 34:   //  System.Collections.IEnumerable
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 67:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence
+            case 35:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Simultaneous", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence.Simultaneous);
                 userType.AddEnumValue("FirstToLast", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence.FirstToLast);
@@ -1024,56 +607,53 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 68:   //  Windows.UI.Xaml.Media.Animation.EasingFunctionBase
+            case 36:   //  Windows.UI.Xaml.Media.Animation.EasingFunctionBase
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 69:   //  TimeSpan
+            case 37:   //  TimeSpan
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 70:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost
+            case 38:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 71:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>"));
-                userType.Activator = Activate_71_ResourceDictionaryCollection;
-                userType.CollectionAdd = VectorAdd_71_ResourceDictionaryCollection;
-                xamlType = userType;
-                break;
-
-            case 72:   //  Electroencephalograph.MainPage
+            case 39:   //  Electroencephalograph.MainPage
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_72_MainPage;
+                userType.Activator = Activate_39_MainPage;
                 userType.AddMemberName("DefaultViewModel");
                 userType.AddMemberName("NavigationHelper");
                 xamlType = userType;
                 break;
 
-            case 73:   //  Windows.UI.Xaml.Controls.Page
+            case 40:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 74:   //  Windows.UI.Xaml.Controls.UserControl
+            case 41:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 75:   //  Electroencephalograph.Common.ObservableDictionary
+            case 42:   //  Electroencephalograph.Common.ObservableDictionary
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_75_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_42_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 76:   //  Electroencephalograph.Common.NavigationHelper
+            case 43:   //  Electroencephalograph.Common.NavigationHelper
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
+                break;
+
+            case 44:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -1088,8 +668,6 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 {
                     _otherProviders = new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider>();
                     global::Windows.UI.Xaml.Markup.IXamlMetadataProvider provider;
-                    provider = new global::Sparrow.Chart.Sparrow_Chart_WinRT_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
-                    _otherProviders.Add(provider); 
                     provider = new global::WinRTXamlToolkit.Controls.DataVisualization.WinRTXamlToolkit_Controls_DataVisualization_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
                     _otherProviders.Add(provider); 
                     provider = new global::WinRTXamlToolkit.WinRTXamlToolkit_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
@@ -1262,740 +840,212 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart)instance;
             that.TitleStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_15_SparrowChart_Series(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.Series;
-        }
-        private void set_15_SparrowChart_Series(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.Series = (global::Sparrow.Chart.SeriesCollection)Value;
-        }
-        private object get_16_SeriesBase_XAxis(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.XAxis;
-        }
-        private void set_16_SeriesBase_XAxis(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.XAxis = (global::Sparrow.Chart.XAxis)Value;
-        }
-        private object get_17_SeriesBase_IsRefresh(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.IsRefresh;
-        }
-        private void set_17_SeriesBase_IsRefresh(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.IsRefresh = (global::System.Boolean)Value;
-        }
-        private object get_18_SeriesBase_YAxis(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.YAxis;
-        }
-        private void set_18_SeriesBase_YAxis(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.YAxis = (global::Sparrow.Chart.YAxis)Value;
-        }
-        private object get_19_SeriesBase_Parts(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.Parts;
-        }
-        private void set_19_SeriesBase_Parts(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.Parts = (global::Sparrow.Chart.PartsCollection)Value;
-        }
-        private object get_20_SeriesPartBase_Stroke(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesPartBase)instance;
-            return that.Stroke;
-        }
-        private void set_20_SeriesPartBase_Stroke(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesPartBase)instance;
-            that.Stroke = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_21_SeriesPartBase_StrokeThickness(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesPartBase)instance;
-            return that.StrokeThickness;
-        }
-        private void set_21_SeriesPartBase_StrokeThickness(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesPartBase)instance;
-            that.StrokeThickness = (global::System.Double)Value;
-        }
-        private object get_22_SeriesBase_UseSinglePart(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.UseSinglePart;
-        }
-        private void set_22_SeriesBase_UseSinglePart(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.UseSinglePart = (global::System.Boolean)Value;
-        }
-        private object get_23_SeriesBase_Chart(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.Chart;
-        }
-        private void set_23_SeriesBase_Chart(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.Chart = (global::Sparrow.Chart.SparrowChart)Value;
-        }
-        private object get_24_SeriesBase_Stroke(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.Stroke;
-        }
-        private void set_24_SeriesBase_Stroke(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.Stroke = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_25_SeriesBase_Points(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.Points;
-        }
-        private void set_25_SeriesBase_Points(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.Points = (global::Sparrow.Chart.PointsCollection)Value;
-        }
-        private object get_26_SeriesBase_XPath(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.XPath;
-        }
-        private void set_26_SeriesBase_XPath(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.XPath = (global::System.String)Value;
-        }
-        private object get_27_SeriesBase_Label(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.Label;
-        }
-        private void set_27_SeriesBase_Label(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.Label = (global::System.Object)Value;
-        }
-        private object get_28_SeriesBase_StrokeThickness(object instance)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            return that.StrokeThickness;
-        }
-        private void set_28_SeriesBase_StrokeThickness(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SeriesBase)instance;
-            that.StrokeThickness = (global::System.Double)Value;
-        }
-        private object get_29_SparrowChart_XAxis(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.XAxis;
-        }
-        private void set_29_SparrowChart_XAxis(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.XAxis = (global::Sparrow.Chart.XAxis)Value;
-        }
-        private object get_30_SparrowChart_XAxes(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.XAxes;
-        }
-        private void set_30_SparrowChart_XAxes(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.XAxes = (global::Sparrow.Chart.Axes)Value;
-        }
-        private object get_31_AxisBase_ZoomOffset(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.ZoomOffset;
-        }
-        private void set_31_AxisBase_ZoomOffset(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.ZoomOffset = (global::System.Double)Value;
-        }
-        private object get_32_AxisBase_ZoomCoefficient(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.ZoomCoefficient;
-        }
-        private void set_32_AxisBase_ZoomCoefficient(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.ZoomCoefficient = (global::System.Double)Value;
-        }
-        private object get_33_AxisBase_MinValue(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MinValue;
-        }
-        private void set_33_AxisBase_MinValue(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MinValue = (global::System.Object)Value;
-        }
-        private object get_34_AxisBase_MaxValue(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MaxValue;
-        }
-        private void set_34_AxisBase_MaxValue(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MaxValue = (global::System.Object)Value;
-        }
-        private object get_35_AxisBase_Interval(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.Interval;
-        }
-        private void set_35_AxisBase_Interval(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.Interval = (global::System.Object)Value;
-        }
-        private object get_36_AxisBase_AxisLineStyle(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.AxisLineStyle;
-        }
-        private void set_36_AxisBase_AxisLineStyle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.AxisLineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_37_AxisBase_StringFormat(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.StringFormat;
-        }
-        private void set_37_AxisBase_StringFormat(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.StringFormat = (global::System.String)Value;
-        }
-        private object get_38_AxisBase_MinorLineSize(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MinorLineSize;
-        }
-        private void set_38_AxisBase_MinorLineSize(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MinorLineSize = (global::System.Double)Value;
-        }
-        private object get_39_AxisBase_MinorLineStyle(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MinorLineStyle;
-        }
-        private void set_39_AxisBase_MinorLineStyle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MinorLineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_40_AxisBase_MajorLineStyle(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MajorLineStyle;
-        }
-        private void set_40_AxisBase_MajorLineStyle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MajorLineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_41_AxisBase_MajorLineSize(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MajorLineSize;
-        }
-        private void set_41_AxisBase_MajorLineSize(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MajorLineSize = (global::System.Double)Value;
-        }
-        private object get_42_AxisBase_MajorTicksPosition(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MajorTicksPosition;
-        }
-        private void set_42_AxisBase_MajorTicksPosition(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MajorTicksPosition = (global::Sparrow.Chart.TickPosition)Value;
-        }
-        private object get_43_AxisBase_MinorTicksPosition(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MinorTicksPosition;
-        }
-        private void set_43_AxisBase_MinorTicksPosition(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MinorTicksPosition = (global::Sparrow.Chart.TickPosition)Value;
-        }
-        private object get_44_AxisBase_ShowMajorTicks(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.ShowMajorTicks;
-        }
-        private void set_44_AxisBase_ShowMajorTicks(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.ShowMajorTicks = (global::System.Boolean)Value;
-        }
-        private object get_45_AxisBase_MinorTicksCount(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MinorTicksCount;
-        }
-        private void set_45_AxisBase_MinorTicksCount(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MinorTicksCount = (global::System.Int32)Value;
-        }
-        private object get_46_AxisBase_Header(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.Header;
-        }
-        private void set_46_AxisBase_Header(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_47_AxisBase_HeaderTemplate(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.HeaderTemplate;
-        }
-        private void set_47_AxisBase_HeaderTemplate(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.HeaderTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_48_AxisBase_Chart(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.Chart;
-        }
-        private void set_48_AxisBase_Chart(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.Chart = (global::Sparrow.Chart.SparrowChart)Value;
-        }
-        private object get_49_AxisBase_LabelTemplate(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.LabelTemplate;
-        }
-        private void set_49_AxisBase_LabelTemplate(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.LabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_50_AxisBase_LabelAngle(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.LabelAngle;
-        }
-        private void set_50_AxisBase_LabelAngle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.LabelAngle = (global::System.Double)Value;
-        }
-        private object get_51_AxisBase_ShowCrossLines(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.ShowCrossLines;
-        }
-        private void set_51_AxisBase_ShowCrossLines(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.ShowCrossLines = (global::System.Boolean)Value;
-        }
-        private object get_52_AxisBase_ShowMinorCrossLines(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.ShowMinorCrossLines;
-        }
-        private void set_52_AxisBase_ShowMinorCrossLines(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.ShowMinorCrossLines = (global::System.Boolean)Value;
-        }
-        private object get_53_AxisBase_MinorCrossLineStyle(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.MinorCrossLineStyle;
-        }
-        private void set_53_AxisBase_MinorCrossLineStyle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.MinorCrossLineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_54_AxisBase_CrossLineStyle(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.CrossLineStyle;
-        }
-        private void set_54_AxisBase_CrossLineStyle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.CrossLineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_55_AxisBase_Series(object instance)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            return that.Series;
-        }
-        private void set_55_AxisBase_Series(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.AxisBase)instance;
-            that.Series = (global::Sparrow.Chart.SeriesCollection)Value;
-        }
-        private object get_56_SparrowChart_YAxes(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.YAxes;
-        }
-        private void set_56_SparrowChart_YAxes(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.YAxes = (global::Sparrow.Chart.Axes)Value;
-        }
-        private object get_57_SparrowChart_YAxis(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.YAxis;
-        }
-        private void set_57_SparrowChart_YAxis(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.YAxis = (global::Sparrow.Chart.YAxis)Value;
-        }
-        private object get_58_SparrowChart_AxisHeight(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.AxisHeight;
-        }
-        private void set_58_SparrowChart_AxisHeight(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.AxisHeight = (global::System.Double)Value;
-        }
-        private object get_59_SparrowChart_AxisWidth(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.AxisWidth;
-        }
-        private void set_59_SparrowChart_AxisWidth(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.AxisWidth = (global::System.Double)Value;
-        }
-        private object get_60_SparrowChart_IsRefresh(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.IsRefresh;
-        }
-        private void set_60_SparrowChart_IsRefresh(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.IsRefresh = (global::System.Boolean)Value;
-        }
-        private object get_61_SparrowChart_Legend(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.Legend;
-        }
-        private void set_61_SparrowChart_Legend(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.Legend = (global::Sparrow.Chart.Legend)Value;
-        }
-        private object get_62_SparrowChart_Theme(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.Theme;
-        }
-        private void set_62_SparrowChart_Theme(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.Theme = (global::Sparrow.Chart.Theme)Value;
-        }
-        private object get_63_SparrowChart_OverlayMode(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.OverlayMode;
-        }
-        private void set_63_SparrowChart_OverlayMode(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.OverlayMode = (global::Sparrow.Chart.OverlayMode)Value;
-        }
-        private object get_64_SparrowChart_Brushes(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.Brushes;
-        }
-        private void set_64_SparrowChart_Brushes(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.Brushes = (global::System.Collections.Generic.List<global::Windows.UI.Xaml.Media.Brush>)Value;
-        }
-        private object get_65_SparrowChart_ContainerBorderStyle(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.ContainerBorderStyle;
-        }
-        private void set_65_SparrowChart_ContainerBorderStyle(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.ContainerBorderStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_66_SparrowChart_RenderingMode(object instance)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            return that.RenderingMode;
-        }
-        private void set_66_SparrowChart_RenderingMode(object instance, object Value)
-        {
-            var that = (global::Sparrow.Chart.SparrowChart)instance;
-            that.RenderingMode = (global::Sparrow.Chart.RenderingMode)Value;
-        }
-        private object get_67_SparrowChart_SeriesMarginPercentage(object instance)
-        {
-            return global::Sparrow.Chart.SparrowChart.GetSeriesMarginPercentage((global::Windows.UI.Xaml.DependencyObject)instance);
-        }
-        private void set_67_SparrowChart_SeriesMarginPercentage(object instance, object Value)
-        {
-            global::Sparrow.Chart.SparrowChart.SetSeriesMarginPercentage((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Double)Value);
-        }
-        private object get_68_DataPointSeries_IndependentValuePath(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.IndependentValuePath;
-        }
-        private void set_68_DataPointSeries_IndependentValuePath(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.IndependentValuePath = (global::System.String)Value;
-        }
-        private object get_69_DataPointSeries_DependentValuePath(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.DependentValuePath;
-        }
-        private void set_69_DataPointSeries_DependentValuePath(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.DependentValuePath = (global::System.String)Value;
-        }
-        private object get_70_DataPointSeries_IsSelectionEnabled(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.IsSelectionEnabled;
-        }
-        private void set_70_DataPointSeries_IsSelectionEnabled(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.IsSelectionEnabled = (global::System.Boolean)Value;
-        }
-        private object get_71_LineSeries_Points(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
-            return that.Points;
-        }
-        private object get_72_LineSeries_PolylineStyle(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
-            return that.PolylineStyle;
-        }
-        private void set_72_LineSeries_PolylineStyle(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
-            that.PolylineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_73_LineAreaBaseSeries_DependentRangeAxis(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
-            return that.DependentRangeAxis;
-        }
-        private void set_73_LineAreaBaseSeries_DependentRangeAxis(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
-            that.DependentRangeAxis = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis)Value;
-        }
-        private object get_74_LineAreaBaseSeries_IndependentAxis(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
-            return that.IndependentAxis;
-        }
-        private void set_74_LineAreaBaseSeries_IndependentAxis(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
-            that.IndependentAxis = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)Value;
-        }
-        private object get_75_LineAreaBaseSeries_ActualIndependentAxis(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
-            return that.ActualIndependentAxis;
-        }
-        private object get_76_LineAreaBaseSeries_ActualDependentRangeAxis(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
-            return that.ActualDependentRangeAxis;
-        }
-        private object get_77_DataPointSingleSeriesWithAxes_GlobalSeriesIndex(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes)instance;
-            return that.GlobalSeriesIndex;
-        }
-        private object get_78_DataPointSeries_DependentValueBinding(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.DependentValueBinding;
-        }
-        private void set_78_DataPointSeries_DependentValueBinding(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.DependentValueBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
-        }
-        private object get_79_DataPointSeries_IndependentValueBinding(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.IndependentValueBinding;
-        }
-        private void set_79_DataPointSeries_IndependentValueBinding(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.IndependentValueBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
-        }
-        private object get_80_DataPointSeries_ItemsSource(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.ItemsSource;
-        }
-        private void set_80_DataPointSeries_ItemsSource(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.ItemsSource = (global::System.Collections.IEnumerable)Value;
-        }
-        private object get_81_DataPointSeries_AnimationSequence(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.AnimationSequence;
-        }
-        private void set_81_DataPointSeries_AnimationSequence(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.AnimationSequence = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence)Value;
-        }
-        private object get_82_DataPointSeries_TransitionEasingFunction(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.TransitionEasingFunction;
-        }
-        private void set_82_DataPointSeries_TransitionEasingFunction(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.TransitionEasingFunction = (global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase)Value;
-        }
-        private object get_83_DataPointSeries_SelectedItem(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.SelectedItem;
-        }
-        private void set_83_DataPointSeries_SelectedItem(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.SelectedItem = (global::System.Object)Value;
-        }
-        private object get_84_DataPointSeries_DataPointStyle(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.DataPointStyle;
-        }
-        private void set_84_DataPointSeries_DataPointStyle(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.DataPointStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_85_DataPointSeries_LegendItemStyle(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.LegendItemStyle;
-        }
-        private void set_85_DataPointSeries_LegendItemStyle(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.LegendItemStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_86_DataPointSeries_TransitionDuration(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            return that.TransitionDuration;
-        }
-        private void set_86_DataPointSeries_TransitionDuration(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
-            that.TransitionDuration = (global::System.TimeSpan)Value;
-        }
-        private object get_87_Series_SeriesHost(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
-            return that.SeriesHost;
-        }
-        private void set_87_Series_SeriesHost(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
-            that.SeriesHost = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost)Value;
-        }
-        private object get_88_Series_LegendItems(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
-            return that.LegendItems;
-        }
-        private object get_89_Series_Title(object instance)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
-            return that.Title;
-        }
-        private void set_89_Series_Title(object instance, object Value)
-        {
-            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
-            that.Title = (global::System.Object)Value;
-        }
-        private object get_90_Collection_Count(object instance)
+        private object get_15_Collection_Count(object instance)
         {
             var that = (global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.ResourceDictionary>)instance;
             return that.Count;
         }
-        private object get_91_MainPage_DefaultViewModel(object instance)
+        private object get_16_DataPointSeries_IndependentValuePath(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.IndependentValuePath;
+        }
+        private void set_16_DataPointSeries_IndependentValuePath(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.IndependentValuePath = (global::System.String)Value;
+        }
+        private object get_17_DataPointSeries_DependentValuePath(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.DependentValuePath;
+        }
+        private void set_17_DataPointSeries_DependentValuePath(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.DependentValuePath = (global::System.String)Value;
+        }
+        private object get_18_DataPointSeries_IsSelectionEnabled(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.IsSelectionEnabled;
+        }
+        private void set_18_DataPointSeries_IsSelectionEnabled(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.IsSelectionEnabled = (global::System.Boolean)Value;
+        }
+        private object get_19_LineSeries_Points(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
+            return that.Points;
+        }
+        private object get_20_LineSeries_PolylineStyle(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
+            return that.PolylineStyle;
+        }
+        private void set_20_LineSeries_PolylineStyle(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
+            that.PolylineStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_21_LineAreaBaseSeries_DependentRangeAxis(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
+            return that.DependentRangeAxis;
+        }
+        private void set_21_LineAreaBaseSeries_DependentRangeAxis(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
+            that.DependentRangeAxis = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis)Value;
+        }
+        private object get_22_LineAreaBaseSeries_IndependentAxis(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
+            return that.IndependentAxis;
+        }
+        private void set_22_LineAreaBaseSeries_IndependentAxis(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
+            that.IndependentAxis = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)Value;
+        }
+        private object get_23_LineAreaBaseSeries_ActualIndependentAxis(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
+            return that.ActualIndependentAxis;
+        }
+        private object get_24_LineAreaBaseSeries_ActualDependentRangeAxis(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
+            return that.ActualDependentRangeAxis;
+        }
+        private object get_25_DataPointSingleSeriesWithAxes_GlobalSeriesIndex(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes)instance;
+            return that.GlobalSeriesIndex;
+        }
+        private object get_26_DataPointSeries_DependentValueBinding(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.DependentValueBinding;
+        }
+        private void set_26_DataPointSeries_DependentValueBinding(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.DependentValueBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
+        }
+        private object get_27_DataPointSeries_IndependentValueBinding(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.IndependentValueBinding;
+        }
+        private void set_27_DataPointSeries_IndependentValueBinding(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.IndependentValueBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
+        }
+        private object get_28_DataPointSeries_ItemsSource(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.ItemsSource;
+        }
+        private void set_28_DataPointSeries_ItemsSource(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.ItemsSource = (global::System.Collections.IEnumerable)Value;
+        }
+        private object get_29_DataPointSeries_AnimationSequence(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.AnimationSequence;
+        }
+        private void set_29_DataPointSeries_AnimationSequence(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.AnimationSequence = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence)Value;
+        }
+        private object get_30_DataPointSeries_TransitionEasingFunction(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.TransitionEasingFunction;
+        }
+        private void set_30_DataPointSeries_TransitionEasingFunction(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.TransitionEasingFunction = (global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase)Value;
+        }
+        private object get_31_DataPointSeries_SelectedItem(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.SelectedItem;
+        }
+        private void set_31_DataPointSeries_SelectedItem(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.SelectedItem = (global::System.Object)Value;
+        }
+        private object get_32_DataPointSeries_DataPointStyle(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.DataPointStyle;
+        }
+        private void set_32_DataPointSeries_DataPointStyle(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.DataPointStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_33_DataPointSeries_LegendItemStyle(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.LegendItemStyle;
+        }
+        private void set_33_DataPointSeries_LegendItemStyle(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.LegendItemStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_34_DataPointSeries_TransitionDuration(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            return that.TransitionDuration;
+        }
+        private void set_34_DataPointSeries_TransitionDuration(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
+            that.TransitionDuration = (global::System.TimeSpan)Value;
+        }
+        private object get_35_Series_SeriesHost(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
+            return that.SeriesHost;
+        }
+        private void set_35_Series_SeriesHost(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
+            that.SeriesHost = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost)Value;
+        }
+        private object get_36_Series_LegendItems(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
+            return that.LegendItems;
+        }
+        private object get_37_Series_Title(object instance)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
+            return that.Title;
+        }
+        private void set_37_Series_Title(object instance, object Value)
+        {
+            var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
+            that.Title = (global::System.Object)Value;
+        }
+        private object get_38_MainPage_DefaultViewModel(object instance)
         {
             var that = (global::Electroencephalograph.MainPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_92_MainPage_NavigationHelper(object instance)
+        private object get_39_MainPage_NavigationHelper(object instance)
         {
             var that = (global::Electroencephalograph.MainPage)instance;
             return that.NavigationHelper;
@@ -2105,540 +1155,168 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlMember.Getter = get_14_Chart_TitleStyle;
                 xamlMember.Setter = set_14_Chart_TitleStyle;
                 break;
-            case "Sparrow.Chart.SparrowChart.Series":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Series", "Sparrow.Chart.SeriesCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_SparrowChart_Series;
-                xamlMember.Setter = set_15_SparrowChart_Series;
-                break;
-            case "Sparrow.Chart.SeriesBase.XAxis":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XAxis", "Sparrow.Chart.XAxis");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_SeriesBase_XAxis;
-                xamlMember.Setter = set_16_SeriesBase_XAxis;
-                break;
-            case "Sparrow.Chart.SeriesBase.IsRefresh":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsRefresh", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_SeriesBase_IsRefresh;
-                xamlMember.Setter = set_17_SeriesBase_IsRefresh;
-                break;
-            case "Sparrow.Chart.SeriesBase.YAxis":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YAxis", "Sparrow.Chart.YAxis");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_18_SeriesBase_YAxis;
-                xamlMember.Setter = set_18_SeriesBase_YAxis;
-                break;
-            case "Sparrow.Chart.SeriesBase.Parts":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Parts", "Sparrow.Chart.PartsCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_19_SeriesBase_Parts;
-                xamlMember.Setter = set_19_SeriesBase_Parts;
-                break;
-            case "Sparrow.Chart.SeriesPartBase.Stroke":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesPartBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Stroke", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_20_SeriesPartBase_Stroke;
-                xamlMember.Setter = set_20_SeriesPartBase_Stroke;
-                break;
-            case "Sparrow.Chart.SeriesPartBase.StrokeThickness":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesPartBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StrokeThickness", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_21_SeriesPartBase_StrokeThickness;
-                xamlMember.Setter = set_21_SeriesPartBase_StrokeThickness;
-                break;
-            case "Sparrow.Chart.SeriesBase.UseSinglePart":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "UseSinglePart", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_22_SeriesBase_UseSinglePart;
-                xamlMember.Setter = set_22_SeriesBase_UseSinglePart;
-                break;
-            case "Sparrow.Chart.SeriesBase.Chart":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Chart", "Sparrow.Chart.SparrowChart");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_SeriesBase_Chart;
-                xamlMember.Setter = set_23_SeriesBase_Chart;
-                break;
-            case "Sparrow.Chart.SeriesBase.Stroke":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Stroke", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_SeriesBase_Stroke;
-                xamlMember.Setter = set_24_SeriesBase_Stroke;
-                break;
-            case "Sparrow.Chart.SeriesBase.Points":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Points", "Sparrow.Chart.PointsCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_SeriesBase_Points;
-                xamlMember.Setter = set_25_SeriesBase_Points;
-                break;
-            case "Sparrow.Chart.SeriesBase.XPath":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XPath", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_26_SeriesBase_XPath;
-                xamlMember.Setter = set_26_SeriesBase_XPath;
-                break;
-            case "Sparrow.Chart.SeriesBase.Label":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Label", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_27_SeriesBase_Label;
-                xamlMember.Setter = set_27_SeriesBase_Label;
-                break;
-            case "Sparrow.Chart.SeriesBase.StrokeThickness":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SeriesBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StrokeThickness", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_28_SeriesBase_StrokeThickness;
-                xamlMember.Setter = set_28_SeriesBase_StrokeThickness;
-                break;
-            case "Sparrow.Chart.SparrowChart.XAxis":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XAxis", "Sparrow.Chart.XAxis");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_29_SparrowChart_XAxis;
-                xamlMember.Setter = set_29_SparrowChart_XAxis;
-                break;
-            case "Sparrow.Chart.SparrowChart.XAxes":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XAxes", "Sparrow.Chart.Axes");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_30_SparrowChart_XAxes;
-                xamlMember.Setter = set_30_SparrowChart_XAxes;
-                break;
-            case "Sparrow.Chart.AxisBase.ZoomOffset":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ZoomOffset", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_31_AxisBase_ZoomOffset;
-                xamlMember.Setter = set_31_AxisBase_ZoomOffset;
-                break;
-            case "Sparrow.Chart.AxisBase.ZoomCoefficient":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ZoomCoefficient", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_AxisBase_ZoomCoefficient;
-                xamlMember.Setter = set_32_AxisBase_ZoomCoefficient;
-                break;
-            case "Sparrow.Chart.AxisBase.MinValue":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinValue", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_AxisBase_MinValue;
-                xamlMember.Setter = set_33_AxisBase_MinValue;
-                break;
-            case "Sparrow.Chart.AxisBase.MaxValue":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MaxValue", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_AxisBase_MaxValue;
-                xamlMember.Setter = set_34_AxisBase_MaxValue;
-                break;
-            case "Sparrow.Chart.AxisBase.Interval":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Interval", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_AxisBase_Interval;
-                xamlMember.Setter = set_35_AxisBase_Interval;
-                break;
-            case "Sparrow.Chart.AxisBase.AxisLineStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AxisLineStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_36_AxisBase_AxisLineStyle;
-                xamlMember.Setter = set_36_AxisBase_AxisLineStyle;
-                break;
-            case "Sparrow.Chart.AxisBase.StringFormat":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StringFormat", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_AxisBase_StringFormat;
-                xamlMember.Setter = set_37_AxisBase_StringFormat;
-                break;
-            case "Sparrow.Chart.AxisBase.MinorLineSize":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorLineSize", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_AxisBase_MinorLineSize;
-                xamlMember.Setter = set_38_AxisBase_MinorLineSize;
-                break;
-            case "Sparrow.Chart.AxisBase.MinorLineStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorLineStyle", "Windows.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_39_AxisBase_MinorLineStyle;
-                xamlMember.Setter = set_39_AxisBase_MinorLineStyle;
-                break;
-            case "Sparrow.Chart.AxisBase.MajorLineStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MajorLineStyle", "Windows.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_AxisBase_MajorLineStyle;
-                xamlMember.Setter = set_40_AxisBase_MajorLineStyle;
-                break;
-            case "Sparrow.Chart.AxisBase.MajorLineSize":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MajorLineSize", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_41_AxisBase_MajorLineSize;
-                xamlMember.Setter = set_41_AxisBase_MajorLineSize;
-                break;
-            case "Sparrow.Chart.AxisBase.MajorTicksPosition":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MajorTicksPosition", "Sparrow.Chart.TickPosition");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_42_AxisBase_MajorTicksPosition;
-                xamlMember.Setter = set_42_AxisBase_MajorTicksPosition;
-                break;
-            case "Sparrow.Chart.AxisBase.MinorTicksPosition":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorTicksPosition", "Sparrow.Chart.TickPosition");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_43_AxisBase_MinorTicksPosition;
-                xamlMember.Setter = set_43_AxisBase_MinorTicksPosition;
-                break;
-            case "Sparrow.Chart.AxisBase.ShowMajorTicks":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowMajorTicks", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_44_AxisBase_ShowMajorTicks;
-                xamlMember.Setter = set_44_AxisBase_ShowMajorTicks;
-                break;
-            case "Sparrow.Chart.AxisBase.MinorTicksCount":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorTicksCount", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_45_AxisBase_MinorTicksCount;
-                xamlMember.Setter = set_45_AxisBase_MinorTicksCount;
-                break;
-            case "Sparrow.Chart.AxisBase.Header":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Header", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_46_AxisBase_Header;
-                xamlMember.Setter = set_46_AxisBase_Header;
-                break;
-            case "Sparrow.Chart.AxisBase.HeaderTemplate":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_47_AxisBase_HeaderTemplate;
-                xamlMember.Setter = set_47_AxisBase_HeaderTemplate;
-                break;
-            case "Sparrow.Chart.AxisBase.Chart":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Chart", "Sparrow.Chart.SparrowChart");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_48_AxisBase_Chart;
-                xamlMember.Setter = set_48_AxisBase_Chart;
-                break;
-            case "Sparrow.Chart.AxisBase.LabelTemplate":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_AxisBase_LabelTemplate;
-                xamlMember.Setter = set_49_AxisBase_LabelTemplate;
-                break;
-            case "Sparrow.Chart.AxisBase.LabelAngle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelAngle", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_AxisBase_LabelAngle;
-                xamlMember.Setter = set_50_AxisBase_LabelAngle;
-                break;
-            case "Sparrow.Chart.AxisBase.ShowCrossLines":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowCrossLines", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_AxisBase_ShowCrossLines;
-                xamlMember.Setter = set_51_AxisBase_ShowCrossLines;
-                break;
-            case "Sparrow.Chart.AxisBase.ShowMinorCrossLines":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowMinorCrossLines", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_AxisBase_ShowMinorCrossLines;
-                xamlMember.Setter = set_52_AxisBase_ShowMinorCrossLines;
-                break;
-            case "Sparrow.Chart.AxisBase.MinorCrossLineStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorCrossLineStyle", "Windows.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_AxisBase_MinorCrossLineStyle;
-                xamlMember.Setter = set_53_AxisBase_MinorCrossLineStyle;
-                break;
-            case "Sparrow.Chart.AxisBase.CrossLineStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "CrossLineStyle", "Windows.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_54_AxisBase_CrossLineStyle;
-                xamlMember.Setter = set_54_AxisBase_CrossLineStyle;
-                break;
-            case "Sparrow.Chart.AxisBase.Series":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.AxisBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Series", "Sparrow.Chart.SeriesCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_AxisBase_Series;
-                xamlMember.Setter = set_55_AxisBase_Series;
-                break;
-            case "Sparrow.Chart.SparrowChart.YAxes":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YAxes", "Sparrow.Chart.Axes");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_SparrowChart_YAxes;
-                xamlMember.Setter = set_56_SparrowChart_YAxes;
-                break;
-            case "Sparrow.Chart.SparrowChart.YAxis":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YAxis", "Sparrow.Chart.YAxis");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_SparrowChart_YAxis;
-                xamlMember.Setter = set_57_SparrowChart_YAxis;
-                break;
-            case "Sparrow.Chart.SparrowChart.AxisHeight":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AxisHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_SparrowChart_AxisHeight;
-                xamlMember.Setter = set_58_SparrowChart_AxisHeight;
-                break;
-            case "Sparrow.Chart.SparrowChart.AxisWidth":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AxisWidth", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_SparrowChart_AxisWidth;
-                xamlMember.Setter = set_59_SparrowChart_AxisWidth;
-                break;
-            case "Sparrow.Chart.SparrowChart.IsRefresh":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsRefresh", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_SparrowChart_IsRefresh;
-                xamlMember.Setter = set_60_SparrowChart_IsRefresh;
-                break;
-            case "Sparrow.Chart.SparrowChart.Legend":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Legend", "Sparrow.Chart.Legend");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_SparrowChart_Legend;
-                xamlMember.Setter = set_61_SparrowChart_Legend;
-                break;
-            case "Sparrow.Chart.SparrowChart.Theme":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Theme", "Sparrow.Chart.Theme");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_SparrowChart_Theme;
-                xamlMember.Setter = set_62_SparrowChart_Theme;
-                break;
-            case "Sparrow.Chart.SparrowChart.OverlayMode":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "OverlayMode", "Sparrow.Chart.OverlayMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_SparrowChart_OverlayMode;
-                xamlMember.Setter = set_63_SparrowChart_OverlayMode;
-                break;
-            case "Sparrow.Chart.SparrowChart.Brushes":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Brushes", "System.Collections.Generic.List`1<Windows.UI.Xaml.Media.Brush>");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_SparrowChart_Brushes;
-                xamlMember.Setter = set_64_SparrowChart_Brushes;
-                break;
-            case "Sparrow.Chart.SparrowChart.ContainerBorderStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ContainerBorderStyle", "Windows.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_SparrowChart_ContainerBorderStyle;
-                xamlMember.Setter = set_65_SparrowChart_ContainerBorderStyle;
-                break;
-            case "Sparrow.Chart.SparrowChart.RenderingMode":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RenderingMode", "Sparrow.Chart.RenderingMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_SparrowChart_RenderingMode;
-                xamlMember.Setter = set_66_SparrowChart_RenderingMode;
-                break;
-            case "Sparrow.Chart.SparrowChart.SeriesMarginPercentage":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Sparrow.Chart.SparrowChart");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SeriesMarginPercentage", "Double");
-                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_67_SparrowChart_SeriesMarginPercentage;
-                xamlMember.Setter = set_67_SparrowChart_SeriesMarginPercentage;
+            case "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>.Count":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Count", "Int32");
+                xamlMember.Getter = get_15_Collection_Count;
+                xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.IndependentValuePath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IndependentValuePath", "String");
-                xamlMember.Getter = get_68_DataPointSeries_IndependentValuePath;
-                xamlMember.Setter = set_68_DataPointSeries_IndependentValuePath;
+                xamlMember.Getter = get_16_DataPointSeries_IndependentValuePath;
+                xamlMember.Setter = set_16_DataPointSeries_IndependentValuePath;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.DependentValuePath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DependentValuePath", "String");
-                xamlMember.Getter = get_69_DataPointSeries_DependentValuePath;
-                xamlMember.Setter = set_69_DataPointSeries_DependentValuePath;
+                xamlMember.Getter = get_17_DataPointSeries_DependentValuePath;
+                xamlMember.Setter = set_17_DataPointSeries_DependentValuePath;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.IsSelectionEnabled":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsSelectionEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_DataPointSeries_IsSelectionEnabled;
-                xamlMember.Setter = set_70_DataPointSeries_IsSelectionEnabled;
+                xamlMember.Getter = get_18_DataPointSeries_IsSelectionEnabled;
+                xamlMember.Setter = set_18_DataPointSeries_IsSelectionEnabled;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries.Points":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Points", "Windows.UI.Xaml.Media.PointCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_71_LineSeries_Points;
+                xamlMember.Getter = get_19_LineSeries_Points;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries.PolylineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PolylineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_LineSeries_PolylineStyle;
-                xamlMember.Setter = set_72_LineSeries_PolylineStyle;
+                xamlMember.Getter = get_20_LineSeries_PolylineStyle;
+                xamlMember.Setter = set_20_LineSeries_PolylineStyle;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.DependentRangeAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DependentRangeAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_LineAreaBaseSeries_DependentRangeAxis;
-                xamlMember.Setter = set_73_LineAreaBaseSeries_DependentRangeAxis;
+                xamlMember.Getter = get_21_LineAreaBaseSeries_DependentRangeAxis;
+                xamlMember.Setter = set_21_LineAreaBaseSeries_DependentRangeAxis;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.IndependentAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IndependentAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_LineAreaBaseSeries_IndependentAxis;
-                xamlMember.Setter = set_74_LineAreaBaseSeries_IndependentAxis;
+                xamlMember.Getter = get_22_LineAreaBaseSeries_IndependentAxis;
+                xamlMember.Setter = set_22_LineAreaBaseSeries_IndependentAxis;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.ActualIndependentAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ActualIndependentAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis");
-                xamlMember.Getter = get_75_LineAreaBaseSeries_ActualIndependentAxis;
+                xamlMember.Getter = get_23_LineAreaBaseSeries_ActualIndependentAxis;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.ActualDependentRangeAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ActualDependentRangeAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis");
-                xamlMember.Getter = get_76_LineAreaBaseSeries_ActualDependentRangeAxis;
+                xamlMember.Getter = get_24_LineAreaBaseSeries_ActualDependentRangeAxis;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes.GlobalSeriesIndex":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "GlobalSeriesIndex", "System.Nullable`1<Int32>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_DataPointSingleSeriesWithAxes_GlobalSeriesIndex;
+                xamlMember.Getter = get_25_DataPointSingleSeriesWithAxes_GlobalSeriesIndex;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.DependentValueBinding":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DependentValueBinding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_78_DataPointSeries_DependentValueBinding;
-                xamlMember.Setter = set_78_DataPointSeries_DependentValueBinding;
+                xamlMember.Getter = get_26_DataPointSeries_DependentValueBinding;
+                xamlMember.Setter = set_26_DataPointSeries_DependentValueBinding;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.IndependentValueBinding":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IndependentValueBinding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_79_DataPointSeries_IndependentValueBinding;
-                xamlMember.Setter = set_79_DataPointSeries_IndependentValueBinding;
+                xamlMember.Getter = get_27_DataPointSeries_IndependentValueBinding;
+                xamlMember.Setter = set_27_DataPointSeries_IndependentValueBinding;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.ItemsSource":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.IEnumerable");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_80_DataPointSeries_ItemsSource;
-                xamlMember.Setter = set_80_DataPointSeries_ItemsSource;
+                xamlMember.Getter = get_28_DataPointSeries_ItemsSource;
+                xamlMember.Setter = set_28_DataPointSeries_ItemsSource;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.AnimationSequence":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AnimationSequence", "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_81_DataPointSeries_AnimationSequence;
-                xamlMember.Setter = set_81_DataPointSeries_AnimationSequence;
+                xamlMember.Getter = get_29_DataPointSeries_AnimationSequence;
+                xamlMember.Setter = set_29_DataPointSeries_AnimationSequence;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.TransitionEasingFunction":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TransitionEasingFunction", "Windows.UI.Xaml.Media.Animation.EasingFunctionBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_82_DataPointSeries_TransitionEasingFunction;
-                xamlMember.Setter = set_82_DataPointSeries_TransitionEasingFunction;
+                xamlMember.Getter = get_30_DataPointSeries_TransitionEasingFunction;
+                xamlMember.Setter = set_30_DataPointSeries_TransitionEasingFunction;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.SelectedItem":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_83_DataPointSeries_SelectedItem;
-                xamlMember.Setter = set_83_DataPointSeries_SelectedItem;
+                xamlMember.Getter = get_31_DataPointSeries_SelectedItem;
+                xamlMember.Setter = set_31_DataPointSeries_SelectedItem;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.DataPointStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DataPointStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_84_DataPointSeries_DataPointStyle;
-                xamlMember.Setter = set_84_DataPointSeries_DataPointStyle;
+                xamlMember.Getter = get_32_DataPointSeries_DataPointStyle;
+                xamlMember.Setter = set_32_DataPointSeries_DataPointStyle;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.LegendItemStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LegendItemStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_85_DataPointSeries_LegendItemStyle;
-                xamlMember.Setter = set_85_DataPointSeries_LegendItemStyle;
+                xamlMember.Getter = get_33_DataPointSeries_LegendItemStyle;
+                xamlMember.Setter = set_33_DataPointSeries_LegendItemStyle;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.TransitionDuration":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TransitionDuration", "TimeSpan");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_86_DataPointSeries_TransitionDuration;
-                xamlMember.Setter = set_86_DataPointSeries_TransitionDuration;
+                xamlMember.Getter = get_34_DataPointSeries_TransitionDuration;
+                xamlMember.Setter = set_34_DataPointSeries_TransitionDuration;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series.SeriesHost":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SeriesHost", "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost");
-                xamlMember.Getter = get_87_Series_SeriesHost;
-                xamlMember.Setter = set_87_Series_SeriesHost;
+                xamlMember.Getter = get_35_Series_SeriesHost;
+                xamlMember.Setter = set_35_Series_SeriesHost;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series.LegendItems":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LegendItems", "System.Collections.ObjectModel.ObservableCollection`1<Object>");
-                xamlMember.Getter = get_88_Series_LegendItems;
+                xamlMember.Getter = get_36_Series_LegendItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series.Title":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Title", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_89_Series_Title;
-                xamlMember.Setter = set_89_Series_Title;
-                break;
-            case "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>.Count":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Count", "Int32");
-                xamlMember.Getter = get_90_Collection_Count;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Getter = get_37_Series_Title;
+                xamlMember.Setter = set_37_Series_Title;
                 break;
             case "Electroencephalograph.MainPage.DefaultViewModel":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Electroencephalograph.MainPage");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Electroencephalograph.Common.ObservableDictionary");
-                xamlMember.Getter = get_91_MainPage_DefaultViewModel;
+                xamlMember.Getter = get_38_MainPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Electroencephalograph.MainPage.NavigationHelper":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Electroencephalograph.MainPage");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Electroencephalograph.Common.NavigationHelper");
-                xamlMember.Getter = get_92_MainPage_NavigationHelper;
+                xamlMember.Getter = get_39_MainPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }

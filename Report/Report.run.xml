@@ -44,11 +44,11 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>tm1810.aux</file>
-      <file>tm1810-blx.bib</file>
+      <file>Report.aux</file>
+      <file>Report-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>tm1810.bbl</file>
+      <file>Report.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-compat.def</file>
@@ -65,20 +65,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>tm1810</infile>
+      <infile>Report</infile>
     </cmdline>
     <input>
-      <file>tm1810.aux</file>
+      <file>Report.aux</file>
     </input>
     <output>
-      <file>tm1810.bbl</file>
+      <file>Report.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>tm1810.bbl</file>
+      <file>Report.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>tm1810.aux</file>
-      <file>tm1810-blx.bib</file>
+      <file>Report.aux</file>
+      <file>Report-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>biblib.bib</file>

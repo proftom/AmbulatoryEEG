@@ -16,6 +16,23 @@
   {}
 \endgroup
 
+\entry{Blanco95}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Blanco}{B.}%
+     {R.~Quian; Rosso O. A.; Kochen~S.}{R.~Q. R. O. A. K.~S.}%
+     {}{}%
+     {S;~Quiroga}{S.~Q.}}%
+  }
+  \strng{namehash}{BSQRQROAKS1}
+  \strng{fullhash}{BSQRQROAKS1}
+  \field{sortinit}{B}
+  \field{pages}{1\bibrangedash 3}
+  \field{title}{Time-frequency analysis of electroencephalogram series}
+  \field{type}{techreport}
+  \field{year}{1995}
+\endentry
+
 \lossort
 \endlossort
 

@@ -29,6 +29,7 @@
 \usepackage[printonlyused]{acronym}
 \usepackage[backend=bibtex, bibencoding=utf8]{biblatex}
 
+\graphicspath{ {assets/} }
 
 \bibliography{biblib} 
 
@@ -183,12 +184,41 @@ Hard requirements of the project include
 
 \subsection {Structure}
 
-
+\clearpage
 \section{Theory and Technology}
 \subsection{Bluetooth Low Energy}
-The original Bluetooth, hereforth refered to a \ac{BTC}, was marketed as the solution to wires, replacing short distances (typically less than 100m) with wirelessly connectivity. The original specification had an air over-the-air rate of 1MBps, though this has increased to around 3 MBps. Similarly, BLE has an over-the-air rate of 1MBps. Despite the odd realisation that \ac{BLE}, a much never technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuatively it may seem that \ac{BLE} is an less efficient technology, this would be a facile conclusion as \ac{BLE} is very much an efficient technology. In particular use cases. In other it is not. Likewise, the same for \ac{BTC}. 
+The original Bluetooth, hereforth refered to a \ac{BTC}, was intially concieved as the solution to wired communication over short distances (typically less than 100m). The original specification had an air over-the-air rate of 1MBps, though this has increased to around 3 MBps in the latest version of \ac{BTC}. Similarly, BLE has an over-the-air rate of 1MBps. Despite the odd realisation that \ac{BLE}, a much newer technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuatively it may seem that \ac{BLE} is a less efficient technology, \ac{BLE} can be orders of magnitudes more efficient than \ac{BTC} in particular use cases.
 
-Bluetooth was designed with the idea that it would be used to do many common jobs, and hence particular configurations were built into it. In the world of Bluetooth, these configurations are known as profiles. Example profiles include the audio distribution profile (A2DP), which is used in by many Bluetooth product manufacturers to allow a device, such as a phone to interact with an audio system, such as in a car. Another example would be the serial port profile (SPP), meant to emulate the highly popular and robust RS232 port for data transfer. This is all built into what is known as the Bluetooth stack – a software framework that interacts between the physical layer and the application layer.  Finally, there is another profile, GAP, short for general access profile. This profile provides the basis for all other profiles. GAP defines how two Bluetooth devices discover and connect with one another. GAP will not be covered in detail here.
+Applications where \ac{BLE} excels in are ones where communication between two devices is only required intermitently, and the volume of information sent is small. An example would be a thermometer in a green house connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years of a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3v lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years.
+
+There are more reasons 
+
+
+Further, the reduced compelxity of \ac{BLE} means reduced memory requirements, in turn reducing the leakage current. Combined with also a 
+
+Bluetooth was designed with the idea that it would be used to do many common jobs, and hence particular configurations were built into it. In Bluetooth, these configurations are known as profiles. Example profiles include the audio distribution profile (A2DP), which is used in by many Bluetooth product manufacturers to allow a device, such as a phone to interact with an audio system, such as in a car. Another example would be the serial port profile (SPP), meant to emulate the highly popular and robust RS-232 (serial) standard for data transfer. This is all built into what is known as the Bluetooth stack – a software framework that interacts between the physical layer and the application layer.  
+
+BLE borrows many of these concepts and features and it is often mistakenly thought of as \ac{BTC} operating at lower speeds and power consumption. It is not currently compatible with Bluetooth and there are no plans for it to be. As mentioned, \ac{BLE} has a maximum application throughput of roughly one third that of the \ac{BTC} version 1.0. There are many reasons for this, but all ultimately converge on power. BLE was designed to be simple, with a ‘less is more’ approach and if things are simple they can be done using less hardware, and ultimately less power. Like \ac{BTC}, the \ac{BLE} architecture has 3 over-arching parts: Application, Host and Controller. The controller, simply put, is the radio and the application the use case, which could be a cadence monitor, thermometer or even an electroencephalogram. It is the host controller interface (HCI), commonly known as the “stack” that provides the necessary software to enable the application layer to communicate with the radio (see Figure~\ref{fig:ble_arch}).
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{ble_arch}
+	\end{center}
+	\caption{\ac{BLE} Architecture}
+	\label{fig:ble_arch}
+\end{figure}
+
+In an attempt to be economical with time and space components of the stack deemed irrelevant will not be discussed further here. For example a description of the security manager is not relevant as this project is not concerned with sending data over encrypted links. Similarly, the Logical Link Control and Adaption Protocol, while used extenivesly in communication will not be discussed in detail as it 
+
+\ac{BLE}'s profiles are all built ontop of from the \ac{GATT}, which in turn is built upon the \ac{ATT}, a protocol optimised to run on BLE devices. Like in Bluetooth there are profiles, but these profiles are on a much smaller scale. The profiles arn't complex enough to warrant tailoring a microchiptowards a particular profile, unlike \ac{BTC}, whereby chips would be specifically designed to excel in one profile (i.e. A2DP). Popular examples of \ac{BLE} profiles include the heart rate profile (HRP), health thermometer profile (HTP) and even a glucose profile (GLP) with room for many more to be incorporated into the core \ac{BLE} specification. 
+
+In BLE and BTC, there certain states the device. The same abstract view can be applied to both technologies and is shown in Figure 3. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for just searching and discovering devices with no commitment to connecting. 
+
+In BLE the low power device is known as the peripheral (e.g. a cadence meter) and the master is the higher power device (e.g. a smartphone) . Assuming that the master BLE device is in the initiating state, searching for a device to make connection with, and at the same time the BLE slave is in the advertising stage, periodically broadcasting information using advertisement packets the two devices will find one another and may initiate a connection request.
+
+In classic Bluetooth there are 79 channels, all of which could be used to both transmit data and advertise. BLE uses only 40 channels, and segments 3 channels for advertisement and the remaining 37 channel for data. Figure 4 show this. By only have 3 channels, a BLE slave will only have to broadcast on these few channels (and equally the master will only have to listen on these 3), saving power while decreasing connection latency. 
+
 \section{Radio Evaluation}
 
 \section{Prototype Design}
@@ -238,6 +268,9 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{BLE}{Bluetooth Low Energy}
 	\acro{BTC}{Bluetooth Classic}
 	\acro{CSR}{Cambridge Silicon Radio}
+	\acro{GATT}{Generic Attribute Prorfile}
+	\acro{GAP}{Generic Access Profile}
+	\acro{ATT}{Attribute Protocol}
 \end{acronym}
 
 \section{User Guide}

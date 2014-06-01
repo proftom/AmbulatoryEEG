@@ -18,26 +18,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Bluetooth Low Energy}{6}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Radio Evaluation}{8}{section.4}
+\contentsline {section}{\numberline {4}Preliminary Testing}{10}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Prototype Design}{8}{section.5}
+\contentsline {subsection}{\numberline {4.1}Radio Evaluation}{10}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Results}{8}{section.6}
+\contentsline {section}{\numberline {5}Prototype Design}{10}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Evaluation}{8}{section.7}
+\contentsline {section}{\numberline {6}Results}{10}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Power Analysis}{8}{subsection.7.1}
+\contentsline {section}{\numberline {7}Evaluation}{10}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Bill of materials}{8}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.1}Power Analysis}{10}{subsection.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Conclusions and Future Work}{8}{section.8}
+\contentsline {subsection}{\numberline {7.2}Bill of materials}{10}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Final Remarks}{8}{section.9}
+\contentsline {section}{\numberline {8}Conclusions and Future Work}{10}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Bibliography}{9}{section.10}
+\contentsline {section}{\numberline {9}Final Remarks}{10}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Appendix}{10}{section.11}
+\contentsline {section}{\numberline {10}Bibliography}{11}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Acronyms}{10}{subsection.11.1}
+\contentsline {section}{\numberline {11}Appendix}{12}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}User Guide}{10}{section.12}
+\contentsline {subsection}{\numberline {11.1}Acronyms}{12}{subsection.11.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}User Guide}{12}{section.12}

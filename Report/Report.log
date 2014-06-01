@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.6.1)  1 JUN 2014 22:54
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.6.1)  2 JUN 2014 00:53
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1138,7 +1138,7 @@ although it is yet undefined on input line 122.
 ]
 Requested font "ecbx1200" at 12.0pt
 Package acronym Info: Label `acro:BLE' newly defined as it shall be overridden
-although it is yet undefined on input line 157.
+although it is yet undefined on input line 159.
 Missing character: There is no ’ in font ecrm1000!
 Missing character: There is no ‘ in font ecrm1000!
 Missing character: There is no ’ in font ecrm1000!
@@ -1147,62 +1147,69 @@ Missing character: There is no ’ in font ecrm1000!
  [4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 177.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 182.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
  [5]
 Package acronym Info: Label `acro:BTC' newly defined as it shall be overridden
-although it is yet undefined on input line 190.
+although it is yet undefined on input line 195.
+Package acronym Info: Label `acro:CI' newly defined as it shall be overridden
+although it is yet undefined on input line 199.
+ [6
+
+]
+File: assets/blechannels.png Graphic file (type QTm)
+
+<use  "assets/blechannels.png" >
+File: assets/blechannelswifi.png Graphic file (type QTm)
+ <use  "assets/blechannelswifi.png" > [7]
 Missing character: There is no – in font ecrm1000!
 Missing character: There is no ‘ in font ecrm1000!
 Missing character: There is no ’ in font ecrm1000!
 Missing character: There is no “ in font ecrm1000!
 Missing character: There is no ” in font ecrm1000!
- [6
-
-]
 File: assets/ble_arch.png Graphic file (type QTm)
 
 <use  "assets/ble_arch.png" >
 Package acronym Info: Label `acro:GATT' newly defined as it shall be overridden
 
-although it is yet undefined on input line 214.
+although it is yet undefined on input line 240.
 Package acronym Info: Label `acro:ATT' newly defined as it shall be overridden
-although it is yet undefined on input line 214.
- [7] [8]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 254.
+although it is yet undefined on input line 240.
+ [8] [9]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 281.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Requested font "ectt1000" at 10.0pt
- [9]
+ [10] [11]
 Requested font "ecti1000" at 10.0pt
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 277.
- [10
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
+
+[12
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 277.
-
-(C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 277.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 277.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
+ (C:\Repository\AmbulatoryEEG\Report\Report.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 305.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 305.
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 277.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
  ) 
 Here is how much of TeX's memory you used:
- 20196 strings out of 429025
- 296890 string characters out of 3166799
- 515629 words of memory out of 3000000
- 23236 multiletter control sequences out of 15000+200000
+ 20210 strings out of 429025
+ 297096 string characters out of 3166799
+ 516629 words of memory out of 3000000
+ 23248 multiletter control sequences out of 15000+200000
  16733 words of font info for 50 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
- 44i,8n,48p,1328b,1466s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,8n,48p,1593b,1466s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Report.pdf (12 pages).
+Output written on Report.pdf (14 pages).

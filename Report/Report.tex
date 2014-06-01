@@ -120,9 +120,11 @@ Second Marker: & \textbf{Dr. Pants Georgiou} \\
 
 \section*{Abstract}
 Certain neurological medical disorders require continuous monitoring to fully understand and diagnose. Examples of medical interest include epilepsy, syncope, multiple sclerosis, migraines, strokes, Parkinson’s and Alzheimer’s disease. \ac{EEG} is the recording of electrical activity along the scale, resulting from ionic current flows within the neurons of the brain and is useful for both diagnostic and monitoring such afromentioned conditions. Monitoring brain activity can help physicians understand certain characteristics, triggers, and the severity of the disorder. It may be possible to gauge the regions of the brain where the condition is originating from and if the patient is a suitable candidate for treatment. 
-However, patients are unlikely to suffer from neurological disorders while at the clinic as they often appear sporadically during day to day life and with little to no warning. In such circumstances the patient could remain in hospital indefinitely, however seizures can be minutes to years apart, and sometimes are not realised or detected without proper equipment. Such circumstances lend themselves to an ambulatory system, where the patient can be monitored continuously without discomfort or hospitalisation, thus improving quality of life. 
 
-With the emergence of low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. Through leveraging of low energy radio capable devices, i.e. smartphones and tablets, in the context of an ambulatory EEG, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital. Further, while this project is targeted at EEG signals, there is no reason why this research and technology cannot be applied to other signals and systems, for example glucose monitoring, electrocardiography, spirometers, etc.
+However, patients are unlikely to suffer from neurological disorders while at the clinic as they often appear sporadically and with little to no warning. In such circumstances the patient could remain in hospital indefinitely, however seizures can be minutes to years apart, and sometimes are not realised or detected without proper equipment. Such circumstances lend themselves to an ambulatory system, where the patient can be monitored continuously without discomfort or hospitalisation, improving quality of life while decreasing costs. 
+
+With the emergence of low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. Through leveraging of low energy radio capable devices, i.e. smartphones and tablets, in the context of an ambulatory EEG, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital. Further, while this project is targeted at EEG signals, there is no reason why this research and technology cannot be applied to other signals and systems, examples including glucose monitoring, electrocardiography and spirometers.
+
 \cite{Blanco95}
 \clearpage
 \tableofcontents
@@ -168,9 +170,12 @@ Currently \ac{BLE} is the only radio technology that is currently being built in
 With the plethora of emerging low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. The consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all use the \ac{BLE} technology to connect to smartphones.
 
 \subsection{Project End Goals}
-While the project goal is to make a wireless EEG device, the analouge front end will not be included. At the time of writing, the circuits and systems group at Imperial College have recently taped out a small full custom silicon design to a foundary. While it is possible . Originally the project was introduced as "Maximising Bluetooth Low Energy throughput of \ac{EEG} signals", however 
+Originally the project was introduced as "Maximising Bluetooth Low Energy throughput of \ac{EEG} signals", however 
 
-Currently, Imperial College has a wired EEG measurement device. The wired connection between the EEG sensors and a computer cause patients to remain fairly immobile and hence are impracticable for long periods of measurement. 
+Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the EEG sensors and a computer cause patients to remain fairly immobile and hence are impracticable for long periods of use. This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device along with its power consumption.
+
+ At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analouge front-end design for manufacture, however these chips will not be available for use before the project deadline. 
+
 
 Hard requirements of the project include 
 \begin{itemize}
@@ -189,17 +194,38 @@ Hard requirements of the project include
 \subsection{Bluetooth Low Energy}
 The original Bluetooth, hereforth refered to a \ac{BTC}, was intially concieved as the solution to wired communication over short distances (typically less than 100m). The original specification had an air over-the-air rate of 1MBps, though this has increased to around 3 MBps in the latest version of \ac{BTC}. Similarly, BLE has an over-the-air rate of 1MBps. Despite the odd realisation that \ac{BLE}, a much newer technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuatively it may seem that \ac{BLE} is a less efficient technology, \ac{BLE} can be orders of magnitudes more efficient than \ac{BTC} in particular use cases.
 
-Applications where \ac{BLE} excels in are ones where communication between two devices is only required intermitently, and the volume of information sent is small. An example would be a thermometer in a green house connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years of a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3v lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years.
+Applications where \ac{BLE} excels in are ones where communication between two devices is only required intermitently, and the volume of information sent is small. An example would be a thermometer in a green house connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years of a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3v lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years. In fact, in this scenario the \ac{BLE} system lifetime can be extended further as \ac{BLE} can support connectionless communication, whereby it simply wakes up and transmits the thermometer state to any device that's listening without the need for acknowledgement.
 
-There are more reasons 
+The reason the reconnection times are much faster for \ac{BLE} is as far as the communication devices are concerned, they never disconnected. Rather in the \ac{BLE} protocol, the devices agree to meet a specified periods known as \ac{CI}. The devices are free to perform any operations in the mean time, though typically enter a state of hibernation. In many scenarios between two radios, one device will be much more power conscious. In the example above, the battery powered device in the greenhouse would typically be the power conscious device while the visual disuplay unit inside the home will likely be powered from the grid, and have no concern as to its power consupmption. In these situations, we define the power conscious device to be the slave and the remaining device to be the master. 
+
+The slave device also has the ability to skip connection intervals. That is, the slave to skip a upto a predetermined number of connection intervals, known as the slave latency. While the master must always check back to see if the slave has sent anything, the slave, if it has nothing to send, doesn't need to wake up. For example, if the slave latency is 120, and the connection interval is 1000ms, then the slave is not obliged to communicate with the master for upto 2 minutes, despite the master having to check every 1000ms. If the slave is not able to make contact with the master after 2 minutes, then the master will begin counting the number of times the slave has missed the obliged connection period (that is the \ac{CI} multiplied by the time slave latency). If this value reaches above a certain threshold (a typically recommened value of 6), the master will consider the slave disconnected, and be required to go through a connection process again[UNLESS USING BROADCASTING TO SEND DATA]. Continuing with the scenario, the slave will be considered disconnected if it hasn't made contact with the master after 12 minutes.
+
+Another contribution to reduced power over \ac{BTC} is the reduction in the number of channels used in communicaton. \ac{BTC}, \ac{BLE} along with other wireless technologies that operate in the 2.4GHz ISM band such as a WiFi and ZigBee all make use of spread spectrum techniques to achieve a sufficient level of noise immunity. That is, the available bandwidth is split (spread) into smaller channels and radios communicate between one another using a pre-dertmined channel hop sequence. As the number of channels decreases, the channel band size grows requiring less accurate and complex modulation hardware, hence decreasing power consumption. \ac{BTC} originally used 79 channels, and \ac{BLE} reduces this to 39.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{blechannels}
+	\end{center}
+	\caption{\ac{BLE} channels (advertisement channels render darker)}
+	\label{fig:blechannels}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{blechannelswifi}
+	\end{center}
+	\caption{\ac{BLE} channels with WiFi channels overlaid}
+	\label{fig:blechannelswifi}
+\end{figure}
 
 
-Further, the reduced compelxity of \ac{BLE} means reduced memory requirements, in turn reducing the leakage current. Combined with also a 
+The number of channels dedicated to advertising has also decreased, meaing less time is spent searching for discoverable devices. The advertisement channels have been specifically chosen not to interfere with the common WiFi channels. Finally, the radio characteristics are very dependent on temperature. Complex mechanisms are used to recalibrate on-the-fly radio parameters. Due to the episodic nature of \ac{BLE} the radio does not come under such thermal extremes. All these design changes have positive hardware ramifications. The reduced compelxity of \ac{BLE} means reduced hardware requirements (notably memory), in turn reducing the leakage current.
+
+
 
 Bluetooth was designed with the idea that it would be used to do many common jobs, and hence particular configurations were built into it. In Bluetooth, these configurations are known as profiles. Example profiles include the audio distribution profile (A2DP), which is used in by many Bluetooth product manufacturers to allow a device, such as a phone to interact with an audio system, such as in a car. Another example would be the serial port profile (SPP), meant to emulate the highly popular and robust RS-232 (serial) standard for data transfer. This is all built into what is known as the Bluetooth stack – a software framework that interacts between the physical layer and the application layer.  
 
-BLE borrows many of these concepts and features and it is often mistakenly thought of as \ac{BTC} operating at lower speeds and power consumption. It is not currently compatible with Bluetooth and there are no plans for it to be. As mentioned, \ac{BLE} has a maximum application throughput of roughly one third that of the \ac{BTC} version 1.0. There are many reasons for this, but all ultimately converge on power. BLE was designed to be simple, with a ‘less is more’ approach and if things are simple they can be done using less hardware, and ultimately less power. Like \ac{BTC}, the \ac{BLE} architecture has 3 over-arching parts: Application, Host and Controller. The controller, simply put, is the radio and the application the use case, which could be a cadence monitor, thermometer or even an electroencephalogram. It is the host controller interface (HCI), commonly known as the “stack” that provides the necessary software to enable the application layer to communicate with the radio (see Figure~\ref{fig:ble_arch}).
-
+BLE borrows many of these concepts and features and it is often mistakenly thought of as \ac{BTC} operating at lower speeds and power consumption. It is not currently compatible with Bluetooth and there are no plans for it to be. As mentioned, \ac{BLE} has a maximum application throughput of roughly one third that of the \ac{BTC} version 1.0. There are many reasons for this, but all ultimately converge on power. BLE was designed to be simple, with a '‘less is more’' approach and if things are simple they can be done using less hardware, and ultimately less power. Like \ac{BTC}, the \ac{BLE} architecture has 3 over-arching parts: Application, Host and Controller. The controller, simply put, is the radio and the application the use case, which could be a cadence monitor, thermometer or even an electroencephalogram. It is the host controller interface (HCI), commonly known as the “stack” that provides the necessary software to enable the application layer to communicate with the radio (see Figure~\ref{fig:ble_arch}).
 
 \begin{figure}[htb]
 	\begin{center}
@@ -209,17 +235,18 @@ BLE borrows many of these concepts and features and it is often mistakenly thoug
 	\label{fig:ble_arch}
 \end{figure}
 
-In an attempt to be economical with time and space components of the stack deemed irrelevant will not be discussed further here. For example a description of the security manager is not relevant as this project is not concerned with sending data over encrypted links. Similarly, the Logical Link Control and Adaption Protocol, while used extenivesly in communication will not be discussed in detail as it 
+In an attempt to be economical with time and space components of the stack deemed irrelevant will not be discussed further here. For example a description of the security manager is not relevant as this project is not concerned with sending data over encrypted links. Similarly, the Logical Link Control and Adaption Protocol, while used extenivesly in all radio communication will not be discussed in detail as it doesn't provide any insight into maximising throughput or minimising power.
 
 \ac{BLE}'s profiles are all built ontop of from the \ac{GATT}, which in turn is built upon the \ac{ATT}, a protocol optimised to run on BLE devices. Like in Bluetooth there are profiles, but these profiles are on a much smaller scale. The profiles arn't complex enough to warrant tailoring a microchiptowards a particular profile, unlike \ac{BTC}, whereby chips would be specifically designed to excel in one profile (i.e. A2DP). Popular examples of \ac{BLE} profiles include the heart rate profile (HRP), health thermometer profile (HTP) and even a glucose profile (GLP) with room for many more to be incorporated into the core \ac{BLE} specification. 
 
-In BLE and BTC, there certain states the device. The same abstract view can be applied to both technologies and is shown in Figure 3. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for just searching and discovering devices with no commitment to connecting. 
+In BLE and BTC, there certain states the device. The same abstract view can be applied to both technologies and is shown in Figure 3. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for searching and discovering devices with no commitment to connecting. 
 
-In BLE the low power device is known as the peripheral (e.g. a cadence meter) and the master is the higher power device (e.g. a smartphone) . Assuming that the master BLE device is in the initiating state, searching for a device to make connection with, and at the same time the BLE slave is in the advertising stage, periodically broadcasting information using advertisement packets the two devices will find one another and may initiate a connection request.
+
 
 In classic Bluetooth there are 79 channels, all of which could be used to both transmit data and advertise. BLE uses only 40 channels, and segments 3 channels for advertisement and the remaining 37 channel for data. Figure 4 show this. By only have 3 channels, a BLE slave will only have to broadcast on these few channels (and equally the master will only have to listen on these 3), saving power while decreasing connection latency. 
 
-\section{Radio Evaluation}
+\section{Preliminary Testing}
+\subsection{Radio Evaluation}
 
 \section{Prototype Design}
 
@@ -271,6 +298,7 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{GATT}{Generic Attribute Prorfile}
 	\acro{GAP}{Generic Access Profile}
 	\acro{ATT}{Attribute Protocol}
+	\acro{CI}{connection interval}
 \end{acronym}
 
 \section{User Guide}

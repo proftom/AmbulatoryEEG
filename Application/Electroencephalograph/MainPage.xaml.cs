@@ -155,14 +155,32 @@ namespace Electroencephalograph
 
             //By default connect to the first EEG service found
             eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
-
             var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
             eegData.ValueChanged += eegData_ValueChanged;
+
+            devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x180f));
+            batteryService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
+            //var batteryData = batteryService.Instance.service.GetCharacteristics(new Guid("00002a19-0000-1000-8000-00805f9b34fb"))[0];
+            //batteryData.ValueChanged += batteryData_ValueChanged;
             //Start notifications
             await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
+            //var x = await batteryData.ReadClientCharacteristicConfigurationDescriptorAsync();
+            
             TimerElapsedHandler f = new TimerElapsedHandler(batchUpdate);
             periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0,400));
             
+        }
+
+        void batteryData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
+        {
+
+            //if (Dispatcher.HasThreadAccess)
+            //{
+
+            //}
+            //else
+            //{
+            //}
         }
 
         private CoreDispatcher cd;

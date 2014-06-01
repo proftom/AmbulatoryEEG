@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-05-31T11:37:35.998</Modified>
+      <Modified>2014-05-31T23:47:07.260</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.exe">
       <PackagePath>Electroencephalograph.exe</PackagePath>
-      <Modified>2014-05-31T15:26:19.114</Modified>
+      <Modified>2014-06-01T00:26:20.944</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization.dll">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization.dll</PackagePath>
@@ -63,7 +63,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-05-31T15:26:18.906</Modified>
+      <Modified>2014-05-31T23:47:06.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
       <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
@@ -267,7 +267,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-05-31T12:50:29.619</Modified>
+      <Modified>2014-06-01T00:26:21.118</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

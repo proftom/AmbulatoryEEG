@@ -751,7 +751,7 @@ LOAD C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\rom_img.elf
                 0x000039fd                ___libgatt_lib_db_4678
                 0x00003a06                DATA_RODATA_END = .
 
-.bss            0x00003a06      0x24b
+.bss            0x00003a06      0x24d
                 0x00003a06                DATA_BSS_APP_START = .
  *(.bss)
  .bss           0x00003a06        0x2 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_sm.o)
@@ -762,75 +762,75 @@ LOAD C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\rom_img.elf
                 0x00003a0b        0x3 depend_Release_CSR101x_A05\gap_service.o
  .bss.test      0x00003a0e        0x1 depend_Release_CSR101x_A05\eeg_service.o
  .bss.g_eeg_serv_data
-                0x00003a0f      0x147 depend_Release_CSR101x_A05\eeg_service.o
+                0x00003a0f      0x149 depend_Release_CSR101x_A05\eeg_service.o
  .bss.meas_count.2829.
-                0x00003b56        0x1 depend_Release_CSR101x_A05\eeg_sensor.o
+                0x00003b58        0x1 depend_Release_CSR101x_A05\eeg_sensor.o
  .bss.app_timers
-                0x00003b57       0x24 depend_Release_CSR101x_A05\eeg_sensor.o
+                0x00003b59       0x24 depend_Release_CSR101x_A05\eeg_sensor.o
  .bss.__PATCH__ZERO_
-                0x00003b7b        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_ls_advertising_if.o)
+                0x00003b7d        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_ls_advertising_if.o)
  .bss.uart_rx_buffer
-                0x00003b7c       0x40 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(debug.o)
+                0x00003b7e       0x40 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(debug.o)
  .bss.uart_tx_buffer
-                0x00003bbc       0x40 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(debug.o)
+                0x00003bbe       0x40 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(debug.o)
  .bss.patch_pending
-                0x00003bfc        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
-                0x00003bfc                patch_pending
- .bss.patch_rx_timing_report
-                0x00003bfd        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
-                0x00003bfd                patch_rx_timing_report
- .bss.patch_pending_mode
                 0x00003bfe        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
-                0x00003bfe                patch_pending_mode
- .bss.patch_conn_chm_update
+                0x00003bfe                patch_pending
+ .bss.patch_rx_timing_report
                 0x00003bff        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
-                0x00003bff                patch_conn_chm_update
- .bss.__PATCH__ZERO_
+                0x00003bff                patch_rx_timing_report
+ .bss.patch_pending_mode
                 0x00003c00        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
+                0x00003c00                patch_pending_mode
+ .bss.patch_conn_chm_update
+                0x00003c01        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
+                0x00003c01                patch_conn_chm_update
+ .bss.__PATCH__ZERO_
+                0x00003c02        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
  .bss.tx_power_table_entry
-                0x00003c01        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_halradiotrim.o)
+                0x00003c03        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_halradiotrim.o)
  .bss.__PATCH__ZERO_
-                0x00003c02        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_timer.o)
+                0x00003c04        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_timer.o)
  .bss.__PATCH__ZERO_
-                0x00003c03        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_robs_aio.o)
+                0x00003c05        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_robs_aio.o)
  .bss.__PATCH__ZERO_
-                0x00003c04        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_thermometer.o)
- COMMON         0x00003c05       0x42 depend_Release_CSR101x_A05\eeg_sensor.o
-                0x00003c05                g_hr_data
- COMMON         0x00003c47        0x4 depend_Release_CSR101x_A05\eeg_sensor_hw.o
-                0x00003c47                g_app_hw_data
- COMMON         0x00003c4b        0x2 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_sm.o)
-                0x00003c4b                sm_long_term_key_ind
-                0x00003c4c                sm_pairing_auth_ind
- COMMON         0x00003c4d        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
-                0x00003c4d                enable_lowduty_directed_adv
- COMMON         0x00003c4e        0x3 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george_ll.o)
-                0x00003c4e                george_earliest_transmit_offset
-                0x00003c51                DATA_BSS_APP_END = .
-                0x0000024b                BSS_APP_SIZE = (DATA_BSS_APP_END - DATA_BSS_APP_START)
+                0x00003c06        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_thermometer.o)
+ COMMON         0x00003c07       0x42 depend_Release_CSR101x_A05\eeg_sensor.o
+                0x00003c07                g_hr_data
+ COMMON         0x00003c49        0x4 depend_Release_CSR101x_A05\eeg_sensor_hw.o
+                0x00003c49                g_app_hw_data
+ COMMON         0x00003c4d        0x2 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_sm.o)
+                0x00003c4d                sm_long_term_key_ind
+                0x00003c4e                sm_pairing_auth_ind
+ COMMON         0x00003c4f        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george.o)
+                0x00003c4f                enable_lowduty_directed_adv
+ COMMON         0x00003c50        0x3 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george_ll.o)
+                0x00003c50                george_earliest_transmit_offset
+                0x00003c53                DATA_BSS_APP_END = .
+                0x0000024d                BSS_APP_SIZE = (DATA_BSS_APP_END - DATA_BSS_APP_START)
 
-.data           0x00003c51       0xec
-                0x00003c51                DATA_DATA_START = .
+.data           0x00003c53       0xec
+                0x00003c53                DATA_DATA_START = .
  *(.data)
  *(.data.*)
  .data.gattDatabase
-                0x00003c51       0x90 depend_Release_CSR101x_A05\app_gatt_db.o
-                0x00003c51                gattDatabase
+                0x00003c53       0x90 depend_Release_CSR101x_A05\app_gatt_db.o
+                0x00003c53                gattDatabase
  .data.g_device_name
-                0x00003ce1       0x16 depend_Release_CSR101x_A05\gap_service.o
-                0x00003ce1                g_device_name
+                0x00003ce3       0x16 depend_Release_CSR101x_A05\gap_service.o
+                0x00003ce3                g_device_name
  .data.meas_report
-                0x00003cf7       0x14 depend_Release_CSR101x_A05\eeg_service.o
+                0x00003cf9       0x14 depend_Release_CSR101x_A05\eeg_service.o
  .data.pending_pdu_acks
-                0x00003d0b        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george_ll.o)
-                0x00003d0b                ___libgatt_lib_db_4611
+                0x00003d0d        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_george_ll.o)
+                0x00003d0d                ___libgatt_lib_db_4611
  .data.tgap_con_param_update
-                0x00003d0c        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_timer.o)
-                0x00003d0c                ___libgatt_lib_db_4656
+                0x00003d0e        0x1 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(patch_timer.o)
+                0x00003d0e                ___libgatt_lib_db_4656
  .data.patch_table_data
-                0x00003d0d       0x30 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(sw_patch_ram.o)
-                0x00003d0d                ___libgatt_lib_db_4542
-                0x00003d3d                DATA_DATA_END = .
+                0x00003d0f       0x30 C:\CSR_uEnergy_SDK-2.3.0.31\tools\lib\CSR101x_A05\libgatt_lib_ram.a(sw_patch_ram.o)
+                0x00003d0f                ___libgatt_lib_db_4542
+                0x00003d3f                DATA_DATA_END = .
                 0x0000ef80                . = DATA_PERSIST_START
 
 PERSIST_MEM
@@ -910,16 +910,16 @@ OUTPUT(depend_Release_CSR101x_A05\eeg_sensor.elf elf32-xap2)
  .debug_abbrev  0x00000cc0       0x5b depend_Release_CSR101x_A05\nvm_access.o
  .debug_abbrev  0x00000d75       0x74 depend_Release_CSR101x_A05\dev_info_service.o
 
-.debug_info     0x00000000     0x4314
+.debug_info     0x00000000     0x4328
  .debug_info    0x00000000       0x5f depend_Release_CSR101x_A05\app_gatt_db.o
  .debug_info    0x000000be      0x6d5 depend_Release_CSR101x_A05\battery_service.o
  .debug_info    0x00000e68      0x6c1 depend_Release_CSR101x_A05\gap_service.o
- .debug_info    0x00001bea      0x7b4 depend_Release_CSR101x_A05\eeg_service.o
- .debug_info    0x00002b52     0x198a depend_Release_CSR101x_A05\eeg_sensor.o
- .debug_info    0x00005e66      0xa24 depend_Release_CSR101x_A05\eeg_sensor_gatt.o
- .debug_info    0x000072ae      0x1d0 depend_Release_CSR101x_A05\eeg_sensor_hw.o
- .debug_info    0x0000764d      0x213 depend_Release_CSR101x_A05\nvm_access.o
- .debug_info    0x00007a72      0x5db depend_Release_CSR101x_A05\dev_info_service.o
+ .debug_info    0x00001bea      0x7c8 depend_Release_CSR101x_A05\eeg_service.o
+ .debug_info    0x00002b7a     0x198a depend_Release_CSR101x_A05\eeg_sensor.o
+ .debug_info    0x00005e8e      0xa24 depend_Release_CSR101x_A05\eeg_sensor_gatt.o
+ .debug_info    0x000072d6      0x1d0 depend_Release_CSR101x_A05\eeg_sensor_hw.o
+ .debug_info    0x00007675      0x213 depend_Release_CSR101x_A05\nvm_access.o
+ .debug_info    0x00007a9a      0x5db depend_Release_CSR101x_A05\dev_info_service.o
 
 .debug_line     0x00000000      0xfeb
  .debug_line    0x00000000       0x59 depend_Release_CSR101x_A05\app_gatt_db.o
@@ -1006,24 +1006,24 @@ OUTPUT(depend_Release_CSR101x_A05\eeg_sensor.elf elf32-xap2)
  .debug_ranges  0x00000310       0x14 depend_Release_CSR101x_A05\nvm_access.o
  .debug_ranges  0x00000338       0x10 depend_Release_CSR101x_A05\dev_info_service.o
 
-.debug_str      0x00000000     0x2c66
+.debug_str      0x00000000     0x2c75
  .debug_str     0x00000000       0x73 depend_Release_CSR101x_A05\app_gatt_db.o
                                  0x7f (size before relaxing)
  .debug_str     0x000000e5     0x1340 depend_Release_CSR101x_A05\battery_service.o
                                0x13c6 (size before relaxing)
  .debug_str     0x00002764       0x81 depend_Release_CSR101x_A05\gap_service.o
                                0x135f (size before relaxing)
- .debug_str     0x00002865      0x147 depend_Release_CSR101x_A05\eeg_service.o
-                               0x1475 (size before relaxing)
- .debug_str     0x00002af3     0x10ab depend_Release_CSR101x_A05\eeg_sensor.o
+ .debug_str     0x00002865      0x156 depend_Release_CSR101x_A05\eeg_service.o
+                               0x1484 (size before relaxing)
+ .debug_str     0x00002b11     0x10ab depend_Release_CSR101x_A05\eeg_sensor.o
                                0x2407 (size before relaxing)
- .debug_str     0x00004c48      0x3b3 depend_Release_CSR101x_A05\eeg_sensor_gatt.o
+ .debug_str     0x00004c66      0x3b3 depend_Release_CSR101x_A05\eeg_sensor_gatt.o
                                0x1b76 (size before relaxing)
- .debug_str     0x000053ae      0x254 depend_Release_CSR101x_A05\eeg_sensor_hw.o
+ .debug_str     0x000053cc      0x254 depend_Release_CSR101x_A05\eeg_sensor_hw.o
                                 0x3f1 (size before relaxing)
- .debug_str     0x00005856       0x16 depend_Release_CSR101x_A05\nvm_access.o
+ .debug_str     0x00005874       0x16 depend_Release_CSR101x_A05\nvm_access.o
                                 0x62a (size before relaxing)
- .debug_str     0x00005882       0x25 depend_Release_CSR101x_A05\dev_info_service.o
+ .debug_str     0x000058a0       0x25 depend_Release_CSR101x_A05\dev_info_service.o
                                0x12f7 (size before relaxing)
 
 .comment        0x00000000      0x444

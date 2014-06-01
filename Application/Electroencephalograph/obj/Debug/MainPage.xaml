@@ -49,6 +49,7 @@
                 <AppBarSeparator Width="14"/>
                 <Slider x:ConnectionId='3' Width="300" VerticalAlignment="Center" x:Name="acqRate"                                    Foreground="White"  />
                 <AppBarButton Label="Save" Icon="Save" />
+                
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>

@@ -271,7 +271,7 @@ Both BLE and BTC devices move through generic system states. The same abstract v
 	\label{fig:systemstate}
 \end{figure}
 
-\ac{BLE} is principally composed of two types of packets, advertisement (Figure~\ref{fig:advertisement}) and data (Figure~\ref{fig:data}). Both packet types vary in length dependent on the payload but share a 32 bit advertising access address field, a 24 bit \ac{CRC} field, an 8 bit header and an 8 bit length field which defines the \ac{PDU} size (the last 2 field are often collectively called the header field). Advertisement \ac{PDU}s range from 0 to 31 bytes (248bits), meaning the packet can vary between 72 and 320 bits. The over-the-air data rate is 1Mbit/s, meaning advertisement packets are transmitted at a rate between 72 and 320$\mu$s (a single bit is transmitted every 1$\mu$s). In addition to the access code and \ac{CRC} fields, data packets consists of an 8 bit preamble and a \ac{PDU} varying between 0 and 37 bytes (4 of these bytes are reserved for encryption). Hence, the packet length varies from 80bits to 376 bits. 
+\ac{BLE} is principally composed of two types of packets, advertisement (Figure~\ref{fig:advertisement}) and data (Figure~\ref{fig:data}). Both packet types vary in length dependent on the payload but share a 32 bit advertising access address field, a 24 bit \ac{CRC} field, an 8 bit header and an 8 bit length field which defines the \ac{PDU} size (the last 2 field are often collectively called the header field). Advertisement \ac{PDU}s range from 0 to 29 bytes (232bits), meaning the total packet size can vary between 72 and 320 bits. The over-the-air data rate is 1Mbit/s, meaning advertisement packets are transmitted at a rate between 72 and 320$\mu$s (a single bit is transmitted every 1$\mu$s). In addition to the access code and \ac{CRC} fields, data packets consists of an 8 bit preamble and a \ac{PDU} varying between 0 and 27 bytes (4 of these bytes are reserved for encryption). Hence, the packet length varies from 80bits to 328 bits. 
 
 \begin{figure}[htb]
 	\begin{center}
@@ -289,11 +289,19 @@ Both BLE and BTC devices move through generic system states. The same abstract v
 	\label{fig:data}
 \end{figure}
 
-Figure~\ref{fig:connection} shows a connection between two devices being initiated. The first packet shown is is an indirect advertisement packet, available to all listening \ac{BLE} devices. The second packet is a connection request from the master device, communicating in the payload its address, the address to establish a connection with, and random access address, a connection interval length, the hop sequence, channel map, the connection timetout, slave latency and other things. The channel map bit pattern corresponds to a contiguous stream of 37 ones, corresponding to all 37 channels being operational (the master has no reason to prevent transmission). The hop byte indicates between each \ac{CI} how many channels the device pair will increment. The access address is a randomly chosen number (by the master) to iniate 
+Figure~\ref{fig:connection} shows a connection between two devices being initiated. The first packet shown is is an indirect advertisement packet, available to all listening \ac{BLE} devices. The second packet is a connection request from the master device, communicating in the payload its address, the address to establish a connection with, and random access address, a connection interval length, the hop sequence, channel map, the connection timetout, slave latency and other things. Here the advertisement packets are rendered in green, the data in (predominantly) yellow (the magenta also represent a type of data packet)
+\begin{itemize}
 
-The interval of 0x18 (24 decimal) 
+ \item The channel map bit pattern corresponds to a contiguous stream of 37 ones, corresponding to all 37 channels being operational (the master has no reason to prevent transmission). 
+ \item The hop byte indicates between each \ac{CI} how many channels the device pair will increment. From packet 242 onwards, the channel map increments every \ac{CI} (2 packets/30ms).
+ \item The access address is a randomly chosen number (by the master) which acts as a identifier for a connection between two devices. 
+ \item The interval of 0x18 (24 decimal) represents the \ac{CI} length in units of 1.25ms. Therefore 0x18 represents 30ms between connection intervals. Between each master to slave directional data packet (every 2 packets), the total sum of the time is 30000$\mu$s
 
-While explained for completeness, advertisement and pakcets used in the initial establishment of a connection are of no concern to this project since they do not contribute to data throughput and once a connection has been established, do not contribute to the power consumption of the device. Hence, their contribution is removed from measurements as it is assumed the long term amortised cost is zero.
+\end{itemize}
+
+It is highlighted that (at least initally) the slave interval is 0, meaning the slave should wake up every \ac{CI}. In packets numbers 243 and 244, the slave and master respectively have nothing to send, and simply acknowledge on another with an empty \ac{PDU}. The protocol realises flow control through the the lazy acknowledgment of \ac{SN} and \ac{NESN} bits, embedded into the header of every data channel.
+
+While explained for completeness, advertisement and packets used in the initial establishment of a connection are of no concern to this project since they do not contribute to data throughput and once a connection has been established, do not contribute to the power consumption of the device. Hence, their contribution is removed from measurements as it is assumed the long term amortised cost is zero. The (incomplete) connection initialisation process shown in Figure~\ref{fig:connection} is known as "Just Works" pairing.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -302,6 +310,51 @@ While explained for completeness, advertisement and pakcets used in the initial 
 	\caption{\ac{BLE} connection initialisation}
 	\label{fig:connection}
 \end{figure}
+
+As previously mentioned, to achieve high throughputs notifications are used. To achieve the maximum throughput, it is desirable to send notifications as fast as possible. However, data cannot be sent out without flow control, and all notification packets must first be received then acknowledged before the next packet is sent. When a packet is sent, there is a mandatory 150$\mu$s inter-frame period. For the maximum throughput the connection receiving device would just acknowledge the data in an 80 bit acknowledgment response. Another 150$\mu$s frame would occur between this responding device and a transmitting device, bringing the total time up to:
+
+\begin{displaymath}
+328\mu s + 150\mu s + 80\mu s + 150\mu s = 708\mu s
+\end{displaymath}
+
+ This is shown graphically in Figure~\ref{fig:turnaround}. The total duty cycle is 
+
+\begin{displaymath}
+\frac{328\mu s}{708\mu s} \approx 58\%
+\end{displaymath}
+which is relatively low when compared radio technology duty cycles, e.g. \ac{BTC}. The 150$\mu$s inter frame period exists to prevents the silicon from heating to excessively, preventing power consuming hardware being required to recalibrate the radio for different frequencies. 
+
+From the figure it is possible to calculate the upper bound for the number of packets that can be transmitted per second is
+
+\begin{displaymath}\frac{1000000\mu s}{708\mu s} \approx  1414.43\end{displaymath}
+
+Of the 41 bytes (328 bits) sent for a notification packet, only 27 of them are considered for application use, and 4 of those are used for encryption. Even if encryption is not used, for complexity reasons, the maximum amount of application data is restricted 23 bytes.
+
+\begin{displaymath}
+1414.1293 \frac{packets}{s} \times 184 bits \approx 260 kbp/s
+\end{displaymath}
+
+While a lot of literate quote{CITATION PLEASE] this as the maximum usable data rate of this 23 bytes 3 bytes are required to identify the command type (notification) through an op-code (1 bytes) and which attribute it belongs to through an attribute handle (2 bytes). This means that only 20 bytes of the original 27 reserved for the application are usable, reducing the upper bound for throughput to 
+
+\begin{displaymath}
+1414.1293 \frac{packets}{s} \times 160 bits \approx 226 kbp/s
+\end{displaymath}
+
+
+
+
+When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every nofication packet sent has a fixed cost of 80 bits associated with it. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 1\textwidth]{turnaround}
+	\end{center}
+	\caption{\ac{BLE}'s packet flow for maximum throughput}
+	\label{fig:turnaround}
+\end{figure}
+
+The \ac{BLE} specification defines no maximum 
+
 
 \clearpage
 
@@ -406,6 +459,8 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{CODEC}{coder/decoder}
 	\acro{CRC}{Cyclic Redundancy Check}
 	\acro{PDU}{Packet Data Unit}
+	\acro{SN}{Sequenc Number}
+	\acro{NESN}{Next Expected Sequence Number}
 \end{acronym}
 
 \section{User Guide}

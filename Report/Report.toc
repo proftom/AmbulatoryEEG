@@ -18,34 +18,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Bluetooth Low Energy}{6}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Preliminary Research}{14}{section.4}
+\contentsline {section}{\numberline {4}Preliminary Research}{16}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Radio Evaluation}{14}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Radio Evaluation}{16}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}nRF8001}{14}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1}nRF8001}{16}{subsubsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Component Selection}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Component Selection}{17}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Specification}{15}{section.5}
+\contentsline {section}{\numberline {5}Specification}{17}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Prototype Design}{15}{section.6}
+\contentsline {section}{\numberline {6}Prototype Design}{17}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Results}{15}{section.7}
+\contentsline {section}{\numberline {7}Results}{17}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Evaluation}{15}{section.8}
+\contentsline {section}{\numberline {8}Evaluation}{17}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Power Analysis}{15}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.1}Power Analysis}{17}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Bill of materials}{15}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.2}Bill of materials}{17}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Conclusions and Future Work}{15}{section.9}
+\contentsline {section}{\numberline {9}Conclusions and Future Work}{17}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Final Remarks}{15}{section.10}
+\contentsline {section}{\numberline {10}Final Remarks}{17}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Bibliography}{16}{section.11}
+\contentsline {section}{\numberline {11}Bibliography}{18}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Appendix}{17}{section.12}
+\contentsline {section}{\numberline {12}Appendix}{19}{section.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1}Acronyms}{17}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.1}Acronyms}{19}{subsection.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}User Guide}{17}{section.13}
+\contentsline {section}{\numberline {13}User Guide}{19}{section.13}

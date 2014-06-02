@@ -17,257 +17,257 @@
     <AppXManifest Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-05-31T23:47:07.260</Modified>
+      <Modified>2014-06-02T13:16:40.300</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.exe">
       <PackagePath>Electroencephalograph.exe</PackagePath>
-      <Modified>2014-06-01T00:27:19.630</Modified>
+      <Modified>2014-06-02T13:22:04.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization.dll">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization.dll</PackagePath>
-      <Modified>2014-05-29T14:43:48.469</Modified>
+      <Modified>2014-06-02T00:00:39.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit.dll">
       <PackagePath>WinRTXamlToolkit.dll</PackagePath>
-      <Modified>2014-05-29T14:43:48.252</Modified>
+      <Modified>2014-06-02T00:00:39.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T06:01:02.000</Modified>
+      <Modified>2014-06-02T00:00:39.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T06:01:02.000</Modified>
+      <Modified>2014-06-02T00:00:39.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T06:01:02.000</Modified>
+      <Modified>2014-06-02T00:00:39.594</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T06:01:02.000</Modified>
+      <Modified>2014-06-02T00:00:39.594</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
-      <Modified>2014-05-29T14:38:31.653</Modified>
+      <Modified>2014-06-02T00:00:39.597</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-05-31T00:03:03.247</Modified>
+      <Modified>2014-06-02T00:00:39.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-05-31T23:47:06.583</Modified>
+      <Modified>2014-06-02T00:00:39.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
       <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
-      <Modified>2014-05-29T14:43:48.283</Modified>
+      <Modified>2014-06-02T00:00:39.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\AlternativeFrame\AlternativeFrame.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\AlternativeFrame\AlternativeFrame.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.254</Modified>
+      <Modified>2014-06-02T00:00:39.835</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\AnimatingContainer\AnimatingContainer.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\AnimatingContainer\AnimatingContainer.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.256</Modified>
+      <Modified>2014-06-02T00:00:39.836</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\CameraCaptureControl\CameraCaptureControl.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\CameraCaptureControl\CameraCaptureControl.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.258</Modified>
+      <Modified>2014-06-02T00:00:39.837</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\CascadingImageControl\CascadingImageControl.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\CascadingImageControl\CascadingImageControl.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.260</Modified>
+      <Modified>2014-06-02T00:00:39.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\CascadingTextBlock\CascadingTextBlock.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\CascadingTextBlock\CascadingTextBlock.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.261</Modified>
+      <Modified>2014-06-02T00:00:39.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\ColorPicker\ColorPicker.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\ColorPicker\ColorPicker.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.262</Modified>
+      <Modified>2014-06-02T00:00:39.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\CountdownControl\CountdownControl.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\CountdownControl\CountdownControl.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.263</Modified>
+      <Modified>2014-06-02T00:00:39.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\CustomAppBar\CustomAppBar.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\CustomAppBar\CustomAppBar.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.264</Modified>
+      <Modified>2014-06-02T00:00:39.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\CustomGridSplitter\CustomGridSplitter.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\CustomGridSplitter\CustomGridSplitter.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.265</Modified>
+      <Modified>2014-06-02T00:00:39.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\DelayedLoadControl\DelayedLoadControl.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\DelayedLoadControl\DelayedLoadControl.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.266</Modified>
+      <Modified>2014-06-02T00:00:39.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\FxContentControl\FxContentControl.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\FxContentControl\FxContentControl.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.267</Modified>
+      <Modified>2014-06-02T00:00:39.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\ImageButton\ImageButton.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\ImageButton\ImageButton.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.268</Modified>
+      <Modified>2014-06-02T00:00:39.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\ImageToggleButton\ImageToggleButton.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\ImageToggleButton\ImageToggleButton.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.269</Modified>
+      <Modified>2014-06-02T00:00:39.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\InputDialog\InputDialog.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\InputDialog\InputDialog.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.269</Modified>
+      <Modified>2014-06-02T00:00:39.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\ListItemButton\ListItemButton.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\ListItemButton\ListItemButton.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.270</Modified>
+      <Modified>2014-06-02T00:00:39.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\NumericUpDown\NumericUpDown.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\NumericUpDown\NumericUpDown.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.271</Modified>
+      <Modified>2014-06-02T00:00:39.848</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\ToolWindow\ToolWindow.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\ToolWindow\ToolWindow.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.272</Modified>
+      <Modified>2014-06-02T00:00:39.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\TreeView\TreeView.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeView.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.273</Modified>
+      <Modified>2014-06-02T00:00:39.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\TreeView\TreeViewItem.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewItem.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.274</Modified>
+      <Modified>2014-06-02T00:00:39.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\TreeView\TreeViewMouse.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewMouse.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.275</Modified>
+      <Modified>2014-06-02T00:00:39.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\TreeView\TreeViewTouch.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewTouch.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.276</Modified>
+      <Modified>2014-06-02T00:00:39.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\WatermarkPasswordBox\WatermarkPasswordBox.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\WatermarkPasswordBox\WatermarkPasswordBox.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.277</Modified>
+      <Modified>2014-06-02T00:00:39.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\WatermarkTextBox\WatermarkTextBox.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\WatermarkTextBox\WatermarkTextBox.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.278</Modified>
+      <Modified>2014-06-02T00:00:39.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Controls\WebBrowser\WebBrowser.xbf">
       <PackagePath>WinRTXamlToolkit\Controls\WebBrowser\WebBrowser.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.279</Modified>
+      <Modified>2014-06-02T00:00:39.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.1.6.1.3\lib\netcore451\WinRTXamlToolkit\Themes\Generic.xbf">
       <PackagePath>WinRTXamlToolkit\Themes\Generic.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.280</Modified>
+      <Modified>2014-06-02T00:00:39.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\WinRTXamlToolkit.Controls.DataVisualization.xr.xml">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\WinRTXamlToolkit.Controls.DataVisualization.xr.xml</PackagePath>
-      <Modified>2014-05-29T14:43:48.489</Modified>
+      <Modified>2014-06-02T00:00:39.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\AxisLabel.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\AxisLabel.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.471</Modified>
+      <Modified>2014-06-02T00:00:39.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\DateTimeAxisLabel.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\DateTimeAxisLabel.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.472</Modified>
+      <Modified>2014-06-02T00:00:39.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\DisplayAxis.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\DisplayAxis.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.472</Modified>
+      <Modified>2014-06-02T00:00:39.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\NumericAxisLabel.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\NumericAxisLabel.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.473</Modified>
+      <Modified>2014-06-02T00:00:39.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\RangeAxis.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Axis\RangeAxis.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.473</Modified>
+      <Modified>2014-06-02T00:00:39.783</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Chart\Chart.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Chart\Chart.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.474</Modified>
+      <Modified>2014-06-02T00:00:39.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\AreaDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\AreaDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.475</Modified>
+      <Modified>2014-06-02T00:00:39.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\BarDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\BarDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.475</Modified>
+      <Modified>2014-06-02T00:00:39.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\BubbleDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\BubbleDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.476</Modified>
+      <Modified>2014-06-02T00:00:39.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\ColumnDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\ColumnDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.476</Modified>
+      <Modified>2014-06-02T00:00:39.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\LineDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\LineDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.477</Modified>
+      <Modified>2014-06-02T00:00:39.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\PieDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\PieDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.478</Modified>
+      <Modified>2014-06-02T00:00:39.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\ScatterDataPoint.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\DataPoint\ScatterDataPoint.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.478</Modified>
+      <Modified>2014-06-02T00:00:39.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Primitives\DelegatingListBox.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Primitives\DelegatingListBox.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.479</Modified>
+      <Modified>2014-06-02T00:00:39.789</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\AreaSeries.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\AreaSeries.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.480</Modified>
+      <Modified>2014-06-02T00:00:39.789</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\DataPointSeries.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\DataPointSeries.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.480</Modified>
+      <Modified>2014-06-02T00:00:39.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\DefinitionSeries.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\DefinitionSeries.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.481</Modified>
+      <Modified>2014-06-02T00:00:39.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\LegendItem.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\LegendItem.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.482</Modified>
+      <Modified>2014-06-02T00:00:39.791</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\LineSeries.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\LineSeries.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.482</Modified>
+      <Modified>2014-06-02T00:00:39.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\PieSeries.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Charting\Series\PieSeries.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.484</Modified>
+      <Modified>2014-06-02T00:00:39.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Legend\Legend.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Legend\Legend.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.485</Modified>
+      <Modified>2014-06-02T00:00:39.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Themes\Generic.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Themes\Generic.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.486</Modified>
+      <Modified>2014-06-02T00:00:39.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\packages\WinRTXamlToolkit.Controls.DataVisualization.1.6.1.3\lib\netcore451\WinRTXamlToolkit.Controls.DataVisualization\Title\Title.xbf">
       <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Title\Title.xbf</PackagePath>
-      <Modified>2014-05-29T14:43:48.486</Modified>
+      <Modified>2014-06-02T00:00:39.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-06-01T00:26:21.118</Modified>
+      <Modified>2014-06-02T13:22:04.435</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

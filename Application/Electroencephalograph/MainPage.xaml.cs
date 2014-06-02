@@ -139,7 +139,8 @@ namespace Electroencephalograph
             //financialStuffList.Add(new FinancialStuff() { Name = "AAPL", Amount = 200 });
             //financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
             
-            //(LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
+            (LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
+            (LineChart.Series[0] as LineSeries).Name = "Channel 4";
             //(LineChart.Series[1] as LineSeries).ItemsSource = financialStuffList;
         }
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.6.1)  2 JUN 2014 00:53
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.6.1)  2 JUN 2014 01:05
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1072,36 +1072,26 @@ Package biblatex Info: ... file 'Report.bbl' found.
 (C:\Repository\AmbulatoryEEG\Report\Report.bbl)
 Package biblatex Info: Reference section=0 on input line 75.
 Package biblatex Info: Reference segment=0 on input line 75.
-Requested font "ecrm1728" at 17.28pt
-Requested font "ecrm1200" at 12.0pt
-Requested font "cmr12" at 12.0pt
-Requested font "cmr8" at 8.0pt
-Requested font "cmr6" at 6.0pt
-Requested font "cmmi12" at 12.0pt
-Requested font "cmmi8" at 8.0pt
-Requested font "cmmi6" at 6.0pt
-Requested font "cmsy10" at 12.0pt
-Requested font "cmsy8" at 8.0pt
-Requested font "cmsy6" at 6.0pt
-Requested font "cmex10" at 12.0pt
-Requested font "cmex8" at 8.0pt
-Requested font "cmex7" at 6.0pt
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+Requested font "ecrm1440" at 14.4pt
+Requested font "cmex7" at 7.0pt
+Requested font "cmex7" at 5.0pt
+LaTeX Font Info:    Try loading font information for U+msa on input line 103.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-Requested font "msam10" at 12.0pt
-Requested font "msam10" at 8.0pt
-Requested font "msam7" at 6.0pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+Requested font "msam10" at 10.0pt
+Requested font "msam7" at 7.0pt
+Requested font "msam5" at 5.0pt
+LaTeX Font Info:    Try loading font information for U+msb on input line 103.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Requested font "msbm10" at 12.0pt
-Requested font "msbm10" at 8.0pt
-Requested font "msbm7" at 6.0pt
+Requested font "msbm10" at 10.0pt
+Requested font "msbm7" at 7.0pt
+Requested font "msbm5" at 5.0pt
+Requested font "ecbx1000" at 10.0pt
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
@@ -1110,17 +1100,6 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 [1
 
 ]
-Requested font "ecrm1440" at 14.4pt
-Requested font "cmex7" at 7.0pt
-Requested font "cmex7" at 5.0pt
-Requested font "msam10" at 10.0pt
-Requested font "msam7" at 7.0pt
-Requested font "msam5" at 5.0pt
-Requested font "msbm10" at 10.0pt
-Requested font "msbm7" at 7.0pt
-Requested font "msbm5" at 5.0pt
-Requested font "ecbx1000" at 10.0pt
- [1]
 Requested font "ecbx1440" at 14.4pt
 Missing character: There is no ’ in font ecrm1000!
 Missing character: There is no ’ in font ecrm1000!
@@ -1136,6 +1115,7 @@ although it is yet undefined on input line 122.
 ] [3
 
 ]
+Requested font "ecrm1200" at 12.0pt
 Requested font "ecbx1200" at 12.0pt
 Package acronym Info: Label `acro:BLE' newly defined as it shall be overridden
 although it is yet undefined on input line 159.
@@ -1204,12 +1184,12 @@ Package logreq Info: Writing requests to 'Report.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
  ) 
 Here is how much of TeX's memory you used:
- 20210 strings out of 429025
- 297096 string characters out of 3166799
+ 20181 strings out of 429025
+ 296791 string characters out of 3166799
  516629 words of memory out of 3000000
- 23248 multiletter control sequences out of 15000+200000
- 16733 words of font info for 50 fonts, out of 3000000 for 9000
+ 23229 multiletter control sequences out of 15000+200000
+ 11320 words of font info for 31 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
  44i,8n,48p,1593b,1466s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Report.pdf (14 pages).
+Output written on Report.pdf (13 pages).

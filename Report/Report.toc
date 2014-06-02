@@ -18,7 +18,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Bluetooth Low Energy}{6}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Preliminary Testing}{10}{section.4}
+\contentsline {section}{\numberline {4}Preliminary Research}{10}{section.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Radio Evaluation}{10}{subsection.4.1}
 \defcounter {refsection}{0}\relax 

@@ -271,6 +271,37 @@ Both BLE and BTC devices move through generic system states. The same abstract v
 	\label{fig:systemstate}
 \end{figure}
 
+\ac{BLE} is principally composed of two types of packets, advertisement (Figure~\ref{fig:advertisement}) and data (Figure~\ref{fig:data}). Both packet types vary in length dependent on the payload but share a 32 bit advertising access address field, a 24 bit \ac{CRC} field, an 8 bit header and an 8 bit length field which defines the \ac{PDU} size (the last 2 field are often collectively called the header field). Advertisement \ac{PDU}s range from 0 to 31 bytes (248bits), meaning the packet can vary between 72 and 320 bits. The over-the-air data rate is 1Mbit/s, meaning advertisement packets are transmitted at a rate between 72 and 320$\mu$s (a single bit is transmitted every 1$\mu$s). In addition to the access code and \ac{CRC} fields, data packets consists of an 8 bit preamble and a \ac{PDU} varying between 0 and 37 bytes (4 of these bytes are reserved for encryption). Hence, the packet length varies from 80bits to 376 bits. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{advertisement}
+	\end{center}
+	\caption{\ac{BLE} Advertisement packet}
+	\label{fig:advertisement}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 1\textwidth]{data}
+	\end{center}
+	\caption{\ac{BLE} Data packet}
+	\label{fig:data}
+\end{figure}
+
+Figure~\ref{fig:connection} shows a connection between two devices being initiated. The first packet shown is is an indirect advertisement packet, available to all listening \ac{BLE} devices. The second packet is a connection request from the master device, communicating in the payload its address, the address to establish a connection with, and random access address, a connection interval length, the hop sequence, channel map, the connection timetout, slave latency and other things. The channel map bit pattern corresponds to a contiguous stream of 37 ones, corresponding to all 37 channels being operational (the master has no reason to prevent transmission). The hop byte indicates between each \ac{CI} how many channels the device pair will increment. The access address is a randomly chosen number (by the master) to iniate 
+
+The interval of 0x18 (24 decimal) 
+
+While explained for completeness, advertisement and pakcets used in the initial establishment of a connection are of no concern to this project since they do not contribute to data throughput and once a connection has been established, do not contribute to the power consumption of the device. Hence, their contribution is removed from measurements as it is assumed the long term amortised cost is zero.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 1.6\textwidth, angle=90]{connection}
+	\end{center}
+	\caption{\ac{BLE} connection initialisation}
+	\label{fig:connection}
+\end{figure}
 
 \clearpage
 
@@ -280,22 +311,34 @@ This section deals with evaluating the technology and radios
 
 \subsection{Radio Evaluation}
 
-There are a number of competing companies int the \ac{BLE} consume space. The most popular chip manufacturers at the time of evaluation are\ac{TI}, \ac{NS} and \ac{CSR}, although  other manufacturers exist, they normally design multi-wireless technology chips, e.g. Broadcomm, which support WiFi, \ac{BTC} and \ac{BLE}. These chips are not suitable for this project due to their complexity, intend application (. The typical use case of such combo-chips are in tablets, smartphones and notebooks. There
+There are a number of competing companies int the \ac{BLE} consume space. The most popular chip manufacturers at the time of evaluation are\ac{TI}, \ac{NS} and \ac{CSR}, although  other manufacturers exist, they normally design combo-wireless technology chips, e.g. Broadcomm, which only offers WiFi, \ac{BTC} and \ac{BLE} combined \ac{SoC}. These chips are not suitable for this project due to their complexity, packaging and intend application - the typical use case of such combo-chips are in high powered devices such as tablets, smart phones and notebooks. 
+
+Different sources [citation] will calculate the application throughput differently. 
+
+\ac{BLE} data packets can carry a payload of upto 20 bytes
 
 After sourcing
 \subsubsection{nRF8001}
-The first radio tested was \ac{NS}'s nRF8001, selected due to the data sheet claiming it was the lowest power consuming device. The reason for this was because the chip only contained a controller and host layer. The application layer must be provided by an external micro controller, which is a large amount of effort to write. Fortunately a hobbyist open source project\cite{Guan2013} was available that provided the necessary code to get limited connectivity up and running.
+The first radio tested was \ac{NS}'s nRF8001, selected due to the data sheet claiming it was the lowest power consuming device. The reason for this was because the chip only contained a controller and host layer. The application layer must be provided by an external micro controller, which is a large amount of effort to write. Fortunately a hobbyist open source project\cite{Guan2013} was available that provided the necessary code to get limited connectivity up and running. Figure~\ref{figure:nrf8001} shows the prototyping setup used to measure the performance of the nrf8001 microchip. \cite{nrf8001}
 
 Using a shunt resistor, the measured peak current was approximately 14.5mA, which correlates well with the data sheet specification of 14.6mA. This was at a 
 
-The ATMega328 consumes approximately XmA, however for the remainder. As the device was hardware limited to only 1 packet per connection event further development was abandoned
+The ATMega328 consumes approximately XmA, however for the remainder. As the device was hardware limited to only 1 packet per connection event further development was abandoned.
 
 
-\cite{nrf8001}
 
 \begin{figure}[htb]
 	\begin{center}
-		\includegraphics[width = 0.8\textwidth]{nrf8001}
+		\includegraphics[width = 0.9\textwidth]{nrf8001stack}
+	\end{center}
+	\caption{nRF8001 application block diagram }
+	\label{fig:nrf8001stack}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{nrf8001}
 	\end{center}
 	\caption{Arduino Uno development board acting hosting the application layer for the nRF8001 radio. Level shifters were required for interfacing with the low-paper chip}
 	\label{fig:nrf8001}
@@ -361,6 +404,8 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{CI}{connection interval}
 	\acro{SIG}{Special Interests Group}
 	\acro{CODEC}{coder/decoder}
+	\acro{CRC}{Cyclic Redundancy Check}
+	\acro{PDU}{Packet Data Unit}
 \end{acronym}
 
 \section{User Guide}

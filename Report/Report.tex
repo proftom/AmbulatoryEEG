@@ -138,6 +138,8 @@ Firstly, the project surperivsors, James Mardell, Chen Guangwei and Esther Rodri
 
 Cambridge Silicon Radio providing hardware and technical support. Employees particurarly are Adam Hill, Martin Spikings, Mark Wade, Neil Stewart and Simon. The recently launched uEnergy forum is an excellent source of . CSR also await a report on the speed of 
 
+Guan from NYC
+
 Dr. Nissim Zur, CEO of Vitelix Limited is an expert in low power wireless technologies, and has conversed over many aspects of the final chip used. Further, has also taken an interest in this project's work in regards to maximising the speed, and has requested the results be shared with him.
 
 Finally, and arguarbly most importantly Mike Harbour and Victor Boddy for their efforts in printed circuit board manufacture and assembly. Countless hours were spent in the lab pushing the department's PCB fabrication facilities outside their specifiction and to their limit. 
@@ -152,7 +154,7 @@ Patients, however, are unlikely to suffer from neurological disorder while at th
 \subsection{Problem Landscape and Motivation}
 Neurological disorders and their sequelae are currently estimated to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectency and decreasing (relative) fertility rates, the population age demographic has shifted towards an ageing population. In tandem, the rates for neurological disorders has increased and is expected to increase further. Diagnosing, monitoring and treating many of these diseases is currently a costly procedure simply due to the time. 
 
-Unfortunately many neurlogical disorder symptons occur sporadically with little to no inidication of an event, such a  in the cause of a seizure for epilepsy.
+Unfortunately many neurlogical disorder symptons occur sporadically with little to no inidication of an event, such as in the cause of a seizure for epilepsy.
 
 
 
@@ -221,7 +223,7 @@ Another contribution to reduced power over \ac{BTC} is the reduction in the numb
 
 The number of channels dedicated to advertising has also decreased, meaing less time is spent searching for discoverable devices. The advertisement channels have been specifically chosen not to interfere with the common WiFi channels. Finally, the radio characteristics are very dependent on temperature. Complex mechanisms are used to compensate and recalibrate on-the-fly radio parameters. Due to the episodic nature of \ac{BLE} the radio does not come under such thermal extremes. All these design changes have positive hardware ramifications. The reduced compelxity of \ac{BLE} means reduced hardware requirements (notably memory), in turn reducing the leakage current. 
 
-\ac{BTC} was designed with the idea that it would be used to do many common jobs, and hence particular configurations were built into it. In \ac{BTC}, these configurations are known as profiles. Example profiles include the audio distribution profile (A2DP), which is used in by many Bluetooth product manufacturers to allow a device, such as a phone to interact with an audio system, such as in a car. Another example would be the serial port profile (SPP), meant to emulate the highly popular and robust RS-232 serial standard for data transfer (recall that \ac{BTC} was concieved as a solution to wires). This is all built into what is known as the Bluetooth stack – a software framework that interacts between the physical layer and the application layer.  
+\ac{BTC} was designed with the idea that it would be used to do many common jobs, and hence particular configurations were built into it. In \ac{BTC}, these configurations are known as profiles. Example profiles include the audio distribution profile (A2DP), which is used in by many Bluetooth product manufacturers to allow a device, such as a phone to interact with an audio system, such as in a car. Another example would be the serial port profile (SPP), meant to emulate the highly popular and robust RS-232 serial standard for data transfer (recall that \ac{BTC} was concieved as a solution to wires). This is all built into what is known as the Bluetooth stack – a software framework that interacts between the physical layer and the application layer\footnote{Depending on what level of the stack one is working, master can take the names central or client, while slave can take peripheral or server.}.  
 
 \ac{BLE} also makes use of this paradigm but is often superficially depicted as \ac{BTC} operating at lower speeds and power consumption. It is not currently compatible with \ac{BTC} and there are no plans for it to be. Like \ac{BTC}, the \ac{BLE} architecture has 3 over-arching parts: Application, Host and Controller. The controller, simply put, is the radio and related hardware controllers and the application the use case, which could be a cadence monitor, thermometer or even an electroencephalogram. It is the host controller interface (HCI), commonly known as the “stack” that provides the necessary software to enable the application layer to communicate with the radio (see Figure~\ref{fig:ble_arch}).
 
@@ -247,19 +249,62 @@ In \ac{BTC} profiles were diverse and large enough to warrant chip designers rel
 
  Attributes represent information about state. In the case of the greenhouse, the state would include the measured temperature. A suitable profile name which encapsulates the state is ''thermometer'', which contains the services ''device information'', ''battery service'', and ''thermometer''. As in figure~\ref{fig:exampleprofile}, the greenhouse thermometer service may contain the same device information and battery services, but replace the ''EEG'' service with the thermometer service, and the ''SensorReadings'' service with temperature. The other profile, \ac{GAP}, will contain the attributes which define how \ac{BLE} unit discover and establish connection to one another.  This includes the device name, perhaps ''greenhouse thermometer'', along with the preferred slave connection properties, e.g. a connection interval of 4 seconds, with a slave latency of 150 (10 minute window). All this information is contained within the GATT database, and shared as needed to other \ac{BLE} units. 
 
-some characteristics contain "notify" in their description. There are 
-When communicating attributes, there are four data operations available. Read and write typically require one device to access the others characteristic. In the case of the greenhouse, the house device would request to read the thermometer. Notification and indications differ to read and write, in that the device after information subscribes to the changes of state of the characteristics. For example, when greenhouse slave device wakes up, if the thermometer measurement changed, it will send a notification or indication alert the master device inside the house. The former methods can be thought of as synchronous means of communication while the latter asynchronous. Notifications differ from indications in that indications require a application level acknowledgment. That is, the indication is bubbled up to the user code, which then either accepts or rejects the indications. Notifications are acknowledge near the bottom of the \ac{BLE} stack, verifying correct receipt and message integrity. Therefore notifications are suitable for higher throughput applications. As shown in figure~\ref{fig:exampleprofile} shows notifications are operation configured for battery and EEG sensor readings. In this example, whenever the battery level changes, any devices subscribed to the characteristic battery level will receive a notification.
+When communicating attributes, there are four data operations available. Read and write typically require one device to access the others characteristic. In the case of the greenhouse, the house device would request to read the thermometer. Notification and indications differ to read and write, in that the device(s) after information subscribes to the changes of state of the characteristics. For example, when greenhouse slave device wakes up, if the thermometer measurement changed, it will send a notification or indication alert the master device inside the house. The former methods can be thought of as synchronous means of communication while the latter asynchronous. Notifications differ from indications in that indications require a application level acknowledgment. That is, the indication is bubbled up to the user code, which then either accepts or rejects the indications. Notifications are acknowledge near the bottom of the \ac{BLE} stack, verifying correct receipt and message integrity. Therefore notifications are suitable for higher throughput applications. As shown in figure~\ref{fig:exampleprofile} shows notifications are operation configured for battery and EEG sensor readings. In this example, whenever the battery level changes, any devices subscribed to the characteristic battery level will receive a notification.
 
-That is any device subscribed to the notification 
+In \ac{BTC} the network topology used pico-nets, whereby one device has one master, but could be a master of another device. \ac{BLE} operates a simpler network topology, star, whereby a device can either be a master or slave, but not both. The master has the responsibility of organising itself between the slaves. If one slave requires large amounts of bandwidth, it my impact the quality of service encountered by the other devices. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{topology}
+	\end{center}
+	\caption{Bluetooth Network Topologies }
+	\label{fig:topology}
+\end{figure}
+
+Both BLE and BTC devices move through generic system states. The same abstract view can be applied to both technologies and is shown in. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for searching and discovering devices with no commitment to connecting. Such a use case might be suitable for devices that intermittently broadcast small amounts of information. Assuming that the master BLE device is in the initiating state, searching for a connectable device, and at the same time the BLE slave is in the advertising stage, periodically broadcasting information using advertisement packets; the two devices will find one another and may initiate a connection request.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{systemstate}
+	\end{center}
+	\caption{Device State Transition Diagram}
+	\label{fig:systemstate}
+\end{figure}
 
 
-In BLE and BTC, there certain states the device. The same abstract view can be applied to both technologies and is shown in Figure 3. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for searching and discovering devices with no commitment to connecting. 
-
-
-
+\clearpage
 
 \section{Preliminary Research}
+
+This section deals with evaluating the technology and radios
+
 \subsection{Radio Evaluation}
+
+There are a number of competing companies int the \ac{BLE} consume space. The most popular chip manufacturers at the time of evaluation are\ac{TI}, \ac{NS} and \ac{CSR}, although  other manufacturers exist, they normally design multi-wireless technology chips, e.g. Broadcomm, which support WiFi, \ac{BTC} and \ac{BLE}. These chips are not suitable for this project due to their complexity, intend application (. The typical use case of such combo-chips are in tablets, smartphones and notebooks. There
+
+After sourcing
+\subsubsection{nRF8001}
+The first radio tested was \ac{NS}'s nRF8001, selected due to the data sheet claiming it was the lowest power consuming device. The reason for this was because the chip only contained a controller and host layer. The application layer must be provided by an external micro controller, which is a large amount of effort to write. Fortunately a hobbyist open source project\cite{Guan2013} was available that provided the necessary code to get limited connectivity up and running.
+
+Using a shunt resistor, the measured peak current was approximately 14.5mA, which correlates well with the data sheet specification of 14.6mA. This was at a 
+
+The ATMega328 consumes approximately XmA, however for the remainder. As the device was hardware limited to only 1 packet per connection event further development was abandoned
+
+
+\cite{nrf8001}
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{nrf8001}
+	\end{center}
+	\caption{Arduino Uno development board acting hosting the application layer for the nRF8001 radio. Level shifters were required for interfacing with the low-paper chip}
+	\label{fig:nrf8001}
+\end{figure}
+
+The first radio tested was \ac{TI}'s CC2541 as part of the sensor tag package 
+\subsection{Component Selection}
+
+\section{Specification}
 
 \section{Prototype Design}
 
@@ -308,7 +353,9 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{BLE}{Bluetooth Low Energy}
 	\acro{BTC}{Bluetooth Classic}
 	\acro{CSR}{Cambridge Silicon Radio}
-	\acro{GATT}{Generic Attribute Prorfile}
+	\acro{TI}{Texas Instruments}
+	\acro{NS}{Nordic Semiconductor}
+	\acro{GATT}{Generic Attribute Profile}
 	\acro{GAP}{Generic Access Profile}
 	\acro{ATT}{Attribute Protocol}
 	\acro{CI}{connection interval}

@@ -33,6 +33,46 @@
   \field{year}{1995}
 \endentry
 
+\entry{Guan2013}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Jacob~Rosenthal}{J.~R.}%
+     {Guan~Yang}{G.~Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {GitHub}%
+  }
+  \strng{namehash}{JRGY1}
+  \strng{fullhash}{JRGY1}
+  \field{sortinit}{J}
+  \field{howpublished}{\url{https://github.com/guanix/arduinonrf8001}}
+  \field{title}{nRF8001 support for Arduino}
+  \field{year}{2013}
+\endentry
+
+\entry{nrf8001}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Semiconductor}{S.}%
+     {Nordic}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SN1}
+  \strng{fullhash}{SN1}
+  \field{sortinit}{S}
+  \field{pages}{1\bibrangedash 161}
+  \field{title}{nRF8001 Datasheet}
+  \verb{url}
+  \verb http://www.nordicsemi.com/kor/content/download/2981/38488/file/nRF8001\
+  \verb _PS\_v1.2.pdf
+  \endverb
+  \field{type}{techreport}
+  \field{year}{2013}
+\endentry
+
 \lossort
 \endlossort
 

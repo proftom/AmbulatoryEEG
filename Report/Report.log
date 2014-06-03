@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  3 JUN 2014 12:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  3 JUN 2014 17:03
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -947,7 +947,7 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
 )))
-Package hyperref Info: Option `colorlinks' set `true' on input line 68.
+Package hyperref Info: Option `colorlinks' set `true' on input line 71.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -961,22 +961,22 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count305
 \@quotereset=\count306
 (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 75.
+Package hyperref Info: Link coloring ON on input line 78.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -986,9 +986,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count307
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
 (C:\Repository\AmbulatoryEEG\Report\Report.out)
 (C:\Repository\AmbulatoryEEG\Report\Report.out)
@@ -1065,13 +1065,13 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 75.
-Package biblatex Info: Reference segment=0 on input line 75.
-LaTeX Font Info:    Try loading font information for U+msa on input line 103.
+Package biblatex Info: Reference section=0 on input line 78.
+Package biblatex Info: Reference segment=0 on input line 78.
+LaTeX Font Info:    Try loading font information for U+msa on input line 106.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 103.
+LaTeX Font Info:    Try loading font information for U+msb on input line 106.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1079,14 +1079,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Package acronym Info: Label `acro:EEG' newly defined as it shall be overridden
-although it is yet undefined on input line 122.
+although it is yet undefined on input line 125.
 Package acronym Info: Label `acro:BLE' newly defined as it shall be overridden
-although it is yet undefined on input line 126.
+although it is yet undefined on input line 129.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.129 \clearpage
+l.132 \clearpage
                  [1
 
 
@@ -1100,201 +1100,218 @@ l.129 \clearpage
 ] [4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 184.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 189.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 189.
  [5]
 Package acronym Info: Label `acro:BTC' newly defined as it shall be overridden
-although it is yet undefined on input line 197.
+although it is yet undefined on input line 202.
 Package acronym Info: Label `acro:CI' newly defined as it shall be overridden
-although it is yet undefined on input line 201.
+although it is yet undefined on input line 206.
 
 [6
 
-] <assets/blechannels.png, id=226, 578.16pt x 344.03531pt>
+] <assets/blechannels.png, id=236, 578.16pt x 344.03531pt>
 File: assets/blechannels.png Graphic file (type png)
 
 <use assets/blechannels.png>
-Package pdftex.def Info: assets/blechannels.png used on input line 209.
+Package pdftex.def Info: assets/blechannels.png used on input line 214.
 (pdftex.def)             Requested size: 310.70287pt x 184.88387pt.
 
-<assets/blechannelswifi.png, id=229, 621.07031pt x 280.04625pt>
+<assets/blechannelswifi.png, id=239, 621.07031pt x 280.04625pt>
 File: assets/blechannelswifi.png Graphic file (type png)
 
 <use assets/blechannelswifi.png>
-Package pdftex.def Info: assets/blechannelswifi.png used on input line 217.
+Package pdftex.def Info: assets/blechannelswifi.png used on input line 222.
 (pdftex.def)             Requested size: 310.70287pt x 140.09969pt.
  [7 <C:/Repository/AmbulatoryEEG/Report/assets/blechannels.png> <C:/Repository/
-AmbulatoryEEG/Report/assets/blechannelswifi.png>] <assets/ble_arch.png, id=250,
+AmbulatoryEEG/Report/assets/blechannelswifi.png>] <assets/ble_arch.png, id=260,
  581.17125pt x 492.33937pt>
 File: assets/ble_arch.png Graphic file (type png)
 
 <use assets/ble_arch.png>
-Package pdftex.def Info: assets/ble_arch.png used on input line 232.
+Package pdftex.def Info: assets/ble_arch.png used on input line 237.
 (pdftex.def)             Requested size: 310.70287pt x 263.21489pt.
  [8 <C:/Repository/AmbulatoryEEG/Report/assets/ble_arch.png>]
 Package acronym Info: Label `acro:CODEC' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 240.
+although it is yet undefined on input line 245.
 Package acronym Info: Label `acro:GATT' newly defined as it shall be overridden
 
-although it is yet undefined on input line 240.
+although it is yet undefined on input line 245.
 Package acronym Info: Label `acro:ATT' newly defined as it shall be overridden
-although it is yet undefined on input line 240.
+although it is yet undefined on input line 245.
 Package acronym Info: Label `acro:GAP' newly defined as it shall be overridden
-although it is yet undefined on input line 240.
+although it is yet undefined on input line 245.
 Package acronym Info: Label `acro:SIG' newly defined as it shall be overridden
-although it is yet undefined on input line 240.
- <assets/exampleprofile.png, id=276, 367.3725pt x 307.90031pt>
+although it is yet undefined on input line 245.
+ <assets/exampleprofile.png, id=286, 367.3725pt x 307.90031pt>
 File: assets/exampleprofile.png Graphic file (type png)
 
 <use assets/exampleprofile.png>
-Package pdftex.def Info: assets/exampleprofile.png used on input line 244.
+Package pdftex.def Info: assets/exampleprofile.png used on input line 249.
 (pdftex.def)             Requested size: 221.9316pt x 186.01012pt.
  [9 <C:/Repository/AmbulatoryEEG/Report/assets/exampleprofile.png>] <assets/top
-ology.png, id=300, 655.69969pt x 258.9675pt>
+ology.png, id=310, 655.69969pt x 258.9675pt>
 File: assets/topology.png Graphic file (type png)
 
 <use assets/topology.png>
-Package pdftex.def Info: assets/topology.png used on input line 258.
+Package pdftex.def Info: assets/topology.png used on input line 263.
 (pdftex.def)             Requested size: 443.86319pt x 175.30525pt.
 
-<assets/systemstate.png, id=301, 484.81125pt x 363.60844pt>
+<assets/systemstate.png, id=311, 484.81125pt x 363.60844pt>
 File: assets/systemstate.png Graphic file (type png)
 
 <use assets/systemstate.png>
-Package pdftex.def Info: assets/systemstate.png used on input line 268.
+Package pdftex.def Info: assets/systemstate.png used on input line 273.
 (pdftex.def)             Requested size: 355.0919pt x 266.33075pt.
 Package acronym Info: Label `acro:CRC' newly defined as it shall be overridden
-although it is yet undefined on input line 274.
+although it is yet undefined on input line 279.
 Package acronym Info: Label `acro:PDU' newly defined as it shall be overridden
-although it is yet undefined on input line 274.
+although it is yet undefined on input line 279.
  [10 <C:/Repository/AmbulatoryEEG/Report/assets/topology.png>] <assets/advertis
-ement.png, id=316, 591.71063pt x 453.19313pt>
+ement.png, id=326, 591.71063pt x 453.19313pt>
 File: assets/advertisement.png Graphic file (type png)
 
 <use assets/advertisement.png>
-Package pdftex.def Info: assets/advertisement.png used on input line 278.
+Package pdftex.def Info: assets/advertisement.png used on input line 283.
 (pdftex.def)             Requested size: 310.70287pt x 237.97144pt.
 
-<assets/data.png, id=319, 453.19313pt x 161.10187pt>
+<assets/data.png, id=329, 453.19313pt x 161.10187pt>
 File: assets/data.png Graphic file (type png)
  <use assets/data.png>
-Package pdftex.def Info: assets/data.png used on input line 286.
+Package pdftex.def Info: assets/data.png used on input line 291.
 (pdftex.def)             Requested size: 443.86319pt x 157.78534pt.
 
 [11 <C:/Repository/AmbulatoryEEG/Report/assets/systemstate.png>]
 Package acronym Info: Label `acro:SN' newly defined as it shall be overridden
-although it is yet undefined on input line 302.
+although it is yet undefined on input line 307.
 Package acronym Info: Label `acro:NESN' newly defined as it shall be overridden
 
-although it is yet undefined on input line 302.
+although it is yet undefined on input line 307.
  [12 <C:/Repository/AmbulatoryEEG/Report/assets/advertisement.png> <C:/Reposito
 ry/AmbulatoryEEG/Report/assets/data.png>]
-<assets/connection.png, id=353, 1233.10687pt x 423.08063pt>
+<assets/connection.png, id=363, 1233.10687pt x 423.08063pt>
 File: assets/connection.png Graphic file (type png)
 
 <use assets/connection.png>
-Package pdftex.def Info: assets/connection.png used on input line 308.
+Package pdftex.def Info: assets/connection.png used on input line 313.
 (pdftex.def)             Requested size: 710.1838pt x 243.66972pt.
 
 
-LaTeX Warning: Float too large for page by 44.38167pt on input line 312.
+LaTeX Warning: Float too large for page by 44.38167pt on input line 317.
 
-<assets/turnaround.jpg, id=358, 526.96875pt x 192.72pt>
+<assets/turnaround.jpg, id=368, 526.96875pt x 192.72pt>
 File: assets/turnaround.jpg Graphic file (type jpg)
 
 <use assets/turnaround.jpg>
-Package pdftex.def Info: assets/turnaround.jpg used on input line 347.
+Package pdftex.def Info: assets/turnaround.jpg used on input line 352.
 (pdftex.def)             Requested size: 443.86319pt x 162.3336pt.
  [13] [14] [15 <C:/Repository/AmbulatoryEEG/Report/assets/connection.png>] [16 
 <C:/Repository/AmbulatoryEEG/Report/assets/turnaround.jpg>]
 Package acronym Info: Label `acro:TI' newly defined as it shall be overridden
-although it is yet undefined on input line 365.
+although it is yet undefined on input line 373.
 Package acronym Info: Label `acro:NS' newly defined as it shall be overridden
-although it is yet undefined on input line 365.
+although it is yet undefined on input line 373.
 Package acronym Info: Label `acro:CSR' newly defined as it shall be overridden
-although it is yet undefined on input line 365.
+although it is yet undefined on input line 373.
 Package acronym Info: Label `acro:SoC' newly defined as it shall be overridden
-although it is yet undefined on input line 365.
+although it is yet undefined on input line 373.
 
 
-Package acronym Warning: Acronym `SoC' is not defined on input line 365.
+LaTeX Warning: Reference `figure:nrf8001' on page 17 undefined on input line 38
+1.
 
-
-Package acronym Warning: Acronym `SoC' is not defined on input line 365.
-
-
-LaTeX Warning: Reference `figure:nrf8001' on page 17 undefined on input line 37
-3.
-
-<assets/nrf8001stack.png, id=391, 656.4525pt x 213.79875pt>
+<assets/nrf8001stack.png, id=402, 656.4525pt x 213.79875pt>
 File: assets/nrf8001stack.png Graphic file (type png)
 
 <use assets/nrf8001stack.png>
-Package pdftex.def Info: assets/nrf8001stack.png used on input line 383.
+Package pdftex.def Info: assets/nrf8001stack.png used on input line 391.
 (pdftex.def)             Requested size: 399.47415pt x 130.10385pt.
 
-<assets/nrf8001.png, id=392, 825.83531pt x 619.56468pt>
+<assets/nrf8001.png, id=403, 825.83531pt x 619.56468pt>
 File: assets/nrf8001.png Graphic file (type png)
 
 <use assets/nrf8001.png>
-Package pdftex.def Info: assets/nrf8001.png used on input line 392.
+Package pdftex.def Info: assets/nrf8001.png used on input line 400.
 (pdftex.def)             Requested size: 399.47415pt x 299.70384pt.
  [17
 
 ]
-Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
-although it is yet undefined on input line 434.
- <assets/pcb1.jpg, id=411, 3276.24pt x 2457.18pt>
-File: assets/pcb1.jpg Graphic file (type jpg)
-
-<use assets/pcb1.jpg>
-Package pdftex.def Info: assets/pcb1.jpg used on input line 438.
-(pdftex.def)             Requested size: 399.47415pt x 299.57306pt.
+Package acronym Info: Label `acro:MCU' newly defined as it shall be overridden
+although it is yet undefined on input line 430.
  [18 <C:/Repository/AmbulatoryEEG/Report/assets/nrf8001stack.png>] [19 <C:/Repo
-sitory/AmbulatoryEEG/Report/assets/nrf8001.png>] [20 <C:/Repository/AmbulatoryE
-EG/Report/assets/pcb1.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 481.
+sitory/AmbulatoryEEG/Report/assets/nrf8001.png>]
+<assets/nrfsim.png, id=448, 432.86719pt x 275.52937pt>
+File: assets/nrfsim.png Graphic file (type png)
+ <use assets/nrfsim.png>
+Package pdftex.def Info: assets/nrfsim.png used on input line 450.
+(pdftex.def)             Requested size: 221.9316pt x 141.26646pt.
+
+<assets/nrfwave.png, id=449, 1053.9375pt x 246.1697pt>
+File: assets/nrfwave.png Graphic file (type png)
+
+<use assets/nrfwave.png>
+Package pdftex.def Info: assets/nrfwave.png used on input line 458.
+(pdftex.def)             Requested size: 488.25221pt x 114.04326pt.
+
+Overfull \hbox (44.38902pt too wide) in paragraph at lines 458--459
+ [] 
+ []
+
+[20 <C:/Repository/AmbulatoryEEG/Report/assets/nrfsim.png>]
+Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
+although it is yet undefined on input line 488.
+
+<assets/pcb1.jpg, id=457, 3276.24pt x 2457.18pt>
+File: assets/pcb1.jpg Graphic file (type jpg)
+ <use assets/pcb1.jpg>
+Package pdftex.def Info: assets/pcb1.jpg used on input line 492.
+(pdftex.def)             Requested size: 399.47415pt x 299.57306pt.
+ [21 <C:/Repository/AmbulatoryEEG/Report/assets/nrfwave.png>] [22 <C:/Repositor
+y/AmbulatoryEEG/Report/assets/pcb1.jpg>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 563.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [21] [22
+) [23
+
+] [24]
+[25
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
-
-[23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 598.
+ [26]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 598.
  (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 598.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 598.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 991057AD8CA53FBA165FE3924A045B0C;1633.
+(rerunfilecheck)             Checksum: 29F4EB7290153F9B4D7D2684E60CF718;1772.
 
 
 LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 598.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 337 ({)
+### simple group (level 1) entered at line 342 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17563 strings out of 493921
- 269140 string characters out of 3144873
- 494614 words of memory out of 3000000
- 20491 multiletter control sequences out of 15000+200000
+ 17610 strings out of 493921
+ 269864 string characters out of 3144873
+ 495018 words of memory out of 3000000
+ 20526 multiletter control sequences out of 15000+200000
  17031 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,8n,48p,1592b,1555s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,8n,48p,1592b,1551s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
 ppen\ec\dpi600\eccc1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\
 ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.
@@ -1309,11 +1326,12 @@ four\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\
 fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Thomas\AppData\Local\
 MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (24 pages, 5259499 bytes).
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Report.pdf (27 pages, 5416968 bytes).
 PDF statistics:
- 887 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 282 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 941 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

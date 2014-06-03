@@ -268,7 +268,7 @@ In \ac{BTC} the network topology used pico-nets, whereby one device has one mast
 
 Both BLE and BTC devices move through generic system states. The same abstract view can be applied to both technologies and is shown in. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for searching and discovering devices with no commitment to connecting. Such a use case might be suitable for devices that intermittently broadcast small amounts of information. Assuming that the master BLE device is in the initiating state, searching for a connectable device, and at the same time the BLE slave is in the advertising stage, periodically broadcasting information using advertisement packets; the two devices will find one another and may initiate a connection request.
 
-\begin{figure}[htb]
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width = 0.8\textwidth]{systemstate}
 	\end{center}
@@ -278,15 +278,15 @@ Both BLE and BTC devices move through generic system states. The same abstract v
 
 \ac{BLE} is principally composed of two types of packets, advertisement (Figure~\ref{fig:advertisement}) and data (Figure~\ref{fig:data}). Both packet types vary in length dependent on the payload but share a 32 bit advertising access address field, a 24 bit \ac{CRC} field, an 8 bit header and an 8 bit length field which defines the \ac{PDU} size (the last 2 field are often collectively called the header field). Advertisement \ac{PDU}s range from 0 to 29 bytes (232bits), meaning the total packet size can vary between 72 and 320 bits. The over-the-air data rate is 1Mbit/s, meaning advertisement packets are transmitted at a rate between 72 and 320$\mu$s (a single bit is transmitted every 1$\mu$s). In addition to the access code and \ac{CRC} fields, data packets consists of an 8 bit preamble and a \ac{PDU} varying between 0 and 27 bytes (4 of these bytes are reserved for encryption). Hence, the packet length varies from 80bits to 328 bits. 
 
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics[width = 0.7\textwidth]{advertisement}
-	\end{center}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{advertisement}
 	\caption{\ac{BLE} Advertisement packet}
 	\label{fig:advertisement}
+	{Img advertisment}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[!h]
 	\begin{center}
 		\includegraphics[width = 1\textwidth]{data}
 	\end{center}
@@ -306,15 +306,17 @@ Figure~\ref{fig:connection} shows a connection between two devices being initiat
 
 It is highlighted that (at least initally) the slave interval is 0, meaning the slave should wake up every \ac{CI}. In packets numbers 243 and 244, the slave and master respectively have nothing to send, and simply acknowledge on another with an empty \ac{PDU}. The protocol realises flow control through the the lazy acknowledgment of \ac{SN} and \ac{NESN} bits, embedded into the header of every data channel.
 
-While explained for completeness, advertisement and packets used in the initial establishment of a connection are of no concern to this project since they do not contribute to data throughput and once a connection has been established, do not contribute to the power consumption of the device. Hence, their contribution is removed from measurements as it is assumed the long term amortised cost is zero. The (incomplete) connection initialisation process shown in Figure~\ref{fig:connection} is known as "Just Works" pairing.
-
-\begin{figure}[htb]
+\begin{figure}[!h]
 	\begin{center}
-		\includegraphics[width = 1.6\textwidth, angle=90]{connection}
+		\includegraphics[width = 1.4\textwidth, angle=90]{connection}
 	\end{center}
 	\caption{\ac{BLE} connection initialisation}
 	\label{fig:connection}
 \end{figure}
+
+While explained for completeness, advertisement and packets used in the initial establishment of a connection are of no concern to this project since they do not contribute to data throughput and once a connection has been established, do not contribute to the power consumption of the device. Hence, their contribution is removed from measurements as it is assumed the long term amortised cost is zero. The (incomplete) connection initialisation process shown in Figure~\ref{fig:connection} is known as "Just Works" pairing.
+
+
 
 As previously mentioned, to achieve high throughputs notifications are used. To achieve the maximum throughput, it is desirable to send notifications as fast as possible. However, data cannot be sent out without flow control, and all notification packets must first be received then acknowledged before the next packet is sent. When a packet is sent, there is a mandatory 150$\mu$s inter-frame period. For the maximum throughput the connection receiving device would just acknowledge the data in an 80 bit acknowledgment response. Another 150$\mu$s frame would occur between this responding device and a transmitting device, bringing the total time up to:
 
@@ -347,10 +349,9 @@ While a lot of literate quote{CITATION PLEASE] this as the maximum usable data r
 
 Here forth, the usable payload of a "notification" or "data packet" is 20 bytes. When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every notification packet sent has a fixed cost of 80 bits associated with it. TALK ABOUT PCK EFFICIENCY 
 
-\begin{figure}[htb]
-	\begin{center}
+\begin{figure}[h]
+	centering
 		\includegraphics[width = 1\textwidth]{turnaround}
-	\end{center}
 	\caption{\ac{BLE}'s packet flow for maximum throughput}
 	\label{fig:turnaround}
 \end{figure}
@@ -388,7 +389,7 @@ Using a shunt resistor, the measured peak current was approximately 14.5mA, whic
 
 The ATMega328 consumes approximately XmA, however for the remainder. As the device was hardware limited to only 1 packet per connection event further development was abandoned.
 
-\begin{figure}[htb]
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{nrf8001stack}
 	\end{center}
@@ -397,7 +398,7 @@ The ATMega328 consumes approximately XmA, however for the remainder. As the devi
 \end{figure}
 
 
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{nrf8001}
 	\end{center}
@@ -405,15 +406,17 @@ The ATMega328 consumes approximately XmA, however for the remainder. As the devi
 	\label{fig:nrf8001}
 \end{figure}
 
-Initially, the device was configured to send a large amount of notification within a single \{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum connection interval to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available, hence this reduces the maximum throughput to 25% of theoretical maximum. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. Figure~\ref{nrfcap} shows a packet capture
-
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = 1.5\textwidth, angle=90]{nrfcap}
+		\includegraphics[width = 1.4\textwidth, angle=90]{nrfcap}
 	\end{center}
 	\caption{Packet-sniffed connection between Apple iPhone 4s and nrf8001. Notification rate 1 packet every 30ms. Some fields removed due to page space constraints}
 	\label{fig:nrfcap}
 \end{figure}
+
+Initially, the device was configured to send a large amount of notification within a single \{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum connection interval to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available, hence this reduces the maximum throughput to 25% of theoretical maximum. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. Figure~\ref{nrfcap} shows a packet capture
+
+
 
 As the device can only send 1 packet per \ac{CI}, to achieve the highest throughput, the device must be run at the smallest connection interval of 7.5ms. At this interval the upper bound for throughput becomes
 
@@ -441,11 +444,72 @@ For initial throughput testing, an example health thermometer application was us
 
 From exploring and understanding the main features of the \ac{OSAL}, it was possible to increase the number of notification packets sent per connection interval from 1 to 8. Unfortunately, it was   
 
-The standard mechanism provided for radio communication, is for every connection interval, receive successful confirmation of the first acknowledge.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as the buffer queue is 8 packets in size. When more than 8 are added to the queue Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are possible.  After greater exploration of the \ac{API}s.
+The standard mechanism provided for radio communication, is for every connection interval, receive successful confirmation of the first acknowledge.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as the buffer queue is 8 packets in size. When more than 8 are added to the queue Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are possible. This mechanism is visualised in Figure~\ref{fig:nols}. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = \textwidth]{nols}
+	\end{center}
+	\caption{Notification of the first packet}
+	\label{fig:nols}
+\end{figure}
+
+An experiment to test throughput was setup whereby each connection event sends 8 notifications per connection event with the same payload, bar one byte which increments with the connection event. The output can be seen in Figure~\ref{fig:8pckt}.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{8pckt}
+	\end{center}
+	\caption{Queuing of 8 packets being lost}
+	\label{fig:8pckt}
+\end{figure}
+
+From the experiment above, the conclusion was that the link layer stack became flooded with notification requests. Had the requests been accepted into the stack, then they would of been transmitted. If they failed to arrive at their destination, then the flow would of caused a negative acknowledgment, and the packet would of been retransmitted. Provided the notification made it through the link layer stack, it should appear in the output. 
+
+After greater exploration of the software system framework, the \ac{API} and software mechanisms, it's possible use the message pump to signal whenever a packet is acknowledged. Upon receiving this signal, the device can then dispatch a subsequent packet. Figure~\ref{fig:lsrad} shows such a mechanism. 
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width = \textwidth]{lsrad}
+	\end{center}
+	\caption{Upon packet acknowledgment }
+	\label{fig:lsrad}
+\end{figure}
+
+The experiment was repeated again, this time sending a new notification every time the previous one was acknowledged. The results are shown in Figure~\ref{fig:9pckt}
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width = \textwidth]{9pckt}
+	\end{center}
+	\caption{9 packets being received per connection interval when through acknowledgment feedback mechanism}
+	\label{fig:9pckt}
+\end{figure}
+ 
+A capture of the notification data was taken over a period of approximately 46 seconds. Figure~\ref{fig:wireshark} shows part of the capture. 
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width = \textwidth]{wireshark}
+	\end{center}
+	\caption{Packet capture. 20 byte data payload (blue) and connection event counter variable highlighted (red)}
+	\label{fig:wireshark}
+\end{figure}
+
+In the 46.060 second period a total of 55286 notification packets were captured, bringing the average throughput to
 
 
+\begin{displaymath}
+\frac{55286}{46.060} = 1200.30395137\; packets/s
+\end{displaymath}
 
-%That informs the device there was a sucessfull connection this \ac{CE}, but doesn't inform the device that subsequent notifications sent the same \ac{CE} were received.
+For a 7.5ms \ac{CI}, the number of \ac{CE} is 133.333 and the number of packets per connection interval is
+
+\begin{displaymath}
+\frac{1200.30395137}{133.3333} = 9.0027\; packets/s
+\end{displaymath}
+
+
 
 A comprehensive explanation of the code is provided in the later section \ref{Prototype}. 
 

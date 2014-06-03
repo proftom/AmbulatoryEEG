@@ -124,7 +124,7 @@ namespace Electroencephalograph
 
         public class FinancialStuff
         {
-            public String Name { get; set; }
+            public Int32 Name { get; set; }
             public int Amount { get; set; }
         }
 
@@ -192,14 +192,14 @@ namespace Electroencephalograph
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
 
 
-
+            Random rnd = new Random();
             var s = Convert.ToString(data[2], 2).PadLeft(8, '0');
             var s2 = Convert.ToString(data[1], 2).PadLeft(8, '0');
 
             System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", data[0], s, s2, data[3]);
             lock (lst)
             {
-                lst.Add(new FinancialStuff() { Name = DateTime.UtcNow.ToString("mm:ss.ffffff"), Amount = data[1] });
+                lst.Add(new FinancialStuff() { Name = rnd.Next(1,100), Amount = data[1] });
             }
             
         }
@@ -226,38 +226,41 @@ namespace Electroencephalograph
             // As the method name says, this DataPoint is empty.
         }
 
-        public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
+public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
+{
+    // "lst" reference is locked here, but it wasn't locked in the event handler 
+    lock (items)
+    {
+        // Change this to what you want
+        const int maxSize = 20;
+
+        // Make sure it doesn't index out of bounds
+        int startIndex = Math.Max(0, items.Count - maxSize);
+        int length = items.Count - startIndex;
+
+        List<T> itemsToRender = items.GetRange(startIndex, length);
+
+        // You can clear it here in your background thread.  The references to the objects
+        // are now in the itemsToRender list.
+        lst.Clear();
+
+        Dispatcher.RunAsync(CoreDispatcherPriority.High, () =>
         {
-            //Get current state of list 
-            lock (items)
+            // At second look, this might need to be locked too
+            lock(oc)
             {
+                oc.Clear();
 
-                if (Dispatcher.HasThreadAccess)
+                for (int i = 0; i < itemsToRender.Count; i++)
                 {
-                    foreach (T item in items)
-                        oc.Add(item);
-
+                    // I didn't notice it before, but why are you checking the count again?
+                    // items.Count());
+                    oc.Add(itemsToRender[i]);
                 }
-                else
-                {
-                    Dispatcher.RunAsync(CoreDispatcherPriority.Low, () =>
-                    {
-
-                        oc.Clear();
-                        for (int i = (items.Count - 100 > 0 ? items.Count - 100 : 0); i < items.Count; i++)
-                        {
-                            //System.Diagnostics.Debug.WriteLine("another {0}", items.Count());
-                            oc.Add(items[i]);
-                        }
-                        System.Diagnostics.Debug.WriteLine("another {0}", items.Count());
-                        lst.Clear();
-                        
-                        //System.Diagnostics.Debug.WriteLine("done");
-                    });
-                }
-            }
-            
-        }
+             }
+        });
+    }
+}
 
 
         private DispatcherTimer sliderTimer = null;

@@ -232,7 +232,7 @@ public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
     lock (items)
     {
         // Change this to what you want
-        const int maxSize = 20;
+        const int maxSize = 30;
 
         // Make sure it doesn't index out of bounds
         int startIndex = Math.Max(0, items.Count - maxSize);

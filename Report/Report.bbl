@@ -52,6 +52,46 @@
   \field{year}{2013}
 \endentry
 
+\entry{olme}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Morten}{M.}%
+     {Ole}{O.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MO1}
+  \strng{fullhash}{MO1}
+  \field{sortinit}{M}
+  \field{title}{Nordic Semiconductor employee}
+  \verb{url}
+  \verb https://devzone.nordicsemi.com/question/3440/how-do-i-calculate-through
+  \verb put-for-a-ble-link
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{nrf51822}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Semiconductor}{S.}%
+     {Nordic}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SN1}
+  \strng{fullhash}{SN1}
+  \field{sortinit}{S}
+  \field{pages}{1\bibrangedash 67}
+  \field{title}{nRF51822 Datasheet}
+  \verb{url}
+  \verb http://www.100y.com.tw/pdf\_file/39-Nordic-NRF51822.pdf
+  \endverb
+  \field{type}{techreport}
+  \field{year}{2013}
+\endentry
+
 \entry{nrf8001}{report}{}
   \name{author}{1}{}{%
     {{}%

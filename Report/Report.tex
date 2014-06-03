@@ -322,11 +322,11 @@ As previously mentioned, to achieve high throughputs notifications are used. To 
 \begin{displaymath}
 \frac{328\mu s}{708\mu s} \approx 58\%
 \end{displaymath}
-which is relatively low when compared radio technology duty cycles, e.g. \ac{BTC}. The 150$\mu$s inter frame period exists to prevents the silicon from heating to excessively, preventing power consuming hardware being required to recalibrate the radio for different frequencies. 
+which is relatively low when compared radio technology duty cycles, e.g. \ac{BTC}. The 150$\mu$s inter frame period exists to prevents the silicon from heating to excessively, preventing power consuming hardware being required to recalibrate the radio. 
 
 From the figure it is possible to calculate the upper bound for the number of packets that can be transmitted per second is
 
-\begin{displaymath}\frac{1000000\mu s}{708\mu s} \approx  1414.43\end{displaymath}
+\begin{displaymath}\frac{1000000\mu s}{708\mu s} \approx  1414.43\;packetes/second\end{displaymath}
 
 Of the 41 bytes (328 bits) sent for a notification packet, only 27 of them are considered for application use, and 4 of those are used for encryption. Even if encryption is not used, for complexity reasons, the maximum amount of application data is restricted 23 bytes.
 
@@ -340,10 +340,7 @@ While a lot of literate quote{CITATION PLEASE] this as the maximum usable data r
 1414.1293 \frac{packets}{s} \times 160 bits \approx 226 kbp/s
 \end{displaymath}
 
-
-
-
-When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every nofication packet sent has a fixed cost of 80 bits associated with it. 
+Here forth, the usable payload of a "notification" or "data packet" is 20 bytes. When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every notification packet sent has a fixed cost of 80 bits associated with it. TALK ABOUT PCK EFFICIENCY 
 
 \begin{figure}[htb]
 	\begin{center}
@@ -355,6 +352,7 @@ When aiming for either low power and/or high efficiency, it is important fill th
 
 The \ac{BLE} specification defines no maximum 
 
+The \ac{BLE} protocol was not designed for high throughput applications, but rather for low latency episodic communication devices transferring small data payloads of representing device state. The energy per bit is low compared other popular technologies, and should not be used as the bottom-line metric for performance. Rather, a holistic metric of the whole system energy consumption for a specific use case will form the basis of the performance metric in this report.
 
 \clearpage
 
@@ -374,7 +372,7 @@ After sourcing
 \subsubsection{nRF8001}
 The first radio tested was \ac{NS}'s nRF8001, selected due to the data sheet claiming it was the lowest power consuming device. The reason for this was because the chip only contained a controller and host layer. The application layer must be provided by an external micro controller, which is a large amount of effort to write. Fortunately a hobbyist open source project\cite{Guan2013} was available that provided the necessary code to get limited connectivity up and running. Figure~\ref{figure:nrf8001} shows the prototyping setup used to measure the performance of the nrf8001 microchip. \cite{nrf8001}
 
-Using a shunt resistor, the measured peak current was approximately 14.5mA, which correlates well with the data sheet specification of 14.6mA. This was at a 
+Using a shunt resistor, the measured peak current was approximately 14.5mA, which correlates with the figure found in the data sheet (14.6mA). This was at a 
 
 The ATMega328 consumes approximately XmA, however for the remainder. As the device was hardware limited to only 1 packet per connection event further development was abandoned.
 
@@ -397,12 +395,53 @@ The ATMega328 consumes approximately XmA, however for the remainder. As the devi
 	\label{fig:nrf8001}
 \end{figure}
 
-The first radio tested was \ac{TI}'s CC2541 as part of the sensor tag package 
+As the device can only send 1 packet per connection interval, to achieve the highest throughput, the device must be run at the smallest connection interval of 7.5ms. At this interval the upper bound for throughput becomes
+
+\begin{displaymath}
+\frac{1000}{7.5} \times 20\:bytes \approx 2666\;byte/s
+\end{displaymath}
+
+With 16 channels at an 8 bit resolution, the highest frequency measurable (according to Nyquist condition) is
+
+\begin{displaymath}
+\frac{1 2666\; byte/s}{16} \times \frac{1}{2} \approx 83  Hz
+\end{displaymath}
+
+\subsubsection{nRF51822}
+Another \ac{NS} product tested was the nRF51822. Information on the suppport packets per connection event was also not present in the datasheet\cite{nrf51822}. This device was found capable of receiving up to 6 packets per second, and this was verified by an engineer\cite{olem}
+
+Unfortunately the chip came as part of a larger development kit and accurate power measurements were not attainable. 
+
+
+\subsubsection{CC2541}
+\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} popular development kit.
+
+Much like 
+
+Similarly the CC2540 has the same characteristics
+
 \subsection{Component Selection}
+
+Apple CIs
+Ti code studio
+Android phones must support 4 packet/ CI
+Ease of development
 
 \section{Specification}
 
 \section{Prototype Design}
+
+The first iteration of the board. Due to the process capabilities and materials used, the radio frequency traces were not impeadance matched, and the device range was limited to approximately 7 meters within a building or 15 meters \ac{LOS}.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{pcb1.jpg}
+	\end{center}
+	\caption{First PCB iteration}
+	\label{fig:pcb1.jpg}
+\end{figure}
+
+\subsection{Component Selection}
 
 \section{Results}
 
@@ -410,16 +449,28 @@ The first radio tested was \ac{TI}'s CC2541 as part of the sensor tag package
 
 \subsection{Power Analysis}
 
+The hardware
+
+Assuming that the number of 
+
+The idea of minimising energy per bit is not the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. 
+
 \subsection{Bill of materials}
 
+\clearpage 
 \section{Conclusions and Future Work}
+
 On the whole, the project has 
+Both ends of the link 
 
 Not all tablets will be able to run at full speed
 
 Ideally, it is desirable to write a conference style paper. 
 
-Useful for CSR
+Never list packets per CI
+
+Useful for CSR, monies worth out of me
+
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance
 
@@ -461,6 +512,7 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{PDU}{Packet Data Unit}
 	\acro{SN}{Sequenc Number}
 	\acro{NESN}{Next Expected Sequence Number}
+	\acro{LOS}{line of sight}
 \end{acronym}
 
 \section{User Guide}

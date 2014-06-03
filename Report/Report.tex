@@ -377,14 +377,16 @@ Different sources [citation] will calculate the application throughput different
 \ac{BLE} data packets can carry a payload of upto 20 bytes
 
 After sourcing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection{nRF8001}
-The first radio tested was \ac{NS}'s nRF8001, selected due to the data sheet claiming it was the lowest power consuming device. The reason for this was because the chip only contained a controller and host layer. The application layer must be provided by an external micro controller, which is a large amount of effort to write. Fortunately a hobbyist open source project\cite{Guan2013} was available that provided the necessary code to get limited connectivity up and running. Figure~\ref{figure:nrf8001} shows the prototyping setup used to measure the performance of the nrf8001 microchip. \cite{nrf8001}
+The first radio tested was \ac{NS}'s nRF8001, selected due to the data sheet claiming it was the lowest power consuming device. The reason for this was because the chip only contained a controller and host layer. The application layer must be provided by an external micro controller, which is a large amount of effort to write. Fortunately a hobbyist open source project\cite{Guan2013} was available that provided the necessary code to get limited connectivity up and running. Figure~\ref{figure:nrf8001} shows the prototyping setup used to measure the performance of the nrf8001 microchip. 
 
 Using a shunt resistor, the measured peak current was approximately 14.5mA, which correlates with the figure found in the data sheet (14.6mA). This was at a 
 
 The ATMega328 consumes approximately XmA, however for the remainder. As the device was hardware limited to only 1 packet per connection event further development was abandoned.
-
-
 
 \begin{figure}[htb]
 	\begin{center}
@@ -403,7 +405,19 @@ The ATMega328 consumes approximately XmA, however for the remainder. As the devi
 	\label{fig:nrf8001}
 \end{figure}
 
-As the device can only send 1 packet per connection interval, to achieve the highest throughput, the device must be run at the smallest connection interval of 7.5ms. At this interval the upper bound for throughput becomes
+Initially, the device was configured to send a large amount of notification within a single \{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum connection interval to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available, hence this reduces the maximum throughput to 25% of theoretical maximum. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 1.4\textwidth, angle=90]{nrfcap}
+	\end{center}
+	\caption{Packet sniffed connection between Apple iPhone 4s and nrf8001. Notification rate 1 packet every 30ms. Some fields removed due to page space constraints}
+	\label{fig:nrfcap}
+\end{figure}
+
+As the device can only send 1 packet per \ac{CI}, to achieve the highest throughput, the device must be run at the smallest connection interval of 7.5ms. At this interval the upper bound for throughput becomes
+
+
 
 \begin{displaymath}
 \frac{1000}{7.5} \times 20\:bytes \approx 2666\;byte/s
@@ -425,19 +439,19 @@ Unfortunately the chip came as part of a larger development kit and accurate pow
 \subsubsection{CSR1010}
 Through direct contact with \ac{CSR} engineers, it was reported a particular single mode \ac{BLE} radio device, CSR1010, was capable of reaching the full throughput as defined in the \ac{BLE} specification. \ac{CSR} supplied a development kit and software suite. The CSR1010 is part of \ac{CSR} 's new $\mu$Energy product line, for which \ac{CSR} have developed their own compiler and \ac{IDE} known as xIDE. 
 
-For initial throughput testing, an example health thermometer application was used. \ac{CSR} provided a \acro{USB} dongle 
+For initial throughput testing, an example health thermometer application was used. \ac{CSR} provided a \ac{USB} dongle which is capable 
 
-From exploring the \ac{API}s and understanding the main features of the \ac{OSAL}, it was possible
+From exploring the \ac{API}s and understanding the main features of the \ac{OSAL}, it was possible to increase the number of notification packets sent per connection interval from 1 to 8. Attempting to increase the  A comprehensive explanation of the code is provided in the later section \ref{Prototype}. 
 
 
-\subsubsection{CC2541 and CC2540}
-\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first, and arguably the most popular [need to CITE?] development kits. 
+\subsubsection{CC2540 and CC2541}
+\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first, and arguably the most popular [need to CITE?] development kits. The CC2540 differs in that it's range and power usage are increased, though it's throughput is still theoretically the same.
 
-Again, the associative whitepapers did not document the packet throughput per connection event. Through contact with a \ac{TI} employee [CITE], there is a hardware limitation of 4 buffers, limiting only 4 packets per connection event (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per connection event by refilling the buffers within the connection event, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per connection event to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
+Again, the associated white papers did not document the packet throughput per connection event. Through contact with a \ac{TI} employee [CITE], there is a hardware limitation of 4 buffers, limiting only 4 packets per connection event (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per connection event by refilling the buffers within the connection event, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per connection event to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
 
 The CC2541 (and also CC2540) is a full \ac{SoC} - a programmable \ac{MCU} is packages togeter with the radio hardware. This has certain economical advantages, as common hardware and footprint is shared between the radio and \ac{MCU}. However, the Nordic company Chipcon who originally developed the hardware (Texas Instruments has since acquired them), relied on the Swedish tool chain provider, IAR, for the development tool suite and chain. \ac{TI} still relies up this tool software suite, haven't not invested in their own facilities to develop for the platform. A single software license is approximately 2000 USD. While IAR do offer a code-limited version, it is too small to contain all the necessary libraries. IAR also provide a 30 day trail, which is what is currently being used for evaluation, but proceeding with this chip for the prototype may be economically impossible.
 
-The 
+Much like the CSR1010, a similar \ac{OSAL} existed for the CC2540/1, 
 
 For 16 channels running simultaneously, at 8 bit resolution, the highest achievable detectable frequency is approximately 384 Hz.
 
@@ -472,6 +486,18 @@ Figure 23 - Simulation plot of notifications being sent
 For 2 zinc-air batteries of 500mAh capacities, this model predicts the device lifetime under nominal operation begins to reach 10 days.  An intelligent estimate to how this module is generated is linked to the throughputs calculated at the start of the Radios section. As each bit represents 1 micro second it is very easy to integrate for set parameters the time over time the current profiles to achieve an estimate of power usage. 
 Max drain current is another important concept to consider. Batteries can only safely deliver a maximum amount of current. If the battery is stressed to deliver more current that it is rated, it will degrade the overall lifetime of the battery. 
 
+\subsection{Microcontroller}
+There are a couple of options here. Often radios are provided as a system on chip (SoC), whereby the microchip contains not just the radio but also a fully functional microcontroller unit (MCU). Often these devices will consume more power than just the host and controller, but the system as a whole will typically consume more power overall if the application is run on an off chip MCU. 
+ 
+Figure 15 - SoC (a) and a typical 2 chip solution (b) (Heydon, 2012)
+It really comes down to the application, as having the application on an off-chip MCU may mean that power is saved overall as other features such as ADCs, SPI interfaces and other peripherals can be utilised and integrated into the application without having to run a separate application on both the external MCU and radio chip, which leads to increased overhead, complexity and power. 
+
+For development purposes the Arduino family of development boards, which sport many different processors seem like an excellent for development. These processors have many features such as GPIO, inbuilt ADCs, dedicated SPI pins, etc. Further, there is an extensive documentation, large knowledge base and a very active online forum. Of particular interest are the earlier Arduino models which utilise the very low power Atmel 8-bit family of processors. A further plus is that these processors are available in both DIP and SMT packages, meaning they are suitable breadboard prototyping. The ATMega328 seems like a particurly good choice, as a balance between support, power and simplicity. 
+
+Currently, Texas Instrument’s SensorTag have been investigated along with Nordic semiconductors nRF8001. The former is a SoC solution while the latter only implements the host and controller layers. Implementing an application layer is no small feat, and fortunately it was possible to make contact with someone who has developed libraries to drive the chip using an Arduino microcontroller. Please see the section titled Experimentation and Current  for more information.
+
+Currently the general feeling is towards using an Arduino microcontroller simply due to the ease and rapid nature of development. Some components (an particular ADC and the nRF8001) have been tested and confirmed to work with the device.
+
 
 \subsection{Component Selection}
 
@@ -481,12 +507,16 @@ Android phones must support 4 packet/ CI
 Ease of development
 ADCs
 
+While the CC2541 showed promise as with enough hardware understanding and firmware switches, it may mean the device could approach the theoretical limit, the unavailability of an inexpensive tool chain meant software development was problematic. The CSR1010 is supplied with a free tool chain and \ac{IDE}, as \ac{CSR} engineers confirmed experiments with the device operating with high throughputs. The package of the radios were both similar, being of roughly the same size \ac{QFN} package type, which while reported outside the department's \ac{PCB} production capabilities, was still considered of sufficiently large for in-house prototyping. 
+
 Ultimately the final component selection for the \ac{EEG} prototype
 \begin{itemize}
 \item AD7997 ADC 
 \item CSR1010
 \item P675 Zinc Air batteries. Batteries of capacity 620mAh are readily available and inexpensive. Two are required in series to achieve correct voltage
 \end{itemize}
+
+
 
 \section{Specification}
 
@@ -607,6 +637,8 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{IDE}{integrated development environment}
 	\acro{OSAL}{operating system abstraction layer}
 	\acro{USB}{Universal Serial Bus}
+	\acro{PCB}{printed circuit board}
+	\acro{QFN}{quad flat no-leads}
 \end{acronym}
 
 \section{User Guide}

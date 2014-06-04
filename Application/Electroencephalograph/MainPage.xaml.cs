@@ -33,6 +33,10 @@ using System.Collections.ObjectModel;
 using Windows.UI.Core;
 
 using Windows.System.Threading;
+
+using System.ComponentModel;
+
+using Syncfusion.UI.Xaml.Charts;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace Electroencephalograph
@@ -42,7 +46,7 @@ namespace Electroencephalograph
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
+        CategoryDataViewModel cdv;
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -70,6 +74,14 @@ namespace Electroencephalograph
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+            cdv = new CategoryDataViewModel();
+            lineChart2.Series.Clear();
+            Syncfusion.UI.Xaml.Charts.LineSeries series1 = new Syncfusion.UI.Xaml.Charts.LineSeries();
+            series1.XBindingPath = "Category";
+            series1.YBindingPath = "Value";
+            series1.ItemsSource = cdv.CategoricalDatas;
+            lineChart2.Series.Add(series1);
+            lineChart2.Series[0].ItemsSource = cdv.CategoricalDatas;
         }
 
         /// <summary>
@@ -138,10 +150,13 @@ namespace Electroencephalograph
             //financialStuffList.Add(new FinancialStuff() { Name = "MSFT", Amount = 10 });
             //financialStuffList.Add(new FinancialStuff() { Name = "AAPL", Amount = 200 });
             //financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
+
+            //CategoryDataViewModel c = new CategoryDataViewModel();
             
-            (LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
-            (LineChart.Series[0] as LineSeries).Name = "Channel 4";
+            //(LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
+            //(LineChart.Series[0] as LineSeries).Name = "Channel 4";
             //(LineChart.Series[1] as LineSeries).ItemsSource = financialStuffList;
+
         }
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
@@ -213,55 +228,47 @@ namespace Electroencephalograph
 
         //Need to update the data perdioically
         private Windows.System.Threading.ThreadPoolTimer periodicTimer = null;
-        public class LineSeriesEx : LineSeries
+
+
+        public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
         {
-            protected override DataPoint CreateDataPoint()
-            {
-                return new EmptyDataPoint();
-            }
-        }
+            // "lst" reference is locked here, but it wasn't locked in the event handler 
+            //lock (items)
+            //{
+                // Change this to what you want
+                const int maxSize = 50;
 
-        public class EmptyDataPoint : DataPoint
-        {
-            // As the method name says, this DataPoint is empty.
-        }
+                // Make sure it doesn't index out of bounds
+                int startIndex = Math.Max(0, items.Count - maxSize);
+                int length = items.Count - startIndex;
 
-public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
-{
-    // "lst" reference is locked here, but it wasn't locked in the event handler 
-    lock (items)
-    {
-        // Change this to what you want
-        const int maxSize = 30;
+                List<T> itemsToRender = items.GetRange(startIndex, length);
 
-        // Make sure it doesn't index out of bounds
-        int startIndex = Math.Max(0, items.Count - maxSize);
-        int length = items.Count - startIndex;
+                // You can clear it here in your background thread.  The references to the objects
+                // are now in the itemsToRender list.
+                lst.Clear();
 
-        List<T> itemsToRender = items.GetRange(startIndex, length);
-
-        // You can clear it here in your background thread.  The references to the objects
-        // are now in the itemsToRender list.
-        lst.Clear();
-
-        Dispatcher.RunAsync(CoreDispatcherPriority.High, () =>
-        {
-            // At second look, this might need to be locked too
-            lock(oc)
-            {
-                oc.Clear();
-
-                for (int i = 0; i < itemsToRender.Count; i++)
+                await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                // Please verify this is the correct syntax
+                
                 {
-                    // I didn't notice it before, but why are you checking the count again?
-                    // items.Count());
-                    oc.Add(itemsToRender[i]);
-                }
-             }
-        });
-    }
-}
+                    // At second look, this might need to be locked too
+                    // EDIT: This probably will just add overhead now that it's not running async.
+                    // You can probably remove this lock
+                    //lock (oc)
+                    //{
+                        oc.Clear();
 
+                        for (int i = 0; i < itemsToRender.Count; i++)
+                        {
+                            // I didn't notice it before, but why are you checking the count again?
+                            // items.Count());
+                            oc.Add(itemsToRender[i]);
+                        }
+                    //}
+                });
+            //}
+        }
 
         private DispatcherTimer sliderTimer = null;
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -393,4 +400,153 @@ public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
             }
         }
     }
+
+    public class CategoryDataViewModel
+    {
+
+        public CategoryDataViewModel()
+        {
+
+            CategoricalDatas = new ObservableCollection<CategoryData>();
+
+            CategoricalDatas.Add(new CategoryData("Baseball", 2, 1));
+
+            CategoricalDatas.Add(new CategoryData("Football", 10, 6));
+
+            CategoricalDatas.Add(new CategoryData("Hockey", 15, 10));
+
+            CategoricalDatas.Add(new CategoryData("Basketball", 24, 18));
+
+            CategoricalDatas.Add(new CategoryData("IceHockey", 23, 18));
+
+            CategoricalDatas.Add(new CategoryData("Volleyball", 30, 24));
+
+            CategoricalDatas.Add(new CategoryData("Cricket", 20, 15));
+
+        }
+
+
+
+        public ObservableCollection<CategoryData> CategoricalDatas
+        {
+
+            get;
+
+            set;
+
+        }
+
+    }
+
+    public class CategoryData : INotifyPropertyChanged
+    {
+
+        private string category;
+
+        private double value;
+
+        private double value2;
+
+
+
+        public CategoryData(string category, double value, double value2)
+        {
+
+            Category = category; Value = value; Value2 = value2;
+
+        }
+
+
+
+        public string Category
+        {
+
+            get
+
+            { return category; }
+
+            set
+            {
+
+                if (category != value)
+                {
+
+                    category = value;
+
+                    OnPropertyChanged("Category");
+
+                }
+
+            }
+
+        }
+
+
+
+        public double Value
+        {
+
+            get
+
+            { return value; }
+
+            set
+            {
+
+                if (this.value != value)
+                {
+
+                    this.value = value;
+
+                    OnPropertyChanged("Value");
+
+                }
+
+            }
+
+        }
+
+
+
+        public double Value2
+        {
+
+            get
+
+            { return value2; }
+
+            set
+            {
+
+                if (value2 != value)
+                {
+
+                    value2 = value; OnPropertyChanged("Value2");
+
+                }
+
+            }
+
+        }
+
+
+
+        void OnPropertyChanged(string propertyName)
+        {
+
+            if (PropertyChanged != null)
+            {
+
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+
+            }
+
+        }
+
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+    }
 }
+

@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
     xmlns:BulletGraph="using:Sparrow.BulletGraph"
+    xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
     x:Name="pageRoot"
     x:Class="Electroencephalograph.MainPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
@@ -49,7 +50,7 @@
                 <AppBarSeparator Width="14"/>
                 <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"  />
                 <AppBarButton Label="Save" Icon="Save" />
-                
+
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>
@@ -87,7 +88,7 @@
 
         </Grid>
 
-        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="618" Grid.Row="1" >
+        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="100" Grid.Row="1" >
             <Charting:Chart.Palette>
                 <Charting:ResourceDictionaryCollection>
 
@@ -117,6 +118,36 @@
             <StackPanel Orientation="Horizontal"/>
             <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
         </Grid>
+
+
+
+        <chart:SfChart x:Name="lineChart2" Grid.Row="1" Margin="0,10,0,0" Height="400" Width=" 800">
+
+            <chart:SfChart.Header>
+                <TextBlock FontSize="20" FontFamily="Segoe UI" Margin="0,0,0,20">Efficiency of oil-fired power production</TextBlock>
+            </chart:SfChart.Header>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis PlotOffset="70" LabelFormat="yyyy">
+                    <chart:CategoryAxis.Header>
+                        <TextBlock FontSize="16" FontFamily="Segoe UI">Year</TextBlock>
+                    </chart:CategoryAxis.Header>
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis >
+                <chart:NumericalAxis PlotOffset="10" RangePadding="Round">
+                    <chart:ChartAxis.Header>
+                        <TextBlock FontSize="16" FontFamily="Segoe UI">Efficiency(%)</TextBlock>
+                    </chart:ChartAxis.Header>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+            <chart:LineSeries EnableAnimation="True" XBindingPath="Category" YBindingPath="Value">
+                <chart:LineSeries.AdornmentsInfo>
+                    <chart:ChartAdornmentInfo Symbol="Ellipse" ShowLabel="True" >
+                    </chart:ChartAdornmentInfo>
+                </chart:LineSeries.AdornmentsInfo>
+            </chart:LineSeries>
+
+        </chart:SfChart>
 
 
     </Grid>

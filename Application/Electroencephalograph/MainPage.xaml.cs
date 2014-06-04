@@ -46,7 +46,7 @@ namespace Electroencephalograph
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        CategoryDataViewModel cdv;
+        //CategoryDataViewModel cdv;
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -74,14 +74,14 @@ namespace Electroencephalograph
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
-            cdv = new CategoryDataViewModel();
-            lineChart2.Series.Clear();
-            Syncfusion.UI.Xaml.Charts.LineSeries series1 = new Syncfusion.UI.Xaml.Charts.LineSeries();
-            series1.XBindingPath = "Category";
-            series1.YBindingPath = "Value";
-            series1.ItemsSource = cdv.CategoricalDatas;
-            lineChart2.Series.Add(series1);
-            lineChart2.Series[0].ItemsSource = cdv.CategoricalDatas;
+            //cdv = new CategoryDataViewModel();
+            //lineChart2.Series.Clear();
+            //Syncfusion.UI.Xaml.Charts.LineSeries series1 = new Syncfusion.UI.Xaml.Charts.LineSeries();
+            //series1.XBindingPath = "Category";
+            //series1.YBindingPath = "Value";
+            //series1.ItemsSource = cdv.CategoricalDatas;
+            //lineChart2.Series.Add(series1);
+            //lineChart2.Series[0].ItemsSource = cdv.CategoricalDatas;
         }
 
         /// <summary>
@@ -401,151 +401,38 @@ namespace Electroencephalograph
         }
     }
 
-    public class CategoryDataViewModel
+    
+
+    public class UserProfile
     {
-
-        public CategoryDataViewModel()
-        {
-
-            CategoricalDatas = new ObservableCollection<CategoryData>();
-
-            CategoricalDatas.Add(new CategoryData("Baseball", 2, 1));
-
-            CategoricalDatas.Add(new CategoryData("Football", 10, 6));
-
-            CategoricalDatas.Add(new CategoryData("Hockey", 15, 10));
-
-            CategoricalDatas.Add(new CategoryData("Basketball", 24, 18));
-
-            CategoricalDatas.Add(new CategoryData("IceHockey", 23, 18));
-
-            CategoricalDatas.Add(new CategoryData("Volleyball", 30, 24));
-
-            CategoricalDatas.Add(new CategoryData("Cricket", 20, 15));
-
-        }
-
-
-
-        public ObservableCollection<CategoryData> CategoricalDatas
-        {
-
-            get;
-
-            set;
-
-        }
-
+       public DateTime TimeStamp { get; set; }
+ 
+       public double NoOfUsers { get; set; }
     }
-
-    public class CategoryData : INotifyPropertyChanged
+ 
+    public class UsersViewModel
     {
-
-        private string category;
-
-        private double value;
-
-        private double value2;
-
-
-
-        public CategoryData(string category, double value, double value2)
-        {
-
-            Category = category; Value = value; Value2 = value2;
-
-        }
-
-
-
-        public string Category
-        {
-
-            get
-
-            { return category; }
-
-            set
-            {
-
-                if (category != value)
-                {
-
-                    category = value;
-
-                    OnPropertyChanged("Category");
-
-                }
-
-            }
-
-        }
-
-
-
-        public double Value
-        {
-
-            get
-
-            { return value; }
-
-            set
-            {
-
-                if (this.value != value)
-                {
-
-                    this.value = value;
-
-                    OnPropertyChanged("Value");
-
-                }
-
-            }
-
-        }
-
-
-
-        public double Value2
-        {
-
-            get
-
-            { return value2; }
-
-            set
-            {
-
-                if (value2 != value)
-                {
-
-                    value2 = value; OnPropertyChanged("Value2");
-
-                }
-
-            }
-
-        }
-
-
-
-        void OnPropertyChanged(string propertyName)
-        {
-
-            if (PropertyChanged != null)
-            {
-
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-
-            }
-
-        }
-
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
+         public UsersViewModel()
+         {
+           this.UsersList = new ObservableCollection<UserProfile>();
+           DateTime date = DateTime.Today;
+           UsersList.Add(new UserProfile {
+           TimeStamp=date.AddHours(0.5),NoOfUsers=1000});
+           UsersList.Add(new UserProfile {
+           TimeStamp=date.AddHours(1),NoOfUsers = 5000 });
+           UsersList.Add(new UserProfile { TimeStamp = date.AddHours(1.5),     
+           NoOfUsers = 3000 });
+           UsersList.Add(new UserProfile { TimeStamp = date.AddHours(2),
+           NoOfUsers = 4000 });
+           UsersList.Add(new UserProfile { TimeStamp = date.AddHours(2.5),
+           NoOfUsers = 2000 });
+           UsersList.Add(new UserProfile { TimeStamp = date.AddHours(3),
+           NoOfUsers = 1000 });
+          }
+         public ObservableCollection<UserProfile> UsersList
+         {
+            get; set;
+         }
 
     }
 }

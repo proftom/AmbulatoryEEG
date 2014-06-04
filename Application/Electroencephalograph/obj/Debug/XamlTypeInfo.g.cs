@@ -148,7 +148,7 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[146];
+            _typeNameTable = new string[145];
             _typeNameTable[0] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Control";
             _typeNameTable[2] = "System.Collections.ObjectModel.Collection`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>";
@@ -245,24 +245,24 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             _typeNameTable[93] = "Syncfusion.UI.Xaml.Charts.EdgeLabelsDrawingMode";
             _typeNameTable[94] = "Syncfusion.UI.Xaml.Charts.ChartAxisLabelCollection";
             _typeNameTable[95] = "Windows.UI.Xaml.UIElement";
-            _typeNameTable[96] = "Syncfusion.UI.Xaml.Charts.CategoryAxis";
-            _typeNameTable[97] = "Syncfusion.UI.Xaml.Charts.LabelPlacement";
-            _typeNameTable[98] = "Syncfusion.UI.Xaml.Charts.ChartStripLines";
-            _typeNameTable[99] = "System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>";
-            _typeNameTable[100] = "System.Collections.ObjectModel.Collection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>";
-            _typeNameTable[101] = "Syncfusion.UI.Xaml.Charts.ChartStripLine";
-            _typeNameTable[102] = "Windows.UI.Xaml.HorizontalAlignment";
-            _typeNameTable[103] = "Windows.UI.Xaml.VerticalAlignment";
-            _typeNameTable[104] = "Syncfusion.UI.Xaml.Charts.NumericalAxis";
-            _typeNameTable[105] = "Syncfusion.UI.Xaml.Charts.NumericalPadding";
-            _typeNameTable[106] = "Syncfusion.UI.Xaml.Charts.LineSeries";
-            _typeNameTable[107] = "Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase";
-            _typeNameTable[108] = "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase";
-            _typeNameTable[109] = "Syncfusion.UI.Xaml.Charts.XyDataSeries";
-            _typeNameTable[110] = "Syncfusion.UI.Xaml.Charts.CartesianSeries";
-            _typeNameTable[111] = "Syncfusion.UI.Xaml.Charts.AdornmentSeries";
-            _typeNameTable[112] = "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo";
-            _typeNameTable[113] = "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase";
+            _typeNameTable[96] = "Syncfusion.UI.Xaml.Charts.DateTimeAxis";
+            _typeNameTable[97] = "Syncfusion.UI.Xaml.Charts.Day";
+            _typeNameTable[98] = "Syncfusion.UI.Xaml.Charts.DateTimeRangePadding";
+            _typeNameTable[99] = "Syncfusion.UI.Xaml.Charts.DateTimeIntervalType";
+            _typeNameTable[100] = "Syncfusion.UI.Xaml.Charts.ChartStripLines";
+            _typeNameTable[101] = "System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>";
+            _typeNameTable[102] = "System.Collections.ObjectModel.Collection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>";
+            _typeNameTable[103] = "Syncfusion.UI.Xaml.Charts.ChartStripLine";
+            _typeNameTable[104] = "Windows.UI.Xaml.HorizontalAlignment";
+            _typeNameTable[105] = "Windows.UI.Xaml.VerticalAlignment";
+            _typeNameTable[106] = "Syncfusion.UI.Xaml.Charts.NumericalAxis";
+            _typeNameTable[107] = "Syncfusion.UI.Xaml.Charts.NumericalPadding";
+            _typeNameTable[108] = "Syncfusion.UI.Xaml.Charts.LineSeries";
+            _typeNameTable[109] = "Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase";
+            _typeNameTable[110] = "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase";
+            _typeNameTable[111] = "Syncfusion.UI.Xaml.Charts.XyDataSeries";
+            _typeNameTable[112] = "Syncfusion.UI.Xaml.Charts.CartesianSeries";
+            _typeNameTable[113] = "Syncfusion.UI.Xaml.Charts.AdornmentSeries";
             _typeNameTable[114] = "Syncfusion.UI.Xaml.Charts.SnapToPoint";
             _typeNameTable[115] = "Windows.System.VirtualKeyModifiers";
             _typeNameTable[116] = "Syncfusion.UI.Xaml.Charts.ChartTrendLineCollection";
@@ -273,30 +273,29 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             _typeNameTable[121] = "Double[]";
             _typeNameTable[122] = "System.Array";
             _typeNameTable[123] = "Syncfusion.UI.Xaml.Charts.TrendlineType";
-            _typeNameTable[124] = "Syncfusion.UI.Xaml.Charts.ChartSymbol";
-            _typeNameTable[125] = "Syncfusion.UI.Xaml.Charts.AdornmentsPosition";
-            _typeNameTable[126] = "Syncfusion.UI.Xaml.Charts.LabelContent";
-            _typeNameTable[127] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection";
-            _typeNameTable[128] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries";
-            _typeNameTable[129] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>";
-            _typeNameTable[130] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes";
-            _typeNameTable[131] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes";
-            _typeNameTable[132] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries";
-            _typeNameTable[133] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series";
-            _typeNameTable[134] = "Windows.UI.Xaml.Media.PointCollection";
-            _typeNameTable[135] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis";
-            _typeNameTable[136] = "System.Nullable`1<Int32>";
-            _typeNameTable[137] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[138] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence";
-            _typeNameTable[139] = "Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
-            _typeNameTable[140] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost";
-            _typeNameTable[141] = "Electroencephalograph.MainPage";
-            _typeNameTable[142] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[143] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[144] = "Electroencephalograph.Common.ObservableDictionary";
-            _typeNameTable[145] = "Electroencephalograph.Common.NavigationHelper";
+            _typeNameTable[124] = "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo";
+            _typeNameTable[125] = "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase";
+            _typeNameTable[126] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection";
+            _typeNameTable[127] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries";
+            _typeNameTable[128] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>";
+            _typeNameTable[129] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes";
+            _typeNameTable[130] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes";
+            _typeNameTable[131] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries";
+            _typeNameTable[132] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series";
+            _typeNameTable[133] = "Windows.UI.Xaml.Media.PointCollection";
+            _typeNameTable[134] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis";
+            _typeNameTable[135] = "System.Nullable`1<Int32>";
+            _typeNameTable[136] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[137] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence";
+            _typeNameTable[138] = "Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
+            _typeNameTable[139] = "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost";
+            _typeNameTable[140] = "Electroencephalograph.MainPage";
+            _typeNameTable[141] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[142] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[143] = "Electroencephalograph.Common.ObservableDictionary";
+            _typeNameTable[144] = "Electroencephalograph.Common.NavigationHelper";
 
-            _typeTable = new global::System.Type[146];
+            _typeTable = new global::System.Type[145];
             _typeTable[0] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Control);
             _typeTable[2] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>);
@@ -393,24 +392,24 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             _typeTable[93] = typeof(global::Syncfusion.UI.Xaml.Charts.EdgeLabelsDrawingMode);
             _typeTable[94] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartAxisLabelCollection);
             _typeTable[95] = typeof(global::Windows.UI.Xaml.UIElement);
-            _typeTable[96] = typeof(global::Syncfusion.UI.Xaml.Charts.CategoryAxis);
-            _typeTable[97] = typeof(global::Syncfusion.UI.Xaml.Charts.LabelPlacement);
-            _typeTable[98] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartStripLines);
-            _typeTable[99] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>);
-            _typeTable[100] = typeof(global::System.Collections.ObjectModel.Collection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>);
-            _typeTable[101] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartStripLine);
-            _typeTable[102] = typeof(global::Windows.UI.Xaml.HorizontalAlignment);
-            _typeTable[103] = typeof(global::Windows.UI.Xaml.VerticalAlignment);
-            _typeTable[104] = typeof(global::Syncfusion.UI.Xaml.Charts.NumericalAxis);
-            _typeTable[105] = typeof(global::Syncfusion.UI.Xaml.Charts.NumericalPadding);
-            _typeTable[106] = typeof(global::Syncfusion.UI.Xaml.Charts.LineSeries);
-            _typeTable[107] = typeof(global::Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase);
-            _typeTable[108] = typeof(global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase);
-            _typeTable[109] = typeof(global::Syncfusion.UI.Xaml.Charts.XyDataSeries);
-            _typeTable[110] = typeof(global::Syncfusion.UI.Xaml.Charts.CartesianSeries);
-            _typeTable[111] = typeof(global::Syncfusion.UI.Xaml.Charts.AdornmentSeries);
-            _typeTable[112] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo);
-            _typeTable[113] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase);
+            _typeTable[96] = typeof(global::Syncfusion.UI.Xaml.Charts.DateTimeAxis);
+            _typeTable[97] = typeof(global::Syncfusion.UI.Xaml.Charts.Day);
+            _typeTable[98] = typeof(global::Syncfusion.UI.Xaml.Charts.DateTimeRangePadding);
+            _typeTable[99] = typeof(global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType);
+            _typeTable[100] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartStripLines);
+            _typeTable[101] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>);
+            _typeTable[102] = typeof(global::System.Collections.ObjectModel.Collection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>);
+            _typeTable[103] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartStripLine);
+            _typeTable[104] = typeof(global::Windows.UI.Xaml.HorizontalAlignment);
+            _typeTable[105] = typeof(global::Windows.UI.Xaml.VerticalAlignment);
+            _typeTable[106] = typeof(global::Syncfusion.UI.Xaml.Charts.NumericalAxis);
+            _typeTable[107] = typeof(global::Syncfusion.UI.Xaml.Charts.NumericalPadding);
+            _typeTable[108] = typeof(global::Syncfusion.UI.Xaml.Charts.LineSeries);
+            _typeTable[109] = typeof(global::Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase);
+            _typeTable[110] = typeof(global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase);
+            _typeTable[111] = typeof(global::Syncfusion.UI.Xaml.Charts.XyDataSeries);
+            _typeTable[112] = typeof(global::Syncfusion.UI.Xaml.Charts.CartesianSeries);
+            _typeTable[113] = typeof(global::Syncfusion.UI.Xaml.Charts.AdornmentSeries);
             _typeTable[114] = typeof(global::Syncfusion.UI.Xaml.Charts.SnapToPoint);
             _typeTable[115] = typeof(global::Windows.System.VirtualKeyModifiers);
             _typeTable[116] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartTrendLineCollection);
@@ -421,28 +420,27 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             _typeTable[121] = typeof(global::System.Double[]);
             _typeTable[122] = typeof(global::System.Array);
             _typeTable[123] = typeof(global::Syncfusion.UI.Xaml.Charts.TrendlineType);
-            _typeTable[124] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartSymbol);
-            _typeTable[125] = typeof(global::Syncfusion.UI.Xaml.Charts.AdornmentsPosition);
-            _typeTable[126] = typeof(global::Syncfusion.UI.Xaml.Charts.LabelContent);
-            _typeTable[127] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection);
-            _typeTable[128] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries);
-            _typeTable[129] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>);
-            _typeTable[130] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes);
-            _typeTable[131] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes);
-            _typeTable[132] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries);
-            _typeTable[133] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series);
-            _typeTable[134] = typeof(global::Windows.UI.Xaml.Media.PointCollection);
-            _typeTable[135] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis);
-            _typeTable[136] = typeof(global::System.Nullable<global::System.Int32>);
-            _typeTable[137] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[138] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence);
-            _typeTable[139] = typeof(global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase);
-            _typeTable[140] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost);
-            _typeTable[141] = typeof(global::Electroencephalograph.MainPage);
-            _typeTable[142] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[143] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[144] = typeof(global::Electroencephalograph.Common.ObservableDictionary);
-            _typeTable[145] = typeof(global::Electroencephalograph.Common.NavigationHelper);
+            _typeTable[124] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo);
+            _typeTable[125] = typeof(global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase);
+            _typeTable[126] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection);
+            _typeTable[127] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries);
+            _typeTable[128] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>);
+            _typeTable[129] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes);
+            _typeTable[130] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes);
+            _typeTable[131] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries);
+            _typeTable[132] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series);
+            _typeTable[133] = typeof(global::Windows.UI.Xaml.Media.PointCollection);
+            _typeTable[134] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis);
+            _typeTable[135] = typeof(global::System.Nullable<global::System.Int32>);
+            _typeTable[136] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[137] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence);
+            _typeTable[138] = typeof(global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase);
+            _typeTable[139] = typeof(global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost);
+            _typeTable[140] = typeof(global::Electroencephalograph.MainPage);
+            _typeTable[141] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[142] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[143] = typeof(global::Electroencephalograph.Common.ObservableDictionary);
+            _typeTable[144] = typeof(global::Electroencephalograph.Common.NavigationHelper);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -518,22 +516,22 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
         private object Activate_91_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel>(); }
         private object Activate_92_ChartAxisLabel() { return new global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel(); }
         private object Activate_94_ChartAxisLabelCollection() { return new global::Syncfusion.UI.Xaml.Charts.ChartAxisLabelCollection(); }
-        private object Activate_96_CategoryAxis() { return new global::Syncfusion.UI.Xaml.Charts.CategoryAxis(); }
-        private object Activate_98_ChartStripLines() { return new global::Syncfusion.UI.Xaml.Charts.ChartStripLines(); }
-        private object Activate_99_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>(); }
-        private object Activate_100_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>(); }
-        private object Activate_101_ChartStripLine() { return new global::Syncfusion.UI.Xaml.Charts.ChartStripLine(); }
-        private object Activate_104_NumericalAxis() { return new global::Syncfusion.UI.Xaml.Charts.NumericalAxis(); }
-        private object Activate_106_LineSeries() { return new global::Syncfusion.UI.Xaml.Charts.LineSeries(); }
-        private object Activate_112_ChartAdornmentInfo() { return new global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo(); }
+        private object Activate_96_DateTimeAxis() { return new global::Syncfusion.UI.Xaml.Charts.DateTimeAxis(); }
+        private object Activate_100_ChartStripLines() { return new global::Syncfusion.UI.Xaml.Charts.ChartStripLines(); }
+        private object Activate_101_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>(); }
+        private object Activate_102_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>(); }
+        private object Activate_103_ChartStripLine() { return new global::Syncfusion.UI.Xaml.Charts.ChartStripLine(); }
+        private object Activate_106_NumericalAxis() { return new global::Syncfusion.UI.Xaml.Charts.NumericalAxis(); }
+        private object Activate_108_LineSeries() { return new global::Syncfusion.UI.Xaml.Charts.LineSeries(); }
         private object Activate_116_ChartTrendLineCollection() { return new global::Syncfusion.UI.Xaml.Charts.ChartTrendLineCollection(); }
         private object Activate_117_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Syncfusion.UI.Xaml.Charts.Trendline>(); }
         private object Activate_118_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Syncfusion.UI.Xaml.Charts.Trendline>(); }
         private object Activate_119_Trendline() { return new global::Syncfusion.UI.Xaml.Charts.Trendline(); }
-        private object Activate_127_ResourceDictionaryCollection() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection(); }
-        private object Activate_128_LineSeries() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries(); }
-        private object Activate_141_MainPage() { return new global::Electroencephalograph.MainPage(); }
-        private object Activate_144_ObservableDictionary() { return new global::Electroencephalograph.Common.ObservableDictionary(); }
+        private object Activate_124_ChartAdornmentInfo() { return new global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo(); }
+        private object Activate_126_ResourceDictionaryCollection() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection(); }
+        private object Activate_127_LineSeries() { return new global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries(); }
+        private object Activate_140_MainPage() { return new global::Electroencephalograph.MainPage(); }
+        private object Activate_143_ObservableDictionary() { return new global::Electroencephalograph.Common.ObservableDictionary(); }
         private void VectorAdd_2_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeries>)instance;
@@ -744,19 +742,19 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             var newItem = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_98_ChartStripLines(object instance, object item)
+        private void VectorAdd_100_ChartStripLines(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>)instance;
             var newItem = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_99_ObservableCollection(object instance, object item)
+        private void VectorAdd_101_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>)instance;
             var newItem = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_100_Collection(object instance, object item)
+        private void VectorAdd_102_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Syncfusion.UI.Xaml.Charts.ChartStripLine>)instance;
             var newItem = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)item;
@@ -780,13 +778,13 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
             var newItem = (global::Syncfusion.UI.Xaml.Charts.Trendline)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_127_ResourceDictionaryCollection(object instance, object item)
+        private void VectorAdd_126_ResourceDictionaryCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.ResourceDictionary>)instance;
             var newItem = (global::Windows.UI.Xaml.ResourceDictionary)item;
             collection.Add(newItem);
         }
-        private void MapAdd_144_ObservableDictionary(object instance, object key, object item)
+        private void MapAdd_143_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -958,7 +956,6 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
 
             case 21:   //  Syncfusion.UI.Xaml.Charts.ChartBase
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.AddMemberName("Header");
                 userType.AddMemberName("AxisThickness");
                 userType.AddMemberName("SeriesClipRect");
                 userType.AddMemberName("VisibleSeries");
@@ -967,6 +964,7 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 userType.AddMemberName("RowDefinitions");
                 userType.AddMemberName("Axes");
                 userType.AddMemberName("SideBySideSeriesPlacement");
+                userType.AddMemberName("Header");
                 userType.AddMemberName("ColorModel");
                 userType.AddMemberName("Legend");
                 userType.AddMemberName("Row");
@@ -1203,7 +1201,6 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
 
             case 51:   //  Syncfusion.UI.Xaml.Charts.ChartAxis
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.AddMemberName("Header");
                 userType.AddMemberName("ActualPlotOffset");
                 userType.AddMemberName("MaximumLabels");
                 userType.AddMemberName("VisibleRange");
@@ -1225,6 +1222,7 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 userType.AddMemberName("DesiredIntervalsCount");
                 userType.AddMemberName("ThumbLabelVisibility");
                 userType.AddMemberName("ThumbLabelTemplate");
+                userType.AddMemberName("Header");
                 userType.AddMemberName("HeaderTemplate");
                 userType.AddMemberName("TickLineSize");
                 userType.AddMemberName("VisibleLabels");
@@ -1575,45 +1573,79 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 96:   //  Syncfusion.UI.Xaml.Charts.CategoryAxis
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D"));
-                userType.Activator = Activate_96_CategoryAxis;
+            case 96:   //  Syncfusion.UI.Xaml.Charts.DateTimeAxis
+                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase"));
+                userType.Activator = Activate_96_DateTimeAxis;
+                userType.AddMemberName("EnableBusinessHours");
+                userType.AddMemberName("OpenTime");
+                userType.AddMemberName("CloseTime");
+                userType.AddMemberName("WorkingDays");
+                userType.AddMemberName("Minimum");
+                userType.AddMemberName("Maximum");
                 userType.AddMemberName("Interval");
-                userType.AddMemberName("LabelPlacement");
+                userType.AddMemberName("RangePadding");
+                userType.AddMemberName("IntervalType");
                 xamlType = userType;
                 break;
 
-            case 97:   //  Syncfusion.UI.Xaml.Charts.LabelPlacement
+            case 97:   //  Syncfusion.UI.Xaml.Charts.Day
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("OnTicks", global::Syncfusion.UI.Xaml.Charts.LabelPlacement.OnTicks);
-                userType.AddEnumValue("BetweenTicks", global::Syncfusion.UI.Xaml.Charts.LabelPlacement.BetweenTicks);
+                userType.AddEnumValue("Sunday", global::Syncfusion.UI.Xaml.Charts.Day.Sunday);
+                userType.AddEnumValue("Monday", global::Syncfusion.UI.Xaml.Charts.Day.Monday);
+                userType.AddEnumValue("Tuesday", global::Syncfusion.UI.Xaml.Charts.Day.Tuesday);
+                userType.AddEnumValue("Wednesday", global::Syncfusion.UI.Xaml.Charts.Day.Wednesday);
+                userType.AddEnumValue("Thursday", global::Syncfusion.UI.Xaml.Charts.Day.Thursday);
+                userType.AddEnumValue("Friday", global::Syncfusion.UI.Xaml.Charts.Day.Friday);
+                userType.AddEnumValue("Saturday", global::Syncfusion.UI.Xaml.Charts.Day.Saturday);
                 xamlType = userType;
                 break;
 
-            case 98:   //  Syncfusion.UI.Xaml.Charts.ChartStripLines
+            case 98:   //  Syncfusion.UI.Xaml.Charts.DateTimeRangePadding
+                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Auto", global::Syncfusion.UI.Xaml.Charts.DateTimeRangePadding.Auto);
+                userType.AddEnumValue("None", global::Syncfusion.UI.Xaml.Charts.DateTimeRangePadding.None);
+                userType.AddEnumValue("Round", global::Syncfusion.UI.Xaml.Charts.DateTimeRangePadding.Round);
+                userType.AddEnumValue("Additional", global::Syncfusion.UI.Xaml.Charts.DateTimeRangePadding.Additional);
+                xamlType = userType;
+                break;
+
+            case 99:   //  Syncfusion.UI.Xaml.Charts.DateTimeIntervalType
+                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Auto", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Auto);
+                userType.AddEnumValue("Milliseconds", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Milliseconds);
+                userType.AddEnumValue("Seconds", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Seconds);
+                userType.AddEnumValue("Minutes", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Minutes);
+                userType.AddEnumValue("Hours", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Hours);
+                userType.AddEnumValue("Days", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Days);
+                userType.AddEnumValue("Months", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Months);
+                userType.AddEnumValue("Years", global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType.Years);
+                xamlType = userType;
+                break;
+
+            case 100:   //  Syncfusion.UI.Xaml.Charts.ChartStripLines
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>"));
-                userType.CollectionAdd = VectorAdd_98_ChartStripLines;
+                userType.CollectionAdd = VectorAdd_100_ChartStripLines;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 99:   //  System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>
+            case 101:   //  System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>"));
-                userType.Activator = Activate_99_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_99_ObservableCollection;
+                userType.Activator = Activate_101_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_101_ObservableCollection;
                 xamlType = userType;
                 break;
 
-            case 100:   //  System.Collections.ObjectModel.Collection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>
+            case 102:   //  System.Collections.ObjectModel.Collection`1<Syncfusion.UI.Xaml.Charts.ChartStripLine>
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_100_Collection;
-                userType.CollectionAdd = VectorAdd_100_Collection;
+                userType.Activator = Activate_102_Collection;
+                userType.CollectionAdd = VectorAdd_102_Collection;
                 xamlType = userType;
                 break;
 
-            case 101:   //  Syncfusion.UI.Xaml.Charts.ChartStripLine
+            case 103:   //  Syncfusion.UI.Xaml.Charts.ChartStripLine
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_101_ChartStripLine;
+                userType.Activator = Activate_103_ChartStripLine;
                 userType.AddMemberName("Start");
                 userType.AddMemberName("Background");
                 userType.AddMemberName("BorderBrush");
@@ -1634,26 +1666,26 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 102:   //  Windows.UI.Xaml.HorizontalAlignment
+            case 104:   //  Windows.UI.Xaml.HorizontalAlignment
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 103:   //  Windows.UI.Xaml.VerticalAlignment
+            case 105:   //  Windows.UI.Xaml.VerticalAlignment
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 104:   //  Syncfusion.UI.Xaml.Charts.NumericalAxis
+            case 106:   //  Syncfusion.UI.Xaml.Charts.NumericalAxis
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase"));
-                userType.Activator = Activate_104_NumericalAxis;
-                userType.AddMemberName("RangePadding");
+                userType.Activator = Activate_106_NumericalAxis;
                 userType.AddMemberName("Interval");
                 userType.AddMemberName("Minimum");
                 userType.AddMemberName("Maximum");
+                userType.AddMemberName("RangePadding");
                 userType.AddMemberName("StartRangeFromZero");
                 xamlType = userType;
                 break;
 
-            case 105:   //  Syncfusion.UI.Xaml.Charts.NumericalPadding
+            case 107:   //  Syncfusion.UI.Xaml.Charts.NumericalPadding
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Syncfusion.UI.Xaml.Charts.NumericalPadding.Auto);
                 userType.AddEnumValue("None", global::Syncfusion.UI.Xaml.Charts.NumericalPadding.None);
@@ -1663,20 +1695,20 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 106:   //  Syncfusion.UI.Xaml.Charts.LineSeries
+            case 108:   //  Syncfusion.UI.Xaml.Charts.LineSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase"));
-                userType.Activator = Activate_106_LineSeries;
+                userType.Activator = Activate_108_LineSeries;
                 userType.AddMemberName("CustomTemplate");
                 xamlType = userType;
                 break;
 
-            case 107:   //  Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase
+            case 109:   //  Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase"));
                 userType.AddMemberName("EnableSeriesDragging");
                 xamlType = userType;
                 break;
 
-            case 108:   //  Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase
+            case 110:   //  Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XyDataSeries"));
                 userType.AddMemberName("EnableDragTooltip");
                 userType.AddMemberName("DragTooltipTemplate");
@@ -1688,13 +1720,13 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 109:   //  Syncfusion.UI.Xaml.Charts.XyDataSeries
+            case 111:   //  Syncfusion.UI.Xaml.Charts.XyDataSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries"));
                 userType.AddMemberName("YBindingPath");
                 xamlType = userType;
                 break;
 
-            case 110:   //  Syncfusion.UI.Xaml.Charts.CartesianSeries
+            case 112:   //  Syncfusion.UI.Xaml.Charts.CartesianSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.AdornmentSeries"));
                 userType.AddMemberName("Trendlines");
                 userType.AddMemberName("XRange");
@@ -1705,41 +1737,9 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 111:   //  Syncfusion.UI.Xaml.Charts.AdornmentSeries
+            case 113:   //  Syncfusion.UI.Xaml.Charts.AdornmentSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartSeries"));
                 userType.AddMemberName("AdornmentsInfo");
-                xamlType = userType;
-                break;
-
-            case 112:   //  Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase"));
-                userType.Activator = Activate_112_ChartAdornmentInfo;
-                xamlType = userType;
-                break;
-
-            case 113:   //  Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.AddMemberName("Symbol");
-                userType.AddMemberName("ShowLabel");
-                userType.AddMemberName("UseSeriesPalette");
-                userType.AddMemberName("HorizontalAlignment");
-                userType.AddMemberName("VerticalAlignment");
-                userType.AddMemberName("ConnectorHeight");
-                userType.AddMemberName("ConnectorRotationAngle");
-                userType.AddMemberName("ConnectorLineStyle");
-                userType.AddMemberName("ShowConnectorLine");
-                userType.AddMemberName("LabelTemplate");
-                userType.AddMemberName("SymbolWidth");
-                userType.AddMemberName("SymbolHeight");
-                userType.AddMemberName("SymbolTemplate");
-                userType.AddMemberName("SymbolInterior");
-                userType.AddMemberName("SymbolStroke");
-                userType.AddMemberName("FontFamily");
-                userType.AddMemberName("Series");
-                userType.AddMemberName("AdornmentsPosition");
-                userType.AddMemberName("SegmentLabelContent");
-                userType.AddMemberName("SegmentLabelFormat");
-                userType.AddMemberName("ShowMarker");
                 xamlType = userType;
                 break;
 
@@ -1830,58 +1830,33 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 124:   //  Syncfusion.UI.Xaml.Charts.ChartSymbol
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Custom", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Custom);
-                userType.AddEnumValue("Ellipse", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Ellipse);
-                userType.AddEnumValue("Cross", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Cross);
-                userType.AddEnumValue("Diamond", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Diamond);
-                userType.AddEnumValue("Hexagon", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Hexagon);
-                userType.AddEnumValue("HorizontalLine", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.HorizontalLine);
-                userType.AddEnumValue("InvertedTriangle", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.InvertedTriangle);
-                userType.AddEnumValue("Pentagon", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Pentagon);
-                userType.AddEnumValue("Plus", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Plus);
-                userType.AddEnumValue("Square", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Square);
-                userType.AddEnumValue("Triangle", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.Triangle);
-                userType.AddEnumValue("VerticalLine", global::Syncfusion.UI.Xaml.Charts.ChartSymbol.VerticalLine);
+            case 124:   //  Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo
+                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase"));
+                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 125:   //  Syncfusion.UI.Xaml.Charts.AdornmentsPosition
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Top", global::Syncfusion.UI.Xaml.Charts.AdornmentsPosition.Top);
-                userType.AddEnumValue("Bottom", global::Syncfusion.UI.Xaml.Charts.AdornmentsPosition.Bottom);
-                userType.AddEnumValue("TopAndBottom", global::Syncfusion.UI.Xaml.Charts.AdornmentsPosition.TopAndBottom);
+            case 125:   //  Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase
+                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 126:   //  Syncfusion.UI.Xaml.Charts.LabelContent
-                userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("XValue", global::Syncfusion.UI.Xaml.Charts.LabelContent.XValue);
-                userType.AddEnumValue("YValue", global::Syncfusion.UI.Xaml.Charts.LabelContent.YValue);
-                userType.AddEnumValue("Percentage", global::Syncfusion.UI.Xaml.Charts.LabelContent.Percentage);
-                userType.AddEnumValue("YofTot", global::Syncfusion.UI.Xaml.Charts.LabelContent.YofTot);
-                userType.AddEnumValue("DateTime", global::Syncfusion.UI.Xaml.Charts.LabelContent.DateTime);
-                userType.AddEnumValue("LabelContentPath", global::Syncfusion.UI.Xaml.Charts.LabelContent.LabelContentPath);
-                xamlType = userType;
-                break;
-
-            case 127:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection
+            case 126:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>"));
-                userType.Activator = Activate_127_ResourceDictionaryCollection;
-                userType.CollectionAdd = VectorAdd_127_ResourceDictionaryCollection;
+                userType.Activator = Activate_126_ResourceDictionaryCollection;
+                userType.CollectionAdd = VectorAdd_126_ResourceDictionaryCollection;
                 xamlType = userType;
                 break;
 
-            case 128:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries
+            case 127:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>"));
-                userType.Activator = Activate_128_LineSeries;
+                userType.Activator = Activate_127_LineSeries;
                 userType.AddMemberName("Points");
                 userType.AddMemberName("PolylineStyle");
                 xamlType = userType;
                 break;
 
-            case 129:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>
+            case 128:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes"));
                 userType.AddMemberName("DependentRangeAxis");
                 userType.AddMemberName("IndependentAxis");
@@ -1890,18 +1865,18 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 130:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes
+            case 129:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes"));
                 userType.AddMemberName("GlobalSeriesIndex");
                 xamlType = userType;
                 break;
 
-            case 131:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes
+            case 130:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeriesWithAxes
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries"));
                 xamlType = userType;
                 break;
 
-            case 132:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries
+            case 131:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series"));
                 userType.AddMemberName("IndependentValuePath");
                 userType.AddMemberName("DependentValuePath");
@@ -1918,7 +1893,7 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 133:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Series
+            case 132:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.Series
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.AddMemberName("SeriesHost");
                 userType.AddMemberName("LegendItems");
@@ -1926,27 +1901,27 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 134:   //  Windows.UI.Xaml.Media.PointCollection
+            case 133:   //  Windows.UI.Xaml.Media.PointCollection
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 135:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis
+            case 134:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 136:   //  System.Nullable`1<Int32>
+            case 135:   //  System.Nullable`1<Int32>
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 137:   //  Windows.UI.Xaml.Data.Binding
+            case 136:   //  Windows.UI.Xaml.Data.Binding
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 138:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence
+            case 137:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Simultaneous", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence.Simultaneous);
                 userType.AddEnumValue("FirstToLast", global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence.FirstToLast);
@@ -1954,40 +1929,40 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 139:   //  Windows.UI.Xaml.Media.Animation.EasingFunctionBase
+            case 138:   //  Windows.UI.Xaml.Media.Animation.EasingFunctionBase
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 140:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost
+            case 139:   //  WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 141:   //  Electroencephalograph.MainPage
+            case 140:   //  Electroencephalograph.MainPage
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_141_MainPage;
+                userType.Activator = Activate_140_MainPage;
                 userType.AddMemberName("DefaultViewModel");
                 userType.AddMemberName("NavigationHelper");
                 xamlType = userType;
                 break;
 
-            case 142:   //  Windows.UI.Xaml.Controls.Page
+            case 141:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 143:   //  Windows.UI.Xaml.Controls.UserControl
+            case 142:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 144:   //  Electroencephalograph.Common.ObservableDictionary
+            case 143:   //  Electroencephalograph.Common.ObservableDictionary
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_144_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_143_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 145:   //  Electroencephalograph.Common.NavigationHelper
+            case 144:   //  Electroencephalograph.Common.NavigationHelper
                 userType = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
@@ -2607,875 +2582,875 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
         {
             global::Syncfusion.UI.Xaml.Charts.ChartSeriesBase.SetSpacing((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Double)Value);
         }
-        private object get_61_ChartBase_Header(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
-            return that.Header;
-        }
-        private void set_61_ChartBase_Header(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_62_SfChart_PrimaryAxis(object instance)
+        private object get_61_SfChart_PrimaryAxis(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.PrimaryAxis;
         }
-        private void set_62_SfChart_PrimaryAxis(object instance, object Value)
+        private void set_61_SfChart_PrimaryAxis(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.PrimaryAxis = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)Value;
         }
-        private object get_63_SfChart_SecondaryAxis(object instance)
+        private object get_62_SfChart_SecondaryAxis(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.SecondaryAxis;
         }
-        private void set_63_SfChart_SecondaryAxis(object instance, object Value)
+        private void set_62_SfChart_SecondaryAxis(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.SecondaryAxis = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)Value;
         }
-        private object get_64_SfChart_Watermark(object instance)
+        private object get_63_SfChart_Watermark(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.Watermark;
         }
-        private void set_64_SfChart_Watermark(object instance, object Value)
+        private void set_63_SfChart_Watermark(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.Watermark = (global::Syncfusion.UI.Xaml.Charts.Watermark)Value;
         }
-        private object get_65_SfChart_AreaBorderBrush(object instance)
+        private object get_64_SfChart_AreaBorderBrush(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.AreaBorderBrush;
         }
-        private void set_65_SfChart_AreaBorderBrush(object instance, object Value)
+        private void set_64_SfChart_AreaBorderBrush(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.AreaBorderBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_66_SfChart_AreaBorderThickness(object instance)
+        private object get_65_SfChart_AreaBorderThickness(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.AreaBorderThickness;
         }
-        private void set_66_SfChart_AreaBorderThickness(object instance, object Value)
+        private void set_65_SfChart_AreaBorderThickness(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.AreaBorderThickness = (global::Windows.UI.Xaml.Thickness)Value;
         }
-        private object get_67_SfChart_AreaBackground(object instance)
+        private object get_66_SfChart_AreaBackground(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.AreaBackground;
         }
-        private void set_67_SfChart_AreaBackground(object instance, object Value)
+        private void set_66_SfChart_AreaBackground(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.AreaBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_68_SfChart_Behaviors(object instance)
+        private object get_67_SfChart_Behaviors(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.Behaviors;
         }
-        private void set_68_SfChart_Behaviors(object instance, object Value)
+        private void set_67_SfChart_Behaviors(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.Behaviors = (global::Syncfusion.UI.Xaml.Charts.ChartBehaviorsCollection)Value;
         }
-        private object get_69_ChartBehavior_AdorningCanvas(object instance)
+        private object get_68_ChartBehavior_AdorningCanvas(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBehavior)instance;
             return that.AdorningCanvas;
         }
-        private object get_70_ChartBehavior_BottomAdorningCanvas(object instance)
+        private object get_69_ChartBehavior_BottomAdorningCanvas(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBehavior)instance;
             return that.BottomAdorningCanvas;
         }
-        private object get_71_ChartBehavior_ChartArea(object instance)
+        private object get_70_ChartBehavior_ChartArea(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBehavior)instance;
             return that.ChartArea;
         }
-        private object get_72_SfChart_TechnicalIndicators(object instance)
+        private object get_71_SfChart_TechnicalIndicators(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.TechnicalIndicators;
         }
-        private void set_72_SfChart_TechnicalIndicators(object instance, object Value)
+        private void set_71_SfChart_TechnicalIndicators(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.TechnicalIndicators = (global::System.Collections.ObjectModel.ObservableCollection<global::Syncfusion.UI.Xaml.Charts.ChartSeries>)Value;
         }
-        private object get_73_SfChart_Annotations(object instance)
+        private object get_72_SfChart_Annotations(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             return that.Annotations;
         }
-        private void set_73_SfChart_Annotations(object instance, object Value)
+        private void set_72_SfChart_Annotations(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfChart)instance;
             that.Annotations = (global::Syncfusion.UI.Xaml.Charts.AnnotationCollection)Value;
         }
-        private object get_74_Annotation_Text(object instance)
+        private object get_73_Annotation_Text(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.Text;
         }
-        private void set_74_Annotation_Text(object instance, object Value)
+        private void set_73_Annotation_Text(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.Text = (global::System.String)Value;
         }
-        private object get_75_Annotation_ContentTemplate(object instance)
+        private object get_74_Annotation_ContentTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.ContentTemplate;
         }
-        private void set_75_Annotation_ContentTemplate(object instance, object Value)
+        private void set_74_Annotation_ContentTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.ContentTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_76_Annotation_ShowToolTip(object instance)
+        private object get_75_Annotation_ShowToolTip(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.ShowToolTip;
         }
-        private void set_76_Annotation_ShowToolTip(object instance, object Value)
+        private void set_75_Annotation_ShowToolTip(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.ShowToolTip = (global::System.Boolean)Value;
         }
-        private object get_77_Annotation_ToolTipContent(object instance)
+        private object get_76_Annotation_ToolTipContent(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.ToolTipContent;
         }
-        private void set_77_Annotation_ToolTipContent(object instance, object Value)
+        private void set_76_Annotation_ToolTipContent(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.ToolTipContent = (global::System.Object)Value;
         }
-        private object get_78_Annotation_ToolTipShowDuration(object instance)
+        private object get_77_Annotation_ToolTipShowDuration(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.ToolTipShowDuration;
         }
-        private void set_78_Annotation_ToolTipShowDuration(object instance, object Value)
+        private void set_77_Annotation_ToolTipShowDuration(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.ToolTipShowDuration = (global::System.Double)Value;
         }
-        private object get_79_Annotation_ToolTipTemplate(object instance)
+        private object get_78_Annotation_ToolTipTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.ToolTipTemplate;
         }
-        private void set_79_Annotation_ToolTipTemplate(object instance, object Value)
+        private void set_78_Annotation_ToolTipTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.ToolTipTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_80_Annotation_ToolTipPlacement(object instance)
+        private object get_79_Annotation_ToolTipPlacement(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.ToolTipPlacement;
         }
-        private void set_80_Annotation_ToolTipPlacement(object instance, object Value)
+        private void set_79_Annotation_ToolTipPlacement(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.ToolTipPlacement = (global::Syncfusion.UI.Xaml.Charts.ToolTipLabelPlacement)Value;
         }
-        private object get_81_Annotation_CoordinateUnit(object instance)
+        private object get_80_Annotation_CoordinateUnit(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.CoordinateUnit;
         }
-        private void set_81_Annotation_CoordinateUnit(object instance, object Value)
+        private void set_80_Annotation_CoordinateUnit(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.CoordinateUnit = (global::Syncfusion.UI.Xaml.Charts.CoordinateUnit)Value;
         }
-        private object get_82_Annotation_XAxisName(object instance)
+        private object get_81_Annotation_XAxisName(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.XAxisName;
         }
-        private void set_82_Annotation_XAxisName(object instance, object Value)
+        private void set_81_Annotation_XAxisName(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.XAxisName = (global::System.String)Value;
         }
-        private object get_83_Annotation_YAxisName(object instance)
+        private object get_82_Annotation_YAxisName(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.YAxisName;
         }
-        private void set_83_Annotation_YAxisName(object instance, object Value)
+        private void set_82_Annotation_YAxisName(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.YAxisName = (global::System.String)Value;
         }
-        private object get_84_Annotation_X1(object instance)
+        private object get_83_Annotation_X1(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.X1;
         }
-        private void set_84_Annotation_X1(object instance, object Value)
+        private void set_83_Annotation_X1(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.X1 = (global::System.Object)Value;
         }
-        private object get_85_Annotation_Y1(object instance)
+        private object get_84_Annotation_Y1(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.Y1;
         }
-        private void set_85_Annotation_Y1(object instance, object Value)
+        private void set_84_Annotation_Y1(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.Y1 = (global::System.Object)Value;
         }
-        private object get_86_Annotation_FontSize(object instance)
+        private object get_85_Annotation_FontSize(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.FontSize;
         }
-        private void set_86_Annotation_FontSize(object instance, object Value)
+        private void set_85_Annotation_FontSize(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.FontSize = (global::System.Double)Value;
         }
-        private object get_87_Annotation_FontFamily(object instance)
+        private object get_86_Annotation_FontFamily(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.FontFamily;
         }
-        private void set_87_Annotation_FontFamily(object instance, object Value)
+        private void set_86_Annotation_FontFamily(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.FontFamily = (global::Windows.UI.Xaml.Media.FontFamily)Value;
         }
-        private object get_88_Annotation_FontStretch(object instance)
+        private object get_87_Annotation_FontStretch(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.FontStretch;
         }
-        private void set_88_Annotation_FontStretch(object instance, object Value)
+        private void set_87_Annotation_FontStretch(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.FontStretch = (global::Windows.UI.Text.FontStretch)Value;
         }
-        private object get_89_Annotation_FontStyle(object instance)
+        private object get_88_Annotation_FontStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.FontStyle;
         }
-        private void set_89_Annotation_FontStyle(object instance, object Value)
+        private void set_88_Annotation_FontStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
         }
-        private object get_90_Annotation_FontWeight(object instance)
+        private object get_89_Annotation_FontWeight(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.FontWeight;
         }
-        private void set_90_Annotation_FontWeight(object instance, object Value)
+        private void set_89_Annotation_FontWeight(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
         }
-        private object get_91_Annotation_Foreground(object instance)
+        private object get_90_Annotation_Foreground(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             return that.Foreground;
         }
-        private void set_91_Annotation_Foreground(object instance, object Value)
+        private void set_90_Annotation_Foreground(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.Annotation)instance;
             that.Foreground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_92_ChartBase_AxisThickness(object instance)
+        private object get_91_ChartBase_AxisThickness(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.AxisThickness;
         }
-        private object get_93_ChartBase_SeriesClipRect(object instance)
+        private object get_92_ChartBase_SeriesClipRect(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.SeriesClipRect;
         }
-        private object get_94_ChartBase_VisibleSeries(object instance)
+        private object get_93_ChartBase_VisibleSeries(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.VisibleSeries;
         }
-        private object get_95_ChartBase_Palette(object instance)
+        private object get_94_ChartBase_Palette(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.Palette;
         }
-        private void set_95_ChartBase_Palette(object instance, object Value)
+        private void set_94_ChartBase_Palette(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             that.Palette = (global::Syncfusion.UI.Xaml.Charts.ChartColorPalette)Value;
         }
-        private object get_96_ChartBase_ColumnDefinitions(object instance)
+        private object get_95_ChartBase_ColumnDefinitions(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.ColumnDefinitions;
         }
-        private void set_96_ChartBase_ColumnDefinitions(object instance, object Value)
+        private void set_95_ChartBase_ColumnDefinitions(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             that.ColumnDefinitions = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinitions)Value;
         }
-        private object get_97_ChartColumnDefinition_Width(object instance)
+        private object get_96_ChartColumnDefinition_Width(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             return that.Width;
         }
-        private void set_97_ChartColumnDefinition_Width(object instance, object Value)
+        private void set_96_ChartColumnDefinition_Width(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             that.Width = (global::System.Double)Value;
         }
-        private object get_98_ChartColumnDefinition_Unit(object instance)
+        private object get_97_ChartColumnDefinition_Unit(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             return that.Unit;
         }
-        private void set_98_ChartColumnDefinition_Unit(object instance, object Value)
+        private void set_97_ChartColumnDefinition_Unit(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             that.Unit = (global::Syncfusion.UI.Xaml.Charts.ChartUnitType)Value;
         }
-        private object get_99_ChartColumnDefinition_BorderThickness(object instance)
+        private object get_98_ChartColumnDefinition_BorderThickness(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             return that.BorderThickness;
         }
-        private void set_99_ChartColumnDefinition_BorderThickness(object instance, object Value)
+        private void set_98_ChartColumnDefinition_BorderThickness(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             that.BorderThickness = (global::System.Double)Value;
         }
-        private object get_100_ChartColumnDefinition_BorderStroke(object instance)
+        private object get_99_ChartColumnDefinition_BorderStroke(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             return that.BorderStroke;
         }
-        private void set_100_ChartColumnDefinition_BorderStroke(object instance, object Value)
+        private void set_99_ChartColumnDefinition_BorderStroke(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartColumnDefinition)instance;
             that.BorderStroke = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_101_ChartBase_RowDefinitions(object instance)
+        private object get_100_ChartBase_RowDefinitions(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.RowDefinitions;
         }
-        private void set_101_ChartBase_RowDefinitions(object instance, object Value)
+        private void set_100_ChartBase_RowDefinitions(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             that.RowDefinitions = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinitions)Value;
         }
-        private object get_102_ChartRowDefinition_RowTop(object instance)
+        private object get_101_ChartRowDefinition_RowTop(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             return that.RowTop;
         }
-        private object get_103_ChartRowDefinition_Height(object instance)
+        private object get_102_ChartRowDefinition_Height(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             return that.Height;
         }
-        private void set_103_ChartRowDefinition_Height(object instance, object Value)
+        private void set_102_ChartRowDefinition_Height(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             that.Height = (global::System.Double)Value;
         }
-        private object get_104_ChartRowDefinition_Unit(object instance)
+        private object get_103_ChartRowDefinition_Unit(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             return that.Unit;
         }
-        private void set_104_ChartRowDefinition_Unit(object instance, object Value)
+        private void set_103_ChartRowDefinition_Unit(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             that.Unit = (global::Syncfusion.UI.Xaml.Charts.ChartUnitType)Value;
         }
-        private object get_105_ChartRowDefinition_BorderThickness(object instance)
+        private object get_104_ChartRowDefinition_BorderThickness(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             return that.BorderThickness;
         }
-        private void set_105_ChartRowDefinition_BorderThickness(object instance, object Value)
+        private void set_104_ChartRowDefinition_BorderThickness(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             that.BorderThickness = (global::System.Double)Value;
         }
-        private object get_106_ChartRowDefinition_BorderStroke(object instance)
+        private object get_105_ChartRowDefinition_BorderStroke(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             return that.BorderStroke;
         }
-        private void set_106_ChartRowDefinition_BorderStroke(object instance, object Value)
+        private void set_105_ChartRowDefinition_BorderStroke(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartRowDefinition)instance;
             that.BorderStroke = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_107_ChartBase_Axes(object instance)
+        private object get_106_ChartBase_Axes(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.Axes;
         }
-        private object get_108_ChartAxis_Header(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
-            return that.Header;
-        }
-        private void set_108_ChartAxis_Header(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_109_ChartAxis_ActualPlotOffset(object instance)
+        private object get_107_ChartAxis_ActualPlotOffset(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ActualPlotOffset;
         }
-        private object get_110_ChartAxis_MaximumLabels(object instance)
+        private object get_108_ChartAxis_MaximumLabels(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MaximumLabels;
         }
-        private void set_110_ChartAxis_MaximumLabels(object instance, object Value)
+        private void set_108_ChartAxis_MaximumLabels(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MaximumLabels = (global::System.Int32)Value;
         }
-        private object get_111_ChartAxis_VisibleRange(object instance)
+        private object get_109_ChartAxis_VisibleRange(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.VisibleRange;
         }
-        private object get_112_ChartAxis_ArrangeRect(object instance)
+        private object get_110_ChartAxis_ArrangeRect(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ArrangeRect;
         }
-        private object get_113_ChartAxis_PositionPath(object instance)
+        private object get_111_ChartAxis_PositionPath(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.PositionPath;
         }
-        private void set_113_ChartAxis_PositionPath(object instance, object Value)
+        private void set_111_ChartAxis_PositionPath(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.PositionPath = (global::System.String)Value;
         }
-        private object get_114_ChartAxis_ContentPath(object instance)
+        private object get_112_ChartAxis_ContentPath(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ContentPath;
         }
-        private void set_114_ChartAxis_ContentPath(object instance, object Value)
+        private void set_112_ChartAxis_ContentPath(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ContentPath = (global::System.String)Value;
         }
-        private object get_115_ChartAxis_LabelFormat(object instance)
+        private object get_113_ChartAxis_LabelFormat(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelFormat;
         }
-        private void set_115_ChartAxis_LabelFormat(object instance, object Value)
+        private void set_113_ChartAxis_LabelFormat(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelFormat = (global::System.String)Value;
         }
-        private object get_116_ChartAxis_LabelsSource(object instance)
+        private object get_114_ChartAxis_LabelsSource(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelsSource;
         }
-        private void set_116_ChartAxis_LabelsSource(object instance, object Value)
+        private void set_114_ChartAxis_LabelsSource(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelsSource = (global::System.Object)Value;
         }
-        private object get_117_ChartAxis_PostfixLabelTemplate(object instance)
+        private object get_115_ChartAxis_PostfixLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.PostfixLabelTemplate;
         }
-        private void set_117_ChartAxis_PostfixLabelTemplate(object instance, object Value)
+        private void set_115_ChartAxis_PostfixLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.PostfixLabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_118_ChartAxis_PrefixLabelTemplate(object instance)
+        private object get_116_ChartAxis_PrefixLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.PrefixLabelTemplate;
         }
-        private void set_118_ChartAxis_PrefixLabelTemplate(object instance, object Value)
+        private void set_116_ChartAxis_PrefixLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.PrefixLabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_119_ChartAxis_PlotOffset(object instance)
+        private object get_117_ChartAxis_PlotOffset(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.PlotOffset;
         }
-        private void set_119_ChartAxis_PlotOffset(object instance, object Value)
+        private void set_117_ChartAxis_PlotOffset(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.PlotOffset = (global::System.Double)Value;
         }
-        private object get_120_ChartAxis_AxisLineOffset(object instance)
+        private object get_118_ChartAxis_AxisLineOffset(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.AxisLineOffset;
         }
-        private void set_120_ChartAxis_AxisLineOffset(object instance, object Value)
+        private void set_118_ChartAxis_AxisLineOffset(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.AxisLineOffset = (global::System.Double)Value;
         }
-        private object get_121_ChartAxis_LabelsPosition(object instance)
+        private object get_119_ChartAxis_LabelsPosition(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelsPosition;
         }
-        private void set_121_ChartAxis_LabelsPosition(object instance, object Value)
+        private void set_119_ChartAxis_LabelsPosition(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelsPosition = (global::Syncfusion.UI.Xaml.Charts.AxisElementPosition)Value;
         }
-        private object get_122_ChartAxis_LabelsIntersectAction(object instance)
+        private object get_120_ChartAxis_LabelsIntersectAction(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelsIntersectAction;
         }
-        private void set_122_ChartAxis_LabelsIntersectAction(object instance, object Value)
+        private void set_120_ChartAxis_LabelsIntersectAction(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelsIntersectAction = (global::Syncfusion.UI.Xaml.Charts.AxisLabelsIntersectAction)Value;
         }
-        private object get_123_ChartAxis_LabelExtent(object instance)
+        private object get_121_ChartAxis_LabelExtent(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelExtent;
         }
-        private void set_123_ChartAxis_LabelExtent(object instance, object Value)
+        private void set_121_ChartAxis_LabelExtent(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelExtent = (global::System.Double)Value;
         }
-        private object get_124_ChartAxis_LabelRotationAngle(object instance)
+        private object get_122_ChartAxis_LabelRotationAngle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelRotationAngle;
         }
-        private void set_124_ChartAxis_LabelRotationAngle(object instance, object Value)
+        private void set_122_ChartAxis_LabelRotationAngle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelRotationAngle = (global::System.Double)Value;
         }
-        private object get_125_ChartAxis_AxisLineStyle(object instance)
+        private object get_123_ChartAxis_AxisLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.AxisLineStyle;
         }
-        private void set_125_ChartAxis_AxisLineStyle(object instance, object Value)
+        private void set_123_ChartAxis_AxisLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.AxisLineStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_126_ChartAxis_OpposedPosition(object instance)
+        private object get_124_ChartAxis_OpposedPosition(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.OpposedPosition;
         }
-        private void set_126_ChartAxis_OpposedPosition(object instance, object Value)
+        private void set_124_ChartAxis_OpposedPosition(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.OpposedPosition = (global::System.Boolean)Value;
         }
-        private object get_127_ChartAxis_DesiredIntervalsCount(object instance)
+        private object get_125_ChartAxis_DesiredIntervalsCount(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.DesiredIntervalsCount;
         }
-        private void set_127_ChartAxis_DesiredIntervalsCount(object instance, object Value)
+        private void set_125_ChartAxis_DesiredIntervalsCount(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.DesiredIntervalsCount = (global::System.Object)Value;
         }
-        private object get_128_ChartAxis_ThumbLabelVisibility(object instance)
+        private object get_126_ChartAxis_ThumbLabelVisibility(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ThumbLabelVisibility;
         }
-        private void set_128_ChartAxis_ThumbLabelVisibility(object instance, object Value)
+        private void set_126_ChartAxis_ThumbLabelVisibility(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ThumbLabelVisibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_129_ChartAxis_ThumbLabelTemplate(object instance)
+        private object get_127_ChartAxis_ThumbLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ThumbLabelTemplate;
         }
-        private void set_129_ChartAxis_ThumbLabelTemplate(object instance, object Value)
+        private void set_127_ChartAxis_ThumbLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ThumbLabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_130_ChartAxis_HeaderTemplate(object instance)
+        private object get_128_ChartAxis_Header(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
+            return that.Header;
+        }
+        private void set_128_ChartAxis_Header(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_129_ChartAxis_HeaderTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.HeaderTemplate;
         }
-        private void set_130_ChartAxis_HeaderTemplate(object instance, object Value)
+        private void set_129_ChartAxis_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.HeaderTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_131_ChartAxis_TickLineSize(object instance)
+        private object get_130_ChartAxis_TickLineSize(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.TickLineSize;
         }
-        private void set_131_ChartAxis_TickLineSize(object instance, object Value)
+        private void set_130_ChartAxis_TickLineSize(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.TickLineSize = (global::System.Double)Value;
         }
-        private object get_132_ChartAxis_VisibleLabels(object instance)
+        private object get_131_ChartAxis_VisibleLabels(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.VisibleLabels;
         }
-        private object get_133_ChartAxisLabel_LabelContent(object instance)
+        private object get_132_ChartAxisLabel_LabelContent(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             return that.LabelContent;
         }
-        private void set_133_ChartAxisLabel_LabelContent(object instance, object Value)
+        private void set_132_ChartAxisLabel_LabelContent(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             that.LabelContent = (global::System.Object)Value;
         }
-        private object get_134_ChartAxisLabel_Position(object instance)
+        private object get_133_ChartAxisLabel_Position(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             return that.Position;
         }
-        private void set_134_ChartAxisLabel_Position(object instance, object Value)
+        private void set_133_ChartAxisLabel_Position(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             that.Position = (global::System.Double)Value;
         }
-        private object get_135_ChartAxisLabel_PrefixLabelTemplate(object instance)
+        private object get_134_ChartAxisLabel_PrefixLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             return that.PrefixLabelTemplate;
         }
-        private void set_135_ChartAxisLabel_PrefixLabelTemplate(object instance, object Value)
+        private void set_134_ChartAxisLabel_PrefixLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             that.PrefixLabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_136_ChartAxisLabel_PostfixLabelTemplate(object instance)
+        private object get_135_ChartAxisLabel_PostfixLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             return that.PostfixLabelTemplate;
         }
-        private void set_136_ChartAxisLabel_PostfixLabelTemplate(object instance, object Value)
+        private void set_135_ChartAxisLabel_PostfixLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisLabel)instance;
             that.PostfixLabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_137_ChartAxis_IsInversed(object instance)
+        private object get_136_ChartAxis_IsInversed(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.IsInversed;
         }
-        private void set_137_ChartAxis_IsInversed(object instance, object Value)
+        private void set_136_ChartAxis_IsInversed(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.IsInversed = (global::System.Boolean)Value;
         }
-        private object get_138_ChartAxis_Origin(object instance)
+        private object get_137_ChartAxis_Origin(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.Origin;
         }
-        private void set_138_ChartAxis_Origin(object instance, object Value)
+        private void set_137_ChartAxis_Origin(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.Origin = (global::System.Double)Value;
         }
-        private object get_139_ChartAxis_ShowOrigin(object instance)
+        private object get_138_ChartAxis_ShowOrigin(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ShowOrigin;
         }
-        private void set_139_ChartAxis_ShowOrigin(object instance, object Value)
+        private void set_138_ChartAxis_ShowOrigin(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ShowOrigin = (global::System.Boolean)Value;
         }
-        private object get_140_ChartAxis_TickLinesPosition(object instance)
+        private object get_139_ChartAxis_TickLinesPosition(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.TickLinesPosition;
         }
-        private void set_140_ChartAxis_TickLinesPosition(object instance, object Value)
+        private void set_139_ChartAxis_TickLinesPosition(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.TickLinesPosition = (global::Syncfusion.UI.Xaml.Charts.AxisElementPosition)Value;
         }
-        private object get_141_ChartAxis_ShowAxisNextToOrigin(object instance)
+        private object get_140_ChartAxis_ShowAxisNextToOrigin(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ShowAxisNextToOrigin;
         }
-        private void set_141_ChartAxis_ShowAxisNextToOrigin(object instance, object Value)
+        private void set_140_ChartAxis_ShowAxisNextToOrigin(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ShowAxisNextToOrigin = (global::System.Boolean)Value;
         }
-        private object get_142_ChartAxis_EdgeLabelsDrawingMode(object instance)
+        private object get_141_ChartAxis_EdgeLabelsDrawingMode(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.EdgeLabelsDrawingMode;
         }
-        private void set_142_ChartAxis_EdgeLabelsDrawingMode(object instance, object Value)
+        private void set_141_ChartAxis_EdgeLabelsDrawingMode(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.EdgeLabelsDrawingMode = (global::Syncfusion.UI.Xaml.Charts.EdgeLabelsDrawingMode)Value;
         }
-        private object get_143_ChartAxis_MajorGridLineStyle(object instance)
+        private object get_142_ChartAxis_MajorGridLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MajorGridLineStyle;
         }
-        private void set_143_ChartAxis_MajorGridLineStyle(object instance, object Value)
+        private void set_142_ChartAxis_MajorGridLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MajorGridLineStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_144_ChartAxis_MinorGridLineStyle(object instance)
+        private object get_143_ChartAxis_MinorGridLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MinorGridLineStyle;
         }
-        private void set_144_ChartAxis_MinorGridLineStyle(object instance, object Value)
+        private void set_143_ChartAxis_MinorGridLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MinorGridLineStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_145_ChartAxis_MajorTickLineStyle(object instance)
+        private object get_144_ChartAxis_MajorTickLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MajorTickLineStyle;
         }
-        private void set_145_ChartAxis_MajorTickLineStyle(object instance, object Value)
+        private void set_144_ChartAxis_MajorTickLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MajorTickLineStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_146_ChartAxis_MinorTickLineStyle(object instance)
+        private object get_145_ChartAxis_MinorTickLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MinorTickLineStyle;
         }
-        private void set_146_ChartAxis_MinorTickLineStyle(object instance, object Value)
+        private void set_145_ChartAxis_MinorTickLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MinorTickLineStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_147_ChartAxis_ShowTrackBallInfo(object instance)
+        private object get_146_ChartAxis_ShowTrackBallInfo(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ShowTrackBallInfo;
         }
-        private void set_147_ChartAxis_ShowTrackBallInfo(object instance, object Value)
+        private void set_146_ChartAxis_ShowTrackBallInfo(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ShowTrackBallInfo = (global::System.Boolean)Value;
         }
-        private object get_148_ChartAxis_TrackBallLabelTemplate(object instance)
+        private object get_147_ChartAxis_TrackBallLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.TrackBallLabelTemplate;
         }
-        private void set_148_ChartAxis_TrackBallLabelTemplate(object instance, object Value)
+        private void set_147_ChartAxis_TrackBallLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.TrackBallLabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_149_ChartAxis_ShowGridLines(object instance)
+        private object get_148_ChartAxis_ShowGridLines(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ShowGridLines;
         }
-        private void set_149_ChartAxis_ShowGridLines(object instance, object Value)
+        private void set_148_ChartAxis_ShowGridLines(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ShowGridLines = (global::System.Boolean)Value;
         }
-        private object get_150_ChartAxis_EnableAutoIntervalOnZooming(object instance)
+        private object get_149_ChartAxis_EnableAutoIntervalOnZooming(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.EnableAutoIntervalOnZooming;
         }
-        private void set_150_ChartAxis_EnableAutoIntervalOnZooming(object instance, object Value)
+        private void set_149_ChartAxis_EnableAutoIntervalOnZooming(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.EnableAutoIntervalOnZooming = (global::System.Boolean)Value;
         }
-        private object get_151_ChartAxis_LabelTemplate(object instance)
+        private object get_150_ChartAxis_LabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelTemplate;
         }
-        private void set_151_ChartAxis_LabelTemplate(object instance, object Value)
+        private void set_150_ChartAxis_LabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_152_ChartAxis_CustomLabels(object instance)
+        private object get_151_ChartAxis_CustomLabels(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.CustomLabels;
         }
-        private object get_153_ChartAxis_IsLogarithmic(object instance)
+        private object get_152_ChartAxis_IsLogarithmic(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.IsLogarithmic;
         }
-        private object get_154_ChartBase_SideBySideSeriesPlacement(object instance)
+        private object get_153_ChartBase_SideBySideSeriesPlacement(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             return that.SideBySideSeriesPlacement;
         }
-        private void set_154_ChartBase_SideBySideSeriesPlacement(object instance, object Value)
+        private void set_153_ChartBase_SideBySideSeriesPlacement(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
             that.SideBySideSeriesPlacement = (global::System.Boolean)Value;
+        }
+        private object get_154_ChartBase_Header(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
+            return that.Header;
+        }
+        private void set_154_ChartBase_Header(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartBase)instance;
+            that.Header = (global::System.Object)Value;
         }
         private object get_155_ChartBase_ColorModel(object instance)
         {
@@ -3529,1052 +3504,917 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
         {
             global::Syncfusion.UI.Xaml.Charts.ChartBase.SetRowSpan((global::Windows.UI.Xaml.UIElement)instance, (global::System.Int32)Value);
         }
-        private object get_161_CategoryAxis_Interval(object instance)
+        private object get_161_DateTimeAxis_EnableBusinessHours(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.CategoryAxis)instance;
-            return that.Interval;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.EnableBusinessHours;
         }
-        private void set_161_CategoryAxis_Interval(object instance, object Value)
+        private void set_161_DateTimeAxis_EnableBusinessHours(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.CategoryAxis)instance;
-            that.Interval = (global::System.Object)Value;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.EnableBusinessHours = (global::System.Boolean)Value;
         }
-        private object get_162_CategoryAxis_LabelPlacement(object instance)
+        private object get_162_DateTimeAxis_OpenTime(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.CategoryAxis)instance;
-            return that.LabelPlacement;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.OpenTime;
         }
-        private void set_162_CategoryAxis_LabelPlacement(object instance, object Value)
+        private void set_162_DateTimeAxis_OpenTime(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.CategoryAxis)instance;
-            that.LabelPlacement = (global::Syncfusion.UI.Xaml.Charts.LabelPlacement)Value;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.OpenTime = (global::System.Double)Value;
         }
-        private object get_163_ChartAxisBase2D_ZoomPosition(object instance)
+        private object get_163_DateTimeAxis_CloseTime(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.ZoomPosition;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.CloseTime;
         }
-        private void set_163_ChartAxisBase2D_ZoomPosition(object instance, object Value)
+        private void set_163_DateTimeAxis_CloseTime(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.ZoomPosition = (global::System.Double)Value;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.CloseTime = (global::System.Double)Value;
         }
-        private object get_164_ChartAxisBase2D_ZoomFactor(object instance)
+        private object get_164_DateTimeAxis_WorkingDays(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.ZoomFactor;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.WorkingDays;
         }
-        private void set_164_ChartAxisBase2D_ZoomFactor(object instance, object Value)
+        private void set_164_DateTimeAxis_WorkingDays(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.ZoomFactor = (global::System.Double)Value;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.WorkingDays = (global::Syncfusion.UI.Xaml.Charts.Day)Value;
         }
-        private object get_165_ChartAxisBase2D_StripLines(object instance)
+        private object get_165_DateTimeAxis_Minimum(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.StripLines;
-        }
-        private void set_165_ChartAxisBase2D_StripLines(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.StripLines = (global::Syncfusion.UI.Xaml.Charts.ChartStripLines)Value;
-        }
-        private object get_166_ChartStripLine_Start(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.Start;
-        }
-        private void set_166_ChartStripLine_Start(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.Start = (global::System.Double)Value;
-        }
-        private object get_167_ChartStripLine_Background(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.Background;
-        }
-        private void set_167_ChartStripLine_Background(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.Background = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_168_ChartStripLine_BorderBrush(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.BorderBrush;
-        }
-        private void set_168_ChartStripLine_BorderBrush(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.BorderBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_169_ChartStripLine_BorderThickness(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.BorderThickness;
-        }
-        private void set_169_ChartStripLine_BorderThickness(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.BorderThickness = (global::Windows.UI.Xaml.Thickness)Value;
-        }
-        private object get_170_ChartStripLine_SegmentStartValue(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.SegmentStartValue;
-        }
-        private void set_170_ChartStripLine_SegmentStartValue(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.SegmentStartValue = (global::System.Double)Value;
-        }
-        private object get_171_ChartStripLine_SegmentEndValue(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.SegmentEndValue;
-        }
-        private void set_171_ChartStripLine_SegmentEndValue(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.SegmentEndValue = (global::System.Double)Value;
-        }
-        private object get_172_ChartStripLine_SegmentAxisName(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.SegmentAxisName;
-        }
-        private void set_172_ChartStripLine_SegmentAxisName(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.SegmentAxisName = (global::System.String)Value;
-        }
-        private object get_173_ChartStripLine_IsSegmented(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.IsSegmented;
-        }
-        private void set_173_ChartStripLine_IsSegmented(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.IsSegmented = (global::System.Boolean)Value;
-        }
-        private object get_174_ChartStripLine_RepeatEvery(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.RepeatEvery;
-        }
-        private void set_174_ChartStripLine_RepeatEvery(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.RepeatEvery = (global::System.Double)Value;
-        }
-        private object get_175_ChartStripLine_RepeatUntil(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.RepeatUntil;
-        }
-        private void set_175_ChartStripLine_RepeatUntil(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.RepeatUntil = (global::System.Double)Value;
-        }
-        private object get_176_ChartStripLine_Label(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.Label;
-        }
-        private void set_176_ChartStripLine_Label(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.Label = (global::System.Object)Value;
-        }
-        private object get_177_ChartStripLine_LabelTemplate(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.LabelTemplate;
-        }
-        private void set_177_ChartStripLine_LabelTemplate(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.LabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_178_ChartStripLine_Width(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.Width;
-        }
-        private void set_178_ChartStripLine_Width(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.Width = (global::System.Double)Value;
-        }
-        private object get_179_ChartStripLine_LabelAngle(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.LabelAngle;
-        }
-        private void set_179_ChartStripLine_LabelAngle(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.LabelAngle = (global::System.Double)Value;
-        }
-        private object get_180_ChartStripLine_IsPixelWidth(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.IsPixelWidth;
-        }
-        private void set_180_ChartStripLine_IsPixelWidth(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.IsPixelWidth = (global::System.Boolean)Value;
-        }
-        private object get_181_ChartStripLine_LabelHorizontalAlignment(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.LabelHorizontalAlignment;
-        }
-        private void set_181_ChartStripLine_LabelHorizontalAlignment(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.LabelHorizontalAlignment = (global::Windows.UI.Xaml.HorizontalAlignment)Value;
-        }
-        private object get_182_ChartStripLine_LabelVerticalAlignment(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            return that.LabelVerticalAlignment;
-        }
-        private void set_182_ChartStripLine_LabelVerticalAlignment(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
-            that.LabelVerticalAlignment = (global::Windows.UI.Xaml.VerticalAlignment)Value;
-        }
-        private object get_183_ChartAxisBase2D_EnableScrollBarResizing(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.EnableScrollBarResizing;
-        }
-        private void set_183_ChartAxisBase2D_EnableScrollBarResizing(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.EnableScrollBarResizing = (global::System.Boolean)Value;
-        }
-        private object get_184_ChartAxisBase2D_EnableScrollBar(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.EnableScrollBar;
-        }
-        private void set_184_ChartAxisBase2D_EnableScrollBar(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.EnableScrollBar = (global::System.Boolean)Value;
-        }
-        private object get_185_ChartAxisBase2D_DeferredScrolling(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.DeferredScrolling;
-        }
-        private void set_185_ChartAxisBase2D_DeferredScrolling(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.DeferredScrolling = (global::System.Boolean)Value;
-        }
-        private object get_186_ChartAxisBase2D_EnableTouchMode(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            return that.EnableTouchMode;
-        }
-        private void set_186_ChartAxisBase2D_EnableTouchMode(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
-            that.EnableTouchMode = (global::System.Boolean)Value;
-        }
-        private object get_187_NumericalAxis_RangePadding(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
-            return that.RangePadding;
-        }
-        private void set_187_NumericalAxis_RangePadding(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
-            that.RangePadding = (global::Syncfusion.UI.Xaml.Charts.NumericalPadding)Value;
-        }
-        private object get_188_NumericalAxis_Interval(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
-            return that.Interval;
-        }
-        private void set_188_NumericalAxis_Interval(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
-            that.Interval = (global::System.Object)Value;
-        }
-        private object get_189_NumericalAxis_Minimum(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
             return that.Minimum;
         }
-        private void set_189_NumericalAxis_Minimum(object instance, object Value)
+        private void set_165_DateTimeAxis_Minimum(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
             that.Minimum = (global::System.Object)Value;
         }
-        private object get_190_NumericalAxis_Maximum(object instance)
+        private object get_166_DateTimeAxis_Maximum(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
             return that.Maximum;
         }
-        private void set_190_NumericalAxis_Maximum(object instance, object Value)
+        private void set_166_DateTimeAxis_Maximum(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
             that.Maximum = (global::System.Object)Value;
         }
-        private object get_191_NumericalAxis_StartRangeFromZero(object instance)
+        private object get_167_DateTimeAxis_Interval(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
-            return that.StartRangeFromZero;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.Interval;
         }
-        private void set_191_NumericalAxis_StartRangeFromZero(object instance, object Value)
+        private void set_167_DateTimeAxis_Interval(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
-            that.StartRangeFromZero = (global::System.Boolean)Value;
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.Interval = (global::System.Double)Value;
         }
-        private object get_192_RangeAxisBase_SmallTicksPerInterval(object instance)
+        private object get_168_DateTimeAxis_RangePadding(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.RangePadding;
+        }
+        private void set_168_DateTimeAxis_RangePadding(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.RangePadding = (global::Syncfusion.UI.Xaml.Charts.DateTimeRangePadding)Value;
+        }
+        private object get_169_DateTimeAxis_IntervalType(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            return that.IntervalType;
+        }
+        private void set_169_DateTimeAxis_IntervalType(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.DateTimeAxis)instance;
+            that.IntervalType = (global::Syncfusion.UI.Xaml.Charts.DateTimeIntervalType)Value;
+        }
+        private object get_170_RangeAxisBase_SmallTicksPerInterval(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.SmallTicksPerInterval;
         }
-        private void set_192_RangeAxisBase_SmallTicksPerInterval(object instance, object Value)
+        private void set_170_RangeAxisBase_SmallTicksPerInterval(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.SmallTicksPerInterval = (global::System.Int32)Value;
         }
-        private object get_193_RangeAxisBase_SmallTickLineSize(object instance)
+        private object get_171_RangeAxisBase_SmallTickLineSize(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.SmallTickLineSize;
         }
-        private void set_193_RangeAxisBase_SmallTickLineSize(object instance, object Value)
+        private void set_171_RangeAxisBase_SmallTickLineSize(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.SmallTickLineSize = (global::System.Double)Value;
         }
-        private object get_194_RangeAxisBase_SmallTickLinesPosition(object instance)
+        private object get_172_RangeAxisBase_SmallTickLinesPosition(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.SmallTickLinesPosition;
         }
-        private void set_194_RangeAxisBase_SmallTickLinesPosition(object instance, object Value)
+        private void set_172_RangeAxisBase_SmallTickLinesPosition(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.SmallTickLinesPosition = (global::Syncfusion.UI.Xaml.Charts.AxisElementPosition)Value;
         }
-        private object get_195_XyDataSeries_YBindingPath(object instance)
+        private object get_173_ChartAxisBase2D_ZoomPosition(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.ZoomPosition;
+        }
+        private void set_173_ChartAxisBase2D_ZoomPosition(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.ZoomPosition = (global::System.Double)Value;
+        }
+        private object get_174_ChartAxisBase2D_ZoomFactor(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.ZoomFactor;
+        }
+        private void set_174_ChartAxisBase2D_ZoomFactor(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.ZoomFactor = (global::System.Double)Value;
+        }
+        private object get_175_ChartAxisBase2D_StripLines(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.StripLines;
+        }
+        private void set_175_ChartAxisBase2D_StripLines(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.StripLines = (global::Syncfusion.UI.Xaml.Charts.ChartStripLines)Value;
+        }
+        private object get_176_ChartStripLine_Start(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.Start;
+        }
+        private void set_176_ChartStripLine_Start(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.Start = (global::System.Double)Value;
+        }
+        private object get_177_ChartStripLine_Background(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.Background;
+        }
+        private void set_177_ChartStripLine_Background(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.Background = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_178_ChartStripLine_BorderBrush(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.BorderBrush;
+        }
+        private void set_178_ChartStripLine_BorderBrush(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.BorderBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_179_ChartStripLine_BorderThickness(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.BorderThickness;
+        }
+        private void set_179_ChartStripLine_BorderThickness(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.BorderThickness = (global::Windows.UI.Xaml.Thickness)Value;
+        }
+        private object get_180_ChartStripLine_SegmentStartValue(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.SegmentStartValue;
+        }
+        private void set_180_ChartStripLine_SegmentStartValue(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.SegmentStartValue = (global::System.Double)Value;
+        }
+        private object get_181_ChartStripLine_SegmentEndValue(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.SegmentEndValue;
+        }
+        private void set_181_ChartStripLine_SegmentEndValue(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.SegmentEndValue = (global::System.Double)Value;
+        }
+        private object get_182_ChartStripLine_SegmentAxisName(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.SegmentAxisName;
+        }
+        private void set_182_ChartStripLine_SegmentAxisName(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.SegmentAxisName = (global::System.String)Value;
+        }
+        private object get_183_ChartStripLine_IsSegmented(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.IsSegmented;
+        }
+        private void set_183_ChartStripLine_IsSegmented(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.IsSegmented = (global::System.Boolean)Value;
+        }
+        private object get_184_ChartStripLine_RepeatEvery(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.RepeatEvery;
+        }
+        private void set_184_ChartStripLine_RepeatEvery(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.RepeatEvery = (global::System.Double)Value;
+        }
+        private object get_185_ChartStripLine_RepeatUntil(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.RepeatUntil;
+        }
+        private void set_185_ChartStripLine_RepeatUntil(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.RepeatUntil = (global::System.Double)Value;
+        }
+        private object get_186_ChartStripLine_Label(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.Label;
+        }
+        private void set_186_ChartStripLine_Label(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.Label = (global::System.Object)Value;
+        }
+        private object get_187_ChartStripLine_LabelTemplate(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.LabelTemplate;
+        }
+        private void set_187_ChartStripLine_LabelTemplate(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.LabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_188_ChartStripLine_Width(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.Width;
+        }
+        private void set_188_ChartStripLine_Width(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.Width = (global::System.Double)Value;
+        }
+        private object get_189_ChartStripLine_LabelAngle(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.LabelAngle;
+        }
+        private void set_189_ChartStripLine_LabelAngle(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.LabelAngle = (global::System.Double)Value;
+        }
+        private object get_190_ChartStripLine_IsPixelWidth(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.IsPixelWidth;
+        }
+        private void set_190_ChartStripLine_IsPixelWidth(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.IsPixelWidth = (global::System.Boolean)Value;
+        }
+        private object get_191_ChartStripLine_LabelHorizontalAlignment(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.LabelHorizontalAlignment;
+        }
+        private void set_191_ChartStripLine_LabelHorizontalAlignment(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.LabelHorizontalAlignment = (global::Windows.UI.Xaml.HorizontalAlignment)Value;
+        }
+        private object get_192_ChartStripLine_LabelVerticalAlignment(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            return that.LabelVerticalAlignment;
+        }
+        private void set_192_ChartStripLine_LabelVerticalAlignment(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartStripLine)instance;
+            that.LabelVerticalAlignment = (global::Windows.UI.Xaml.VerticalAlignment)Value;
+        }
+        private object get_193_ChartAxisBase2D_EnableScrollBarResizing(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.EnableScrollBarResizing;
+        }
+        private void set_193_ChartAxisBase2D_EnableScrollBarResizing(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.EnableScrollBarResizing = (global::System.Boolean)Value;
+        }
+        private object get_194_ChartAxisBase2D_EnableScrollBar(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.EnableScrollBar;
+        }
+        private void set_194_ChartAxisBase2D_EnableScrollBar(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.EnableScrollBar = (global::System.Boolean)Value;
+        }
+        private object get_195_ChartAxisBase2D_DeferredScrolling(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.DeferredScrolling;
+        }
+        private void set_195_ChartAxisBase2D_DeferredScrolling(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.DeferredScrolling = (global::System.Boolean)Value;
+        }
+        private object get_196_ChartAxisBase2D_EnableTouchMode(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            return that.EnableTouchMode;
+        }
+        private void set_196_ChartAxisBase2D_EnableTouchMode(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)instance;
+            that.EnableTouchMode = (global::System.Boolean)Value;
+        }
+        private object get_197_NumericalAxis_Interval(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            return that.Interval;
+        }
+        private void set_197_NumericalAxis_Interval(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            that.Interval = (global::System.Object)Value;
+        }
+        private object get_198_NumericalAxis_Minimum(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            return that.Minimum;
+        }
+        private void set_198_NumericalAxis_Minimum(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            that.Minimum = (global::System.Object)Value;
+        }
+        private object get_199_NumericalAxis_Maximum(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            return that.Maximum;
+        }
+        private void set_199_NumericalAxis_Maximum(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            that.Maximum = (global::System.Object)Value;
+        }
+        private object get_200_NumericalAxis_RangePadding(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            return that.RangePadding;
+        }
+        private void set_200_NumericalAxis_RangePadding(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            that.RangePadding = (global::Syncfusion.UI.Xaml.Charts.NumericalPadding)Value;
+        }
+        private object get_201_NumericalAxis_StartRangeFromZero(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            return that.StartRangeFromZero;
+        }
+        private void set_201_NumericalAxis_StartRangeFromZero(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.NumericalAxis)instance;
+            that.StartRangeFromZero = (global::System.Boolean)Value;
+        }
+        private object get_202_XyDataSeries_YBindingPath(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XyDataSeries)instance;
             return that.YBindingPath;
         }
-        private void set_195_XyDataSeries_YBindingPath(object instance, object Value)
+        private void set_202_XyDataSeries_YBindingPath(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XyDataSeries)instance;
             that.YBindingPath = (global::System.String)Value;
         }
-        private object get_196_AdornmentSeries_AdornmentsInfo(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.AdornmentSeries)instance;
-            return that.AdornmentsInfo;
-        }
-        private void set_196_AdornmentSeries_AdornmentsInfo(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.AdornmentSeries)instance;
-            that.AdornmentsInfo = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo)Value;
-        }
-        private object get_197_LineSeries_CustomTemplate(object instance)
+        private object get_203_LineSeries_CustomTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.LineSeries)instance;
             return that.CustomTemplate;
         }
-        private void set_197_LineSeries_CustomTemplate(object instance, object Value)
+        private void set_203_LineSeries_CustomTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.LineSeries)instance;
             that.CustomTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_198_XySeriesDraggingBase_EnableSeriesDragging(object instance)
+        private object get_204_XySeriesDraggingBase_EnableSeriesDragging(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase)instance;
             return that.EnableSeriesDragging;
         }
-        private void set_198_XySeriesDraggingBase_EnableSeriesDragging(object instance, object Value)
+        private void set_204_XySeriesDraggingBase_EnableSeriesDragging(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase)instance;
             that.EnableSeriesDragging = (global::System.Boolean)Value;
         }
-        private object get_199_XySegmentDraggingBase_EnableDragTooltip(object instance)
+        private object get_205_XySegmentDraggingBase_EnableDragTooltip(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.EnableDragTooltip;
         }
-        private void set_199_XySegmentDraggingBase_EnableDragTooltip(object instance, object Value)
+        private void set_205_XySegmentDraggingBase_EnableDragTooltip(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.EnableDragTooltip = (global::System.Boolean)Value;
         }
-        private object get_200_XySegmentDraggingBase_DragTooltipTemplate(object instance)
+        private object get_206_XySegmentDraggingBase_DragTooltipTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.DragTooltipTemplate;
         }
-        private void set_200_XySegmentDraggingBase_DragTooltipTemplate(object instance, object Value)
+        private void set_206_XySegmentDraggingBase_DragTooltipTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.DragTooltipTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_201_XySegmentDraggingBase_RoundToDecimal(object instance)
+        private object get_207_XySegmentDraggingBase_RoundToDecimal(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.RoundToDecimal;
         }
-        private void set_201_XySegmentDraggingBase_RoundToDecimal(object instance, object Value)
+        private void set_207_XySegmentDraggingBase_RoundToDecimal(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.RoundToDecimal = (global::System.Int32)Value;
         }
-        private object get_202_XySegmentDraggingBase_SnapToPoint(object instance)
+        private object get_208_XySegmentDraggingBase_SnapToPoint(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.SnapToPoint;
         }
-        private void set_202_XySegmentDraggingBase_SnapToPoint(object instance, object Value)
+        private void set_208_XySegmentDraggingBase_SnapToPoint(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.SnapToPoint = (global::Syncfusion.UI.Xaml.Charts.SnapToPoint)Value;
         }
-        private object get_203_XySegmentDraggingBase_EnableSegmentDragging(object instance)
+        private object get_209_XySegmentDraggingBase_EnableSegmentDragging(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.EnableSegmentDragging;
         }
-        private void set_203_XySegmentDraggingBase_EnableSegmentDragging(object instance, object Value)
+        private void set_209_XySegmentDraggingBase_EnableSegmentDragging(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.EnableSegmentDragging = (global::System.Boolean)Value;
         }
-        private object get_204_XySegmentDraggingBase_UpdateSource(object instance)
+        private object get_210_XySegmentDraggingBase_UpdateSource(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.UpdateSource;
         }
-        private void set_204_XySegmentDraggingBase_UpdateSource(object instance, object Value)
+        private void set_210_XySegmentDraggingBase_UpdateSource(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.UpdateSource = (global::System.Boolean)Value;
         }
-        private object get_205_XySegmentDraggingBase_DragCancelKeyModifiers(object instance)
+        private object get_211_XySegmentDraggingBase_DragCancelKeyModifiers(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             return that.DragCancelKeyModifiers;
         }
-        private void set_205_XySegmentDraggingBase_DragCancelKeyModifiers(object instance, object Value)
+        private void set_211_XySegmentDraggingBase_DragCancelKeyModifiers(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase)instance;
             that.DragCancelKeyModifiers = (global::Windows.System.VirtualKeyModifiers)Value;
         }
-        private object get_206_CartesianSeries_Trendlines(object instance)
+        private object get_212_CartesianSeries_Trendlines(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             return that.Trendlines;
         }
-        private void set_206_CartesianSeries_Trendlines(object instance, object Value)
+        private void set_212_CartesianSeries_Trendlines(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             that.Trendlines = (global::Syncfusion.UI.Xaml.Charts.ChartTrendLineCollection)Value;
         }
-        private object get_207_TrendlineBase_Slope(object instance)
+        private object get_213_TrendlineBase_Slope(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.Slope;
         }
-        private object get_208_TrendlineBase_Intercept(object instance)
+        private object get_214_TrendlineBase_Intercept(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.Intercept;
         }
-        private object get_209_TrendlineBase_PolynomialSlopes(object instance)
+        private object get_215_TrendlineBase_PolynomialSlopes(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.PolynomialSlopes;
         }
-        private object get_210_TrendlineBase_IsTrendlineVisible(object instance)
+        private object get_216_TrendlineBase_IsTrendlineVisible(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.IsTrendlineVisible;
         }
-        private void set_210_TrendlineBase_IsTrendlineVisible(object instance, object Value)
+        private void set_216_TrendlineBase_IsTrendlineVisible(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.IsTrendlineVisible = (global::System.Boolean)Value;
         }
-        private object get_211_TrendlineBase_VisibilityOnLegend(object instance)
+        private object get_217_TrendlineBase_VisibilityOnLegend(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.VisibilityOnLegend;
         }
-        private void set_211_TrendlineBase_VisibilityOnLegend(object instance, object Value)
+        private void set_217_TrendlineBase_VisibilityOnLegend(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.VisibilityOnLegend = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_212_TrendlineBase_LegendIconTemplate(object instance)
+        private object get_218_TrendlineBase_LegendIconTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.LegendIconTemplate;
         }
-        private void set_212_TrendlineBase_LegendIconTemplate(object instance, object Value)
+        private void set_218_TrendlineBase_LegendIconTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.LegendIconTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_213_TrendlineBase_LegendIcon(object instance)
+        private object get_219_TrendlineBase_LegendIcon(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.LegendIcon;
         }
-        private void set_213_TrendlineBase_LegendIcon(object instance, object Value)
+        private void set_219_TrendlineBase_LegendIcon(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.LegendIcon = (global::Syncfusion.UI.Xaml.Charts.ChartLegendIcon)Value;
         }
-        private object get_214_TrendlineBase_Label(object instance)
+        private object get_220_TrendlineBase_Label(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.Label;
         }
-        private void set_214_TrendlineBase_Label(object instance, object Value)
+        private void set_220_TrendlineBase_Label(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.Label = (global::System.String)Value;
         }
-        private object get_215_TrendlineBase_Type(object instance)
+        private object get_221_TrendlineBase_Type(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.Type;
         }
-        private void set_215_TrendlineBase_Type(object instance, object Value)
+        private void set_221_TrendlineBase_Type(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.Type = (global::Syncfusion.UI.Xaml.Charts.TrendlineType)Value;
         }
-        private object get_216_TrendlineBase_Stroke(object instance)
+        private object get_222_TrendlineBase_Stroke(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.Stroke;
         }
-        private void set_216_TrendlineBase_Stroke(object instance, object Value)
+        private void set_222_TrendlineBase_Stroke(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.Stroke = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_217_TrendlineBase_StrokeThickness(object instance)
+        private object get_223_TrendlineBase_StrokeThickness(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.StrokeThickness;
         }
-        private void set_217_TrendlineBase_StrokeThickness(object instance, object Value)
+        private void set_223_TrendlineBase_StrokeThickness(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.StrokeThickness = (global::System.Double)Value;
         }
-        private object get_218_TrendlineBase_StrokeDashArray(object instance)
+        private object get_224_TrendlineBase_StrokeDashArray(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.StrokeDashArray;
         }
-        private void set_218_TrendlineBase_StrokeDashArray(object instance, object Value)
+        private void set_224_TrendlineBase_StrokeDashArray(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.StrokeDashArray = (global::Windows.UI.Xaml.Media.DoubleCollection)Value;
         }
-        private object get_219_TrendlineBase_ForwardForecast(object instance)
+        private object get_225_TrendlineBase_ForwardForecast(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.ForwardForecast;
         }
-        private void set_219_TrendlineBase_ForwardForecast(object instance, object Value)
+        private void set_225_TrendlineBase_ForwardForecast(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.ForwardForecast = (global::System.Double)Value;
         }
-        private object get_220_TrendlineBase_BackwardForecast(object instance)
+        private object get_226_TrendlineBase_BackwardForecast(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.BackwardForecast;
         }
-        private void set_220_TrendlineBase_BackwardForecast(object instance, object Value)
+        private void set_226_TrendlineBase_BackwardForecast(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.BackwardForecast = (global::System.Double)Value;
         }
-        private object get_221_TrendlineBase_PolynomialOrder(object instance)
+        private object get_227_TrendlineBase_PolynomialOrder(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             return that.PolynomialOrder;
         }
-        private void set_221_TrendlineBase_PolynomialOrder(object instance, object Value)
+        private void set_227_TrendlineBase_PolynomialOrder(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.TrendlineBase)instance;
             that.PolynomialOrder = (global::System.Int32)Value;
         }
-        private object get_222_CartesianSeries_XRange(object instance)
+        private object get_228_CartesianSeries_XRange(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             return that.XRange;
         }
-        private object get_223_CartesianSeries_YRange(object instance)
+        private object get_229_CartesianSeries_YRange(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             return that.YRange;
         }
-        private object get_224_CartesianSeries_XAxis(object instance)
+        private object get_230_CartesianSeries_XAxis(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             return that.XAxis;
         }
-        private void set_224_CartesianSeries_XAxis(object instance, object Value)
+        private void set_230_CartesianSeries_XAxis(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             that.XAxis = (global::Syncfusion.UI.Xaml.Charts.ChartAxisBase2D)Value;
         }
-        private object get_225_CartesianSeries_YAxis(object instance)
+        private object get_231_CartesianSeries_YAxis(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             return that.YAxis;
         }
-        private void set_225_CartesianSeries_YAxis(object instance, object Value)
+        private void set_231_CartesianSeries_YAxis(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             that.YAxis = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)Value;
         }
-        private object get_226_CartesianSeries_IsTransposed(object instance)
+        private object get_232_CartesianSeries_IsTransposed(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             return that.IsTransposed;
         }
-        private void set_226_CartesianSeries_IsTransposed(object instance, object Value)
+        private void set_232_CartesianSeries_IsTransposed(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             that.IsTransposed = (global::System.Boolean)Value;
         }
-        private object get_227_ChartAdornmentInfoBase_Symbol(object instance)
+        private object get_233_AdornmentSeries_AdornmentsInfo(object instance)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.Symbol;
+            var that = (global::Syncfusion.UI.Xaml.Charts.AdornmentSeries)instance;
+            return that.AdornmentsInfo;
         }
-        private void set_227_ChartAdornmentInfoBase_Symbol(object instance, object Value)
+        private void set_233_AdornmentSeries_AdornmentsInfo(object instance, object Value)
         {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.Symbol = (global::Syncfusion.UI.Xaml.Charts.ChartSymbol)Value;
+            var that = (global::Syncfusion.UI.Xaml.Charts.AdornmentSeries)instance;
+            that.AdornmentsInfo = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo)Value;
         }
-        private object get_228_ChartAdornmentInfoBase_ShowLabel(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.ShowLabel;
-        }
-        private void set_228_ChartAdornmentInfoBase_ShowLabel(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.ShowLabel = (global::System.Boolean)Value;
-        }
-        private object get_229_ChartAdornmentInfoBase_UseSeriesPalette(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.UseSeriesPalette;
-        }
-        private void set_229_ChartAdornmentInfoBase_UseSeriesPalette(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.UseSeriesPalette = (global::System.Boolean)Value;
-        }
-        private object get_230_ChartAdornmentInfoBase_HorizontalAlignment(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.HorizontalAlignment;
-        }
-        private void set_230_ChartAdornmentInfoBase_HorizontalAlignment(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.HorizontalAlignment = (global::Windows.UI.Xaml.HorizontalAlignment)Value;
-        }
-        private object get_231_ChartAdornmentInfoBase_VerticalAlignment(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.VerticalAlignment;
-        }
-        private void set_231_ChartAdornmentInfoBase_VerticalAlignment(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.VerticalAlignment = (global::Windows.UI.Xaml.VerticalAlignment)Value;
-        }
-        private object get_232_ChartAdornmentInfoBase_ConnectorHeight(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.ConnectorHeight;
-        }
-        private void set_232_ChartAdornmentInfoBase_ConnectorHeight(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.ConnectorHeight = (global::System.Double)Value;
-        }
-        private object get_233_ChartAdornmentInfoBase_ConnectorRotationAngle(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.ConnectorRotationAngle;
-        }
-        private void set_233_ChartAdornmentInfoBase_ConnectorRotationAngle(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.ConnectorRotationAngle = (global::System.Double)Value;
-        }
-        private object get_234_ChartAdornmentInfoBase_ConnectorLineStyle(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.ConnectorLineStyle;
-        }
-        private void set_234_ChartAdornmentInfoBase_ConnectorLineStyle(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.ConnectorLineStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_235_ChartAdornmentInfoBase_ShowConnectorLine(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.ShowConnectorLine;
-        }
-        private void set_235_ChartAdornmentInfoBase_ShowConnectorLine(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.ShowConnectorLine = (global::System.Boolean)Value;
-        }
-        private object get_236_ChartAdornmentInfoBase_LabelTemplate(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.LabelTemplate;
-        }
-        private void set_236_ChartAdornmentInfoBase_LabelTemplate(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.LabelTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_237_ChartAdornmentInfoBase_SymbolWidth(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SymbolWidth;
-        }
-        private void set_237_ChartAdornmentInfoBase_SymbolWidth(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SymbolWidth = (global::System.Double)Value;
-        }
-        private object get_238_ChartAdornmentInfoBase_SymbolHeight(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SymbolHeight;
-        }
-        private void set_238_ChartAdornmentInfoBase_SymbolHeight(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SymbolHeight = (global::System.Double)Value;
-        }
-        private object get_239_ChartAdornmentInfoBase_SymbolTemplate(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SymbolTemplate;
-        }
-        private void set_239_ChartAdornmentInfoBase_SymbolTemplate(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SymbolTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_240_ChartAdornmentInfoBase_SymbolInterior(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SymbolInterior;
-        }
-        private void set_240_ChartAdornmentInfoBase_SymbolInterior(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SymbolInterior = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_241_ChartAdornmentInfoBase_SymbolStroke(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SymbolStroke;
-        }
-        private void set_241_ChartAdornmentInfoBase_SymbolStroke(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SymbolStroke = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_242_ChartAdornmentInfoBase_FontFamily(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.FontFamily;
-        }
-        private void set_242_ChartAdornmentInfoBase_FontFamily(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.FontFamily = (global::Windows.UI.Xaml.Media.FontFamily)Value;
-        }
-        private object get_243_ChartAdornmentInfoBase_Series(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.Series;
-        }
-        private object get_244_ChartAdornmentInfoBase_AdornmentsPosition(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.AdornmentsPosition;
-        }
-        private void set_244_ChartAdornmentInfoBase_AdornmentsPosition(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.AdornmentsPosition = (global::Syncfusion.UI.Xaml.Charts.AdornmentsPosition)Value;
-        }
-        private object get_245_ChartAdornmentInfoBase_SegmentLabelContent(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SegmentLabelContent;
-        }
-        private void set_245_ChartAdornmentInfoBase_SegmentLabelContent(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SegmentLabelContent = (global::Syncfusion.UI.Xaml.Charts.LabelContent)Value;
-        }
-        private object get_246_ChartAdornmentInfoBase_SegmentLabelFormat(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.SegmentLabelFormat;
-        }
-        private void set_246_ChartAdornmentInfoBase_SegmentLabelFormat(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.SegmentLabelFormat = (global::System.String)Value;
-        }
-        private object get_247_ChartAdornmentInfoBase_ShowMarker(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            return that.ShowMarker;
-        }
-        private void set_247_ChartAdornmentInfoBase_ShowMarker(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase)instance;
-            that.ShowMarker = (global::System.Boolean)Value;
-        }
-        private object get_248_Collection_Count(object instance)
+        private object get_234_Collection_Count(object instance)
         {
             var that = (global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.ResourceDictionary>)instance;
             return that.Count;
         }
-        private object get_249_DataPointSeries_IndependentValuePath(object instance)
+        private object get_235_DataPointSeries_IndependentValuePath(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.IndependentValuePath;
         }
-        private void set_249_DataPointSeries_IndependentValuePath(object instance, object Value)
+        private void set_235_DataPointSeries_IndependentValuePath(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.IndependentValuePath = (global::System.String)Value;
         }
-        private object get_250_DataPointSeries_DependentValuePath(object instance)
+        private object get_236_DataPointSeries_DependentValuePath(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.DependentValuePath;
         }
-        private void set_250_DataPointSeries_DependentValuePath(object instance, object Value)
+        private void set_236_DataPointSeries_DependentValuePath(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.DependentValuePath = (global::System.String)Value;
         }
-        private object get_251_DataPointSeries_IsSelectionEnabled(object instance)
+        private object get_237_DataPointSeries_IsSelectionEnabled(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.IsSelectionEnabled;
         }
-        private void set_251_DataPointSeries_IsSelectionEnabled(object instance, object Value)
+        private void set_237_DataPointSeries_IsSelectionEnabled(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.IsSelectionEnabled = (global::System.Boolean)Value;
         }
-        private object get_252_LineSeries_Points(object instance)
+        private object get_238_LineSeries_Points(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
             return that.Points;
         }
-        private object get_253_LineSeries_PolylineStyle(object instance)
+        private object get_239_LineSeries_PolylineStyle(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
             return that.PolylineStyle;
         }
-        private void set_253_LineSeries_PolylineStyle(object instance, object Value)
+        private void set_239_LineSeries_PolylineStyle(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries)instance;
             that.PolylineStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_254_LineAreaBaseSeries_DependentRangeAxis(object instance)
+        private object get_240_LineAreaBaseSeries_DependentRangeAxis(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
             return that.DependentRangeAxis;
         }
-        private void set_254_LineAreaBaseSeries_DependentRangeAxis(object instance, object Value)
+        private void set_240_LineAreaBaseSeries_DependentRangeAxis(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
             that.DependentRangeAxis = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis)Value;
         }
-        private object get_255_LineAreaBaseSeries_IndependentAxis(object instance)
+        private object get_241_LineAreaBaseSeries_IndependentAxis(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
             return that.IndependentAxis;
         }
-        private void set_255_LineAreaBaseSeries_IndependentAxis(object instance, object Value)
+        private void set_241_LineAreaBaseSeries_IndependentAxis(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
             that.IndependentAxis = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis)Value;
         }
-        private object get_256_LineAreaBaseSeries_ActualIndependentAxis(object instance)
+        private object get_242_LineAreaBaseSeries_ActualIndependentAxis(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
             return that.ActualIndependentAxis;
         }
-        private object get_257_LineAreaBaseSeries_ActualDependentRangeAxis(object instance)
+        private object get_243_LineAreaBaseSeries_ActualDependentRangeAxis(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries<global::WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>)instance;
             return that.ActualDependentRangeAxis;
         }
-        private object get_258_DataPointSingleSeriesWithAxes_GlobalSeriesIndex(object instance)
+        private object get_244_DataPointSingleSeriesWithAxes_GlobalSeriesIndex(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes)instance;
             return that.GlobalSeriesIndex;
         }
-        private object get_259_DataPointSeries_DependentValueBinding(object instance)
+        private object get_245_DataPointSeries_DependentValueBinding(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.DependentValueBinding;
         }
-        private void set_259_DataPointSeries_DependentValueBinding(object instance, object Value)
+        private void set_245_DataPointSeries_DependentValueBinding(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.DependentValueBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
         }
-        private object get_260_DataPointSeries_IndependentValueBinding(object instance)
+        private object get_246_DataPointSeries_IndependentValueBinding(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.IndependentValueBinding;
         }
-        private void set_260_DataPointSeries_IndependentValueBinding(object instance, object Value)
+        private void set_246_DataPointSeries_IndependentValueBinding(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.IndependentValueBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
         }
-        private object get_261_DataPointSeries_ItemsSource(object instance)
+        private object get_247_DataPointSeries_ItemsSource(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.ItemsSource;
         }
-        private void set_261_DataPointSeries_ItemsSource(object instance, object Value)
+        private void set_247_DataPointSeries_ItemsSource(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.ItemsSource = (global::System.Collections.IEnumerable)Value;
         }
-        private object get_262_DataPointSeries_AnimationSequence(object instance)
+        private object get_248_DataPointSeries_AnimationSequence(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.AnimationSequence;
         }
-        private void set_262_DataPointSeries_AnimationSequence(object instance, object Value)
+        private void set_248_DataPointSeries_AnimationSequence(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.AnimationSequence = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence)Value;
         }
-        private object get_263_DataPointSeries_TransitionEasingFunction(object instance)
+        private object get_249_DataPointSeries_TransitionEasingFunction(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.TransitionEasingFunction;
         }
-        private void set_263_DataPointSeries_TransitionEasingFunction(object instance, object Value)
+        private void set_249_DataPointSeries_TransitionEasingFunction(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.TransitionEasingFunction = (global::Windows.UI.Xaml.Media.Animation.EasingFunctionBase)Value;
         }
-        private object get_264_DataPointSeries_SelectedItem(object instance)
+        private object get_250_DataPointSeries_SelectedItem(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.SelectedItem;
         }
-        private void set_264_DataPointSeries_SelectedItem(object instance, object Value)
+        private void set_250_DataPointSeries_SelectedItem(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.SelectedItem = (global::System.Object)Value;
         }
-        private object get_265_DataPointSeries_DataPointStyle(object instance)
+        private object get_251_DataPointSeries_DataPointStyle(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.DataPointStyle;
         }
-        private void set_265_DataPointSeries_DataPointStyle(object instance, object Value)
+        private void set_251_DataPointSeries_DataPointStyle(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.DataPointStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_266_DataPointSeries_LegendItemStyle(object instance)
+        private object get_252_DataPointSeries_LegendItemStyle(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.LegendItemStyle;
         }
-        private void set_266_DataPointSeries_LegendItemStyle(object instance, object Value)
+        private void set_252_DataPointSeries_LegendItemStyle(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.LegendItemStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_267_DataPointSeries_TransitionDuration(object instance)
+        private object get_253_DataPointSeries_TransitionDuration(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             return that.TransitionDuration;
         }
-        private void set_267_DataPointSeries_TransitionDuration(object instance, object Value)
+        private void set_253_DataPointSeries_TransitionDuration(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries)instance;
             that.TransitionDuration = (global::System.TimeSpan)Value;
         }
-        private object get_268_Series_SeriesHost(object instance)
+        private object get_254_Series_SeriesHost(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
             return that.SeriesHost;
         }
-        private void set_268_Series_SeriesHost(object instance, object Value)
+        private void set_254_Series_SeriesHost(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
             that.SeriesHost = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost)Value;
         }
-        private object get_269_Series_LegendItems(object instance)
+        private object get_255_Series_LegendItems(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
             return that.LegendItems;
         }
-        private object get_270_Series_Title(object instance)
+        private object get_256_Series_Title(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
             return that.Title;
         }
-        private void set_270_Series_Title(object instance, object Value)
+        private void set_256_Series_Title(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.DataVisualization.Charting.Series)instance;
             that.Title = (global::System.Object)Value;
         }
-        private object get_271_MainPage_DefaultViewModel(object instance)
+        private object get_257_MainPage_DefaultViewModel(object instance)
         {
             var that = (global::Electroencephalograph.MainPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_272_MainPage_NavigationHelper(object instance)
+        private object get_258_MainPage_NavigationHelper(object instance)
         {
             var that = (global::Electroencephalograph.MainPage)instance;
             return that.NavigationHelper;
@@ -4997,642 +4837,642 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlMember.Getter = get_60_ChartSeriesBase_Spacing;
                 xamlMember.Setter = set_60_ChartSeriesBase_Spacing;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.ChartBase.Header":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Header", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_ChartBase_Header;
-                xamlMember.Setter = set_61_ChartBase_Header;
-                break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.PrimaryAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PrimaryAxis", "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_SfChart_PrimaryAxis;
-                xamlMember.Setter = set_62_SfChart_PrimaryAxis;
+                xamlMember.Getter = get_61_SfChart_PrimaryAxis;
+                xamlMember.Setter = set_61_SfChart_PrimaryAxis;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.SecondaryAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SecondaryAxis", "Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_SfChart_SecondaryAxis;
-                xamlMember.Setter = set_63_SfChart_SecondaryAxis;
+                xamlMember.Getter = get_62_SfChart_SecondaryAxis;
+                xamlMember.Setter = set_62_SfChart_SecondaryAxis;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.Watermark":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Watermark", "Syncfusion.UI.Xaml.Charts.Watermark");
-                xamlMember.Getter = get_64_SfChart_Watermark;
-                xamlMember.Setter = set_64_SfChart_Watermark;
+                xamlMember.Getter = get_63_SfChart_Watermark;
+                xamlMember.Setter = set_63_SfChart_Watermark;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.AreaBorderBrush":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AreaBorderBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_SfChart_AreaBorderBrush;
-                xamlMember.Setter = set_65_SfChart_AreaBorderBrush;
+                xamlMember.Getter = get_64_SfChart_AreaBorderBrush;
+                xamlMember.Setter = set_64_SfChart_AreaBorderBrush;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.AreaBorderThickness":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AreaBorderThickness", "Windows.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_SfChart_AreaBorderThickness;
-                xamlMember.Setter = set_66_SfChart_AreaBorderThickness;
+                xamlMember.Getter = get_65_SfChart_AreaBorderThickness;
+                xamlMember.Setter = set_65_SfChart_AreaBorderThickness;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.AreaBackground":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AreaBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_SfChart_AreaBackground;
-                xamlMember.Setter = set_67_SfChart_AreaBackground;
+                xamlMember.Getter = get_66_SfChart_AreaBackground;
+                xamlMember.Setter = set_66_SfChart_AreaBackground;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.Behaviors":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Behaviors", "Syncfusion.UI.Xaml.Charts.ChartBehaviorsCollection");
-                xamlMember.Getter = get_68_SfChart_Behaviors;
-                xamlMember.Setter = set_68_SfChart_Behaviors;
+                xamlMember.Getter = get_67_SfChart_Behaviors;
+                xamlMember.Setter = set_67_SfChart_Behaviors;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBehavior.AdorningCanvas":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBehavior");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AdorningCanvas", "Windows.UI.Xaml.Controls.Canvas");
-                xamlMember.Getter = get_69_ChartBehavior_AdorningCanvas;
+                xamlMember.Getter = get_68_ChartBehavior_AdorningCanvas;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBehavior.BottomAdorningCanvas":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBehavior");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BottomAdorningCanvas", "Windows.UI.Xaml.Controls.Canvas");
-                xamlMember.Getter = get_70_ChartBehavior_BottomAdorningCanvas;
+                xamlMember.Getter = get_69_ChartBehavior_BottomAdorningCanvas;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBehavior.ChartArea":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBehavior");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ChartArea", "Syncfusion.UI.Xaml.Charts.SfChart");
-                xamlMember.Getter = get_71_ChartBehavior_ChartArea;
+                xamlMember.Getter = get_70_ChartBehavior_ChartArea;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.TechnicalIndicators":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TechnicalIndicators", "System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartSeries>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_SfChart_TechnicalIndicators;
-                xamlMember.Setter = set_72_SfChart_TechnicalIndicators;
+                xamlMember.Getter = get_71_SfChart_TechnicalIndicators;
+                xamlMember.Setter = set_71_SfChart_TechnicalIndicators;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfChart.Annotations":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfChart");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Annotations", "Syncfusion.UI.Xaml.Charts.AnnotationCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_SfChart_Annotations;
-                xamlMember.Setter = set_73_SfChart_Annotations;
+                xamlMember.Getter = get_72_SfChart_Annotations;
+                xamlMember.Setter = set_72_SfChart_Annotations;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.Text":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Text", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_Annotation_Text;
-                xamlMember.Setter = set_74_Annotation_Text;
+                xamlMember.Getter = get_73_Annotation_Text;
+                xamlMember.Setter = set_73_Annotation_Text;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.ContentTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_Annotation_ContentTemplate;
-                xamlMember.Setter = set_75_Annotation_ContentTemplate;
+                xamlMember.Getter = get_74_Annotation_ContentTemplate;
+                xamlMember.Setter = set_74_Annotation_ContentTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.ShowToolTip":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowToolTip", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_Annotation_ShowToolTip;
-                xamlMember.Setter = set_76_Annotation_ShowToolTip;
+                xamlMember.Getter = get_75_Annotation_ShowToolTip;
+                xamlMember.Setter = set_75_Annotation_ShowToolTip;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.ToolTipContent":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ToolTipContent", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_Annotation_ToolTipContent;
-                xamlMember.Setter = set_77_Annotation_ToolTipContent;
+                xamlMember.Getter = get_76_Annotation_ToolTipContent;
+                xamlMember.Setter = set_76_Annotation_ToolTipContent;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.ToolTipShowDuration":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ToolTipShowDuration", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_78_Annotation_ToolTipShowDuration;
-                xamlMember.Setter = set_78_Annotation_ToolTipShowDuration;
+                xamlMember.Getter = get_77_Annotation_ToolTipShowDuration;
+                xamlMember.Setter = set_77_Annotation_ToolTipShowDuration;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.ToolTipTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ToolTipTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_79_Annotation_ToolTipTemplate;
-                xamlMember.Setter = set_79_Annotation_ToolTipTemplate;
+                xamlMember.Getter = get_78_Annotation_ToolTipTemplate;
+                xamlMember.Setter = set_78_Annotation_ToolTipTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.ToolTipPlacement":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ToolTipPlacement", "Syncfusion.UI.Xaml.Charts.ToolTipLabelPlacement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_80_Annotation_ToolTipPlacement;
-                xamlMember.Setter = set_80_Annotation_ToolTipPlacement;
+                xamlMember.Getter = get_79_Annotation_ToolTipPlacement;
+                xamlMember.Setter = set_79_Annotation_ToolTipPlacement;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.CoordinateUnit":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "CoordinateUnit", "Syncfusion.UI.Xaml.Charts.CoordinateUnit");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_81_Annotation_CoordinateUnit;
-                xamlMember.Setter = set_81_Annotation_CoordinateUnit;
+                xamlMember.Getter = get_80_Annotation_CoordinateUnit;
+                xamlMember.Setter = set_80_Annotation_CoordinateUnit;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.XAxisName":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XAxisName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_82_Annotation_XAxisName;
-                xamlMember.Setter = set_82_Annotation_XAxisName;
+                xamlMember.Getter = get_81_Annotation_XAxisName;
+                xamlMember.Setter = set_81_Annotation_XAxisName;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.YAxisName":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YAxisName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_83_Annotation_YAxisName;
-                xamlMember.Setter = set_83_Annotation_YAxisName;
+                xamlMember.Getter = get_82_Annotation_YAxisName;
+                xamlMember.Setter = set_82_Annotation_YAxisName;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.X1":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "X1", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_84_Annotation_X1;
-                xamlMember.Setter = set_84_Annotation_X1;
+                xamlMember.Getter = get_83_Annotation_X1;
+                xamlMember.Setter = set_83_Annotation_X1;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.Y1":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Y1", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_85_Annotation_Y1;
-                xamlMember.Setter = set_85_Annotation_Y1;
+                xamlMember.Getter = get_84_Annotation_Y1;
+                xamlMember.Setter = set_84_Annotation_Y1;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.FontSize":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_86_Annotation_FontSize;
-                xamlMember.Setter = set_86_Annotation_FontSize;
+                xamlMember.Getter = get_85_Annotation_FontSize;
+                xamlMember.Setter = set_85_Annotation_FontSize;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.FontFamily":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "FontFamily", "Windows.UI.Xaml.Media.FontFamily");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_87_Annotation_FontFamily;
-                xamlMember.Setter = set_87_Annotation_FontFamily;
+                xamlMember.Getter = get_86_Annotation_FontFamily;
+                xamlMember.Setter = set_86_Annotation_FontFamily;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.FontStretch":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_88_Annotation_FontStretch;
-                xamlMember.Setter = set_88_Annotation_FontStretch;
+                xamlMember.Getter = get_87_Annotation_FontStretch;
+                xamlMember.Setter = set_87_Annotation_FontStretch;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.FontStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_89_Annotation_FontStyle;
-                xamlMember.Setter = set_89_Annotation_FontStyle;
+                xamlMember.Getter = get_88_Annotation_FontStyle;
+                xamlMember.Setter = set_88_Annotation_FontStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.FontWeight":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_90_Annotation_FontWeight;
-                xamlMember.Setter = set_90_Annotation_FontWeight;
+                xamlMember.Getter = get_89_Annotation_FontWeight;
+                xamlMember.Setter = set_89_Annotation_FontWeight;
                 break;
             case "Syncfusion.UI.Xaml.Charts.Annotation.Foreground":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.Annotation");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Foreground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_91_Annotation_Foreground;
-                xamlMember.Setter = set_91_Annotation_Foreground;
+                xamlMember.Getter = get_90_Annotation_Foreground;
+                xamlMember.Setter = set_90_Annotation_Foreground;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.AxisThickness":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AxisThickness", "Windows.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_92_ChartBase_AxisThickness;
+                xamlMember.Getter = get_91_ChartBase_AxisThickness;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.SeriesClipRect":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SeriesClipRect", "Windows.Foundation.Rect");
-                xamlMember.Getter = get_93_ChartBase_SeriesClipRect;
+                xamlMember.Getter = get_92_ChartBase_SeriesClipRect;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.VisibleSeries":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "VisibleSeries", "Syncfusion.UI.Xaml.Charts.ChartVisibleSeriesCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_94_ChartBase_VisibleSeries;
+                xamlMember.Getter = get_93_ChartBase_VisibleSeries;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.Palette":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Palette", "Syncfusion.UI.Xaml.Charts.ChartColorPalette");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_95_ChartBase_Palette;
-                xamlMember.Setter = set_95_ChartBase_Palette;
+                xamlMember.Getter = get_94_ChartBase_Palette;
+                xamlMember.Setter = set_94_ChartBase_Palette;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.ColumnDefinitions":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ColumnDefinitions", "Syncfusion.UI.Xaml.Charts.ChartColumnDefinitions");
-                xamlMember.Getter = get_96_ChartBase_ColumnDefinitions;
-                xamlMember.Setter = set_96_ChartBase_ColumnDefinitions;
+                xamlMember.Getter = get_95_ChartBase_ColumnDefinitions;
+                xamlMember.Setter = set_95_ChartBase_ColumnDefinitions;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartColumnDefinition.Width":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartColumnDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Width", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_97_ChartColumnDefinition_Width;
-                xamlMember.Setter = set_97_ChartColumnDefinition_Width;
+                xamlMember.Getter = get_96_ChartColumnDefinition_Width;
+                xamlMember.Setter = set_96_ChartColumnDefinition_Width;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartColumnDefinition.Unit":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartColumnDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Unit", "Syncfusion.UI.Xaml.Charts.ChartUnitType");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_98_ChartColumnDefinition_Unit;
-                xamlMember.Setter = set_98_ChartColumnDefinition_Unit;
+                xamlMember.Getter = get_97_ChartColumnDefinition_Unit;
+                xamlMember.Setter = set_97_ChartColumnDefinition_Unit;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartColumnDefinition.BorderThickness":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartColumnDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderThickness", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_99_ChartColumnDefinition_BorderThickness;
-                xamlMember.Setter = set_99_ChartColumnDefinition_BorderThickness;
+                xamlMember.Getter = get_98_ChartColumnDefinition_BorderThickness;
+                xamlMember.Setter = set_98_ChartColumnDefinition_BorderThickness;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartColumnDefinition.BorderStroke":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartColumnDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderStroke", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_100_ChartColumnDefinition_BorderStroke;
-                xamlMember.Setter = set_100_ChartColumnDefinition_BorderStroke;
+                xamlMember.Getter = get_99_ChartColumnDefinition_BorderStroke;
+                xamlMember.Setter = set_99_ChartColumnDefinition_BorderStroke;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.RowDefinitions":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RowDefinitions", "Syncfusion.UI.Xaml.Charts.ChartRowDefinitions");
-                xamlMember.Getter = get_101_ChartBase_RowDefinitions;
-                xamlMember.Setter = set_101_ChartBase_RowDefinitions;
+                xamlMember.Getter = get_100_ChartBase_RowDefinitions;
+                xamlMember.Setter = set_100_ChartBase_RowDefinitions;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartRowDefinition.RowTop":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartRowDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RowTop", "Double");
-                xamlMember.Getter = get_102_ChartRowDefinition_RowTop;
+                xamlMember.Getter = get_101_ChartRowDefinition_RowTop;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartRowDefinition.Height":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartRowDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Height", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_103_ChartRowDefinition_Height;
-                xamlMember.Setter = set_103_ChartRowDefinition_Height;
+                xamlMember.Getter = get_102_ChartRowDefinition_Height;
+                xamlMember.Setter = set_102_ChartRowDefinition_Height;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartRowDefinition.Unit":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartRowDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Unit", "Syncfusion.UI.Xaml.Charts.ChartUnitType");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_104_ChartRowDefinition_Unit;
-                xamlMember.Setter = set_104_ChartRowDefinition_Unit;
+                xamlMember.Getter = get_103_ChartRowDefinition_Unit;
+                xamlMember.Setter = set_103_ChartRowDefinition_Unit;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartRowDefinition.BorderThickness":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartRowDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderThickness", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_105_ChartRowDefinition_BorderThickness;
-                xamlMember.Setter = set_105_ChartRowDefinition_BorderThickness;
+                xamlMember.Getter = get_104_ChartRowDefinition_BorderThickness;
+                xamlMember.Setter = set_104_ChartRowDefinition_BorderThickness;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartRowDefinition.BorderStroke":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartRowDefinition");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderStroke", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_106_ChartRowDefinition_BorderStroke;
-                xamlMember.Setter = set_106_ChartRowDefinition_BorderStroke;
+                xamlMember.Getter = get_105_ChartRowDefinition_BorderStroke;
+                xamlMember.Setter = set_105_ChartRowDefinition_BorderStroke;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.Axes":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Axes", "Syncfusion.UI.Xaml.Charts.ChartAxisCollection");
-                xamlMember.Getter = get_107_ChartBase_Axes;
+                xamlMember.Getter = get_106_ChartBase_Axes;
                 xamlMember.SetIsReadOnly();
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxis.Header":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Header", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_108_ChartAxis_Header;
-                xamlMember.Setter = set_108_ChartAxis_Header;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ActualPlotOffset":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ActualPlotOffset", "Double");
-                xamlMember.Getter = get_109_ChartAxis_ActualPlotOffset;
+                xamlMember.Getter = get_107_ChartAxis_ActualPlotOffset;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MaximumLabels":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MaximumLabels", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_110_ChartAxis_MaximumLabels;
-                xamlMember.Setter = set_110_ChartAxis_MaximumLabels;
+                xamlMember.Getter = get_108_ChartAxis_MaximumLabels;
+                xamlMember.Setter = set_108_ChartAxis_MaximumLabels;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.VisibleRange":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "VisibleRange", "Syncfusion.UI.Xaml.Charts.DoubleRange");
-                xamlMember.Getter = get_111_ChartAxis_VisibleRange;
+                xamlMember.Getter = get_109_ChartAxis_VisibleRange;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ArrangeRect":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ArrangeRect", "Windows.Foundation.Rect");
-                xamlMember.Getter = get_112_ChartAxis_ArrangeRect;
+                xamlMember.Getter = get_110_ChartAxis_ArrangeRect;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.PositionPath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PositionPath", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_113_ChartAxis_PositionPath;
-                xamlMember.Setter = set_113_ChartAxis_PositionPath;
+                xamlMember.Getter = get_111_ChartAxis_PositionPath;
+                xamlMember.Setter = set_111_ChartAxis_PositionPath;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ContentPath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ContentPath", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_114_ChartAxis_ContentPath;
-                xamlMember.Setter = set_114_ChartAxis_ContentPath;
+                xamlMember.Getter = get_112_ChartAxis_ContentPath;
+                xamlMember.Setter = set_112_ChartAxis_ContentPath;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelFormat":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelFormat", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_115_ChartAxis_LabelFormat;
-                xamlMember.Setter = set_115_ChartAxis_LabelFormat;
+                xamlMember.Getter = get_113_ChartAxis_LabelFormat;
+                xamlMember.Setter = set_113_ChartAxis_LabelFormat;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelsSource":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_116_ChartAxis_LabelsSource;
-                xamlMember.Setter = set_116_ChartAxis_LabelsSource;
+                xamlMember.Getter = get_114_ChartAxis_LabelsSource;
+                xamlMember.Setter = set_114_ChartAxis_LabelsSource;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.PostfixLabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PostfixLabelTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_117_ChartAxis_PostfixLabelTemplate;
-                xamlMember.Setter = set_117_ChartAxis_PostfixLabelTemplate;
+                xamlMember.Getter = get_115_ChartAxis_PostfixLabelTemplate;
+                xamlMember.Setter = set_115_ChartAxis_PostfixLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.PrefixLabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PrefixLabelTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_118_ChartAxis_PrefixLabelTemplate;
-                xamlMember.Setter = set_118_ChartAxis_PrefixLabelTemplate;
+                xamlMember.Getter = get_116_ChartAxis_PrefixLabelTemplate;
+                xamlMember.Setter = set_116_ChartAxis_PrefixLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.PlotOffset":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PlotOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_119_ChartAxis_PlotOffset;
-                xamlMember.Setter = set_119_ChartAxis_PlotOffset;
+                xamlMember.Getter = get_117_ChartAxis_PlotOffset;
+                xamlMember.Setter = set_117_ChartAxis_PlotOffset;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.AxisLineOffset":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AxisLineOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_120_ChartAxis_AxisLineOffset;
-                xamlMember.Setter = set_120_ChartAxis_AxisLineOffset;
+                xamlMember.Getter = get_118_ChartAxis_AxisLineOffset;
+                xamlMember.Setter = set_118_ChartAxis_AxisLineOffset;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelsPosition":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelsPosition", "Syncfusion.UI.Xaml.Charts.AxisElementPosition");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_121_ChartAxis_LabelsPosition;
-                xamlMember.Setter = set_121_ChartAxis_LabelsPosition;
+                xamlMember.Getter = get_119_ChartAxis_LabelsPosition;
+                xamlMember.Setter = set_119_ChartAxis_LabelsPosition;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelsIntersectAction":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelsIntersectAction", "Syncfusion.UI.Xaml.Charts.AxisLabelsIntersectAction");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_122_ChartAxis_LabelsIntersectAction;
-                xamlMember.Setter = set_122_ChartAxis_LabelsIntersectAction;
+                xamlMember.Getter = get_120_ChartAxis_LabelsIntersectAction;
+                xamlMember.Setter = set_120_ChartAxis_LabelsIntersectAction;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelExtent":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelExtent", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_123_ChartAxis_LabelExtent;
-                xamlMember.Setter = set_123_ChartAxis_LabelExtent;
+                xamlMember.Getter = get_121_ChartAxis_LabelExtent;
+                xamlMember.Setter = set_121_ChartAxis_LabelExtent;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelRotationAngle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelRotationAngle", "Double");
-                xamlMember.Getter = get_124_ChartAxis_LabelRotationAngle;
-                xamlMember.Setter = set_124_ChartAxis_LabelRotationAngle;
+                xamlMember.Getter = get_122_ChartAxis_LabelRotationAngle;
+                xamlMember.Setter = set_122_ChartAxis_LabelRotationAngle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.AxisLineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AxisLineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_125_ChartAxis_AxisLineStyle;
-                xamlMember.Setter = set_125_ChartAxis_AxisLineStyle;
+                xamlMember.Getter = get_123_ChartAxis_AxisLineStyle;
+                xamlMember.Setter = set_123_ChartAxis_AxisLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.OpposedPosition":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "OpposedPosition", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_126_ChartAxis_OpposedPosition;
-                xamlMember.Setter = set_126_ChartAxis_OpposedPosition;
+                xamlMember.Getter = get_124_ChartAxis_OpposedPosition;
+                xamlMember.Setter = set_124_ChartAxis_OpposedPosition;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.DesiredIntervalsCount":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DesiredIntervalsCount", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_127_ChartAxis_DesiredIntervalsCount;
-                xamlMember.Setter = set_127_ChartAxis_DesiredIntervalsCount;
+                xamlMember.Getter = get_125_ChartAxis_DesiredIntervalsCount;
+                xamlMember.Setter = set_125_ChartAxis_DesiredIntervalsCount;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ThumbLabelVisibility":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ThumbLabelVisibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_128_ChartAxis_ThumbLabelVisibility;
-                xamlMember.Setter = set_128_ChartAxis_ThumbLabelVisibility;
+                xamlMember.Getter = get_126_ChartAxis_ThumbLabelVisibility;
+                xamlMember.Setter = set_126_ChartAxis_ThumbLabelVisibility;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ThumbLabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ThumbLabelTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_129_ChartAxis_ThumbLabelTemplate;
-                xamlMember.Setter = set_129_ChartAxis_ThumbLabelTemplate;
+                xamlMember.Getter = get_127_ChartAxis_ThumbLabelTemplate;
+                xamlMember.Setter = set_127_ChartAxis_ThumbLabelTemplate;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxis.Header":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_128_ChartAxis_Header;
+                xamlMember.Setter = set_128_ChartAxis_Header;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.HeaderTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_130_ChartAxis_HeaderTemplate;
-                xamlMember.Setter = set_130_ChartAxis_HeaderTemplate;
+                xamlMember.Getter = get_129_ChartAxis_HeaderTemplate;
+                xamlMember.Setter = set_129_ChartAxis_HeaderTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.TickLineSize":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TickLineSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_131_ChartAxis_TickLineSize;
-                xamlMember.Setter = set_131_ChartAxis_TickLineSize;
+                xamlMember.Getter = get_130_ChartAxis_TickLineSize;
+                xamlMember.Setter = set_130_ChartAxis_TickLineSize;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.VisibleLabels":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "VisibleLabels", "System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartAxisLabel>");
-                xamlMember.Getter = get_132_ChartAxis_VisibleLabels;
+                xamlMember.Getter = get_131_ChartAxis_VisibleLabels;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxisLabel.LabelContent":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisLabel");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelContent", "Object");
-                xamlMember.Getter = get_133_ChartAxisLabel_LabelContent;
-                xamlMember.Setter = set_133_ChartAxisLabel_LabelContent;
+                xamlMember.Getter = get_132_ChartAxisLabel_LabelContent;
+                xamlMember.Setter = set_132_ChartAxisLabel_LabelContent;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxisLabel.Position":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisLabel");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Position", "Double");
-                xamlMember.Getter = get_134_ChartAxisLabel_Position;
-                xamlMember.Setter = set_134_ChartAxisLabel_Position;
+                xamlMember.Getter = get_133_ChartAxisLabel_Position;
+                xamlMember.Setter = set_133_ChartAxisLabel_Position;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxisLabel.PrefixLabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisLabel");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PrefixLabelTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_135_ChartAxisLabel_PrefixLabelTemplate;
-                xamlMember.Setter = set_135_ChartAxisLabel_PrefixLabelTemplate;
+                xamlMember.Getter = get_134_ChartAxisLabel_PrefixLabelTemplate;
+                xamlMember.Setter = set_134_ChartAxisLabel_PrefixLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxisLabel.PostfixLabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisLabel");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PostfixLabelTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_136_ChartAxisLabel_PostfixLabelTemplate;
-                xamlMember.Setter = set_136_ChartAxisLabel_PostfixLabelTemplate;
+                xamlMember.Getter = get_135_ChartAxisLabel_PostfixLabelTemplate;
+                xamlMember.Setter = set_135_ChartAxisLabel_PostfixLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.IsInversed":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsInversed", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_137_ChartAxis_IsInversed;
-                xamlMember.Setter = set_137_ChartAxis_IsInversed;
+                xamlMember.Getter = get_136_ChartAxis_IsInversed;
+                xamlMember.Setter = set_136_ChartAxis_IsInversed;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.Origin":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Origin", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_138_ChartAxis_Origin;
-                xamlMember.Setter = set_138_ChartAxis_Origin;
+                xamlMember.Getter = get_137_ChartAxis_Origin;
+                xamlMember.Setter = set_137_ChartAxis_Origin;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ShowOrigin":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowOrigin", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_139_ChartAxis_ShowOrigin;
-                xamlMember.Setter = set_139_ChartAxis_ShowOrigin;
+                xamlMember.Getter = get_138_ChartAxis_ShowOrigin;
+                xamlMember.Setter = set_138_ChartAxis_ShowOrigin;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.TickLinesPosition":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TickLinesPosition", "Syncfusion.UI.Xaml.Charts.AxisElementPosition");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_140_ChartAxis_TickLinesPosition;
-                xamlMember.Setter = set_140_ChartAxis_TickLinesPosition;
+                xamlMember.Getter = get_139_ChartAxis_TickLinesPosition;
+                xamlMember.Setter = set_139_ChartAxis_TickLinesPosition;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ShowAxisNextToOrigin":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowAxisNextToOrigin", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_141_ChartAxis_ShowAxisNextToOrigin;
-                xamlMember.Setter = set_141_ChartAxis_ShowAxisNextToOrigin;
+                xamlMember.Getter = get_140_ChartAxis_ShowAxisNextToOrigin;
+                xamlMember.Setter = set_140_ChartAxis_ShowAxisNextToOrigin;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.EdgeLabelsDrawingMode":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EdgeLabelsDrawingMode", "Syncfusion.UI.Xaml.Charts.EdgeLabelsDrawingMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_142_ChartAxis_EdgeLabelsDrawingMode;
-                xamlMember.Setter = set_142_ChartAxis_EdgeLabelsDrawingMode;
+                xamlMember.Getter = get_141_ChartAxis_EdgeLabelsDrawingMode;
+                xamlMember.Setter = set_141_ChartAxis_EdgeLabelsDrawingMode;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MajorGridLineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MajorGridLineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_143_ChartAxis_MajorGridLineStyle;
-                xamlMember.Setter = set_143_ChartAxis_MajorGridLineStyle;
+                xamlMember.Getter = get_142_ChartAxis_MajorGridLineStyle;
+                xamlMember.Setter = set_142_ChartAxis_MajorGridLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MinorGridLineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorGridLineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_144_ChartAxis_MinorGridLineStyle;
-                xamlMember.Setter = set_144_ChartAxis_MinorGridLineStyle;
+                xamlMember.Getter = get_143_ChartAxis_MinorGridLineStyle;
+                xamlMember.Setter = set_143_ChartAxis_MinorGridLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MajorTickLineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MajorTickLineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_145_ChartAxis_MajorTickLineStyle;
-                xamlMember.Setter = set_145_ChartAxis_MajorTickLineStyle;
+                xamlMember.Getter = get_144_ChartAxis_MajorTickLineStyle;
+                xamlMember.Setter = set_144_ChartAxis_MajorTickLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MinorTickLineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "MinorTickLineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_146_ChartAxis_MinorTickLineStyle;
-                xamlMember.Setter = set_146_ChartAxis_MinorTickLineStyle;
+                xamlMember.Getter = get_145_ChartAxis_MinorTickLineStyle;
+                xamlMember.Setter = set_145_ChartAxis_MinorTickLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ShowTrackBallInfo":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowTrackBallInfo", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_147_ChartAxis_ShowTrackBallInfo;
-                xamlMember.Setter = set_147_ChartAxis_ShowTrackBallInfo;
+                xamlMember.Getter = get_146_ChartAxis_ShowTrackBallInfo;
+                xamlMember.Setter = set_146_ChartAxis_ShowTrackBallInfo;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.TrackBallLabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TrackBallLabelTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_148_ChartAxis_TrackBallLabelTemplate;
-                xamlMember.Setter = set_148_ChartAxis_TrackBallLabelTemplate;
+                xamlMember.Getter = get_147_ChartAxis_TrackBallLabelTemplate;
+                xamlMember.Setter = set_147_ChartAxis_TrackBallLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ShowGridLines":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowGridLines", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_149_ChartAxis_ShowGridLines;
-                xamlMember.Setter = set_149_ChartAxis_ShowGridLines;
+                xamlMember.Getter = get_148_ChartAxis_ShowGridLines;
+                xamlMember.Setter = set_148_ChartAxis_ShowGridLines;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.EnableAutoIntervalOnZooming":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableAutoIntervalOnZooming", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_150_ChartAxis_EnableAutoIntervalOnZooming;
-                xamlMember.Setter = set_150_ChartAxis_EnableAutoIntervalOnZooming;
+                xamlMember.Getter = get_149_ChartAxis_EnableAutoIntervalOnZooming;
+                xamlMember.Setter = set_149_ChartAxis_EnableAutoIntervalOnZooming;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_151_ChartAxis_LabelTemplate;
-                xamlMember.Setter = set_151_ChartAxis_LabelTemplate;
+                xamlMember.Getter = get_150_ChartAxis_LabelTemplate;
+                xamlMember.Setter = set_150_ChartAxis_LabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.CustomLabels":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "CustomLabels", "Syncfusion.UI.Xaml.Charts.ChartAxisLabelCollection");
-                xamlMember.Getter = get_152_ChartAxis_CustomLabels;
+                xamlMember.Getter = get_151_ChartAxis_CustomLabels;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.IsLogarithmic":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsLogarithmic", "Boolean");
-                xamlMember.Getter = get_153_ChartAxis_IsLogarithmic;
+                xamlMember.Getter = get_152_ChartAxis_IsLogarithmic;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.SideBySideSeriesPlacement":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SideBySideSeriesPlacement", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_154_ChartBase_SideBySideSeriesPlacement;
-                xamlMember.Setter = set_154_ChartBase_SideBySideSeriesPlacement;
+                xamlMember.Getter = get_153_ChartBase_SideBySideSeriesPlacement;
+                xamlMember.Setter = set_153_ChartBase_SideBySideSeriesPlacement;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartBase.Header":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_154_ChartBase_Header;
+                xamlMember.Setter = set_154_ChartBase_Header;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartBase.ColorModel":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartBase");
@@ -5684,771 +5524,674 @@ namespace Electroencephalograph.Electroencephalograph_XamlTypeInfo
                 xamlMember.Getter = get_160_ChartBase_RowSpan;
                 xamlMember.Setter = set_160_ChartBase_RowSpan;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.CategoryAxis.Interval":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CategoryAxis");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Interval", "Object");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.EnableBusinessHours":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableBusinessHours", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_161_CategoryAxis_Interval;
-                xamlMember.Setter = set_161_CategoryAxis_Interval;
+                xamlMember.Getter = get_161_DateTimeAxis_EnableBusinessHours;
+                xamlMember.Setter = set_161_DateTimeAxis_EnableBusinessHours;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.CategoryAxis.LabelPlacement":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CategoryAxis");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelPlacement", "Syncfusion.UI.Xaml.Charts.LabelPlacement");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.OpenTime":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "OpenTime", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_162_CategoryAxis_LabelPlacement;
-                xamlMember.Setter = set_162_CategoryAxis_LabelPlacement;
+                xamlMember.Getter = get_162_DateTimeAxis_OpenTime;
+                xamlMember.Setter = set_162_DateTimeAxis_OpenTime;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.ZoomPosition":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ZoomPosition", "Double");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.CloseTime":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "CloseTime", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_163_ChartAxisBase2D_ZoomPosition;
-                xamlMember.Setter = set_163_ChartAxisBase2D_ZoomPosition;
+                xamlMember.Getter = get_163_DateTimeAxis_CloseTime;
+                xamlMember.Setter = set_163_DateTimeAxis_CloseTime;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.ZoomFactor":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ZoomFactor", "Double");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.WorkingDays":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "WorkingDays", "Syncfusion.UI.Xaml.Charts.Day");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_164_ChartAxisBase2D_ZoomFactor;
-                xamlMember.Setter = set_164_ChartAxisBase2D_ZoomFactor;
+                xamlMember.Getter = get_164_DateTimeAxis_WorkingDays;
+                xamlMember.Setter = set_164_DateTimeAxis_WorkingDays;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.StripLines":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StripLines", "Syncfusion.UI.Xaml.Charts.ChartStripLines");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_165_ChartAxisBase2D_StripLines;
-                xamlMember.Setter = set_165_ChartAxisBase2D_StripLines;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Start":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Start", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_166_ChartStripLine_Start;
-                xamlMember.Setter = set_166_ChartStripLine_Start;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Background":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Background", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_167_ChartStripLine_Background;
-                xamlMember.Setter = set_167_ChartStripLine_Background;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.BorderBrush":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderBrush", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_168_ChartStripLine_BorderBrush;
-                xamlMember.Setter = set_168_ChartStripLine_BorderBrush;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.BorderThickness":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderThickness", "Windows.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_169_ChartStripLine_BorderThickness;
-                xamlMember.Setter = set_169_ChartStripLine_BorderThickness;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.SegmentStartValue":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentStartValue", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_170_ChartStripLine_SegmentStartValue;
-                xamlMember.Setter = set_170_ChartStripLine_SegmentStartValue;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.SegmentEndValue":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentEndValue", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_171_ChartStripLine_SegmentEndValue;
-                xamlMember.Setter = set_171_ChartStripLine_SegmentEndValue;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.SegmentAxisName":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentAxisName", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_172_ChartStripLine_SegmentAxisName;
-                xamlMember.Setter = set_172_ChartStripLine_SegmentAxisName;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.IsSegmented":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsSegmented", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_173_ChartStripLine_IsSegmented;
-                xamlMember.Setter = set_173_ChartStripLine_IsSegmented;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.RepeatEvery":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RepeatEvery", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_174_ChartStripLine_RepeatEvery;
-                xamlMember.Setter = set_174_ChartStripLine_RepeatEvery;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.RepeatUntil":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RepeatUntil", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_175_ChartStripLine_RepeatUntil;
-                xamlMember.Setter = set_175_ChartStripLine_RepeatUntil;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Label":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Label", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_176_ChartStripLine_Label;
-                xamlMember.Setter = set_176_ChartStripLine_Label;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelTemplate":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_177_ChartStripLine_LabelTemplate;
-                xamlMember.Setter = set_177_ChartStripLine_LabelTemplate;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Width":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Width", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_178_ChartStripLine_Width;
-                xamlMember.Setter = set_178_ChartStripLine_Width;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelAngle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelAngle", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_179_ChartStripLine_LabelAngle;
-                xamlMember.Setter = set_179_ChartStripLine_LabelAngle;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.IsPixelWidth":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsPixelWidth", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_180_ChartStripLine_IsPixelWidth;
-                xamlMember.Setter = set_180_ChartStripLine_IsPixelWidth;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelHorizontalAlignment":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelHorizontalAlignment", "Windows.UI.Xaml.HorizontalAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_181_ChartStripLine_LabelHorizontalAlignment;
-                xamlMember.Setter = set_181_ChartStripLine_LabelHorizontalAlignment;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelVerticalAlignment":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelVerticalAlignment", "Windows.UI.Xaml.VerticalAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_182_ChartStripLine_LabelVerticalAlignment;
-                xamlMember.Setter = set_182_ChartStripLine_LabelVerticalAlignment;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.EnableScrollBarResizing":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableScrollBarResizing", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_183_ChartAxisBase2D_EnableScrollBarResizing;
-                xamlMember.Setter = set_183_ChartAxisBase2D_EnableScrollBarResizing;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.EnableScrollBar":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableScrollBar", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_184_ChartAxisBase2D_EnableScrollBar;
-                xamlMember.Setter = set_184_ChartAxisBase2D_EnableScrollBar;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.DeferredScrolling":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DeferredScrolling", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_185_ChartAxisBase2D_DeferredScrolling;
-                xamlMember.Setter = set_185_ChartAxisBase2D_DeferredScrolling;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.EnableTouchMode":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableTouchMode", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_186_ChartAxisBase2D_EnableTouchMode;
-                xamlMember.Setter = set_186_ChartAxisBase2D_EnableTouchMode;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.RangePadding":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RangePadding", "Syncfusion.UI.Xaml.Charts.NumericalPadding");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_187_NumericalAxis_RangePadding;
-                xamlMember.Setter = set_187_NumericalAxis_RangePadding;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.Interval":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Interval", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_188_NumericalAxis_Interval;
-                xamlMember.Setter = set_188_NumericalAxis_Interval;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.Minimum":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.Minimum":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Minimum", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_189_NumericalAxis_Minimum;
-                xamlMember.Setter = set_189_NumericalAxis_Minimum;
+                xamlMember.Getter = get_165_DateTimeAxis_Minimum;
+                xamlMember.Setter = set_165_DateTimeAxis_Minimum;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.Maximum":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.Maximum":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Maximum", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_190_NumericalAxis_Maximum;
-                xamlMember.Setter = set_190_NumericalAxis_Maximum;
+                xamlMember.Getter = get_166_DateTimeAxis_Maximum;
+                xamlMember.Setter = set_166_DateTimeAxis_Maximum;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.StartRangeFromZero":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StartRangeFromZero", "Boolean");
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.Interval":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Interval", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_191_NumericalAxis_StartRangeFromZero;
-                xamlMember.Setter = set_191_NumericalAxis_StartRangeFromZero;
+                xamlMember.Getter = get_167_DateTimeAxis_Interval;
+                xamlMember.Setter = set_167_DateTimeAxis_Interval;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.RangePadding":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RangePadding", "Syncfusion.UI.Xaml.Charts.DateTimeRangePadding");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_168_DateTimeAxis_RangePadding;
+                xamlMember.Setter = set_168_DateTimeAxis_RangePadding;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.DateTimeAxis.IntervalType":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.DateTimeAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IntervalType", "Syncfusion.UI.Xaml.Charts.DateTimeIntervalType");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_169_DateTimeAxis_IntervalType;
+                xamlMember.Setter = set_169_DateTimeAxis_IntervalType;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.SmallTicksPerInterval":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SmallTicksPerInterval", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_192_RangeAxisBase_SmallTicksPerInterval;
-                xamlMember.Setter = set_192_RangeAxisBase_SmallTicksPerInterval;
+                xamlMember.Getter = get_170_RangeAxisBase_SmallTicksPerInterval;
+                xamlMember.Setter = set_170_RangeAxisBase_SmallTicksPerInterval;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.SmallTickLineSize":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SmallTickLineSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_193_RangeAxisBase_SmallTickLineSize;
-                xamlMember.Setter = set_193_RangeAxisBase_SmallTickLineSize;
+                xamlMember.Getter = get_171_RangeAxisBase_SmallTickLineSize;
+                xamlMember.Setter = set_171_RangeAxisBase_SmallTickLineSize;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.SmallTickLinesPosition":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SmallTickLinesPosition", "Syncfusion.UI.Xaml.Charts.AxisElementPosition");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_194_RangeAxisBase_SmallTickLinesPosition;
-                xamlMember.Setter = set_194_RangeAxisBase_SmallTickLinesPosition;
+                xamlMember.Getter = get_172_RangeAxisBase_SmallTickLinesPosition;
+                xamlMember.Setter = set_172_RangeAxisBase_SmallTickLinesPosition;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.ZoomPosition":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ZoomPosition", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_173_ChartAxisBase2D_ZoomPosition;
+                xamlMember.Setter = set_173_ChartAxisBase2D_ZoomPosition;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.ZoomFactor":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ZoomFactor", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_174_ChartAxisBase2D_ZoomFactor;
+                xamlMember.Setter = set_174_ChartAxisBase2D_ZoomFactor;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.StripLines":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StripLines", "Syncfusion.UI.Xaml.Charts.ChartStripLines");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_175_ChartAxisBase2D_StripLines;
+                xamlMember.Setter = set_175_ChartAxisBase2D_StripLines;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Start":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Start", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_176_ChartStripLine_Start;
+                xamlMember.Setter = set_176_ChartStripLine_Start;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Background":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Background", "Windows.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_177_ChartStripLine_Background;
+                xamlMember.Setter = set_177_ChartStripLine_Background;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.BorderBrush":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderBrush", "Windows.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_178_ChartStripLine_BorderBrush;
+                xamlMember.Setter = set_178_ChartStripLine_BorderBrush;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.BorderThickness":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BorderThickness", "Windows.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_179_ChartStripLine_BorderThickness;
+                xamlMember.Setter = set_179_ChartStripLine_BorderThickness;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.SegmentStartValue":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentStartValue", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_180_ChartStripLine_SegmentStartValue;
+                xamlMember.Setter = set_180_ChartStripLine_SegmentStartValue;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.SegmentEndValue":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentEndValue", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_181_ChartStripLine_SegmentEndValue;
+                xamlMember.Setter = set_181_ChartStripLine_SegmentEndValue;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.SegmentAxisName":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentAxisName", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_182_ChartStripLine_SegmentAxisName;
+                xamlMember.Setter = set_182_ChartStripLine_SegmentAxisName;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.IsSegmented":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsSegmented", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_183_ChartStripLine_IsSegmented;
+                xamlMember.Setter = set_183_ChartStripLine_IsSegmented;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.RepeatEvery":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RepeatEvery", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_184_ChartStripLine_RepeatEvery;
+                xamlMember.Setter = set_184_ChartStripLine_RepeatEvery;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.RepeatUntil":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RepeatUntil", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_185_ChartStripLine_RepeatUntil;
+                xamlMember.Setter = set_185_ChartStripLine_RepeatUntil;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Label":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Label", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_186_ChartStripLine_Label;
+                xamlMember.Setter = set_186_ChartStripLine_Label;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelTemplate":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelTemplate", "Windows.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_187_ChartStripLine_LabelTemplate;
+                xamlMember.Setter = set_187_ChartStripLine_LabelTemplate;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.Width":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Width", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_188_ChartStripLine_Width;
+                xamlMember.Setter = set_188_ChartStripLine_Width;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelAngle":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelAngle", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_189_ChartStripLine_LabelAngle;
+                xamlMember.Setter = set_189_ChartStripLine_LabelAngle;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.IsPixelWidth":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsPixelWidth", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_190_ChartStripLine_IsPixelWidth;
+                xamlMember.Setter = set_190_ChartStripLine_IsPixelWidth;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelHorizontalAlignment":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelHorizontalAlignment", "Windows.UI.Xaml.HorizontalAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_191_ChartStripLine_LabelHorizontalAlignment;
+                xamlMember.Setter = set_191_ChartStripLine_LabelHorizontalAlignment;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartStripLine.LabelVerticalAlignment":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartStripLine");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelVerticalAlignment", "Windows.UI.Xaml.VerticalAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_192_ChartStripLine_LabelVerticalAlignment;
+                xamlMember.Setter = set_192_ChartStripLine_LabelVerticalAlignment;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.EnableScrollBarResizing":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableScrollBarResizing", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_193_ChartAxisBase2D_EnableScrollBarResizing;
+                xamlMember.Setter = set_193_ChartAxisBase2D_EnableScrollBarResizing;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.EnableScrollBar":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableScrollBar", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_194_ChartAxisBase2D_EnableScrollBar;
+                xamlMember.Setter = set_194_ChartAxisBase2D_EnableScrollBar;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.DeferredScrolling":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DeferredScrolling", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_195_ChartAxisBase2D_DeferredScrolling;
+                xamlMember.Setter = set_195_ChartAxisBase2D_DeferredScrolling;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D.EnableTouchMode":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableTouchMode", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_196_ChartAxisBase2D_EnableTouchMode;
+                xamlMember.Setter = set_196_ChartAxisBase2D_EnableTouchMode;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.Interval":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Interval", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_197_NumericalAxis_Interval;
+                xamlMember.Setter = set_197_NumericalAxis_Interval;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.Minimum":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Minimum", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_198_NumericalAxis_Minimum;
+                xamlMember.Setter = set_198_NumericalAxis_Minimum;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.Maximum":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Maximum", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_199_NumericalAxis_Maximum;
+                xamlMember.Setter = set_199_NumericalAxis_Maximum;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.RangePadding":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RangePadding", "Syncfusion.UI.Xaml.Charts.NumericalPadding");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_200_NumericalAxis_RangePadding;
+                xamlMember.Setter = set_200_NumericalAxis_RangePadding;
+                break;
+            case "Syncfusion.UI.Xaml.Charts.NumericalAxis.StartRangeFromZero":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.NumericalAxis");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StartRangeFromZero", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_201_NumericalAxis_StartRangeFromZero;
+                xamlMember.Setter = set_201_NumericalAxis_StartRangeFromZero;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XyDataSeries.YBindingPath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XyDataSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YBindingPath", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_195_XyDataSeries_YBindingPath;
-                xamlMember.Setter = set_195_XyDataSeries_YBindingPath;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.AdornmentSeries.AdornmentsInfo":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.AdornmentSeries");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AdornmentsInfo", "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_196_AdornmentSeries_AdornmentsInfo;
-                xamlMember.Setter = set_196_AdornmentSeries_AdornmentsInfo;
+                xamlMember.Getter = get_202_XyDataSeries_YBindingPath;
+                xamlMember.Setter = set_202_XyDataSeries_YBindingPath;
                 break;
             case "Syncfusion.UI.Xaml.Charts.LineSeries.CustomTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.LineSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "CustomTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_197_LineSeries_CustomTemplate;
-                xamlMember.Setter = set_197_LineSeries_CustomTemplate;
+                xamlMember.Getter = get_203_LineSeries_CustomTemplate;
+                xamlMember.Setter = set_203_LineSeries_CustomTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase.EnableSeriesDragging":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySeriesDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableSeriesDragging", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_198_XySeriesDraggingBase_EnableSeriesDragging;
-                xamlMember.Setter = set_198_XySeriesDraggingBase_EnableSeriesDragging;
+                xamlMember.Getter = get_204_XySeriesDraggingBase_EnableSeriesDragging;
+                xamlMember.Setter = set_204_XySeriesDraggingBase_EnableSeriesDragging;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.EnableDragTooltip":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableDragTooltip", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_199_XySegmentDraggingBase_EnableDragTooltip;
-                xamlMember.Setter = set_199_XySegmentDraggingBase_EnableDragTooltip;
+                xamlMember.Getter = get_205_XySegmentDraggingBase_EnableDragTooltip;
+                xamlMember.Setter = set_205_XySegmentDraggingBase_EnableDragTooltip;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.DragTooltipTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DragTooltipTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_200_XySegmentDraggingBase_DragTooltipTemplate;
-                xamlMember.Setter = set_200_XySegmentDraggingBase_DragTooltipTemplate;
+                xamlMember.Getter = get_206_XySegmentDraggingBase_DragTooltipTemplate;
+                xamlMember.Setter = set_206_XySegmentDraggingBase_DragTooltipTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.RoundToDecimal":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "RoundToDecimal", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_201_XySegmentDraggingBase_RoundToDecimal;
-                xamlMember.Setter = set_201_XySegmentDraggingBase_RoundToDecimal;
+                xamlMember.Getter = get_207_XySegmentDraggingBase_RoundToDecimal;
+                xamlMember.Setter = set_207_XySegmentDraggingBase_RoundToDecimal;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.SnapToPoint":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SnapToPoint", "Syncfusion.UI.Xaml.Charts.SnapToPoint");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_202_XySegmentDraggingBase_SnapToPoint;
-                xamlMember.Setter = set_202_XySegmentDraggingBase_SnapToPoint;
+                xamlMember.Getter = get_208_XySegmentDraggingBase_SnapToPoint;
+                xamlMember.Setter = set_208_XySegmentDraggingBase_SnapToPoint;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.EnableSegmentDragging":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "EnableSegmentDragging", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_203_XySegmentDraggingBase_EnableSegmentDragging;
-                xamlMember.Setter = set_203_XySegmentDraggingBase_EnableSegmentDragging;
+                xamlMember.Getter = get_209_XySegmentDraggingBase_EnableSegmentDragging;
+                xamlMember.Setter = set_209_XySegmentDraggingBase_EnableSegmentDragging;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.UpdateSource":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "UpdateSource", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_204_XySegmentDraggingBase_UpdateSource;
-                xamlMember.Setter = set_204_XySegmentDraggingBase_UpdateSource;
+                xamlMember.Getter = get_210_XySegmentDraggingBase_UpdateSource;
+                xamlMember.Setter = set_210_XySegmentDraggingBase_UpdateSource;
                 break;
             case "Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase.DragCancelKeyModifiers":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.XySegmentDraggingBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DragCancelKeyModifiers", "Windows.System.VirtualKeyModifiers");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_205_XySegmentDraggingBase_DragCancelKeyModifiers;
-                xamlMember.Setter = set_205_XySegmentDraggingBase_DragCancelKeyModifiers;
+                xamlMember.Getter = get_211_XySegmentDraggingBase_DragCancelKeyModifiers;
+                xamlMember.Setter = set_211_XySegmentDraggingBase_DragCancelKeyModifiers;
                 break;
             case "Syncfusion.UI.Xaml.Charts.CartesianSeries.Trendlines":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Trendlines", "Syncfusion.UI.Xaml.Charts.ChartTrendLineCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_206_CartesianSeries_Trendlines;
-                xamlMember.Setter = set_206_CartesianSeries_Trendlines;
+                xamlMember.Getter = get_212_CartesianSeries_Trendlines;
+                xamlMember.Setter = set_212_CartesianSeries_Trendlines;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.Slope":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Slope", "Double");
-                xamlMember.Getter = get_207_TrendlineBase_Slope;
+                xamlMember.Getter = get_213_TrendlineBase_Slope;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.Intercept":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Intercept", "Double");
-                xamlMember.Getter = get_208_TrendlineBase_Intercept;
+                xamlMember.Getter = get_214_TrendlineBase_Intercept;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.PolynomialSlopes":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PolynomialSlopes", "Double[]");
-                xamlMember.Getter = get_209_TrendlineBase_PolynomialSlopes;
+                xamlMember.Getter = get_215_TrendlineBase_PolynomialSlopes;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.IsTrendlineVisible":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsTrendlineVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_210_TrendlineBase_IsTrendlineVisible;
-                xamlMember.Setter = set_210_TrendlineBase_IsTrendlineVisible;
+                xamlMember.Getter = get_216_TrendlineBase_IsTrendlineVisible;
+                xamlMember.Setter = set_216_TrendlineBase_IsTrendlineVisible;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.VisibilityOnLegend":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "VisibilityOnLegend", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_211_TrendlineBase_VisibilityOnLegend;
-                xamlMember.Setter = set_211_TrendlineBase_VisibilityOnLegend;
+                xamlMember.Getter = get_217_TrendlineBase_VisibilityOnLegend;
+                xamlMember.Setter = set_217_TrendlineBase_VisibilityOnLegend;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.LegendIconTemplate":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LegendIconTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_212_TrendlineBase_LegendIconTemplate;
-                xamlMember.Setter = set_212_TrendlineBase_LegendIconTemplate;
+                xamlMember.Getter = get_218_TrendlineBase_LegendIconTemplate;
+                xamlMember.Setter = set_218_TrendlineBase_LegendIconTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.LegendIcon":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LegendIcon", "Syncfusion.UI.Xaml.Charts.ChartLegendIcon");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_213_TrendlineBase_LegendIcon;
-                xamlMember.Setter = set_213_TrendlineBase_LegendIcon;
+                xamlMember.Getter = get_219_TrendlineBase_LegendIcon;
+                xamlMember.Setter = set_219_TrendlineBase_LegendIcon;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.Label":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Label", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_214_TrendlineBase_Label;
-                xamlMember.Setter = set_214_TrendlineBase_Label;
+                xamlMember.Getter = get_220_TrendlineBase_Label;
+                xamlMember.Setter = set_220_TrendlineBase_Label;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.Type":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Type", "Syncfusion.UI.Xaml.Charts.TrendlineType");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_215_TrendlineBase_Type;
-                xamlMember.Setter = set_215_TrendlineBase_Type;
+                xamlMember.Getter = get_221_TrendlineBase_Type;
+                xamlMember.Setter = set_221_TrendlineBase_Type;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.Stroke":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Stroke", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_216_TrendlineBase_Stroke;
-                xamlMember.Setter = set_216_TrendlineBase_Stroke;
+                xamlMember.Getter = get_222_TrendlineBase_Stroke;
+                xamlMember.Setter = set_222_TrendlineBase_Stroke;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.StrokeThickness":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StrokeThickness", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_217_TrendlineBase_StrokeThickness;
-                xamlMember.Setter = set_217_TrendlineBase_StrokeThickness;
+                xamlMember.Getter = get_223_TrendlineBase_StrokeThickness;
+                xamlMember.Setter = set_223_TrendlineBase_StrokeThickness;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.StrokeDashArray":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "StrokeDashArray", "Windows.UI.Xaml.Media.DoubleCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_218_TrendlineBase_StrokeDashArray;
-                xamlMember.Setter = set_218_TrendlineBase_StrokeDashArray;
+                xamlMember.Getter = get_224_TrendlineBase_StrokeDashArray;
+                xamlMember.Setter = set_224_TrendlineBase_StrokeDashArray;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.ForwardForecast":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ForwardForecast", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_219_TrendlineBase_ForwardForecast;
-                xamlMember.Setter = set_219_TrendlineBase_ForwardForecast;
+                xamlMember.Getter = get_225_TrendlineBase_ForwardForecast;
+                xamlMember.Setter = set_225_TrendlineBase_ForwardForecast;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.BackwardForecast":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "BackwardForecast", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_220_TrendlineBase_BackwardForecast;
-                xamlMember.Setter = set_220_TrendlineBase_BackwardForecast;
+                xamlMember.Getter = get_226_TrendlineBase_BackwardForecast;
+                xamlMember.Setter = set_226_TrendlineBase_BackwardForecast;
                 break;
             case "Syncfusion.UI.Xaml.Charts.TrendlineBase.PolynomialOrder":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.TrendlineBase");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PolynomialOrder", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_221_TrendlineBase_PolynomialOrder;
-                xamlMember.Setter = set_221_TrendlineBase_PolynomialOrder;
+                xamlMember.Getter = get_227_TrendlineBase_PolynomialOrder;
+                xamlMember.Setter = set_227_TrendlineBase_PolynomialOrder;
                 break;
             case "Syncfusion.UI.Xaml.Charts.CartesianSeries.XRange":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XRange", "Syncfusion.UI.Xaml.Charts.DoubleRange");
-                xamlMember.Getter = get_222_CartesianSeries_XRange;
+                xamlMember.Getter = get_228_CartesianSeries_XRange;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.CartesianSeries.YRange":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YRange", "Syncfusion.UI.Xaml.Charts.DoubleRange");
-                xamlMember.Getter = get_223_CartesianSeries_YRange;
+                xamlMember.Getter = get_229_CartesianSeries_YRange;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.CartesianSeries.XAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "XAxis", "Syncfusion.UI.Xaml.Charts.ChartAxisBase2D");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_224_CartesianSeries_XAxis;
-                xamlMember.Setter = set_224_CartesianSeries_XAxis;
+                xamlMember.Getter = get_230_CartesianSeries_XAxis;
+                xamlMember.Setter = set_230_CartesianSeries_XAxis;
                 break;
             case "Syncfusion.UI.Xaml.Charts.CartesianSeries.YAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "YAxis", "Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_225_CartesianSeries_YAxis;
-                xamlMember.Setter = set_225_CartesianSeries_YAxis;
+                xamlMember.Getter = get_231_CartesianSeries_YAxis;
+                xamlMember.Setter = set_231_CartesianSeries_YAxis;
                 break;
             case "Syncfusion.UI.Xaml.Charts.CartesianSeries.IsTransposed":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.CartesianSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsTransposed", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_226_CartesianSeries_IsTransposed;
-                xamlMember.Setter = set_226_CartesianSeries_IsTransposed;
+                xamlMember.Getter = get_232_CartesianSeries_IsTransposed;
+                xamlMember.Setter = set_232_CartesianSeries_IsTransposed;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.Symbol":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Symbol", "Syncfusion.UI.Xaml.Charts.ChartSymbol");
+            case "Syncfusion.UI.Xaml.Charts.AdornmentSeries.AdornmentsInfo":
+                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.AdornmentSeries");
+                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AdornmentsInfo", "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_227_ChartAdornmentInfoBase_Symbol;
-                xamlMember.Setter = set_227_ChartAdornmentInfoBase_Symbol;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.ShowLabel":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowLabel", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_228_ChartAdornmentInfoBase_ShowLabel;
-                xamlMember.Setter = set_228_ChartAdornmentInfoBase_ShowLabel;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.UseSeriesPalette":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "UseSeriesPalette", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_229_ChartAdornmentInfoBase_UseSeriesPalette;
-                xamlMember.Setter = set_229_ChartAdornmentInfoBase_UseSeriesPalette;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.HorizontalAlignment":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "HorizontalAlignment", "Windows.UI.Xaml.HorizontalAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_230_ChartAdornmentInfoBase_HorizontalAlignment;
-                xamlMember.Setter = set_230_ChartAdornmentInfoBase_HorizontalAlignment;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.VerticalAlignment":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "VerticalAlignment", "Windows.UI.Xaml.VerticalAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_231_ChartAdornmentInfoBase_VerticalAlignment;
-                xamlMember.Setter = set_231_ChartAdornmentInfoBase_VerticalAlignment;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.ConnectorHeight":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ConnectorHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_232_ChartAdornmentInfoBase_ConnectorHeight;
-                xamlMember.Setter = set_232_ChartAdornmentInfoBase_ConnectorHeight;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.ConnectorRotationAngle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ConnectorRotationAngle", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_233_ChartAdornmentInfoBase_ConnectorRotationAngle;
-                xamlMember.Setter = set_233_ChartAdornmentInfoBase_ConnectorRotationAngle;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.ConnectorLineStyle":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ConnectorLineStyle", "Windows.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_234_ChartAdornmentInfoBase_ConnectorLineStyle;
-                xamlMember.Setter = set_234_ChartAdornmentInfoBase_ConnectorLineStyle;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.ShowConnectorLine":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowConnectorLine", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_235_ChartAdornmentInfoBase_ShowConnectorLine;
-                xamlMember.Setter = set_235_ChartAdornmentInfoBase_ShowConnectorLine;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.LabelTemplate":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LabelTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_236_ChartAdornmentInfoBase_LabelTemplate;
-                xamlMember.Setter = set_236_ChartAdornmentInfoBase_LabelTemplate;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SymbolWidth":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SymbolWidth", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_237_ChartAdornmentInfoBase_SymbolWidth;
-                xamlMember.Setter = set_237_ChartAdornmentInfoBase_SymbolWidth;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SymbolHeight":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SymbolHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_238_ChartAdornmentInfoBase_SymbolHeight;
-                xamlMember.Setter = set_238_ChartAdornmentInfoBase_SymbolHeight;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SymbolTemplate":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SymbolTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_239_ChartAdornmentInfoBase_SymbolTemplate;
-                xamlMember.Setter = set_239_ChartAdornmentInfoBase_SymbolTemplate;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SymbolInterior":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SymbolInterior", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_240_ChartAdornmentInfoBase_SymbolInterior;
-                xamlMember.Setter = set_240_ChartAdornmentInfoBase_SymbolInterior;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SymbolStroke":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SymbolStroke", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_241_ChartAdornmentInfoBase_SymbolStroke;
-                xamlMember.Setter = set_241_ChartAdornmentInfoBase_SymbolStroke;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.FontFamily":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "FontFamily", "Windows.UI.Xaml.Media.FontFamily");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_242_ChartAdornmentInfoBase_FontFamily;
-                xamlMember.Setter = set_242_ChartAdornmentInfoBase_FontFamily;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.Series":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Series", "Syncfusion.UI.Xaml.Charts.ChartSeriesBase");
-                xamlMember.Getter = get_243_ChartAdornmentInfoBase_Series;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.AdornmentsPosition":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AdornmentsPosition", "Syncfusion.UI.Xaml.Charts.AdornmentsPosition");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_244_ChartAdornmentInfoBase_AdornmentsPosition;
-                xamlMember.Setter = set_244_ChartAdornmentInfoBase_AdornmentsPosition;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SegmentLabelContent":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentLabelContent", "Syncfusion.UI.Xaml.Charts.LabelContent");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_245_ChartAdornmentInfoBase_SegmentLabelContent;
-                xamlMember.Setter = set_245_ChartAdornmentInfoBase_SegmentLabelContent;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.SegmentLabelFormat":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SegmentLabelFormat", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_246_ChartAdornmentInfoBase_SegmentLabelFormat;
-                xamlMember.Setter = set_246_ChartAdornmentInfoBase_SegmentLabelFormat;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase.ShowMarker":
-                userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAdornmentInfoBase");
-                xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ShowMarker", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_247_ChartAdornmentInfoBase_ShowMarker;
-                xamlMember.Setter = set_247_ChartAdornmentInfoBase_ShowMarker;
+                xamlMember.Getter = get_233_AdornmentSeries_AdornmentsInfo;
+                xamlMember.Setter = set_233_AdornmentSeries_AdornmentsInfo;
                 break;
             case "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>.Count":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.ResourceDictionary>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Count", "Int32");
-                xamlMember.Getter = get_248_Collection_Count;
+                xamlMember.Getter = get_234_Collection_Count;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.IndependentValuePath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IndependentValuePath", "String");
-                xamlMember.Getter = get_249_DataPointSeries_IndependentValuePath;
-                xamlMember.Setter = set_249_DataPointSeries_IndependentValuePath;
+                xamlMember.Getter = get_235_DataPointSeries_IndependentValuePath;
+                xamlMember.Setter = set_235_DataPointSeries_IndependentValuePath;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.DependentValuePath":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DependentValuePath", "String");
-                xamlMember.Getter = get_250_DataPointSeries_DependentValuePath;
-                xamlMember.Setter = set_250_DataPointSeries_DependentValuePath;
+                xamlMember.Getter = get_236_DataPointSeries_DependentValuePath;
+                xamlMember.Setter = set_236_DataPointSeries_DependentValuePath;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.IsSelectionEnabled":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IsSelectionEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_251_DataPointSeries_IsSelectionEnabled;
-                xamlMember.Setter = set_251_DataPointSeries_IsSelectionEnabled;
+                xamlMember.Getter = get_237_DataPointSeries_IsSelectionEnabled;
+                xamlMember.Setter = set_237_DataPointSeries_IsSelectionEnabled;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries.Points":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Points", "Windows.UI.Xaml.Media.PointCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_252_LineSeries_Points;
+                xamlMember.Getter = get_238_LineSeries_Points;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries.PolylineStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "PolylineStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_253_LineSeries_PolylineStyle;
-                xamlMember.Setter = set_253_LineSeries_PolylineStyle;
+                xamlMember.Getter = get_239_LineSeries_PolylineStyle;
+                xamlMember.Setter = set_239_LineSeries_PolylineStyle;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.DependentRangeAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DependentRangeAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_254_LineAreaBaseSeries_DependentRangeAxis;
-                xamlMember.Setter = set_254_LineAreaBaseSeries_DependentRangeAxis;
+                xamlMember.Getter = get_240_LineAreaBaseSeries_DependentRangeAxis;
+                xamlMember.Setter = set_240_LineAreaBaseSeries_DependentRangeAxis;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.IndependentAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IndependentAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_255_LineAreaBaseSeries_IndependentAxis;
-                xamlMember.Setter = set_255_LineAreaBaseSeries_IndependentAxis;
+                xamlMember.Getter = get_241_LineAreaBaseSeries_IndependentAxis;
+                xamlMember.Setter = set_241_LineAreaBaseSeries_IndependentAxis;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.ActualIndependentAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ActualIndependentAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IAxis");
-                xamlMember.Getter = get_256_LineAreaBaseSeries_ActualIndependentAxis;
+                xamlMember.Getter = get_242_LineAreaBaseSeries_ActualIndependentAxis;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>.ActualDependentRangeAxis":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.LineAreaBaseSeries`1<WinRTXamlToolkit.Controls.DataVisualization.Charting.LineDataPoint>");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ActualDependentRangeAxis", "WinRTXamlToolkit.Controls.DataVisualization.Charting.IRangeAxis");
-                xamlMember.Getter = get_257_LineAreaBaseSeries_ActualDependentRangeAxis;
+                xamlMember.Getter = get_243_LineAreaBaseSeries_ActualDependentRangeAxis;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes.GlobalSeriesIndex":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSingleSeriesWithAxes");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "GlobalSeriesIndex", "System.Nullable`1<Int32>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_258_DataPointSingleSeriesWithAxes_GlobalSeriesIndex;
+                xamlMember.Getter = get_244_DataPointSingleSeriesWithAxes_GlobalSeriesIndex;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.DependentValueBinding":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DependentValueBinding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_259_DataPointSeries_DependentValueBinding;
-                xamlMember.Setter = set_259_DataPointSeries_DependentValueBinding;
+                xamlMember.Getter = get_245_DataPointSeries_DependentValueBinding;
+                xamlMember.Setter = set_245_DataPointSeries_DependentValueBinding;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.IndependentValueBinding":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "IndependentValueBinding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_260_DataPointSeries_IndependentValueBinding;
-                xamlMember.Setter = set_260_DataPointSeries_IndependentValueBinding;
+                xamlMember.Getter = get_246_DataPointSeries_IndependentValueBinding;
+                xamlMember.Setter = set_246_DataPointSeries_IndependentValueBinding;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.ItemsSource":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.IEnumerable");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_261_DataPointSeries_ItemsSource;
-                xamlMember.Setter = set_261_DataPointSeries_ItemsSource;
+                xamlMember.Getter = get_247_DataPointSeries_ItemsSource;
+                xamlMember.Setter = set_247_DataPointSeries_ItemsSource;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.AnimationSequence":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "AnimationSequence", "WinRTXamlToolkit.Controls.DataVisualization.Charting.AnimationSequence");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_262_DataPointSeries_AnimationSequence;
-                xamlMember.Setter = set_262_DataPointSeries_AnimationSequence;
+                xamlMember.Getter = get_248_DataPointSeries_AnimationSequence;
+                xamlMember.Setter = set_248_DataPointSeries_AnimationSequence;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.TransitionEasingFunction":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TransitionEasingFunction", "Windows.UI.Xaml.Media.Animation.EasingFunctionBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_263_DataPointSeries_TransitionEasingFunction;
-                xamlMember.Setter = set_263_DataPointSeries_TransitionEasingFunction;
+                xamlMember.Getter = get_249_DataPointSeries_TransitionEasingFunction;
+                xamlMember.Setter = set_249_DataPointSeries_TransitionEasingFunction;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.SelectedItem":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_264_DataPointSeries_SelectedItem;
-                xamlMember.Setter = set_264_DataPointSeries_SelectedItem;
+                xamlMember.Getter = get_250_DataPointSeries_SelectedItem;
+                xamlMember.Setter = set_250_DataPointSeries_SelectedItem;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.DataPointStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DataPointStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_265_DataPointSeries_DataPointStyle;
-                xamlMember.Setter = set_265_DataPointSeries_DataPointStyle;
+                xamlMember.Getter = get_251_DataPointSeries_DataPointStyle;
+                xamlMember.Setter = set_251_DataPointSeries_DataPointStyle;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.LegendItemStyle":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LegendItemStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_266_DataPointSeries_LegendItemStyle;
-                xamlMember.Setter = set_266_DataPointSeries_LegendItemStyle;
+                xamlMember.Getter = get_252_DataPointSeries_LegendItemStyle;
+                xamlMember.Setter = set_252_DataPointSeries_LegendItemStyle;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries.TransitionDuration":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.DataPointSeries");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "TransitionDuration", "TimeSpan");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_267_DataPointSeries_TransitionDuration;
-                xamlMember.Setter = set_267_DataPointSeries_TransitionDuration;
+                xamlMember.Getter = get_253_DataPointSeries_TransitionDuration;
+                xamlMember.Setter = set_253_DataPointSeries_TransitionDuration;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series.SeriesHost":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "SeriesHost", "WinRTXamlToolkit.Controls.DataVisualization.Charting.ISeriesHost");
-                xamlMember.Getter = get_268_Series_SeriesHost;
-                xamlMember.Setter = set_268_Series_SeriesHost;
+                xamlMember.Getter = get_254_Series_SeriesHost;
+                xamlMember.Setter = set_254_Series_SeriesHost;
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series.LegendItems":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "LegendItems", "System.Collections.ObjectModel.ObservableCollection`1<Object>");
-                xamlMember.Getter = get_269_Series_LegendItems;
+                xamlMember.Getter = get_255_Series_LegendItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.DataVisualization.Charting.Series.Title":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.DataVisualization.Charting.Series");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "Title", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_270_Series_Title;
-                xamlMember.Setter = set_270_Series_Title;
+                xamlMember.Getter = get_256_Series_Title;
+                xamlMember.Setter = set_256_Series_Title;
                 break;
             case "Electroencephalograph.MainPage.DefaultViewModel":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Electroencephalograph.MainPage");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Electroencephalograph.Common.ObservableDictionary");
-                xamlMember.Getter = get_271_MainPage_DefaultViewModel;
+                xamlMember.Getter = get_257_MainPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Electroencephalograph.MainPage.NavigationHelper":
                 userType = (global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Electroencephalograph.MainPage");
                 xamlMember = new global::Electroencephalograph.Electroencephalograph_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Electroencephalograph.Common.NavigationHelper");
-                xamlMember.Getter = get_272_MainPage_NavigationHelper;
+                xamlMember.Getter = get_258_MainPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }

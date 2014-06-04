@@ -33,10 +33,11 @@ using System.Collections.ObjectModel;
 using Windows.UI.Core;
 
 using Windows.System.Threading;
+using System.Threading.Tasks;
 
 using System.ComponentModel;
 
-using Syncfusion.UI.Xaml.Charts;
+//using Syncfusion.UI.Xaml.Charts;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace Electroencephalograph
@@ -153,7 +154,7 @@ namespace Electroencephalograph
 
             //CategoryDataViewModel c = new CategoryDataViewModel();
             
-            //(LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
+            (LineChart.Series[0] as LineSeries).ItemsSource = financialStuffList;
             //(LineChart.Series[0] as LineSeries).Name = "Channel 4";
             //(LineChart.Series[1] as LineSeries).ItemsSource = financialStuffList;
 
@@ -247,16 +248,19 @@ namespace Electroencephalograph
                 // You can clear it here in your background thread.  The references to the objects
                 // are now in the itemsToRender list.
                 lst.Clear();
-
-                await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            //Dispatcher.
+                //SynchronizationContext.SetSynchronizationContext(new SynchronizationContext());
+                //var UISyncContext = TaskScheduler.FromCurrentSynchronizationContext();
+                //Windows.ApplicationModel.Core.CoreApplication.MainView.Dispatcher.RunIdleAsync
+                 await  Task.Factory.StartNew(() =>
                 // Please verify this is the correct syntax
                 
                 {
                     // At second look, this might need to be locked too
                     // EDIT: This probably will just add overhead now that it's not running async.
                     // You can probably remove this lock
-                    //lock (oc)
-                    //{
+                    lock (oc)
+                    {
                         oc.Clear();
 
                         for (int i = 0; i < itemsToRender.Count; i++)
@@ -265,7 +269,7 @@ namespace Electroencephalograph
                             // items.Count());
                             oc.Add(itemsToRender[i]);
                         }
-                    //}
+                    }
                 });
             //}
         }

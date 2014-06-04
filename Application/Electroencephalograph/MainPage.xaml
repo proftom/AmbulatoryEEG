@@ -88,7 +88,7 @@
 
         </Grid>
 
-        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="100" Grid.Row="1" >
+        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="1356" Height="445" Grid.Row="1" >
             <Charting:Chart.Palette>
                 <Charting:ResourceDictionaryCollection>
 
@@ -122,7 +122,7 @@
         <Page DataContext="UsersViewModel" />
 
 
-        <Syncfusion:SfChart x:Name="Chart" Margin="-10,84,10,43" Grid.Row="1">
+        <Syncfusion:SfChart x:Name="Chart" Margin="-10,502,10,43" Grid.Row="1">
 
             <Syncfusion:SfChart.PrimaryAxis>
 

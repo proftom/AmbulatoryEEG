@@ -277,7 +277,7 @@ Both BLE and BTC devices move through generic system states. The same abstract v
 	\label{fig:systemstate}
 \end{figure}
 
-\ac{BLE} is principally composed of two types of packets, advertisement (Figure~\ref{fig:advertisement}) and data (Figure~\ref{fig:data}). Both packet types vary in length dependent on the payload but share a 32 bit advertising access address field, a 24 bit \ac{CRC} field, an 8 bit header and an 8 bit length field which defines the \ac{PDU} size (the last 2 field are often collectively called the header field). Advertisement \ac{PDU}s range from 0 to 29 bytes (232bits), meaning the total packet size can vary between 72 and 320 bits. The over-the-air data rate is 1Mbit/s, meaning advertisement packets are transmitted at a rate between 72 and 320$\mu$s (a single bit is transmitted every 1$\mu$s). In addition to the access code and \ac{CRC} fields, data packets consists of an 8 bit preamble and a \ac{PDU} varying between 0 and 27 bytes (4 of these bytes are reserved for encryption). Hence, the packet length varies from 80bits to 328 bits. 
+\ac{BLE} is principally composed of two types of packets, advertisement (Figure~\ref{fig:advertisement}) and data (Figure~\ref{fig:data}). Both packet types vary in length dependent on the payload but share a 32 bit advertising access address field, a 24 bit \ac{CRC} field, an 8 bit header and an 8 bit length field which defines the \ac{PDU} size (the last 2 field are often collectively called the header field). Advertisement \ac{PDU}s range from 0 to 29 bytes (232bits), meaning the total packet size can vary between 72 and 320 bits. The over-the-air data rate is 1Mbit/s, meaning advertisement packets are transmitted at a rate between 72 and 320$\mu$s (a single bit is transmitted every 1$\mu$s). In addition to the access code and \ac{CRC} fields, data packets consists of an 8 bit preamble and a \ac{PDU} varying between 0 and 27 bytes (4 of these bytes are reserved for encryption). Hence, the packet length varies from 80bits to 296 bits (328 including encryption). 
 
 \begin{figure}[!h]
 	\centering
@@ -322,30 +322,30 @@ While explained for completeness, advertisement and packets used in the initial 
 As previously mentioned, to achieve high throughputs notifications are used. To achieve the maximum throughput, it is desirable to send notifications as fast as possible. However, data cannot be sent out without flow control, and all notification packets must first be received then acknowledged before the next packet is sent. When a packet is sent, there is a mandatory 150$\mu$s inter-frame period. For the maximum throughput the connection receiving device would just acknowledge the data in an 80 bit acknowledgment response. Another 150$\mu$s frame would occur between this responding device and a transmitting device, bringing the total time up to:
 
 \begin{displaymath}
-328\mu s + 150\mu s + 80\mu s + 150\mu s = 708\mu s
+296\mu s + 150\mu s + 80\mu s + 150\mu s = 676\mu s
 \end{displaymath}
 
- This is shown graphically in Figure~\ref{fig:turnaround}. The total duty cycle is 
+ This is shown graphically in Figure~\ref{fig:turnaround} (encryption is enabled). The maximum duty cycle is obtained when encryption is used 
 
 \begin{displaymath}
-\frac{328\mu s}{708\mu s} \approx 58\%
+\frac{328\mu s + 80\mu s}{708\mu s} \approx 55.6\%
 \end{displaymath}
 which is relatively low when compared radio technology duty cycles, e.g. \ac{BTC}. The 150$\mu$s inter frame period exists to prevents the silicon from heating to excessively, preventing power consuming hardware being required to recalibrate the radio. 
 
 From the figure it is possible to calculate the upper bound for the number of packets that can be transmitted per second is
 
-\begin{displaymath}\frac{1000000\mu s}{708\mu s} \approx  1414.43\;packetes/second\end{displaymath}
+\begin{displaymath}\frac{1000000\mu s}{676\mu s} \approx  1479.29\;packetes/second\end{displaymath}
 
-Of the 41 bytes (328 bits) sent for a notification packet, only 27 of them are considered for application use, and 4 of those are used for encryption. Even if encryption is not used, for complexity reasons, the maximum amount of application data is restricted 23 bytes.
+Of the 37 bytes (296 bits) sent for a notification packet, 27 of them are known as the data payload. Even if encryption is not used, 4 bytes of the 27 are required for the L2CAP header use. The remaining 23 bytes are quotes as the available application bytes.
 
 \begin{displaymath}
-1414.1293 \frac{packets}{s} \times 184 bits \approx 260 kbp/s
+1479.29 \frac{packets}{s} \times 23 \times 8 bits \approx 270 kbp/s
 \end{displaymath}
 
 While a lot of literate quote{CITATION PLEASE] this as the maximum usable data rate of this 23 bytes 3 bytes are required to identify the command type (notification) through an op-code (1 bytes) and which attribute it belongs to through an attribute handle (2 bytes). This means that only 20 bytes of the original 27 reserved for the application are usable, reducing the upper bound for throughput to 
 
 \begin{displaymath}
-1414.1293 \frac{packets}{s} \times 160 bits \approx 226 kbp/s
+1479.29 \frac{packets}{s} \times 20 \times 8 bits \approx 236.7 kbp/s
 \end{displaymath}
 
 Here forth, the usable payload of a "notification" or "data packet" is 20 bytes. When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every notification packet sent has a fixed cost of 80 bits associated with it. TALK ABOUT PCK EFFICIENCY 
@@ -578,16 +578,13 @@ Currently the general feeling is towards using an Arduino micro controller simpl
 
 \subsection{Memory}
 
- A hard specification is the real time update of the \ac{EEG} signals. While memory could be used to store
+ A hard specification is the real time update of the \ac{EEG} signals. Long term storage is not considered real time. Further, high capacity memory modules come in small packages, outside some requiring factory assembly . An option to achieve large storage capacity without difficult packages is to use popular SD cards. SD cards, and the variation, microSD cards are extremely easy to communication and an experiment was performed with an Arduino to discover power , However, during reading and writing the current consumption is between 25 to 45mA. 
 
-
-
-
-The complexity attributed of adding external NAND flash, and the original investigation of the project.
+Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes.
 
 
 \subsection{Analogue to Digital Converter}
-Acquisition of \ac{EEG} signals from the front end consists of  using an \ac{ADC}. Many \ac{BLE} \ac{SoC} contain \ac{ADC}s, though, for example the CSR1010 are only capable to gathering 700 samples per second. Operating the \ac{ADC} requires a high speed controller. For the standard operating range of \ac{EEG} signals, the \ac{MCU} will likely need to remain powered 
+Acquisition of \ac{EEG} signals from the front end consists of using an \ac{ADC}. Many \ac{BLE} \ac{SoC} contain \ac{ADC}s, though, for example the CSR1010 are only capable to gathering 700 samples per second. Operating the \ac{ADC} requires a high speed controller. For the standard operating range of \ac{EEG} signals, the \ac{MCU} will likely need to remain in an idle (active) state. For example, it takes the CSR1010 2.2ms to power up from a deep sleep state. This means 
 
 While 
 

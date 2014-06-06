@@ -468,7 +468,14 @@ maximum theoretical rate.  \text{ \textnormal{[sic]}}
 \frac{1000000 \mu s}{676 \mu s} \times 27 < 320 kbps
 \end{displaymath}
 
-320 to 300 is a generous approximation, it is . Different sources quote different numbers. From examining sources, it is believed 
+320 to 300 is a generous approximation, it is believe that the engineer actually rounded a smaller number, 305, which was calculated by including an unecessary 32 bit \ac{MIC}, which is only used for when encryption is enabled:
+
+\begin{displaymath}
+\frac{1000000 \mu s}{708 \mu s} \times 27 \approx 305 kbps \approx 300 kbps
+\end{displaymath}
+
+Throughout literature on \ac{BLE}, this is a recurring common mistake.  
+Different sources quote different numbers. From examining sources, it is believed the varation 
 
 In the second paragraph the engineer is highlighting some important facets of \ac{BLE} devices, and that is although one end of the link is determined by the lower of the two device's thorughputs. The engineer cites smart phones as such devices that restrict the link capability. This was seen in the nRF8001 - the iPhone 4S could not handle a connection interval less than 30ms. When asked how to show the math behind these numbers, they replied
 

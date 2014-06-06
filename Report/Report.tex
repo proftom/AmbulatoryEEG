@@ -468,11 +468,13 @@ maximum theoretical rate.  \text{ \textnormal{[sic]}}
 \frac{1000000 \mu s}{676 \mu s} \times 27 < 320 kbps
 \end{displaymath}
 
+320 to 300 is a generous approximation, it is . Different sources quote different numbers. From examining sources, it is believed 
+
 In the second paragraph the engineer is highlighting some important facets of \ac{BLE} devices, and that is although one end of the link is determined by the lower of the two device's thorughputs. The engineer cites smart phones as such devices that restrict the link capability. This was seen in the nRF8001 - the iPhone 4S could not handle a connection interval less than 30ms. When asked how to show the math behind these numbers, they replied
 
 \begin{quote}\itshape
 
-''While testing our uEnergy silicon (CSR1010) at HCI level I can achieve 
+While testing our uEnergy silicon (CSR1010) at HCI level I can achieve 
 ~250kbps throughput using a dedicated test application (i.e. data 
 generated on-chip). HCI packets are 27 bytes, so to get my earlier 
 number I simply did (20/27) * 250 to get an application-level data rate 
@@ -481,11 +483,11 @@ number I simply did (20/27) * 250 to get an application-level data rate
 
 I haven't tested raw throughput at the application level, but as our ATT 
 protocol runs on stack alongside the HCI/controlller level, it should 
-not see any additional processing overheads.'' \text{ \textnormal{[sic]}}
+not see any additional processing overheads. \text{ \textnormal{[sic]}}
 
 \end{quote}
 
-The \ac{HCI} is the layer between the host and controll shown in Figure~\ref{fig:ble_arch}
+The \ac{HCI} is the component between the host and controller layers shown in Figure~\ref{fig:ble_arch}. The engineer is saying that 
 
 the full throughput as defined in the \ac{BLE} specification. \ac{CSR} supplied a development kit consisting of  provided a development board (CNS10004V5D) and \ac{USB} dongle. The CSR1010 is part of \ac{CSR} 's new $\mu$Energy product line, for which \ac{CSR} have developed their own compiler and \ac{IDE} known as xIDE. \
 
@@ -803,6 +805,10 @@ A vast array of technologies and tools were used throughout this project. Below 
 
 The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it publically available online at the git repositry address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
+
+Numbers all over the place
+Alot quote 708 as minimum, but it's 676 and confirmed
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
 
 \section{Bibliography}
 \clearpage

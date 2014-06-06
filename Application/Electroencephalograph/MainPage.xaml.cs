@@ -184,7 +184,7 @@ namespace Electroencephalograph
             //var x = await batteryData.ReadClientCharacteristicConfigurationDescriptorAsync();
             
             TimerElapsedHandler f = new TimerElapsedHandler(batchUpdate);
-            periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0,400));
+            periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0,40000));
             
         }
 

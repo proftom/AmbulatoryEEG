@@ -57,7 +57,7 @@
   <configuration name="Release" >
    <property key="csr100x_keyr" >hr_sensor_csr100x.keyr</property>
    <property key="csr101x_a05_keyr" >eeg_sensor_csr101x_A05.keyr</property>
-   <property key="debugtransport" ></property>
+   <property key="debugtransport" >[SPITRANS=USB SPIPORT=0]</property>
    <property key="defines" ></property>
    <property key="libs" ></property>
    <property key="master_db" >app_gatt_db.db</property>

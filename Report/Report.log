@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  7 JUN 2014 16:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  7 JUN 2014 17:11
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -960,11 +960,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count305
 \@quotereset=\count306
-(C:\Repository\AmbulatoryEEG\Report\Report.aux
-
-LaTeX Warning: Label `fig:boardv1' multiply defined.
-
-)
+(C:\Repository\AmbulatoryEEG\Report\Report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
@@ -981,7 +977,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 \AtBeginShipoutBox=\box41
 Package hyperref Info: Link coloring ON on input line 78.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
@@ -1388,72 +1385,75 @@ otificationpacketsperconnecitoninterval[] \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 14
 <assets/nrfsim.png, id=574, 432.86719pt x 275.52937pt>
 File: assets/nrfsim.png Graphic file (type png)
  <use assets/nrfsim.png>
-Package pdftex.def Info: assets/nrfsim.png used on input line 601.
+Package pdftex.def Info: assets/nrfsim.png used on input line 600.
 (pdftex.def)             Requested size: 221.9316pt x 141.26646pt.
 
 <assets/nrfwave.png, id=575, 1053.9375pt x 246.1697pt>
 File: assets/nrfwave.png Graphic file (type png)
 
 <use assets/nrfwave.png>
-Package pdftex.def Info: assets/nrfwave.png used on input line 609.
+Package pdftex.def Info: assets/nrfwave.png used on input line 608.
 (pdftex.def)             Requested size: 488.25221pt x 114.04326pt.
 
-Overfull \hbox (44.38902pt too wide) in paragraph at lines 609--610
+Overfull \hbox (44.38902pt too wide) in paragraph at lines 608--609
  [] 
  []
 
 [26 <C:/Repository/AmbulatoryEEG/Report/assets/nrfsim.png> <C:/Repository/Ambul
 atoryEEG/Report/assets/nrfwave.png>]
 Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
-although it is yet undefined on input line 642.
+although it is yet undefined on input line 641.
  [27]
 Package acronym Info: Label `acro:SPI' newly defined as it shall be overridden
-although it is yet undefined on input line 650.
+although it is yet undefined on input line 649.
 Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
-although it is yet undefined on input line 650.
+although it is yet undefined on input line 649.
 Package acronym Info: Label `acro:PIO' newly defined as it shall be overridden
-although it is yet undefined on input line 650.
+although it is yet undefined on input line 649.
  [28]
 Package acronym Info: Label `acro:QFN' newly defined as it shall be overridden
-although it is yet undefined on input line 666.
+although it is yet undefined on input line 665.
  [29]
 <assets/boardv1.png, id=642, 501.37312pt x 626.34pt>
 File: assets/boardv1.png Graphic file (type png)
  <use assets/boardv1.png>
-Package pdftex.def Info: assets/boardv1.png used on input line 695.
+Package pdftex.def Info: assets/boardv1.png used on input line 694.
 (pdftex.def)             Requested size: 399.47415pt x 499.06566pt.
+
+<assets/Schematic.png, id=643, 847.7271pt x 540.14598pt>
+File: assets/Schematic.png Graphic file (type png)
+
+<use assets/Schematic.png>
+Package pdftex.def Info: assets/Schematic.png used on input line 702.
+(pdftex.def)             Requested size: 665.79478pt x 424.23807pt.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
-although it is yet undefined on input line 703.
-
-<assets/pcb1.jpg, id=644, 3276.24pt x 2457.18pt>
+although it is yet undefined on input line 710.
+ <assets/pcb1.jpg, id=645, 3276.24pt x 2457.18pt>
 File: assets/pcb1.jpg Graphic file (type jpg)
- <use assets/pcb1.jpg>
-Package pdftex.def Info: assets/pcb1.jpg used on input line 710.
+
+<use assets/pcb1.jpg>
+Package pdftex.def Info: assets/pcb1.jpg used on input line 717.
 (pdftex.def)             Requested size: 399.47415pt x 299.57306pt.
-File: assets/boardv1.png Graphic file (type png)
 
-<use assets/boardv1.png>
-Package pdftex.def Info: assets/boardv1.png used on input line 718.
-(pdftex.def)             Requested size: 399.47415pt x 499.06566pt.
-
-<assets/boardfinal.png, id=645, 515.67656pt x 676.02562pt>
+<assets/boardfinal.png, id=646, 515.67656pt x 676.02562pt>
 File: assets/boardfinal.png Graphic file (type png)
 
 <use assets/boardfinal.png>
-Package pdftex.def Info: assets/boardfinal.png used on input line 726.
+Package pdftex.def Info: assets/boardfinal.png used on input line 727.
 (pdftex.def)             Requested size: 399.47415pt x 523.70813pt.
  [30] [31] [32 <C:/Repository/AmbulatoryEEG/Report/assets/boardv1.png>] [33 <C:
-/Repository/AmbulatoryEEG/Report/assets/pcb1.jpg>]
-[34] [35 <C:/Repository/AmbulatoryEEG/Report/assets/boardfinal.png>] [36
+/Repository/AmbulatoryEEG/Report/assets/Schematic.png>] [34 <C:/Repository/Ambu
+latoryEEG/Report/assets/pcb1.jpg>] [35 <C:/Repository/AmbulatoryEEG/Report/asse
+ts/boardfinal.png>] [36
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 815.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 816.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (203.06216pt too wide) in paragraph at lines 817--820
+Overfull \hbox (203.06216pt too wide) in paragraph at lines 818--821
 []\T1/cmr/m/n/10 Numbers all over the place Alot quote 708 as min-i-mum, but it
 's 676 and con-firmed http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/ 
  []
@@ -1461,29 +1461,26 @@ Overfull \hbox (203.06216pt too wide) in paragraph at lines 817--820
 [37] [38
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 867.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 868.
  [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 867.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 868.
  (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 867.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 867.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 868.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 868.
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 48C9CABE50F21B49ECE8342AAFFBD8DF;2158.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 867.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 868.
  ) 
 Here is how much of TeX's memory you used:
- 17821 strings out of 493921
- 272447 string characters out of 3144873
+ 17828 strings out of 493921
+ 272589 string characters out of 3144873
  497018 words of memory out of 3000000
- 20667 multiletter control sequences out of 15000+200000
+ 20673 multiletter control sequences out of 15000+200000
  17031 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  44i,8n,48p,1592b,1551s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1504,9 +1501,9 @@ fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (40 pages, 6447203 bytes).
+Output written on Report.pdf (40 pages, 6690403 bytes).
 PDF statistics:
- 1237 PDF objects out of 1440 (max. 8388607)
+ 1238 PDF objects out of 1440 (max. 8388607)
  179 named destinations out of 1000 (max. 500000)
- 401 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 406 words of extra memory for PDF output out of 10000 (max. 10000000)
 

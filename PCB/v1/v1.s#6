@@ -10165,7 +10165,6 @@ Metric Code Size 5664</description>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0402" value="10K"/>
 <part name="AIO0" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="AIO1" library="wirepad" deviceset="1,6/0,8" device=""/>
-<part name="AIO2" library="wirepad" deviceset="1,6/0,8" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10231,7 +10230,6 @@ Metric Code Size 5664</description>
 <instance part="R7" gate="G$1" x="-101.6" y="53.34" rot="R270"/>
 <instance part="AIO0" gate="P" x="-55.88" y="15.24" rot="R90"/>
 <instance part="AIO1" gate="P" x="-63.5" y="15.24" rot="R90"/>
-<instance part="AIO2" gate="P" x="-71.12" y="15.24" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10828,12 +10826,6 @@ Metric Code Size 5664</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="AIO[1]"/>
 <pinref part="AIO1" gate="P" pin="P"/>
-</segment>
-</net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="AIO[2]"/>
-<pinref part="AIO2" gate="P" pin="P"/>
 </segment>
 </net>
 </nets>

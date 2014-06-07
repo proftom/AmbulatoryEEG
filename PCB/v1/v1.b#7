@@ -3254,10 +3254,10 @@ design rules under a new name.</description>
 <wire x1="5.040378125" y1="21.45961875" x2="5.040378125" y2="21.540378125" width="0.25" layer="1"/>
 <wire x1="14.75" y1="10.5" x2="14.75" y2="11.75" width="1" layer="1"/>
 <wire x1="14.75" y1="10.5" x2="14.75" y2="11.75" width="1" layer="16"/>
-<wire x1="18.665" y1="38.36" x2="18.665" y2="38.365" width="0" layer="19" extent="1-16"/>
-<wire x1="14.75" y1="10.5" x2="14.75" y2="10.5" width="0" layer="19" extent="1-16"/>
 <wire x1="15" y1="12.5" x2="14.75" y2="12.25" width="0.25" layer="1"/>
 <wire x1="14.75" y1="12.25" x2="14.75" y2="11.75" width="0.25" layer="1"/>
+<wire x1="18.665" y1="38.36" x2="18.665" y2="38.365" width="0" layer="19" extent="1-16"/>
+<wire x1="14.75" y1="10.5" x2="14.75" y2="10.5" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="VDD_CORE">
 <contactref element="C12" pad="2"/>
@@ -3527,7 +3527,6 @@ design rules under a new name.</description>
 <signal name="N$40">
 <contactref element="U$2" pad="1"/>
 <contactref element="R6" pad="2"/>
-<wire x1="21.788" y1="19.754740625" x2="22.504740625" y2="19.754740625" width="0" layer="19" extent="1-16"/>
 <wire x1="20" y1="20.85" x2="20" y2="18.5" width="0.5" layer="16"/>
 <via x="20" y="18.5" extent="1-16" drill="0.35"/>
 <wire x1="20" y1="18.5" x2="21.17" y2="19.625" width="0.5" layer="1"/>

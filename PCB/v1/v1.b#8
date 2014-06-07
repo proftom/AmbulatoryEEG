@@ -97,7 +97,6 @@
 <rectangle x1="11.025" y1="24.235" x2="12.075" y2="24.625" layer="29" rot="R270"/>
 <rectangle x1="10.5225" y1="24.2475" x2="11.5575" y2="24.6275" layer="29" rot="R270"/>
 <rectangle x1="20.2475" y1="20.7025" x2="23.4125" y2="21.5125" layer="29" rot="R90"/>
-<text x="0.75" y="37.75" size="1.778" layer="16" rot="MR180">K3</text>
 <text x="1.5" y="27.5" size="0.6096" layer="16" rot="MR270">Thomas Morrison</text>
 <rectangle x1="10.75" y1="24" x2="13.75" y2="25.75" layer="29"/>
 <rectangle x1="9" y1="20.25" x2="10.75" y2="23.5" layer="29"/>
@@ -112,6 +111,7 @@
 <rectangle x1="26.365" y1="5.17" x2="26.725" y2="5.64" layer="29"/>
 <rectangle x1="22.385" y1="5.46" x2="23.295" y2="5.655" layer="29"/>
 <rectangle x1="11.25" y1="20.25" x2="14.39" y2="20.495" layer="1"/>
+<text x="4.25" y="36.25" size="1.778" layer="16" rot="MR0">V3</text>
 </plain>
 <libraries>
 <library name="ATMEL-AT24C512C-SHD-B">

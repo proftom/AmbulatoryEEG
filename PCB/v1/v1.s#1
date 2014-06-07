@@ -7832,7 +7832,7 @@ Metric Code Size 5664</description>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="C14" library="AVX_By_element14_Batch_1" deviceset="UQCL2A100JAT2A/500" device="" value="470n"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="C16" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="2u2"/>
+<part name="C16" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="47n"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="VDD2" library="supply1" deviceset="VDD" device=""/>
 <part name="L1" library="AVX_By_element14_Batch_1" deviceset="12107C102JAT2A" device="" value="4.7uH"/>
@@ -7861,7 +7861,7 @@ Metric Code Size 5664</description>
 <part name="AIO1" library="wirepad" deviceset="1,6/0,8" device=""/>
 <part name="C21" library="resistor" deviceset="C-EU" device="C0805" value="47u"/>
 <part name="C22" library="AVX_By_element14_Batch_1" deviceset="UQCL2A0R5BAT2A/500" device="" value="2.7 pF"/>
-<part name="C17" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="47n"/>
+<part name="C17" library="AVX_By_element14_Batch_1" deviceset="UQCL2A1R0BAT2A/500" device="" value="2u2"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="MISO3" library="wirepad" deviceset="1,6/0,8" device=""/>

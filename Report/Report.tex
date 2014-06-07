@@ -107,7 +107,7 @@ Final Year Project Report 2014\\[17pt]
 Project Title: & \textbf{A Wireless  Low Energy Ambulatory Electroencephalogram} \\[12pt]
 Student: & \textbf{Thomas Alexander Morrison} \\[12pt]
 CID: & \textbf{00642176} \\[12pt]
-Course: & \textbf{ISE4} \\[12pt]
+Course: & \textbf{EIE4} \\[12pt]
 Project Supervisor: & \textbf{James Mardell} \\[12pt]
 Second Marker: & \textbf{Dr. Pants Georgiou} \\
 \end{tabular}
@@ -177,7 +177,7 @@ Originally the project was introduced as "Maximising Bluetooth Low Energy throug
 
 Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the EEG sensors and a computer cause patients to remain fairly immobile and hence are impracticable for long periods of use. This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device along with its power consumption.
 
-Hard requirements of the project include 
+Idealistic requirements of the project include 
 \begin{itemize}
 	\item Running time of atleast 12 hours
 	\item Channel resolution of 8 bits (albeit number of channels undefined)
@@ -354,18 +354,22 @@ The \ac{BLE} specification defines no maximum
 
 The \ac{BLE} protocol was not designed for high throughput applications, but rather for low latency episodic communication devices transferring small data payloads of representing device state. The energy per bit is low compared other popular technologies, and should not be used as the bottom-line metric for performance. Rather, a holistic metric of the whole system energy consumption for a specific use case will form the basis of the performance metric in this report.
 
+
+
+
+
+
+
+
 \clearpage
 
 \section{Preliminary Research}
 
-This section deals with evaluating the technology and radios
-Equipment used to evaluate 
-
-Wireshark etc
+This chapter deals with evaluating the \ac{BLE} devices to choose a device most suitable for a maximising throughput and \ac{EEG} signals for an \ac{AEEG} system. This chapter goes on to evaluate and select \ac{AEEG} ancillary components required for the prototype.
 
 \subsection{Radio Evaluation}
 
-There are a number of competing companies int the \ac{BLE} consume space. The most popular chip manufacturers at the time of evaluation are\ac{TI}, \ac{NS} and \ac{CSR}, although  other manufacturers exist, they normally design combo-wireless technology chips, e.g. Broadcomm, which only offers WiFi, \ac{BTC} and \ac{BLE} combined \ac{SoC}. These chips are not suitable for this project due to their complexity, packaging and intend application - the typical use case of such combo-chips are in high powered devices such as tablets, smart phones and notebooks. 
+There are a number of competing companies int the \ac{BLE} consumer space. The most popular chip manufacturers at the time of evaluation are\ac{TI}, \ac{NS} and \ac{CSR}, although  other manufacturers exist, they normally design combo-wireless technology chips, e.g. Broadcomm, which only offers WiFi, \ac{BTC} and \ac{BLE} combined \ac{SoC}. These chips are not suitable for this project due to their complexity, packaging and intend application - the typical use case of such combo-chips are in high powered devices such as tablets, smart phones and notebooks. 
 
 \ac{TI} provided an inexpensive \ac{BLE} packet sniffer which was used extensively throughout this project.
 
@@ -377,9 +381,7 @@ There are a number of competing companies int the \ac{BLE} consume space. The mo
 	\label{fig:sniffer}
 \end{figure}
 
-Different sources [citation] will calculate the application throughput differently. 
-
-\ac{BLE} data packets can carry a payload of upto 20 bytes
+As discussed in the preivous sectino, to achieve the highest throughput values, the \ac{BLE} communication method used is notifications . Notification data packets can carry a usable payload of upto 20 bytes
 
 After sourcing
 
@@ -439,8 +441,6 @@ A maximum support frequency running a solo channel is approximately 1328 Hz.
 \subsubsection{nRF51822}
 Another \ac{NS} product tested was the nRF51822. Information on the suppport packets per connection event was also not present in the datasheet\cite{nrf51822}. This device was found capable of receiving up to 6 packets per second, and this was verified by an engineer\cite{olme}. While a marked improvement over the nRF8001, this meant that the device was only capable of operating at 60% of the maximum throughput capable as claimed in the specification. The maximum support frequency per channel for 16 channels at 8 bits resolution is 500Hz.
 
-Unfortunately the chip came as part of a larger development kit and accurate power measurements were not attainable, however the support softwares suite included a power calculator [CITE BATTERY SECTION].
-
 \clearpage
 
 \subsubsection{CSR1010}
@@ -499,7 +499,7 @@ The \ac{HCI} is the component between the host and controller layers shown in Fi
 
  \ac{CSR} supplied a development kit consisting of  provided a development board (CNS10004V5D) and \ac{USB} dongle. The CSR1010 is part of \ac{CSR} 's new $\mu$Energy product line, for which \ac{CSR} have developed their own compiler and \ac{IDE} known as xIDE. For initial throughput testing, an example health thermometer application was used. From exploring and understanding the main features of the \ac{OSAL}, it was immediately possible to increase the number of notification packets sent per connection interval from 1 to 8. 
 
-The standard mechanism provided in the example, is for every connection interval a confirmation of the first acknowledge is raised in the application layer. This is used in the program as a point of reference for application layer timers, so schedule the next wake up time, etc.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as it appears the buffer queue is 8 packets in size. When more than 8 are added to the queue, they are ignored, causing data loss. Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are correctly sent in order. While it is possible to continously flood the stack (buffer queues) with more notification requests, without knowing if the stack is capable of dealing with them, data will be lost. This mechanism is visualised in Figure~\ref{fig:nols}. 
+The standard mechanism provided in the example, is for every connection interval a confirmation of the first acknowledge is raised in the application layer. This is used in the program as a point of reference for application layer timers, so schedule the next wake up time, etc.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as it appears the buffer queue is 8 packets in size. When more than 8 are added to the queue, they are ignored, causing data loss. Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are correctly sent in order. While it is possible to continously flood the stack (buffer queues) with more notification requests, without knowing if the stack is capable of dealing with them, data may be lost. This mechanism is visualised in Figure~\ref{fig:nols}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -558,33 +558,46 @@ In the 46.060 second period a total of 55286 notification packets were captured,
 \frac{55286}{46.060} = 1200.30395137\; packets/s
 \end{displaymath}
 
-For a 7.5ms \ac{CI}, the number of \ac{CE} is 133.333 and the number of packets per connection interval is
+For the 7.5ms \ac{CI} used, the number of \ac{CE} is 133.333 and the number of packets per connection interval is
 
 \begin{displaymath}
 \frac{1200.30395137}{133.3333} = 9.0027\; packets/s
 \end{displaymath}
 
-Therefore 9 packets per connection interval at 7.5ms. This corresponding to a throughput of 192kbps or 90\% of the theoretical maximum. A comprehensive explanation of the code used to achieved this is provided in the later section \ref{Prototype}. 
+Therefore 9 packets per connection interval at 7.5ms. This corresponding to a throughput of 192kbps or over 80\% of the theoretical maximum. A comprehensive explanation of the code used to achieved this is provided in the later section \ref{Implementation}. 
 
+\clearpage
 \subsubsection{CC2540 and CC2541}
-\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first, and arguably the most popular [need to CITE?] development kits. The CC2540 differs in that it's range and power usage are increased, though it's throughput is still theoretically the same.
+\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first, and arguably the most popular [need to CITE?] development kits. The CC2540 differs in that it's range and power usage are increased, though it's throughput is theoretically the same.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = \textwidth]{sensortag.png}
+	\end{center}
+	\caption{SensorTag hardware (contains CC2541) and programmer}
+	\label{fig:sensortag}
+\end{figure}
 
 Again, the associated white papers did not document the packet throughput per connection event. Through contact with a \ac{TI} employee [CITE], there is a hardware limitation of 4 buffers, limiting only 4 packets per connection event (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per connection event by refilling the buffers within the connection event, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per connection event to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
 
 The CC2541 (and also CC2540) is a full \ac{SoC} - a programmable \ac{MCU} is packages togeter with the radio hardware. This has certain economical advantages, as common hardware and footprint is shared between the radio and \ac{MCU}. However, the Nordic company Chipcon who originally developed the hardware (Texas Instruments has since acquired them), relied on the Swedish tool chain provider, IAR, for the development tool suite and chain. \ac{TI} still relies up this tool software suite, haven't not invested in their own facilities to develop for the platform. A single software license is approximately 2000 USD. While IAR do offer a code-limited version, it is too small to contain all the necessary libraries. IAR also provide a 30 day trail, which is what is currently being used for evaluation, but proceeding with this chip for the prototype may be economically impossible.
 
-Much like the CSR1010, a similar \ac{OSAL} existed for the CC2540/1, 
+For the measured packet througput, for 16 channels running simultaneously, at 8 bit resolution, the highest achievable detectable frequency is approximately 384 Hz.
 
-For 16 channels running simultaneously, at 8 bit resolution, the highest achievable detectable frequency is approximately 384 Hz.
+The observant reader may notice that the \ac{BLE} sniffer from \ac{TI} is actually the CC2540 chip, which is reported as limited to between 4 and 5 packets per \ac{CE}. However, when loaded with the firmware as a sniffer, it is capable of sniffing many more packets than this. After contacting a \ac{TI} employee about this disparity, they reported that the sniffer uses a completely different stack:
+
+\begin{quote}\itshape The sniffer is capable of listening to any number of packets during a single connection event. Note that the CC254x sniffer SW is completely different than the CC254x stack.\end{quote}
+
+ The engineer highlights that the software used on the sniffer is completely different than that used on the normal CC254x stack - this is presumably means the sniffer runs a reduced/highly specific operating system, to reduce overheads associated with a more generic system. This may mean the hardware is capable of sending large numbers of notifications per \ac{CE} but either no supporting firmware or a ac{MCU} powerful enough can drive the chip to these operational levels. 
 
 \subsection{Batteries}
 There are many different battery technologies available. For the device a small, low profile low footprint, a lightweight battery is required. Given that \ac{BLE} can consume upto 15mA at peak current draw, taking this as the upper bound means that for 12 hours of continuous use batteries with capacities of 180mAh should be considered. Although the radio will dominate, other parts of the circuit such as the Microprocessor will consume a small amount of power, so this figure is arbitrarily upped to 200mAh. Note that peak current is an unfair way to measure current consumption in \ac{BLE}, however it is being used here as a worst case scenario. 
 
 Two batteries technologies which satisfy these requirements are Lithium-ion (the popular CR2032 is typically advertised as an energy source with many \ac{BLE} modules) or Zinc-air batteries with capacities of 600mAh cheaply available. Common voltages are 1.4V to 1.65V (radios require between 1.8 -3.6V). However the batteries are light, less than 2g each (one CR2032 weighs, on average, over 3g), therefore they can be combined in series to provide a suitable voltage and a large capacity (over 1Ah). Further, this high voltage will allow the effective radio range of the \ac{BLE} device to increase. If a Zinc-air cell exhibits damage, unlike most technologies, no dangerous chemicals are present. The downside to zinc-air batteries is that they must be vented to an oxygen environment (cannot be hermetically sealed) which in turn causes them to lose their charge over time relatively quick once exposed to air. Although the \ac{AEEG} use case requirements will require the device to have lifetime of hours to days, not years. 
 
-Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a combined series voltage of 2.8V. In the worst case of BLE drawing 15mA, the system lifetime is approximately 3 days. Recall 15mA is the peak current and BLE will never continuously draw this current, hence the lifetime of the device should be greater, depending on the throughput. ac{BLE} was designed that current is never continuously consumed, and between radio events, the battery has recovery periods, extending the useful life of the battery.
+Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a combined series voltage of 2.8V. In the worst case of BLE drawing 15mA, the battery lifetime is approximately 3 days. Recall 15mA is the peak current and BLE will never continuously draw this current, hence the lifetime of the device should be greater, depending on the throughput. ac{BLE} was designed that current is never continuously consumed, and between radio events, the battery has recovery periods, extending the useful life of the battery.
 
-Nordic semiconductor provides a system lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will require vertification in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
+Nordic semiconductor provides a battery  lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will require vertification in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
 
 \begin{displaymath}
 \frac{7.5ms}{0.676ms} = 11.094\; notification packets per conneciton interval
@@ -650,69 +663,68 @@ The most obvious and popular protocols for interfacing with an external \ac{ADC}
 
 The CSR1010 supports I2C natively along with provided a generic driver at the application layer. The most suitable device found was the Analogue Devices' AD7997 10bit 8 channel I2C ADC. The device can operate at different I2C speed, 100KHz and 400KHz. While there is the risk of interface issues, the level is less than that of the MCP3008, and believed tolerable. It is also highlighted that the correct working of the \ac{ADC} is not crucial to the project's success. This, and the fact that no analogue front end is available. 
 
-
-
 \subsection{Analogue Frontend}
 
 The biopoentials measured on the scalp required analogue filters and amplifiers to extract useful information. Ultimately the \ac{ADC}s should interface with this frontend.  At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analouge front-end design for manufacture, however these chips will not be available for use before the project deadline. Therefore no analogue front-end electronics will be present on the prototype board.
 
 \subsection{Component Selection}
 
+%can I say observant reader? Bit too pretentious
+The most important decision for this project was the choice of radio device. While the CC254x showed promise as with enough hardware and firmware understanding, it may mean the device could approach the theoretical limit. Infact, recently (after initial testing) a technical article was created on \ac{TI}'s website \cite{overlapproc} showing evidence of the device being capable of reaching high throughputs in league with other competiting devices. However considering the time, complexity and uncertainty that it can reach throughputs greater than competeting devices and the unavailability of an inexpensive tool chain renders this device undesirable. The CSR1010 is supplied with a free tool chain and \ac{IDE}, as \ac{CSR} engineers confirmed experiments with the device operating with high throughputs. The package of the radios were both similar, being of roughly the same size \ac{QFN} type, which while reported outside the department's \ac{PCB} production capabilities, was still considered of sufficiently large for in-house prototyping. Therefore the CSR1010 was the chosen device for the prototype.
 
+Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes, except that used internally inside a \ac{MCU} or externally as a bootloader (i.e. CSR1010 device requires a small external storage unit which contains the program code, loaded at power on time).
 
-The decision for the radio chip 
-
-While the CC2541 showed promise as with enough hardware understanding and firmware switches, it may mean the device could approach the theoretical limit, the unavailability of an inexpensive tool chain meant software development was problematic. The CSR1010 is supplied with a free tool chain and \ac{IDE}, as \ac{CSR} engineers confirmed experiments with the device operating with high throughputs. The package of the radios were both similar, being of roughly the same size \ac{QFN} package type, which while reported outside the department's \ac{PCB} production capabilities, was still considered of sufficiently large for in-house prototyping. 
-
-The application will be developed on a tablet, due to the expected ease of development. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence, although 
-
-Ultimately, the decision is to use an off-board \ac{ADC} module, the AD7997. The prototype will interface with two of these over an I2C bus, to provide 16 channels.
-
-
-Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes, except that used internally inside a \ac{MCU} or externally as a bootloader (i.e. CSR1010 device requires a small external storage unit which contains the program code, loaded at power on time)
+For the \ac{EEG} signal acquisition, use of an off-board \ac{ADC} module, the AD7997 seems the most sensible choice due to power and overall time and complexity minisation. The prototype will contain two devices to acheive 16 channels and interface with the \ac{MCU} (CSR1010) over the I2C bus.The choice of power source is still open between Lithium-ion and Zinc-air. To achieve longer lifetimes, it's most Zinc-air is the final choice as the device's energy source.
 
 The final component selection for the \ac{EEG} prototype is
 \begin{itemize}
-\item AD7997 8bit I2C ADC. Two are required for 16 channels
-\item CSR1010
+\item AD7997 2 x 8bit I2C ADC (two are required for 16 channels)
+\item CSR1010 single mode BLE device
 \item P675 Zinc Air batteries. Batteries of capacity 620mAh are readily available and inexpensive. Two are required in series to achieve an operable voltage
-\item AT24C512C-SSHD 512K Serial EEPROM Flash for CSR's non-volatile storage
+\item AT24C512C-SSHD 512K Serial EEPROM Flash for the CSR1010's non-volatile storage
 \end{itemize}
 
-The final \ac{PCB} prototype is expected to consist of 4 active components. 
+The application will be developed on a tablet, due to the expected ease of development. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence limited effort is required to port the application to Microsoft Windows\textregistered smartphone.
 
+
+\clearpage
 \section{Specification}
-
+\clearpage
 \section{Implementation}
 
 \subsection{Hardware}
 
 A challanging part of this project develping hardware. It was desired that the device should be small and light so it can be shown into a \ac{EEG} hat and worn by the user with no discomfort. To achieve a small size components were placed within close proximity of each other, and at angled orientatinons (tesselated)
 
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = 0.9\textwidth]{boardv1}
+		\includegraphics[width = \textwidth]{boardv1}
 	\end{center}
 	\caption{First PCB Design}
 	\label{fig:boardv1}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = 1.5\textwidth, angle = 90]{Schematic}
+		\includegraphics[width = 1.6\textwidth, angle = 90]{Schematic}
 	\end{center}
 	\caption{Schematic}
 	\label{fig:schematic}
 \end{figure}
 
-Typically, 
+The board was assembled by hand, and reflowed in a suitable oven
 
-The first iteration of the board. Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 7 meters within a building or 15 meters \ac{LOS}. 
-
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{oven}
+	\end{center}
+	\caption{Reflow oven}
+	\label{fig:oven}
+\end{figure} 
 
 To test both the process capability and variation, lines of decreasing thickness along with convex shapes were used . Total size was 26.5mm by 33.75mm
 
-\begin{figure}[htb]
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{pcb1.jpg}
 	\end{center}
@@ -720,7 +732,28 @@ To test both the process capability and variation, lines of decreasing thickness
 	\label{fig:pcb1.jpg}
 \end{figure}
 
+The first iteration of the board. Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 7 meters within a building or 15 meters \ac{LOS}. 
 
+
+Unfortunately, due to the size and complexity of some of the components, the oven did not give perfect results. Around the active component packets, the solder resist was remove to allow access for a soldering iron to ''touch up'' when the oven reflow failed to perform. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{center}
+	\end{center}
+	\caption{\ac{QFN} touch up with a iron. Solder resist purposefully removed around small active packages, and straight tracks used to encourage solder capillary action}
+	\label{fig:center}
+\end{figure} 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{side}
+	\end{center}
+	\caption{High magnification, shallow depth of field. Pads on side of \ac{QFN} used to}
+	\label{fig:side}
+\end{figure} 
+
+The second design added connections for Zinc-air battery holders, another \ac{ADC}, channel and debug pads/test points, reduced weight and better RF properties. Further, the final design was produced in a professional off-site \ac{PCB} house, making use of \ac{PTH} technology.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -738,10 +771,13 @@ To test both the process capability and variation, lines of decreasing thickness
 
 \subsection{Tablet Application}
 
+\clearpage
+
 \section{Results}
 
 Weighing in at a total of 
 
+\clearpage
 \section{Evaluation}
 
 The layout can be shurnk further through reducing distances between components. This was not done previously as it significantly increases the difficultly in hand assembly, which was the method used for the prototype. For the analouge front end
@@ -775,6 +811,24 @@ In the sole pursuit of maximizing throughput, the idea is to
 \min_{x}  \frac{1250\times x}{708} - \floor{ \frac{1250\times x}{708}} 
 \end{displaymath}
 
+The creates the following profile
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{notremain}
+	\end{center}
+	\caption{Remainder of packets left behind}
+	\label{fig:notremain}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 1.1\textwidth]{throughput}
+	\end{center}
+	\caption{Throughput varying with connection interval}
+	\label{fig:throughput}
+\end{figure}
+
 Mathematically this finds the points where 
 
 As CI increases chance of CRC error increases. Trade off between CI length, remainder
@@ -787,8 +841,8 @@ Unfortunately a connection interval must be between 7.5ms and 4000ms long, in in
 
 Hard to classify
 
-
 On the whole, the project has 
+
 Both ends of the link 
 
 Not all tablets will be able to run at full speed
@@ -797,12 +851,11 @@ Ideally, it is desirable to write a conference style paper.
 
 Never list packets per CI
 
-Useful for CSR, monies worth out of me
-
 Duplex
 
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance
+Useful for CSR, monies worth out of me
 
 \begin{itemize}
 	\item Git verisioning control - For versioning and segmenting the workflow
@@ -810,6 +863,7 @@ A vast array of technologies and tools were used throughout this project. Below 
 	\item Wireshark - Invaluable in analysing the packets and control flow between BLE radios, unfortunately must be used offline
 	\item SmartRF online packet sniffer - Useful as a low-speed packet sniffer. Extremely useful in the early days of the project, however the throughputs eventually obtained rendered the tool and hardware redundant as it was not capable of such speeds
 	\item Visual Studio 2013 - Primairly used for developing the tablet application. Highly useful for "knocking up" quick throughput expirements 
+	\item Schematic capture and \ac{PCB} layout using EagleCAD software
 \end{itemize}
 
 The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it publically available online at the git repositry address 
@@ -841,6 +895,7 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
 	\acro{GAP}{Generic Access Profile}
 	\acro{ATT}{Attribute Protocol}
 	\acro{CI}{connection interval}
+	\acro{CE}{connection event}
 	\acro{SIG}{Special Interests Group}
 	\acro{CODEC}{coder/decoder}
 	\acro{CRC}{Cyclic Redundancy Check}
@@ -855,13 +910,14 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
 	\acro{OSAL}{operating system abstraction layer}
 	\acro{USB}{Universal Serial Bus}
 	\acro{PCB}{printed circuit board}
-	\acro{QFN}{quad flat no-leads}
+	\acro{QFN}{quad flat no-leads package}
 	\acro{ADC}{analogue to digital converter}
 	\acro{DIP}{dual in-line package}
 	\acro{SPI}{Serial Peripheral Interface}
 	\acro{PIO}{programmable input/output}
 	\acro{HCI}{host controller interface}
 	\acro{MIC}{message integreity code}
+	\acro{PTH}{plated through hole}
 \end{acronym} 
 
 \section{User Guide}

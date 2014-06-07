@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  6 JUN 2014 16:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  7 JUN 2014 16:50
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1064,6 +1064,16 @@ Package biblatex Info: ... file 'Report.bbl' found.
 (C:\Repository\AmbulatoryEEG\Report\Report.bbl
 
 Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'asabe':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'carle':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'olme':
 (biblatex)                - Invalid format of field 'month'.
 
@@ -1098,14 +1108,14 @@ l.132 \clearpage
  [2
 
 ]
-[3]
 Package acronym Info: Label `acro:CSR' newly defined as it shall be overridden
 although it is yet undefined on input line 141.
 Package acronym Info: Label `acro:PCB' newly defined as it shall be overridden
 although it is yet undefined on input line 143.
- [4
 
-] [5
+[3
+
+] [4
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 182.
@@ -1115,38 +1125,38 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
-
-[6]
+ [5]
 Package acronym Info: Label `acro:BTC' newly defined as it shall be overridden
 although it is yet undefined on input line 196.
 Package acronym Info: Label `acro:CI' newly defined as it shall be overridden
 although it is yet undefined on input line 200.
- [7
 
-] <assets/blechannels.png, id=282, 578.16pt x 344.03531pt>
+[6
+
+] <assets/blechannels.png, id=273, 578.16pt x 344.03531pt>
 File: assets/blechannels.png Graphic file (type png)
 
 <use assets/blechannels.png>
 Package pdftex.def Info: assets/blechannels.png used on input line 208.
 (pdftex.def)             Requested size: 310.70287pt x 184.88387pt.
 
-<assets/blechannelswifi.png, id=285, 621.07031pt x 280.04625pt>
+<assets/blechannelswifi.png, id=276, 621.07031pt x 280.04625pt>
 File: assets/blechannelswifi.png Graphic file (type png)
 
 <use assets/blechannelswifi.png>
 Package pdftex.def Info: assets/blechannelswifi.png used on input line 216.
 (pdftex.def)             Requested size: 310.70287pt x 140.09969pt.
- [8 <C:/Repository/AmbulatoryEEG/Report/assets/blechannels.png> <C:/Repository/
+ [7 <C:/Repository/AmbulatoryEEG/Report/assets/blechannels.png> <C:/Repository/
 AmbulatoryEEG/Report/assets/blechannelswifi.png>]
 Package acronym Info: Label `acro:HCI' newly defined as it shall be overridden
 although it is yet undefined on input line 227.
- <assets/ble_arch.png, id=307, 581.17125pt x 492.33937pt>
+ <assets/ble_arch.png, id=298, 581.17125pt x 492.33937pt>
 File: assets/ble_arch.png Graphic file (type png)
 
 <use assets/ble_arch.png>
 Package pdftex.def Info: assets/ble_arch.png used on input line 231.
 (pdftex.def)             Requested size: 310.70287pt x 263.21489pt.
- [9 <C:/Repository/AmbulatoryEEG/Report/assets/ble_arch.png>]
+ [8 <C:/Repository/AmbulatoryEEG/Report/assets/ble_arch.png>]
 Package acronym Info: Label `acro:CODEC' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 239.
@@ -1159,21 +1169,21 @@ Package acronym Info: Label `acro:GAP' newly defined as it shall be overridden
 although it is yet undefined on input line 239.
 Package acronym Info: Label `acro:SIG' newly defined as it shall be overridden
 although it is yet undefined on input line 239.
- <assets/exampleprofile.png, id=335, 367.3725pt x 307.90031pt>
+ <assets/exampleprofile.png, id=326, 367.3725pt x 307.90031pt>
 File: assets/exampleprofile.png Graphic file (type png)
 
 <use assets/exampleprofile.png>
 Package pdftex.def Info: assets/exampleprofile.png used on input line 243.
 (pdftex.def)             Requested size: 221.9316pt x 186.01012pt.
- [10 <C:/Repository/AmbulatoryEEG/Report/assets/exampleprofile.png>] <assets/to
-pology.png, id=359, 655.69969pt x 258.9675pt>
+ [9 <C:/Repository/AmbulatoryEEG/Report/assets/exampleprofile.png>] <assets/top
+ology.png, id=350, 655.69969pt x 258.9675pt>
 File: assets/topology.png Graphic file (type png)
 
 <use assets/topology.png>
 Package pdftex.def Info: assets/topology.png used on input line 257.
 (pdftex.def)             Requested size: 443.86319pt x 175.30525pt.
 
-<assets/systemstate.png, id=360, 484.81125pt x 363.60844pt>
+<assets/systemstate.png, id=351, 484.81125pt x 363.60844pt>
 File: assets/systemstate.png Graphic file (type png)
 
 <use assets/systemstate.png>
@@ -1187,8 +1197,8 @@ Package acronym Info: Label `acro:CRC' newly defined as it shall be overridden
 although it is yet undefined on input line 273.
 Package acronym Info: Label `acro:PDU' newly defined as it shall be overridden
 although it is yet undefined on input line 273.
-[11 <C:/Repository/AmbulatoryEEG/Report/assets/topology.png>]
-<assets/advertisement.png, id=375, 591.71063pt x 453.19313pt>
+[10 <C:/Repository/AmbulatoryEEG/Report/assets/topology.png>]
+<assets/advertisement.png, id=366, 591.71063pt x 453.19313pt>
 File: assets/advertisement.png Graphic file (type png)
 
 <use assets/advertisement.png>
@@ -1198,7 +1208,7 @@ Package pdftex.def Info: assets/advertisement.png used on input line 277.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<assets/data.png, id=378, 453.19313pt x 161.10187pt>
+<assets/data.png, id=369, 453.19313pt x 161.10187pt>
 File: assets/data.png Graphic file (type png)
  <use assets/data.png>
 Package pdftex.def Info: assets/data.png used on input line 285.
@@ -1207,14 +1217,14 @@ Package pdftex.def Info: assets/data.png used on input line 285.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <C:/Repository/AmbulatoryEEG/Report/assets/systemstate.png>]
+[11 <C:/Repository/AmbulatoryEEG/Report/assets/systemstate.png>]
 Package acronym Info: Label `acro:SN' newly defined as it shall be overridden
 although it is yet undefined on input line 301.
 Package acronym Info: Label `acro:NESN' newly defined as it shall be overridden
 
 although it is yet undefined on input line 301.
 
-<assets/connection.png, id=403, 1233.10687pt x 423.08063pt>
+<assets/connection.png, id=393, 1233.10687pt x 423.08063pt>
 File: assets/connection.png Graphic file (type png)
 
 <use assets/connection.png>
@@ -1224,10 +1234,10 @@ Package pdftex.def Info: assets/connection.png used on input line 305.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <C:/Repository/AmbulatoryEEG/Report/assets/advertisement.png> <C:/Repositor
-y/AmbulatoryEEG/Report/assets/data.png>] [14 <C:/Repository/AmbulatoryEEG/Repor
+[12 <C:/Repository/AmbulatoryEEG/Report/assets/advertisement.png> <C:/Repositor
+y/AmbulatoryEEG/Report/assets/data.png>] [13 <C:/Repository/AmbulatoryEEG/Repor
 t/assets/connection.png>]
-<assets/turnaround.jpg, id=421, 526.96875pt x 192.72pt>
+<assets/turnaround.jpg, id=412, 526.96875pt x 192.72pt>
 File: assets/turnaround.jpg Graphic file (type jpg)
 
 <use assets/turnaround.jpg>
@@ -1238,7 +1248,7 @@ Overfull \hbox (41.96198pt too wide) in paragraph at lines 347--349
 []\T1/cmr/m/n/10 centering [] 
  []
 
-[15] [16 <C:/Repository/AmbulatoryEEG/Report/assets/turnaround.jpg>]
+[14] [15 <C:/Repository/AmbulatoryEEG/Report/assets/turnaround.jpg>]
 Package acronym Info: Label `acro:TI' newly defined as it shall be overridden
 although it is yet undefined on input line 368.
 Package acronym Info: Label `acro:NS' newly defined as it shall be overridden
@@ -1246,7 +1256,7 @@ although it is yet undefined on input line 368.
 Package acronym Info: Label `acro:SoC' newly defined as it shall be overridden
 although it is yet undefined on input line 368.
 
-<assets/sniffer.png, id=445, 256.70906pt x 583.42969pt>
+<assets/sniffer.png, id=436, 256.70906pt x 583.42969pt>
 File: assets/sniffer.png Graphic file (type png)
 
 <use assets/sniffer.png>
@@ -1254,194 +1264,211 @@ Package pdftex.def Info: assets/sniffer.png used on input line 374.
 (pdftex.def)             Requested size: 133.16031pt x 302.63737pt.
 
 
-LaTeX Warning: Reference `figure:nrf8001' on page 17 undefined on input line 39
+LaTeX Warning: Reference `figure:nrf8001' on page 16 undefined on input line 39
 0.
 
-[17
+[16
 
  <C:/Repository/AmbulatoryEEG/Report/assets/sniffer.png>]
-<assets/nrf8001stack.png, id=465, 656.4525pt x 213.79875pt>
+<assets/nrf8001stack.png, id=456, 656.4525pt x 213.79875pt>
 File: assets/nrf8001stack.png Graphic file (type png)
 
 <use assets/nrf8001stack.png>
 Package pdftex.def Info: assets/nrf8001stack.png used on input line 398.
 (pdftex.def)             Requested size: 399.47415pt x 130.10385pt.
 
-<assets/nrf8001.png, id=466, 825.83531pt x 619.56468pt>
+<assets/nrf8001.png, id=457, 825.83531pt x 619.56468pt>
 File: assets/nrf8001.png Graphic file (type png)
 
 <use assets/nrf8001.png>
 Package pdftex.def Info: assets/nrf8001.png used on input line 407.
 (pdftex.def)             Requested size: 399.47415pt x 299.70384pt.
 
-<assets/nrfcap.png, id=467, 910.15031pt x 399.74344pt>
+<assets/nrfcap.png, id=458, 910.15031pt x 399.74344pt>
 File: assets/nrfcap.png Graphic file (type png)
  <use assets/nrfcap.png>
 Package pdftex.def Info: assets/nrfcap.png used on input line 415.
 (pdftex.def)             Requested size: 621.40575pt x 272.92595pt.
 
-[18 <C:/Repository/AmbulatoryEEG/Report/assets/nrf8001stack.png> <C:/Repository
-/AmbulatoryEEG/Report/assets/nrf8001.png>] [19 <C:/Repository/AmbulatoryEEG/Rep
-ort/assets/nrfcap.png>] [20]
-Package acronym Info: Label `acro:USB' newly defined as it shall be overridden
-although it is yet undefined on input line 492.
-Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
-although it is yet undefined on input line 492.
- [21
+[17 <C:/Repository/AmbulatoryEEG/Report/assets/nrf8001stack.png> <C:/Repository
+/AmbulatoryEEG/Report/assets/nrf8001.png>] [18 <C:/Repository/AmbulatoryEEG/Rep
+ort/assets/nrfcap.png>] [19]
+Package acronym Info: Label `acro:MIC' newly defined as it shall be overridden
+although it is yet undefined on input line 471.
+ [20
 
 ]
+Package acronym Info: Label `acro:USB' newly defined as it shall be overridden
+although it is yet undefined on input line 500.
+Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
+although it is yet undefined on input line 500.
 Package acronym Info: Label `acro:OSAL' newly defined as it shall be overridden
 
-although it is yet undefined on input line 496.
+although it is yet undefined on input line 500.
 Package acronym Info: Label `acro:CE' newly defined as it shall be overridden
-although it is yet undefined on input line 498.
+although it is yet undefined on input line 502.
 
 
-Package acronym Warning: Acronym `CE' is not defined on input line 498.
+Package acronym Warning: Acronym `CE' is not defined on input line 502.
 
 
-Package acronym Warning: Acronym `CE' is not defined on input line 498.
+Package acronym Warning: Acronym `CE' is not defined on input line 502.
 
 
-Package acronym Warning: Acronym `CE' is not defined on input line 498.
+Package acronym Warning: Acronym `CE' is not defined on input line 502.
 
 
-Package acronym Warning: Acronym `CE' is not defined on input line 498.
+Package acronym Warning: Acronym `CE' is not defined on input line 502.
 
-<assets/nols.png, id=511, 935.74594pt x 453.19313pt>
+<assets/nols.png, id=508, 935.74594pt x 453.19313pt>
 File: assets/nols.png Graphic file (type png)
  <use assets/nols.png>
-Package pdftex.def Info: assets/nols.png used on input line 502.
+Package pdftex.def Info: assets/nols.png used on input line 506.
 (pdftex.def)             Requested size: 443.86319pt x 214.97162pt.
 
-<assets/8pckt.png, id=513, 497.60907pt x 302.63063pt>
+[21 <C:/Repository/AmbulatoryEEG/Report/assets/nols.png>]
+<assets/8pckt.png, id=522, 497.60907pt x 302.63063pt>
 File: assets/8pckt.png Graphic file (type png)
  <use assets/8pckt.png>
-Package pdftex.def Info: assets/8pckt.png used on input line 512.
+Package pdftex.def Info: assets/8pckt.png used on input line 516.
 (pdftex.def)             Requested size: 355.0919pt x 215.95903pt.
-
-[22 <C:/Repository/AmbulatoryEEG/Report/assets/nols.png>]
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 520.
+although it is yet undefined on input line 524.
 
-<assets/lsrad.png, id=527, 922.94812pt x 474.27188pt>
+<assets/lsrad.png, id=525, 922.94812pt x 474.27188pt>
 File: assets/lsrad.png Graphic file (type png)
  <use assets/lsrad.png>
-Package pdftex.def Info: assets/lsrad.png used on input line 524.
+Package pdftex.def Info: assets/lsrad.png used on input line 528.
 (pdftex.def)             Requested size: 443.86319pt x 228.08212pt.
 
-<assets/9pckt.png, id=529, 596.2275pt x 347.04657pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<assets/9pckt.png, id=527, 596.2275pt x 347.04657pt>
 File: assets/9pckt.png Graphic file (type png)
  <use assets/9pckt.png>
-Package pdftex.def Info: assets/9pckt.png used on input line 534.
+Package pdftex.def Info: assets/9pckt.png used on input line 538.
 (pdftex.def)             Requested size: 443.86319pt x 258.36201pt.
 
-[23 <C:/Repository/AmbulatoryEEG/Report/assets/8pckt.png> <C:/Repository/Ambula
-toryEEG/Report/assets/lsrad.png>]
-<assets/wireshark.png, id=538, 814.54312pt x 759.58781pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<assets/wireshark.png, id=529, 814.54312pt x 759.58781pt>
 File: assets/wireshark.png Graphic file (type png)
 
 <use assets/wireshark.png>
-Package pdftex.def Info: assets/wireshark.png used on input line 544.
+Package pdftex.def Info: assets/wireshark.png used on input line 548.
 (pdftex.def)             Requested size: 443.86319pt x 413.915pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package acronym Warning: Acronym `CE' is not defined on input line 557.
+Package acronym Warning: Acronym `CE' is not defined on input line 561.
 
+[22 <C:/Repository/AmbulatoryEEG/Report/assets/8pckt.png>]
 
-LaTeX Warning: Reference `Prototype' on page 24 undefined on input line 563.
+LaTeX Warning: Reference `Prototype' on page 23 undefined on input line 567.
 
-[24 <C:/Repository/AmbulatoryEEG/Report/assets/9pckt.png>]
+[23 <C:/Repository/AmbulatoryEEG/Report/assets/lsrad.png> <C:/Repository/Ambula
+toryEEG/Report/assets/9pckt.png>]
 Package acronym Info: Label `acro:MCU' newly defined as it shall be overridden
-although it is yet undefined on input line 575.
- [25 <C:/Repository/AmbulatoryEEG/Report/assets/wireshark.png>] [26]
-<assets/nrfsim.png, id=567, 432.86719pt x 275.52937pt>
+although it is yet undefined on input line 574.
+ [24 <C:/Repository/AmbulatoryEEG/Report/assets/wireshark.png>]
+Package acronym Info: Label `acro:AEEG' newly defined as it shall be overridden
+
+although it is yet undefined on input line 583.
+ [25]
+Overfull \hbox (99.66238pt too wide) detected at line 592
+[] \OT1/cmr/m/n/10 = 11\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 094 \OML/cmm/m/it/10 n
+otificationpacketsperconnecitoninterval[] \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 14
+\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7\OML/cmm/m/it/10 hours
+ []
+
+<assets/nrfsim.png, id=574, 432.86719pt x 275.52937pt>
 File: assets/nrfsim.png Graphic file (type png)
  <use assets/nrfsim.png>
-Package pdftex.def Info: assets/nrfsim.png used on input line 598.
+Package pdftex.def Info: assets/nrfsim.png used on input line 601.
 (pdftex.def)             Requested size: 221.9316pt x 141.26646pt.
 
-<assets/nrfwave.png, id=568, 1053.9375pt x 246.1697pt>
+<assets/nrfwave.png, id=575, 1053.9375pt x 246.1697pt>
 File: assets/nrfwave.png Graphic file (type png)
 
 <use assets/nrfwave.png>
-Package pdftex.def Info: assets/nrfwave.png used on input line 606.
+Package pdftex.def Info: assets/nrfwave.png used on input line 609.
 (pdftex.def)             Requested size: 488.25221pt x 114.04326pt.
 
-Overfull \hbox (44.38902pt too wide) in paragraph at lines 606--607
+Overfull \hbox (44.38902pt too wide) in paragraph at lines 609--610
  [] 
  []
 
-[27 <C:/Repository/AmbulatoryEEG/Report/assets/nrfsim.png> <C:/Repository/Ambul
+[26 <C:/Repository/AmbulatoryEEG/Report/assets/nrfsim.png> <C:/Repository/Ambul
 atoryEEG/Report/assets/nrfwave.png>]
 Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
-although it is yet undefined on input line 640.
- [28]
+although it is yet undefined on input line 642.
+ [27]
 Package acronym Info: Label `acro:SPI' newly defined as it shall be overridden
-although it is yet undefined on input line 648.
+although it is yet undefined on input line 650.
 Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
-although it is yet undefined on input line 648.
+although it is yet undefined on input line 650.
 Package acronym Info: Label `acro:PIO' newly defined as it shall be overridden
-although it is yet undefined on input line 648.
- [29]
+although it is yet undefined on input line 650.
+ [28]
 Package acronym Info: Label `acro:QFN' newly defined as it shall be overridden
-although it is yet undefined on input line 669.
- [30]
-<assets/boardv1.png, id=632, 501.37312pt x 626.34pt>
+although it is yet undefined on input line 666.
+ [29]
+<assets/boardv1.png, id=642, 501.37312pt x 626.34pt>
 File: assets/boardv1.png Graphic file (type png)
  <use assets/boardv1.png>
-Package pdftex.def Info: assets/boardv1.png used on input line 691.
+Package pdftex.def Info: assets/boardv1.png used on input line 695.
 (pdftex.def)             Requested size: 399.47415pt x 499.06566pt.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
-although it is yet undefined on input line 699.
+although it is yet undefined on input line 703.
 
-<assets/pcb1.jpg, id=634, 3276.24pt x 2457.18pt>
+<assets/pcb1.jpg, id=644, 3276.24pt x 2457.18pt>
 File: assets/pcb1.jpg Graphic file (type jpg)
  <use assets/pcb1.jpg>
-Package pdftex.def Info: assets/pcb1.jpg used on input line 706.
+Package pdftex.def Info: assets/pcb1.jpg used on input line 710.
 (pdftex.def)             Requested size: 399.47415pt x 299.57306pt.
 File: assets/boardv1.png Graphic file (type png)
 
 <use assets/boardv1.png>
-Package pdftex.def Info: assets/boardv1.png used on input line 714.
+Package pdftex.def Info: assets/boardv1.png used on input line 718.
 (pdftex.def)             Requested size: 399.47415pt x 499.06566pt.
 
-<assets/boardfinal.png, id=635, 515.67656pt x 676.02562pt>
+<assets/boardfinal.png, id=645, 515.67656pt x 676.02562pt>
 File: assets/boardfinal.png Graphic file (type png)
 
 <use assets/boardfinal.png>
-Package pdftex.def Info: assets/boardfinal.png used on input line 722.
+Package pdftex.def Info: assets/boardfinal.png used on input line 726.
 (pdftex.def)             Requested size: 399.47415pt x 523.70813pt.
- [31] [32] [33 <C:/Repository/AmbulatoryEEG/Report/assets/boardv1.png>] [34 <C:
+ [30] [31] [32 <C:/Repository/AmbulatoryEEG/Report/assets/boardv1.png>] [33 <C:
 /Repository/AmbulatoryEEG/Report/assets/pcb1.jpg>]
-[35] [36 <C:/Repository/AmbulatoryEEG/Report/assets/boardfinal.png>] [37
+[34] [35 <C:/Repository/AmbulatoryEEG/Report/assets/boardfinal.png>] [36
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 807.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 815.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (203.06216pt too wide) in paragraph at lines 809--812
+Overfull \hbox (203.06216pt too wide) in paragraph at lines 817--820
 []\T1/cmr/m/n/10 Numbers all over the place Alot quote 708 as min-i-mum, but it
 's 676 and con-firmed http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/ 
  []
 
-[38] [39
+[37] [38
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 857.
- [40]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 857.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 867.
+ [39]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 867.
  (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 857.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 857.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 867.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 867.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: E16BABC655F65F939F19A9310CB37486;2236.
+(rerunfilecheck)             Checksum: 48C9CABE50F21B49ECE8342AAFFBD8DF;2158.
 
 
 LaTeX Warning: There were undefined references.
@@ -1450,16 +1477,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 857.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 867.
  ) 
 Here is how much of TeX's memory you used:
- 17797 strings out of 493921
- 272175 string characters out of 3144873
- 496018 words of memory out of 3000000
- 20650 multiletter control sequences out of 15000+200000
+ 17821 strings out of 493921
+ 272447 string characters out of 3144873
+ 497018 words of memory out of 3000000
+ 20667 multiletter control sequences out of 15000+200000
  17031 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,8n,48p,1592b,1543s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,8n,48p,1592b,1551s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \eccc1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ectt1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
@@ -1477,9 +1504,9 @@ fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (41 pages, 6427297 bytes).
+Output written on Report.pdf (40 pages, 6447203 bytes).
 PDF statistics:
- 1185 PDF objects out of 1200 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
- 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1237 PDF objects out of 1440 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
+ 401 words of extra memory for PDF output out of 10000 (max. 10000000)
 

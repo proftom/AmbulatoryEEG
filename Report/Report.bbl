@@ -16,6 +16,51 @@
   {}
 \endgroup
 
+\entry{sigdebug}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {\ac{SIG}}{a.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{a1}
+  \strng{fullhash}{a1}
+  \field{sortinit}{A}
+  \field{title}{Fast, Simple Debugging for Bluetooth Low Energy Applications}
+  \verb{url}
+  \verb https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&ved=0
+  \verb CE0QFjAE&url=https%3A%2F%2Fdeveloper.bluetooth.org%2FDevelopmentResourc
+  \verb es%2FDocuments%2FWebinar_FastSimpleDebugging%2520Frontline-SIG.pdf&ei=l
+  \verb haTU5OPJqGS7Ab-9IHwAQ&usg=AFQjCNHSkvdA4Vf2aGh-FJP4NpVUOmW0-A&sig2=wKQSG
+  \verb 9ZYwzweJomkD6x2jg&bvm=bv.68445247,d.ZGU&cad=rja
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{asabe}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Balmos}{B.}%
+     {Alex W.; Ault Aaron; Krogmeier James V.; Buckmaster Dennis~R.}{A.~W. A.
+  A. K. J. V. B. D.~R.}%
+     {}{}%
+     {Andrew D.;~Layton}{A.~D.~L.}}%
+  }
+  \strng{namehash}{BADLAWAAKJVBDR1}
+  \strng{fullhash}{BADLAWAAKJVBDR1}
+  \field{sortinit}{B}
+  \field{note}{2013 ASABE Annual International Meeting}
+  \field{number}{131620559}
+  \field{title}{Investigation of Bluetooth Communications for Low-Power
+  Embedded Sensor Networks in Argiculter}
+  \verb{url}
+  \verb https://engineering.purdue.edu/oatgroup/docs/pape\r_balmos\_1.pdf
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
 \entry{Blanco95}{report}{}
   \name{author}{1}{}{%
     {{}%
@@ -31,6 +76,47 @@
   \field{title}{Time-frequency analysis of electroencephalogram series}
   \field{type}{techreport}
   \field{year}{1995}
+\endentry
+
+\entry{sig}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bluetooth~SIG}{B.~S.}%
+     {Nick Hunn~(WiFore)}{N.~H.~W.}%
+     {}{}%
+     {Robin Heydon~(CSR)}{R.~H.~C.}}%
+  }
+  \strng{namehash}{BSRHCNHW1}
+  \strng{fullhash}{BSRHCNHW1}
+  \field{sortinit}{B}
+  \field{title}{Bluetooth low energy}
+  \verb{url}
+  \verb https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc\_id=2273
+  \verb 36
+  \endverb
+\endentry
+
+\entry{carle}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Carles~Gomez}{C.~G.}%
+     {Josep~Paradells}{J.~P.}%
+     {}{}%
+     {Joaquim~Oller}{J.~O.}}%
+  }
+  \list{publisher}{1}{%
+    {Sensors (Basel, Switzerland)}%
+  }
+  \strng{namehash}{CGJOJP1}
+  \strng{fullhash}{CGJOJP1}
+  \field{sortinit}{C}
+  \field{title}{Overview and Evaluation of Bluetooth Low Energy: An Emerging
+  Low-Power Wireless Technology}
+  \verb{url}
+  \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
+  \endverb
+  \field{year}{2012}
+  \warn{\item Invalid format of field 'month'}
 \endentry
 
 \entry{Guan2013}{misc}{}
@@ -72,7 +158,25 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
-\entry{nrf51822}{report}{}
+\entry{power}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sandeep~Kamath}{S.~K.}%
+     {Joakim~Lindh}{J.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SKJL1}
+  \strng{fullhash}{SKJL1}
+  \field{sortinit}{S}
+  \field{title}{Measuring Bluetooth Low Energy Power Consumption}
+  \verb{url}
+  \verb http://www.ti.com/lit/an/swra347a/swra347a.pdf
+  \endverb
+  \field{year}{2013}
+\endentry
+
+\entry{nrf51822}{manual}{}
   \name{author}{1}{}{%
     {{}%
      {Semiconductor}{S.}%
@@ -88,7 +192,6 @@
   \verb{url}
   \verb http://www.100y.com.tw/pdf\_file/39-Nordic-NRF51822.pdf
   \endverb
-  \field{type}{techreport}
   \field{year}{2013}
 \endentry
 

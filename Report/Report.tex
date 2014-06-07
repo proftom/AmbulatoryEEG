@@ -197,7 +197,7 @@ The original Bluetooth, hereforth refered to a \ac{BTC}, was intially concieved 
 
 Applications where \ac{BLE} excels in are ones where communication between two devices is only required intermitently, and the volume of information sent is small. An example would be a thermometer in a greenhouse connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years of a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3v lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years. In fact, in this scenario the \ac{BLE} system lifetime can be extended further as \ac{BLE} can support connectionless communication, whereby it simply wakes up and transmits the thermometer state to any device that's listening without the need for acknowledgement.
 
-The reason the reconnection times are much faster for \ac{BLE} is as far as the communication devices are concerned, they never disconnected. Rather in the \ac{BLE} protocol, the devices agree to meet a specified periods known as \ac{CI}. The devices are free to perform any operations in the mean time, though typically enter a state of hibernation. In many scenarios between two radios, one device will be much more power conscious. In the example above, the battery powered device in the greenhouse would typically be the power conscious device while the visual disuplay unit inside the home will likely be powered from the grid, and have no concern as to its power consupmption. In these situations, we define the power conscious device to be the slave and the remaining device to be the master. 
+The reason the reconnection times are much faster for \ac{BLE} is as far as the communication devices are concerned, they never disconnected. Rather in the \ac{BLE} protocol, the devices agree to meet a specified periods known as \ac{CI}. The devices are free to perform any operations in the mean time, though typically enter a state of hibernation. In many scenarios between two radios, one device will be much more power conscious. In the example above, the battery powered device in the greenhouse would typically be the power conscious device while the visual disuplay unit inside the home will likely be powered from the grid, and have no concern as to its power consupmption. In these situations, the power conscious device is defined to be the slave and the remaining device to be the master. 
 
 The slave device also has the ability to skip connection intervals. That is, the slave to skip a upto a predetermined number of connection intervals, known as the slave latency. While the master must always check back to see if the slave has sent anything, the slave, if it has nothing to send, doesn't need to wake up. For example, if the slave latency is 120, and the connection interval is 1000ms, then the slave is not obliged to communicate with the master for upto 2 minutes, despite the master having to check every 1000ms. If the slave is not able to make contact with the master after 2 minutes, then the master will begin counting the number of times the slave has missed the obliged connection period (that is the \ac{CI} multiplied by the time slave latency). If this value reaches above a certain threshold (a typically recommened value of 6), the master will consider the slave disconnected, and be required to go through a connection process again[UNLESS USING BROADCASTING TO SEND DATA]. Continuing with the scenario, the slave will be considered disconnected if it hasn't made contact with the master after 12 minutes.
 
@@ -418,7 +418,7 @@ The ATMega328 consumes approximately XmA, however for the remainder. As the devi
 	\label{fig:nrfcap}
 \end{figure}
 
-Initially, the device was configured to send a large amount of notification within a single \{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum connection interval to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available, hence this reduces the maximum throughput to 25% of theoretical maximum. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. Figure~\ref{nrfcap} shows a packet capture
+Initially, the device was configured to send a large amount of notification within a single \{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum \ac{CI} to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available. While this doesn't immediately reject throughput, longer connection intervals mean greater chance of a transmission error (CRC error), which if occurs, causes any further transmission within that \ac{CE} to case.. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. Figure~\ref{nrfcap} shows a packet capture
 
 
 
@@ -462,22 +462,23 @@ BLE devices at both ends) then it should be easier to get close to the
 maximum theoretical rate.  \text{ \textnormal{[sic]}}
 \end{quote}[sic]
 
- In the first paragraph the engineer is treating the full 27 bytes in the data payload as the application data, and is believe this number has come from
+ In the first paragraph the engineer is treating the full 27 bytes in the data payload as the application data. This number should of come from
 
 \begin{displaymath}
 \frac{1000000 \mu s}{676 \mu s} \times 27 < 320 kbps
 \end{displaymath}
 
-320 to 300 is a generous approximation, it is believe that the engineer actually rounded a smaller number, 305, which was calculated by including an unecessary 32 bit \ac{MIC}, which is only used for when encryption is enabled:
+320 to 300 is a generous approximation, it is believed that the engineer actually rounded a smaller number, 305, which was calculated by including an unecessary 32 bit \ac{MIC}, used only when encryption is enabled:
 
 \begin{displaymath}
 \frac{1000000 \mu s}{708 \mu s} \times 27 \approx 305 kbps \approx 300 kbps
 \end{displaymath}
 
-Throughout literature on \ac{BLE}, this is a recurring common mistake.  
-Different sources quote different numbers. From examining sources, it is believed the varation 
+Many literature pieces and training materials on \ac{BLE} make this assumption, including those on the \ac{SIG} website \cite{sig} \cite{sigdebug}. 
 
-In the second paragraph the engineer is highlighting some important facets of \ac{BLE} devices, and that is although one end of the link is determined by the lower of the two device's thorughputs. The engineer cites smart phones as such devices that restrict the link capability. This was seen in the nRF8001 - the iPhone 4S could not handle a connection interval less than 30ms. When asked how to show the math behind these numbers, they replied
+In the second paragraph the engineer is highlighting some important facets of \ac{BLE} devices, and that is although one end of the link is determined by the lower of the two device's thorughputs. The engineer cites smart phones as such devices that restrict the link capability. This was seen in the nRF8001 - the iPhone 4S could not handle a connection interval less than 30ms. Combined with that the nRF8001 stack couldn't transmit more than one packet per connection interval on average, the maximum throughput achievable by this device was cut by 4. 
+
+When asked how to show the math behind the numbers achieved
 
 \begin{quote}\itshape
 
@@ -494,15 +495,11 @@ not see any additional processing overheads. \text{ \textnormal{[sic]}}
 
 \end{quote}
 
-The \ac{HCI} is the component between the host and controller layers shown in Figure~\ref{fig:ble_arch}. The engineer is saying that 
+The \ac{HCI} is the component between the host and controller layers shown in Figure~\ref{fig:ble_arch}. The engineer is saying that data throughput should no be affected by any high-level stack activity (any stack congestion, if existing, shouldn't affect throughput). Although the engineer has given no commet on latency (data will take time to propagate up the stack).
 
-the full throughput as defined in the \ac{BLE} specification. \ac{CSR} supplied a development kit consisting of  provided a development board (CNS10004V5D) and \ac{USB} dongle. The CSR1010 is part of \ac{CSR} 's new $\mu$Energy product line, for which \ac{CSR} have developed their own compiler and \ac{IDE} known as xIDE. \
+ \ac{CSR} supplied a development kit consisting of  provided a development board (CNS10004V5D) and \ac{USB} dongle. The CSR1010 is part of \ac{CSR} 's new $\mu$Energy product line, for which \ac{CSR} have developed their own compiler and \ac{IDE} known as xIDE. For initial throughput testing, an example health thermometer application was used. From exploring and understanding the main features of the \ac{OSAL}, it was immediately possible to increase the number of notification packets sent per connection interval from 1 to 8. 
 
-
-For initial throughput testing, an example health thermometer application was used. 
-From exploring and understanding the main features of the \ac{OSAL}, it was possible to increase the number of notification packets sent per connection interval from 1 to 8. Unfortunately, it was   
-
-The standard mechanism provided for radio communication, is for every connection interval, receive successful confirmation of the first acknowledge.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as the buffer queue is 8 packets in size. When more than 8 are added to the queue Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are possible. This mechanism is visualised in Figure~\ref{fig:nols}. 
+The standard mechanism provided in the example, is for every connection interval a confirmation of the first acknowledge is raised in the application layer. This is used in the program as a point of reference for application layer timers, so schedule the next wake up time, etc.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as it appears the buffer queue is 8 packets in size. When more than 8 are added to the queue, they are ignored, causing data loss. Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are correctly sent in order. While it is possible to continously flood the stack (buffer queues) with more notification requests, without knowing if the stack is capable of dealing with them, data will be lost. This mechanism is visualised in Figure~\ref{fig:nols}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -534,7 +531,7 @@ After greater exploration of the software system framework, the \ac{API} and sof
 	\label{fig:lsrad}
 \end{figure}
 
-The experiment was repeated again, this time sending a new notification every time the previous one was acknowledged. The results are shown in Figure~\ref{fig:9pckt}
+The experiment was repeated again, this time sending a new notification every time the previous one was acknowledged using the message pump signal. The results are shown in Figure~\ref{fig:9pckt}
 
 \begin{figure}[!h]
 	\begin{center}
@@ -569,11 +566,6 @@ For a 7.5ms \ac{CI}, the number of \ac{CE} is 133.333 and the number of packets 
 
 Therefore 9 packets per connection interval at 7.5ms. This corresponding to a throughput of 192kbps or 90\% of the theoretical maximum. A comprehensive explanation of the code used to achieved this is provided in the later section \ref{Prototype}. 
 
-Initially the 
-
-The CSR1010 is capable to powering down 
-
-
 \subsubsection{CC2540 and CC2541}
 \ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first, and arguably the most popular [need to CITE?] development kits. The CC2540 differs in that it's range and power usage are increased, though it's throughput is still theoretically the same.
 
@@ -585,19 +577,22 @@ Much like the CSR1010, a similar \ac{OSAL} existed for the CC2540/1,
 
 For 16 channels running simultaneously, at 8 bit resolution, the highest achievable detectable frequency is approximately 384 Hz.
 
-\subsubsection{Radio conclusion}
-From the work and results 
-
-The CSR1010 appears to be the obvious choice
-
 \subsection{Batteries}
-There are many different battery technologies available. For the device a small, low profile low footprint, lightweight battery is required. Given that BLE can consume up to 15mA of peak current, taking this as the upper bound means that for 12 hours of continuous use batteries with capacities of 180mAh should be considered. Although the radio will dominate, other parts of the circuit such as the Microprocessor will consume a small amount of power, so this figure is arbitrarily upped to 200mAh. Note that peak current is an unfair way to measure current consumption in BLE, however it is being used here as a worst case scenario. 
+There are many different battery technologies available. For the device a small, low profile low footprint, a lightweight battery is required. Given that \ac{BLE} can consume upto 15mA at peak current draw, taking this as the upper bound means that for 12 hours of continuous use batteries with capacities of 180mAh should be considered. Although the radio will dominate, other parts of the circuit such as the Microprocessor will consume a small amount of power, so this figure is arbitrarily upped to 200mAh. Note that peak current is an unfair way to measure current consumption in \ac{BLE}, however it is being used here as a worst case scenario. 
 
-Two batteries technologies which satisfy this technology are Lithium Ion (the popular CR2032 or other) or Zinc-air batteries with capacities of 600mAh cheaply available. Common voltages are 1.4V to 1.65V (radios require between 1.8 -3.6V). However the batteries are so light, less than 2g each (one CR2032 weighs, on average, over 3g), they can be combined in series to provide a suitable voltage and a large capacity (over 1Ah). Further, this high voltage will allow the effective radio range of the BLE device to increase. If a Zinc cell exhibits damage, unlike most technologies, no dangerous chemicals are present. The downside to zinc-air batteries is that they must be vented to an oxygen environment (cannot be hermetically sealed) which in turn causes them to lose their charge over time relatively quick once exposed to air. Although \ac{EEG} use case requirements will require the device to lifetime of hours to days, not years. 
+Two batteries technologies which satisfy these requirements are Lithium-ion (the popular CR2032 is typically advertised as an energy source with many \ac{BLE} modules) or Zinc-air batteries with capacities of 600mAh cheaply available. Common voltages are 1.4V to 1.65V (radios require between 1.8 -3.6V). However the batteries are light, less than 2g each (one CR2032 weighs, on average, over 3g), therefore they can be combined in series to provide a suitable voltage and a large capacity (over 1Ah). Further, this high voltage will allow the effective radio range of the \ac{BLE} device to increase. If a Zinc-air cell exhibits damage, unlike most technologies, no dangerous chemicals are present. The downside to zinc-air batteries is that they must be vented to an oxygen environment (cannot be hermetically sealed) which in turn causes them to lose their charge over time relatively quick once exposed to air. Although the \ac{AEEG} use case requirements will require the device to have lifetime of hours to days, not years. 
 
-Two Zinc-air batteries weighing 1.9g each, can supply over 1000mAh with a combined series voltage of 2.8V. In the worst case of BLE drawing 15mA, this will last almost 3 days. Recall 15mA is the peak current and BLE will never continuously draw this current, hence the lifetime of the device should be greater. BLE was designed that current is never continuously consumed, and between radio events, the battery has recovery periods, extending the useful life of the battery (Heydon, 2012). 
+Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a combined series voltage of 2.8V. In the worst case of BLE drawing 15mA, the system lifetime is approximately 3 days. Recall 15mA is the peak current and BLE will never continuously draw this current, hence the lifetime of the device should be greater, depending on the throughput. ac{BLE} was designed that current is never continuously consumed, and between radio events, the battery has recovery periods, extending the useful life of the battery.
 
-Nordic semiconductor provides a studio which has a battery lifetime calculator. Using a typical lithium ion battery of 220mAh yields, 7.5ms connection interval and 100% connection, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. If it is assumed that the number of packets sent scales linearly, we can divide this number by 4 to obtain a throughput of 10.4 Kbytes and a lifetime of 40 hours (Figure 21). It cannot be verified how accurate this model is, but the simulation looks sensible. Figure 22 shows a notification simulation of the EEG service being sent continuously every 7.5ms. Notice the peak current is the transmit current followed immediately by a receive current (waiting for the link layer acknowledgement from the master). Dividing by 4 may overestimate the actual power consumption is the integral over the whole time, not just the small Tx peak, which is comparable to the start-up, Rx and processing currents (Figure 14 & Figure 22).
+Nordic semiconductor provides a system lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will require vertification in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
+
+\begin{displaymath}
+\frac{7.5ms}{0.676ms} = 11.094\; notification packets per conneciton interval
+\frac{163 hours for 1 notification per connection interval}{11.094 packets per connection interval} \approx 14.7 hours
+\end{displaymath}
+
+
+This should be an overestimation of the power requirements, as there is a fixed cost payed for waking the MCU, which would be amortised for higher throughputs. Further in the model above the idle time contributes to the power consumption, but at full throughput, there will be little idle time. Finally, running at full throughput is not necessairly the end used case. Running at lesser throughputs will have a dramatic effect on the power consumption.
  
 
 \begin{figure}[htb]
@@ -639,7 +634,6 @@ Currently the general feeling is towards using an Arduino micro controller simpl
 
 An option to achieve large storage capacity without difficult packages is to use popular SD cards. SD cards, and the variation, microSD cards are extremely easy to communication and an experiment was performed with an Arduino to discover power , However, during reading and writing the current consumption is between 25 to 100mA. From reviewing [san disk cite], a write can require 250ms. Assuming data is written in blocks, the average current consumption attributed by the NAND is 2.5mA. 
 
-Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes, except that used internally inside a \ac{MCU} or externally as a bootloader (i.e. CSR1010 device requires a small external storage unit which contains the program code, loaded at power on time)
 
 
 \subsection{Analogue to Digital Converter}
@@ -656,31 +650,33 @@ The most obvious and popular protocols for interfacing with an external \ac{ADC}
 
 The CSR1010 supports I2C natively along with provided a generic driver at the application layer. The most suitable device found was the Analogue Devices' AD7997 10bit 8 channel I2C ADC. The device can operate at different I2C speed, 100KHz and 400KHz. While there is the risk of interface issues, the level is less than that of the MCP3008, and believed tolerable. It is also highlighted that the correct working of the \ac{ADC} is not crucial to the project's success. This, and the fact that no analogue front end is available. 
 
-Ultimately, the decision is to use an off-board \ac{ADC} module, the AD7997. The prototype will interface with two of these over an I2C bus, to provide 16 channels.
+
 
 \subsection{Analogue Frontend}
 
 The biopoentials measured on the scalp required analogue filters and amplifiers to extract useful information. Ultimately the \ac{ADC}s should interface with this frontend.  At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analouge front-end design for manufacture, however these chips will not be available for use before the project deadline. Therefore no analogue front-end electronics will be present on the prototype board.
 
 \subsection{Component Selection}
-An interesting problem is presented
 
-As the radio throughput 
 
-Apple CIs
-Ti code studio
-Android phones must support 4 packet/ CI
-Ease of development
-ADCs
+
+The decision for the radio chip 
 
 While the CC2541 showed promise as with enough hardware understanding and firmware switches, it may mean the device could approach the theoretical limit, the unavailability of an inexpensive tool chain meant software development was problematic. The CSR1010 is supplied with a free tool chain and \ac{IDE}, as \ac{CSR} engineers confirmed experiments with the device operating with high throughputs. The package of the radios were both similar, being of roughly the same size \ac{QFN} package type, which while reported outside the department's \ac{PCB} production capabilities, was still considered of sufficiently large for in-house prototyping. 
 
-Ultimately the final component selection for the \ac{EEG} prototype
+The application will be developed on a tablet, due to the expected ease of development. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence, although 
+
+Ultimately, the decision is to use an off-board \ac{ADC} module, the AD7997. The prototype will interface with two of these over an I2C bus, to provide 16 channels.
+
+
+Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes, except that used internally inside a \ac{MCU} or externally as a bootloader (i.e. CSR1010 device requires a small external storage unit which contains the program code, loaded at power on time)
+
+The final component selection for the \ac{EEG} prototype is
 \begin{itemize}
 \item AD7997 8bit I2C ADC. Two are required for 16 channels
 \item CSR1010
 \item P675 Zinc Air batteries. Batteries of capacity 620mAh are readily available and inexpensive. Two are required in series to achieve an operable voltage
-\item Boot NAND flash for CSR1010
+\item AT24C512C-SSHD 512K Serial EEPROM Flash for CSR's non-volatile storage
 \end{itemize}
 
 The final \ac{PCB} prototype is expected to consist of 4 active components. 
@@ -738,7 +734,7 @@ To test both the process capability and variation, lines of decreasing thickness
 
 
 
-\subsection{High Level Software}
+\subsection{Tablet Application}
 
 \section{Results}
 
@@ -778,6 +774,10 @@ In the sole pursuit of maximizing throughput, the idea is to
 \end{displaymath}
 
 Mathematically this finds the points where 
+
+As CI increases chance of CRC error increases. Trade off between CI length, remainder
+
+Track /feedback for optiminum 
 
 Unfortunately a connection interval must be between 7.5ms and 4000ms long, in incremental steps of 1.25ms. Therefore x must exist in the range of 6 to 3200. 
 
@@ -829,6 +829,7 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
 \subsection{Acronyms}
 \begin{acronym}
 	\acro{EEG}{Electroencephalography}
+	\acro{AEEG}{Ambulatory Electroencephalogram}
 	\acro{BLE}{Bluetooth Low Energy}
 	\acro{BTC}{Bluetooth Classic}
 	\acro{CSR}{Cambridge Silicon Radio}
@@ -858,6 +859,7 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
 	\acro{SPI}{Serial Peripheral Interface}
 	\acro{PIO}{programmable input/output}
 	\acro{HCI}{host controller interface}
+	\acro{MIC}{message integreity code}
 \end{acronym} 
 
 \section{User Guide}

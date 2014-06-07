@@ -162,7 +162,7 @@ namespace Electroencephalograph
         }
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
-        {            
+        {
             ////var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x0EE4));
 
             ////if (devices.Count < 1)
@@ -183,15 +183,15 @@ namespace Electroencephalograph
             //////Start notifications
             ////await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
             //////var x = await batteryData.ReadClientCharacteristicConfigurationDescriptorAsync();
-            
+
             ////TimerElapsedHandler f = new TimerElapsedHandler(batchUpdate);
-            ////periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0,40000));
+            ////periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0, 40000));
 
             var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x1800));
             eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
             var s = devices[0].Name;
-            
-            var gapData = eegService.Instance.service.GetCharacteristics(new Guid("00002A04-0000-1000-8000-00805f9b34fb"))[0];
+
+            var gapData = eegService.Instance.service.GetCharacteristics(new Guid("00002A00-0000-1000-8000-00805f9b34fb"))[0];
             var x = await gapData.ReadValueAsync();
 
             byte[] bodySensorLocationData = new byte[x.Value.Length];
@@ -200,10 +200,10 @@ namespace Electroencephalograph
             DataWriter writer = new DataWriter();
             //Endianess of reciever data inverted
             writer.WriteInt16((Int16)SwapUInt16(100));
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            var status = await gapData.WriteValueAsync(writer.DetachBuffer());
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            var status = await gapData.WriteValueAsync(bodySensorLocationData.AsBuffer());
             
         }
 

@@ -150,12 +150,15 @@ Finally, special thanks go towards Mike Harbour and Victor Boddy for their effor
 
 \section{Introduction}
 
-Patients, however, are unlikely to suffer from neurological disorder while at the clinic as they often appear sporadically during day to day life and with little to no warning. In such circumstances the patient could remain in hospital indefinitely, however seizures can be minutes to years apart, and sometimes are not realised or detected without proper equipment. Such circumstances lend themselves to an ambulatory system, where the patient can be monitored continuously without discomfort or hospitalisation, thus improving quality of life. 
-
 \subsection{Problem Landscape and Motivation}
-Neurological disorders and their sequelae are currently estimated to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectency and decreasing (relative) fertility rates, the population age demographic has shifted towards an ageing population. As neurological disorders are much more present in aging people, the rates for neurological disorders has increased and is expected to increase further. Diagnosing, monitoring and treating many of these diseases is currently a costly procedure due to the time and resource allocation (i.e. relatively expensive equipment).
+Neurological disorders and their sequelae are estimated at present to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectency and decreasing (relative) fertility rates, the age demographic has shifted towards an ageing population. This has caused a growth in neurological disorders such as Parkinson's, multiple sclrosisi, Alzheimers and other dementias. The diagnosis and monitoring and treating many of these diseases is currently a costly procedure due to the time and resource allocation (i.e. relatively expensive equipment).
 
 Unfortunately many neurlogical disorder symptons occur sporadically with little to no inidication of an event, such as in the cause of a seizure for epilepsy.
+
+
+
+Patients, however, are unlikely to suffer from neurological disorder while at the clinic as they often appear sporadically during day to day life and with little to no warning. In such circumstances the patient could remain in hospital indefinitely, however seizures can be minutes to years apart, and sometimes are not realised or detected without proper equipment. Such circumstances lend themselves to an ambulatory system, where the patient can be monitored continuously without discomfort or hospitalisation, thus improving quality of life. 
+
 
 
 
@@ -164,13 +167,31 @@ The vast majority of modern smart phones are now being equiped with \ac{BLE} or 
 By coupling cheap low power sensors and radios, with powerful ubiquitous consumer technology, it is possible not only to cheaply and efficiently monitor patients, improve the quality of life for patients but also help physicians further their understanding of neurological disorders.
 
 %Smart phone considered high power device anyway. Only hard requirement is that smart phone can support BLE
-Currently \ac{BLE} is the only radio technology that is currently being built into all smart phones and tablet devices while offering power consumption low enough to enable a long lifetimes from a lightweight power source. In comparison classic Bluetooth’s power consumption is typically 1 to 2 orders of magnitude higher than BLE. Through leveraging widely popular and familiar smart phone devices with this new technology, in the context of an ambulatory EEG, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital.
+Currently \ac{BLE} is the only radio technology that is currently being built into all smart phones and tablet devices that offers synergy with small devices power consumption low enough to enable a long lifetimes from a lightweight power source. In comparison classic Bluetooth’s power consumption is typically 1 to 2 orders of magnitude higher than BLE. Through leveraging widely popular and familiar smart phone devices with this new technology, in the context of an ambulatory EEG, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital.
 
+With the plethora of emerging low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. The consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all use the \ac{BLE} technology to connect to smartphones.
 
 \subsection{Existing Technologies and Products}
 
+Popular products on the market that have already shown integration with consumer electronics as well as research include Emotiv Systems' \ac{EEG} headset. The device retails at \$750 (approximately £450 at the time of writing), sporting 14 saline sensors, gyroscopes for positioning and a lithium battery capable of deliverying upto 12 hours of continuous use.
 
-With the plethora of emerging low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. The consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all use the \ac{BLE} technology to connect to smartphones.
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{emotive}
+	\end{center}
+	\caption{Emotiv System's \ac{EEG} Neuroheadset}
+	\label{fig:emotive}
+\end{figure}
+
+NeuroSky have released three \ac{EEG} products, the MindSet, MindWave and MindWave mobile. They all 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{neurosky}
+	\end{center}
+	\caption{NeuroSky Mindwave Mobile \ac{EEG}  Headset}
+	\label{fig:neurosky}
+\end{figure}
 
 \subsection{Project End Goals}
 Originally the project was introduced as "Maximising Bluetooth Low Energy throughput of \ac{EEG} signals", however 
@@ -189,9 +210,16 @@ Idealistic requirements of the project include
 \end{itemize}
 
 \subsection {Structure}
+The project is organised as the following. An overview of \ac{EEG} signals and \ac{BLE} technology. 
 
 \clearpage
 \section{Theory and Technology}
+\subsection{Electroencephalography}
+
+Different freqs
+
+
+
 \subsection{Bluetooth Low Energy}
 The original Bluetooth, hereforth refered to a \ac{BTC}, was intially concieved as the solution to wired communication over short distances (typically less than 100m). The original specification had an air over-the-air rate of 1MBps, though this has increased to around 3 MBps in the latest version of \ac{BTC}. Similarly, BLE has an over-the-air rate of 1MBps. Despite the odd realisation that \ac{BLE}, a much newer technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuatively it may seem that \ac{BLE} is a less efficient technology, \ac{BLE} can be orders of magnitudes more efficient than \ac{BTC} in particular use cases.
 
@@ -808,7 +836,7 @@ Smart phone not single end device -> contain other radios for high throughput, m
 In the sole pursuit of maximizing throughput, the idea is to 
 
 \begin{displaymath}
-\min_{x}  \frac{1250\times x}{708} - \floor{ \frac{1250\times x}{708}} 
+\min_{x}  \frac{1250\times x}{676} - \floor{ \frac{1250\times x}{676}} 
 \end{displaymath}
 
 The creates the following profile
@@ -821,9 +849,9 @@ The creates the following profile
 	\label{fig:notremain}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = 1.1\textwidth]{throughput}
+		\includegraphics[width = \textwidth]{throughput}
 	\end{center}
 	\caption{Throughput varying with connection interval}
 	\label{fig:throughput}
@@ -868,10 +896,6 @@ Useful for CSR, monies worth out of me
 
 The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it publically available online at the git repositry address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
-
-Numbers all over the place
-Alot quote 708 as minimum, but it's 676 and confirmed
-http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
 
 \section{Bibliography}
 \clearpage

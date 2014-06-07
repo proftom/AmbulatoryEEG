@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.exe">
       <PackagePath>Electroencephalograph.exe</PackagePath>
-      <Modified>2014-06-07T13:08:36.304</Modified>
+      <Modified>2014-06-07T21:50:30.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Syncfusion\Essential Studio\12.1.0.43\WinRT\8.1\SDK\References\CommonConfiguration\neutral\Syncfusion.SfChart.WinRT.dll">
       <PackagePath>Syncfusion.SfChart.WinRT.dll</PackagePath>
@@ -271,7 +271,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-06-07T13:08:14.805</Modified>
+      <Modified>2014-06-07T21:50:30.306</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

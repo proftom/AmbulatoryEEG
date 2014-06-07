@@ -30,6 +30,8 @@
 #include "app_gatt_db.h"
 #include "nvm_access.h"
 
+
+#include "eeg_sensor_hw.h"
 /*============================================================================*
  *  Private Data Types
  *============================================================================*/
@@ -195,7 +197,7 @@ extern void GapHandleAccessRead(GATT_ACCESS_IND_T *p_ind)
     uint16 length = 0;
     uint8  *p_value = NULL;
     sys_status rc = sys_status_success;
-
+SoundBuzzer(buzzer_beep_thrice);
     switch(p_ind->handle)
     {
 
@@ -246,6 +248,8 @@ extern void GapHandleAccessRead(GATT_ACCESS_IND_T *p_ind)
 extern void GapHandleAccessWrite(GATT_ACCESS_IND_T *p_ind)
 {
     sys_status rc = sys_status_success;
+
+SoundBuzzer(buzzer_beep_thrice);
 
     switch(p_ind->handle)
     {

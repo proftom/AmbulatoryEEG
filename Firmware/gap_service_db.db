@@ -61,7 +61,7 @@ primary_service {
         uuid : UUID_PER_PREF_CONN_PARAMS,
         name : "DEVICE_PREF_CONN_PARAMS",
         flags : FLAG_IRQ,
-        properties : read,
+        properties : [read, write],
         value : [PREFERRED_MIN_CON_INTERVAL, PREFERRED_MAX_CON_INTERVAL, 
                  PREFERRED_SLAVE_LATENCY, PREFERRED_SUPERVISION_TIMEOUT]
     }

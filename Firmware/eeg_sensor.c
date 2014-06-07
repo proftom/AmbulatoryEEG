@@ -2775,7 +2775,8 @@ extern void AppProcessSystemEvent(sys_event_id id, void *data)
 extern bool AppProcessLmEvent(lm_event_code event_code, 
                               LM_EVENT_T *p_event_data)
 {
-
+    DebugWriteString("\n\rAppEvent");
+SoundBuzzer(buzzer_beep_thrice);
     switch(event_code)
     {
 
@@ -2858,6 +2859,7 @@ extern bool AppProcessLmEvent(lm_event_code event_code,
             /* Indicates completion of remotely triggered Connection 
              * parameter update procedure
              */
+        DebugWriteString("\n\rParams");
             handleSignalLsConnParamUpdateInd(
                             (LS_CONNECTION_PARAM_UPDATE_IND_T *)p_event_data);
         break;

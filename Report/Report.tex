@@ -161,28 +161,29 @@ Since the arrival of \ac{BLE} in smartphones in 2012, the vast majority of smart
 
 \subsection{Existing Technologies and Products}
 
-Popular products on the market that have already shown integration with consumer electronics as well as research include Emotiv Systems' \ac{EEG} headset. The device retails at \$750 (approximately £450 at the time of writing), sporting 14 saline sensors, gyroscopes for positioning and a lithium battery capable of deliverying upto 12 hours of continuous use.
+Popular \ac{EEG} products on the market that have already shown integration with consumer electronics as well as research include Emotiv Systems' \ac{EEG} headset. The device retails at \$750 (approximately £450 at the time of writing), sporting 14 saline sensors, gyroscopes for positioning and a lithium battery capable of deliverying upto 12 hours of continuous use.
 
 \begin{figure}[htb]
 	\begin{center}
-		\includegraphics[width = 0.7\textwidth]{emotive}
+		\includegraphics[width = 0.6\textwidth]{emotive}
 	\end{center}
 	\caption{Emotiv System's \ac{EEG} Neuroheadset}
 	\label{fig:emotive}
 \end{figure}
 
-NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a datarate of 250 kbit/s, a baudrate of 57,600 and 10 meter range. It is also noted that there is a 5% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same buad rate of the previous. The maximum power consumption increases to 120mW (80mA). Both devices weight 90g, and are preiced $80 and $130 respectively. 
+NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a datarate of 250 kbit/s, a baudrate of 57,600 and 10 meter range. It is also noted that there is a 5% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same buad rate of the previous. The maximum power consumption increases to 120mW (80mA). Both devices weight 90g, and are priced at $80 and $130 respectively. 
 
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = 0.7\textwidth]{neurosky}
+		\includegraphics[width = 0.6\textwidth]{neurosky}
 	\end{center}
 	\caption{NeuroSky MindWave Mobile \ac{EEG}  Headset}
 	\label{fig:neurosky}
 \end{figure}
 
+Away from specifically \ac{EEG}, the consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all make use of the \ac{BLE} technology to connect to smartphones.
+
 \subsection{Project End Goals}
-Originally the project was introduced as "Maximising Bluetooth Low Energy throughput of \ac{EEG} signals", however 
 
 Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the \ac{EEG} sensors and a fixed computer serverly restricts patient's mobility and hence are impracticable for long periods of use. This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} montoring .
 
@@ -197,10 +198,8 @@ Idealistic requirements of the project include
 	\item Real time update of signals
 \end{itemize}
 
- The consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all use the \ac{BLE} technology to connect to smartphones.
-
 \subsection {Structure}
-The project is organised as the following. An overview of \ac{EEG} signals and \ac{BLE} technology. 
+The project is organised as the following. An overview of \ac{EEG} signals and \ac{BLE} technology is presented, giving background where it is believed revelant and of value to the rest of the project. It should be noted that these sections are not a exhaustive description of \ac{EEG} signals nor \ac{BLE}. The report will then move onto preliminary resarch, where the technology is evaluated and the components are discussed in detail and a selection made for the prototype. A desired specifications is then presented from the components chosen.  The implementation section documents and discusses building, optimising and any issues found while developing the prototype. The results section lists the project findings, followed by a thorough evaluation of these results. A projec wide conclusion can then be found where \ac{BLE}'s suitability for the application is discussed along with the limitations of the current system, and suggested future work for project extension or further interesting reseearch as a result of this project. Lastly, a section is reserved for final remarks for comments that don't formally fit elsewhere into the report.
 
 \clearpage
 \section{Theory and Technology}

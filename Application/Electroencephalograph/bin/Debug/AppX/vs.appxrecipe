@@ -6,7 +6,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>e6f1aced-83d2-47d3-ad07-e0e8034283cd</PackageIdentityName>
-    <RegisteredManifestChecksum>BCDDD1645C2CFC645C32811EAA98C3E89E74E06FE7D804BEA4C0E69F8C39001E</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>B62753EFFC5D44BC77464667BD5702A40CF38CBD72AB0C11A22C85CB9131FACC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e6f1aced-83d2-47d3-ad07-e0e8034283cd_1.0.0.0_neutral__xkj04xcm6e7n4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e6f1aced-83d2-47d3-ad07-e0e8034283cd_xkj04xcm6e7n4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>e6f1aced-83d2-47d3-ad07-e0e8034283cd</RegisteredPackageID>
@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-07T12:47:28.074</Modified>
+      <Modified>2014-06-08T08:23:53.470</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\Electroencephalograph.exe">
       <PackagePath>Electroencephalograph.exe</PackagePath>
-      <Modified>2014-06-07T21:50:30.027</Modified>
+      <Modified>2014-06-08T08:58:19.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Syncfusion\Essential Studio\12.1.0.43\WinRT\8.1\SDK\References\CommonConfiguration\neutral\Syncfusion.SfChart.WinRT.dll">
       <PackagePath>Syncfusion.SfChart.WinRT.dll</PackagePath>
@@ -271,7 +271,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repository\AmbulatoryEEG\Application\Electroencephalograph\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-06-07T21:50:30.306</Modified>
+      <Modified>2014-06-08T08:57:06.012</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

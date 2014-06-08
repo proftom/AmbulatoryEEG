@@ -188,22 +188,34 @@ namespace Electroencephalograph
             ////periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0, 40000));
 
             var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x1800));
-            eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
-            var s = devices[0].Name;
+            var service = await GattDeviceService.FromIdAsync(devices[0].Id);
 
-            var gapData = eegService.Instance.service.GetCharacteristics(new Guid("00002A00-0000-1000-8000-00805f9b34fb"))[0];
-            var x = await gapData.ReadValueAsync();
+            var gapData = service.GetCharacteristics(new Guid("00002A04-0000-1000-8000-00805f9b34fb"))[0];
+            var raw = await gapData.ReadValueAsync();
 
-            byte[] bodySensorLocationData = new byte[x.Value.Length];
-            DataReader.FromBuffer(x.Value).ReadBytes(bodySensorLocationData);
+            byte[] conParas = new byte[raw.Value.Length];
+            DataReader.FromBuffer(raw.Value).ReadBytes(conParas);
+            //I can breakpoint and verify that the read works fine
 
+            //var tmp = conParas[0];
+            //conParas[0] = conParas[1];
+            //conParas[1] = tmp;
+            //tmp = conParas[2];
+            //conParas[2] =conParas[3]; conParas[3] = tmp;
+            //tmp = conParas[4];
+            //conParas[5] = conParas[4];
+            //conParas[5] = tmp;
+            //tmp = conParas[6];
+            //conParas[6] = conParas[7];
+            //conParas[7] = tmp;
             DataWriter writer = new DataWriter();
             //Endianess of reciever data inverted
             writer.WriteInt16((Int16)SwapUInt16(100));
-            //writer.WriteInt16((Int16)SwapUInt16(100));
-            //writer.WriteInt16((Int16)SwapUInt16(100));
-            //writer.WriteInt16((Int16)SwapUInt16(100));
-            var status = await gapData.WriteValueAsync(bodySensorLocationData.AsBuffer());
+            writer.WriteInt16((Int16)SwapUInt16(100));
+            writer.WriteInt16((Int16)SwapUInt16(100));
+            writer.WriteInt16((Int16)SwapUInt16(100));
+            var z = conParas.AsBuffer();
+            var status = await gapData.WriteValueAsync(conParas.AsBuffer());
             
         }
 

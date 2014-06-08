@@ -118,6 +118,192 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
+\entry{Casson2008}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Casson}{C.}%
+     {Alexander~J}{A.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smith}{S.}%
+     {Shelagh}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Duncan}{D.}%
+     {John~S}{J.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rodriguez-Villegas}{R.-V.}%
+     {Esther}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CAJ+1}
+  \strng{fullhash}{CAJSSDJSRVE1}
+  \field{sortinit}{C}
+  \field{abstract}{%
+  This paper presents a review of wearable EEG technology: the evolution of
+  ambulatory EEG units from the bulky, limited lifetime devices available today
+  to small devices present only on the head that can record the EEG for days,
+  weeks or months at a time. The EEG requirements, application areas and
+  research challenges are highlighted. A survey of neurologists is also carried
+  out clearly indicating the medical desire for such devices.%
+  }
+  \verb{doi}
+  \verb 10.1109/IEMBS.2008.4650549
+  \endverb
+  \field{isbn}{978-1-4244-1814-5}
+  \field{issn}{1557-170X}
+  \field{pages}{5867\bibrangedash 5870}
+  \field{title}{{Wearable EEG: what is it, why is it needed and what does it
+  entail?}}
+  \field{volume}{2008}
+  \field{journaltitle}{Conference proceedings : ... Annual International
+  Conference of the IEEE Engineering in Medicine and Biology Society. IEEE
+  Engineering in Medicine and Biology Society. Conference}
+  \field{year}{2008}
+\endentry
+
+\entry{Dash2012}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Dash}{D.}%
+     {Dianne}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hernandez-Ronquillo}{H.-R.}%
+     {Lizbeth}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Moien-Afshari}{M.-A.}%
+     {Farzad}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tellez-Zenteno}{T.-Z.}%
+     {Jose~F}{J.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{ambulatory eeg,cost-of-illness,diagnostic yield,epilepsy,non-epileptic
+  events,portable eeg,pseudoseizures}
+  \strng{namehash}{DD+1}
+  \strng{fullhash}{DDHRLMAFTZJF1}
+  \field{sortinit}{D}
+  \field{abstract}{%
+  Introduction. Ambulatory electroencephalography (AEEG) is a monitoring
+  technique that allows the recording of continuous EEG activity when patients
+  are at home, without the necessity of admission to the hospital for prolonged
+  video-EEG monitoring. Methods. This is a prospective cohort study performed
+  in a Canadian academic centre in order to assess the yield and tolerability
+  of AEEG in the adult population. Over a period of three years, 101 patients
+  were included. The yield of AEEG was assessed by taking into account the
+  questions asked by the clinician before and after the investigation. Results.
+  One hundred and one patients undergoing AEEG were prospectively recruited
+  during a three-year-period. Our population consisted of 45 males (44.6\%) and
+  56 females (55.4\%). The mean age of the group was 36.6±16.1 years. Most of
+  the patients had at least one previous routine EEG (93\%). The primary
+  reasons for the AEEGs were subdivided into four categories: a) to
+  differentiate between seizures and non-epileptic events; b) to determine the
+  frequency of seizures and epileptiform discharges; c) to characterize seizure
+  type or localization; and d) to potentially diagnose epilepsy. The mean
+  duration of AEEG recording was 32±17 hours (15-96 hours). For 73 (72\%)
+  patients, the AEEG provided information that was useful for the management.
+  For 28 (28\%) patients, the AEEG did not provide information on diagnosis
+  because no events or epileptiform activity occurred. In only 1 patient was
+  the AEEG inconclusive due to non-physiological artefacts. Three patients were
+  referred for epilepsy surgery without the necessity of video-EEG telemetry.
+  Conclusion. In this study, we found that AEEG has a high diagnostic yield
+  (72\%) and believe that careful selection of patients is the most important
+  factor for a high diagnostic yield. The main use of AEEG is the
+  characterization of patients with non-epileptic events, in patients with a
+  diagnosis of epilepsy that is not clear, and quantification of spikes and
+  seizures to improve the medical management. Ambulatory EEG is a
+  cost-effective solution for increasing demands for in-hospital video-EEG
+  monitoring of adult patients.%
+  }
+  \verb{doi}
+  \verb 10.1684/epd.2012.0529
+  \endverb
+  \field{issn}{1294-9361}
+  \field{pages}{290\bibrangedash 7}
+  \field{title}{{Ambulatory EEG: a cost-effective alternative to inpatient
+  video-EEG in adult patients.}}
+  \verb{url}
+  \verb http://www.ncbi.nlm.nih.gov/pubmed/22963900
+  \endverb
+  \field{volume}{14}
+  \field{journaltitle}{Epileptic disorders}
+  \field{year}{2012}
+\endentry
+
+\entry{Duncan2006}{misc}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Duncan}{D.}%
+     {John~S.}{J.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sander}{S.}%
+     {Josemir~W.}{J.~W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sisodiya}{S.}%
+     {Sanjay~M.}{S.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Walker}{W.}%
+     {Matthew~C.}{M.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DJS+1}
+  \strng{fullhash}{DJSSJWSSMWMC1}
+  \field{sortinit}{D}
+  \field{abstract}{%
+  The epilepsies are one of the most common serious brain disorders, can occur
+  at all ages, and have many possible presentations and causes. Although
+  incidence in childhood has fallen over the past three decades in developed
+  countries, this reduction is matched by an increase in elderly people.
+  Monogenic Mendelian epilepsies are rare. A clinical syndrome often has
+  multiple possible genetic causes, and conversely, different mutations in one
+  gene can lead to various epileptic syndromes. Most common epilepsies,
+  however, are probably complex traits with environmental effects acting on
+  inherited susceptibility, mediated by common variation in particular genes.
+  Diagnosis of epilepsy remains clinical, and neurophysiological investigations
+  assist with diagnosis of the syndrome. Brain imaging is making great progress
+  in identifying the structural and functional causes and consequences of the
+  epilepsies. Current antiepileptic drugs suppress seizures without influencing
+  the underlying tendency to generate seizures, and are effective in 60-70\% of
+  individuals. Pharmacogenetic studies hold the promise of being able to better
+  individualise treatment for each patient, with maximum possibility of benefit
+  and minimum risk of adverse effects. For people with refractory focal
+  epilepsy, neurosurgical resection offers the possibility of a life-changing
+  cure. Potential new treatments include precise prediction of seizures and
+  focal therapy with drug delivery, neural stimulation, and biological grafts.
+  ?? 2006 Elsevier Ltd. All rights reserved.%
+  }
+  \field{booktitle}{Lancet}
+  \field{chapter}{11}
+  \verb{doi}
+  \verb 10.1016/S0140-6736(06)68477-8
+  \endverb
+  \field{isbn}{9780470741221}
+  \field{issn}{01406736}
+  \field{pages}{1087\bibrangedash 1100}
+  \field{title}{{Adult epilepsy}}
+  \field{volume}{367}
+  \field{year}{2006}
+\endentry
+
 \entry{overlapproc}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -176,6 +362,70 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
+\entry{Rizvi2013}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Rizvi}{R.}%
+     {Syed~A.}{S.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{T??llez Zenteno}}{T.}%
+     {Jos??~F.}{J.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Crawford}{C.}%
+     {Sara~L.}{S.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wu}{W.}%
+     {Adam}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Ambulatory EEG,Complex partial seizure,Cost-effectiveness,Diagnostic
+  yield,Epilepsy,Portable EEG}
+  \strng{namehash}{RSA+1}
+  \strng{fullhash}{RSATJFCSLWA1}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  Outpatient ambulatory EEG is more cost-effective than inpatient EEG telemetry
+  and may provide adequate seizure localization in a presurgical evaluation. A
+  51-year-old right-handed male had been unable to work or drive since the age
+  of 35 due to intractable partial onset epilepsy. A 72-hour outpatient
+  ambulatory EEG recorded 18 seizures from the right temporal region. No
+  epileptiform activity was seen in the left hemisphere. Magnetic resonance
+  imaging showed right mesial temporal sclerosis as well as an area of
+  encephalomalacia at the medial inferior right temporal lobe.
+  Neuropsychological assessment found that the patient was a good neurosurgery
+  candidate. At this point, the patient was considered to be a candidate for a
+  right temporal lobectomy. A standard right temporal lobectomy was performed.
+  The patient has been seizure-free for 10. months after the surgery. Follow-up
+  EEGs show no epileptiform activity. The patient is preparing to go back to
+  work, and his driver's license was reinstated 9. months postsurgery.
+  Neuropsychological reassessment is pending, but no apparent change in
+  cognition has been noticed by the patient or his family. Cases with a high
+  congruence between diagnostic imaging and the EEG abnormalities identified in
+  the portable EEG may provide enough information regarding seizure frequency
+  and localization to eliminate the need for inpatient EEG telemetry in the
+  evaluation of patients for epilepsy surgery. We believe that the use of aEEG
+  in preoperative planning should be restricted to cases of TLE and to patients
+  with a high frequency of seizures. ?? 2013 The Authors.%
+  }
+  \verb{doi}
+  \verb 10.1016/j.ebcr.2013.01.001
+  \endverb
+  \field{issn}{22133232}
+  \field{pages}{39\bibrangedash 41}
+  \field{title}{{Outpatient ambulatory EEG as an option for epilepsy surgery
+  evaluation instead of inpatient EEG telemetry}}
+  \field{volume}{1}
+  \field{journaltitle}{Epilepsy and Behavior Case Reports}
+  \field{year}{2013}
+\endentry
+
 \entry{power}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -232,6 +482,193 @@
   \endverb
   \field{type}{techreport}
   \field{year}{2013}
+\endentry
+
+\entry{Wimo2010}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Wimo}{W.}%
+     {Anders}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Winblad}{W.}%
+     {Bengt}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {J??nsson}{J.}%
+     {Linus}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Africa,Alzheimer's disease,Asia,Caribbean,Central
+  America,Costs,Dementia,Economic impact,Economics,Europe,Global burden of
+  disease,Informal care,North America,Oceania,Prevalence,South America}
+  \strng{namehash}{WAWBJL1}
+  \strng{fullhash}{WAWBJL1}
+  \field{sortinit}{W}
+  \field{abstract}{%
+  Background: The purpose of this study was to update the previous estimate of
+  the worldwide cost of dementia in 2005 to 2009. Methods: The cost model is
+  based on prevalence estimates, country and region-specific data on Gross
+  Domestic Product per person and average wage, with results from previously
+  published cost-of-illness studies in different countries. Prevalence figures
+  are updated to 2009 and costs were adjusted to 2009 constant US dollars (\$).
+  Results: The total worldwide societal cost of dementia, based on a dementia
+  population of 34.4 million demented persons, was estimated to \$422 billion
+  in 2009, including \$142 billion for informal care (34\%). Conclusions: The
+  worldwide cost of dementia has increased by 34\% (18\% in fixed prices)
+  between 2005 and 2009. ?? 2010.%
+  }
+  \verb{doi}
+  \verb 10.1016/j.jalz.2010.01.010
+  \endverb
+  \field{isbn}{1552-5279 (Electronic)$\backslash$r1552-5260 (Linking)}
+  \field{issn}{15525260}
+  \field{pages}{98\bibrangedash 103}
+  \field{title}{{The worldwide societal costs of dementia: Estimates for 2009}}
+  \field{volume}{6}
+  \field{journaltitle}{Alzheimer's and Dementia}
+  \field{year}{2010}
+\endentry
+
+\entry{WorldHealthOrganization2012}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{World Health Organization}}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{sortinit}{W}
+  \field{abstract}{%
+  Dementia is seriously disabling for those who have it and is often
+  devastating for their caregivers and families. With an increasing number of
+  people being affected by dementia, almost everyone knows someone who has
+  dementia or whose life has been touched by it. The number of people living
+  with dementia worldwide is currently estimated at 35.6 million. This number
+  will double by 2030 and more than triple by 2050. The high global prevalence,
+  economic impact of dementia on families, caregivers and communities, and the
+  associated stigma and social exclusion present a significant public health
+  challenge. The global health community has recognized the need for action and
+  to place dementia on the public health agenda. The World Health Organization
+  and Alzheimers Disease Interna- tional, an international NGO in official
+  relations with WHO, jointly developed the report, Dementia: a public health
+  priority. The purpose of this report is to raise awareness of dementia as a
+  public health priority, to articulate a public health approach and to advo-
+  cate for action at international and national levels based on the principles
+  of evidence, equity, inclusion and integration. The report aims to encourage
+  country preparedness by strengthen- ing or developing policy and implementing
+  it through plans and programmes which enhance dementia care in order to
+  improve the social well-being and quality of life of those living with
+  dementia and their caregivers. The reports includes an overview of global
+  epide- miology and the impact of dementia, national-level approaches to
+  dementia including the role of health and social care systems and workforce,
+  issues around caregiving and caregivers, and aware- ness raising and advocacy
+  for dementia. As this would not have been possible without the significant
+  contri- bution of representative organizations of people with dementia and
+  their caregivers, we would like to thank them for their invaluable work and
+  support. The report is expected to be a resource that will facilitate govern-
+  ments, policy-makers, and other stakeholders to address the impact of
+  dementia as an increasing threat to global health. It is hoped that the key
+  messages in the report will promote dementia as a public health and social
+  care priority worldwide.%
+  }
+  \field{booktitle}{Dementia}
+  \verb{doi}
+  \verb 978 92 4 156445 8
+  \endverb
+  \verb{eprint}
+  \verb 978 92 4 156445 8
+  \endverb
+  \field{isbn}{9789241564}
+  \field{pages}{112}
+  \field{title}{{Dementia: a public health priority}}
+  \verb{url}
+  \verb http://whqlibdoc.who.int/publications/2012/9789241564458\_eng.pdf
+  \endverb
+  \field{type}{techreport}
+  \field{eprinttype}{arXiv}
+  \field{year}{2012}
+\endentry
+
+\entry{Zijlmans2007}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Zijlmans}{Z.}%
+     {Maeike}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Huiskamp}{H.}%
+     {Geertjan}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hersevoort}{H.}%
+     {Maaike}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Seppenwoolde}{S.}%
+     {Jan~Henry}{J.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Van Huffelen}}{V.}%
+     {Alexander~C.}{A.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Leijten}{L.}%
+     {F.~S~S}{F.~S.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Electroencephalography,Epilepsy,Epilepsy surgery,Epileptic source
+  localization,Functional MRI}
+  \strng{namehash}{ZM+1}
+  \strng{fullhash}{ZMHGHMSJHVACLFSS1}
+  \field{sortinit}{Z}
+  \field{abstract}{%
+  Epilepsy surgery requires precise localization of the epileptic source.
+  EEG-correlated functional MRI (EEG-fMRI) is a new technique showing the
+  haemodynamic effects of interictal epileptiform activity. This study assesses
+  its potential added value in the presurgical evaluation of patients with
+  complex source localization. Adult surgical candidates considered ineligible
+  because of an unclear focus and/or presumed multifocality on the basis of EEG
+  underwent EEG-fMRI. Interictal epileptic discharges (IEDs) in the EEG during
+  fMRI were identified by consensus between two observers. Topographically
+  distinct IED sets were analysed separately. Only patients with significant,
+  positive blood oxygen level-dependent (BOLD) responses that were
+  topographically related to the EEG were re-evaluated for surgery. Forty-six
+  IED sets from 29 patients were analysed. In eight patients, at least one BOLD
+  response was significant, positive and topographically related to the IEDs.
+  These patients were rejected for surgery because of an unclear focus (n = 3),
+  presumed multifocality (n = 2) or a combination of both (n = 3). EEG-fMRI
+  improved localization in four out of six unclear foci. In patients with
+  presumed multifocality, EEG-fMRI advocated one of the foci in one patient and
+  confirmed multifocality in four out of five patients. In four patients
+  EEG-fMRI opened new prospects for surgery and in two of these patients
+  intracranial EEG supported the EEG-fMRI results. In these complex cases,
+  EEG-fMRI either improved source localization or corroborated a negative
+  decision regarding surgical candidacy. It is thus a valuable tool in the
+  presurgical evaluation of patients. Guidelines for the use of EEG-fMRI in
+  clinical practice are proposed.%
+  }
+  \verb{doi}
+  \verb 10.1093/brain/awm141
+  \endverb
+  \field{isbn}{1460-2156 (Electronic)}
+  \field{issn}{00068950}
+  \field{pages}{2343\bibrangedash 2353}
+  \field{title}{{EEG-fMRI in the preoperative work-up for epilepsy surgery}}
+  \field{volume}{130}
+  \field{journaltitle}{Brain}
+  \field{year}{2007}
 \endentry
 
 \lossort

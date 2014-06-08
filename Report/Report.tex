@@ -126,9 +126,9 @@ Certain neurological medical disorders require continuous monitoring to fully un
 
 However, symptoms from neurological disorders often appear sporadically and with little to no warning. Seizures vary from minutes to years apart, and sometimes are not realised or detected without proper equipment. Hospitalising patients for long periods of time is a costly option, and in such circumstances the patient could remain in hospital indefinitely.  Such circumstances lend themselves to an ambulatory system, where an outpatient can be monitored continuously without discomfort or hospitalisation, improving quality of life while decreasing costs. 
 
-With the emergence of low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. Through leveraging low energy radio capable platforms, i.e. smartphones and tablets, in the context of an ambulatory EEG, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital. This project looks at maximising transmission of \ac{EEG} signals over the emerging wireless technology, \ac{BLE}. Further, while this project is targeted at EEG signals, there is no reason why this research and technology cannot be applied to other signals and systems, examples including glucose monitoring, electrocardiography and spirometers.
+With the emergence of low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring outside of the hospital. Through leveraging low energy radio capable platforms, i.e. smartphones and tablets, in the context of an \ac{AEEG}, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital. This project looks at maximising transmission of \ac{EEG} signals over the emerging wireless technology, \ac{BLE}. Further, while this project is targeted at \ac{EEG} signals, there is no reason why this research and technology cannot be applied to other signals and systems, examples including glucose monitoring, electrocardiography and spirometers.
 
-\cite{Blanco95}
+
 \clearpage
 \tableofcontents
 \clearpage
@@ -140,7 +140,7 @@ Firstly, the project surperivsors, James Mardell, Chen Guangwei and Esther Rodri
 
 \ac{CSR} provided hardware and technical support in the spirit of academia. Particular acknowledgements go to employees Adam Hill, Martin Spikings, Mark Wade, Neil Stewart and Simon. CSR have requested that this project report or relevant parts of it be made available to them.
 
-Guan Yang and Jacob Rosenthal from New York, United States, for pubically making available code to drive nRF8001 radio. Imperial College student Stelius Ioakim for sharing experience of \ac{PCB} assembly. My girlfriend for dainty and dexterious hands, invaluable during \ac{PCB} assembly. 
+Guan Yang and Jacob Rosenthal from New York, United States, for pubically making available code to drive nRF8001 radio. Imperial College student Stelius Ioakim for sharing experience of \ac{PCB} assembly. My girlfriend for dainty and dexterious hands, invaluable during cricuit assembly. 
 
 Dr. Nissim Zur, CEO of Vitelix Limited is an expert in low power wireless technologies, and has conversed over many aspects of the CSR1010 chip used. Further, he has also taken an interest in this project's work in regards to maximising the speed, and has requested the results be shared with him.
 
@@ -151,25 +151,13 @@ Finally, special thanks go towards Mike Harbour and Victor Boddy for their effor
 \section{Introduction}
 
 \subsection{Problem Landscape and Motivation}
-Neurological disorders and their sequelae are estimated at present to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectency and decreasing (relative) fertility rates, the age demographic has shifted towards an ageing population. This has caused a growth in neurological disorders such as Parkinson's, multiple sclrosisi, Alzheimers and other dementias. The diagnosis and monitoring and treating many of these diseases is currently a costly procedure due to the time and resource allocation (i.e. relatively expensive equipment).
+Neurological disorders and their sequelae are estimated at present to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectency and decreasing (relative) fertility rates, the age demographic has shifted towards an ageing population. This has caused a growth in neurological disorders such as Parkinson's, multiple sclrosisi, Alzheimers and other dementias. From the 2012 report published by the \ac{WHO}\cite{WorldHealthOrganization2012}, the societal costs of dementia for the United Kingdom totals £23 billion, a figure that matches the costs of cancer (£12 billion), heart disease (£8 billion) and stroke (£5 billion). Similarly a 2010 Swedish paper published that the costs of dementia (50 billion SEK) was higher than that of depression, stokres and alcohol abuse (32.5, 12.5, 21-30 billion SEK respectively)\cite{Wimo2010}. With neurological disorders constituting to approximately 12% of the global mortallity count\cite{WHO2006} and the expected increase in the number of cases and rising cost of healthcare, neurological disorders are an active area of medical research.
 
-Unfortunately many neurlogical disorder symptons occur sporadically with little to no inidication of an event, such as in the cause of a seizure for epilepsy.
+\ac{EEG}s are used extensively for detecting, characterising and monitoring brain activity related to the afromentioned dieseases. Examples applications include diagnosing patients regularly loosing conciousness with syncopy; measuring the effectiveness of medication for patients currently diagnosed with epilepsy\cite{Duncan2006}; deciding whether the patient is a candidate for removal of the cortex part associated with the disorder\cite{Zijlmans2007}. Unfortunately many neurlogical disorder symptons occur sporadically with little to no inidication of an impending event, such as in the cause of epilepsy a seizure. In some circumstances the patient could remain in hospital indefinitely, however symptons (e.g. seizures) can be seconds to years apart, and sometimes are not realised or detected without proper equipment. The diagnosis, monitoring and treating many of these diseases is currently a costly procedure due to the resource requirements (staff, time and equipment). Common practices include hospitalising and monitoring patients between 24 hours and a week.  Such circumstances lend themselves to an ambulatory system, where an outpatient can be monitored continuously without discomfort or hospitalisation, thus improving quality of life and social welfare (e.g. no sick days off work).
 
+Since the arrival of \ac{BLE} in smartphones in 2012, the vast majority of smart phones are "Bluetooth Smart Ready" (incorporating \ac{BLE} technology). This is a relatively new technology capable of (very) low power communication for applications requiring a low data rate. This low power consumption means devices can have long lifetimes. While other low power wireless options exist such as ANT or ZigBee, \ac{BLE} is the only popular radio technology being manufactured into smart phones and tablet devices. In comparison, (classic) Bluetooth power consumption is typically 1 to 2 orders of magnitude higher than \ac{BLE}.
 
-
-Patients, however, are unlikely to suffer from neurological disorder while at the clinic as they often appear sporadically during day to day life and with little to no warning. In such circumstances the patient could remain in hospital indefinitely, however seizures can be minutes to years apart, and sometimes are not realised or detected without proper equipment. Such circumstances lend themselves to an ambulatory system, where the patient can be monitored continuously without discomfort or hospitalisation, thus improving quality of life. 
-
-
-
-
-The vast majority of modern smart phones are now being equiped with \ac{BLE} or "Bluetooth Smart" technology. This is a relatively new technology design branded off the popular Bluetooth technology which gained popularity in the early part of last decade. While the two technologies share the same name, their design and operation is very much different. Although origianl Bluetooth's and \ac{BLE}'s use cases may overlap in some scenarios, they were designed to perform well under different circumstances.  
-
-By coupling cheap low power sensors and radios, with powerful ubiquitous consumer technology, it is possible not only to cheaply and efficiently monitor patients, improve the quality of life for patients but also help physicians further their understanding of neurological disorders.
-
-%Smart phone considered high power device anyway. Only hard requirement is that smart phone can support BLE
-Currently \ac{BLE} is the only radio technology that is currently being built into all smart phones and tablet devices that offers synergy with small devices power consumption low enough to enable a long lifetimes from a lightweight power source. In comparison classic Bluetooth’s power consumption is typically 1 to 2 orders of magnitude higher than BLE. Through leveraging widely popular and familiar smart phone devices with this new technology, in the context of an ambulatory EEG, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital.
-
-With the plethora of emerging low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring out of the hospital and into the home. The consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all use the \ac{BLE} technology to connect to smartphones.
+ Through leveraging widely popular and familiar smart phone devices with this new technology, in the context of an \ac{AEEG}, it is possible to empower the patient to inexpensively move their health care out of the hospital and into the home. By coupling cheap low power sensors and radios, with powerful ubiquitous consumer technology, it is possible not only to cheaply and efficiently monitor patients, improve the quality of life for patients but also help physicians further their understanding of neurological disorders. Further, when combined with data-mining or so called big-data analytics novel insights may reveal new understanding and ultimately better forms of treatmeant.
 
 \subsection{Existing Technologies and Products}
 
@@ -183,20 +171,20 @@ Popular products on the market that have already shown integration with consumer
 	\label{fig:emotive}
 \end{figure}
 
-NeuroSky have released three \ac{EEG} products, the MindSet, MindWave and MindWave mobile. They all 
+NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a datarate of 250 kbit/s, a baudrate of 57,600 and 10 meter range. It is also noted that there is a 5% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same buad rate of the previous. The maximum power consumption increases to 120mW (80mA). Both devices weight 90g, and are preiced $80 and $130 respectively. 
 
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width = 0.7\textwidth]{neurosky}
 	\end{center}
-	\caption{NeuroSky Mindwave Mobile \ac{EEG}  Headset}
+	\caption{NeuroSky MindWave Mobile \ac{EEG}  Headset}
 	\label{fig:neurosky}
 \end{figure}
 
 \subsection{Project End Goals}
 Originally the project was introduced as "Maximising Bluetooth Low Energy throughput of \ac{EEG} signals", however 
 
-Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the EEG sensors and a computer cause patients to remain fairly immobile and hence are impracticable for long periods of use. This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device along with its power consumption.
+Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the \ac{EEG} sensors and a fixed computer serverly restricts patient's mobility and hence are impracticable for long periods of use. This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} montoring .
 
 Idealistic requirements of the project include 
 \begin{itemize}
@@ -208,6 +196,8 @@ Idealistic requirements of the project include
 	\item Ability to communicate with a smart phone or tablet
 	\item Real time update of signals
 \end{itemize}
+
+ The consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all use the \ac{BLE} technology to connect to smartphones.
 
 \subsection {Structure}
 The project is organised as the following. An overview of \ac{EEG} signals and \ac{BLE} technology. 
@@ -320,13 +310,13 @@ Figure~\ref{fig:connection} shows a connection between two devices being initiat
 \begin{itemize}
 
  \item The channel map bit pattern corresponds to a contiguous stream of 37 ones, corresponding to all 37 channels being operational (the master has no reason to prevent transmission). 
- \item The hop byte indicates between each \ac{CI} how many channels the device pair will increment. From packet 242 onwards, the channel map increments every \ac{CI} (2 packets/30ms).
+ \item The hop byte indicates between each \ac{CE} how many channels the device pair will increment. From packet 242 onwards, the channel map increments every \ac{CI} (2 packets/30ms).
  \item The access address is a randomly chosen number (by the master) which acts as a identifier for a connection between two devices. 
- \item The interval of 0x18 (24 decimal) represents the \ac{CI} length in units of 1.25ms. Therefore 0x18 represents 30ms between connection intervals. Between each master to slave directional data packet (every 2 packets), the total sum of the time is 30000$\mu$s
+ \item The interval of 0x18 (24 decimal) represents the \ac{CI} length in units of 1.25ms. Therefore 0x18 represents 30ms between subsequent \ac{CE}. Between each master to slave directional data packet (every 2 packets), the total sum of the time is 30000$\mu$s
 
 \end{itemize}
 
-It is highlighted that (at least initally) the slave interval is 0, meaning the slave should wake up every \ac{CI}. In packets numbers 243 and 244, the slave and master respectively have nothing to send, and simply acknowledge on another with an empty \ac{PDU}. The protocol realises flow control through the the lazy acknowledgment of \ac{SN} and \ac{NESN} bits, embedded into the header of every data channel.
+It is highlighted that (at least initally) the slave interval is 0, meaning the slave should wake up every \ac{CE}. In packets numbers 243 and 244, the slave and master respectively have nothing to send, and simply acknowledge on another with an empty \ac{PDU}. The protocol realises flow control through the the lazy acknowledgment of \ac{SN} and \ac{NESN} bits, embedded into the header of every data channel.
 
 \begin{figure}[!h]
 	\begin{center}
@@ -706,13 +696,13 @@ For the \ac{EEG} signal acquisition, use of an off-board \ac{ADC} module, the AD
 
 The final component selection for the \ac{EEG} prototype is
 \begin{itemize}
-\item AD7997 2 x 8bit I2C ADC (two are required for 16 channels)
+\item 2 xAD7997 - 8bit I2C ADC (two are required for 16 channels)
 \item CSR1010 single mode BLE device
-\item P675 Zinc Air batteries. Batteries of capacity 620mAh are readily available and inexpensive. Two are required in series to achieve an operable voltage
-\item AT24C512C-SSHD 512K Serial EEPROM Flash for the CSR1010's non-volatile storage
+\item 2 x P675 Zinc Air batteries. Batteries of capacity 620mAh are readily available and inexpensive (two are required in series to achieve an operable voltage)
+\item AT24C512C-SSHD 512K Serial EEPROM flash for the CSR1010's non-volatile storage
 \end{itemize}
 
-The application will be developed on a tablet, due to the expected ease of development. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence limited effort is required to port the application to Microsoft Windows\textregistered smartphone.
+The application will be developed on a tablet, due to the expected ease of development over other platforms. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence limited effort is required to port the application to Microsoft Windows smartphone.
 
 
 \clearpage
@@ -881,6 +871,12 @@ Never list packets per CI
 
 Duplex
 
+Combine with video
+
+Ambulatory to wearable
+
+Better understanding, big data
+
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance
 Useful for CSR, monies worth out of me
@@ -896,7 +892,7 @@ Useful for CSR, monies worth out of me
 
 The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it publically available online at the git repositry address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
-
+\clearpage
 \section{Bibliography}
 \clearpage
 
@@ -904,12 +900,12 @@ The large amount of both written and generated code is to vast to warrant being 
 
 \printbibliography
 
-
 \section{Appendix}
 \subsection{Acronyms}
 \begin{acronym}
 	\acro{EEG}{Electroencephalography}
 	\acro{AEEG}{Ambulatory Electroencephalogram}
+	\acro{WHO}{World Health Organisation}
 	\acro{BLE}{Bluetooth Low Energy}
 	\acro{BTC}{Bluetooth Classic}
 	\acro{CSR}{Cambridge Silicon Radio}
@@ -943,6 +939,6 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{MIC}{message integreity code}
 	\acro{PTH}{plated through hole}
 \end{acronym} 
-
+\clearpage
 \section{User Guide}
 \end{document}

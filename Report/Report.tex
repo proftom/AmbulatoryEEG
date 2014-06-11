@@ -199,7 +199,7 @@ Idealistic requirements of the project include
 \end{itemize}
 
 \subsection {Structure}
-The project is organised as the following. An overview of \ac{EEG} signals and \ac{BLE} technology is presented, giving background where it is believed revelant and of value to the rest of the project. It should be noted that these sections are not a exhaustive description of \ac{EEG} signals nor \ac{BLE}. The report will then move onto preliminary resarch, where the technology is evaluated and the components are discussed in detail and a selection made for the prototype. A desired specifications is then presented from the components chosen.  The implementation section documents and discusses building, optimising and any issues found while developing the prototype. The results section lists the project findings, followed by a thorough evaluation of these results. A projec wide conclusion can then be found where \ac{BLE}'s suitability for the application is discussed along with the limitations of the current system, and suggested future work for project extension or further interesting reseearch as a result of this project. Lastly, a section is reserved for final remarks for comments that don't formally fit elsewhere into the report.
+The project is organised as the following. An overview of \ac{EEG} signals and \ac{BLE} technology is presented, giving background where it is believed revelant and of value to the rest of the project. It should be noted that these sections are not a exhaustive description of \ac{EEG} signals nor \ac{BLE}. The report will then move onto preliminary resarch, where the technology is evaluated and the components are discussed in detail (including risks) and a selection made for the prototype. A desired specifications is then presented from the components chosen.  The implementation section documents and discusses building, optimising and any issues found while developing the prototype. The results section lists the project findings, followed by a thorough evaluation of these results. A projec wide conclusion can then be found where \ac{BLE}'s suitability for the application is discussed along with the limitations of the current system, and suggested future work for project extension or further interesting reseearch as a result of this project. Lastly, a section is reserved for final remarks for comments that don't formally fit elsewhere into the report.
 
 \clearpage
 \section{Theory and Technology}
@@ -801,6 +801,65 @@ The layout can be shurnk further through reducing distances between components. 
 
 \subsection{Power Analysis}
 
+To measure the power usage of the system a 10 ohm shunt resistor was put between the board's $V_{ss}$ and ground. Scope leads where then attached to measure the voltage, which due to ohm's law, will be measured at 10 times the current. 
+
+Firsly, the power usage of the just the radio was performed (the ADCs were disconnected).  The data sheet claims the maximum peak current used during transmission or receiving is approximately 16mA at 3V. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{adv}
+	\end{center}
+	\caption{Advertising Event}
+	\label{fig:adv}
+\end{figure}
+
+It can be seen from Figure~\ref{adc} that the measured voltage is 150mV. This corresponds to 15mA, approximately what the data sheet claimed. This respresents an instaneous power of 45mW. As mentioned previously, the advertising state of the system happens so infrequently that the long run cost is considered zero, hence the power analysis presented here does not include information from the advertising state.
+
+\ac{CE}s where no data other than correspondance (that the link was still alive), measured a peak current consumption less than 12mA. The \ac{CE} can be divided into sections. The device wakes up approximately 2 milliseconds before transmission, remains idle, then listens/transmits (receive before transmission first for the slave device), before 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{ce}
+	\end{center}
+	\caption{Connection events - connection interval set at 1 second with a slave latency of 0}
+	\label{fig:ce}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{ceclose}
+	\end{center}
+	\caption{Connection events - connection interval set at 1 second}
+	\label{fig:ceclose}
+\end{figure}
+
+To investigate the "base" power consumption the device requires, that is the power consumption required to maintain a connection indefinately. Taking the voltage data in the figures above, captured using an oscilloscope, it is possible to accurately estimate the area under the profile using the trapezium rule. This was done using the matlab function $cumtrapz$. For 3.3 volts, this area is found to be approximately 11.76. This area represents the current consumption in milli-amp-hours for a single conneciton event. To convert this to the current consumption in units milli-amp-hour not per connection event, the number is multiplied by the number of connection events (set by the connection interval) within an hour period, and divded through by the number of milliseconds in an hour to convert the time units (the x-axis in Figure~\ref{fig:cesim} is in milliseconds).
+
+In the parameterised form
+
+
+The approximated area can be further parameterised (e.g the rush current and duration), however it is presented here as a fixed cost
+
+This number is the "base" amount, which must be paid every time data is sent. To achieve a higher economical value of energy for a given throughput, this fixed cost needs to be amortised as much as possible. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{cesim}
+	\end{center}
+	\caption{Connection events - connection interval set at 1 second}
+	\label{fig:cesim}
+\end{figure}
+
+
+Increasing the slave latency upto the maximum defined by the specification, results in the a system lifetime of 337 years for two small 620mAh capacity batteries. 
+
+To conclude, vector of voltages and times. Approximated the area using the trapezium rule to calcualte the fixed cost. 
+
+
+Talk about min - max lifetime of BLE generic system, then shrink that too an EEG system.
+
+Comparision with TI
+
 The hardware
 
 Assuming that the number of 
@@ -875,6 +934,8 @@ Combine with video
 Ambulatory to wearable
 
 Better understanding, big data
+
+characeterise power with voltage
 
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance

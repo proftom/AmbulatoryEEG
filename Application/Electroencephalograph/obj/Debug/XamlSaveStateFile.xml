@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\repository\ambulatoryeeg\application\electroencephalograph\obj\debug\intermediatexaml\electroencephalograph.exe" HashGuid="a6a52824-4483-3b76-4aed-e57ffe7093d2" />
+    <LocalAssembly PathName="c:\repository\ambulatoryeeg\application\electroencephalograph\obj\debug\intermediatexaml\electroencephalograph.exe" HashGuid="efa5a874-9166-a3a4-7d28-72074221b8ad" />
     <ReferenceAssembly PathName="c:\program files (x86)\syncfusion\essential studio\12.1.0.43\winrt\8.1\sdk\references\commonconfiguration\neutral\syncfusion.sfchart.winrt.dll" HashGuid="be295faf-dfa7-bdb3-c6bc-48b03fa0d4db" />
     <ReferenceAssembly PathName="c:\repository\ambulatoryeeg\application\packages\winrtxamltoolkit.controls.datavisualization.1.6.1.3\lib\netcore451\winrtxamltoolkit.controls.datavisualization.dll" HashGuid="be684ae2-5628-42c1-f25a-53d124102458" />
     <ReferenceAssembly PathName="c:\repository\ambulatoryeeg\application\packages\winrtxamltoolkit.1.6.1.3\lib\netcore451\winrtxamltoolkit.dll" HashGuid="a4cdc2c2-a01c-5ec1-da22-75d5d070a5d3" />

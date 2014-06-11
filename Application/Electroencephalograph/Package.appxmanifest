@@ -43,6 +43,7 @@
         <m2:Function Type="serviceId:00001800-0000-1000-8000-00805f9b34fb"/>
         <m2:Function Type="serviceId:00001801-0000-1000-8000-00805f9b34fb"/>
         <m2:Function Type="serviceId:00002A04-0000-1000-8000-00805f9b34fb"/>
+        <m2:Function Type="serviceId:0000180D-0000-1000-8000-00805f9b34fb"/>
       </m2:Device>
     </m2:DeviceCapability>
   </Capabilities>

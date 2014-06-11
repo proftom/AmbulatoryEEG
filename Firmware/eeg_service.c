@@ -308,7 +308,7 @@ extern void HeartRateReadDataFromNVM(bool nvm_fresh_start, uint16 *p_offset)
  *      Nothing.
  *
  *---------------------------------------------------------------------------*/
-static uint8 test = 0; 
+
 static uint8 meas_report[20] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
 extern void HeartRateSendMeasValue(uint16 ucid, uint8 hrm_length, 
                                    uint8 *p_hr_meas)
@@ -316,7 +316,7 @@ extern void HeartRateSendMeasValue(uint16 ucid, uint8 hrm_length,
 int i = 0;
      
     /*if(credits < 8)
-        return;*/
+        return;
         
     meas_report[1] = test++;
 
@@ -324,13 +324,16 @@ int i = 0;
     meas_report[1] = testy;
     uint16* add = &testy;
     add++;
-    meas_report[2] = *add;
-    for (i = 0; i < 1; i++) {
+    meas_report[2] = *add;*/
+
+
+    for (i = 0; i < credits; i++) {
        /*DebugWriteString("\n\rTransmit.."); */
        GattCharValueNotification(ucid, 
               HANDLE_EEG_MEASUREMENT, 
               (uint16)20, 
               meas_report);   
+       credits--;
     }
     /*credits = 0;*/
 

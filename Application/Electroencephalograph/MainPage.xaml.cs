@@ -163,59 +163,65 @@ namespace Electroencephalograph
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
         {
-            ////var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x0EE4));
+            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x180D));
 
-            ////if (devices.Count < 1)
-            ////{
-            ////    await new MessageDialog("Could not locate any EEG devices in the vinicity").ShowAsync();
-            ////    return;
-            ////}
+            if (devices.Count < 1)
+            {
+                await new MessageDialog("Could not locate any EEG devices in the vinicity").ShowAsync();
+                return;
+            }
 
-            //////By default connect to the first EEG service found
-            ////eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
-            ////var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
-            ////eegData.ValueChanged += eegData_ValueChanged;
+            //By default connect to the first EEG service found
+            eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
+            var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00002A37-0000-1000-8000-00805f9b34fb"))[0];
+            eegData.ValueChanged += eegData_ValueChanged;
 
-            ////devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x180f));
-            ////batteryService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
-            //////var batteryData = batteryService.Instance.service.GetCharacteristics(new Guid("00002a19-0000-1000-8000-00805f9b34fb"))[0];
-            //////batteryData.ValueChanged += batteryData_ValueChanged;
-            //////Start notifications
-            ////await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
-            //////var x = await batteryData.ReadClientCharacteristicConfigurationDescriptorAsync();
+            //devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x2A37));
+            //batteryService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
+            //var batteryData = batteryService.Instance.service.GetCharacteristics(new Guid("00002a19-0000-1000-8000-00805f9b34fb"))[0];
+            //batteryData.ValueChanged += batteryData_ValueChanged;
+            //Start notifications
+            await eegData.WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue.Notify);
+            //var x = await batteryData.ReadClientCharacteristicConfigurationDescriptorAsync();
 
-            ////TimerElapsedHandler f = new TimerElapsedHandler(batchUpdate);
-            ////periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0, 40000));
+            //TimerElapsedHandler f = new TimerElapsedHandler(batchUpdate);
+            //periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(f, new TimeSpan(0, 0, 0, 0, 40000));
 
-            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x1800));
-            var service = await GattDeviceService.FromIdAsync(devices[0].Id);
 
-            var gapData = service.GetCharacteristics(new Guid("00002A04-0000-1000-8000-00805f9b34fb"))[0];
-            var raw = await gapData.ReadValueAsync();
 
-            byte[] conParas = new byte[raw.Value.Length];
-            DataReader.FromBuffer(raw.Value).ReadBytes(conParas);
-            //I can breakpoint and verify that the read works fine
 
-            //var tmp = conParas[0];
-            //conParas[0] = conParas[1];
-            //conParas[1] = tmp;
-            //tmp = conParas[2];
-            //conParas[2] =conParas[3]; conParas[3] = tmp;
-            //tmp = conParas[4];
-            //conParas[5] = conParas[4];
-            //conParas[5] = tmp;
-            //tmp = conParas[6];
-            //conParas[6] = conParas[7];
-            //conParas[7] = tmp;
-            DataWriter writer = new DataWriter();
-            //Endianess of reciever data inverted
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            writer.WriteInt16((Int16)SwapUInt16(100));
-            var z = conParas.AsBuffer();
-            var status = await gapData.WriteValueAsync(conParas.AsBuffer());
+
+
+            //////////////////////
+            //var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x1800));
+            //var service = await GattDeviceService.FromIdAsync(devices[0].Id);
+
+            //var gapData = service.GetCharacteristics(new Guid("00002A04-0000-1000-8000-00805f9b34fb"))[0];
+            //var raw = await gapData.ReadValueAsync();
+
+            //byte[] conParas = new byte[raw.Value.Length];
+            //DataReader.FromBuffer(raw.Value).ReadBytes(conParas);
+            ////I can breakpoint and verify that the read works fine
+
+            ////var tmp = conParas[0];
+            ////conParas[0] = conParas[1];
+            ////conParas[1] = tmp;
+            ////tmp = conParas[2];
+            ////conParas[2] =conParas[3]; conParas[3] = tmp;
+            ////tmp = conParas[4];
+            ////conParas[5] = conParas[4];
+            ////conParas[5] = tmp;
+            ////tmp = conParas[6];
+            ////conParas[6] = conParas[7];
+            ////conParas[7] = tmp;
+            //DataWriter writer = new DataWriter();
+            ////Endianess of reciever data inverted
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            //writer.WriteInt16((Int16)SwapUInt16(100));
+            //var z = conParas.AsBuffer();
+            //var status = await gapData.WriteValueAsync(conParas.AsBuffer());
             
         }
 
@@ -232,22 +238,28 @@ namespace Electroencephalograph
         }
 
         private CoreDispatcher cd;
+
         List<FinancialStuff> lst = new List<FinancialStuff>();
+        public int count = 0;
         async void eegData_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
         {
             var data = new byte[args.CharacteristicValue.Length];
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
 
+            //System.Diagnostics.Debug.WriteLine("{0}", count++);
+            count++;
+            if ((count % 500) == 0)
+                System.Diagnostics.Debug.WriteLine("{0}\t{1}", count, DateTime.UtcNow.ToString("mm:ss.ffffff"));
 
-            Random rnd = new Random();
-            var s = Convert.ToString(data[2], 2).PadLeft(8, '0');
-            var s2 = Convert.ToString(data[1], 2).PadLeft(8, '0');
+            //Random rnd = new Random();
+            //var s = Convert.ToString(data[2], 2).PadLeft(8, '0');
+            //var s2 = Convert.ToString(data[1], 2).PadLeft(8, '0');
 
-            System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", data[0], s, s2, data[3]);
-            lock (lst)
-            {
-                lst.Add(new FinancialStuff() { Name = rnd.Next(1,100), Amount = data[1] });
-            }
+            //System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", data[0], s, s2, data[3]);
+            //lock (lst)
+            //{
+            //    lst.Add(new FinancialStuff() { Name = rnd.Next(1,100), Amount = data[1] });
+            //}
             
         }
 

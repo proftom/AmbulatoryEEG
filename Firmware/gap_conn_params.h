@@ -65,8 +65,8 @@ requests
  */
 
 /* Minimum and maximum connection interval in number of frames */
-#define PREFERRED_MAX_CON_INTERVAL          0x200 /* 1 s 0x320 */
-#define PREFERRED_MIN_CON_INTERVAL          0x008 /* 1 s */
+#define PREFERRED_MAX_CON_INTERVAL          0x190 /* 1 s 0x320 */
+#define PREFERRED_MIN_CON_INTERVAL          0x190 /* 1 s */
 
 /* Slave latency in number of connection intervals */
 #define PREFERRED_SLAVE_LATENCY             0x0000 /* 0 conn_intervals */

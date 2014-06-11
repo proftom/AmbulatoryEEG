@@ -1774,20 +1774,17 @@ static void handleSignalLsRadioEventInd(void)
         case app_state_connected:
         {
             /* Delete the already running Hr Measurement timer and start a new 
-             * one.*/
-             
+             * one.                         
+            writeASCIICodedNumber(credits++);                       
+            DebugWriteString("\n\r");*/ 
             
-            /*writeASCIICodedNumber(credits++); 
-            
-            
-                       
-            DebugWriteString("\n\r");
-            
-            if (credits >= 8) {
+            if (credits > 0) {
                 
+            }
+                /*
                 DebugWriteString("\n\rAll credits restored");                                
                 credits = 8;
-            } */        
+            }         */
             TimerDelete(g_hr_data.hr_meas_tid);
             g_hr_data.hr_meas_tid = TimerCreate(5000/*(HR_MEAS_TIME - (6 * MILLISECOND)- timer_value)*/,
                                  TRUE, 
@@ -2775,8 +2772,7 @@ extern void AppProcessSystemEvent(sys_event_id id, void *data)
 extern bool AppProcessLmEvent(lm_event_code event_code, 
                               LM_EVENT_T *p_event_data)
 {
-    DebugWriteString("\n\rAppEvent");
-SoundBuzzer(buzzer_beep_thrice);
+
     switch(event_code)
     {
 

@@ -797,13 +797,47 @@ Weighing in at a total of
 \clearpage
 \section{Evaluation}
 
-The layout can be shurnk further through reducing distances between components. This was not done previously as it significantly increases the difficultly in hand assembly, which was the method used for the prototype. For the analouge front end
+\subsection{Throughput}
+
+In the sole pursuit of maximizing throughput, the idea try and pack as many notifications into a \ac{CE}l. Unfortunately . We can create a remainder profile 
+
+\begin{displaymath}
+\min_{x}  \frac{1250\times x}{676} - \floor{ \frac{1250\times x}{676}} 
+\end{displaymath}
+
+While some devices only allow so many packets per \ac{CE}
+
+The creates the following profile
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{notremain}
+	\end{center}
+	\caption{Remainder of packets left behind}
+	\label{fig:notremain}
+\end{figure}
+
+Mathematically this finds the points where 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = \textwidth]{throughput}
+	\end{center}
+	\caption{Throughput varying with connection interval}
+	\label{fig:throughput}
+\end{figure}
+
+As the CI the chance for RF interference increases (e.g. a CRC error). The \ac{BLE} specifications states that once a transmission error occurs during transmission, the \ac{CE} should stop and wait until the next \ac{CE}. Hence, there exists a trade off between the \ac{CI} and risk of premature link termination. 
+
+Track /feedback for optiminum 
+
+Unfortunately a connection interval must be between 7.5ms and 4000ms long, in incremental steps of 1.25ms. Therefore x must exist in the range of 6 to 3200. 
 
 \subsection{Power Analysis}
 
-To measure the power usage of the system a 10 ohm shunt resistor was put between the board's $V_{ss}$ and ground. Scope leads where then attached to measure the voltage, which due to ohm's law, will be measured at 10 times the current. 
+To measure the power usage of the system a 10 ohm shunt resistor was inserted between the board's $V_{ss}$ and ground. Scope leads where then attached to measure the voltage, which due to ohm's law, will be measured at 10 times the current. 
 
-Firsly, the power usage of the just the radio was performed (the ADCs were disconnected).  The data sheet claims the maximum peak current used during transmission or receiving is approximately 16mA at 3V. 
+Firsly, the power usage of the just the radio was performed (the ADCs were disconnected).  The data sheet claims the maximum peak current used during transmission or receiving is approximately 16mA at 3V. While the measurements in Figure~\ref{fig:ceclose} and Figure~\ref{fig:ce} are at 3.3 volts, the overall power consumption of the system is the system regardless of the voltage level used. If voltage is decreased, the current increases.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -821,7 +855,7 @@ It can be seen from Figure~\ref{adc} that the measured voltage is 150mV. This co
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{ce}
 	\end{center}
-	\caption{Connection events - connection interval set at 1 second with a slave latency of 0}
+	\caption{Connection events - connection interval set at 1 second with a slave latency of 0 (3.3 volt supply)}
 	\label{fig:ce}
 \end{figure}
 
@@ -829,34 +863,43 @@ It can be seen from Figure~\ref{adc} that the measured voltage is 150mV. This co
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{ceclose}
 	\end{center}
-	\caption{Connection events - connection interval set at 1 second}
+	\caption{Connection event (3.3 volt supply)}
 	\label{fig:ceclose}
 \end{figure}
 
-To investigate the "base" power consumption the device requires, that is the power consumption required to maintain a connection indefinately. Taking the voltage data in the figures above, captured using an oscilloscope, it is possible to accurately estimate the area under the profile using the trapezium rule. This was done using the matlab function $cumtrapz$. For 3.3 volts, this area is found to be approximately 11.76. This area represents the current consumption in milli-amp-hours for a single conneciton event. To convert this to the current consumption in units milli-amp-hour not per connection event, the number is multiplied by the number of connection events (set by the connection interval) within an hour period, and divded through by the number of milliseconds in an hour to convert the time units (the x-axis in Figure~\ref{fig:cesim} is in milliseconds).
+
+ To investigate the "base" power consumption the device requires, that is the power consumption required to maintain a connection indefinately. The data was logged and using an oscilloscope and saved to disk for later analysis. It was noticed that when the chip went into a deep sleep (inbetween connection events), the minimum value the scope recorded was negative. To adjust for this the absolute of the minimum value was added to the whole voltage/current vector. This will bring the minimum consumption to 0, however this is still not correct as the device will consume a small amount of power in deep sleep. To correct to this, the data sheet value of 5$\mu$A was taken and applied to current vector. 
+
+To calculate the power consumption the trapezium rule is used to find the area under the profile. For 2.8V the area found under the curve equals. This area represents the current consumption in milli-amp-hours for a single \ac{CE} with spacing either side to tesselate with the next \ac{CE}. For each \ac{CE}, a total of 2.69mA is consumed.  To convert this to the current consumption in units milli-amp-hour not per connection event, the number is multiplied by the number of connection events (set by the connection interval) within an hour period, and divded through by the number of milliseconds in an hour to convert the time units (the x-axis in Figure~\ref{fig:icur2.8} is in milliseconds). 
+
+Below shows the corrections and current consumption script for MATLAB. 
+
+\begin{lstlisting}
+current = Volt / 10; %adjust voltage to current (divide by 10 as 10 ohm shunt resistor)
+currentAdjusted = current + abs(min(current)) + 0.000005 %voltage/current should not be negative. Shift up by absolute most negative value and add 5 micro amps taken from datasheet
+\end{lstlisting}
+
+However this often produces idle periods greater than 5 $\mu$A, so an alternative method can be used:
+
+\begin{lstlisting}
+currentAdjusted = current - mean(current(1:300)) + 0.000005 %first 300 samples should be while device is sleeping. This should average to 5 micro amps
+\end{lstlisting}
+
+
+This 2.69mA or (7.532mW power for all voltages) is the "base" amount, which must be paid every time data is sent. To achieve a higher economical value of energy for a given throughput, this fixed cost needs to be amortised as much as possible. 
 
 In the parameterised form
 
 
 The approximated area can be further parameterised (e.g the rush current and duration), however it is presented here as a fixed cost
 
-This number is the "base" amount, which must be paid every time data is sent. To achieve a higher economical value of energy for a given throughput, this fixed cost needs to be amortised as much as possible. 
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width = 0.9\textwidth]{cesim}
-	\end{center}
-	\caption{Connection events - connection interval set at 1 second}
-	\label{fig:cesim}
-\end{figure}
-
-
 Increasing the slave latency upto the maximum defined by the specification, results in the a system lifetime of 337 years for two small 620mAh capacity batteries. 
 
 To conclude, vector of voltages and times. Approximated the area using the trapezium rule to calcualte the fixed cost. 
 
-
 Talk about min - max lifetime of BLE generic system, then shrink that too an EEG system.
+
+Contrasting this to \ac{BTC}
 
 Comparision with TI
 
@@ -867,6 +910,11 @@ Assuming that the number of
 The idea of minimising energy per bit is not the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. To achieve the lowest energy per bit, the transmission rate needs to be at the highest throughput achievable on the hardware due to the fixed costs or sunk costs of waking the \ac{MCU} and preparing the device for radio transmission. However, consistently running at such throughput invalidates the use case for \ac{BLE}, as there are other technologies capable of transmitting at the same or higher throughputs for smaller energy requirements.
 
 
+\subsection{Device}
+
+The device is a small size and weight, suitable of being sewn into a hat (EEG
+
+The layout can be shurnk further through reducing distances between components. This was not done previously as it significantly increases the difficultly in hand assembly, which was the method used for the prototype. For the analouge front end
 
 
 \subsection{Bill of materials}
@@ -881,37 +929,7 @@ The proposed device is comparable to a hearing aid, even using the same battery 
 
 Smart phone not single end device -> contain other radios for high throughput, maybe why hardware only supports 4 packets
 
-In the sole pursuit of maximizing throughput, the idea is to 
 
-\begin{displaymath}
-\min_{x}  \frac{1250\times x}{676} - \floor{ \frac{1250\times x}{676}} 
-\end{displaymath}
-
-The creates the following profile
-
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics[width = \textwidth]{notremain}
-	\end{center}
-	\caption{Remainder of packets left behind}
-	\label{fig:notremain}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width = \textwidth]{throughput}
-	\end{center}
-	\caption{Throughput varying with connection interval}
-	\label{fig:throughput}
-\end{figure}
-
-Mathematically this finds the points where 
-
-As CI increases chance of CRC error increases. Trade off between CI length, remainder
-
-Track /feedback for optiminum 
-
-Unfortunately a connection interval must be between 7.5ms and 4000ms long, in incremental steps of 1.25ms. Therefore x must exist in the range of 6 to 3200. 
 
 //but unfortunately, there is an energy cost associated with hardware buffers from operation and leakage current
 

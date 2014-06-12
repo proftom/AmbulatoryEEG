@@ -799,25 +799,30 @@ Weighing in at a total of
 
 \subsection{Throughput}
 
-In the sole pursuit of maximizing throughput, the idea try and pack as many notifications into a \ac{CE}l. Unfortunately . We can create a remainder profile 
+In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tackit. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1%. However  Unfortunately . In any case, this was not observed, as this expirement was done.  In the worst case, just less than a whole packet fits into the remaining space. The profile which desrcibes the "remainder" packets is described by
 
 \begin{displaymath}
-\min_{x}  \frac{1250\times x}{676} - \floor{ \frac{1250\times x}{676}} 
+ \frac{1250\times x}{676}  - \floor{ \frac{1250\times x}{676}}
 \end{displaymath}
 
-While some devices only allow so many packets per \ac{CE}
+where 1250 is the \ac{CI} unit, x the value, 676 the round-trip time for a maximum size data packet. A connection interval must be between 7.5ms and 4000ms long, in incremental steps of 1.25ms. Therefore x must exist in the range of 6 to 3200. This can be visually depicted as
 
-The creates the following profile
-
-\begin{figure}[htb]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width = \textwidth]{notremain}
 	\end{center}
-	\caption{Remainder of packets left behind}
+	\caption{Remainder of packets unabel to fit into \ac{CI}}
 	\label{fig:notremain}
 \end{figure}
 
-Mathematically this finds the points where 
+However, this is simply the plot of the remainder, and for higher \ac{CI} there will be more packets per \ac{CE} and therefore while the remainder may be bigger, the throughput may still be higher than a smaller \ac{CI} with a smaller remainder. That is, the throughput is the number of \ac{CE}s in a given time frame multiplied by the number of packets per \ac{CE}. Factoring this in, the description changes to
+
+\begin{displaymath}
+ \frac{1}{1250 \mu s \times x} \times \floor{ \frac{1250 \mu s\times x}{676 \mu s}} \times 160 bits 
+\end{displaymath}
+
+This produces an expression for the maximum throughput against \ac{CI}, shown graphically below
+
 
 \begin{figure}[H]
 	\begin{center}
@@ -827,11 +832,25 @@ Mathematically this finds the points where
 	\label{fig:throughput}
 \end{figure}
 
-As the CI the chance for RF interference increases (e.g. a CRC error). The \ac{BLE} specifications states that once a transmission error occurs during transmission, the \ac{CE} should stop and wait until the next \ac{CE}. Hence, there exists a trade off between the \ac{CI} and risk of premature link termination. 
+The throughput tends assymtopically to the maximum of 236.686 kbps, and min to max throughput is above 7%. From 
+
+From the preliminary work, it has been shown the CSR1010 is capable of running at 9 packets per \ac{CE} stable. 
+
+As the CI the chance for RF interference increases (e.g. a CRC error). The \ac{BLE} specifications states that once a transmission error occurs during transmission, the \ac{CE} should stop and wait until the next \ac{CE}. Hence, there exists a trade off between the \ac{CI} and risk of premature link termination. This is demonstrated in the 
+
+Some devices only allow so many packets per \ac{CE}, constraining the system further, and in such cases, having a smaller \ac{CE} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. 
+
+Mathematically this finds the points where 
+
+
+
+
+
+A test harness was created to investigate the relationship between throughput and connection interval and compare it against the theoretical maximum. 
 
 Track /feedback for optiminum 
 
-Unfortunately a connection interval must be between 7.5ms and 4000ms long, in incremental steps of 1.25ms. Therefore x must exist in the range of 6 to 3200. 
+
 
 \subsection{Power Analysis}
 
@@ -885,8 +904,19 @@ However this often produces idle periods greater than 5 $\mu$A, so an alternativ
 currentAdjusted = current - mean(current(1:300)) + 0.000005 %first 300 samples should be while device is sleeping. This should average to 5 micro amps
 \end{lstlisting}
 
+This seems to produce a profiles where at sleep time, the current is very close 5 $\mu$As.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{icur28}
+	\end{center}
+	\caption{Connection event (3.3 volt supply)}
+	\label{fig:icur2.8}
+\end{figure}
 
 This 2.69mA or (7.532mW power for all voltages) is the "base" amount, which must be paid every time data is sent. To achieve a higher economical value of energy for a given throughput, this fixed cost needs to be amortised as much as possible. 
+
+
 
 In the parameterised form
 

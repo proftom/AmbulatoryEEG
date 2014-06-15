@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  13 JUN 2014 00:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  15 JUN 2014 23:35
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1505,61 +1505,80 @@ Package pdftex.def Info: assets/throughput.png used on input line 829.
  [45
 
  <C:/Repository/AmbulatoryEEG/Report/assets/notremain.png (PNG copy)>] [46 <C:/
-Repository/AmbulatoryEEG/Report/assets/throughput.png (PNG copy)>] <assets/adv.
-png, id=832, 803.0pt x 504.88625pt>
-File: assets/adv.png Graphic file (type png)
+Repository/AmbulatoryEEG/Report/assets/throughput.png (PNG copy)>] <assets/2sec
+.png, id=837, 803.0pt x 504.88625pt>
+File: assets/2sec.png Graphic file (type png)
 
-<use assets/adv.png>
-Package pdftex.def Info: assets/adv.png used on input line 861.
+<use assets/2sec.png>
+Package pdftex.def Info: assets/2sec.png used on input line 844.
+(pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
+ <assets/lowcierrors.png, id=840, 803.0pt x 504.88625pt>
+File: assets/lowcierrors.png Graphic file (type png)
+
+<use assets/lowcierrors.png>
+Package pdftex.def Info: assets/lowcierrors.png used on input line 853.
+(pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
+
+<assets/9pckts.png, id=844, 803.0pt x 504.88625pt>
+File: assets/9pckts.png Graphic file (type png)
+ <use assets/9pckts.png>
+Package pdftex.def Info: assets/9pckts.png used on input line 876.
+(pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
+
+[47 <C:/Repository/AmbulatoryEEG/Report/assets/2sec.png (PNG copy)>]
+<assets/adv.png, id=860, 803.0pt x 504.88625pt>
+File: assets/adv.png Graphic file (type png)
+ <use assets/adv.png>
+Package pdftex.def Info: assets/adv.png used on input line 928.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
 
-LaTeX Warning: Reference `adc' on page 47 undefined on input line 867.
+LaTeX Warning: Reference `adc' on page 48 undefined on input line 934.
 
-[47 <C:/Repository/AmbulatoryEEG/Report/assets/adv.png (PNG copy)>]
-<assets/ce.png, id=843, 803.0pt x 504.88625pt>
+[48 <C:/Repository/AmbulatoryEEG/Report/assets/lowcierrors.png (PNG copy)>]
+<assets/ce.png, id=871, 803.0pt x 504.88625pt>
 File: assets/ce.png Graphic file (type png)
  <use assets/ce.png>
-Package pdftex.def Info: assets/ce.png used on input line 873.
+Package pdftex.def Info: assets/ce.png used on input line 940.
 (pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
-
-<assets/ceclose.png, id=844, 602.25pt x 378.66469pt>
+ [49 <C:/Repository/AmbulatoryEEG/Report/assets/9pckts.png (PNG copy)>]
+<assets/ceclose.png, id=877, 602.25pt x 378.66469pt>
 File: assets/ceclose.png Graphic file (type png)
  <use assets/ceclose.png>
-Package pdftex.def Info: assets/ceclose.png used on input line 881.
+Package pdftex.def Info: assets/ceclose.png used on input line 948.
 (pdftex.def)             Requested size: 399.47415pt x 251.17905pt.
 
-[48 <C:/Repository/AmbulatoryEEG/Report/assets/ce.png (PNG copy)> <C:/Repositor
-y/AmbulatoryEEG/Report/assets/ceclose.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 894.
+[50 <C:/Repository/AmbulatoryEEG/Report/assets/adv.png (PNG copy)> <C:/Reposito
+ry/AmbulatoryEEG/Report/assets/ce.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 961.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-<assets/icur28.png, id=856, 422.32782pt x 315.42844pt>
+) [51 <C:/Repository/AmbulatoryEEG/Report/assets/ceclose.png>]
+<assets/icur28.png, id=901, 422.32782pt x 315.42844pt>
 File: assets/icur28.png Graphic file (type png)
  <use assets/icur28.png>
-Package pdftex.def Info: assets/icur28.png used on input line 909.
+Package pdftex.def Info: assets/icur28.png used on input line 976.
 (pdftex.def)             Requested size: 399.47415pt x 298.3654pt.
 
-[49] [50 <C:/Repository/AmbulatoryEEG/Report/assets/icur28.png (PNG copy)>]
-[51] [52
+[52 <C:/Repository/AmbulatoryEEG/Report/assets/icur28.png (PNG copy)>] [53]
+[54
 
-] [53] [54
+] [55] [56
 
-] [55
+] [57
 
-] [56] [57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1050.
- [58
+] [58] [59]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1119.
+ [60
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1050.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1119.
 
 (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1050.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1050.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1119.
 
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 09F106FDC40687A624EDAF5A4B61BD05;2349.
@@ -1568,13 +1587,13 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1050.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1119.
  ) 
 Here is how much of TeX's memory you used:
- 18282 strings out of 493921
- 277831 string characters out of 3144873
+ 18308 strings out of 493921
+ 278280 string characters out of 3144873
  510018 words of memory out of 3000000
- 21062 multiletter control sequences out of 15000+200000
+ 21080 multiletter control sequences out of 15000+200000
  18110 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  44i,8n,49p,1592b,1820s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1598,9 +1617,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (59 pages, 11251542 bytes).
+Output written on Report.pdf (61 pages, 11452016 bytes).
 PDF statistics:
- 1545 PDF objects out of 1728 (max. 8388607)
- 231 named destinations out of 1000 (max. 500000)
- 490 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1580 PDF objects out of 1728 (max. 8388607)
+ 236 named destinations out of 1000 (max. 500000)
+ 505 words of extra memory for PDF output out of 10000 (max. 10000000)
 

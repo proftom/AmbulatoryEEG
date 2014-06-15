@@ -799,7 +799,7 @@ Weighing in at a total of
 
 \subsection{Throughput}
 
-In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tackit. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1%. However  Unfortunately . In any case, this was not observed, as this expirement was done.  In the worst case, just less than a whole packet fits into the remaining space. The profile which desrcibes the "remainder" packets is described by
+In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tackit. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1$\%$. However  Unfortunately . In any case, this was not observed, as this expirement was done.  In the worst case, just less than a whole packet fits into the remaining space. The profile which desrcibes the "remainder" packets is formally written as
 
 \begin{displaymath}
  \frac{1250\times x}{676}  - \floor{ \frac{1250\times x}{676}}
@@ -832,23 +832,94 @@ This produces an expression for the maximum throughput against \ac{CI}, shown gr
 	\label{fig:throughput}
 \end{figure}
 
-The throughput tends assymtopically to the maximum of 236.686 kbps, and min to max throughput is above 7%. From 
+The throughput tends assymtopically to the maximum of 236.686 kbps, and min to max throughput is above 7%. To investigate how the theoretical maximum profile compares to the actual in practice, a test harness was created to investigate the relationship between throughput and \ac{CI}. The test harness writes to the \ac{GAP} characteristics the desired \ac{CI} then takes a measurement of average throughput over a few minutes. It then moves onto another \ac{CI} and does the same thing. This is called a test set. Sets are repeated a desired number of times (atleast 3) and averaged as it was found that there is a variation between sets. 
 
-From the preliminary work, it has been shown the CSR1010 is capable of running at 9 packets per \ac{CE} stable. 
-
-As the CI the chance for RF interference increases (e.g. a CRC error). The \ac{BLE} specifications states that once a transmission error occurs during transmission, the \ac{CE} should stop and wait until the next \ac{CE}. Hence, there exists a trade off between the \ac{CI} and risk of premature link termination. This is demonstrated in the 
-
-Some devices only allow so many packets per \ac{CE}, constraining the system further, and in such cases, having a smaller \ac{CE} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. 
-
-Mathematically this finds the points where 
+The results produced the shape 
 
 
+It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s.
+
+Radio interference can described as a poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the enviroment the raido is used in. Therefore, the task of achieving the highest throughput collaspes to describing this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system between the master and slave. Investigating the variation for different enviroments may be an interesting piece of work. 
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{2sec}
+	\end{center}
+	\caption{Waveform of notification packets for a ac{CI} of 2 seconds. Majority of \ac{CE}s premature termination}
+	\label{fig:2sec}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{lowcierrors}
+	\end{center}
+	\caption{}
+	\label{fig:lowcierrors}
+\end{figure}
 
 
 
-A test harness was created to investigate the relationship between throughput and connection interval and compare it against the theoretical maximum. 
+Reliability is also considered here. Infrequent lost packets of \ac{EEG} data or even loss of notification packets from many \ac{CE}s should . The CSR1010  It is possible to model within a given time period the probability 
 
-Track /feedback for optiminum 
+
+In the context of an \ac{EEG} device
+
+At 16 channels
+
+
+
+ Many devices restrict how many packets per \ac{CE} can be received, constraining the system further, and in such cases, having a smaller \ac{CE} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. Many andriod devices have also have restrictions on the number of packets processed, and this is due 
+
+
+
+
+From the preliminary work, it has been shown the CSR1010 is capable of running at 9 packets per \ac{CE} stable. The theoretical throughput should be 11 packets per \ac{CE}, and when examined under the scope using a shunt resistor (see section Power Analysis), it was found that if 
+
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = \textwidth]{9pckts}
+	\end{center}
+	\caption{Waveform of notification packets for a ac{CI} of 7.5 milliseconds. Majority of \ac{CE}s have no premature termination}
+	\label{fig:9pckts}
+\end{figure}
+
+As the CI the chance for RF interference increases (e.g. a CRC error). The \ac{BLE} specifications states that 
+
+
+
+
+
+
+The expirement was repeated 
+
+After maximising throughput for the \ac{BLE} on the CSR1010, attention turned to maximisation for \ac{EEG} applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -887,7 +958,7 @@ It can be seen from Figure~\ref{adc} that the measured voltage is 150mV. This co
 \end{figure}
 
 
- To investigate the "base" power consumption the device requires, that is the power consumption required to maintain a connection indefinately. The data was logged and using an oscilloscope and saved to disk for later analysis. It was noticed that when the chip went into a deep sleep (inbetween connection events), the minimum value the scope recorded was negative. To adjust for this the absolute of the minimum value was added to the whole voltage/current vector. This will bring the minimum consumption to 0, however this is still not correct as the device will consume a small amount of power in deep sleep. To correct to this, the data sheet value of 5$\mu$A was taken and applied to current vector. 
+ To investigate the "base" power consumption the device requires, that is the power consumption required to maintain a connection indefinately. The data was logged and using an oscilloscope and saved to disk for later analysis. It was noticed that when the chip went into a deep sleep (inbetween connection events), the minimum value the scope recorded was negative. To adjust for this the absolute of the minimum value was added to the whole current vector. This will bring the minimum consumption to 0, however this is still not correct as the device will consume a small amount of power in deep sleep. To correct to this, the data sheet value of 5$\mu$A was taken and applied to current vector. 
 
 To calculate the power consumption the trapezium rule is used to find the area under the profile. For 2.8V the area found under the curve equals. This area represents the current consumption in milli-amp-hours for a single \ac{CE} with spacing either side to tesselate with the next \ac{CE}. For each \ac{CE}, a total of 2.69mA is consumed.  To convert this to the current consumption in units milli-amp-hour not per connection event, the number is multiplied by the number of connection events (set by the connection interval) within an hour period, and divded through by the number of milliseconds in an hour to convert the time units (the x-axis in Figure~\ref{fig:icur2.8} is in milliseconds). 
 
@@ -904,7 +975,7 @@ However this often produces idle periods greater than 5 $\mu$A, so an alternativ
 currentAdjusted = current - mean(current(1:300)) + 0.000005 %first 300 samples should be while device is sleeping. This should average to 5 micro amps
 \end{lstlisting}
 
-This seems to produce a profiles where at sleep time, the current is very close 5 $\mu$As.
+This is more accurate in producing profiles where at sleep time, the current is very close 5 $\mu$As.
 
 \begin{figure}[H]
 	\begin{center}
@@ -959,7 +1030,7 @@ The proposed device is comparable to a hearing aid, even using the same battery 
 
 Smart phone not single end device -> contain other radios for high throughput, maybe why hardware only supports 4 packets
 
-
+Unsure about when run a test set then run another, sometimes there can be big difference. Due to sharing radio channel?
 
 //but unfortunately, there is an energy cost associated with hardware buffers from operation and leakage current
 
@@ -984,6 +1055,8 @@ Ambulatory to wearable
 Better understanding, big data
 
 characeterise power with voltage
+
+find point of indifference between bl and ble
 
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance

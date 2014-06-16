@@ -614,8 +614,8 @@
   28 0004 00 26       		.loc 1 584 0
  582:eeg_sensor_gatt.c **** 
  583:eeg_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_L(UUID_EEG_SERVICE);
-  29                 	AL,#0x00e4
-  30 0005 01 00 E4 14 		st	AL,@(0x0001,X)
+  29                 	AL,#0x00e0
+  30 0005 01 00 E0 14 		st	AL,@(0x0001,X)
   31 0007 01 26       		.loc 1 585 0
  584:eeg_sensor_gatt.c ****     p_service_uuid_ad[i++] = LE8_H(UUID_EEG_SERVICE);
   32                 		AL,#0x000e

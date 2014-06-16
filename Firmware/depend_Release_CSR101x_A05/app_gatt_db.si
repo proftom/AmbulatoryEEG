@@ -47,8 +47,8 @@
   23:depend_Release_CSR101x_A05/app_gatt_db.c ****     0xd408, 0x9001, 0x9001, 0x0000, 0x5802,
   24:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0008: Primary Service 1801 */
   25:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0x0118,
-  26:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0009: Primary Service 0ee4 */
-  27:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0xe40e,
+  26:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 0009: Primary Service 0ee0 */
+  27:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x0002, 0xe00e,
   28:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000a: Characteristic Declaration 0ee1 */
   29:depend_Release_CSR101x_A05/app_gatt_db.c ****     0x3005, 0x100b, 0x00e1, 0x0e00,
   30:depend_Release_CSR101x_A05/app_gatt_db.c ****     /* 000b: ................. */
@@ -151,8 +151,8 @@
   64 0016 58 02       		.word	0x0002
   65 0017 00 02       		.word	0x0118
   66 0018 01 18       		.word	0x0002
-  67 0019 00 02       		.word	0xe40e
-  68 001a E4 0E       		.word	0x3005
+  67 0019 00 02       		.word	0xe00e
+  68 001a E0 0E       		.word	0x3005
   69 001b 30 05       		.word	0x100b
   70 001c 10 0B       		.word	0x00e1
   71 001d 00 E1       		.word	0x0e00

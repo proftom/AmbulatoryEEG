@@ -77,7 +77,7 @@ primary_service {
 # 17 "eeg_service_db.db" 2
 
 primary_service {
-    uuid : 0x0EE4,
+    uuid : 0x0EE0,
     name : "EEG_SERVICE",
 
 

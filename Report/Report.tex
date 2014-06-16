@@ -725,7 +725,7 @@ A challanging part of this project develping hardware. It was desired that the d
 	\begin{center}
 		\includegraphics[width = 1.6\textwidth, angle = 90]{Schematic}
 	\end{center}
-	\caption{Schematic}
+	\caption{Schematic (showing only one ADC here)}
 	\label{fig:schematic}
 \end{figure}
 
@@ -766,7 +766,7 @@ Unfortunately, due to the size and complexity of some of the components, the ove
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{side}
 	\end{center}
-	\caption{High magnification, shallow depth of field. Pads on side of \ac{QFN} used to}
+	\caption{High magnification, shallow depth of field. Pads on side of \ac{QFN} useful to ensure connection}
 	\label{fig:side}
 \end{figure} 
 
@@ -780,13 +780,167 @@ The second design added connections for Zinc-air battery holders, another \ac{AD
 	\label{fig:boardfinal}
 \end{figure}
 
-
+\clearpage
 \subsection{Firmware}
+
+The CSR1010 microcontroller contains a custom processor known as the XAP. ac{CSR} provides the necessary tools to translate high level structured C-code into byte code instructions for the XAP processor
+
+Fortunately, \ac{CSR} provided example projects which contains the majority of the application layer functionality (see \ref{fig:blearch}) to handle basic device operations and radio. The \ac{MCU} is a single threaded processor, yet the application design is event driven using a large central message pump(s) to service events and provide the control flow. Events can be of software origin (i.e. a flag set) or hardware invoked. Further, hardware interupts (such as PIO) can be supported outside the software message pump. Being event driven means the use of callbacks are used frequently througout the code base. \ac{CSR} exposes \ac{API}s to communicate with the time critical and complex host and controller layers beneath.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics{mcu}
+	\end{center}
+	\caption{MCU overview \cite{firmwaredev}}
+	\label{fig:mcu}
+\end{figure}
+
+The \ac{GATT} services and characteristics are stored in a flat-file database and defined as structures in JSON. The EEG characteristic is shown below in Listing~{lst:eeggatt}. The EEG measurement characteristic provides a notification property which allows a device to subscribe to notification messages when generated from the device.
+
+\begin{lstlisting}[language=C, caption=GATT database entry for EEG characteristic,label={lst:eeggatt}]
+#ifndef __EEG_SERVICE_DB__
+#define __EEG_SERVICE_DB__
+
+#include "eeg_service_uuids.h"
+
+primary_service {
+    uuid : UUID_EEG_SERVICE,
+    name : "EEG_SERVICE",
+
+    /* Characteristics support IRQ flag, thereby reads 
+     * and writes on characteristic configuration descriptor and notifications 
+     * on characteristic value are handled by application. 
+     */
+
+    /* Notifications for the data*/
+    characteristic {
+        uuid : UUID_EEG_MEASUREMENT,
+        name : "EEG_MEASUREMENT",
+        properties : notify,
+        flags : FLAG_IRQ,
+
+        client_config {
+            flags : FLAG_IRQ,
+            name : "EEG_MEASUREMENT_C_CFG"
+        }
+    },
+
+    /* Acquisition rate (i.e. frequency)*/
+
+    characteristic {
+        uuid : UUID_EEG_ACQUISITION_RATE,
+        name : "EEG_ACQUISITION_RATE",
+        properties : [read, write],
+        flags : FLAG_IRQ,
+        value : DEFAULT_ACQUISITION_RATE
+    },
+
+    /* Number of channels*/
+
+    characteristic {
+        uuid : UUID_EEG_CHANNELS,
+        name : "EEG_CHANNELS",
+        properties : [write, read],
+        flags : FLAG_IRQ,
+        value : 0x00
+    }
+},
+#endif /* __EEG_SERVICE_DB__ */
+\end{lstlisting}
+
+Each service and characteristic requires a \ac{UUID}, which is a string of 128 bits and due to the enourmous space are very unlikely to appear elsewhere. Only 16 bits (known as the short \ac{UUID}) are required to be set as the remaining bits are previously tied to the device address, which includes specific bit patterns allocated to chip manufacturers. Fruther some \ac{UUID}s are reserved for predefined services and characeteristics (see \url{http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx}). The characteristic \ac{EEG} service has the short \ac{UUID} 0xEE0 (hexidecimal), while the characteristics share a similar short-UUID. The full service UUID can be seen in the User Guide section. 
+
+When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler suite (as with 
+
+\begin{lstlisting}[language=C, caption=UUIDs EEG service,label={lst:eeguuid}]
+#ifndef __EEG_SERVICE_UUID_H__
+#define __EEG_SERVICE_UUID_H__
+
+/*============================================================================*
+ *  Public Definitions
+ *============================================================================*/
+
+/* UUIDs for EEG service and Characteristics*/
+
+#define UUID_EEG_SERVICE                              0x0EE0
+
+#define UUID_EEG_MEASUREMENT                     0x0EE1
+
+#define UUID_EEG_ACQUISITION_RATE          0x0EE2
+
+#define UUID_EEG_CHANNELS                 0x0EE3
+
+#define DEFAULT_ACQUISITION_RATE 			0xFF
+
+
+
+#endif /* __EEG_SERVICE_UUID_H__ */
+\end{lstlisting}
+
+
+
+When the device first powers up it enters the application layer through the AppInit procedure. This procedure initialises hardware and high level stack components such as the GATT server database. Once complete the control flow enters the system event message pump (AppProcessSystemEvent), which is called by the firmware to handle system level events such as PIO level changes such as configured interrupt from pins or wake events. This also handles low battery events. AppProcessLMEvent handles link manager related events from firmware. Such events include radio events (such as the acknowledgment or reciept of data) along with sercurity manager and GAP and G(ATT) messages. Making an insertion into this latter message pump was crucial for enabling the device to transmit more notifications once data was acknowledge (indicating the buffers were free). The link manager event caught is known as LS\_RADIO\_EVENT\_IND, where the IND is short for indication - despite the packet types used being notification, this event structure also corresponds to notifications. Finally, the timers run ontop of the hardware with microsecond accuracy and can be used as interupts. They are used to wake the device out of sleep ready for communicating or doing other work. A timer structure contains a pointer to a event handler which is fired upon timer exhaustion. Once the event handler returns, the chip will power down to a dormant state until the next \ac{CE} or timer is available. It is highlighted that the application timers are not used for radio timings (i.e. synchronisation between devices happens in the base levels of the stack and/or use of dedicated hardware timers).
+
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics{flow}
+	\end{center}
+	\caption{Firmware - Overview of the application layer control flow \cite{firmwaredev}}
+	\label{fig:flow}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{uml}
+	\end{center}
+	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\label{fig:umlseq}
+\end{figure}
 
 
 
 
 \subsection{Tablet Application}
+
+The highlevel tablet application was written for Microsoft's .NET framework platform. The 
+
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{searching}
+	\end{center}
+	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\label{fig:searching}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{connecting}
+	\end{center}
+	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\label{fig:connecting}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{dvcmgr}
+	\end{center}
+	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\label{fig:dvcmgr}
+\end{figure}
+
+
+
+
+
+
+
+
 
 \clearpage
 
@@ -908,11 +1062,11 @@ Premature termination was observed to be frequent even at relatively low \ac{CI}
 
 
 
-The \ac{CI} also determines the latency from when a measurement is taken to when it is displayed to the user. If data is buffered over many \ac{CE}s and/or the frequency is low, the latency can become very large. In contrast, at high frequencies, the 64 k/bytes of ram (much used for the firmware application itself), may overflow and hence buffering is not a suitable. Further, with premature \ac{CE} termination at higher \ac{CI}s, data may have to remain buffered for long as early termination prevents communication until the subsequent \ac{CE}. Providing the data can be serviced so that the buffer depth remains the same over time and does not variate to above full capacity, 
+The \ac{CI} also determines the latency from when a measurement is taken to when it is displayed to the user. If data is buffered over many \ac{CE}s and/or the frequency is low, the latency can become very large. In contrast, at high frequencies, the 64 k/bytes of ram (much used for the firmware application itself), may overflow and hence buffering is not a suitable. Further, with premature \ac{CE} termination at higher \ac{CI}s, data may have to remain buffered for long as early termination prevents communication until the subsequent \ac{CE}. Providing the data can be serviced so that the buffer depth remains roughly the same over time (and does not variate to above full capacity), than selecting \ac{CI}s that cause higher premature termination but higher average throughput is a rational choice in the pursuit of high datarates, but may suffer from power.  
 
 
 
-The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7 $\%$, while that derived empirically was closer to 12%. At the peak measured performance, the device was capable of an average data rate of 90% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. In the context of an \ac{EEG} device, at this datarate the following specifications are achievable.
+The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7$\%$, while that derived empirically was closer to $\%$. At the peak measured performance, the device was capable of an average data rate of 90% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. In the context of an \ac{EEG} device, at this datarate the following specifications are achievable.
 
 From the background and literature review, most systems are only concerned with acquisition rates between 
 
@@ -1166,6 +1320,7 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{HCI}{host controller interface}
 	\acro{MIC}{message integreity code}
 	\acro{PTH}{plated through hole}
+	\acro{UUID}{Universally unique identifier}
 \end{acronym} 
 \clearpage
 \section{User Guide}

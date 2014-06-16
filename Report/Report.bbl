@@ -52,7 +52,7 @@
   \field{note}{2013 ASABE Annual International Meeting}
   \field{number}{131620559}
   \field{title}{Investigation of Bluetooth Communications for Low-Power
-  Embedded Sensor Networks in Argiculter}
+  Embedded Sensor Networks in Agriculture}
   \verb{url}
   \verb https://engineering.purdue.edu/oatgroup/docs/pape\r_balmos\_1.pdf
   \endverb
@@ -92,6 +92,24 @@
   \verb{url}
   \verb https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc\_id=2273
   \verb 36
+  \endverb
+\endentry
+
+\entry{firmwaredev}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bluetooth~SIG}{B.~S.}%
+     {Vincent Kuo~(CSR)}{V.~K.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BSVKC1}
+  \strng{fullhash}{BSVKC1}
+  \field{sortinit}{B}
+  \field{title}{Application development}
+  \verb{url}
+  \verb https://www.bluetooth.org/en-us/Documents/Shenzhen%20CSR\_uEnergy\_SDK.
+  \verb PDF
   \endverb
 \endentry
 
@@ -484,6 +502,45 @@
   \field{year}{2013}
 \endentry
 
+\entry{WHO2006}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {WHO}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{sortinit}{W}
+  \field{abstract}{%
+  There is ample evidence that pinpoints neurological disorders as one of the
+  greatest threats to public health. There are several gaps in understanding
+  the many issues related to neurological disorders, but we already know enough
+  about their nature and treatment to be able to shape effective policy
+  responses to some of the most prevalent among them. Neurological disorders:
+  public health challenges describes and discusses the increasing global public
+  health importance of common neurological disorders such as dementia,
+  epilepsy, headache disorders, multiple sclerosis, neuroinfections,
+  neurological disorders associated with malnutrition, pain associated with
+  neurological disorders, Parkinson s disease, stroke and traumatic brain
+  injuries. The book provides the public health perspective for these disorders
+  and presents fresh and updated estimates and predictions of the global burden
+  borne by them. It provides information and advice on public health
+  interventions that may be applied to reduce the occurrence and consequences
+  of neurological disorders. It offers health professionals and planners the
+  opportunity to assess the burden caused by these disorders in their country
+  and to take appropriate action. A clear message emerges that unless immediate
+  action is taken globally, the neurological burden is likely to become an
+  increasingly serious and unmanageable problem in all countries%
+  }
+  \field{booktitle}{Medicine}
+  \field{isbn}{9789241563369}
+  \field{pages}{229}
+  \field{title}{{Neurological disorders public health challenges}}
+  \field{year}{2006}
+\endentry
+
 \entry{Wimo2010}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -541,8 +598,8 @@
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{W1}
-  \strng{fullhash}{W1}
+  \strng{namehash}{W2}
+  \strng{fullhash}{W2}
   \field{sortinit}{W}
   \field{abstract}{%
   Dementia is seriously disabling for those who have it and is often

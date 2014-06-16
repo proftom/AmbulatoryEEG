@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  16 JUN 2014 15:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  16 JUN 2014 17:26
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1527,86 +1527,100 @@ Package pdftex.def Info: assets/lowcierrors.png used on input line 862.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
  [48 <C:/Repository/AmbulatoryEEG/Report/assets/2sec.png (PNG copy)> <C:/Reposi
 tory/AmbulatoryEEG/Report/assets/lowcierrors.png (PNG copy)>] <assets/60ci.png,
- id=863, 803.0pt x 504.88625pt>
+ id=862, 803.0pt x 504.88625pt>
 File: assets/60ci.png Graphic file (type png)
 
 <use assets/60ci.png>
-Package pdftex.def Info: assets/60ci.png used on input line 880.
+Package pdftex.def Info: assets/60ci.png used on input line 874.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
- <assets/cilimit.png, id=864, 803.0pt x 504.88625pt>
+ <assets/cilimit.png, id=863, 803.0pt x 504.88625pt>
 File: assets/cilimit.png Graphic file (type png)
 
 <use assets/cilimit.png>
-Package pdftex.def Info: assets/cilimit.png used on input line 888.
+Package pdftex.def Info: assets/cilimit.png used on input line 882.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
  [49 <C:/Repository/AmbulatoryEEG/Report/assets/60ci.png (PNG copy)>] <assets/6
 0cithroughput.png, id=872, 422.32782pt x 316.18124pt>
 File: assets/60cithroughput.png Graphic file (type png)
 
 <use assets/60cithroughput.png>
-Package pdftex.def Info: assets/60cithroughput.png used on input line 901.
+Package pdftex.def Info: assets/60cithroughput.png used on input line 892.
 (pdftex.def)             Requested size: 443.86319pt x 332.31369pt.
- [50 <C:/Repository/AmbulatoryEEG/Report/assets/cilimit.png (PNG copy)>] [51 <C
-:/Repository/AmbulatoryEEG/Report/assets/60cithroughput.png (PNG copy)>] <asset
-s/adv.png, id=899, 803.0pt x 504.88625pt>
-File: assets/adv.png Graphic file (type png)
+ [50 <C:/Repository/AmbulatoryEEG/Report/assets/cilimit.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 912--912
+[]|\T1/cmr/bx/n/10 Resolution
+ []
 
-<use assets/adv.png>
-Package pdftex.def Info: assets/adv.png used on input line 938.
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--912
+[]|\T1/cmr/bx/n/10 Required
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 912--912
+\T1/cmr/bx/n/10 datarate (kbit-
+ []
+
+[51 <C:/Repository/AmbulatoryEEG/Report/assets/60cithroughput.png (PNG copy)>]
+<assets/adv.png, id=901, 803.0pt x 504.88625pt>
+File: assets/adv.png Graphic file (type png)
+ <use assets/adv.png>
+Package pdftex.def Info: assets/adv.png used on input line 954.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
 
-LaTeX Warning: Reference `adc' on page 52 undefined on input line 944.
+LaTeX Warning: Reference `adc' on page 52 undefined on input line 960.
 
-<assets/ce.png, id=902, 803.0pt x 504.88625pt>
+[52] <assets/ce.png, id=912, 803.0pt x 504.88625pt>
 File: assets/ce.png Graphic file (type png)
  <use assets/ce.png>
-Package pdftex.def Info: assets/ce.png used on input line 950.
+Package pdftex.def Info: assets/ce.png used on input line 966.
 (pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
- [52 <C:/Repository/AmbulatoryEEG/Report/assets/adv.png (PNG copy)>]
-<assets/ceclose.png, id=911, 602.25pt x 378.66469pt>
+
+[53 <C:/Repository/AmbulatoryEEG/Report/assets/adv.png (PNG copy)>]
+<assets/ceclose.png, id=918, 602.25pt x 378.66469pt>
 File: assets/ceclose.png Graphic file (type png)
  <use assets/ceclose.png>
-Package pdftex.def Info: assets/ceclose.png used on input line 958.
+Package pdftex.def Info: assets/ceclose.png used on input line 974.
 (pdftex.def)             Requested size: 399.47415pt x 251.17905pt.
 
-[53 <C:/Repository/AmbulatoryEEG/Report/assets/ce.png (PNG copy)> <C:/Repositor
+[54 <C:/Repository/AmbulatoryEEG/Report/assets/ce.png (PNG copy)> <C:/Repositor
 y/AmbulatoryEEG/Report/assets/ceclose.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 971.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 987.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<assets/icur28.png, id=922, 422.32782pt x 315.42844pt>
+<assets/icur28.png, id=930, 422.32782pt x 315.42844pt>
 File: assets/icur28.png Graphic file (type png)
  <use assets/icur28.png>
-Package pdftex.def Info: assets/icur28.png used on input line 986.
+Package pdftex.def Info: assets/icur28.png used on input line 1002.
 (pdftex.def)             Requested size: 399.47415pt x 298.3654pt.
 
-[54 <C:/Repository/AmbulatoryEEG/Report/assets/icur28.png (PNG copy)>] [55]
-<assets/9pckts.png, id=948, 803.0pt x 504.88625pt>
+[55 <C:/Repository/AmbulatoryEEG/Report/assets/icur28.png (PNG copy)>] [56]
+<assets/9pckts.png, id=955, 803.0pt x 504.88625pt>
 File: assets/9pckts.png Graphic file (type png)
  <use assets/9pckts.png>
-Package pdftex.def Info: assets/9pckts.png used on input line 1044.
+Package pdftex.def Info: assets/9pckts.png used on input line 1060.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
-[56
+[57
 
- <C:/Repository/AmbulatoryEEG/Report/assets/9pckts.png (PNG copy)>] [57]
-[58
+ <C:/Repository/AmbulatoryEEG/Report/assets/9pckts.png (PNG copy)>] [58]
+[59
 
-] [59
+] [60
 
-] [60] [61]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1144.
- [62
+] [61] [62]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1160.
+ [63
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1144.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1160.
  (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1144.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1144.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1160.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1160.
 
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 09F106FDC40687A624EDAF5A4B61BD05;2349.
@@ -1615,16 +1629,16 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1144.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1160.
  ) 
 Here is how much of TeX's memory you used:
- 18342 strings out of 493921
- 278937 string characters out of 3144873
- 509018 words of memory out of 3000000
- 21104 multiletter control sequences out of 15000+200000
+ 18348 strings out of 493921
+ 279012 string characters out of 3144873
+ 510018 words of memory out of 3000000
+ 21108 multiletter control sequences out of 15000+200000
  18110 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,8n,49p,1592b,1820s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,49p,1592b,1820s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \eccc1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ectt1000.pk> <C:\Users\Thomas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
@@ -1645,9 +1659,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (63 pages, 11589860 bytes).
+Output written on Report.pdf (64 pages, 11594093 bytes).
 PDF statistics:
- 1616 PDF objects out of 1728 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
+ 1629 PDF objects out of 1728 (max. 8388607)
+ 244 named destinations out of 1000 (max. 500000)
  525 words of extra memory for PDF output out of 10000 (max. 10000000)
 

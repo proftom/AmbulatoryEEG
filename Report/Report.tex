@@ -794,12 +794,22 @@ The second design added connections for Zinc-air battery holders, another \ac{AD
 
 Weighing in at a total of 
 
+
+
+
+
+
+
+
+
+
+
 \clearpage
 \section{Evaluation}
 
 \subsection{Throughput}
 
-In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tackit. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1$\%$. However  Unfortunately . In any case, this was not observed, as this expirement was done.  In the worst case, just less than a whole packet fits into the remaining space. The profile which desrcibes the "remainder" packets is formally written as
+In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tactic. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1$\%$. This remainder changes with the \ac{CI} and in the worst case, just less than a whole packet fits into the remaining space. The profile which desrcibes the "remainder" packets is formally written as
 
 \begin{displaymath}
  \frac{1250\times x}{676}  - \floor{ \frac{1250\times x}{676}}
@@ -815,7 +825,7 @@ where 1250 is the \ac{CI} unit, x the value, 676 the round-trip time for a maxim
 	\label{fig:notremain}
 \end{figure}
 
-However, this is simply the plot of the remainder, and for higher \ac{CI} there will be more packets per \ac{CE} and therefore while the remainder may be bigger, the throughput may still be higher than a smaller \ac{CI} with a smaller remainder. That is, the throughput is the number of \ac{CE}s in a given time frame multiplied by the number of packets per \ac{CE}. Factoring this in, the description changes to
+However, this is simply the plot of the remainder, and for higher \ac{CI} there will be more packets per \ac{CE} and therefore while the remainder may be bigger, the throughput may be higher than a smaller \ac{CI} with a smaller remainder. That is, the throughput is the number of \ac{CE}s in a given time frame multiplied by the number of packets per \ac{CE}. Factoring this in, the description changes to
 
 \begin{displaymath}
  \frac{1}{1250 \mu s \times x} \times \floor{ \frac{1250 \mu s\times x}{676 \mu s}} \times 160 bits 
@@ -846,7 +856,7 @@ The throughput tends assymtopically to the maximum of 236.686 kbps, and min to m
 
 It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s.
 
-Radio interference can described as a poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the enviroment the raido is used in. Therefore, the task of achieving the highest throughput collaspes to describing this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system between the master and slave. Investigating the variation for different enviroments may be an interesting piece of work. 
+Radio interference can described as a poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the enviroment the raido is used in. Therefore, the task of achieving the highest throughput collaspes to being able to discover this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system between the master and slave. Investigating the range of variation between different radio enviroments may be an interesting piece of further work. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -865,15 +875,9 @@ Radio interference can described as a poisson process, whereby radio interferenc
 	\label{fig:lowcierrors}
 \end{figure}
 
-The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7 $\%$, while that derived empirically was closer to 12%. At the peak measured performance, the device was capable of an average data rate of 90% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. 
 
-In the context of an \ac{EEG} device, at this datarate 
 
-At 16 channels
-
-However, this value represents the average throughput 
-
-It is believed that the maximum throughput was not reached due to transmission errors causing premature termination and device limitations. At a \ac{CI} of 60ms, transmission errors still occur as shown in Figure\ref{fig:60ci}. 
+It is believed that the maximum throughput was not reached due to transmission errors causing premature termination and device limitations. At a \ac{CI} of 60ms, transmission errors still occur as shown in Figure~\ref{fig:60ci}. Device limitations includes the apparent 1.6ms of time between each connection. This 1.6ms represents 2 full notifications packets, and can be explained as to why at 7.5ms, only a throughput of 9 packets is achieved, not 11, like the theoretical maximum predicts. No requirement of this time has been found within the specification, and it is assumed that this is a limitation of the CSR1010 device. Figure~\ref{fig:cilimit} shows this. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -891,10 +895,7 @@ It is believed that the maximum throughput was not reached due to transmission e
 	\label{fig:cilimit}
 \end{figure}
 
-
-
-Reliability is also considered here. Infrequent lost packets of \ac{EEG} data or even loss of notification packets from many \ac{CE}s should 
-
+Premature termination was observed to be frequent even at relatively low \ac{CI}s. For example, at 60ms approximately 55$\%$ of 1 second samples achieved the full recorded throughputl   (e.g. Figure~\ref{fig:60cithroughput}). This differs greatly to a \ac{CI} of 7.5, whereby this figure is close to 100%. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -904,12 +905,39 @@ Reliability is also considered here. Infrequent lost packets of \ac{EEG} data or
 	\label{fig:60cithroughput}
 \end{figure}
 
-Comparing this to the 
 
 
-From the background and literature review
 
- Many devices restrict how many packets per \ac{CE} can be received, constraining the system further, and in such cases, having a smaller \ac{CE} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. Many andriod devices have also have restrictions on the number of packets processed. The \ac{CI} also determines the latency from when a measurement is taken to when it is displayed to the user. If data is buffered over many \ac{CE}s and/or the frequency is low, the latency can become very large. In contrast, at high frequencies, the 64 k/bytes of ram (much used for the firmware application itself), can become full relatively fast and buffering is not a suitable. Further, with premature \ac{CE} termination at higher \ac{CI}s, data may have to remain buffered for long as early termination prevents communication until the subsequent \ac{CE}.
+The \ac{CI} also determines the latency from when a measurement is taken to when it is displayed to the user. If data is buffered over many \ac{CE}s and/or the frequency is low, the latency can become very large. In contrast, at high frequencies, the 64 k/bytes of ram (much used for the firmware application itself), may overflow and hence buffering is not a suitable. Further, with premature \ac{CE} termination at higher \ac{CI}s, data may have to remain buffered for long as early termination prevents communication until the subsequent \ac{CE}. Providing the data can be serviced so that the buffer depth remains the same over time and does not variate to above full capacity, 
+
+
+
+The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7 $\%$, while that derived empirically was closer to 12%. At the peak measured performance, the device was capable of an average data rate of 90% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. In the context of an \ac{EEG} device, at this datarate the following specifications are achievable.
+
+From the background and literature review, most systems are only concerned with acquisition rates between 
+
+\begin{table}[H]
+\centering
+\caption{Example achievable specifications from throughput}
+\label{fig:sensors}
+\begin{tabular}{|p{1.1in}|p{1.1in}|p{1.1in}|p{1.1in}|} \hline 
+\textbf{Channels} & \textbf{Resolution (bits)} & \textbf{Frequency (Hz)} & \textbf{Required datarate (kbits/s)} \\ \hline 
+16 & 8 & 1500 & 192 \\ \hline  
+16 & 8 & 1600 & 205 \\ \hline
+16 & 10 & 1300 & 208 \\ \hline  
+2 & 10 & 10000 & 200  \\ \hline  
+16 & 8 & 1000 & 128 \\ \hline  
+16 & 10 & 200 & 32 \\ \hline  
+16 & 8 & 1300 & 25.6 \\ \hline  
+16 & 8 & 1300 & 25.6 \\ \hline  
+
+\end{tabular}
+\end{table}
+
+
+
+
+ Many devices restrict how many packets per \ac{CE} can be received, constraining the system further, and in such cases, having a smaller \ac{CI} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. Many andriod devices have also have restrictions on the number of packets processed. At 6 packets per \ac{CE}, and 7.5ms \ac{CI}, the throughput achievable is 128 kbit/s, which is theoretically just enough bandwidth to support 16 channels with an 8 bit resolution at 1000 Hz.
 
 Ultimately, to maximise throughput it is important to choose a \ac{CI} for the trade off between \ac{CE} notification packing wastage, risk of premature \ac{CE} termination, latency and data integrity. The choice will further be constrained if \ac{BLE} devices are limited by the number of packets per \ac{CE}. It is believed this limitation arises from the firmware of the device as permits simplier firmware and manufacturers do not consider the use case of maxising throughput significant as there are other technologies out there. From the work above,the radio is capable
 

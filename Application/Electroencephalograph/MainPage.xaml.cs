@@ -150,10 +150,15 @@ namespace Electroencephalograph
             //List<int> test = new List<int>();
             //for (int i = 0; i < 100; i++)
             //    test.Add(i);
-            
-            //financialStuffList.Add(new FinancialStuff() { Name = "MSFT", Amount = 10 });
-            //financialStuffList.Add(new FinancialStuff() { Name = "AAPL", Amount = 200 });
-            //financialStuffList.Add(new FinancialStuff() { Name = "GOOG", Amount = 5 });
+
+            financialStuffList.Add(new FinancialStuff() { Name = 1, Amount = 10 });
+            financialStuffList.Add(new FinancialStuff() { Name = 2, Amount = 200 });
+            financialStuffList.Add(new FinancialStuff() { Name = 3, Amount = 5 });
+
+            Random r = new Random();
+            r.Next();
+            for (int i = 0; i < 100; i++)
+                financialStuffList.Add(new FinancialStuff() { Name = i, Amount = r.Next(1023)});
 
             //CategoryDataViewModel c = new CategoryDataViewModel();
             
@@ -335,7 +340,7 @@ namespace Electroencephalograph
                 {
                     sliderTimer.Stop();
                     
-                    await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value));
+                    //await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value));
 
                 };
 

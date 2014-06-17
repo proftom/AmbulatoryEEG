@@ -912,13 +912,16 @@ Between all the code that provides the utility methods of dealing with data and 
 
 
 
+
+
+
 \subsection{Tablet Application}
 
-The highlevel tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (full namespace is Windows.Devices.Bluetooth.GenericAttributeProfile) class library to communicate with \ac{BLE} devices. The application archiecteure makes full use of ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. This pattern is similar to the highly popularised \ac{MVP} or \ac{MVC} patterns. 
+The highlevel tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (specifically $Windows.Devices.\\Bluetooth.GenericAttributeProfile$) class library to communicate with \ac{BLE} devices. The application uses the new WinRT application design introduced into the Windows operating system since Windows 8. Writing for WinRT means the application can be easily The application archiecteure makes full use of \ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. The application was design to allow the user to be able to connect to a device, select the number of channels measure and the frequency. 
 
-The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows \ac{GUI}s to be quickly and rapidly developed. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy cosumption and managability. This is subtly difference from the controller, which tells the view what to display and when. 
+The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows a \ac{GUI} to be highly flexible. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy cosumption and managability. This is subtly difference from the controller, which tells the view what to display and when. An example of the View-Model would be a collectional (e.g. a list of eeg measurements), that when mutated, automatically update the \ac{GUI}. In the context of \ac{XAML} and \ac{MVVM}, this is known as data binding, and allows the View to easily consume the model.
 
-In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acqusition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often assoicated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 moethd is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian).
+In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acqusition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often assoicated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 moethd is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian). The eegChannels data member contains . However, the method eegNotification can be used to provide direct access to the incoming notifications, acting as the callback from notification events
 
 \begin{figure}[htb]
 	\begin{center}
@@ -936,12 +939,83 @@ In the context of a \ac{BLE} service, the \ac{EEG} service is described by the d
 	\label{fig:classdiagram}
 \end{figure}
 
+The GenericAttributeNamespace provided by the .NET framework only provides functionality on the work at the \ac{ATT} level. The mechanism for interfacing with the \ac{BLE} devices to to enumerate all connected devices then filter on the short \ac{UUID}. Connected devices are devices connected outside of the application (i.e. through the Windows OS bluetooth settings from control pannel - Figures~\ref{fig:connecting},~\ref{fig:dvcmgr}. This will return objects for all devices with a service matching that of the short \ac{UUID}. These objects can be further queries to find characteristics belong to this service along with the properties (read, write, indicate or notify). It then possible to read, write or assigned event callbacks from these characteristics. Attempt to write to a read only characteristic will result in an access denied, which will need to be handled to prevent program termination.  
+
+%cba to get c# print, c++ will do
+\begin{lstlisting}[language=C++, caption=Connecting to a \ac{BLE} device's \ac{EEG} service ,label={lst:csharpeble}]
+
+            var devices = await Windows.Devices.Enumeration.
+		DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0xEEE0));
+
+            if (devices.Count < 1)
+            {
+                await new MessageDialog("Could not locate any EEG devices in the vinicity").ShowAsync();
+                return;
+            }
+
+            //By default connect to the first EEG service found
+            eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
+	//Use long GUID with 16 bit short UUID  (could of used just shortID) 
+            var eegData = eegService.Instance.service.GetCharacteristics(new Guid("0000EEE1-0000-1000-8000-00805f9b34fb"))[0];
+	//Define call back function
+            eegData.ValueChanged += eegData_ValueChanged;
+
+\end{lstlisting}
+
+The applications makes extensive use of the \ac{TPL} for a fluid and responsive \ac{GUI}. The \ac{TPL} uses asynchronous procedures to add parallelism and conccurrency. This is particularly useful in this application, as the \ac{GUI} thread needs to be constantly updated from incoming data without preventing usability. Despite use of the \ac{TPL} further timing mechanisms were required to prevent interface lock up. When new data comes from the device, it will be transposed into the model. This will cause the data binding between the view and model to signal a change, meaning the view updates. Due to the high throughput, this mechanism can cause great delay, and hence, batching the updates is preferred.
+
+%cba to get c# print, c++ will do
+\begin{lstlisting}[language=C++, caption=Example batch update code ,label={lst:csharpeble}]
+
+	//For a single graph (can be called for each graph)
+        private void batchUpdate(ThreadPoolTimer source)
+        {
+            
+                AddItem<FinancialStuff>(financialStuffList, lst);                        
+
+        }
+
+	//Pass an obversable collection (databound object between the model and the view), and a list of items to append to the collection
+        public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
+        {
+
+                //items to keep on the graph
+                const int maxSize = 500;
+
+                // Make sure it doesn't index out of bounds
+                int startIndex = Math.Max(0, items.Count - maxSize);
+                int length = items.Count - startIndex;
+
+                List<T> itemsToRender = items.GetRange(startIndex, length);
+
+                lst.Clear();
+
+                 await  Task.Factory.StartNew(() =>                
+                {
+                    lock (oc)
+                    {
+                        oc.Clear();
+
+                        for (int i = 0; i < itemsToRender.Count; i++)
+                        {
+                            oc.Add(itemsToRender[i]);
+                        }
+                    }
+                });
+        }
+
+...
+
+	//Establish the timer object with a handler -  100 milli second update
+            periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(batchUpdate);, new TimeSpan(0, 0, 0, 0, 100000));
+\end{lstlisting}
+
 
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{searching}
 	\end{center}
-	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\caption{Searching for Bluetooth devices in windows}
 	\label{fig:searching}
 \end{figure}
 
@@ -949,22 +1023,36 @@ In the context of a \ac{BLE} service, the \ac{EEG} service is described by the d
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{connecting}
 	\end{center}
-	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\caption{Connecting and installing to a \ac{BLE} device}
 	\label{fig:connecting}
 \end{figure}
-
 
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{dvcmgr}
 	\end{center}
-	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\caption{\ac{EEG} sensor installed as a Bluetooth device. Long UUIDs for each service present on the device}
 	\label{fig:dvcmgr}
+\end{figure}
+
+
+At the time of writing the application looks like
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 1.4\textwidth,angle = 90]{exampleapp}
+	\end{center}
+	\caption{Application - data recieved with 6 channels selected}
+	\label{fig:exampleapp}
 \end{figure}
 
 
 
 
+
+
+An issue was found whereby at higher throughputs, the order in which notifications are recieved become handled out of order. The reason for this occuring is that there is no guarentee when events are dealt with. Every time a packet is recieved, it will fire an event handler, however this will occur in batches. If the rate at which these batches is processed is greater than the rate at which new events arrive, then the events may no be handled in order. Unfortunately, there has been no fix for this, and it is assumed a current limitation of Microsoft's .NET GenericAttributeNamespace. When using the \ac{CSR} stack and \ac{SDK}, the events are handled in the order they occur. Despite this causing issues in the highlevel application, for the remainder of this report it is ignored. Microsoft has since been contacted about the issue and are looking into it. It is understandable that they wouldn't of built the system for it (much like how some manufacturers only permit a limited amount of packets per \ac{CE}), but even at smaller throughputs, notifications from the same service may be serviced out of order. 
 
 
 
@@ -973,6 +1061,8 @@ In the context of a \ac{BLE} service, the \ac{EEG} service is described by the d
 \clearpage
 
 \section{Results}
+
+May merge this serction in with evaluation. This section will be short
 
 Weighing in at a total of 
 
@@ -1253,7 +1343,7 @@ From the preliminary work, it has been shown the CSR1010 is capable of running a
 	\begin{center}
 		\includegraphics[width = \textwidth]{9pckts}
 	\end{center}
-	\caption{Waveform of notification packets for a ac{CI} of 7.5 milliseconds. Majority of \ac{CE}s have no premature termination}
+	\caption{Waveform of notification packets for a \ac{CI} of 7.5 milliseconds. Majority of \ac{CE}s have no premature termination}
 	\label{fig:9pckts}
 \end{figure}
 
@@ -1353,6 +1443,11 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{MVC}{model-view-controller}
 	\acro{MVVM}{model-view-view model}
 	\acro{XAML}{Extensible Application Markup Language}
+	\acro{OOP}{object oriented programming}
+	\acro{TPL}{task parallel library}
+	\acro{GUI}{graphical user interface}
+	\acro{TPL}{task parallel library}
+	\acro{SDK}{software development kit}
 \end{acronym} 
 \clearpage
 \section{User Guide}

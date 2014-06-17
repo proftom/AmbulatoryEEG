@@ -31,14 +31,14 @@
                         <ToggleButton x:Name="ch5" Content="5" Click="ch_Click" />
                         <ToggleButton x:Name="ch6" Content="6" Click="ch_Click"/>
                         <ToggleButton x:Name="ch7" Content="7" Click="ch_Click"/>
-                        <ToggleButton x:Name="ch8" Content="8" Click="ch_Click"/>
+                        <ToggleButton x:Name="ch8" Content="8" Click="ch_Click" IsChecked="True"/>
                         <AppBarSeparator Width="14"/>
-                        <ToggleButton x:Name="ch9" Content="9" Click="ch_Click"/>
-                        <ToggleButton x:Name="ch10" Content="10" Click="ch_Click"/>
-                        <ToggleButton x:Name="ch11" Content="11" Click="ch_Click"/>
-                        <ToggleButton x:Name="ch12" Content="12" Click="ch_Click"/>
+                        <ToggleButton x:Name="ch9" Content="9" Click="ch_Click" IsChecked="True"/>
+                        <ToggleButton x:Name="ch10" Content="10" Click="ch_Click" IsChecked="True"/>
+                        <ToggleButton x:Name="ch11" Content="11" Click="ch_Click" IsChecked="True"/>
+                        <ToggleButton x:Name="ch12" Content="12" Click="ch_Click" IsChecked="True"/>
                         <AppBarSeparator Width="14"/>
-                        <ToggleButton x:Name="ch13" Content="13" Click="ch_Click"/>
+                        <ToggleButton x:Name="ch13" Content="13" Click="ch_Click" IsChecked="True"/>
                         <ToggleButton x:Name="ch14" Content="14" Click="ch_Click"/>
                         <ToggleButton x:Name="ch15" Content="15" Click="ch_Click"/>
                         <ToggleButton x:Name="ch16" Content="16" Click="ch_Click"/>
@@ -48,7 +48,7 @@
                     </TextBlock>
                 </StackPanel>
                 <AppBarSeparator Width="14"/>
-                <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"  />
+                <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"  Value="30" />
                 <AppBarButton Label="Save" Icon="Save" />
 
             </StackPanel>

@@ -50,7 +50,8 @@ namespace Electroencephalograph
         //CategoryDataViewModel cdv;
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-
+ 
+        
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
@@ -68,6 +69,8 @@ namespace Electroencephalograph
             get { return this.navigationHelper; }
         }
 
+        batteryService bs;
+        UsersViewModel uvm;
 
         public MainPage()
         {

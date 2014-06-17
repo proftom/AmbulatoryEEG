@@ -136,15 +136,17 @@ With the emergence of low power wireless technologies coupled with portable devi
 \section{Acknowledgements}
 The opporunity is taken here to express gratitude to all those who have directly contributed towards the project. 
 
-Firstly, the project surperivsors, James Mardell, Chen Guangwei and Esther Rodriguez-Villegas from the Circuit and Systems deparmental group, for the opportunity to undertake this piece of work.
+Firstly, the project surperivsors, James Mardell, Chen Guangwei and Esther Rodriguez-Villegas from the Circuit and Systems deparmental group, for the opportunity to undertake this piece of work along with my second marker for his efforts in reviewing this work. 
 
 \ac{CSR} provided hardware and technical support in the spirit of academia. Particular acknowledgements go to employees Adam Hill, Martin Spikings, Mark Wade, Neil Stewart and Simon. CSR have requested that this project report or relevant parts of it be made available to them.
 
-Guan Yang and Jacob Rosenthal from New York, United States, for pubically making available code to drive nRF8001 radio. Imperial College student Stelius Ioakim for sharing experience of \ac{PCB} assembly. My girlfriend for dainty and dexterious hands, invaluable during cricuit assembly. 
+Guan Yang and Jacob Rosenthal from New York, United States, for pubically making available code to drive nRF8001 radio. Imperial College student Stelius Ioakim for sharing experience of \ac{PCB} assembly. 
 
 Dr. Nissim Zur, CEO of Vitelix Limited is an expert in low power wireless technologies, and has conversed over many aspects of the CSR1010 chip used. Further, he has also taken an interest in this project's work in regards to maximising the speed, and has requested the results be shared with him.
 
-Finally, special thanks go towards Mike Harbour and Victor Boddy for their efforts in printed circuit board manufacture and assembly. Countless hours were spent in the lab pushing the department's PCB fabrication facilities outside specifiction and assembling the boards. 
+Special thanks go towards Mike Harbour and Victor Boddy for their efforts in printed circuit board manufacture and assembly. Countless hours were spent in the lab pushing the department's PCB fabrication facilities outside specifiction and assembling the boards. 
+
+And finally, my girlfriend for her dainty and dexterious hands, along with her patience which was invaluable during cricuit assembly. 
 
 \clearpage
 
@@ -711,7 +713,7 @@ The application will be developed on a tablet, due to the expected ease of devel
 
 \subsection{Hardware}
 
-A challanging part of this project develping hardware. It was desired that the device should be small and light so it can be shown into a \ac{EEG} hat and worn by the user with no discomfort. To achieve a small size components were placed within close proximity of each other, and at angled orientatinons (tesselated)
+A challanging part of this project develping hardware. It was desired that the device should be small and light so it can be shown into a \ac{EEG} hat and worn by the user with no discomfort. Both the schematic capture and layout was done within the \ac{CAD} software EAGLE. To achieve a small size components were placed within close proximity of each other, and at angled orientatinons (tesselated). The design used 2 layers, but component placing was only done on one side to allow for easier assembly. However, the bottom layer contained the batteries and solder bridges for ease of access. Ultimately the final achieved size was 26.5mm by 33.75mm, and with the battery connectors, the total height is less than 6.5mm.
 
 \begin{figure}[H]
 	\begin{center}
@@ -729,7 +731,7 @@ A challanging part of this project develping hardware. It was desired that the d
 	\label{fig:schematic}
 \end{figure}
 
-The board was assembled by hand, and reflowed in a suitable oven
+The board was assembled by hand, and reflowed in an oven
 
 \begin{figure}[htb]
 	\begin{center}
@@ -739,20 +741,20 @@ The board was assembled by hand, and reflowed in a suitable oven
 	\label{fig:oven}
 \end{figure} 
 
-To test both the process capability and variation, lines of decreasing thickness along with convex shapes were used . Total size was 26.5mm by 33.75mm
+Unfortunately, due to the size and complexity of some of the components, the oven did not give perfect results. Around the active component packets, the solder resist was remove to allow access for a soldering iron to ''touch up'' when the oven reflow failed to perform. To test both the process capability and variation, lines of decreasing thickness along with convex shapes were drawn in the bottom right corner of the board. 
+
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{pcb1.jpg}
 	\end{center}
-	\caption{First (working) PCB iteration}
+	\caption{First (working) PCB iteration. Main components labeled}
 	\label{fig:pcb1.jpg}
 \end{figure}
 
 The first iteration of the board. Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 7 meters within a building or 15 meters \ac{LOS}. 
 
-
-Unfortunately, due to the size and complexity of some of the components, the oven did not give perfect results. Around the active component packets, the solder resist was remove to allow access for a soldering iron to ''touch up'' when the oven reflow failed to perform. 
+The connector used was difficult to source, being a variant of micro-USB, yet with more pins. The pin spacing was beyond the departments capabilities, but under magnification and with the right technique it was possible to make the connections. Unfortunately, with the \ac{CAD} package did not have capabilities to draw slots required for correctly seating the 8-pin connector. The connector had to be modified and filed down to correctly sit on the board. Even with super glue, small amouts of flexing from the cable, can give enough leverage to rip the connector off, along with the tracks, destroying direct connectivity. Two boards were damaged due to this and caused serve delays in developing the firmware for the AD7997 \ac{ADC}. A workaround, although cumbersome, was to use a smaller, breakout board to connector to the mainboard to prevent any damage to the mainboard. 
 
 \begin{figure}[htb]
 	\begin{center}
@@ -780,12 +782,17 @@ The second design added connections for Zinc-air battery holders, another \ac{AD
 	\label{fig:boardfinal}
 \end{figure}
 
+This board, while small, can be shrunk further in size
+
+
+
 \clearpage
 \subsection{Firmware}
 
 The CSR1010 microcontroller contains a custom processor known as the XAP. ac{CSR} provides the necessary tools to translate high level structured C-code into byte code instructions for the XAP processor
 
 Fortunately, \ac{CSR} provided example projects which contains the majority of the application layer functionality (see \ref{fig:blearch}) to handle basic device operations and radio. The \ac{MCU} is a single threaded processor, yet the application design is event driven using a large central message pump(s) to service events and provide the control flow. Events can be of software origin (i.e. a flag set) or hardware invoked. Further, hardware interupts (such as PIO) can be supported outside the software message pump. Being event driven means the use of callbacks are used frequently througout the code base. \ac{CSR} exposes \ac{API}s to communicate with the time critical and complex host and controller layers beneath.
+
 
 \begin{figure}[htb]
 	\begin{center}
@@ -794,6 +801,27 @@ Fortunately, \ac{CSR} provided example projects which contains the majority of t
 	\caption{MCU overview \cite{firmwaredev}}
 	\label{fig:mcu}
 \end{figure}
+
+When the device first powers up it enters the application layer through the AppInit procedure. This procedure initialises hardware and high level stack components such as the GATT server database. Once complete the control flow enters the system event message pump (AppProcessSystemEvent), which is called by the firmware to handle system level events such as PIO level changes such as configured interrupt from pins or wake events. This also handles low battery events. AppProcessLMEvent handles link manager related events from firmware. Such events include radio events (such as the acknowledgment or reciept of data) along with sercurity manager and GAP and G(ATT) messages. Making an insertion into this latter message pump was crucial for enabling the device to transmit more notifications once data was acknowledge (indicating the buffers were free). The link manager event caught is known as LS\_RADIO\_EVENT\_IND, where the IND is short for indication - despite the packet types used being notification, this event structure also corresponds to notifications. Finally, the timers run ontop of the hardware with microsecond accuracy and can be used as interupts. They are used to wake the device out of sleep ready for communicating or doing other work. A timer structure contains a pointer to a event handler which is fired upon timer exhaustion. Once the event handler returns, the chip will power down to a dormant state until the next \ac{CE} or timer is available. It is highlighted that the application timers are not used for radio timings (i.e. synchronisation between devices happens in the base levels of the stack and/or use of dedicated hardware timers).
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics{flow}
+	\end{center}
+	\caption{Firmware - Overview of the application layer control flow \cite{firmwaredev}}
+	\label{fig:flow}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{uml}
+	\end{center}
+	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
+	\label{fig:umlseq}
+\end{figure}
+
 
 The \ac{GATT} services and characteristics are stored in a flat-file database and defined as structures in JSON. The EEG characteristic is shown below in Listing~{lst:eeggatt}. The EEG measurement characteristic provides a notification property which allows a device to subscribe to notification messages when generated from the device.
 
@@ -850,7 +878,7 @@ primary_service {
 
 Each service and characteristic requires a \ac{UUID}, which is a string of 128 bits and due to the enourmous space are very unlikely to appear elsewhere. Only 16 bits (known as the short \ac{UUID}) are required to be set as the remaining bits are previously tied to the device address, which includes specific bit patterns allocated to chip manufacturers. Fruther some \ac{UUID}s are reserved for predefined services and characeteristics (see \url{http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx}). The characteristic \ac{EEG} service has the short \ac{UUID} 0xEE0 (hexidecimal), while the characteristics share a similar short-UUID. The full service UUID can be seen in the User Guide section. 
 
-When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler suite (as with 
+When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler (as with most embedded systems) was not C++ capabale. 
 
 \begin{lstlisting}[language=C, caption=UUIDs EEG service,label={lst:eeguuid}]
 #ifndef __EEG_SERVICE_UUID_H__
@@ -862,15 +890,15 @@ When the program is compiled the GATT data flat file is translated into a manage
 
 /* UUIDs for EEG service and Characteristics*/
 
-#define UUID_EEG_SERVICE                              0x0EE0
+#define UUID_EEG_SERVICE			0x0EE0
 
-#define UUID_EEG_MEASUREMENT                     0x0EE1
+#define UUID_EEG_MEASUREMENT		0x0EE1
 
-#define UUID_EEG_ACQUISITION_RATE          0x0EE2
+#define UUID_EEG_ACQUISITION_RATE	0x0EE2
 
-#define UUID_EEG_CHANNELS                 0x0EE3
+#define UUID_EEG_CHANNELS			0x0EE3
 
-#define DEFAULT_ACQUISITION_RATE 			0xFF
+#define DEFAULT_ACQUISITION_RATE		0xFF
 
 
 
@@ -878,35 +906,35 @@ When the program is compiled the GATT data flat file is translated into a manage
 \end{lstlisting}
 
 
+To communicate with the off-chip \ac{ADC}, the I2C bus was used. The datasheet for the \ac{ADC} (AD7997) \cite{ad7997} shows the device has 3 modes of operation. Mode 1 uses edge triggering on the CONVST pin to begin a conversion. Mode 2, known as command mode allows a conversion to occur from a command sent over the I2C bus. The third and final mode is automatic cycle interval, which will cause the \ac{ADC} to power up and take measurements periodically. The mode selected depends on the bits set in the control register. When enabling channels 
 
-When the device first powers up it enters the application layer through the AppInit procedure. This procedure initialises hardware and high level stack components such as the GATT server database. Once complete the control flow enters the system event message pump (AppProcessSystemEvent), which is called by the firmware to handle system level events such as PIO level changes such as configured interrupt from pins or wake events. This also handles low battery events. AppProcessLMEvent handles link manager related events from firmware. Such events include radio events (such as the acknowledgment or reciept of data) along with sercurity manager and GAP and G(ATT) messages. Making an insertion into this latter message pump was crucial for enabling the device to transmit more notifications once data was acknowledge (indicating the buffers were free). The link manager event caught is known as LS\_RADIO\_EVENT\_IND, where the IND is short for indication - despite the packet types used being notification, this event structure also corresponds to notifications. Finally, the timers run ontop of the hardware with microsecond accuracy and can be used as interupts. They are used to wake the device out of sleep ready for communicating or doing other work. A timer structure contains a pointer to a event handler which is fired upon timer exhaustion. Once the event handler returns, the chip will power down to a dormant state until the next \ac{CE} or timer is available. It is highlighted that the application timers are not used for radio timings (i.e. synchronisation between devices happens in the base levels of the stack and/or use of dedicated hardware timers).
-
-
-
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics{flow}
-	\end{center}
-	\caption{Firmware - Overview of the application layer control flow \cite{firmwaredev}}
-	\label{fig:flow}
-\end{figure}
-
-
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics[width = 0.9\textwidth]{uml}
-	\end{center}
-	\caption{UML sequence diagram detailing power on to advertising packet events \cite{firmwaredev}}
-	\label{fig:umlseq}
-\end{figure}
-
+Between all the code that provides the utility methods of dealing with data and firmware operations, the program is very simply - wake up periodically and sample data, perhaps store this data, then send it on. 
 
 
 
 \subsection{Tablet Application}
 
-The highlevel tablet application was written for Microsoft's .NET framework platform. The 
+The highlevel tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (full namespace is Windows.Devices.Bluetooth.GenericAttributeProfile) class library to communicate with \ac{BLE} devices. The application archiecteure makes full use of ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. This pattern is similar to the highly popularised \ac{MVP} or \ac{MVC} patterns. 
 
+The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows \ac{GUI}s to be quickly and rapidly developed. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy cosumption and managability. This is subtly difference from the controller, which tells the view what to display and when. 
+
+In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acqusition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often assoicated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 moethd is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian).
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{dep}
+	\end{center}
+	\caption{Dependencies}
+	\label{fig:dep}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{classdiagram}
+	\end{center}
+	\caption{Data model (class diagram) for the \ac{EEG} service}
+	\label{fig:classdiagram}
+\end{figure}
 
 
 \begin{figure}[htb]
@@ -1321,6 +1349,10 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{MIC}{message integreity code}
 	\acro{PTH}{plated through hole}
 	\acro{UUID}{Universally unique identifier}
+	\acro{MVP}{model-view-presenter}
+	\acro{MVC}{model-view-controller}
+	\acro{MVVM}{model-view-view model}
+	\acro{XAML}{Extensible Application Markup Language}
 \end{acronym} 
 \clearpage
 \section{User Guide}

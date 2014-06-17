@@ -23,22 +23,18 @@ namespace Electroencephalograph
     {
 
 
-        public List<eegChannel> eegChannels { get; set; }
         public bool IsInitialised { get; private set; }
 
         public GattDeviceService service { get; set; }
         public GattCharacteristic characteristic { get; set; }
 
-        private static eegService instance = new eegService();
+        private static gapService instance = new gapService();
         public gapService()
         {
             IsInitialised = true;
         }
 
-        public static eegService Instance
-        {
-            get { return instance; }
-        }
+
 
         public GattDeviceService Service
         {

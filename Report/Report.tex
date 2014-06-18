@@ -210,7 +210,7 @@ Away from specifically \ac{EEG}, the consumer fitness sector has been strongly t
 
 \subsection{Project End Goals}
 
- This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} montoring .
+ This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} montoring.
 
 Idealistic requirements of the project include 
 \begin{itemize}
@@ -230,7 +230,7 @@ The project is organised as the following. An overview of \ac{EEG} signals and \
 \section{Theory and Technology}
 \subsection{Electroencephalography}
 
-There already exists much literature on \ac{EEG} technology and archetypal  signals measured (such as \cite{Teplan2002}), hence only a brief overview is presented here.
+There already exists much literature on \ac{EEG} technology and archetypal  signals measured (such as \cite{Teplan2002}), hence only a brief overview is presented here. \ac{EEG} signals can be detected on the scalp with a typical range between 0.3-60Hz 
 
  The report is not concerned with the analouge front end for filtering and capturing signals, howver digital conversion through sampling and providing sufficient resolution is of importance. 
 
@@ -1190,7 +1190,15 @@ The throughput tends assymtopically to the maximum of 236.686 kbps, and min to m
 	\label{fig:civsdatarate}
 \end{figure}
 
-It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s.
+It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s. An more analytic approach is shown in a 2011 IEEE communications letter \cite{Gomez2011}, however does not take into account the remainder problem, showing it's possible to achieve 236.7kbit/s with a 7.5ms \ac{CI}. It does show, however, that under high \ac{BER}s, a lower connection interval is the best strategy (Figure~\ref{fig:ber}.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = \textwidth]{ber}
+	\end{center}
+	\caption{Throughput against \ac{CI} for various bit error rates \cite{Gomez2011}}
+	\label{fig:ber}
+\end{figure}
 
 Radio interference can described as a poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the enviroment the raido is used in. Therefore, the task of achieving the highest throughput collaspes to being able to discover this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system between the master and slave. Investigating the range of variation between different radio enviroments may be an interesting piece of further work. 
 
@@ -1388,58 +1396,50 @@ The layout can be shurnk further through reducing distances between components. 
 
 \subsection{Bill of materials}
 
+The cost of building the system, including no price breaks and sourcing from standard online suppliers such as Farnell, RS-Components, rapid online, etc.
 
+\begin{table}[H]
+\centering
+\caption{Bill of materials}
+\label{fig:sensors}
+\begin{tabular}{|p{1.1in}|p{1.1in}|p{1.1in}|p{1.1in}|} \hline 
+\textbf{Component Name} & \textbf{Value} & \textbf{Quantity} & \textbf{Unit Cost} \\ \hline 
+Needs to be filled in & 8 & 1500 & 192 \\ \hline  
+
+
+
+\end{tabular}
+\end{table}
+
+As the number produced increases, the marginal cost will decrease and production fixed costs can be spread over more units. It is recommended, if this work is taken further, to use outside assembly for many units
 
 \clearpage 
 \section{Conclusions and Future Work}
-The majority of interesting \ac{EEG} signals exist between . Running an \ac{EEG} device at that 
 
-The proposed device is comparable to a hearing aid, even using the same battery technology. 
+This report and project has demonstrated that for a certain setups \ac{BLE} is a suitable technology for \ac{EEG} transmission. As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}. At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. A requirement of the device was the ability to capture and send 10kHz of data, requiring 80 kbps for a single channel at 8 bit upto 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all channels is 16 channels is approximately 1.6kHz, meaning a single upto around 800Hz per channel can be accurately measured as per the Nyquist condition. 
 
-Smart phone not single end device -> contain other radios for high throughput, maybe why hardware only supports 4 packets
+Mention power here (finish up power analysis)
+find point of indifference between bl and ble
 
+The system requires 2.2ms to wake from a dormant sleep mode. The system must power up in order to communicate with the \ac{ADC}. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. 
 
-From the preliminary work, it has been shown the CSR1010 is capable of running at 9 packets per \ac{CE} stable. The theoretical throughput should be 11 packets per \ac{CE}, and when examined under the scope using a shunt resistor (see section Power Analysis), it was found that if 
-
-
-
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics[width = \textwidth]{9pckts}
-	\end{center}
-	\caption{Waveform of notification packets for a \ac{CI} of 7.5 milliseconds. Majority of \ac{CE}s have no premature termination}
-	\label{fig:9pckts}
-\end{figure}
-
-Theoretically 11 packets should be able to fit into this interval 
-
-Unsure about when run a test set then run another, sometimes there can be big difference. Due to sharing radio channel?
+The achievable datarate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum datarate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms.
 
 //but unfortunately, there is an energy cost associated with hardware buffers from operation and leakage current
 
-Hard to classify
+While not consider in the report, for duplex communication, the total throughput as a sum of useful (20byte notifications) in each direction is approximately 358.8kbps. This means both the peripheral and master send 296 bit notification packets, in which the header acknowledges the other.
 
-On the whole, the project has 
-
-Both ends of the link 
-
-Not all tablets will be able to run at full speed
-
-Ideally, it is desirable to write a conference style paper. 
-
-Never list packets per CI
-
-Duplex
+Another way to improve throughput include compression techniques, for which there exists many information resources on lossless and lossy compressing \ac{EEG} data \cite{Antoniol1997} \cite{Wongsawat2006}. A problem with using such a technique, is that if data is spread over multiple notifications, any data loss of a single notification, may result in the loss of a larger chunk of information. 
 
 Combine with video
 
 Ambulatory to wearable
 
-Better understanding, big data
 
-characeterise power with voltage
 
-find point of indifference between bl and ble
+As mentioned in the ref{Acknowledgements} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable biomedical journal. 
+
+Future work stemming from this project includes investigating how the profile changes in different radio enviroments (e.g. increasing \ac{BER}). Gomez's\cite{Gomez2011} paper contains a throughput investigation in a 
 
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance

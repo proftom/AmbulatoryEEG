@@ -37,6 +37,46 @@
   \endverb
 \endentry
 
+\entry{asabe}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Balmos}{B.}%
+     {Alex W.; Ault Aaron; Krogmeier James V.; Buckmaster Dennis~R.}{A.~W. A.
+  A. K. J. V. B. D.~R.}%
+     {}{}%
+     {Andrew D.;~Layton}{A.~D.~L.}}%
+  }
+  \strng{namehash}{BADLAWAAKJVBDR1}
+  \strng{fullhash}{BADLAWAAKJVBDR1}
+  \field{sortinit}{B}
+  \field{note}{2013 ASABE Annual International Meeting}
+  \field{number}{131620559}
+  \field{title}{Investigation of Bluetooth Communications for Low-Power
+  Embedded Sensor Networks in Agriculture}
+  \verb{url}
+  \verb https://engineering.purdue.edu/oatgroup/docs/pape\r_balmos\_1.pdf
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{Blanco95}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Blanco}{B.}%
+     {R.~Quian; Rosso O. A.; Kochen~S.}{R.~Q. R. O. A. K.~S.}%
+     {}{}%
+     {S;~Quiroga}{S.~Q.}}%
+  }
+  \strng{namehash}{BSQRQROAKS1}
+  \strng{fullhash}{BSQRQROAKS1}
+  \field{sortinit}{B}
+  \field{pages}{1\bibrangedash 3}
+  \field{title}{Time-frequency analysis of electroencephalogram series}
+  \field{type}{techreport}
+  \field{year}{1995}
+\endentry
+
 \entry{sig}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -71,6 +111,257 @@
   \verb https://www.bluetooth.org/en-us/Documents/Shenzhen%20CSR\_uEnergy\_SDK.
   \verb PDF
   \endverb
+\endentry
+
+\entry{Brown2010}{inproceedings}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Brown}{B.}%
+     {Lindsay}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Van De Molengraft}}{V.}%
+     {Jef}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yazicioglu}{Y.}%
+     {Refet~Firat}{R.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Torfs}{T.}%
+     {Tom}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Penders}{P.}%
+     {Julien}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Van Hoof}}{V.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BL+1}
+  \strng{fullhash}{BLVJYRFTTPJVC1}
+  \field{sortinit}{B}
+  \field{abstract}{%
+  Micro- and nano-technology has enabled development of smaller and smarter
+  wearable devices for medical and lifestyle related applications. In
+  particular, recent advances in EEG monitoring technologies pave the way for
+  wearable, wireless EEG monitoring devices. Here, a low-power wireless EEG
+  sensor platform that measures 8-channels of EEG, is described. The platform
+  is integrated into a wearable headset for ambulatory monitoring of EEG. While
+  using standard EEG electrodes without conductive gel, a first evaluation
+  shows the wireless headset is comparable to the reference system when looking
+  at alpha wave discrimination. This device combines low-noise, and low-power
+  functionality into an easy-to-use wireless headset, providing a first step
+  towards a fully integrated, fully functional wearable wireless EEG monitoring
+  system.%
+  }
+  \field{booktitle}{2010 Annual International Conference of the IEEE
+  Engineering in Medicine and Biology Society, EMBC'10}
+  \verb{doi}
+  \verb 10.1109/IEMBS.2010.5627393
+  \endverb
+  \field{isbn}{9781424441235}
+  \field{issn}{1557-170X}
+  \field{pages}{4197\bibrangedash 4200}
+  \field{title}{{A low-power, wireless, 8-channel EEG monitoring headset}}
+  \field{year}{2010}
+\endentry
+
+\entry{carle}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Carles~Gomez}{C.~G.}%
+     {Josep~Paradells}{J.~P.}%
+     {}{}%
+     {Joaquim~Oller}{J.~O.}}%
+  }
+  \list{publisher}{1}{%
+    {Sensors (Basel, Switzerland)}%
+  }
+  \strng{namehash}{CGJOJP1}
+  \strng{fullhash}{CGJOJP1}
+  \field{sortinit}{C}
+  \field{title}{Overview and Evaluation of Bluetooth Low Energy: An Emerging
+  Low-Power Wireless Technology}
+  \verb{url}
+  \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478807/
+  \endverb
+  \field{year}{2012}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{Casson2008}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Casson}{C.}%
+     {Alexander~J}{A.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smith}{S.}%
+     {Shelagh}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Duncan}{D.}%
+     {John~S}{J.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rodriguez-Villegas}{R.-V.}%
+     {Esther}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CAJ+1}
+  \strng{fullhash}{CAJSSDJSRVE1}
+  \field{sortinit}{C}
+  \field{abstract}{%
+  This paper presents a review of wearable EEG technology: the evolution of
+  ambulatory EEG units from the bulky, limited lifetime devices available today
+  to small devices present only on the head that can record the EEG for days,
+  weeks or months at a time. The EEG requirements, application areas and
+  research challenges are highlighted. A survey of neurologists is also carried
+  out clearly indicating the medical desire for such devices.%
+  }
+  \verb{doi}
+  \verb 10.1109/IEMBS.2008.4650549
+  \endverb
+  \field{isbn}{978-1-4244-1814-5}
+  \field{issn}{1557-170X}
+  \field{pages}{5867\bibrangedash 5870}
+  \field{title}{{Wearable EEG: what is it, why is it needed and what does it
+  entail?}}
+  \field{volume}{2008}
+  \field{journaltitle}{Conference proceedings : ... Annual International
+  Conference of the IEEE Engineering in Medicine and Biology Society. IEEE
+  Engineering in Medicine and Biology Society. Conference}
+  \field{year}{2008}
+\endentry
+
+\entry{Dash2012}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Dash}{D.}%
+     {Dianne}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hernandez-Ronquillo}{H.-R.}%
+     {Lizbeth}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Moien-Afshari}{M.-A.}%
+     {Farzad}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tellez-Zenteno}{T.-Z.}%
+     {Jose~F}{J.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{ambulatory eeg,cost-of-illness,diagnostic yield,epilepsy,non-epileptic
+  events,portable eeg,pseudoseizures}
+  \strng{namehash}{DD+1}
+  \strng{fullhash}{DDHRLMAFTZJF1}
+  \field{sortinit}{D}
+  \field{abstract}{%
+  Introduction. Ambulatory electroencephalography (AEEG) is a monitoring
+  technique that allows the recording of continuous EEG activity when patients
+  are at home, without the necessity of admission to the hospital for prolonged
+  video-EEG monitoring. Methods. This is a prospective cohort study performed
+  in a Canadian academic centre in order to assess the yield and tolerability
+  of AEEG in the adult population. Over a period of three years, 101 patients
+  were included. The yield of AEEG was assessed by taking into account the
+  questions asked by the clinician before and after the investigation. Results.
+  One hundred and one patients undergoing AEEG were prospectively recruited
+  during a three-year-period. Our population consisted of 45 males (44.6\%) and
+  56 females (55.4\%). The mean age of the group was 36.6±16.1 years. Most of
+  the patients had at least one previous routine EEG (93\%). The primary
+  reasons for the AEEGs were subdivided into four categories: a) to
+  differentiate between seizures and non-epileptic events; b) to determine the
+  frequency of seizures and epileptiform discharges; c) to characterize seizure
+  type or localization; and d) to potentially diagnose epilepsy. The mean
+  duration of AEEG recording was 32±17 hours (15-96 hours). For 73 (72\%)
+  patients, the AEEG provided information that was useful for the management.
+  For 28 (28\%) patients, the AEEG did not provide information on diagnosis
+  because no events or epileptiform activity occurred. In only 1 patient was
+  the AEEG inconclusive due to non-physiological artefacts. Three patients were
+  referred for epilepsy surgery without the necessity of video-EEG telemetry.
+  Conclusion. In this study, we found that AEEG has a high diagnostic yield
+  (72\%) and believe that careful selection of patients is the most important
+  factor for a high diagnostic yield. The main use of AEEG is the
+  characterization of patients with non-epileptic events, in patients with a
+  diagnosis of epilepsy that is not clear, and quantification of spikes and
+  seizures to improve the medical management. Ambulatory EEG is a
+  cost-effective solution for increasing demands for in-hospital video-EEG
+  monitoring of adult patients.%
+  }
+  \verb{doi}
+  \verb 10.1684/epd.2012.0529
+  \endverb
+  \field{issn}{1294-9361}
+  \field{pages}{290\bibrangedash 7}
+  \field{title}{{Ambulatory EEG: a cost-effective alternative to inpatient
+  video-EEG in adult patients.}}
+  \verb{url}
+  \verb http://www.ncbi.nlm.nih.gov/pubmed/22963900
+  \endverb
+  \field{volume}{14}
+  \field{journaltitle}{Epileptic disorders}
+  \field{year}{2012}
+\endentry
+
+\entry{Dementyev2013}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dementyev}{D.}%
+     {Artem}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smith}{S.}%
+     {Joshua~R.}{J.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DASJR1}
+  \strng{fullhash}{DASJR1}
+  \field{sortinit}{D}
+  \field{abstract}{%
+  The wearable electroencephalogram (EEG) monitoring systems are the
+  cornerstone of noninvasive brain-computer interfaces (BCI) and many medical
+  applications, but state-of-the-art wearable systems are limited by weight,
+  battery life and size. In this paper we present EEGWISP: am EEG monitoring
+  system that is battery-free; is powered by a standard UHF RFID reader; and
+  uses backscatter to transmit the data using a EPC Class 1 Gen2 protocol.
+  Since EEGWISP does not need batteries it can be lightweight, miniature and
+  maintenance free for users. We designed a low-power EEG acquisition circuit
+  with 62.6 \&\#x03BC;A current consumption. For validation, EEG signals were
+  shown by distinct appearance of 8-12 Hz oscillations (alpha waves) when
+  wearer's eyes are closed. EEGWISP can record EEG signals at 63 Hz sampling
+  rate, at the distances up to 0.80 m and with 0.1 \% data loss. With slight
+  modifications, our system can be used for other biopotential signals such as
+  ECG.%
+  }
+  \field{booktitle}{2013 IEEE International Conference on RFID, RFID 2013}
+  \verb{doi}
+  \verb 10.1109/RFID.2013.6548128
+  \endverb
+  \field{isbn}{9781467357500}
+  \field{pages}{1\bibrangedash 7}
+  \field{title}{{A wearable UHF RFID-based EEG system}}
+  \field{year}{2013}
 \endentry
 
 \entry{ad7997}{misc}{}
@@ -190,6 +481,48 @@
   \field{year}{2013}
 \endentry
 
+\entry{MacKensen2012}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {MacKensen}{M.}%
+     {Elke}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lai}{L.}%
+     {Matthias}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wendt}{W.}%
+     {Thomas~M.}{T.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MELMWTM1}
+  \strng{fullhash}{MELMWTM1}
+  \field{sortinit}{M}
+  \field{abstract}{%
+  The following paper presents the results of a feasibility study about
+  Bluetooth Low Energy (BLE) based wireless sensors. The development of
+  industrial wireless sensors leads to important demands for the wireless
+  technologies like a low energy consumption and a resource saving simple
+  protocol stack. Bluetooth Low Energy (BLE) is a rather new wireless standard
+  which will completely fulfill these fundamental requirements. A self-designed
+  BLE sensor system has been used to explore the common applicability of BLE
+  for wireless sensor systems. The evaluation results of various analyses with
+  the BLE sensor system are now presented in this paper.%
+  }
+  \field{booktitle}{Proceedings of IEEE Sensors}
+  \verb{doi}
+  \verb 10.1109/ICSENS.2012.6411303
+  \endverb
+  \field{isbn}{9781457717659}
+  \field{issn}{1930-0395}
+  \field{title}{{Bluetooth Low Energy (BLE) based wireless sensors}}
+  \field{year}{2012}
+\endentry
+
 \entry{olme}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -210,6 +543,178 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
+\entry{Omre2010}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Omre}{O.}%
+     {Alf~Helge}{A.~H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{OAH1}
+  \strng{fullhash}{OAH1}
+  \field{sortinit}{O}
+  \field{abstract}{%
+  Electronic wireless sensors could cut medical costs by enabling physicians to
+  remotely monitor vital signs such as blood pressure, blood glucose, and blood
+  oxygenation while patients remain at home. According to the IDC report
+  "Worldwide Bluetooth Semiconductor 2008-2012 Forecast," published November
+  2008, a forthcoming radio frequency communication ("wireless connectivity")
+  standard, Bluetooth low energy, will link wireless sensors via radio signals
+  to the 70\% of cell phones and computers likely to be fitted with the next
+  generation of Bluetooth wireless technology, leveraging a ready-built
+  infrastructure for data transmission. Analysis of trends indicated by this
+  data can help physicians better manage diseases such as diabetes. The
+  technology also addresses the concerns of cost, compatibility, and
+  interoperability that have previously stalled widespread adoption of wireless
+  technology in medical applications.%
+  }
+  \verb{doi}
+  \verb 10.1177/193229681000400227
+  \endverb
+  \field{isbn}{1932-2968}
+  \field{issn}{1932-2968}
+  \field{pages}{457\bibrangedash 463}
+  \field{title}{{Bluetooth low energy: wireless connectivity for medical
+  monitoring.}}
+  \field{volume}{4}
+  \field{journaltitle}{Journal of diabetes science and technology (Online)}
+  \field{year}{2010}
+\endentry
+
+\entry{Peng2011}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Peng}{P.}%
+     {Hong}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Majoe}{M.}%
+     {Dennis}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kaegi-Trachsel}{K.-T.}%
+     {Thomas}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PHMDKTT1}
+  \strng{fullhash}{PHMDKTT1}
+  \field{sortinit}{P}
+  \field{abstract}{%
+  Electroencephalogram (EEG) signal plays an important role in E-healthcare
+  system, especially the mental healthcare field. In order to improve access
+  and quality of EEG data delivery, detect the mental depression and reduce the
+  hardware cost, we present the design and application of a novel wearable EEG
+  system. After the introduction of hardware, a novel algorithm to calculate
+  EEG signal quality is given so as to control the communication, reduce
+  complexity and the power consumption. Then, the main noises in EEG, such as
+  Ocular Artifacts (OA) and DC adrift are removed by an improved de-noising
+  approach. Finally, Alpha asymmetry and C0 complexity are used as main
+  features to identify mental depression and sent to server by internet for
+  further research. The results show that this EEG system can both work
+  correctly and has low hardware cost. Furthermore, it has been used in the
+  OPTIMI project of the EU's Seventh Framework Programme (FP7) and works well.%
+  }
+  \field{booktitle}{Proceedings of 2011 international workshop on Ubiquitous
+  affective awareness and intelligent interaction - UAAII '11}
+  \verb{doi}
+  \verb 10.1145/2030092.2030094
+  \endverb
+  \field{isbn}{9781450309325}
+  \field{pages}{1}
+  \field{title}{{Design and application of a novel wearable EEG system for
+  e-healthcare}}
+  \verb{url}
+  \verb http://dl.acm.org/citation.cfm?id=2030092.2030094
+  \endverb
+  \field{year}{2011}
+\endentry
+
+\entry{Rizvi2013}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Rizvi}{R.}%
+     {Syed~A.}{S.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{T??llez Zenteno}}{T.}%
+     {Jos??~F.}{J.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Crawford}{C.}%
+     {Sara~L.}{S.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wu}{W.}%
+     {Adam}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Ambulatory EEG,Complex partial seizure,Cost-effectiveness,Diagnostic
+  yield,Epilepsy,Portable EEG}
+  \strng{namehash}{RSA+1}
+  \strng{fullhash}{RSATJFCSLWA1}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  Outpatient ambulatory EEG is more cost-effective than inpatient EEG telemetry
+  and may provide adequate seizure localization in a presurgical evaluation. A
+  51-year-old right-handed male had been unable to work or drive since the age
+  of 35 due to intractable partial onset epilepsy. A 72-hour outpatient
+  ambulatory EEG recorded 18 seizures from the right temporal region. No
+  epileptiform activity was seen in the left hemisphere. Magnetic resonance
+  imaging showed right mesial temporal sclerosis as well as an area of
+  encephalomalacia at the medial inferior right temporal lobe.
+  Neuropsychological assessment found that the patient was a good neurosurgery
+  candidate. At this point, the patient was considered to be a candidate for a
+  right temporal lobectomy. A standard right temporal lobectomy was performed.
+  The patient has been seizure-free for 10. months after the surgery. Follow-up
+  EEGs show no epileptiform activity. The patient is preparing to go back to
+  work, and his driver's license was reinstated 9. months postsurgery.
+  Neuropsychological reassessment is pending, but no apparent change in
+  cognition has been noticed by the patient or his family. Cases with a high
+  congruence between diagnostic imaging and the EEG abnormalities identified in
+  the portable EEG may provide enough information regarding seizure frequency
+  and localization to eliminate the need for inpatient EEG telemetry in the
+  evaluation of patients for epilepsy surgery. We believe that the use of aEEG
+  in preoperative planning should be restricted to cases of TLE and to patients
+  with a high frequency of seizures. ?? 2013 The Authors.%
+  }
+  \verb{doi}
+  \verb 10.1016/j.ebcr.2013.01.001
+  \endverb
+  \field{issn}{22133232}
+  \field{pages}{39\bibrangedash 41}
+  \field{title}{{Outpatient ambulatory EEG as an option for epilepsy surgery
+  evaluation instead of inpatient EEG telemetry}}
+  \field{volume}{1}
+  \field{journaltitle}{Epilepsy and Behavior Case Reports}
+  \field{year}{2013}
+\endentry
+
+\entry{power}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sandeep~Kamath}{S.~K.}%
+     {Joakim~Lindh}{J.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SKJL1}
+  \strng{fullhash}{SKJL1}
+  \field{sortinit}{S}
+  \field{title}{Measuring Bluetooth Low Energy Power Consumption}
+  \verb{url}
+  \verb http://www.ti.com/lit/an/swra347a/swra347a.pdf
+  \endverb
+  \field{year}{2013}
+\endentry
+
 \entry{nrf51822}{manual}{}
   \name{author}{1}{}{%
     {{}%
@@ -227,6 +732,66 @@
   \verb http://www.100y.com.tw/pdf\_file/39-Nordic-NRF51822.pdf
   \endverb
   \field{year}{2013}
+\endentry
+
+\entry{nrf8001}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Semiconductor}{S.}%
+     {Nordic}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SN1}
+  \strng{fullhash}{SN1}
+  \field{sortinit}{S}
+  \field{pages}{1\bibrangedash 161}
+  \field{title}{nRF8001 Datasheet}
+  \verb{url}
+  \verb http://www.nordicsemi.com/kor/content/download/2981/38488/file/nRF8001\
+  \verb _PS\_v1.2.pdf
+  \endverb
+  \field{type}{techreport}
+  \field{year}{2013}
+\endentry
+
+\entry{WHO2006}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {WHO}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{sortinit}{W}
+  \field{abstract}{%
+  There is ample evidence that pinpoints neurological disorders as one of the
+  greatest threats to public health. There are several gaps in understanding
+  the many issues related to neurological disorders, but we already know enough
+  about their nature and treatment to be able to shape effective policy
+  responses to some of the most prevalent among them. Neurological disorders:
+  public health challenges describes and discusses the increasing global public
+  health importance of common neurological disorders such as dementia,
+  epilepsy, headache disorders, multiple sclerosis, neuroinfections,
+  neurological disorders associated with malnutrition, pain associated with
+  neurological disorders, Parkinson s disease, stroke and traumatic brain
+  injuries. The book provides the public health perspective for these disorders
+  and presents fresh and updated estimates and predictions of the global burden
+  borne by them. It provides information and advice on public health
+  interventions that may be applied to reduce the occurrence and consequences
+  of neurological disorders. It offers health professionals and planners the
+  opportunity to assess the burden caused by these disorders in their country
+  and to take appropriate action. A clear message emerges that unless immediate
+  action is taken globally, the neurological burden is likely to become an
+  increasingly serious and unmanageable problem in all countries%
+  }
+  \field{booktitle}{Medicine}
+  \field{isbn}{9789241563369}
+  \field{pages}{229}
+  \field{title}{{Neurological disorders public health challenges}}
+  \field{year}{2006}
 \endentry
 
 \entry{Wimo2010}{article}{}
@@ -286,8 +851,8 @@
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{W1}
-  \strng{fullhash}{W1}
+  \strng{namehash}{W2}
+  \strng{fullhash}{W2}
   \field{sortinit}{W}
   \field{abstract}{%
   Dementia is seriously disabling for those who have it and is often
@@ -337,6 +902,54 @@
   \endverb
   \field{type}{techreport}
   \field{eprinttype}{arXiv}
+  \field{year}{2012}
+\endentry
+
+\entry{Yu2012}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Yu}{Y.}%
+     {Bin}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xu}{X.}%
+     {Lisheng}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Yongxu}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Bluetooth Low Energy (BLE),ECG,Smart-phone,Wireless}
+  \strng{namehash}{YBXLLY1}
+  \strng{fullhash}{YBXLLY1}
+  \field{sortinit}{Y}
+  \field{abstract}{%
+  A wireless electrocardiogram (ECG) monitoring system is developed which
+  integrates Bluetooth Low Energy (BLE) technology. This BLE-based system is
+  comprised of a single-chip ECG signal acquisition module, a Bluetooth module
+  and a smart-phone. Apple's iPhone 4S is selected as the mobile device
+  platform, which embedded with Bluetooth v4.0, Wi-Fi and iOS. In this paper,
+  the monitoring system is able to acquire ECG signals through 2-lead
+  electrocardiogram (ECG) sensor, transmit the ECG data via the Bluetooth
+  wireless link, process and display the ECG waveform in a smart-phone. The
+  results show that implementation of Bluetooth Low Energy (BLE) technology in
+  the existing ECG monitoring system not only eliminates the physical
+  constraints imposed by hard-wired link but also highly reduces the power
+  consumption of the long-term monitoring system.%
+  }
+  \field{booktitle}{2012 IEEE International Conference on Information and
+  Automation, ICIA 2012}
+  \verb{doi}
+  \verb 10.1109/ICInfA.2012.6246921
+  \endverb
+  \field{isbn}{9781467322386}
+  \field{pages}{763\bibrangedash 767}
+  \field{title}{{Bluetooth Low Energy (BLE) based mobile electrocardiogram
+  monitoring system}}
   \field{year}{2012}
 \endentry
 

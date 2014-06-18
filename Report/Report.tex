@@ -161,7 +161,30 @@ Since the arrival of \ac{BLE} in smartphones in 2012, the vast majority of smart
 
  Through leveraging widely popular and familiar smart phone devices with this new technology, in the context of an \ac{AEEG}, it is possible to empower the patient to inexpensively move their health care out of the hospital and into the home. By coupling cheap low power sensors and radios, with powerful ubiquitous consumer technology, it is possible not only to cheaply and efficiently monitor patients, improve the quality of life for patients but also help physicians further their understanding of neurological disorders. Further, when combined with data-mining or so called big-data analytics novel insights may reveal new understanding and ultimately better forms of treatmeant.
 
-\subsection{Existing Technologies and Products}
+
+\subsection{Existing Research, Technologies and Products}
+
+Over the recent past, reduction in power and size of technologies has enabled smaller and smarter devices, so much so, that they are known under the umbrella term as wearable devices. These wearable devices allow greater ease and lengths of monitoring to while barely or not impacting on their day to day life. Hence, there has been and is a large amount of research in portable medical devices for health monitoring in both academia and industry. An investigation \cite{asson2008} into UK neuologist's reactions to wearable \ac{EEG} devices concluded that neuologists believed that wearable \ac{AEEG}s would be a major improvement in the \ac{EEG} practice for both patients and physicians, clearly signalling the desire for such systems. This project and report is interested in investigating the use of \ac{BLE} as the wireless technolgy in wearable devices, specifically \ac{EEG}.
+
+In academia, a 2010 \cite{Brown2010} paper reported a wireless 8 channel \ac{EEG} device capable of sampling 8 channels at 1024 Hz consumed an average of 12mW. The device used a custom \ac{ASIC} for measuring biopoentials with low power consumption and high frequency, and Nordic Semiconductor's nRF24L01 generic 2.4GHz transceiver for radio communication. In 2013, Washington University \cite{Dementyev2013} demonstrated a coin-sized 60 Hz sampling rate \ac{RFID} based system, which has ultimited battery life within the range of the \ac{RFID} transceiver.  While research papers are available discussing the use of \ac{BLE} for wearable devices and sensors \cite{Omre2010} \cite{MacKensen2012}, research on combining \ac{EEG} with \ac{BLE} is difficult to source (there have been many attempts published for \ac{ECG}, e.g. \cite{Yu2012}).
+
+Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the \ac{EEG} sensors and a fixed computer serverly restricts patient's mobility and hence are impracticable for long periods of use. Figures~\ref{fig:imperialcurrent},~\ref{fig:eeghat} show the departments current immobile setup. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{imperialcurrent}
+	\end{center}
+	\caption{Current \ac{EEG} setup at Imperial College}
+	\label{fig:imperialcurrent}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.5\textwidth]{eeghat}
+	\end{center}
+	\caption{Example \ac{EEG} hat used by Imperial College}
+	\label{fig:eeghat}
+\end{figure}
 
 Popular \ac{EEG} products on the market that have already shown integration with consumer electronics as well as research include Emotiv Systems' \ac{EEG} headset. The device retails at \$750 (approximately £450 at the time of writing), sporting 14 saline sensors, gyroscopes for positioning and a lithium battery capable of deliverying upto 12 hours of continuous use.
 
@@ -173,7 +196,7 @@ Popular \ac{EEG} products on the market that have already shown integration with
 	\label{fig:emotive}
 \end{figure}
 
-NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a datarate of 250 kbit/s, a baudrate of 57,600 and 10 meter range. It is also noted that there is a 5% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same buad rate of the previous. The maximum power consumption increases to 120mW (80mA). Both devices weight 90g, and are priced at $80 and $130 respectively. 
+NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a datarate of 250 kbit/s, a baudrate of 57,600 and 10 meter range. It is also noted that there is a 5% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same buad rate of the previous, but the maximum power consumption increases to 120mW (80mA). Both devices weigh an equal 90g, and are priced at $80 and $130 respectively. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -183,11 +206,11 @@ NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The 
 	\label{fig:neurosky}
 \end{figure}
 
-Away from specifically \ac{EEG}, the consumer fitness sector is being targeted quite strongly, and many devices already exist that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all make use of the \ac{BLE} technology to connect to smartphones.
+Away from specifically \ac{EEG}, the consumer fitness sector has been strongly targetted by wearable devices that can synchronise with a user's smartphone. At the time of writing many devices exist in the marketplace that utilise lower power technologies to act as gateways for real-time data logging. For example, there already exists a competitive market between heartbeat monitors, cadence monitors and pedometers. These ‘activity trackers’ use low power electronics and radios to log user’s activities and update the user in real time with activity information through the user’s phone or smart watch. Popular products on the market at the time of writing include the Fitbit, Fuelband and Jawbone, which all make use of the \ac{BLE} technology to connect to smartphones.
 
 \subsection{Project End Goals}
 
-Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the \ac{EEG} sensors and a fixed computer serverly restricts patient's mobility and hence are impracticable for long periods of use. This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} montoring .
+ This project will explore using \ac{BLE} technology for electrocengraphy, and build a prototype system capabale of interfacing with an analouge front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} montoring .
 
 Idealistic requirements of the project include 
 \begin{itemize}
@@ -207,7 +230,11 @@ The project is organised as the following. An overview of \ac{EEG} signals and \
 \section{Theory and Technology}
 \subsection{Electroencephalography}
 
-Different freqs
+There already exists much literature on \ac{EEG} technology and archetypal  signals measured (such as \cite{Teplan2002}), hence only a brief overview is presented here.
+
+ The report is not concerned with the analouge front end for filtering and capturing signals, howver digital conversion through sampling and providing sufficient resolution is of importance. 
+
+The majority of signals
 
 
 
@@ -591,7 +618,7 @@ Therefore 9 packets per connection interval at 7.5ms. This corresponding to a th
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = \textwidth]{sensortag.png}
+		\includegraphics[width = \textwidth]{sensortag}
 	\end{center}
 	\caption{SensorTag hardware (contains CC2541) and programmer}
 	\label{fig:sensortag}
@@ -880,6 +907,38 @@ Each service and characteristic requires a \ac{UUID}, which is a string of 128 b
 
 When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler (as with most embedded systems) was not C++ capabale. 
 
+
+
+\begin{lstlisting}[language=C, caption=\ac{EEG} data structure,label={lst:eegstruct}]
+typedef struct
+{
+    /* Energy Expended Value */
+
+    /* Heart rate measurement client configuration */
+    gatt_client_config             eeg_meas_client_config; 
+
+    /* Offset at which Battery data is stored in NVM */
+    uint16                         nvm_offset;
+    
+    uint16                         channel_map; 
+    
+    uint16                         acquisition_rate;
+    
+    timer_id                       acq_tmr;
+    
+    uint8                          measurement_buffer_1[160];
+   
+    uint8                          measurement_buffer_2[160];
+    
+    uint8                          current_packet;
+    
+    uint8                          current_buffer;
+
+} EEG_SERV_DATA_T;
+\end{lstlisting}
+
+
+
 \begin{lstlisting}[language=C, caption=UUIDs EEG service,label={lst:eeguuid}]
 #ifndef __EEG_SERVICE_UUID_H__
 #define __EEG_SERVICE_UUID_H__
@@ -915,9 +974,14 @@ Between all the code that provides the utility methods of dealing with data and 
 
 
 
+
+
+
+
+
 \subsection{Tablet Application}
 
-The highlevel tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (specifically $Windows.Devices.\\Bluetooth.GenericAttributeProfile$) class library to communicate with \ac{BLE} devices. The application uses the new WinRT application design introduced into the Windows operating system since Windows 8. Writing for WinRT means the application can be easily The application archiecteure makes full use of \ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. The application was design to allow the user to be able to connect to a device, select the number of channels measure and the frequency. 
+The highlevel tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (specifically $Windows.Devices.\\Bluetooth.GenericAttributeProfile$) class library to communicate with \ac{BLE} devices. The application uses the new WinRT application design introduced into the Windows operating system since Windows 8. Writing for WinRT means the application can be easily be ported between a tablet to a Windows OS phone The application archiecteure makes full use of \ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. The application was design to allow the user to be able to connect to a device, select the number of channels measure and the frequency. 
 
 The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows a \ac{GUI} to be highly flexible. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy cosumption and managability. This is subtly difference from the controller, which tells the view what to display and when. An example of the View-Model would be a collectional (e.g. a list of eeg measurements), that when mutated, automatically update the \ac{GUI}. In the context of \ac{XAML} and \ac{MVVM}, this is known as data binding, and allows the View to easily consume the model.
 
@@ -1043,7 +1107,7 @@ At the time of writing the application looks like
 	\begin{center}
 		\includegraphics[width = 1.4\textwidth,angle = 90]{exampleapp}
 	\end{center}
-	\caption{Application - data recieved with 6 channels selected}
+	\caption{Application - 6 channels configured, with data being shown }
 	\label{fig:exampleapp}
 \end{figure}
 
@@ -1401,6 +1465,7 @@ The large amount of both written and generated code is to vast to warrant being 
 \printbibliography
 
 \section{Appendix}
+
 \subsection{Acronyms}
 \begin{acronym}
 	\acro{EEG}{Electroencephalography}

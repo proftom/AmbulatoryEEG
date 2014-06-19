@@ -37,6 +37,51 @@
   \endverb
 \endentry
 
+\entry{Antoniol1997}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Antoniol}{A.}%
+     {G}{G}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tonella}{T.}%
+     {P}{P}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AGTP1}
+  \strng{fullhash}{AGTP1}
+  \field{sortinit}{A}
+  \field{abstract}{%
+  In this paper, electroencephalograph (EEG) and Holter EEG data compression
+  techniques which allow perfect reconstruction of the recorded waveform from
+  the compressed one are presented and discussed. Data compression permits one
+  to achieve significant reduction in the space required to store signals and
+  in transmission time. The Huffman coding technique in conjunction with
+  derivative computation reaches high compression ratios (on average 49\% on
+  Holter and 58\% on EEG signals) with low computational complexity. By
+  exploiting this result a simple and fast encoder/decoder scheme capable of
+  real-time performance on a PC was implemented. This simple technique is
+  compared with other predictive transformations, vector quantization, discrete
+  cosine transform (DCT), and repetition count compression methods. Finally, it
+  is shown that the adoption of a collapsed Huffman tree for the
+  encoding/decoding operations allows one to choose the maximum codeword length
+  without significantly affecting the compression ratio. Therefore, low cost
+  commercial microcontrollers and storage devices can be effectively used to
+  store long Holter EEG's in a compressed format.%
+  }
+  \verb{doi}
+  \verb 10.1109/10.552239
+  \endverb
+  \field{issn}{0018-9294}
+  \field{pages}{105\bibrangedash 114}
+  \field{title}{{EEG data compression techniques.}}
+  \field{volume}{44}
+  \field{journaltitle}{IEEE transactions on bio-medical engineering}
+  \field{year}{1997}
+\endentry
+
 \entry{asabe}{inproceedings}{}
   \name{author}{1}{}{%
     {{}%
@@ -466,6 +511,50 @@
   \field{year}{2006}
 \endentry
 
+\entry{Gomez2011}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Gomez}{G.}%
+     {Carles}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Demirkol}{D.}%
+     {Ilker}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Paradells}{P.}%
+     {Josep}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Bluetooth Low Energy,maximum throughput,performance evaluation}
+  \strng{namehash}{GCDIPJ1}
+  \strng{fullhash}{GCDIPJ1}
+  \field{sortinit}{G}
+  \field{abstract}{%
+  We present an analytical model for the maximum throughput of Bluetooth Low
+  Energy (BLE), considering the presence of uncorrelated bit errors and the
+  impact of a key BLE parameter that defines the time between the start of two
+  consecutive connection events. The derived analysis models the generic
+  application of master-to-slave unidirectional data transmission, which also
+  forms an upper bound for bidirectional data transmission throughput.
+  Simulation results show that our model accurately predicts the maximum BLE
+  throughput for all bit error rates and BLE parameter settings evaluated.%
+  }
+  \verb{doi}
+  \verb 10.1109/LCOMM.2011.092011.111314
+  \endverb
+  \field{issn}{10897798}
+  \field{pages}{1187\bibrangedash 1189}
+  \field{title}{{Modeling the maximum throughput of bluetooth low energy in an
+  error-prone link}}
+  \field{volume}{15}
+  \field{journaltitle}{IEEE Communications Letters}
+  \field{year}{2011}
+\endentry
+
 \entry{overlapproc}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -815,6 +904,78 @@
   \field{year}{2002}
 \endentry
 
+\entry{Urrestarazu2006}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Urrestarazu}{U.}%
+     {Elena}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jirsch}{J.}%
+     {Jeffrey~D.}{J.~D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {LeVan}{L.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hall}{H.}%
+     {Jeffery}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gotman}{G.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{High frequency,Intracerebral EEG,Spikes}
+  \strng{namehash}{UE+1}
+  \strng{fullhash}{UEJJDLPHJGJ1}
+  \field{sortinit}{U}
+  \field{abstract}{%
+  PURPOSE: High-frequency activity has been recorded with intracerebral
+  microelectrodes in epileptic patients and related to seizure genesis. Our
+  goal was to analyze high-frequency activity recorded with
+  electroencephalograph (EEG) macroelectrodes during the slow wave immediately
+  following interictal spikes, given the potential importance of this presumed
+  hyperpolarization in transforming spikes into seizures. METHODS: Depth
+  electrode EEG recordings from 10 patients with intractable focal epilepsy
+  were low-pass filtered at 500 Hz and sampled at 2,000 Hz. Spikes were
+  categorized according to localization and morphology. Segments of 256 ms were
+  selected immediately following (postspike), and 2 s before each spike
+  (baseline). Power was estimated in subgamma (0-40 Hz), gamma (40-100 Hz),
+  high frequency (100-200 Hz), and very high frequency (250-500 Hz) bands.
+  RESULTS: Changes in power above 100 Hz were seen in 22 of 29 spike
+  categories, consisting primarily of a widespread decrease in frequencies
+  above 100 Hz. This decrease became spatially more restricted as frequencies
+  increased, and coincided with the localization of largest spikes for the
+  highest frequencies. High-frequency power decreases were prominent in the
+  hippocampus but less common in amygdala and neocortex. High-frequency power
+  increases were observed in the amygdala. CONCLUSIONS: Thus high-frequency EEG
+  activity can be recorded with macroelectrodes in humans and may provide
+  insights on neuronal mechanisms related to human epilepsy. This activity
+  undergoes consistent modifications after EEG spikes. We propose that the
+  reduction in high frequencies reflects a postspike depression in neuronal
+  activity that is more pronounced in the region of spike generation. This
+  depression is almost always seen in hippocampus but less in amygdala.%
+  }
+  \verb{doi}
+  \verb 10.1111/j.1528-1167.2006.00618.x
+  \endverb
+  \field{isbn}{0013-9580 (Print)$\backslash$n0013-9580 (Linking)}
+  \field{issn}{00139580}
+  \field{pages}{1465\bibrangedash 1476}
+  \field{title}{{High-frequency intracerebral EEG activity (100-500 Hz)
+  following interictal spikes}}
+  \field{volume}{47}
+  \field{journaltitle}{Epilepsia}
+  \field{year}{2006}
+\endentry
+
 \entry{WHO2006}{book}{}
   \name{author}{1}{}{%
     {{}%
@@ -901,6 +1062,50 @@
   \field{volume}{6}
   \field{journaltitle}{Alzheimer's and Dementia}
   \field{year}{2010}
+\endentry
+
+\entry{Wongsawat2006}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Wongsawat}{W.}%
+     {Y.}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Oraintara}{O.}%
+     {S.}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tanaka}{T.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rao}{R.}%
+     {K.R.}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WY+1}
+  \strng{fullhash}{WYOSTTRK1}
+  \field{sortinit}{W}
+  \field{abstract}{%
+  This paper presents a method for losslessly compressing multi-channel
+  electroencephalogram signals. The Karhunen-Loeve transform is used to exploit
+  the inter-correlation among the EEG channels. The transform is approximated
+  using lifting scheme which results in a reversible realization under finite
+  precision processing. An integer time-frequency transform is applied to
+  further minimize the temporal redundancy%
+  }
+  \verb{doi}
+  \verb 10.1109/ISCAS.2006.1692909
+  \endverb
+  \field{isbn}{0-7803-9389-9}
+  \field{title}{{Lossless multi-channel EEG compression}}
+  \field{journaltitle}{2006 IEEE International Symposium on Circuits and
+  Systems}
+  \field{year}{2006}
 \endentry
 
 \entry{WorldHealthOrganization2012}{report}{}

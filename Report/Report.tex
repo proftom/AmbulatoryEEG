@@ -230,18 +230,15 @@ The project is organised as the following. An overview of \ac{EEG} signals and \
 \section{Theory and Technology}
 \subsection{Electroencephalography}
 
-There already exists much literature on \ac{EEG} technology and archetypal  signals measured (such as \cite{Teplan2002}), hence only a brief overview is presented here. \ac{EEG} signals can be detected on the scalp with a typical range between 0.3-60Hz 
+There already exists much literature on \ac{EEG} technology and archetypal signals measured (such as \cite{Teplan2002}), hence only a brief overview is presented here. \ac{EEG} signals are detected along the scalp due to ionic current flow within the neurons of the brain. The typical bandwidth for signals is between 0.3Hz to 60Hz, with amplitude between 20-150$\mu$V, however more signals of higher frequencies may also be of interest \cite{Urrestarazu2006}. These signals can vary both temporally and spatially, and hence, multiple electrodes are positioned  around the scalp (typically in the standard international 10/20 format).
 
- The report is not concerned with the analouge front end for filtering and capturing signals, howver digital conversion through sampling and providing sufficient resolution is of importance. 
-
-The majority of signals
-
+ The report is not concerned with the analouge front end for filtering and capturing signals, howver digital conversion through sampling and providing sufficient resolution is of importance. The majority of signals are located below 100Hz, and hence, the expected normal use for this device will be 10 channels (as per the international standard) at 200 Hz. 
 
 
 \subsection{Bluetooth Low Energy}
 The original Bluetooth, hereforth refered to a \ac{BTC}, was intially concieved as the solution to wired communication over short distances (typically less than 100m). The original specification had an air over-the-air rate of 1MBps, though this has increased to around 3 MBps in the latest version of \ac{BTC}. Similarly, BLE has an over-the-air rate of 1MBps. Despite the odd realisation that \ac{BLE}, a much newer technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuatively it may seem that \ac{BLE} is a less efficient technology, \ac{BLE} can be orders of magnitudes more efficient than \ac{BTC} in particular use cases.
 
-Applications where \ac{BLE} excels in are ones where communication between two devices is only required intermitently, and the volume of information sent is small. An example would be a thermometer in a greenhouse connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years of a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3v lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years. In fact, in this scenario the \ac{BLE} system lifetime can be extended further as \ac{BLE} can support connectionless communication, whereby it simply wakes up and transmits the thermometer state to any device that's listening without the need for acknowledgement.
+Applications where \ac{BLE} excels in are ones where communication between two devices is only required intermitently, and the volume of information sent is small. An example would be a thermometer in a greenhouse connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years of a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3V lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years. In fact, in this scenario the \ac{BLE} system lifetime can be extended further as \ac{BLE} can support connectionless communication, whereby it simply wakes up and transmits the thermometer state to any device that's listening without the need for acknowledgement.
 
 The reason the reconnection times are much faster for \ac{BLE} is as far as the communication devices are concerned, they never disconnected. Rather in the \ac{BLE} protocol, the devices agree to meet a specified periods known as \ac{CI}. The devices are free to perform any operations in the mean time, though typically enter a state of hibernation. In many scenarios between two radios, one device will be much more power conscious. In the example above, the battery powered device in the greenhouse would typically be the power conscious device while the visual disuplay unit inside the home will likely be powered from the grid, and have no concern as to its power consupmption. In these situations, the power conscious device is defined to be the slave and the remaining device to be the master. 
 
@@ -646,8 +643,12 @@ Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a 
 Nordic semiconductor provides a battery  lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will require vertification in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
 
 \begin{displaymath}
-\frac{7.5ms}{0.676ms} = 11.094\; notification packets per conneciton interval
-\frac{163 hours for 1 notification per connection interval}{11.094 packets per connection interval} \approx 14.7 hours
+\frac{7.5ms}{0.676ms} = 11.094\; notification\; packets\; per\; conneciton\; interval
+\end{displaymath}
+
+\begin{displaymath}
+\;
+\frac{163 hours for 1 \;notification\; per\; connection\; interval}{11.094 packets per connection interval} \approx 14.7 hours
 \end{displaymath}
 
 
@@ -903,11 +904,11 @@ primary_service {
 #endif /* __EEG_SERVICE_DB__ */
 \end{lstlisting}
 
-Each service and characteristic requires a \ac{UUID}, which is a string of 128 bits and due to the enourmous space are very unlikely to appear elsewhere. Only 16 bits (known as the short \ac{UUID}) are required to be set as the remaining bits are previously tied to the device address, which includes specific bit patterns allocated to chip manufacturers. Fruther some \ac{UUID}s are reserved for predefined services and characeteristics (see \url{http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx}). The characteristic \ac{EEG} service has the short \ac{UUID} 0xEE0 (hexidecimal), while the characteristics share a similar short-UUID. The full service UUID can be seen in the User Guide section. 
+Each service and characteristic requires a \ac{UUID}, which is a string of 128 bits and due to the enourmous space are very unlikely to appear elsewhere. Only 16 bits (known as the short \ac{UUID}) are required to be set as the remaining bits are previously tied to the device address, which includes specific bit patterns allocated to chip manufacturers. Further some \ac{UUID}s are reserved for predefined services and characeteristics (see \url{http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx}). The characteristic \ac{EEG} service has the short \ac{UUID} 0xEE0 (hexidecimal), while the characteristics share a similar short-UUID. The full service UUID can be seen in the User Guide section. 
 
-When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler (as with most embedded systems) was not C++ capabale. 
+When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler (as with most embedded systems) was not C++ capable. 
 
-
+A shared data structure is used for each service provided. \ref{fig:lstlisting} shows the structure for the \ac{EEG} service. 
 
 \begin{lstlisting}[language=C, caption=\ac{EEG} data structure,label={lst:eegstruct}]
 typedef struct
@@ -926,11 +927,9 @@ typedef struct
     
     timer_id                       acq_tmr;
     
-    uint8                          measurement_buffer_1[160];
+    uint8                          measurement_buffer_1[32];
    
-    uint8                          measurement_buffer_2[160];
-    
-    uint8                          current_packet;
+    uint8                          measurement_buffer_2[32];
     
     uint8                          current_buffer;
 
@@ -965,9 +964,65 @@ typedef struct
 \end{lstlisting}
 
 
-To communicate with the off-chip \ac{ADC}, the I2C bus was used. The datasheet for the \ac{ADC} (AD7997) \cite{ad7997} shows the device has 3 modes of operation. Mode 1 uses edge triggering on the CONVST pin to begin a conversion. Mode 2, known as command mode allows a conversion to occur from a command sent over the I2C bus. The third and final mode is automatic cycle interval, which will cause the \ac{ADC} to power up and take measurements periodically. The mode selected depends on the bits set in the control register. When enabling channels 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{regs}
+	\end{center}
+	\caption{Register file}
+	\label{fig:regs}
+\end{figure}
 
-Between all the code that provides the utility methods of dealing with data and firmware operations, the program is very simply - wake up periodically and sample data, perhaps store this data, then send it on. 
+To communicate with the off-chip \ac{ADC}, the I2C bus was used. The data sheet for the \ac{ADC} (AD7997) \cite{ad7997} shows the device has 3 modes of operation. Mode 1 uses edge triggering on the CONVST pin to begin a conversion. Mode 2, known as command mode allows a conversion to occur from a command sent over the I2C bus. The third and final mode is automatic cycle interval, which will cause the \ac{ADC} to power up and take measurements periodically. At the time of writing, the current implementation uses the 2nd mode, whereby the a master write to the slave causes a conversion to begin, which is read back. The master configures the channel map within a register by writing the address first to the address register, referencing the correct register from the register file, then writing two bytes of data. Listing~\ref{lst:adc} shows the configuration of channels for the \ac{ADC} over the I2C bus, and can be visualised from \ref{fig:waveform}.
+
+
+\begin{lstlisting}[language=C, caption=ADC I2C bus channel map configuration,label={lst:adc}]
+    /*Serial address all devices on bus*/
+    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    I2cRawWriteByte((0b010001 << 2) | (CHIP_NUMBER << 1) |  CMD_WRITE);
+    /*Write to address register the address of the configuration register */
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    I2cRawWriteByte(0b00000010);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    /*Configuration register write, D11-D4 are the channel map*/
+    I2cRawWriteByte(0b00000000 | CHANNEL_MAP_HALF >> 4);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    I2cRawWriteByte(CHANNEL_MAP_HALF << 4 | 0b0000000);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    
+    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_ACK_TIMEOUT);
+\end{lstlisting}
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{waveform}
+	\end{center}
+	\caption{Configuration register that controls which channels are activated}
+	\label{fig:waveform}
+\end{figure}
+
+To permit more than one AD7997 \ac{ADC} on the I2C at one time, depending on the connectivity of the AS (15) pin, the 7-bit I2C address will vary. To create a bigger address space, the AD7997 \ac{ADC} comes in two variants - the "/0" and "/1", meaning upto a total of 6 chips can be directly connected to the bus. It can be seen from \ref{fig:boardfinal} that one \ac{ADC} has its AS pin floating and the other \ac{ADC} has AS tied to ground. This is represented by CHIP\_NUMBER in \ref{lst:adc}. Further, as each AD7997 \ac{ADC} sports only 8 channels, the 16bit channel mask contained with the firmware is divided between each \ac{ADC}, represented by CHANNEL\_MAP\_HALF .
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{configreg}
+	\end{center}
+	\caption{Configuration register that controls which channels are activated}
+	\label{fig:configreg}
+\end{figure}
+
+
+Note that the data sheet \cite{ad7997} required the device to have an external pull-up resistor, which is provided by a configurable internal pull up on the SDA and SCL lines of the CSR1010.
+
+
+\begin{lstlisting}[language=C]
+    I2cInit(I2C_RESERVED_PIO , I2C_RESERVED_PIO , I2C_POWER_PIO_UNDEFINED, pio_mode_strong_pull_up);
+    I2cConfigClock(I2C_SCL_100KBPS_HIGH_PERIOD, I2C_SCL_100KBPS_LOW_PERIOD);
+    I2cEnable(TRUE);
+\end{lstlisting}
+
+
 
 
 
@@ -1107,7 +1162,7 @@ At the time of writing the application looks like
 	\begin{center}
 		\includegraphics[width = 1.4\textwidth,angle = 90]{exampleapp}
 	\end{center}
-	\caption{Application - 6 channels configured, with data being shown }
+	\caption{Application - 6 channels configured, with real time update}
 	\label{fig:exampleapp}
 \end{figure}
 
@@ -1126,7 +1181,7 @@ An issue was found whereby at higher throughputs, the order in which notificatio
 
 \section{Results}
 
-May merge this serction in with evaluation. This section will be short
+May get rid off/merge this section in with evaluation. This section will be short
 
 Weighing in at a total of 
 
@@ -1252,7 +1307,7 @@ Premature termination was observed to be frequent even at relatively low \ac{CI}
 
 
 
-The \ac{CI} also determines the latency from when a measurement is taken to when it is displayed to the user. If data is buffered over many \ac{CE}s and/or the frequency is low, the latency can become very large. In contrast, at high frequencies, the 64 k/bytes of ram (much used for the firmware application itself), may overflow and hence buffering is not a suitable. Further, with premature \ac{CE} termination at higher \ac{CI}s, data may have to remain buffered for long as early termination prevents communication until the subsequent \ac{CE}. Providing the data can be serviced so that the buffer depth remains roughly the same over time (and does not variate to above full capacity), than selecting \ac{CI}s that cause higher premature termination but higher average throughput is a rational choice in the pursuit of high datarates, but may suffer from power.  
+The \ac{CI} also determines the latency from when a measurement is taken to when it is displayed to the user. If data is buffered over many \ac{CE}s and/or the frequency is low, the latency can become very large. In contrast, at high frequencies, the 64 k/bytes of ram (much used for the firmware application itself), may overflow and hence buffering is not a suitable. Further, with premature \ac{CE} termination at higher \ac{CI}s, data may have to remain buffered for long as early termination prevents communication until the subsequent \ac{CE}. Providing the data can be serviced so that the buffer depth remains roughly the same over time (and does not variate to above full capacity), than selecting \ac{CI}s that cause higher premature termination but higher average throughput is a rational choice in the pursuit of high data rates, but may suffer from higher power consumption.  
 
 
 
@@ -1283,7 +1338,7 @@ From the background and literature review, most systems are only concerned with 
 
  Many devices restrict how many packets per \ac{CE} can be received, constraining the system further, and in such cases, having a smaller \ac{CI} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. Many andriod devices have also have restrictions on the number of packets processed. At 6 packets per \ac{CE}, and 7.5ms \ac{CI}, the throughput achievable is 128 kbit/s, which is theoretically just enough bandwidth to support 16 channels with an 8 bit resolution at 1000 Hz.
 
-Ultimately, to maximise throughput it is important to choose a \ac{CI} for the trade off between \ac{CE} notification packing wastage, risk of premature \ac{CE} termination, latency and data integrity. The choice will further be constrained if \ac{BLE} devices are limited by the number of packets per \ac{CE}. It is believed this limitation arises from the firmware of the device as permits simplier firmware and manufacturers do not consider the use case of maxising throughput significant as there are other technologies out there. From the work above,the radio is capable
+Ultimately, to maximize throughput it is important to choose a \ac{CI} for the trade off between \ac{CE} notification packing wastage, risk of premature \ac{CE} termination, latency and data integrity. The choice will further be constrained if \ac{BLE} devices are limited by the number of packets per \ac{CE}. It is believed this limitation arises from the firmware of the device as permits simpler firmware and manufacturers do not consider the use case of maxising throughput significant as there are other technologies out there. From the work above,the radio is capable
 
 
 
@@ -1423,17 +1478,24 @@ find point of indifference between bl and ble
 
 The system requires 2.2ms to wake from a dormant sleep mode. The system must power up in order to communicate with the \ac{ADC}. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. 
 
-The achievable datarate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum datarate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms.
+The achievable datarate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum datarate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms (which is greater than 6).
 
-//but unfortunately, there is an energy cost associated with hardware buffers from operation and leakage current
-
+%but unfortunately, there is an energy cost associated with hardware buffers from operation and leakage current
 While not consider in the report, for duplex communication, the total throughput as a sum of useful (20byte notifications) in each direction is approximately 358.8kbps. This means both the peripheral and master send 296 bit notification packets, in which the header acknowledges the other.
 
-Another way to improve throughput include compression techniques, for which there exists many information resources on lossless and lossy compressing \ac{EEG} data \cite{Antoniol1997} \cite{Wongsawat2006}. A problem with using such a technique, is that if data is spread over multiple notifications, any data loss of a single notification, may result in the loss of a larger chunk of information. 
+Another way to improve throughput include compression techniques, for which there exists many information resources on lossless and lossy compressing \ac{EEG} data \cite{Antoniol1997} \cite{Wongsawat2006}. A forseen issue with using compression, is that if compressed data is spread over multiple notifications, any data loss of a single notification, may result in the loss of a larger chunk of information due to the inability to decompress. 
+
+
+
+Unforunately the
+
+Between all the code that provides the utility methods of dealing with data and firmware operations, the program is very simply - wake up periodically and sample data, perhaps store this data, then send it on. 
 
 Combine with video
 
-Ambulatory to wearable
+The achieved size of this device is small enough to be considered wearable over ambulatory. 
+
+
 
 
 
@@ -1465,6 +1527,9 @@ The large amount of both written and generated code is to vast to warrant being 
 \printbibliography
 
 \section{Appendix}
+Add final schematic
+Add final board
+
 
 \subsection{Acronyms}
 \begin{acronym}
@@ -1513,6 +1578,9 @@ The large amount of both written and generated code is to vast to warrant being 
 	\acro{GUI}{graphical user interface}
 	\acro{TPL}{task parallel library}
 	\acro{SDK}{software development kit}
+	\acro{ASIC}{application specific integrated circuit}
+	\acro{RFID}{radio frequency identification}
+	\acro{ECG}{electrocardiogram}
 \end{acronym} 
 \clearpage
 \section{User Guide}

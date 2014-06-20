@@ -108,8 +108,8 @@ Project Title: & \textbf{A Wireless  Low Energy Ambulatory Electroencephalogram}
 Student: & \textbf{Thomas Alexander Morrison} \\[12pt]
 CID: & \textbf{00642176} \\[12pt]
 Course: & \textbf{EIE4} \\[12pt]
-Project Supervisor: & \textbf{James Mardell} \\[12pt]
-Second Marker: & \textbf{Dr. Pants Georgiou} \\
+Project Supervisor: & \textbf{Esther Rodriguez-Villegas} \\[12pt]
+Second Marker: & \textbf{Dr. Pantelis Georgiou} \\
 \end{tabular}
 \end{titlepage}
 
@@ -126,7 +126,7 @@ Certain neurological medical disorders require continuous monitoring to fully un
 
 However, symptoms from neurological disorders often appear sporadically and with little to no warning. Seizures vary from minutes to years apart, and sometimes are not realised or detected without proper equipment. Hospitalising patients for long periods of time is a costly option, and in such circumstances the patient could remain in hospital indefinitely.  Such circumstances lend themselves to an ambulatory system, where an outpatient can be monitored continuously without discomfort or hospitalisation, improving quality of life while decreasing costs. 
 
-With the emergence of low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring outside of the hospital. Through leveraging low energy radio capable platforms, i.e. smartphones and tablets, in the context of an \ac{AEEG}, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital. This project looks at maximising transmission of \ac{EEG} signals over the emerging wireless technology, \ac{BLE}. Further, while this project is targeted at \ac{EEG} signals, there is no reason why this research and technology cannot be applied to other signals and systems, examples including glucose monitoring, electrocardiography and spirometers.
+With the emergence of low power wireless technologies coupled with portable devices such as tablets and phones, it is a natural technological step to bring care and monitoring outside of the hospital. Through leveraging low energy radio capable platforms, i.e. smart phones and tablets, in the context of an \ac{AEEG}, it is possible to empower the patient to inexpensively take health care into their own home and out of the hospital. This project looks at maximising transmission of \ac{EEG} signals over the emerging wireless technology, \ac{BLE}. Further, while this project is targeted at \ac{EEG} signals, there is no reason why this research and technology cannot be applied to other signals and systems, examples including glucose monitoring, electrocardiography and spirometers.
 
 
 \clearpage
@@ -134,13 +134,13 @@ With the emergence of low power wireless technologies coupled with portable devi
 \clearpage
 
 \section{Acknowledgements}
-The opporunity is taken here to express gratitude to all those who have directly contributed towards the project. 
+The opportunity is taken here to express gratitude to all those who have directly contributed towards the project. 
 
-Firstly, the project surperivsors, James Mardell, Chen Guangwei and Esther Rodriguez-Villegas from the Circuit and Systems departmental group, for the opportunity to undertake this piece of work along with my second marker for his efforts in reviewing this work. 
+Firstly, the project supervisors, James Mardell, Chen Guangwei and Esther Rodriguez-Villegas from the Circuit and Systems departmental group, for the opportunity to undertake this piece of work along with my second marker for his efforts in reviewing this work. 
 
 \ac{CSR} provided hardware and technical support in the spirit of academia. Particular acknowledgments go to employees Adam Hill, Martin Spikings, Mark Wade, Neil Stewart and Simon Finch. CSR have requested that this project report or relevant parts of it be made available to them.
 
-Guan Yang and Jacob Rosenthal from New York, United States, for pubically making available a code source to drive nRF8001 radio. Imperial College student Stelius Ioakim for sharing experience of \ac{PCB} assembly. 
+Guan Yang and Jacob Rosenthal from New York, United States, for publicly making available a code source to drive nRF8001 radio. Imperial College student Stelius Ioakim for sharing experience of \ac{PCB} assembly. 
 
 Dr. Nissim Zur, CEO of Vitelix Limited is an expert in low power wireless technologies, and has conversed over many aspects of the CSR1010 chip used. Further, he has also taken an interest in this project's work in regards to maximising the speed, and has requested the results be shared with him.
 
@@ -210,9 +210,9 @@ Away from specifically \ac{EEG}, the consumer fitness sector has been strongly t
 
 \subsection{Project End Goals}
 
- This project will explore using \ac{BLE} technology for electroencephalography, and build a prototype system capable of interfacing with an analogue front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The project will explore the maximum throughput of such a device, the energy requirements and attempt to quantify the overall suitability of \ac{BLE} to \ac{EEG} monitoring.
+ This project explores using \ac{BLE} technology for electroencephalography, having built a prototype system capable of interfacing with an analogue front to transmit \ac{EEG} data to a portable device such as a tablet or smart phone.  The report records the maximum throughput of such a device, the energy requirements and attempts to quantify the overall suitability of \ac{BLE} to \ac{EEG} monitoring.
 
-Idealistic requirements of the project include 
+In line with current \ac{EEG} practices and ideal requirements set forth by Imperial College's Circuit and Systems Group, the project attempts achieve at least the follow specifications
 \begin{itemize}
 	\item Running time of at least 12 hours
 	\item Channel resolution of 8 bits (albeit number of channels undefined)
@@ -236,7 +236,7 @@ There already exists much literature on \ac{EEG} technology and archetypal signa
 
 
 \subsection{Bluetooth Low Energy}
-The original Bluetooth, here forth referred to as \ac{BTC}, was initially conceived as the solution to wired communication over short distances (typically less than 100m). The original specification had an air over-the-air rate of 1MBps, though this has increased to around 3 MBps in the latest version of \ac{BTC}. Similarly, BLE has an over-the-air rate of 1MBps. Despite the odd realisation that \ac{BLE}, a much newer technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuitively it may seem that \ac{BLE} is a less efficient technology, \ac{BLE} can be orders of magnitudes more efficient than \ac{BTC} in particular use cases.
+The original Bluetooth, here forth referred to as \ac{BTC}, was initially conceived as the solution to wired communication over short distances (typically less than 100m). The original specification had an air over-the-air rate of 1Mbps, though this has increased to around 3 Mbps in the latest version of \ac{BTC}. Similarly, BLE has an over-the-air rate of 1Mbps. Despite the odd realisation that \ac{BLE}, a much newer technology, has the same over the air rate of last the first incarnation of \ac{BTC}, the maximum theoretical throughput of \ac{BTC} is 700kBps, compared to less than 250kBps for \ac{BLE} - roughly one third of the maximum throughput \ac{BTC} was capable of (the latest version of \ac{BTC} brings the disparity to one ninth). While intuitively it may seem that \ac{BLE} is a less efficient technology, \ac{BLE} can be orders of magnitudes more efficient than \ac{BTC} in particular use cases.
 
 Applications where \ac{BLE} excels  are ones where communication between two devices is only required intermittently, episodically and the volume of information sent is small. An example would be a thermometer in a greenhouse connected by radio to a visual display unit inside the home. Temperature changes at a rate slow enough that it is only necessary to check the temperature every 10 minutes. Once every 10 minutes the radio thermometer device can wake up take a measurement, send a notification of a measurement then return to a deep sleep. \ac{BLE} does this much better than \ac{BTC}, taking only a few milliseconds to connect. \ac{BTC} takes between a few hundred milliseconds to several seconds to reconnect. While both millisecond orders of magnitude and second orders of magnitude are small when compared to an order of magnitude of minutes, over time it adds up to a significant amount, and \ac{BLE} devices can last many years off a small, single coin cell. \ac{BLE} is excellent for applications which involve small episodic transmission of data. In the scenario described a \ac{BTC} system would have a lifetime of approximately 100 days from a typical 3V lithium cell. Off the same cell, a \ac{BLE} system would have a lifetime of many years. In fact, in this scenario the \ac{BLE} system lifetime can be extended further as \ac{BLE} can support connectionless communication, whereby it simply wakes up and transmits the thermometer state to any device that's listening without the need for acknowledgment. 
 
@@ -277,7 +277,7 @@ The number of channels dedicated to advertising has also decreased, meaning less
 	\label{fig:ble_arch}
 \end{figure}
 
-In an attempt to be economical with time and space, components of the stack deemed irrelevant will not be discussed further here. For example a description of the security manager is not relevant as this project is not concerned with sending data over encrypted links. Similarly, the Logical Link Control and Adaption Protocol, while used extensively in all radio communication will not be discussed in detail as it doesn't provide any insight into maximising throughput or minimising power.
+In an attempt to be economical with time and space, only components of the stack wholly relevant to the project will be covered in this report. Further information on areas not covered can be found in the \ac{SIG} specification website \cite{btspec}. For example a description of the security manager is not relevant as this project is not concerned with sending data over encrypted links. Similarly, the Logical Link Control and Adaption Protocol, while used extensively in all radio communication will not be discussed in detail as it doesn't provide any insight into maximising throughput or minimising power.
 
 In \ac{BTC} profiles were diverse and large enough to warrant chip designers releasing tailored chips to perform well for a specific profile, i.e. a chip supporting A2DP may contain \ac{CODEC} hardware for real time audio streaming. In \ac{BLE} the profile framework is far lighter. \ac{BLE}'s profiles are all built on top of  the \ac{GATT}, which in turn is built upon the \ac{ATT}, a protocol optimised to run on BLE devices. Attributes are an umbrella term, being the atomic unit of (user) data communicated between BLE devices. Profiles are hierarchical constructions of attributes, in the top down order of profile, service, characteristic and descriptors, as shown in Figure~\ref{fig:exampleprofile}. A BLE device implements at least one profile, \ac{GAP} along one more which is typically the purpose of the device. \ac{GAP} contains important information such the the device name and preferred connection properties.  This second profile can be one of the standard profiles as defined by the SIG group or a bespoke profile for the application, such as the case for an \ac{EEG} sensor. Popular, SIG defined examples of \ac{BLE} profiles include the heart rate profile (HRP), health thermometer profile (HTP) and even a glucose profile (GLP) with room for many more to be incorporated into the core \ac{BLE} \ac{SIG} defined \ac{GATT} specifications.  
 
@@ -384,7 +384,7 @@ While a lot of literate quote{CITATION PLEASE] this as the maximum usable data r
 1479.29 \frac{packets}{s} \times 20 \times 8 bits \approx 236.7 kbp/s
 \end{displaymath}
 
-Here forth, the usable payload of a "notification" or "data packet" is 20 bytes. When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every notification packet sent has a fixed cost of 80 bits associated with it. TALK ABOUT PCK EFFICIENCY 
+Here forth, the usable payload of a "notification" or "data packet" is 20 bytes. When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every notification packet sent has a fixed cost of 80 bits associated with it.  
 
 \begin{figure}[h]
 	centering
@@ -392,8 +392,6 @@ Here forth, the usable payload of a "notification" or "data packet" is 20 bytes.
 	\caption{\ac{BLE}'s packet flow for maximum throughput}
 	\label{fig:turnaround}
 \end{figure}
-
-The \ac{BLE} specification defines no maximum 
 
 The \ac{BLE} protocol was not designed for high throughput applications, but rather for low latency episodic communication devices transferring small data payloads of representing device state. The energy per bit is low compared other popular technologies, and should not be used as the bottom-line metric for performance. Rather, a holistic metric of the whole system energy consumption for a specific use case will form the basis of the performance metric in this report.
 
@@ -485,6 +483,16 @@ Another \ac{NS} product tested was the nRF51822. Information on the suppport pac
 \clearpage
 
 \subsubsection{CSR1010}
+\ac{CSR} provided the CSR1010 development kit consisting of a basic board containing a CSR1010 radio chip, a programmer (USB to \ac{SPI}) and  a \ac{BLE} capable dongle (Figure~\ref{fig:csrdevkit}). 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{csrdevkit}
+	\end{center}
+	\caption{CSR1010 development kit (image from DigiKey.com)}
+	\label{fig:csrdevkit}
+\end{figure}
+
 Through direct contact with \ac{CSR} engineers, it was reported a particular single mode \ac{BLE} radio device, the CSR1010, was measured reaching 250kbps
 
 \begin{quote}\itshape \ldots the theoretical maximum throughput for a single BLE 
@@ -509,7 +517,7 @@ maximum theoretical rate.  \text{ \textnormal{[sic]}}
 \frac{1000000 \mu s}{676 \mu s} \times 27 < 320 kbps
 \end{displaymath}
 
-320 to 300 is a generous approximation, it is believed that the engineer actually rounded a smaller number, 305, which was calculated by including an unecessary 32 bit \ac{MIC}, used only when encryption is enabled:
+320 to 300 is a generous approximation, it is believed that the engineer actually rounded a smaller number, 305, which was calculated by including an unnecessary 32 bit \ac{MIC}, used only when encryption is enabled:
 
 \begin{displaymath}
 \frac{1000000 \mu s}{708 \mu s} \times 27 \approx 305 kbps \approx 300 kbps
@@ -517,7 +525,7 @@ maximum theoretical rate.  \text{ \textnormal{[sic]}}
 
 Many literature pieces and training materials on \ac{BLE} make this assumption, including those on the \ac{SIG} website \cite{sig} \cite{sigdebug}. 
 
-In the second paragraph the engineer is highlighting some important facets of \ac{BLE} devices, and that is although one end of the link is determined by the lower of the two device's thorughputs. The engineer cites smart phones as such devices that restrict the link capability. This was seen in the nRF8001 - the iPhone 4S could not handle a connection interval less than 30ms. Combined with that the nRF8001 stack couldn't transmit more than one packet per connection interval on average, the maximum throughput achievable by this device was cut by 4. 
+In the second paragraph the engineer is highlighting some important facets of \ac{BLE} devices, and that is the data rate of the link is determined by the lower of the two device's throughputs. The engineer cites smart phones as such devices that restrict the link capability. This was seen in the nRF8001 - the iPhone 4S could not handle a connection interval less than 30ms. Combined with that the nRF8001 stack couldn't transmit more than one packet per connection interval on average, the maximum throughput achievable by this device was cut by 4. 
 
 When asked how to show the math behind the numbers achieved
 
@@ -536,11 +544,11 @@ not see any additional processing overheads. \text{ \textnormal{[sic]}}
 
 \end{quote}
 
-The \ac{HCI} is the component between the host and controller layers shown in Figure~\ref{fig:ble_arch}. The engineer is saying that data throughput should no be affected by any high-level stack activity (any stack congestion, if existing, shouldn't affect throughput). Although the engineer has given no commet on latency (data will take time to propagate up the stack).
+The \ac{HCI} is the component between the host and controller layers shown in Figure~\ref{fig:ble_arch}. The engineer is saying that data throughput should no be affected by any high-level stack activity (any stack congestion, if existing, shouldn't affect throughput). Although the engineer has given no comment on latency (data will take time to propagate up the stack).
 
  \ac{CSR} supplied a development kit consisting of  provided a development board (CNS10004V5D) and \ac{USB} dongle. The CSR1010 is part of \ac{CSR} 's new $\mu$Energy product line, for which \ac{CSR} have developed their own compiler and \ac{IDE} known as xIDE. For initial throughput testing, an example health thermometer application was used. From exploring and understanding the main features of the \ac{OSAL}, it was immediately possible to increase the number of notification packets sent per connection interval from 1 to 8. 
 
-The standard mechanism provided in the example, is for every connection interval a confirmation of the first acknowledge is raised in the application layer. This is used in the program as a point of reference for application layer timers, so schedule the next wake up time, etc.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as it appears the buffer queue is 8 packets in size. When more than 8 are added to the queue, they are ignored, causing data loss. Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, upto a maximum of 8 notifications are correctly sent in order. While it is possible to continously flood the stack (buffer queues) with more notification requests, without knowing if the stack is capable of dealing with them, data may be lost. This mechanism is visualised in Figure~\ref{fig:nols}. 
+The standard mechanism provided in the example, is for every connection interval a confirmation of the first acknowledge is raised in the application layer. This is used in the program as a point of reference for application layer timers, so schedule the next wake up time, etc.  This mechanism provides visibility at the \ac{CE} level, but not at the notification packet level - if many notifications are sent and acknowledged, this method doesn't provide any information that the \ac{CE} may have room for more notifications. This is a problem when large throughputs are desired, as it appears the buffer queue is 8 packets in size. When more than 8 are added to the queue, they are ignored, causing data loss. Hence, through the naive method, whereby notifications are placed into the queue before or after the start of the \ac{CE}, up to a maximum of 8 notifications are correctly sent in order. While it is possible to continuously flood the stack (buffer queues) with more notification requests, without knowing if the stack is capable of dealing with them, data may be lost. This mechanism is visualised in Figure~\ref{fig:nols}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -619,11 +627,11 @@ Therefore 9 packets per connection interval at 7.5ms. This corresponding to a th
 	\label{fig:sensortag}
 \end{figure}
 
-Again, the associated white papers did not document the packet throughput per connection event. Through contact with a \ac{TI} employee [CITE], there is a hardware limitation of 4 buffers, limiting only 4 packets per connection event (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per connection event by refilling the buffers within the connection event, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per connection event to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
+Again, the associated white papers did not document the packet throughput per \ac{CE}. Through contact with a \ac{TI} employee [CITE], there is a hardware limitation of 4 buffers, limiting only 4 packets per \ac{CE} (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per\ac{CE} by refilling the buffers within the \ac{CE}, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per \ac{CE} to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
 
-The CC2541 (and also CC2540) is a full \ac{SoC} - a programmable \ac{MCU} is packages togeter with the radio hardware. This has certain economical advantages, as common hardware and footprint is shared between the radio and \ac{MCU}. However, the Nordic company Chipcon who originally developed the hardware (Texas Instruments has since acquired them), relied on the Swedish tool chain provider, IAR, for the development tool suite and chain. \ac{TI} still relies up this tool software suite, haven't not invested in their own facilities to develop for the platform. A single software license is approximately 2000 USD. While IAR do offer a code-limited version, it is too small to contain all the necessary libraries. IAR also provide a 30 day trail, which is what is currently being used for evaluation, but proceeding with this chip for the prototype may be economically impossible.
+The CC2541 (and also CC2540) is a full \ac{SoC} - a programmable \ac{MCU} is packages together with the radio hardware. This has certain economical advantages, as common hardware and footprint is shared between the radio and \ac{MCU}. However, the Nordic company Chipcon who originally developed the hardware (Texas Instruments has since acquired them), relied on the Swedish tool chain provider, IAR, for the development tool suite and chain. \ac{TI} still relies up this tool software suite, haven't not invested in their own facilities to develop for the platform. A single software license is approximately 2000 USD. While IAR do offer a code-limited version, it is too small to contain all the necessary libraries. IAR also provide a 30 day trail, which is what is currently being used for evaluation, but proceeding with this chip for the prototype may be economically impossible.
 
-For the measured packet througput, for 16 channels running simultaneously, at 8 bit resolution, the highest achievable detectable frequency is approximately 384 Hz.
+For the measured packet throughput, for 16 channels running simultaneously, at 8 bit resolution, the highest achievable detectable frequency is approximately 384 Hz.
 
 The observant reader may notice that the \ac{BLE} sniffer from \ac{TI} is actually the CC2540 chip, which is reported as limited to between 4 and 5 packets per \ac{CE}. However, when loaded with the firmware as a sniffer, it is capable of sniffing many more packets than this. After contacting a \ac{TI} employee about this disparity, they reported that the sniffer uses a completely different stack:
 
@@ -650,7 +658,7 @@ Nordic semiconductor provides a battery  lifetime calculator. Using a typical Li
 \end{displaymath}
 
 
-This should be an overestimation of the power requirements, as there is a fixed cost payed for waking the MCU, which would be amortised for higher throughputs. Further in the model above the idle time contributes to the power consumption, but at full throughput, there will be little idle time. Finally, running at full throughput is not necessairly the end used case. Running at lesser throughputs will have a dramatic effect on the power consumption.
+This should be an overestimation of the power requirements, as there is a fixed cost payed for waking the MCU, which would be amortised for higher throughputs. Further in the model above the idle time contributes to the power consumption, but at full throughput, there will be little idle time. Finally, running at full throughput is not necessarily the end used case. Running at lesser throughputs will have a dramatic effect on the power consumption.
  
 
 \begin{figure}[htb]
@@ -674,15 +682,15 @@ Figure 23 - Simulation plot of notifications being sent
 For 2 zinc-air batteries of 500mAh capacities, this model predicts the device lifetime under nominal operation begins to reach 10 days.  An intelligent estimate to how this module is generated is linked to the throughputs calculated at the start of the Radios section. As each bit represents 1 micro second it is very easy to integrate for set parameters the time over time the current profiles to achieve an estimate of power usage. 
 Max drain current is another important concept to consider. Batteries can only safely deliver a maximum amount of current. If the battery is stressed to deliver more current that it is rated, it will degrade the overall lifetime of the battery. 
 
-\subsection{Microcontroller}
-There are a couple of options here. Often radios are provided as a system on chip (SoC), whereby the microchip contains not just the radio but also a fully functional microcontroller unit (MCU). Often these devices will consume more power than just the host and controller, but the system as a whole will typically consume more power overall if the application is run on an off chip MCU. 
+\subsection{Micro-controller}
+There are a couple of options here. Often radios are provided as a system on chip (SoC), whereby the microchip contains not just the radio but also a fully functional micro-controller unit (MCU). Often these devices will consume more power than just the host and controller, but the system as a whole will typically consume more power overall if the application is run on an off chip MCU. 
  
 Figure 15 - SoC (a) and a typical 2 chip solution (b) (Heydon, 2012)
-It really comes down to the application, as having the application on an off-chip MCU may mean that power is saved overall as other features such as ADCs, SPI interfaces and other peripherals can be utilised and integrated into the application without having to run a separate application on both the external MCU and radio chip, which leads to increased overhead, complexity and power. 
+It comes down to the application, as having the application on an off-chip MCU may mean that power is saved overall as other features such as ADCs, SPI interfaces and other peripherals can be utilised and integrated into the application without having to run a separate application on both the external MCU and radio chip, which in turns leads to increased overhead, complexity and power. 
 
-For development purposes the Arduino family of development boards, which sport many different processors seem like an excellent for development. These processors have many features such as GPIO, inbuilt ADCs, dedicated SPI pins, etc. Further, there is an extensive documentation, large knowledge base and a very active online forum. Of particular interest are the earlier Arduino models which utilise the very low power Atmel 8-bit family of processors. A further plus is that these processors are available in both DIP and SMT packages, meaning they are suitable breadboard prototyping. The ATMega328 seems like a particurly good choice, as a balance between support, power and simplicity. 
+For development purposes the Arduino family of development boards, which sport many different processors seem like an excellent for development. These processors have many features such as GPIO, inbuilt ADCs, dedicated SPI pins, etc. Further, there is an extensive documentation, large knowledge base and a very active on-line forum. Of particular interest are the earlier Arduino models which utilise the very low power Atmel 8-bit family of processors. A further plus is that these processors are available in both DIP and SMT packages, meaning they are suitable breadboard prototyping. The ATMega328 seems like a particularly good choice, as a balance between support, power and simplicity. 
 
-Currently, Texas Instrument’s SensorTag have been investigated along with Nordic semiconductors nRF8001. The former is a SoC solution while the latter only implements the host and controller layers. Implementing an application layer is no small feat, and fortunately it was possible to make contact with someone who has developed libraries to drive the chip using an Arduino microcontroller. Please see the section titled Experimentation and Current  for more information.
+Currently, Texas Instrument's SensorTag have been investigated along with Nordic semiconductors nRF8001. The former is a \ac{SoC} solution while the latter only implements the host and controller layers. Implementing an application layer is no small feat, and fortunately it was possible to make contact with someone who has developed libraries to drive the chip using an Arduino micro-controller. Please see the section titled Experimentation and Current  for more information.
 
 Currently the general feeling is towards using an Arduino micro controller simply due to the ease and rapid nature of development. Some components (an particular ADC and the nRF8001) have been tested and confirmed to work with the device.
 
@@ -690,17 +698,17 @@ Currently the general feeling is towards using an Arduino micro controller simpl
 
  A hard specification is the real time update of the \ac{EEG} signals. Long term storage is not considered real time. NAND flash chips  Further, high capacity memory modules come in small packages, some requiring factory assembly. 
 
-An option to achieve large storage capacity without difficult packages is to use popular SD cards. SD cards, and the variation, microSD cards are extremely easy to communication and an experiment was performed with an Arduino to discover power , However, during reading and writing the current consumption is between 25 to 100mA. From reviewing [san disk cite], a write can require 250ms. Assuming data is written in blocks, the average current consumption attributed by the NAND is 2.5mA. 
+An option to achieve large storage capacity without difficult packages is to use popular SD cards. SD cards, and the variation, micro SD cards are extremely easy to communication and an experiment was performed with an Arduino to discover power , However, during reading and writing the current consumption is between 25 to 100mA. From reviewing [san disk cite], a write can require 250ms. Assuming data is written in blocks, the average current consumption attributed by the NAND is 2.5mA. 
 
 
 
 \subsection{Analogue to Digital Converter}
 
-Acquisition of \ac{EEG} signals from the front end consists of using an \ac{ADC}. Many \ac{BLE} \ac{SoC} contain \ac{ADC}s, though, for example the CSR1010 are only capable to gathering 700 samples per second. Operating the \ac{ADC} requires a high speed controller. For high acqutisition rates (outside the standard operating range of \ac{EEG} signals), the \ac{MCU} will likely need to remain in an idle (active) state. For example, it takes the CSR1010 2.2ms to power up from a deep sleep state, meaning for acqisition rates over 450Hz, the chip would be required to remain in an idle (active) state as powering down to a lower power would miss samples. 
+Acquisition of \ac{EEG} signals from the front end consists of using an \ac{ADC}. Many \ac{BLE} \ac{SoC} contain \ac{ADC}s, though, for example the CSR1010 are only capable to gathering 700 samples per second. Operating the \ac{ADC} requires a high speed controller. For high acquisition rates (outside the standard operating range of \ac{EEG} signals), the \ac{MCU} will likely need to remain in an idle (active) state. For example, it takes the CSR1010 2.2ms to power up from a deep sleep state, meaning for acquisition rates over 450Hz, the chip would be required to remain in an idle (active) state as powering down to a lower power would miss samples. 
 
 The CSR1010 has an idle current of approximately than 1mA at 3.3V. The Arduino Uno micro controller is the ATMega328P. While the ATMega328's claims to consume only 0.2mA at 1.8V, this occurs when the device is clocked at 1MHz. This speed may not be sufficient to run the application layer with the responsiveness required, and the \ac{MCU} is normally clocked at either 8MHz or 16 for most applications. Increasing the clock rate increases the current consumption. For the radio circuit and battery constrains, the expected voltage is expect to be 3V. While a voltage regulator can be used, there will be losses in conversion.   Further power is required for running the hardware to enable communication between the radio and ADC. Running the ATMega328 at the same clock rate as the CSR1010, at 3.3Vs the report active (idle) current consumption is 
 
-The ATMega328 contains inbuilt \ac{ADC}s capable of suitably high sample rates, however it was found running these increases the current consumption by atleast 1.5mA. 
+The ATMega328 contains inbuilt \ac{ADC}s capable of suitably high sample rates, however it was found running these increases the current consumption by at least 1.5mA. 
 
 All \ac{BLE} chips tested without the application layer, was found to exhibit a low throughput. Given this, the only \ac{BLE} radios worth running already contain a full \ac{SoC}, whereby the \ac{MCU} is capable of communicating with an off-chip \ac{ADC}. This and the power, complexity (communication and technology) and footprint size of using multiple active components, it was decided the best course of action would be too use an off-chip ADC connected to the \ac{BLE} \ac{SoC}. 
 
@@ -708,9 +716,9 @@ The most obvious and popular protocols for interfacing with an external \ac{ADC}
 
 The CSR1010 supports I2C natively along with provided a generic driver at the application layer. The most suitable device found was the Analogue Devices' AD7997 10bit 8 channel I2C ADC. The device can operate at different I2C speed, 100KHz and 400KHz. While there is the risk of interface issues, the level is less than that of the MCP3008, and believed tolerable. It is also highlighted that the correct working of the \ac{ADC} is not crucial to the project's success. This, and the fact that no analogue front end is available. 
 
-\subsection{Analogue Frontend}
+\subsection{Analogue Front-end}
 
-The biopotentials measured on the scalp required analogue filters and amplifiers to extract useful information. Ultimately the \ac{ADC}s should interface with this frontend.  At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analouge front-end design for manufacture, however these chips will not be available for use before the project deadline. Therefore no analogue front-end electronics will be present on the prototype board.
+The biopotentials measured on the scalp required analogue filters and amplifiers to extract useful information. Ultimately the \ac{ADC}s should interface with this frontend.  At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analogue front-end design for manufacture, however these chips will not be available for use before the project deadline. Therefore no analogue front-end electronics will be present on the prototype board.
 
 \subsection{Component Selection}
 
@@ -719,7 +727,7 @@ The most important decision for this project was the choice of radio device. Whi
 
 Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes, except that used internally inside a \ac{MCU} or externally as a boot loader (i.e. CSR1010 device requires a small external storage unit which contains the program code, loaded at power on time).
 
-For the \ac{EEG} signal acquisition, use of an off-board \ac{ADC} module, the AD7997 seems the most sensible choice due to power and overall time and complexity minisation. The prototype will contain two devices to acheive 16 channels and interface with the \ac{MCU} (CSR1010) over the I2C bus.The choice of power source is still open between Lithium-ion and Zinc-air. To achieve longer lifetimes, it's most Zinc-air is the final choice as the device's energy source.
+For the \ac{EEG} signal acquisition, use of an off-board \ac{ADC} module, the AD7997 seems the most sensible choice due to power and overall time and complexity minimisation. The prototype will contain two devices to achieve 16 channels and interface with the \ac{MCU} (CSR1010) over the I2C bus.The choice of power source is still open between Lithium-ion and Zinc-air. To achieve longer lifetimes, it's most Zinc-air is the final choice as the device's energy source.
 
 The final component selection for the \ac{EEG} prototype is
 \begin{itemize}
@@ -729,7 +737,7 @@ The final component selection for the \ac{EEG} prototype is
 \item AT24C512C-SSHD 512K Serial EEPROM flash for the CSR1010's non-volatile storage
 \end{itemize}
 
-The application will be developed on a tablet, due to the expected ease of development over other platforms. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence limited effort is required to port the application to Microsoft Windows smartphone.
+The application will be developed on a tablet, due to the expected ease of development over other platforms. It is difficult to source either an Android and iPhone device capable of many notifications per \ac{CI}, little information available and costly. The target platform is the Surface Pro, running Windows 8.1. While the Surface Pro contains an internal multi-mode wireless chip, \ac{BLE} capable, it is not known how well this will fare for higher throughputs. \ac{CSR} provided a dongle, which after preliminary testing, appears to be able to achieve high throughputs. This is another reason for using the tablet, as it contains a \ac{USB} port. Further, developing for Windows 8.1 on a tablet is similar to developing for Windows Phone 8, hence limited effort is required to port the application to Microsoft Windows smart phone.
 
 
 \clearpage
@@ -739,7 +747,7 @@ The application will be developed on a tablet, due to the expected ease of devel
 
 \subsection{Hardware}
 
-A challanging part of this project develping hardware. It was desired that the device should be small and light so it can be shown into a \ac{EEG} hat and worn by the user with no discomfort. Both the schematic capture and layout was done within the \ac{CAD} software EAGLE. To achieve a small size components were placed within close proximity of each other, and at angled orientatinons (tesselated). The design used 2 layers, but component placing was only done on one side to allow for easier assembly. However, the bottom layer contained the batteries and solder bridges for ease of access. Ultimately the final achieved size was 26.5mm by 33.75mm, and with the battery connectors, the total height is less than 6.5mm.
+A challenging part of this project developing hardware. It was desired that the device should be small and light so it can be shown into a \ac{EEG} hat and worn by the user with no discomfort. Both the schematic capture and layout was done within the \ac{CAD} software EAGLE. To achieve a small size components were placed within close proximity of each other, and at angled orientations (tesselated). The design used 2 layers, but component placing was only done on one side to allow for re-flow oven assembly. However, the bottom layer contained the battery connectors and solder bridges for ease of access. Ultimately the final achieved size was 26.5mm by 33.75mm, and with the battery connectors, the total height is less than 6.5mm.
 
 \begin{figure}[H]
 	\begin{center}
@@ -767,8 +775,7 @@ The board was assembled by hand, and reflowed in an oven
 	\label{fig:oven}
 \end{figure} 
 
-Unfortunately, due to the size and complexity of some of the components, the oven did not give perfect results. Around the active component packets, the solder resist was remove to allow access for a soldering iron to ''touch up'' when the oven reflow failed to perform. To test both the process capability and variation, lines of decreasing thickness along with convex shapes were drawn in the bottom right corner of the board. 
-
+During \ac{PCB} fabrication, the required feature size was below the reported capabilities of the department. Boards manufactured within the department contained a test area for discovering process capability and variation.  but through layout . The size and complexity of some of the components meant the re-flow oven did not give perfect results, and further layout techniques to assist in fabrication and assembly included removing solder resist around the active component packages, which allowed access for a soldering iron to ''touch up'' when the oven re-flow failed to perform. 
 
 \begin{figure}[h]
 	\begin{center}
@@ -778,9 +785,9 @@ Unfortunately, due to the size and complexity of some of the components, the ove
 	\label{fig:pcb1.jpg}
 \end{figure}
 
-The first iteration of the board. Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 7 meters within a building or 15 meters \ac{LOS}. 
+Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 15 meters \ac{LOS}. 
 
-The connector used was difficult to source, being a variant of micro-USB, yet with more pins. The pin spacing was beyond the departments capabilities, but under magnification and with the right technique it was possible to make the connections. Unfortunately, with the \ac{CAD} package did not have capabilities to draw slots required for correctly seating the 8-pin connector. The connector had to be modified and filed down to correctly sit on the board. Even with super glue, small amouts of flexing from the cable, can give enough leverage to rip the connector off, along with the tracks, destroying direct connectivity. Two boards were damaged due to this and caused serve delays in developing the firmware for the AD7997 \ac{ADC}. A workaround, although cumbersome, was to use a smaller, breakout board to connector to the mainboard to prevent any damage to the mainboard. 
+The connector used was difficult to source, being a variant of micro-USB, yet with more pins. The pin spacing was beyond the departments capabilities, but under magnification and with the right technique it was possible to make the connections. Unfortunately, with the \ac{CAD} package did not have capabilities to draw slots required for correctly seating the 8-pin connector. The connector had to be modified and filed down to correctly sit on the board. Even with super glue, small amounts of flexing from the cable, can create enough leverage to rip the connector off the board along with the tracks, destroying direct connectivity. Two boards were damaged due to this and caused serve delays in developing the firmware for the AD7997 \ac{ADC}. A workaround, although cumbersome, was to use a smaller, breakout board to connector to the main board to prevent any damage to the main board. 
 
 \begin{figure}[htb]
 	\begin{center}
@@ -798,7 +805,7 @@ The connector used was difficult to source, being a variant of micro-USB, yet wi
 	\label{fig:side}
 \end{figure} 
 
-The second design added connections for Zinc-air battery holders, another \ac{ADC}, channel and debug pads/test points, reduced weight and better RF properties. Further, the final design was produced in a professional off-site \ac{PCB} house, making use of \ac{PTH} technology.
+The second design added connections for Zinc-air battery holders, another \ac{ADC}, channel and debug pads/test points, reduced weight and theoretically better RF properties. Further, the final design was produced in a professional off-site \ac{PCB} house, making use of \ac{PTH} technology.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -808,16 +815,15 @@ The second design added connections for Zinc-air battery holders, another \ac{AD
 	\label{fig:boardfinal}
 \end{figure}
 
-This board, while small, can be shrunk further in size
-
+This board, while small, can be shrunk further in size through layout and manufacturing capabilities. This was not done due to increasing difficulty of assembly, time taken for optimising the layout and limitations of the departmental equipment available. 
 
 
 \clearpage
 \subsection{Firmware}
 
-The CSR1010 microcontroller contains a custom processor known as the XAP. ac{CSR} provides the necessary tools to translate high level structured C-code into byte code instructions for the XAP processor
+The CSR1010 micro-controller contains a custom processor known as the XAP, a 16 bit \ac{RISC} processor. \ac{CSR} provides the necessary tools to translate high level structured C-code into byte code instructions for the XAP processor
 
-Fortunately, \ac{CSR} provided example projects which contains the majority of the application layer functionality (see \ref{fig:blearch}) to handle basic device operations and radio. The \ac{MCU} is a single threaded processor, yet the application design is event driven using a large central message pump(s) to service events and provide the control flow. Events can be of software origin (i.e. a flag set) or hardware invoked. Further, hardware interupts (such as PIO) can be supported outside the software message pump. Being event driven means the use of callbacks are used frequently througout the code base. \ac{CSR} exposes \ac{API}s to communicate with the time critical and complex host and controller layers beneath.
+Fortunately, \ac{CSR} provided example projects which contains the majority of the application layer functionality (see \ref{fig:blearch}) to handle basic device operations and radio. The \ac{MCU} is a single threaded processor, yet the application design is event driven using a large central message pump(s) to service events and provide the control flow. Events can be of software origin (i.e. a flag set) or hardware invoked (hardware interupts). Further, hardware interrupts (such as PIO) can be supported outside the software message pump. Being event driven means the use of callbacks are used frequently throughout the code base. \ac{CSR} exposes \ac{API}s to communicate with the time critical and complex host and controller layers beneath.
 
 
 \begin{figure}[htb]
@@ -828,7 +834,7 @@ Fortunately, \ac{CSR} provided example projects which contains the majority of t
 	\label{fig:mcu}
 \end{figure}
 
-When the device first powers up it enters the application layer through the AppInit procedure. This procedure initialises hardware and high level stack components such as the GATT server database. Once complete the control flow enters the system event message pump (AppProcessSystemEvent), which is called by the firmware to handle system level events such as PIO level changes such as configured interrupt from pins or wake events. This also handles low battery events. AppProcessLMEvent handles link manager related events from firmware. Such events include radio events (such as the acknowledgment or reciept of data) along with sercurity manager and GAP and G(ATT) messages. Making an insertion into this latter message pump was crucial for enabling the device to transmit more notifications once data was acknowledge (indicating the buffers were free). The link manager event caught is known as LS\_RADIO\_EVENT\_IND, where the IND is short for indication - despite the packet types used being notification, this event structure also corresponds to notifications. Finally, the timers run ontop of the hardware with microsecond accuracy and can be used as interupts. They are used to wake the device out of sleep ready for communicating or doing other work. A timer structure contains a pointer to a event handler which is fired upon timer exhaustion. Once the event handler returns, the chip will power down to a dormant state until the next \ac{CE} or timer is available. It is highlighted that the application timers are not used for radio timings (i.e. synchronisation between devices happens in the base levels of the stack and/or use of dedicated hardware timers).
+When the device first powers up it enters the application layer through the AppInit procedure. This procedure initialises hardware and high level stack components such as the GATT server database. Once complete the control flow enters the system event message pump (AppProcessSystemEvent), which is called by the firmware to handle system level events such as PIO level changes such as configured interrupt from pins or wake events. This also handles low battery events. AppProcessLMEvent handles link manager related events from firmware. Such events include radio events (such as the acknowledgment or receipt of data) along with security manager and GAP and G(ATT) messages. Making an insertion into this latter message pump was crucial for enabling the device to transmit more notifications once data was acknowledge (indicating the buffers were free). The link manager event caught is known as LS\_RADIO\_EVENT\_IND, where the IND is short for indication - despite the packet types used being notification, this event structure also corresponds to notifications. Finally, the timers run on top of the hardware with microsecond accuracy and can be used as interrupts. They are used to wake the device out of sleep ready for communicating or doing other work. A timer structure contains a pointer to a event handler which is fired upon timer exhaustion. Once the event handler returns, the chip will power down to a dormant state until the next \ac{CE} or timer is available. It is highlighted that the application timers are not used for radio timings (i.e. synchronisation between devices happens in the base levels of the stack and/or use of dedicated hardware timers).
 
 
 \begin{figure}[htb]
@@ -902,7 +908,7 @@ primary_service {
 #endif /* __EEG_SERVICE_DB__ */
 \end{lstlisting}
 
-Each service and characteristic requires a \ac{UUID}, which is a string of 128 bits and due to the enourmous space are very unlikely to appear elsewhere. Only 16 bits (known as the short \ac{UUID}) are required to be set as the remaining bits are previously tied to the device address, which includes specific bit patterns allocated to chip manufacturers. Further some \ac{UUID}s are reserved for predefined services and characeteristics (see \url{http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx}). The characteristic \ac{EEG} service has the short \ac{UUID} 0xEE0 (hexidecimal), while the characteristics share a similar short-UUID. The full service UUID can be seen in the User Guide section. 
+Each service and characteristic requires a \ac{UUID}, which is a string of 128 bits and due to the enormous space are very unlikely to appear elsewhere. Only 16 bits (known as the short \ac{UUID}) are required to be set as the remaining bits are previously tied to the device address, which includes specific bit patterns allocated to chip manufacturers. Further some \ac{UUID}s are reserved for predefined services and characeteristics (see \url{http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx}). The characteristic \ac{EEG} service has the short \ac{UUID} 0xEE0 (hexadecimal), while the characteristics share a similar short-UUID. The full service UUID can be seen in the User Guide section. 
 
 When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler (as with most embedded systems) was not C++ capable. 
 
@@ -1034,9 +1040,9 @@ Note that the data sheet \cite{ad7997} required the device to have an external p
 
 \subsection{Tablet Application}
 
-The highlevel tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (specifically $Windows.Devices.\\Bluetooth.GenericAttributeProfile$) class library to communicate with \ac{BLE} devices. The application uses the new WinRT application design introduced into the Windows operating system since Windows 8. Writing for WinRT means the application can be easily be ported between a tablet to a Windows OS phone The application archiecteure makes full use of \ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. The application was design to allow the user to be able to connect to a device, select the number of channels measure and the frequency. 
+The high level tablet application was written for Microsoft's .NET framework platform in C\#. The application relied upon the GenericAttributeNamespace (specifically $Windows.Devices.\\Bluetooth.GenericAttributeProfile$) class library to communicate with \ac{BLE} devices. The application uses the new WinRT application design introduced into the Windows operating system since Windows 8. Writing for WinRT means the application can be easily be ported between a tablet to a Windows OS phone The application architecture makes full use of \ac{OOP}, with an emphasis on the \ac{MVVM} design pattern. The application was design to allow the user to be able to connect to a device, select the number of channels measure and the frequency. 
 
-The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows a \ac{GUI} to be highly flexible. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy cosumption and managability. This is subtly difference from the controller, which tells the view what to display and when. An example of the View-Model would be a collectional (e.g. a list of eeg measurements), that when mutated, automatically update the \ac{GUI}. In the context of \ac{XAML} and \ac{MVVM}, this is known as data binding, and allows the View to easily consume the model.
+The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows a \ac{GUI} to be highly flexible. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy consumption and manageability. This is subtly difference from the controller, which tells the view what to display and when. An example of the View-Model would be a collection (e.g. a list of \ac{EEG} measurements), that when mutated, automatically update the \ac{GUI}. In the context of \ac{XAML} and \ac{MVVM}, this is known as data binding, and allows the View to easily consume the model.
 
 In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acqusition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often associated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 moethd is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian). The eegChannels data member contains . However, the method eegNotification can be used to provide direct access to the incoming notifications, acting as the callback from notification events
 
@@ -1096,7 +1102,7 @@ The applications makes extensive use of the \ac{TPL} for a fluid and responsive 
         public async void AddItem<T>(ObservableCollection<T> oc, List<T> items)
         {
 
-                //items to keep on the graph
+                //data points to keep on the graph
                 const int maxSize = 500;
 
                 // Make sure it doesn't index out of bounds
@@ -1169,27 +1175,13 @@ At the time of writing the application looks like
 
 
 
-An issue was found whereby at higher throughputs, the order in which notifications are recieved become handled out of order. The reason for this occuring is that there is no guarentee when events are dealt with. Every time a packet is recieved, it will fire an event handler, however this will occur in batches. If the rate at which these batches is processed is greater than the rate at which new events arrive, then the events may no be handled in order. Unfortunately, there has been no fix for this, and it is assumed a current limitation of Microsoft's .NET GenericAttributeNamespace. When using the \ac{CSR} stack and \ac{SDK}, the events are handled in the order they occur. Despite this causing issues in the highlevel application, for the remainder of this report it is ignored. Microsoft has since been contacted about the issue and are looking into it. It is understandable that they wouldn't of built the system for it (much like how some manufacturers only permit a limited amount of packets per \ac{CE}), but even at smaller throughputs, notifications from the same service may be serviced out of order. 
+An issue was found whereby at higher throughputs, the order in which notifications are received become handled out of order. The reason for this occurring is that there is no guarantee when events are dealt with. Every time a packet is received, it will fire an event handler, however this will occur in batches. If the rate at which these batches is processed is greater than the rate at which new events arrive, then the events may no be handled in order. Unfortunately, there has been no fix for this, and it is assumed a current limitation of Microsoft's .NET GenericAttributeNamespace. When using the \ac{CSR} stack and \ac{SDK}, the events are handled in the order they occur. Despite this causing issues in the high level application, for the remainder of this report it is ignored. Microsoft has since been contacted about the issue and are looking into it. It is understandable that they wouldn't of built the system for it (much like how some manufacturers only permit a limited amount of packets per \ac{CE}), but even at smaller throughputs, notifications from the same service may be serviced out of order. 
 
 
 
 
 
 \clearpage
-
-\section{Results}
-
-May get rid off/merge this section in with evaluation. This section will be short
-
-Weighing in at a total of 
-
-
-
-
-
-
-
-
 
 
 
@@ -1253,7 +1245,7 @@ It was found that the optimum throughput did not exist at the longest connection
 	\label{fig:ber}
 \end{figure}
 
-Radio interference can described as a poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the enviroment the raido is used in. Therefore, the task of achieving the highest throughput collaspes to being able to discover this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system between the master and slave. Investigating the range of variation between different radio enviroments may be an interesting piece of further work. 
+Radio interference can described as a Poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the environment the radio is used in. Therefore, the task of achieving the highest throughput collapses to being able to discover this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system to find the local maximum. Investigating the range of variation between different radio environments may be an interesting piece of further work. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -1292,7 +1284,7 @@ It is believed that the maximum throughput was not reached due to transmission e
 	\label{fig:cilimit}
 \end{figure}
 
-Premature termination was observed to be frequent even at relatively low \ac{CI}s. For example, at 60ms approximately 55$\%$ of 1 second samples achieved the full recorded throughputl   (e.g. Figure~\ref{fig:60cithroughput}). This differs greatly to a \ac{CI} of 7.5, whereby this figure is close to 100%. 
+Premature termination was observed to be frequent even at relatively low \ac{CI}s. For example, at 60ms approximately 55$\%$ of 1 second samples achieved the full recorded throughput   (e.g. Figure~\ref{fig:60cithroughput}). This differs greatly to a \ac{CI} of 7.5, whereby this figure was measured close to 100%. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -1311,7 +1303,7 @@ The \ac{CI} also determines the latency from when a measurement is taken to when
 
 The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7$\%$, while that derived empirically was closer to $\%$. At the peak measured performance, the device was capable of an average data rate of 90% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. In the context of an \ac{EEG} device, at this data rate the following specifications are achievable.
 
-From the background and literature review, most systems are only concerned with acquisition rates between 
+From the background and literature review, most systems are only concerned with acquisition rates up to 200Hz.
 
 \begin{table}[H]
 \centering
@@ -1356,7 +1348,7 @@ Ultimately, to maximize throughput it is important to choose a \ac{CI} for the t
 
 To measure the power usage of the system a 10 ohm shunt resistor was inserted between the board's $V_{ss}$ and ground. Scope leads where then attached to measure the voltage, which due to ohm's law, will be measured at 10 times the current. 
 
-Firsly, the power usage of the just the radio was performed (the ADCs were disconnected).  The data sheet claims the maximum peak current used during transmission or receiving is approximately 16mA at 3V. While the measurements in Figure~\ref{fig:ceclose} and Figure~\ref{fig:ce} are at 3.3 volts, the overall power consumption of the system is the system regardless of the voltage level used. If voltage is decreased, the current increases.
+Firstly, the power usage of the just the radio was performed (the ADCs were disconnected).  The data sheet claims the maximum peak current used during transmission or receiving is approximately 16mA at 3V. While the measurements in Figure~\ref{fig:ceclose} and Figure~\ref{fig:ce} are at 3.3 volts, the overall power consumption of the system is the system regardless of the voltage level used. If voltage is decreased, the current increases.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -1587,6 +1579,8 @@ Add final board
 	\acro{ASIC}{application specific integrated circuit}
 	\acro{RFID}{radio frequency identification}
 	\acro{ECG}{electrocardiogram}
+	\acro{CAD}{computer aided design}
+	\acro{RISC}{reduced instruction set computing}
 \end{acronym} 
 \clearpage
 \section{User Guide}

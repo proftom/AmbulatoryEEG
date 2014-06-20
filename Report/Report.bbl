@@ -266,6 +266,55 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
+\entry{asson2008}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Casson}{C.}%
+     {Alexander~J}{A.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smith}{S.}%
+     {Shelagh}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Duncan}{D.}%
+     {John~S}{J.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rodriguez-Villegas}{R.-V.}%
+     {Esther}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CAJ+1}
+  \strng{fullhash}{CAJSSDJSRVE1}
+  \field{sortinit}{C}
+  \field{abstract}{%
+  This paper presents a review of wearable EEG technology: the evolution of
+  ambulatory EEG units from the bulky, limited lifetime devices available today
+  to small devices present only on the head that can record the EEG for days,
+  weeks or months at a time. The EEG requirements, application areas and
+  research challenges are highlighted. A survey of neurologists is also carried
+  out clearly indicating the medical desire for such devices.%
+  }
+  \verb{doi}
+  \verb 10.1109/IEMBS.2008.4650549
+  \endverb
+  \field{isbn}{978-1-4244-1814-5}
+  \field{issn}{1557-170X}
+  \field{pages}{5867\bibrangedash 5870}
+  \field{title}{{Wearable EEG: what is it, why is it needed and what does it
+  entail?}}
+  \field{volume}{2008}
+  \field{journaltitle}{Conference proceedings : ... Annual International
+  Conference of the IEEE Engineering in Medicine and Biology Society. IEEE
+  Engineering in Medicine and Biology Society. Conference}
+  \field{year}{2008}
+\endentry
+
 \entry{Casson2008}{article}{}
   \name{author}{4}{}{%
     {{}%

@@ -62,9 +62,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.2}Power Analysis}{68}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}Device}{72}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.3}Device}{73}{subsection.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4}Bill of materials}{72}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.4}Bill of materials}{73}{subsection.8.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9}Conclusions and Future Work}{74}{section.9}
 \defcounter {refsection}{0}\relax 

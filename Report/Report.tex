@@ -1600,7 +1600,7 @@ The cost of building the system, including no price breaks and sourcing from sta
 \begin{table}[H]
 \centering
 \caption{Bill of materials}
-\label{fig:sensors}
+\label{tbl:bom}
 \begin{tabular}{|p{1.1in}|p{1.1in}|p{1.1in}|p{1.1in}|} \hline 
 \textbf{Component Name} & \textbf{Value} & \textbf{Quantity} & \textbf{Unit Cost} \\ \hline 
 Needs to be filled in & 8 & 1500 & 192 \\ \hline  
@@ -1729,5 +1729,49 @@ This is a brief guide in setting up, communicating and controlling the EEG senso
 
 To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be navigated to be presing the windows start key, then typing Bluetooth Settings \footnote{Note: If Bluetooth Settings does not appear then your computer does not have a usable Bluetooth device installed. While you may of intalled a Bluetooth device, it is not running Microsoft's Bluetooth driver stack, and hence cannot be used with the appilcation until you either purchase a new Microsoft Bluetooth driver stack capable adapter or install the Microsoft Bluetooth driver stack (not covered here) for this device.} Insert batteries into the underside of EEG sensor device board. The device will immediately power up. Select pair, and the device will be installed. Once this is done please open the application. 
 
-The application contains a large centra window and a control bar which can be activated by swiping if you using a touch screen device, or right clicking the mouse. The control bar contains an button for connecting, a array of buttons for selecting the channels, a slider control for adjusting the acqusition rate, and a button to save the data. To begin with, hit connect, which should turn the button green (as shown). Once this happens, you may begin selecting channels and setting the frequency of the capture. When data is recieved, it will be displayed on the centre window of the application. When you have finished capturing data you may save the captured data into ASCII or CSV text formats for later data analysis. 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.4\textwidth]{search}
+	\end{center}
+	\caption{Bluetooth settings}. 
+	\label{fig:search}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.4\textwidth]{searching}
+	\end{center}
+	\caption{Available \ac{BLE} devices}. 
+	\label{fig:searchinguguide}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.4\textwidth]{connecting}
+	\end{center}
+	\caption{Installing EEG sensor device}. 
+	\label{fig:connectinguguide}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = \textwidth]{control}
+	\end{center}
+	\caption{Control bar}. 
+	\label{fig:control}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{exampleapp}
+	\end{center}
+	\caption{\ac{EEG} Application}. 
+	\label{fig:exampleappuguide}
+\end{figure}
+
+
+The application contains a large central window and a control bar which can be activated by swiping if you using a touch screen device, or right clicking the mouse. The control bar contains an button for connecting, a array of buttons for selecting the channels, a slider control for adjusting the acquisition rate, and a button to save the data. To begin with, hit connect, which should turn the button green (as shown). Once this happens, you may begin selecting channels and setting the frequency of the capture. When data is received, it will be displayed on the center window of the application. When you have finished capturing data you may save the captured data into ASCII or CSV text formats for later data analysis. 
+
 \end{document}
+
+

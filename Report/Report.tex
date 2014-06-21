@@ -133,7 +133,7 @@ With the emergence of low power wireless technologies coupled with portable devi
 \tableofcontents
 \clearpage
 
-\section{Acknowledgements}
+\section{Acknowledgments}
 The opportunity is taken here to express gratitude to all those who have directly contributed towards the project. 
 
 Firstly, the project supervisors, James Mardell, Chen Guangwei and Esther Rodriguez-Villegas from the Circuit and Systems departmental group, for the opportunity to undertake this piece of work along with my second marker for his efforts in reviewing this work. 
@@ -149,7 +149,11 @@ Special thanks go towards Mike Harbour and Victor Boddy for their efforts in pri
 And finally, my girlfriend for her dainty and dexterous hands, along with her patience which was invaluable during circuit assembly. 
 
 \clearpage
+\section{Summary of contributions}
+This project has required a ecliptic . Notable achievements of the project in order of work preformed are, current \ac{EEG} systems evaluation, hardware design (including radios), low level firmware design, high level software design and a full stack evaluation. 
+This project has achieved beyond its original goal of "Maximising Bluetooth Low Energy throughput for \ac{EEG} signals". 
 
+\clearpage
 \section{Introduction}
 
 \subsection{Problem Landscape and Motivation}
@@ -978,9 +982,9 @@ typedef struct
 
 To communicate with the off-chip \ac{ADC}, the I2C bus was used. The data sheet for the \ac{ADC} (AD7997) \cite{ad7997} shows the device has 3 modes of operation. Mode 1 uses edge triggering on the CONVST pin to begin a conversion. Mode 2, known as command mode allows a conversion to occur from a command sent over the I2C bus. The third and final mode is automatic cycle interval, which will cause the \ac{ADC} to power up and take measurements periodically. At the time of writing, the current implementation uses the 2nd mode, whereby the a master write to the slave causes a conversion to begin, which is read back. 
 
+The general mechanism for communicating with the AD7997 \ac{ADC} over the I2C bus is as follows. A start command is sent out from the master CSR1010, which causes all I2C devices to listen. A 7 bit device address is sent out on the bus along with a access bit (representing read or write). Devices will shift in these 8 bits, and any devices which match the 7-bit address with acknowledge the master. This process is known as I2C serial addressing. Once the device acknowledges, the register address currently residing the address register of the \ac{ADC} can be read or written to, but not both within the operation (serial addressing must be done again to change access). The available registers can be seen in Figure~\ref{fig:regs}. For the project only the address pointer, conversion and configuration registers are of interest. 
 
----------------------
-The general mechanism for communicating with the \ac{AD7997} over the I2C bus is to begin a connection by sending out an address on the serial bus (serial addressing). Once the device acknowledges, a start command the selected register of the \ac{ADC} can be read or written to, but not both within the operation (serial addressing must be done again). For the project, The master configures the channel map within a register by writing the address first to the address register, referencing the correct register from the register file, then writing two bytes of data. Listing~\ref{lst:adc} shows the configuration of channels for the \ac{ADC} over the I2C bus, and can be visualised from \ref{fig:waveform}.
+To configure the channel map the master first writes the configuration register address (0x02) to the address pointer register, referencing the correct register from the register file, then writes two bytes of data which contain the channel map (along with some other bits \ref{fig:configreg}). Listing~\ref{lst:adc} shows the configuration of channels for the \ac{ADC} over the I2C bus, and can be visualised from \ref{fig:waveform}.
 
 
 \begin{lstlisting}[language=C, caption=ADC I2C bus channel map configuration,label={lst:adc}]
@@ -1193,6 +1197,7 @@ An issue was found whereby at higher throughputs, the order in which notificatio
 \section{Evaluation}
 
 \subsection{Throughput}
+\label{sec:Throughput}
 
 In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tactic. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1$\%$. This remainder changes with the \ac{CI} and in the worst case, just less than a whole packet fits into the remaining space. The profile which describes the "remainder" packets is formally written as
 
@@ -1239,7 +1244,7 @@ The throughput tends asymptotically to the maximum of 236.686 kbps, and min to m
 	\label{fig:civsdatarate}
 \end{figure}
 
-It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. These were captured through use of a shunt resistor (see \ref{Power Analysis}). It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s. An more analytic approach is shown in a 2011 IEEE communications letter \cite{Gomez2011}, however does not take into account the remainder problem, showing it's possible to achieve 236.7kbit/s with a 7.5ms \ac{CI}. It does show, however, that under a high \ac{BER}, a lower connection interval is the best strategy (Figure~\ref{fig:ber}.
+It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. These were captured through use of a shunt resistor (see \ref{Power Analysis}). It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s. An more analytic approach is shown in a 2011 IEEE communications letter \cite{Gomez2011}, however does not take into account the remainder problem, showing it's possible to achieve 236.7kbit/s with a 7.5ms \ac{CI}. It does show, however, that under a high \ac{BER}, a lower connection interval is the best strategy (Figure~\ref{fig:ber}).
 
 \begin{figure}[H]
 	\begin{center}
@@ -1347,9 +1352,9 @@ Ultimately, to maximize throughput it is important to choose a \ac{CI} for the t
 
 
 
-
+\clearpage
 \subsection{Power Analysis}
-
+\label{sec:Power Analysis}
 To measure the power usage of the system a 10 ohm shunt resistor was inserted between the board's $V_{ss}$ and ground. Scope leads where then attached to measure the voltage, which due to ohm's law, will be measured at 10 times the current. 
 
 Firstly, the power usage of the just the radio was performed (the ADCs were disconnected).  The data sheet claims the maximum peak current used during transmission or receiving is approximately 16mA at 3V. While the measurements in Figure~\ref{fig:ceclose} and Figure~\ref{fig:ce} are at 3.3 volts, the overall power consumption of the system is the system regardless of the voltage level used. If voltage is decreased, the current increases.
@@ -1362,7 +1367,7 @@ Firstly, the power usage of the just the radio was performed (the ADCs were disc
 	\label{fig:adv}
 \end{figure}
 
-It can be seen from Figure~\ref{adv} that the measured voltage is 150mV. This corresponds to 15mA, approximately what the data sheet claimed. This represents an instantaneous power of 45mW. As mentioned previously, the advertising state of the system happens so infrequently that the long run cost is considered zero, hence the power analysis presented here does not include information from the advertising state (although \cite{Liu2012} seems to provide a good starting point for those interested). Interestingly, the highest peak current is measured when the device is advertising, presumably as the device is broadcasting on 3 channels, rather than just one, as once a connection has been established. 
+It can be seen from Figure~\ref{adv} that the measured voltage is 150mV. This corresponds to 15mA, approximately what the data sheet claimed. This represents an instantaneous power of 45mW. As mentioned previously, the advertising state of the system happens so infrequently that the long run cost is considered zero, hence the power analysis presented here does not include information from the advertising state (although \cite{Liu2012} seems to provide a good starting point). Interestingly, the highest peak current is measured when the device is advertising, presumably as the device is broadcasting on 3 channels, rather than just one, as once a connection has been established. 
 
 \ac{CE}s where no data other than correspondence packets to keep the link alive, measured a peak current consumption less than 12mA at 3V. The \ac{CE} can be divided into sections - the device wakes up approximately 2 milliseconds before transmission, remains idle, then listens/transmits (receipt of information before transmission occurs first for the slave device). 
 
@@ -1429,7 +1434,7 @@ When operating at the highest achieved throughput (~215kbps), the total charge t
 %cumtrapz(time(420:1019), cur(420:1019)*100)*60000/3600
 %\end{lstlisting}
 
-To improve the power model further, values were taken for the peak and trough current consumption were read of the 1 ohm shunt waveform (Figures~ref{fig:length},~\ref{fig:lengthpkt} show better approximations for the current along with the packet length). The total number of packets counted per \ac{CE} for 60ms was 86, meaning approximately 1.7ms are spare ($60ms - 86 \times 0.676\mu s$) per \ac{CE}, mentioned in the \ref{Throughput} section as a device limitation. With no premature \ac{CE} termination, this should give a data rate of 230kbps, however, only an average of 213 kbps has been recorded, however for simplicity, the power analysis will assume all \ac{CE}s have no premature termination.
+To improve the power model further, values were taken for the peak and trough current consumption were read of the 1 ohm shunt waveform (Figures~ref{fig:length},~\ref{fig:lengthpkt} show better approximations for the current along with the packet length). The total number of packets counted per \ac{CE} for 60ms was 86, meaning approximately 1.7ms are spare ($60ms - 86 \times 0.676\mu s$) per \ac{CE}, mentioned in the \ref{sec:Throughput} section as a device limitation. With no premature \ac{CE} termination, this should give a data rate of 230kbps, however, only an average of 213 kbps has been recorded, however for simplicity, the power analysis will assume all \ac{CE}s have no premature termination.
 
 \begin{figure}[H]
 	\begin{center}
@@ -1492,7 +1497,7 @@ Contrasting \ac{BLE} throughput against power consumption to \ac{BTC} is an easy
 
 .000001956*3600*(3200*8/160) + (3600*floor(3200*8/floor(160*86))*1760/(3600*1000000))
 
-At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per connection interval. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} which marginally increases the power consumption. From the graph and hand calculation, this corresponds to an consumption of 3.39mWh, or a lifetime of over 42 days. From the most suitable literature found \cite{rahuli} on \ac{BTC} power consumption, the best case power consumption for the same throughput can last around 7 days, assuming no voltage drop on the batteries. 
+At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per \ac{CI} or 16kbps. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} which marginally increases the power consumption. From the graph and hand calculation, this corresponds to an consumption of 3.39mWh, or a lifetime of over 70 days. From the most suitable literature found \cite{rahuli} on \ac{BTC} power consumption, the best case power consumption for the same throughput can last around 7 days, assuming no voltage drop on the batteries. 
 
 
 
@@ -1541,7 +1546,7 @@ This report and project has demonstrated the suitability of \ac{BLE} as a techno
 
 The project has further clarified the math behind the achievable throughputs, which has been found to vary in literature. The maximum achieved average throughput (approximately 213kbps) is the highest found from internet forums to research journels. At this (full) throughput the device has over 2 days lifetime. This is a conservative estimate, and believed to actually be between 3 and 4 days, subject to a worst case average current draw of 14mA at 2.8V from two 620mAh capacity ZincAir batteries. That is to say, the device has gone far beyond the initial project requirements. While not considered relevant in the report, when devices operate at full duplex communication, the total throughput as a sum of useful (20byte notifications) in each direction is approximately 358.8kbps. This means both the peripheral and master send 296 bit notification packets, in which the header acknowledges the other.
 
-The achievable data rate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum data rate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms (which is greater than 6). Nominal device operation (at 200Hz) is still very much achievable, but due to the 6 packet limitation, there will be an increase in power. This exact amount is subject to future work, as due to approximations in the power model is difficult to predict.
+The achievable data rate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91\% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum data rate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms (which is greater than 6). Nominal device operation (at 200Hz) is still very much achievable, but due to the 6 packet limitation, there will be an increase in power. This exact amount is subject to future work, as due to approximations in the power model is difficult to predict.
 
 Mention power here (finish up power analysis)
 While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed in \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. 

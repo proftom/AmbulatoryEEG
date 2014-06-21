@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  21 JUN 2014 17:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  21 JUN 2014 17:41
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1586,25 +1586,15 @@ File: assets/regs.png Graphic file (type png)
 <use assets/regs.png>
 Package pdftex.def Info: assets/regs.png used on input line 973.
 (pdftex.def)             Requested size: 399.47415pt x 652.64879pt.
- [50] [51 <C:/Repository/AmbulatoryEEG/Report/assets/regs.png>]
-Package acronym Info: Label `acro:AD7997' newly defined as it shall be overridd
-en
-although it is yet undefined on input line 983.
-
-
-Package acronym Warning: Acronym `AD7997' is not defined on input line 983.
-
-
-Package acronym Warning: Acronym `AD7997' is not defined on input line 983.
-
-<assets/waveform.png, id=1053, 599.23875pt x 210.7875pt>
+ [50] [51 <C:/Repository/AmbulatoryEEG/Report/assets/regs.png>] <assets/wavefor
+m.png, id=1056, 599.23875pt x 210.7875pt>
 File: assets/waveform.png Graphic file (type png)
 
 <use assets/waveform.png>
 Package pdftex.def Info: assets/waveform.png used on input line 1006.
 (pdftex.def)             Requested size: 399.47415pt x 140.5225pt.
- [52 <C:/Repository/AmbulatoryEEG/Report/assets/waveform.png>] <assets/configre
-g.png, id=1085, 486.31688pt x 47.42719pt>
+ [52]
+<assets/configreg.png, id=1087, 486.31688pt x 47.42719pt>
 File: assets/configreg.png Graphic file (type png)
 
 <use assets/configreg.png>
@@ -1622,48 +1612,49 @@ Package acronym Info: Label `acro:GUI' newly defined as it shall be overridden
 although it is yet undefined on input line 1049.
 Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
 although it is yet undefined on input line 1049.
- [53 <C:/Repository/AmbulatoryEEG/Report/assets/configreg.png>] <assets/dep.png
-, id=1124, 354.57469pt x 246.9225pt>
+ [53 <C:/Repository/AmbulatoryEEG/Report/assets/waveform.png> <C:/Repository/Am
+bulatoryEEG/Report/assets/configreg.png>]
+<assets/dep.png, id=1120, 354.57469pt x 246.9225pt>
 File: assets/dep.png Graphic file (type png)
-
-<use assets/dep.png>
+ <use assets/dep.png>
 Package pdftex.def Info: assets/dep.png used on input line 1055.
 (pdftex.def)             Requested size: 399.47415pt x 278.19778pt.
 
-<assets/classdiagram.png, id=1125, 402.00188pt x 399.74344pt>
+<assets/classdiagram.png, id=1121, 402.00188pt x 399.74344pt>
 File: assets/classdiagram.png Graphic file (type png)
 
 <use assets/classdiagram.png>
 Package pdftex.def Info: assets/classdiagram.png used on input line 1063.
 (pdftex.def)             Requested size: 399.47415pt x 397.22942pt.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+ [54 <C:/Repository/AmbulatoryEEG/Report/assets/dep.png>] ("C:\Program Files (x
+86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/03/04 1.5c listings language file
-) [54 <C:/Repository/AmbulatoryEEG/Report/assets/dep.png>]
+)
+[55 <C:/Repository/AmbulatoryEEG/Report/assets/classdiagram.png>]
 Package acronym Info: Label `acro:TPL' newly defined as it shall be overridden
 although it is yet undefined on input line 1092.
- [55 <C:/Repository/AmbulatoryEEG/Report/assets/classdiagram.png>]
-<assets/searching.png, id=1177, 700.11563pt x 514.92375pt>
+ [56]
+<assets/searching.png, id=1217, 700.11563pt x 514.92375pt>
 File: assets/searching.png Graphic file (type png)
 
 <use assets/searching.png>
 Package pdftex.def Info: assets/searching.png used on input line 1143.
 (pdftex.def)             Requested size: 399.47415pt x 293.80815pt.
 
-<assets/connecting.png, id=1178, 488.57532pt x 410.2828pt>
+<assets/connecting.png, id=1218, 488.57532pt x 410.2828pt>
 File: assets/connecting.png Graphic file (type png)
 
 <use assets/connecting.png>
 Package pdftex.def Info: assets/connecting.png used on input line 1151.
 (pdftex.def)             Requested size: 399.47415pt x 335.46371pt.
 
-<assets/dvcmgr.png, id=1181, 312.41719pt x 349.305pt>
+<assets/dvcmgr.png, id=1221, 312.41719pt x 349.305pt>
 File: assets/dvcmgr.png Graphic file (type png)
  <use assets/dvcmgr.png>
 Package pdftex.def Info: assets/dvcmgr.png used on input line 1159.
 (pdftex.def)             Requested size: 399.47415pt x 446.65048pt.
 
-<assets/exampleapp.png, id=1184, 1547.7825pt x 903.375pt>
+<assets/exampleapp.png, id=1224, 1547.7825pt x 903.375pt>
 File: assets/exampleapp.png Graphic file (type png)
 
 <use assets/exampleapp.png>
@@ -1671,168 +1662,165 @@ Package pdftex.def Info: assets/exampleapp.png used on input line 1171.
 (pdftex.def)             Requested size: 621.40575pt x 362.69447pt.
 Package acronym Info: Label `acro:SDK' newly defined as it shall be overridden
 although it is yet undefined on input line 1182.
- [56] [57 <C:/Repository/AmbulatoryEEG/Report/assets/searching.png>] [58 <C:/Re
-pository/AmbulatoryEEG/Report/assets/connecting.png>] [59 <C:/Repository/Ambula
-toryEEG/Report/assets/dvcmgr.png>] [60 <C:/Repository/AmbulatoryEEG/Report/asse
-ts/exampleapp.png>]
-<assets/notremain.png, id=1259, 735.49782pt x 327.47343pt>
+ [57 <C:/Repository/AmbulatoryEEG/Report/assets/searching.png>] [58 <C:/Reposit
+ory/AmbulatoryEEG/Report/assets/connecting.png>]
+[59 <C:/Repository/AmbulatoryEEG/Report/assets/dvcmgr.png>] [60 <C:/Repository/
+AmbulatoryEEG/Report/assets/exampleapp.png>]
+<assets/notremain.png, id=1261, 735.49782pt x 327.47343pt>
 File: assets/notremain.png Graphic file (type png)
 
 <use assets/notremain.png>
-Package pdftex.def Info: assets/notremain.png used on input line 1207.
+Package pdftex.def Info: assets/notremain.png used on input line 1208.
 (pdftex.def)             Requested size: 443.86319pt x 197.62985pt.
 
-<assets/throughput.png, id=1268, 711.4078pt x 779.16093pt>
+<assets/throughput.png, id=1270, 711.4078pt x 779.16093pt>
 File: assets/throughput.png Graphic file (type png)
 
 <use assets/throughput.png>
-Package pdftex.def Info: assets/throughput.png used on input line 1224.
+Package pdftex.def Info: assets/throughput.png used on input line 1225.
 (pdftex.def)             Requested size: 443.86319pt x 486.15404pt.
  [61
 
 
  <C:/Repository/AmbulatoryEEG/Report/assets/notremain.png (PNG copy)>]
-<assets/civsdatarate.png, id=1280, 422.32782pt x 315.42844pt>
+<assets/civsdatarate.png, id=1282, 422.32782pt x 315.42844pt>
 File: assets/civsdatarate.png Graphic file (type png)
 
 <use assets/civsdatarate.png>
-Package pdftex.def Info: assets/civsdatarate.png used on input line 1236.
+Package pdftex.def Info: assets/civsdatarate.png used on input line 1237.
 (pdftex.def)             Requested size: 443.86319pt x 331.52248pt.
  [62 <C:/Repository/AmbulatoryEEG/Report/assets/throughput.png (PNG copy)>]
 
 LaTeX Warning: Reference `Power Analysis' on page 63 undefined on input line 12
-42.
+43.
 
 Package acronym Info: Label `acro:BER' newly defined as it shall be overridden
-although it is yet undefined on input line 1242.
-<assets/ber.png, id=1303, 569.87906pt x 231.86626pt>
+although it is yet undefined on input line 1243.
+<assets/ber.png, id=1305, 569.87906pt x 231.86626pt>
 File: assets/ber.png Graphic file (type png)
  <use assets/ber.png>
-Package pdftex.def Info: assets/ber.png used on input line 1246.
+Package pdftex.def Info: assets/ber.png used on input line 1247.
 (pdftex.def)             Requested size: 443.86319pt x 180.59312pt.
 
 [63 <C:/Repository/AmbulatoryEEG/Report/assets/civsdatarate.png (PNG copy)>]
-<assets/2sec.png, id=1319, 803.0pt x 504.88625pt>
+<assets/2sec.png, id=1321, 803.0pt x 504.88625pt>
 File: assets/2sec.png Graphic file (type png)
  <use assets/2sec.png>
-Package pdftex.def Info: assets/2sec.png used on input line 1256.
+Package pdftex.def Info: assets/2sec.png used on input line 1257.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
-<assets/lowcierrors.png, id=1324, 803.0pt x 504.88625pt>
+<assets/lowcierrors.png, id=1326, 803.0pt x 504.88625pt>
 File: assets/lowcierrors.png Graphic file (type png)
 
 <use assets/lowcierrors.png>
-Package pdftex.def Info: assets/lowcierrors.png used on input line 1265.
+Package pdftex.def Info: assets/lowcierrors.png used on input line 1266.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
  [64 <C:/Repository/AmbulatoryEEG/Report/assets/ber.png> <C:/Repository/Ambulat
 oryEEG/Report/assets/2sec.png (PNG copy)>]
-<assets/60ci.png, id=1341, 803.0pt x 504.88625pt>
+<assets/60ci.png, id=1343, 803.0pt x 504.88625pt>
 File: assets/60ci.png Graphic file (type png)
  <use assets/60ci.png>
-Package pdftex.def Info: assets/60ci.png used on input line 1277.
+Package pdftex.def Info: assets/60ci.png used on input line 1278.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
 [65 <C:/Repository/AmbulatoryEEG/Report/assets/lowcierrors.png (PNG copy)>]
-<assets/cilimit.png, id=1348, 803.0pt x 504.88625pt>
+<assets/cilimit.png, id=1350, 803.0pt x 504.88625pt>
 File: assets/cilimit.png Graphic file (type png)
  <use assets/cilimit.png>
-Package pdftex.def Info: assets/cilimit.png used on input line 1285.
+Package pdftex.def Info: assets/cilimit.png used on input line 1286.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
-<assets/60cithroughput.png, id=1352, 422.32782pt x 316.18124pt>
+<assets/60cithroughput.png, id=1354, 422.32782pt x 316.18124pt>
 File: assets/60cithroughput.png Graphic file (type png)
 
 <use assets/60cithroughput.png>
-Package pdftex.def Info: assets/60cithroughput.png used on input line 1295.
+Package pdftex.def Info: assets/60cithroughput.png used on input line 1296.
 (pdftex.def)             Requested size: 443.86319pt x 332.31369pt.
  [66 <C:/Repository/AmbulatoryEEG/Report/assets/60ci.png (PNG copy)> <C:/Reposi
 tory/AmbulatoryEEG/Report/assets/cilimit.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1318--1318
 []|\T1/cmr/bx/n/10 Resolution
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1318--1318
 []|\T1/cmr/bx/n/10 Required
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1317
+Underfull \hbox (badness 10000) in paragraph at lines 1318--1318
 \T1/cmr/bx/n/10 datarate
  []
 
 [67 <C:/Repository/AmbulatoryEEG/Report/assets/60cithroughput.png (PNG copy)>]
-<assets/adv.png, id=1383, 803.0pt x 504.88625pt>
+[68] <assets/adv.png, id=1390, 803.0pt x 504.88625pt>
 File: assets/adv.png Graphic file (type png)
  <use assets/adv.png>
-Package pdftex.def Info: assets/adv.png used on input line 1359.
+Package pdftex.def Info: assets/adv.png used on input line 1360.
 (pdftex.def)             Requested size: 443.86319pt x 279.08269pt.
 
 
-LaTeX Warning: Reference `adv' on page 68 undefined on input line 1365.
+LaTeX Warning: Reference `adv' on page 69 undefined on input line 1366.
 
-[68] <assets/ceclose.png, id=1395, 602.25pt x 378.66469pt>
+<assets/ceclose.png, id=1394, 602.25pt x 378.66469pt>
 File: assets/ceclose.png Graphic file (type png)
-
-<use assets/ceclose.png>
-Package pdftex.def Info: assets/ceclose.png used on input line 1371.
+ <use assets/ceclose.png>
+Package pdftex.def Info: assets/ceclose.png used on input line 1372.
 (pdftex.def)             Requested size: 399.47415pt x 251.17905pt.
- [69 <C:/Repository/AmbulatoryEEG/Report/assets/adv.png (PNG copy)>] <assets/ce
-.png, id=1402, 803.0pt x 504.88625pt>
-File: assets/ce.png Graphic file (type png)
 
-<use assets/ce.png>
-Package pdftex.def Info: assets/ce.png used on input line 1380.
+[69
+
+ <C:/Repository/AmbulatoryEEG/Report/assets/adv.png (PNG copy)>]
+<assets/ce.png, id=1404, 803.0pt x 504.88625pt>
+File: assets/ce.png Graphic file (type png)
+ <use assets/ce.png>
+Package pdftex.def Info: assets/ce.png used on input line 1381.
 (pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
  [70 <C:/Repository/AmbulatoryEEG/Report/assets/ceclose.png> <C:/Repository/Amb
 ulatoryEEG/Report/assets/ce.png (PNG copy)>]
-<assets/icur28.png, id=1413, 422.32782pt x 315.42844pt>
+<assets/icur28.png, id=1415, 422.32782pt x 315.42844pt>
 File: assets/icur28.png Graphic file (type png)
 
 <use assets/icur28.png>
-Package pdftex.def Info: assets/icur28.png used on input line 1407.
+Package pdftex.def Info: assets/icur28.png used on input line 1408.
 (pdftex.def)             Requested size: 399.47415pt x 298.3654pt.
  [71 <C:/Repository/AmbulatoryEEG/Report/assets/icur28.png (PNG copy)>] <assets
-/60msci.png, id=1427, 422.32782pt x 316.18124pt>
+/60msci.png, id=1429, 422.32782pt x 316.18124pt>
 File: assets/60msci.png Graphic file (type png)
 
 <use assets/60msci.png>
-Package pdftex.def Info: assets/60msci.png used on input line 1420.
+Package pdftex.def Info: assets/60msci.png used on input line 1421.
 (pdftex.def)             Requested size: 399.47415pt x 299.0775pt.
-
-
-LaTeX Warning: Reference `Throughput' on page 72 undefined on input line 1432.
-
-[72 <C:/Repository/AmbulatoryEEG/Report/assets/60msci.png (PNG copy)>]
-<assets/length.png, id=1441, 803.0pt x 504.88625pt>
+ [72 <C:/Repository/AmbulatoryEEG/Report/assets/60msci.png (PNG copy)>] <assets
+/length.png, id=1444, 803.0pt x 504.88625pt>
 File: assets/length.png Graphic file (type png)
- <use assets/length.png>
-Package pdftex.def Info: assets/length.png used on input line 1436.
-(pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
 
-<assets/lengthpkt.png, id=1442, 803.0pt x 504.88625pt>
+<use assets/length.png>
+Package pdftex.def Info: assets/length.png used on input line 1437.
+(pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
+ <assets/lengthpkt.png, id=1445, 803.0pt x 504.88625pt>
 File: assets/lengthpkt.png Graphic file (type png)
 
 <use assets/lengthpkt.png>
-Package pdftex.def Info: assets/lengthpkt.png used on input line 1444.
+Package pdftex.def Info: assets/lengthpkt.png used on input line 1445.
 (pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
  [73 <C:/Repository/AmbulatoryEEG/Report/assets/length.png (PNG copy)> <C:/Repo
 sitory/AmbulatoryEEG/Report/assets/lengthpkt.png (PNG copy)>] <assets/model.png
-, id=1455, 590.95781pt x 404.26031pt>
+, id=1458, 590.95781pt x 404.26031pt>
 File: assets/model.png Graphic file (type png)
 
 <use assets/model.png>
-Package pdftex.def Info: assets/model.png used on input line 1461.
+Package pdftex.def Info: assets/model.png used on input line 1462.
 (pdftex.def)             Requested size: 399.47415pt x 273.27722pt.
- <assets/adcpower.png, id=1465, 803.0pt x 504.88625pt>
+ <assets/adcpower.png, id=1468, 803.0pt x 504.88625pt>
 File: assets/adcpower.png Graphic file (type png)
 
 <use assets/adcpower.png>
-Package pdftex.def Info: assets/adcpower.png used on input line 1472.
+Package pdftex.def Info: assets/adcpower.png used on input line 1473.
 (pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
  [74 <C:/Repository/AmbulatoryEEG/Report/assets/model.png (PNG copy)>] [75 <C:/
 Repository/AmbulatoryEEG/Report/assets/adcpower.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1527--1527
+Underfull \hbox (badness 10000) in paragraph at lines 1528--1528
 []|\T1/cmr/bx/n/10 Component
  []
 
@@ -1845,16 +1833,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1527--1527
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1655 \clearpage
+l.1656 \clearpage
                  ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1657.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1658.
  [85
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1657.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1658.
  (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1657.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1657.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1658.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1658.
 
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 6B9EA6D9475B1477519999F2FB2693DE;2316.
@@ -1866,13 +1854,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1657.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1658.
  ) 
 Here is how much of TeX's memory you used:
- 19393 strings out of 493921
- 294076 string characters out of 3144873
- 566139 words of memory out of 3000000
- 21855 multiletter control sequences out of 15000+200000
+ 19390 strings out of 493921
+ 294067 string characters out of 3144873
+ 564889 words of memory out of 3000000
+ 21853 multiletter control sequences out of 15000+200000
  18110 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  44i,10n,51p,1756b,2017s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1896,9 +1884,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (86 pages, 7522733 bytes).
+Output written on Report.pdf (86 pages, 7524460 bytes).
 PDF statistics:
- 2349 PDF objects out of 2487 (max. 8388607)
- 514 named destinations out of 1000 (max. 500000)
+ 2354 PDF objects out of 2487 (max. 8388607)
+ 513 named destinations out of 1000 (max. 500000)
  622 words of extra memory for PDF output out of 10000 (max. 10000000)
 

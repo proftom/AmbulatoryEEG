@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  21 JUN 2014 20:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.31)  21 JUN 2014 20:10
 entering extended mode
 **C:/Repository/AmbulatoryEEG/Report/Report.tex
 (C:/Repository/AmbulatoryEEG/Report/Report.tex
@@ -1829,10 +1829,10 @@ ts/adcpower.png, id=1519, 803.0pt x 504.88625pt>
 File: assets/adcpower.png Graphic file (type png)
 
 <use assets/adcpower.png>
-Package pdftex.def Info: assets/adcpower.png used on input line 1502.
+Package pdftex.def Info: assets/adcpower.png used on input line 1501.
 (pdftex.def)             Requested size: 399.47415pt x 251.17134pt.
  [77 <C:/Repository/AmbulatoryEEG/Report/assets/lifetime.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1548
+Underfull \hbox (badness 10000) in paragraph at lines 1547--1547
 []|\T1/cmr/bx/n/10 Component
  []
 
@@ -1842,17 +1842,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1548--1548
 ]
 Package acronym Info: Label `acro:WiFI' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1575.
+although it is yet undefined on input line 1574.
 
 
-Package acronym Warning: Acronym `WiFI' is not defined on input line 1575.
+Package acronym Warning: Acronym `WiFI' is not defined on input line 1574.
 
 
-Package acronym Warning: Acronym `WiFI' is not defined on input line 1575.
+Package acronym Warning: Acronym `WiFI' is not defined on input line 1574.
 
 
 LaTeX Warning: Reference `fig:eeghat.jpg' on page 81 undefined on input line 15
-77.
+76.
 
 [81] [82] [83
 
@@ -1863,16 +1863,16 @@ LaTeX Warning: Reference `fig:eeghat.jpg' on page 81 undefined on input line 15
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1668 \clearpage
+l.1667 \clearpage
                  ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1670.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1669.
  [89
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1670.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1669.
  (C:\Repository\AmbulatoryEEG\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1670.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1670.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1669.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1669.
 
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 77FE98DE3C66360F694BEBCF510A1880;2377.
@@ -1884,7 +1884,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'Report.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1670.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1669.
  ) 
 Here is how much of TeX's memory you used:
  19426 strings out of 493921
@@ -1914,7 +1914,7 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (90 pages, 7557859 bytes).
+Output written on Report.pdf (90 pages, 7557851 bytes).
 PDF statistics:
  2424 PDF objects out of 2487 (max. 8388607)
  523 named destinations out of 1000 (max. 500000)

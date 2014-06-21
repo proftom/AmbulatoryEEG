@@ -101,6 +101,25 @@
   \field{year}{1997}
 \endentry
 
+\entry{rahuli}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Balani}{B.}%
+     {Rahul}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BR1}
+  \strng{fullhash}{BR1}
+  \field{sortinit}{B}
+  \field{title}{Energy Consumption Analysis for Bluetooth, WiFi and Cellular
+  Networks}
+  \verb{url}
+  \verb http://nesl.ee.ucla.edu/fw/documents/reports/2007/poweranalysis.pdf
+  \endverb
+  \field{year}{2007}
+\endentry
+
 \entry{asabe}{inproceedings}{}
   \name{author}{1}{}{%
     {{}%
@@ -679,6 +698,24 @@
   \field{year}{2013}
 \endentry
 
+\entry{juan}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Juan-Carlos~Cano}{J.-C.~C.}%
+     {Eva Gonzalez Carlos Calafate Pietro~Manzoni}{E.~G. C. C. P.~M.}%
+     {}{}%
+     {Jose-Manuel~Cano}{J.-M.~C.}}%
+  }
+  \strng{namehash}{JCCJMCEGCCPM1}
+  \strng{fullhash}{JCCJMCEGCCPM1}
+  \field{sortinit}{J}
+  \field{title}{How Does Energy Consumption Impact Performance in Bluetooth}
+  \verb{url}
+  \verb http://www.grc.upv.es/calafate/download/BT\_energy\_performance07.pdf
+  \endverb
+  \field{year}{2007}
+\endentry
+
 \entry{Liu2012}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -1000,6 +1037,59 @@
   \endverb
   \field{type}{techreport}
   \field{year}{2013}
+\endentry
+
+\entry{Siekkinen2012}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Siekkinen}{S.}%
+     {Matti}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hiienkari}{H.}%
+     {Markus}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nurminen}{N.}%
+     {Jukka~K.}{J.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nieminen}{N.}%
+     {Johanna}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SM+1}
+  \strng{fullhash}{SMHMNJKNJ1}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  Ultra low power communication mechanisms are essential for future Internet of
+  Things deployments. Bluetooth Low Energy (BLE) is one promising candidate for
+  such deployments. We study the energy consumption of BLE by measuring real
+  devices with a power monitor and derive models of the basic energy
+  consumption behavior observed from the measurement results. We investigate
+  also the overhead of Ipv6-based communication over BLE, which is relevant for
+  future IoT scenarios. We contrast our results by performing similar
+  measurements with ZigBee/802.15.4 devices. Our results show that when
+  compared to ZigBee, BLE is indeed very energy efficient in terms of number of
+  bytes transferred per Joule spent. In addition, IPv6 communication energy
+  overhead remains reasonable. We also point out a few specific limitations
+  with current stack implementations and explain that removing those
+  limitations could improve energy utility significantly.%
+  }
+  \field{booktitle}{2012 IEEE Wireless Communications and Networking Conference
+  Workshops, WCNCW 2012}
+  \verb{doi}
+  \verb 10.1109/WCNCW.2012.6215496
+  \endverb
+  \field{isbn}{9781467306829}
+  \field{pages}{232\bibrangedash 237}
+  \field{title}{{How low energy is bluetooth low energy? Comparative
+  measurements with ZigBee/802.15.4}}
+  \field{year}{2012}
 \endentry
 
 \entry{Teplan2002}{misc}{}

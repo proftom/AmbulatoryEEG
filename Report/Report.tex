@@ -144,7 +144,7 @@ Guan Yang and Jacob Rosenthal from New York, United States, for publicly making 
 
 Dr. Nissim Zur, CEO of Vitelix Limited is an expert in low power wireless technologies, and has conversed over many aspects of the CSR1010 chip used. Further, he has also taken an interest in this project's work in regards to maximising the speed, and has requested the results be shared with him.
 
-Special thanks go towards Mike Harbour and Victor Boddy for their efforts in printed circuit board manufacture and assembly. Countless hours were spent in the lab pushing the department's PCB fabrication facilities outside specification and assembling the boards. 
+Special thanks go towards Mike Harbour and Victor Boddy for their efforts in printed circuit board manufacture and assembly. Countless hours were spent in the lab pushing the department's PCB fabrication facilities outside specification, assembling the boards and making debugging adjustments. It is unlikely this project would of been quite so successful without the help of level 1 laboratory staff. 
 
 And finally, my girlfriend for her dainty and dexterous hands, along with her patience which was invaluable during circuit assembly. 
 
@@ -459,7 +459,7 @@ The ATMega328 consumes approximately XmA, however for the remainder. As the devi
 	\label{fig:nrfcap}
 \end{figure}
 
-Initially, the device was configured to send a large amount of notification within a single \{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum \ac{CI} to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available. While this doesn't immediately reject throughput, longer connection intervals mean greater chance of a transmission error (CRC error), which if occurs, causes any further transmission within that \ac{CE} to case.. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. Figure~\ref{nrfcap} shows a packet capture.
+Initially, the device was configured to send a large amount of notification within a single ac\{CE} and at the lowest \ac{CI}. The master device was an Apple iPhone 4S, and it was found the total throughput was 5328 bit/s or 2.3\% of the theoretical upper bound. The reason for such a low throughput was two fold. Apple restricts the minimum \ac{CI} to 30ms through software (causing the slave \ac{CI} to increase. [CITE] It has been reported this is due to issues with their design, whereby many radio technologies share the same antenna. 30ms is four times greater than the minimum \ac{CI} available. While this doesn't immediately reject throughput, longer connection intervals mean greater chance of a transmission error (CRC error), which if occurs, causes any further transmission within that \ac{CE} to case.. The second reason, unlisted from the data sheet\cite{nrf8001}, is that the device is capable of only transmitting, on average, one packet per \ac{CE}. This is simply due to the hardware design, and ultimately believed to be why the device claims the lowest power out of all the radios. Figure~\ref{fig:nrfcap} shows a packet capture.
 
 
 
@@ -1465,7 +1465,7 @@ where $x\_time\_in\_us$ is the x-axis and y\_current the y axis in Figure~\ref{f
 \end{figure}
 
 
-Using this new model end result is a current consumption of 10.12 mAh, which contrasts the 14.04mAh measured with the 1ohm shunt and the 13.1 mAh measured with the 10 ohm shunt. This is a fair amount of variation. Another thing to consider is the \ac{ADC} consumption, which is approximately 1$\mu$A while powered down, but 1mA when converting. Figure~\ref{fig:adcpower} shows the chip powering up to communicate with the \ac{ADC} for a 25Hz acquisition rate (slow rate chosen for illustration). It is difficult to measure the \ac{ADC} current as it's only 1mA, which is 1mV. The \ac{ADC} current will never dominate as even if it was operating at higher frequencies over many channels, more data would be converted, but then sent, pushing the data rate and henec power consumption due to the radio up. If the \ac{ADC} is operating at frequencies greater than approximately 450 Hz (calculated from the 2.2ms wake up time of the chip), then the \ac{ADC} should remain powered on at all times. In such circumstance, 1mA is assumed to be constantly drawn by the \ac{ADC}. This threshold frequency will further be reduced due to the rush current (fixed cost) payed. As there are two \ac{ADC}s, this brings worst case current consumption of the entire system to approximately15mAh.
+Using this new model end result is a current consumption of 10.12 mAh, which contrasts the 14.04mAh measured with the 1ohm shunt and the 13.1 mAh measured with the 10 ohm shunt. This is a fair amount of variation. Another thing to consider is the \ac{ADC} consumption, which is approximately 1$\mu$A while powered down, but 1mA when converting. Figure~\ref{fig:adcpower} shows the chip powering up to communicate with the \ac{ADC} for a 25Hz acquisition rate (slow rate chosen for illustration). It is difficult to measure the \ac{ADC} current as it's less than 1mA (0.7mA), which is less than 1mV over the shunt and shaded by noise. At all but low frequencies the \ac{ADC} current will never dominate. This is because as more data is captured more needs to be sent, pushing the data rate and henec power consumption due to the radio up. If the \ac{ADC} is operating at frequencies greater than approximately 450 Hz (calculated from the 2.2ms wake up time of the chip), then the \ac{ADC} should remain powered on at all times. In such circumstance, 1mA is assumed to be constantly drawn by the \ac{ADC}. This threshold frequency will further be reduced due to the rush current (fixed cost) payed. As there are two \ac{ADC}s, this brings worst case current consumption of the entire system to approximately 15.4mAh.
 
 \begin{figure}[H]
 	\begin{center}
@@ -1480,16 +1480,21 @@ Using this new model end result is a current consumption of 10.12 mAh, which con
 %\end{lstlisting}
 %currentConsumption = cumtrapz(x, current*1000)*(1/(max(x)-min(x))) mAh
 
-The energy per bit at this throughput is 
-
-Contrasting this to \ac{BTC}
-
-The idea of minimising energy per bit is not the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. To achieve the lowest energy per bit, the transmission rate needs to be at the highest throughput achievable on the hardware due to the fixed costs or sunk costs of waking the \ac{MCU} and preparing the device for radio transmission. However, consistently running at such throughput invalidates the use case for \ac{BLE}, as there are other technologies capable of transmitting at the same or higher throughputs for smaller energy requirements (e.g. \ac{BTC})
 
 
-At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per connection interval. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} which marginally increases the power consumption. 
+The idea of minimising energy per bit is not the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. To achieve the lowest energy per bit, the transmission rate needs to be at the highest throughput achievable on the hardware due to the fixed costs or sunk costs of waking the \ac{MCU} and preparing the device for radio transmission. However, consistently running at such throughput invalidates the use case for \ac{BLE}, as there are other technologies capable of transmitting at the same or higher throughputs for smaller energy requirements (e.g. \ac{BTC} or WiFi). 
 
-Finally, a brief mention of the \ac{ADC}
+From reviewing literature on various Bluet
+Never the less an attempt is made to 
+
+Contrasting \ac{BLE} throughput against power consumption to \ac{BTC} is an easy question, but a difficult task. Unfortunately no data was available and no decent and affordable hardware was available during the project. 
+
+
+.000001956*3600*(3200*8/160) + (3600*floor(3200*8/floor(160*86))*1760/(3600*1000000))
+
+At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per connection interval. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} which marginally increases the power consumption. From the graph and hand calculation, this corresponds to an consumption of 3.39mWh, or a lifetime of over 42 days. From the most suitable literature found \cite{rahuli} on \ac{BTC} power consumption, the best case power consumption for the same throughput can last around 7 days, assuming no voltage drop on the batteries. 
+
+
 
 
 
@@ -1532,23 +1537,26 @@ As the number produced increases, the marginal cost will decrease and production
 \clearpage 
 \section{Conclusions and Future Work}
 
-This report and project has demonstrated that for a certain setups \ac{BLE} is a suitable technology for \ac{EEG} transmission. As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}. At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. A requirement of the device was the ability to capture and send 10kHz of data, requiring 80 kbps for a single channel at 8 bit up to 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all channels is 16 channels is approximately 1.6kHz, meaning a single up to around 800Hz per channel can be accurately measured as per the Nyquist condition. 
+This report and project has demonstrated the suitability of \ac{BLE} as a technology for \ac{EEG} transmission. As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}. At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. This is easily achievable in the system built during this project. A requirement of the device was the ability to capture and send 10kHz of data for a single channel at 8 bit resolution. This requires 80 kbps for a single channel however, the system built is capable of transmitting up to 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all 16 channels is approximately 1.6kHz, meaning a single up to around 800Hz per channel can be accurately measured as per the Nyquist condition. 
+
+The project has further clarified the math behind the achievable throughputs, which has been found to vary in literature. The maximum achieved average throughput (approximately 213kbps) is the highest found from internet forums to research journels. At this (full) throughput the device has over 2 days lifetime. This is a conservative estimate, and believed to actually be between 3 and 4 days, subject to a worst case average current draw of 14mA at 2.8V from two 620mAh capacity ZincAir batteries. That is to say, the device has gone far beyond the initial project requirements. While not considered relevant in the report, when devices operate at full duplex communication, the total throughput as a sum of useful (20byte notifications) in each direction is approximately 358.8kbps. This means both the peripheral and master send 296 bit notification packets, in which the header acknowledges the other.
+
+The achievable data rate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum data rate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms (which is greater than 6). Nominal device operation (at 200Hz) is still very much achievable, but due to the 6 packet limitation, there will be an increase in power. This exact amount is subject to future work, as due to approximations in the power model is difficult to predict.
 
 Mention power here (finish up power analysis)
-find point of indifference between bl and ble
+While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed in \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. 
 
-Comparision with TI
+Comparison with TI
 
-The system requires 2.2ms to wake from a dormant sleep mode. The system must power up in order to communicate with the \ac{ADC}. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. 
+The system requires 2.2ms to wake from a dormant sleep mode. The system must power up frequently in order to communicate with the \ac{ADC}. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. Again, this is future work that may be useful when running the system at low frequencies. 
 
-The achievable datarate depends on the capabilities of both ends of the link. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum datarate achievable is 128kbps. At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms (which is greater than 6).
 
-%but unfortunately, there is an energy cost associated with hardware buffers from operation and leakage current
-While not consider in the report, for duplex communication, the total throughput as a sum of useful (20byte notifications) in each direction is approximately 358.8kbps. This means both the peripheral and master send 296 bit notification packets, in which the header acknowledges the other.
+
+To achieve high through, full size notifications (20 bytes of usable data), trade off between long \ac{CI} with marginally more throughput against risk of premature link termination.
 
 Another way to improve throughput include compression techniques, for which there exists many information resources on lossless and lossy compressing \ac{EEG} data \cite{Antoniol1997} \cite{Wongsawat2006}. A forseen issue with using compression, is that if compressed data is spread over multiple notifications, any data loss of a single notification, may result in the loss of a larger chunk of information due to the inability to decompress. 
 
-To achieve high through, full size notifications (20 bytes of usable data), trade off between long \ac{CI} with marginally more throughput against risk of premature link termination.
+
 
 Between all the code that provides the utility methods of dealing with data and firmware operations, the program is very simply - wake up periodically and sample data, perhaps store this data, then send it on. 
 
@@ -1556,10 +1564,8 @@ Combine with video
 
 The achieved size of this device is small enough to be considered wearable over ambulatory. 
 
-Despite over 3 weeks in waiting, the battery connectors sources from the United States did not make it time for this report. 
 
-
-
+This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring. Due to the size, weight and lifetime of the device, it is suggested the device can be considered wearable. At nominal conditions, the power analysis predicts that the device can last over 40 days. The device is ready to be taken further 
 
 As mentioned in the ref{Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable biomedical journal. 
 

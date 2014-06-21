@@ -716,6 +716,24 @@
   \field{year}{2007}
 \endentry
 
+\entry{tiem}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Karl~T}{K.~T.}%
+     {\ac{TI}}{a.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KTa1}
+  \strng{fullhash}{KTa1}
+  \field{sortinit}{K}
+  \field{title}{Maximum data rate (throughput) with BLE CC2540}
+  \verb{url}
+  \verb http://e2e.ti.com/support/wireless_connectivity/f/538/t/196549.aspx
+  \endverb
+  \field{year}{2012}
+\endentry
+
 \entry{Liu2012}{article}{}
   \name{author}{3}{}{%
     {{}%

@@ -149,16 +149,24 @@ Special thanks go towards Mike Harbour and Victor Boddy for their efforts in pri
 
 And finally, my girlfriend for her dainty and dexterous hands, along with her patience which was invaluable during circuit assembly. 
 
+
+
+
 \clearpage
 \section{Summary of contributions}
-This project has required a ecliptic . Notable achievements of the project in order of work preformed are, current \ac{EEG} systems evaluation, hardware design (including radios), low level firmware design, high level software design and a full stack evaluation. Finally, \ac{CSR}, the company which provided the development kit for the CSR1010, has offered me a full time graduate position at their head office in Cambridge.
-This project has achieved beyond its original goal of "Maximising Bluetooth Low Energy throughput for \ac{EEG} signals". 
+This project has required a great deal of time and effort, drawing on a broad range of skills developed throughout my time at Imperial College. Achievements of the project are all my own work unless otherwise stated, and in no particular order are, current \ac{EEG} system evaluation and specification of a new system, hardware design (including RF), firmware design, high level software design, a full stack evaluation and a detailed academic throughput and power analysis. Within the tasks of programming there existed completely different mindsets and software paradigms. For example, when writing firmware, the paradigm is to be efficient with instructions and refrain from \ac{OOP} practices. This contrasts the high level programming mindset where abstractions and object management is seen as the way to model, implement and manage software solutions. Further, the first working (and smallest) \ac{PCB} board created for this project was done using the facilities on the departments first floor laboratories. The size and complexity of the board has received many positive comments, particularly as it was done outside the specifications of what the department is meant to be able to manufacture in house. 
+
+This project has achieved beyond its original goal (and title) of "Maximising Bluetooth Low Energy throughput for \ac{EEG} signals", through designing and manufacturing a device to demonstrate the capabilities of \ac{BLE}, and hopefully be used for practical applications by Imperial College's circuit and system group. Finally, \ac{CSR}, the company which provisioned one of the development kits for the project has offered me a full time graduate position at their head office in Cambridge, United Kingdom.
+
+
+
+
 
 \clearpage
 \section{Introduction}
 
 \subsection{Problem Landscape and Motivation}
-Neurological disorders and their sequelae are estimated at present to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectancy and decreasing (relative) fertility rates, the age demographic has shifted towards an aging population. This has caused a growth in neurological disorders such as Parkinson's, multiple sclerosis, Alzheimer's and other dementias. From the 2012 report published by the \ac{WHO}\cite{WorldHealthOrganization2012}, the societal costs of dementia for the United Kingdom totals £23 billion, a figure that matches the costs of cancer (£12 billion), heart disease (£8 billion) and stroke (£5 billion). Similarly a 2010 Swedish paper published that the costs of dementia (50 billion SEK) was higher than that of depression, strokes and alcohol abuse (32.5, 12.5, 21-30 billion SEK respectively)\cite{Wimo2010}. With neurological disorders constituting to approximately 12% of the global mortality count\cite{WHO2006} and the expected increase in the number of cases and rising cost of health care, neurological disorders are an active area of medical research.
+Neurological disorders and their sequelae are estimated at present to affect upto one seventh of the world's population, a figure which currently stands at 1 billion. With the ever increasing life expectancy and decreasing (relative) fertility rates, the age demographic has shifted towards an aging population. This has caused a growth in neurological disorders such as Parkinson's, multiple sclerosis, Alzheimer's and other dementias. From the 2012 report published by the \ac{WHO}\cite{WorldHealthOrganization2012}, the societal costs of dementia for the United Kingdom totals £23 billion, a figure that matches the costs of cancer (£12 billion), heart disease (£8 billion) and stroke (£5 billion). Similarly a 2010 Swedish paper published that the costs of dementia (50 billion SEK) was higher than that of depression, strokes and alcohol abuse (32.5, 12.5, 21-30 billion SEK respectively)\cite{Wimo2010}. With neurological disorders constituting to approximately 12\% of the global mortality count\cite{WHO2006} and the expected increase in the number of cases and rising cost of health care, neurological disorders are an active area of medical research.
 
 \ac{EEG}s are used extensively for detecting, characterising and monitoring brain activity related to the aforementioned diseases. Examples applications include diagnosing patients regularly loosing consciousness with syncopy; measuring the effectiveness of medication for patients currently diagnosed with epilepsy\cite{Duncan2006}; deciding whether the patient is a candidate for removal of the cortex part associated with the disorder\cite{Zijlmans2007}. Unfortunately many neurological disorder symptoms occur sporadically with little to no indication of an impending event, such as in the cause of epilepsy a seizure. In some circumstances the patient could remain in hospital indefinitely, however symptoms (e.g. seizures) can be seconds to years apart, and sometimes are not realised or detected without proper equipment. The diagnosis, monitoring and treating many of these diseases is currently a costly procedure due to the resource requirements (staff, time and equipment). Common practices include hospitalising and monitoring patients between 24 hours and a week.  Such circumstances lend themselves to an ambulatory system, where an outpatient can be monitored continuously without discomfort or hospitalisation, thus improving quality of life and social welfare (e.g. no sick days off work).
 
@@ -201,7 +209,7 @@ Popular \ac{EEG} products on the market that have already shown integration with
 	\label{fig:emotive}
 \end{figure}
 
-NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a data rate of 250 kbit/s, a baud-rate of 57,600 and 10 meter range. It is also noted that there is a 5% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same baud rate of the previous, but the maximum power consumption increases to 120mW (80mA). Both devices weigh an equal 90g, and are priced at $80 and $130 respectively. 
+NeuroSky have released \ac{EEG} products, the MindWave and MindWave mobile. The foremost operates a proprietary radio system in the 2.4 GHz band, at a data rate of 250 kbit/s, a baud-rate of 57,600 and 10 meter range. It is also noted that there is a 5\% packet loss quoted on the device operation. The hardware samples at 512 Hz at a 12 bit ADC resolution. The device is powered from a standard AAA battery (1.5V), and has maximum power consumption of 50mW. The MindWave mobile uses Bluetooth and UART at the same baud rate of the previous, but the maximum power consumption increases to 120mW (80mA). Both devices weigh an equal 90g, and are priced at $80 and $130 respectively. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -220,7 +228,8 @@ Away from specifically \ac{EEG}, the consumer fitness sector has been strongly t
 In line with current \ac{EEG} practices and ideal requirements set forth by Imperial College's Circuit and Systems Group, the project attempts achieve at least the follow specifications
 \begin{itemize}
 	\item Running time of at least 12 hours
-	\item Channel resolution of 8 bits (albeit number of channels undefined)
+	\item Channel resolution of 8 bits 
+	\item 16 channels
 	\item A weight of less than 7 grams
 	\item 10 meter range
 	\item BLE wireless technology
@@ -380,25 +389,25 @@ From the figure it is possible to calculate the upper bound for the number of pa
 Of the 37 bytes (296 bits) sent for a notification packet, 27 of them are known as the data payload. Even if encryption is not used, 4 bytes of the 27 are required for the L2CAP header use. The remaining 23 bytes are quoted as the available application bytes.
 
 \begin{displaymath}
-1479.29 \frac{packets}{s} \times 23 \times 8 bits \approx 270 kbp/s
+1479.29 \; \frac{packets}{s} \times 23 \times 8 bits \approx 270 kbp/s
 \end{displaymath}
 
 While many pieces of literate quote this 23 bytes as the maximum usable data rate, 3 bytes are required to identify the command type (notification) through an op-code (1 bytes) and  characteristic the notification belongs to through an attribute handle (2 bytes). This means that only 20 bytes of the original 27 reserved for the application are usable, reducing the upper bound for throughput to 
 
 \begin{displaymath}
-1479.29 \frac{packets}{s} \times 20 \times 8 bits \approx 236.7 kbp/s
+1479.29 \; \frac{packets}{s} \times 20 \times 8 bits \approx 236.7 kbp/s
 \end{displaymath}
 
 Here forth, the usable payload of a "notification" or "data packet" is 20 bytes. When aiming for either low power and/or high efficiency, it is important fill the usable payload with as much data as possible, as every notification packet sent has a fixed cost of 80 bits associated with it.  
 
 \begin{figure}[h]
-	centering
+	\centering
 		\includegraphics[width = 1\textwidth]{turnaround}
 	\caption{\ac{BLE}'s packet flow for maximum throughput}
 	\label{fig:turnaround}
 \end{figure}
 
-The \ac{BLE} protocol was not designed for high throughput applications, but rather for low latency episodic communication devices transferring small data payloads of representing device state. The energy per bit is low compared other popular technologies, and should not be used as the bottom-line metric for performance. Rather, a holistic metric of the whole system energy consumption compared to a similar system is a more appropriate performance metric.
+The \ac{BLE} protocol was not designed for high throughput applications, but rather for low latency episodic communication devices transferring small data payloads of representing device state. The energy per bit is low compared other popular technologies, and should not be used as the bottom-line metric for performance. Rather, a holistic measurement of the whole system energy consumption compared to a similar system is a more appropriate performance metric.
 
 
 
@@ -482,7 +491,7 @@ With 16 channels at an 8 bit resolution, the highest frequency measurable (accor
 A maximum support frequency running a solo channel is approximately 1328 Hz.
 
 \subsubsection{nRF51822}
-Another \ac{NS} product tested was the nRF51822. Information on the suppport packets per connection event was also not present in the datasheet\cite{nrf51822}. This device was found capable of receiving up to 6 packets per second, and this was verified by an engineer\cite{olme}. While a marked improvement over the nRF8001, this meant that the device was only capable of operating at 60% of the maximum throughput capable as claimed in the specification. The maximum support frequency per channel for 16 channels at 8 bits resolution is 500Hz.
+Another \ac{NS} product tested was the nRF51822. Information on the suppport packets per connection event was also not present in the datasheet\cite{nrf51822}. This device was found capable of receiving up to 6 packets per second, and this was verified by an engineer\cite{olme}. While a marked improvement over the nRF8001, this meant that the device was only capable of operating at 60\% of the maximum throughput capable as claimed in the specification. The maximum support frequency per channel for 16 channels at 8 bits resolution is 500Hz.
 
 \clearpage
 
@@ -521,7 +530,7 @@ maximum theoretical rate.  \text{ \textnormal{[sic]}}
 \frac{1000000 \mu s}{676 \mu s} \times 27 < 320 kbps
 \end{displaymath}
 
-320 to 300 is a generous approximation, it is believed that the engineer actually rounded a smaller number, 305, which was calculated by including an unnecessary 32 bit \ac{MIC}, used only when encryption is enabled:
+320 to 300 is a generous approximation, it is believed that the engineer actually rounded a smaller number, 305, which was calculated by including an unnecessary 32 bit \ac{MIC}, used only when encryption is enabled
 
 \begin{displaymath}
 \frac{1000000 \mu s}{708 \mu s} \times 27 \approx 305 kbps \approx 300 kbps
@@ -621,7 +630,7 @@ Therefore 9 packets per connection interval at 7.5ms. This corresponding to a th
 
 \clearpage
 \subsubsection{CC2540 and CC2541}
-\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first, and arguably the most popular [need to CITE?] development kits. The CC2540 differs in that it's range and power usage are increased, though it's throughput is theoretically the same.
+\ac{TI}'s CC2541 is part of the sensor tag package - a \ac{BLE} one of the first and most popular development kits. The CC2540 differs in that it's range and power usage are increased, though it's throughput is theoretically the same.
 
 \begin{figure}[H]
 	\begin{center}
@@ -631,7 +640,7 @@ Therefore 9 packets per connection interval at 7.5ms. This corresponding to a th
 	\label{fig:sensortag}
 \end{figure}
 
-Again, the associated white papers did not document the packet throughput per \ac{CE}. Through contact with a \ac{TI} employee [CITE], there is a hardware limitation of 4 buffers, limiting only 4 packets per \ac{CE} (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per\ac{CE} by refilling the buffers within the \ac{CE}, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per \ac{CE} to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
+Again, the associated white papers did not document the packet throughput per \ac{CE}. Through contact with a \ac{TI} employee \cite{tiem}, there is a hardware limitation of 4 buffers, limiting only 4 packets per \ac{CE} (each buffer contains 1 packet). Each buffer is 128 bytes in length, while \ac{BLE} data packets can be a maximum of 41 bytes. Through using an exposed firmware (software) switch it was possible to increase the throughput slightly to achieve 5 packets per\ac{CE} by refilling the buffers within the \ac{CE}, once the packet has been link layer acknowledged. Again, this was discovered through a Texas instrument employee. This increased the average packets per \ac{CE} to approximately 4.6, bringing the total throughput between 10-12.3k byte/s.
 
 The CC2541 (and also CC2540) is a full \ac{SoC} - a programmable \ac{MCU} is packages together with the radio hardware. This has certain economical advantages, as common hardware and footprint is shared between the radio and \ac{MCU}. However, the Nordic company Chipcon who originally developed the hardware (Texas Instruments has since acquired them), relied on the Swedish tool chain provider, IAR, for the development tool suite and chain. \ac{TI} still relies up this tool software suite, haven't not invested in their own facilities to develop for the platform. A single software license is approximately 2000 USD. While IAR do offer a code-limited version, it is too small to contain all the necessary libraries. IAR also provide a 30 day trail, which is what is currently being used for evaluation, but proceeding with this chip for the prototype may be economically impossible.
 
@@ -658,7 +667,7 @@ Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a 
 
 \begin{displaymath}
 \;
-\frac{163 hours for 1 \;notification\; per\; connection\; interval}{11.094 packets per connection interval} \approx 14.7 hours
+\frac{163 \;hours \;for \;1 \;notification\; per\; connection\; interval}{11.094 packets per connection interval} \approx 14.7 hours
 \end{displaymath}
 
 
@@ -722,12 +731,12 @@ The CSR1010 supports I2C natively along with provided a generic driver at the ap
 
 \subsection{Analogue Front-end}
 
-The biopotentials measured on the scalp required analogue filters and amplifiers to extract useful information. Ultimately the \ac{ADC}s should interface with this frontend.  At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analogue front-end design for manufacture, however these chips will not be available for use before the project deadline. Therefore no analogue front-end electronics will be present on the prototype board.
+The biopotentials measured on the scalp require analogue filters and amplifiers to extract useful information. Ultimately the \ac{ADC}s should interface with this front end.  At the time of writing, the circuits and systems group at Imperial College have recently taped out a full custom silicon analogue front-end design for manufacture, however these chips will not be available for use before the project deadline. Therefore no analogue front-end electronics will be present on the prototype board.
 
 \subsection{Component Selection}
 
 %can I say observant reader? Bit too pretentious
-The most important decision for this project was the choice of radio device. While the CC254x showed promise as with enough hardware and firmware understanding, it may mean the device could approach the theoretical limit. Recently (after initial testing) a technical article was created on \ac{TI}'s website \cite{overlapproc} showing evidence of the device being capable of reaching high throughputs in league with other competing devices. However considering the time, complexity and uncertainty that it can reach throughputs greater than competing devices and the unavailability of an inexpensive tool chain renders this device undesirable. The CSR1010 is supplied with a free tool chain and \ac{IDE}, as \ac{CSR} engineers confirmed experiments with the device operating with high throughputs. The package of the radios were both similar, being of roughly the same size \ac{QFN} type, which while reported outside the department's \ac{PCB} production capabilities, was still considered of sufficiently large for in-house prototyping. Therefore the CSR1010 was the chosen device for the prototype.
+The most important decision for this project was the choice of radio device. The CC254x was a risk, as it was believed with enough time, hardware and firmware understanding it may mean the device could approach the theoretical limit. This was further endorsed when a technical article (after initial testing) was created on \ac{TI}'s website \cite{overlapproc} showing evidence of the device being capable of reaching high throughputs in league with other competing devices. However considering the time, complexity and uncertainty that it can reach throughputs greater than competing devices and the unavailability of an inexpensive tool chain renders this device undesirable. The CSR1010 is supplied with a free tool chain and \ac{IDE}, as \ac{CSR} engineers confirmed experiments with the device operating with high throughputs. The package of the radios were both similar, being of roughly the same size \ac{QFN} type, which while reported outside the department's \ac{PCB} production capabilities, was still considered of sufficiently large for in-house prototyping. Therefore the CSR1010 was the chosen device for the prototype.
 
 Considering the requirement for real time throughput, footprint, manufacturing and assembly challenges, power consumption and added design complexity, there will be no use of NAND memory in the immediate prototypes, except that used internally inside a \ac{MCU} or externally as a boot loader (i.e. CSR1010 device requires a small external storage unit which contains the program code, loaded at power on time).
 
@@ -746,6 +755,42 @@ The application will be developed on a tablet, due to the expected ease of devel
 
 \clearpage
 \section{Specification}
+
+From the preliminary work and literature reviewed, Table~\ref{tbl:spec} lists the expected achievable final specifications of the device. It was believed fully possible to significantly exceed the specifications originally listed in the original specification 
+
+
+\begin{table}[H]
+\centering
+\caption{Revised Specification}
+\label{tbl:spec}
+\begin{tabular}{|p{1.5in}|p{2.1in}|p{2.1in}|} \hline 
+\textbf{Specification point} & \textbf{Justification} & \textbf{Comments} \\ \hline 
+2.5 day battery life & Even at worst case radio and \ac{ADC} consumption, 2.87 days is predicted. Longer lifetime devices are easier for the users to manage and welcomed (increase usability) & Voltage drop on ZincAir batteries assumed not to be too great for vast majority of lifetime. \\ \hline  
+2.8V supply & Two ZincAir batteries.. ZincAir batteries are safe, cheap and readily available (used in hearing aids) & Lower of 2.8V may limit range\\ \hline  
+10 meter range life & Realised (approximately) by demonstration devices  & Lower voltage of 2.8V may limit range\\ \hline  
+8 or 10 bit resolution & \ac{ADC}s chosen are 10bits & Can always trim off last two bits to convert to 8 bits\\ \hline  
+Weight of less than 7 grams & Batteries weight 1.9g each, estimated sum of components and PCB board less than 3 grams & Users apparently notice weights of 7grams and above over long periods of wear  \\ \hline  
+\ac{BLE} technology & As per the project & Isolate to one radio technology only for the time  being\\ \hline  
+Tablet application &  Easier to develop for, and can be easily ported to Windows Phone devices & Basic shell working. Good developer tools \\ \hline  
+Real time update of signals & Data throughput already tested to computer & Doesn't have to use a graph if graphical issues encountered\\ \hline  
+50 by 50 by 10 mm & All components SMT & This is approaching upper weight boundary. Expect to be smaller\\ \hline  
+
+
+
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
 \clearpage
 \section{Implementation}
 
@@ -789,7 +834,7 @@ During \ac{PCB} fabrication, the required feature size was below the reported ca
 	\label{fig:pcb1.jpg}
 \end{figure}
 
-Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 15 meters \ac{LOS}. 
+Due to the process capabilities and materials used, the radio frequency traces were not impedance matched, and the device range was limited to approximately 10 meters \ac{LOS}. 
 
 The connector used was difficult to source, being a variant of micro-USB, yet with more pins. The pin spacing was beyond the departments capabilities, but under magnification and with the right technique it was possible to make the connections. Unfortunately, with the \ac{CAD} package did not have capabilities to draw slots required for correctly seating the 8-pin connector. The connector had to be modified and filed down to correctly sit on the board. Even with super glue, small amounts of flexing from the cable, can create enough leverage to rip the connector off the board along with the tracks, destroying direct connectivity. Two boards were damaged due to this and caused serve delays in developing the firmware for the AD7997 \ac{ADC}. A workaround, although cumbersome, was to use a smaller, breakout board to connector to the main board to prevent any damage to the main board. 
 
@@ -1070,7 +1115,7 @@ In the context of a \ac{BLE} service, the \ac{EEG} service is described by the d
 	\label{fig:classdiagram}
 \end{figure}
 
-The GenericAttributeNamespace provided by the .NET framework only provides functionality on the work at the \ac{ATT} level. The mechanism for interfacing with the \ac{BLE} devices to to enumerate all connected devices then filter on the short \ac{UUID}. Connected devices are devices connected outside of the application (i.e. through the Windows OS Bluetooth settings from control panel - Figures~\ref{fig:connecting},~\ref{fig:dvcmgr}. This will return objects for all devices with a service matching that of the short \ac{UUID}. These objects can be further queried to find characteristics belong to this service along with the properties (read, write, indicate or notify). It is then possible to read, write or assign event callbacks from these characteristics. Attempting to write to a read only characteristic will result in an access denied, which will need to be handled to prevent program termination.  
+The GenericAttributeNamespace provided by the .NET framework provides functionality on the work at the \ac{ATT} level. The mechanism for interfacing with the \ac{BLE} devices to to enumerate all connected devices then filter on the short \ac{UUID}. Connected devices are devices connected outside of the application (i.e. through the Windows OS Bluetooth settings from control panel - Figures~\ref{fig:connecting},~\ref{fig:dvcmgr}. This will return objects for all devices with a service matching that of the short \ac{UUID}. These objects can be further queried to find characteristics belong to this service along with the properties (read, write, indicate or notify). It is then possible to read, write or assign event callbacks from these characteristics. Attempting to write to a read only characteristic will result in an access denied, which will need to be handled to prevent program termination.  
 
 %cba to get c# print, c++ will do
 \begin{lstlisting}[language=C++, caption=Connecting to a \ac{BLE} device's \ac{EEG} service ,label={lst:csharpeble}]
@@ -1093,7 +1138,7 @@ The GenericAttributeNamespace provided by the .NET framework only provides funct
 
 \end{lstlisting}
 
-The applications makes extensive use of the \ac{TPL} for a fluid and responsive \ac{GUI}. The \ac{TPL} uses asynchronous procedures to add parallelism and concurrency. This is particularly useful in this application, as the \ac{GUI} thread needs to be constantly updated from incoming data without preventing usability. Despite use of the \ac{TPL} further timing mechanisms were required to prevent interface lock up. When new data comes from the device, it will be transposed into the model. This will cause the data binding between the view and model to signal a change, meaning the view updates. Due to the high throughput, this mechanism can cause great delay, and hence, batching the updates is preferred.
+The applications makes extensive use of the \ac{TPL} for a fluid and responsive \ac{GUI}. The \ac{TPL} uses asynchronous procedures to add parallelism and concurrency. This is particularly useful in this application, as the \ac{GUI} thread needs to be constantly updated from incoming data without preventing usability. Despite use of the \ac{TPL} further timing mechanisms were required to prevent interface lock up. When new data comes from the device, it will be transposed into the model. This will cause the data binding between the view and model to signal a change, meaning the view updates. Due to the high throughput, this mechanism can cause great delay, and hence, batching the updates is preferred (listing~\ref{lst:csharpeble}).
 
 %cba to get c# print, c++ will do
 \begin{lstlisting}[language=C++, caption=Batch update code (for generic types),label={lst:csharpeble}]
@@ -1293,7 +1338,7 @@ It is believed that the maximum throughput was not reached due to transmission e
 	\label{fig:cilimit}
 \end{figure}
 
-Premature termination was observed to be frequent even at relatively low \ac{CI}s. For example, at 60ms approximately 55$\%$ of 1 second samples achieved the full recorded throughput   (e.g. Figure~\ref{fig:60cithroughput}). This differs greatly to a \ac{CI} of 7.5, whereby this figure was measured close to 100%. 
+Premature termination was observed to be frequent even at relatively low \ac{CI}s. For example, at 60ms approximately 55$\%$ of 1 second samples achieved the full recorded throughput   (e.g. Figure~\ref{fig:60cithroughput}). This differs greatly to a \ac{CI} of 7.5, whereby this figure was measured close to 100\%. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -1310,7 +1355,7 @@ The \ac{CI} also determines the latency from when a measurement is taken to when
 
 
 
-The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7$\%$, while that derived empirically was closer to $\%$. At the peak measured performance, the device was capable of an average data rate of 90% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. In the context of an \ac{EEG} device, at this data rate the following specifications are achievable.
+The difference between the minimum and maximum throughput for the theoretical maximum vs \ac{CI} curve is approximately 7$\%$, while that derived empirically was closer to $\%$. At the peak measured performance, the device was capable of an average data rate of 90\% (213kbit/s) of the theoretical maximum (236.686kbit/s. This figure was achieved at a \ac{CI} of 60ms. In the context of an \ac{EEG} device, at this data rate the following specifications are achievable.
 
 
 
@@ -1528,14 +1573,27 @@ At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the de
 \subsection{Device}
 
 
-May remove this section and merge into conclusion. This is just talking about the device.
+The device is a small size suitable of being sewn into a \ac{EEG} hat, similar to that shown in Figure~\ref{fig:eeghat}. The final size of the device measures at 27.5mm in width, 36.5mm in length  and 7mm in height weighting in at less than 6.5grams. The range of the first working prototype was measured as slightly further than the provided CSR1010 demonstration board, at approximately 10 meters. This could of been during the tests the voltage used was 10\% than that of the development board, though this was never confirmed. The first board was not properly impedance matched, and the final board, which was half the height, was tracked to have RF matching. Surprisingly, this latter, board, which was produced by a professional \ac{PCB} house had slightly worse range than the previous. 
 
-The device is a small size and weight, suitable of being sewn into a hat (EEG
+The battery connectors are mounted on the underside of the board \ref{fig:bat}. Due to their size and the need to keep them away from the antenna side of the board, there access is slightly awkward, and the exposed copper (notably the optional solder bridges), needs to be shielded to prevent shorting. This was known at the time of design, but these bridges were required for prototyping. 
 
-The layout can be shrunk further through reducing distances between components. This was not done previously as it significantly increases the difficultly in hand assembly, which was the method used for the prototype. For the analogue front end...
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{bat}
+	\end{center}
+	\caption{Battery connectors mounted on underside}. 
+	\label{fig:bat}
+\end{figure}
 
+The layout can be shrunk further through reducing distances between components. This was not done previously as it significantly increases the difficultly in hand assembly, which was the method used for the prototype. For the analogue front end, the underside could be used to house the chip. This would be easier if the layer count is increased to 4 to allow easier routing. The \ac{ADC} channel holes could be repositioned as vias under the \ac{ADC} to reclaim footprint on the upper side of the board. It is recommended to use some kind of connector to the electrodes, possibly mounted horizontally off the board.
 
-\subsection{Bill of materials}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{board}
+	\end{center}
+	\caption{Final prototype board}. 
+	\label{fig:board}
+\end{figure}
 
 The cost of building the system, including no price breaks and sourcing from standard on-line suppliers such as Farnell, RS-Components,Rapid, etc.
 
@@ -1552,7 +1610,7 @@ Needs to be filled in & 8 & 1500 & 192 \\ \hline
 \end{tabular}
 \end{table}
 
-As the number produced increases, the marginal cost will decrease and production fixed costs can be spread over more units. It is recommended, if this work is taken further, to use outside assembly for many units
+As the number produced increases, the marginal cost will decrease and production fixed costs can be spread over more units. It is recommended, if this work is taken further, to use outside assembly for many units as assembly time for a board is at least 2 hours.
 
 \clearpage 
 \section{Conclusions and Future Work}
@@ -1571,7 +1629,9 @@ Another way to improve throughput include compression techniques, for which ther
 
  The system must power up frequently in order to communicate with the \ac{ADC} and requires 2.2ms to power up. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. Again, this is future work that may be useful when running the system at low frequencies. 
 
-While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. From the work currently done, while both \ac{BTC} and \ac{WiFI} can achieve higher energy per bit ratios, due to the higher connection maintenance cost associated with the technologies, \ac{BLE} achieves the greatest energy per bit, due to the easily amortisable connection maintenance for low throughputs (200kbps and below). 
+While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. From the work currently done, while both \ac{BTC} and \ac{WiFI} can achieve higher energy per bit ratios, due to the higher connection maintenance cost associated with the technologies, \ac{BLE} achieves the greatest energy per bit, due to the easily amortisable connection maintenance for low throughputs (200kbps and below). Further, on the subject of power, a full battery lifetime and stress test has not been performed due to the battery connectors arriving last minute, despite almost a month in waiting. Investigating if the battery can source enough current over long periods is particularly important. 
+
+The application currently written for the Windows 8.1 operating system and is easily portable to the Windows 8.1 Phone devices. An issue discovered was that notifications are not necessarily handled by the Microsoft library in the order of arrival, and was found to be fairly regular. This means that \ac{EEG} data may not necessarily be displayed in the right order, despite being transmitted in the correct sequence (verified using WireShark application and sniffer). An immediate work around is to allocate an identifier on in the notification packet, but this consumes valuable throughput, and hence was not done. Rather, Microsoft has been contacted about the issue, and is looking into it. 
 
 This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat.jpg}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
 
@@ -1581,7 +1641,6 @@ Finally, as mentioned in the \ref{sec:Acknowledgments} section, people or groups
 \clearpage
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance
-Useful for CSR, monies worth out of me
 
 \begin{itemize}
 	\item Git versioning control - For versioning and segmenting the work flow
@@ -1666,4 +1725,9 @@ Add older schem designs/boards
 \end{acronym} 
 \clearpage
 \section{User Guide}
+This is a brief guide in setting up, communicating and controlling the EEG sensor. The application currently only supports the Windows 8.1 operating system and higher, and no support is currently planned for other operating systems. 
+
+To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be navigated to be presing the windows start key, then typing Bluetooth Settings \footnote{Note: If Bluetooth Settings does not appear then your computer does not have a usable Bluetooth device installed. While you may of intalled a Bluetooth device, it is not running Microsoft's Bluetooth driver stack, and hence cannot be used with the appilcation until you either purchase a new Microsoft Bluetooth driver stack capable adapter or install the Microsoft Bluetooth driver stack (not covered here) for this device.} Insert batteries into the underside of EEG sensor device board. The device will immediately power up. Select pair, and the device will be installed. Once this is done please open the application. 
+
+The application contains a large centra window and a control bar which can be activated by swiping if you using a touch screen device, or right clicking the mouse. The control bar contains an button for connecting, a array of buttons for selecting the channels, a slider control for adjusting the acqusition rate, and a button to save the data. To begin with, hit connect, which should turn the button green (as shown). Once this happens, you may begin selecting channels and setting the frequency of the capture. When data is recieved, it will be displayed on the centre window of the application. When you have finished capturing data you may save the captured data into ASCII or CSV text formats for later data analysis. 
 \end{document}

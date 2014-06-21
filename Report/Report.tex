@@ -98,7 +98,7 @@ Final Year Project Report 2014\\[17pt]
 \vfill
 
 \centering
-% \includegraphics[width=0.7\columnwidth,height=60mm,keepaspectratio]{imgs/MyRobot.jpg}
+ \includegraphics[width=0.9\columnwidth,keepaspectratio]{assets/cover.jpg}
 
 \vfill
 
@@ -166,7 +166,7 @@ Since the arrival of \ac{BLE} in smart phones in 2012, the vast majority of smar
 
 Over the recent past, reduction in power and size of technologies has enabled smaller and smarter devices, so much so, that they are known under the umbrella term as wearable devices. These wearable devices allow greater ease and lengths of monitoring  while barely impacting users in their day to day life. Hence, there has been and is a large amount of research in portable medical devices for health monitoring in both academia and industry. An investigation  into UK neurologist's reactions to wearable \ac{EEG} devices concluded that neurologists believe that wearable \ac{AEEG}s would be a major improvement in the \ac{EEG} practice for both patients and physicians, clearly signaling the desire for such systems \cite{asson2008}. This project and report is interested in investigating the use of \ac{BLE} as the wireless technology in wearable devices, specifically \ac{EEG}.
 
-In academia, a 2010  paper reported a wireless 8 channel \ac{EEG} device capable of sampling 8 channels at 1024 Hz consumed an average of 12mW\cite{Brown2010}. The device used a custom \ac{ASIC} for measuring biopotentials with low power consumption and high frequency, and Nordic Semiconductor's nRF24L01 generic 2.4GHz transceiver for radio communication. In 2013, Washington University \cite{Dementyev2013} demonstrated a coin-sized 60 Hz sampling rate \ac{RFID} based system, which has unlimited battery life within the range of the \ac{RFID} transceiver.  While research papers are available discussing the use of \ac{BLE} for wearable devices and sensors \cite{Omre2010} \cite{MacKensen2012}, research on combining \ac{EEG} with \ac{BLE} is difficult to source (there have been many attempts published for \ac{ECG}, e.g. \cite{Yu2012}).
+In academia, a 2010  paper reported a wireless 8 channel \ac{EEG} device capable of sampling 8 channels at 1024 Hz consumed an average of 12mW\cite{Brown2010}. The device used a custom \ac{ASIC} for measuring biopotentials with low power consumption and high frequency, and \ac{NS}'s nRF24L01 generic 2.4GHz transceiver for radio communication. In 2013, Washington University \cite{Dementyev2013} demonstrated a coin-sized 60 Hz sampling rate \ac{RFID} based system, which has unlimited battery life within the range of the \ac{RFID} transceiver.  While research papers are available discussing the use of \ac{BLE} for wearable devices and sensors \cite{Omre2010} \cite{MacKensen2012}, research on combining \ac{EEG} with \ac{BLE} is difficult to source (there have been many attempts published for \ac{ECG}, e.g. \cite{Yu2012}).
 
 Currently, the Imperial College Circuit and System's group has a wired \ac{EEG} measurement device. The wired connection between the \ac{EEG} sensors and a fixed computer severely restricts patient's mobility and hence are impracticable for long periods of use. Figures~\ref{fig:imperialcurrent},~\ref{fig:eeghat} show the departments current immobile setup. 
 
@@ -646,7 +646,7 @@ Two batteries technologies which satisfy these requirements are Lithium-ion (the
 
 Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a combined series voltage of 2.8V. In the worst case of BLE drawing 15mA, the battery lifetime is approximately 3 days. Recall 15mA is the peak current and BLE will never continuously draw this current, hence the lifetime of the device should be greater, depending on the throughput. ac{BLE} was designed that current is never continuously consumed, and between radio events, the battery has recovery periods, extending the useful life of the battery.
 
-Nordic semiconductor provides a battery  lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will require vertification in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
+\ac{NS} provides a battery lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will require vertification in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
 
 \begin{displaymath}
 \frac{7.5ms}{0.676ms} = 11.094\; notification\; packets\; per\; conneciton\; interval
@@ -690,7 +690,7 @@ It comes down to the application, as having the application on an off-chip MCU m
 
 For development purposes the Arduino family of development boards, which sport many different processors seem like an excellent for development. These processors have many features such as GPIO, inbuilt ADCs, dedicated SPI pins, etc. Further, there is an extensive documentation, large knowledge base and a very active on-line forum. Of particular interest are the earlier Arduino models which utilise the very low power Atmel 8-bit family of processors. A further plus is that these processors are available in both DIP and SMT packages, meaning they are suitable breadboard prototyping. The ATMega328 seems like a particularly good choice, as a balance between support, power and simplicity. 
 
-Currently, Texas Instrument's SensorTag have been investigated along with Nordic semiconductors nRF8001. The former is a \ac{SoC} solution while the latter only implements the host and controller layers. Implementing an application layer is no small feat, and fortunately it was possible to make contact with someone who has developed libraries to drive the chip using an Arduino micro-controller. Please see the section titled Experimentation and Current  for more information.
+Currently, Texas Instrument's SensorTag have been investigated along with \ac{NS}'s nRF8001. The former is a \ac{SoC} solution while the latter only implements the host and controller layers. Implementing an application layer is no small feat, and fortunately it was possible to make contact with someone who has developed libraries to drive the chip using an Arduino micro-controller. Please see the section titled Experimentation and Current  for more information.
 
 Currently the general feeling is towards using an Arduino micro controller simply due to the ease and rapid nature of development. Some components (an particular ADC and the nRF8001) have been tested and confirmed to work with the device.
 
@@ -976,7 +976,11 @@ typedef struct
 	\label{fig:regs}
 \end{figure}
 
-To communicate with the off-chip \ac{ADC}, the I2C bus was used. The data sheet for the \ac{ADC} (AD7997) \cite{ad7997} shows the device has 3 modes of operation. Mode 1 uses edge triggering on the CONVST pin to begin a conversion. Mode 2, known as command mode allows a conversion to occur from a command sent over the I2C bus. The third and final mode is automatic cycle interval, which will cause the \ac{ADC} to power up and take measurements periodically. At the time of writing, the current implementation uses the 2nd mode, whereby the a master write to the slave causes a conversion to begin, which is read back. The master configures the channel map within a register by writing the address first to the address register, referencing the correct register from the register file, then writing two bytes of data. Listing~\ref{lst:adc} shows the configuration of channels for the \ac{ADC} over the I2C bus, and can be visualised from \ref{fig:waveform}.
+To communicate with the off-chip \ac{ADC}, the I2C bus was used. The data sheet for the \ac{ADC} (AD7997) \cite{ad7997} shows the device has 3 modes of operation. Mode 1 uses edge triggering on the CONVST pin to begin a conversion. Mode 2, known as command mode allows a conversion to occur from a command sent over the I2C bus. The third and final mode is automatic cycle interval, which will cause the \ac{ADC} to power up and take measurements periodically. At the time of writing, the current implementation uses the 2nd mode, whereby the a master write to the slave causes a conversion to begin, which is read back. 
+
+
+---------------------
+The general mechanism for communicating with the \ac{AD7997} over the I2C bus is to begin a connection by sending out an address on the serial bus (serial addressing). Once the device acknowledges, a start command the selected register of the \ac{ADC} can be read or written to, but not both within the operation (serial addressing must be done again). For the project, The master configures the channel map within a register by writing the address first to the address register, referencing the correct register from the register file, then writing two bytes of data. Listing~\ref{lst:adc} shows the configuration of channels for the \ac{ADC} over the I2C bus, and can be visualised from \ref{fig:waveform}.
 
 
 \begin{lstlisting}[language=C, caption=ADC I2C bus channel map configuration,label={lst:adc}]
@@ -1044,7 +1048,7 @@ The high level tablet application was written for Microsoft's .NET framework pla
 
 The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows a \ac{GUI} to be highly flexible. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy consumption and manageability. This is subtly difference from the controller, which tells the view what to display and when. An example of the View-Model would be a collection (e.g. a list of \ac{EEG} measurements), that when mutated, automatically update the \ac{GUI}. In the context of \ac{XAML} and \ac{MVVM}, this is known as data binding, and allows the View to easily consume the model.
 
-In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acqusition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often associated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 moethd is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian). The eegChannels data member contains . However, the method eegNotification can be used to provide direct access to the incoming notifications, acting as the callback from notification events
+In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acquisition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often associated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 method is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian). The eegChannels data member contains . However, the method eegNotification can be used to provide direct access to the incoming notifications, acting as the callback from notification events
 
 \begin{figure}[htb]
 	\begin{center}
@@ -1062,7 +1066,7 @@ In the context of a \ac{BLE} service, the \ac{EEG} service is described by the d
 	\label{fig:classdiagram}
 \end{figure}
 
-The GenericAttributeNamespace provided by the .NET framework only provides functionality on the work at the \ac{ATT} level. The mechanism for interfacing with the \ac{BLE} devices to to enumerate all connected devices then filter on the short \ac{UUID}. Connected devices are devices connected outside of the application (i.e. through the Windows OS bluetooth settings from control pannel - Figures~\ref{fig:connecting},~\ref{fig:dvcmgr}. This will return objects for all devices with a service matching that of the short \ac{UUID}. These objects can be further queries to find characteristics belong to this service along with the properties (read, write, indicate or notify). It then possible to read, write or assigned event callbacks from these characteristics. Attempt to write to a read only characteristic will result in an access denied, which will need to be handled to prevent program termination.  
+The GenericAttributeNamespace provided by the .NET framework only provides functionality on the work at the \ac{ATT} level. The mechanism for interfacing with the \ac{BLE} devices to to enumerate all connected devices then filter on the short \ac{UUID}. Connected devices are devices connected outside of the application (i.e. through the Windows OS Bluetooth settings from control panel - Figures~\ref{fig:connecting},~\ref{fig:dvcmgr}. This will return objects for all devices with a service matching that of the short \ac{UUID}. These objects can be further queried to find characteristics belong to this service along with the properties (read, write, indicate or notify). It is then possible to read, write or assign event callbacks from these characteristics. Attempting to write to a read only characteristic will result in an access denied, which will need to be handled to prevent program termination.  
 
 %cba to get c# print, c++ will do
 \begin{lstlisting}[language=C++, caption=Connecting to a \ac{BLE} device's \ac{EEG} service ,label={lst:csharpeble}]
@@ -1190,7 +1194,7 @@ An issue was found whereby at higher throughputs, the order in which notificatio
 
 \subsection{Throughput}
 
-In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tactic. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1$\%$. This remainder changes with the \ac{CI} and in the worst case, just less than a whole packet fits into the remaining space. The profile which desrcibes the "remainder" packets is formally written as
+In the sole pursuit of maximizing throughput, the idea to try and pack as many notifications into a \ac{CE} is a superficial tactic. Taking the smallest \ac{CI} of 7.5ms, upto $\frac{7500}{676} = 11.094675$ packets can fit into this interval. This 0.094675 remainder may seem small, and indeed equates to only 13 packets lost of the maximum throughput within a second, thus reducing the total throughput by less than 1$\%$. This remainder changes with the \ac{CI} and in the worst case, just less than a whole packet fits into the remaining space. The profile which describes the "remainder" packets is formally written as
 
 \begin{displaymath}
  \frac{1250\times x}{676}  - \floor{ \frac{1250\times x}{676}}
@@ -1223,7 +1227,7 @@ This produces an expression for the maximum throughput against \ac{CI}, shown gr
 	\label{fig:throughput}
 \end{figure}
 
-The throughput tends assymtopically to the maximum of 236.686 kbps, and min to max throughput is above 7$\%$. To investigate how the theoretical maximum profile compares to the actual in practice, a test harness was created to investigate the relationship between throughput and \ac{CI}. The test harness writes to the \ac{GAP} characteristics the desired \ac{CI} then takes a measurement of average throughput over a few minutes. It then moves onto another \ac{CI} and does the same thing. This is called a test set. Sets are repeated a desired number of times (atleast 3) and averaged as it was found that there is a variation between sets. The results produced the profile shown in Figure~\ref{fig:civsdatarate}.
+The throughput tends asymptotically to the maximum of 236.686 kbps, and min to max throughput is above 7$\%$. To investigate how the theoretical maximum profile compares to the actual in practice, a test harness was created to investigate the relationship between throughput and \ac{CI}. The test harness writes to the \ac{GAP} characteristics the desired \ac{CI} then takes a measurement of average throughput over a few minutes. It then moves onto another \ac{CI} and does the same thing. This is called a test set. Sets are repeated a desired number of times (at least 3) and averaged as it was found that there is a variation between sets. The results produced the profile shown in Figure~\ref{fig:civsdatarate}.
 
 
 
@@ -1235,7 +1239,7 @@ The throughput tends assymtopically to the maximum of 236.686 kbps, and min to m
 	\label{fig:civsdatarate}
 \end{figure}
 
-It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s. An more analytic approach is shown in a 2011 IEEE communications letter \cite{Gomez2011}, however does not take into account the remainder problem, showing it's possible to achieve 236.7kbit/s with a 7.5ms \ac{CI}. It does show, however, that under high \ac{BER}s, a lower connection interval is the best strategy (Figure~\ref{fig:ber}.
+It was found that the optimum throughput did not exist at the longest connection interval. Rather, the profile appears have a single peaked platykurtic shape. The specification requires that during a \ac{CE}, transmission errors (e.g. a CRC error), should cause the devices to "give up", power down and wait until the next interval to begin communicating again. This means that while longer \ac{CI}s have marginally more throughput,  there exists a trade off between the \ac{CI} and risk of premature link termination. Figures~\ref{fig:2sec}, ~\ref{fig:lowcierrors} shows packet waveforms for short and long \ac{CI}. These were captured through use of a shunt resistor (see \ref{Power Analysis}). It can be seen that the longer \ac{CI} intervals are prematurely terminated much more frequently than the shorter \ac{CI}s. It is proposed that this exists because all communications takes place on the same channel during a single \ac{CE}. In the subsequent \ac{CE} the channel channel. For longer \ac{CI}s, the chance of interference on that channel increases, while this is vice versa for shorter \ac{CI}s. An more analytic approach is shown in a 2011 IEEE communications letter \cite{Gomez2011}, however does not take into account the remainder problem, showing it's possible to achieve 236.7kbit/s with a 7.5ms \ac{CI}. It does show, however, that under a high \ac{BER}, a lower connection interval is the best strategy (Figure~\ref{fig:ber}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -1245,7 +1249,7 @@ It was found that the optimum throughput did not exist at the longest connection
 	\label{fig:ber}
 \end{figure}
 
-Radio interference can described as a Poisson process, whereby radio interference is an event occuring randomly in time. This shape will change depending on the conditions of the environment the radio is used in. Therefore, the task of achieving the highest throughput collapses to being able to discover this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system to find the local maximum. Investigating the range of variation between different radio environments may be an interesting piece of further work. 
+Radio interference can described as a Poisson process, whereby radio interference is an event occurring randomly in time. This shape will change depending on the conditions of the environment the radio is used in. Therefore, the task of achieving the highest throughput collapses to being able to discover this profile. In practice this can be achieved by sampling throughput against \ac{CI} using a feedback system to find the local maximum. Investigating the range of variation between different radio environments may be an interesting piece of further work. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -1260,7 +1264,7 @@ Radio interference can described as a Poisson process, whereby radio interferenc
 	\begin{center}
 		\includegraphics[width = \textwidth]{lowcierrors}
 	\end{center}
-	\caption{}
+	\caption{\ac{CE}s with low \ac{CI}s exhibit premature termination far less than those with higher \ac{CI}s. Further, when premature termination occurs, it lasts for a shorter period as the next \ac{CE} is on average, closer in time}
 	\label{fig:lowcierrors}
 \end{figure}
 
@@ -1326,7 +1330,7 @@ From the background and literature review, most systems are only concerned with 
 
 
 
- Many devices restrict how many packets per \ac{CE} can be received, constraining the system further, and in such cases, having a smaller \ac{CI} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. Many andriod devices have also have restrictions on the number of packets processed. At 6 packets per \ac{CE}, and 7.5ms \ac{CI}, the throughput achievable is 128 kbit/s, which is theoretically just enough bandwidth to support 16 channels with an 8 bit resolution at 1000 Hz.
+ Many devices restrict how many packets per \ac{CE} can be received, constraining the system further, and in such cases, having a smaller \ac{CI} is of benefit. The iPhone was observed to allow, on average only 6 packets per \ac{CE} and limit the \ac{CI} to a minimum of 30ms. From the Apple developer guidelines, it is possible to reduce this interval to 20ms. Many Android devices have also have restrictions on the number of packets processed. At 6 packets per \ac{CE}, and 7.5ms \ac{CI}, the throughput achievable is 128 kbit/s, which is theoretically just enough bandwidth to support 16 channels with an 8 bit resolution at 1000 Hz.
 
 Ultimately, to maximize throughput it is important to choose a \ac{CI} for the trade off between \ac{CE} notification packing wastage, risk of premature \ac{CE} termination, latency and data integrity. The choice will further be constrained if \ac{BLE} devices are limited by the number of packets per \ac{CE}. It is believed this limitation arises from the firmware of the device as permits simpler firmware and manufacturers do not consider the use case of maximising throughput significant as there are other technologies out there. From the work above,the CSR1010 was found capable of achieving over 91% of the theoretical maximum. 
 
@@ -1358,17 +1362,9 @@ Firstly, the power usage of the just the radio was performed (the ADCs were disc
 	\label{fig:adv}
 \end{figure}
 
-It can be seen from Figure~\ref{adc} that the measured voltage is 150mV. This corresponds to 15mA, approximately what the data sheet claimed. This respresents an instaneous power of 45mW. As mentioned previously, the advertising state of the system happens so infrequently that the long run cost is considered zero, hence the power analysis presented here does not include information from the advertising state.
+It can be seen from Figure~\ref{adv} that the measured voltage is 150mV. This corresponds to 15mA, approximately what the data sheet claimed. This represents an instantaneous power of 45mW. As mentioned previously, the advertising state of the system happens so infrequently that the long run cost is considered zero, hence the power analysis presented here does not include information from the advertising state (although \cite{Liu2012} seems to provide a good starting point for those interested). Interestingly, the highest peak current is measured when the device is advertising, presumably as the device is broadcasting on 3 channels, rather than just one, as once a connection has been established. 
 
-\ac{CE}s where no data other than correspondance (that the link was still alive), measured a peak current consumption less than 12mA. The \ac{CE} can be divided into sections. The device wakes up approximately 2 milliseconds before transmission, remains idle, then listens/transmits (receive before transmission first for the slave device), before 
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width = 0.9\textwidth]{ce}
-	\end{center}
-	\caption{Connection events - connection interval set at 1 second with a slave latency of 0 (3.3 volt supply)}
-	\label{fig:ce}
-\end{figure}
+\ac{CE}s where no data other than correspondence packets to keep the link alive, measured a peak current consumption less than 12mA at 3V. The \ac{CE} can be divided into sections - the device wakes up approximately 2 milliseconds before transmission, remains idle, then listens/transmits (receipt of information before transmission occurs first for the slave device). 
 
 \begin{figure}[H]
 	\begin{center}
@@ -1379,11 +1375,19 @@ It can be seen from Figure~\ref{adc} that the measured voltage is 150mV. This co
 \end{figure}
 
 
- To investigate the "base" power consumption the device requires, that is the power consumption required to maintain a connection indefinately. The data was logged and using an oscilloscope and saved to disk for later analysis. It was noticed that when the chip went into a deep sleep (inbetween connection events), the minimum value the scope recorded was negative. To adjust for this the absolute of the minimum value was added to the whole current vector. This will bring the minimum consumption to 0, however this is still not correct as the device will consume a small amount of power in deep sleep. To correct to this, the data sheet value of 5$\mu$A was taken and applied to current vector. 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{ce}
+	\end{center}
+	\caption{Connection events - connection interval set at 1 second with a slave latency of 0 (3.3 volt supply)}
+	\label{fig:ce}
+\end{figure}
 
-To calculate the power consumption the trapezium rule is used to find the area under the profile. For 2.8V the area found under the curve equals. This area represents the current consumption in milli-amp-hours for a single \ac{CE} with spacing either side to tesselate with the next \ac{CE}. For each \ac{CE}, a total of 2.69mA is consumed.  To convert this to the current consumption in units milli-amp-hour not per connection event, the number is multiplied by the number of connection events (set by the connection interval) within an hour period, and divded through by the number of milliseconds in an hour to convert the time units (the x-axis in Figure~\ref{fig:icur2.8} is in milliseconds). 
+To investigate further the power consumption, the data was logged and using an oscilloscope, saved to disk for later analysis. It was noticed that when the chip went into a deep sleep (in between \ac{CE}s), the minimum value the scope recorded was negative. To adjust for this the absolute of the minimum value was added to the whole current vector. This will bring the minimum consumption to 0, however this is still not correct as the device will consume a small amount of power in deep sleep. To correct for this, the data sheet value of 5$\mu$A was taken and applied to the current vector. 
 
-Below shows the corrections and current consumption script for MATLAB. 
+To calculate the power consumption the trapezium rule is used to find the area under the profile. For 2.8V the area found under the curve equals. This area represents the current consumption in milli-amp-hours for a single \ac{CE} with spacing either side to tessellate with the next \ac{CE}. For each \ac{CE}, a total of 2.69mA is consumed.  To convert this to the current consumption in units milli-amp-hour not per connection event, the number is multiplied by the number of connection events (set by the connection interval) within an hour period, and divided through by the number of milliseconds in an hour to convert the time units (the x-axis in Figure~\ref{fig:icur2.8} is in milliseconds). 
+
+Below shows the corrections and simple current consumption correction script for MATLAB. 
 
 \begin{lstlisting}
 current = Volt / 10; %adjust voltage to current (divide by 10 as 10 ohm shunt resistor)
@@ -1406,34 +1410,94 @@ This is more accurate in producing profiles where at sleep time, the current is 
 	\label{fig:icur2.8}
 \end{figure}
 
-This 2.69mA or (7.532mW power for all voltages) is the "base" amount, which must be at least consumed every time data the slave communicates. The rush current and idle time represents a fixed cost associated with communicating with the master, and to achieve a higher economical value of energy for a given throughput, this fixed cost needs to be amortised as much as. possible. If running at a high data rate, that is, where packets are sent one after another, this rush current becomes negligible.  
+%This 2.69mA or (7.532mW power for all voltages) is the "base" amount, which must be at least consumed every time data the slave communicates.
+ The rush current and idle time represents a fixed cost associated with communicating with the master, and to achieve a higher economical value of energy for a given throughput, this fixed cost needs to be amortised as much as possible. If running at a high data rate, that is, where packets are sent one after another, this rush current becomes negligible.  
 
-
-At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per connection interval. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} and marginally increasing the power consumption. This 
-
-When operating at the highest achieved throughput (~215kbps), the total charge the device consumed is approximately 13.1mAh at 2.8V, or 36.8mWh. Two batteries of 1.4V each 620mAh in capacity, can in theory keep the system running for over 90 hours, or just less than 4 days of continuous use. Unfortunately, there will likely be a voltage drop as the incumbent charge decreases and hence current will increase to maintain power delivery, accelerating the discharge rate.
-
+It was found that \ac{TI} had prepared a document \cite{bleti} in estimating power consumption. The graphs captured showed straight lines, unlike that above. \ac{TI} used a smaller resistor (0.47 ohm), and after replacing the 10ohm by a 1 ohm, (lowest available), the shape of the waveform became more square, implying an RC filter was being constructed. Unfortunately, the amplitude of the signal decreases and becomes closer to the noise boundary. There exists a trade off between the truthfulness of the measured waveform against the relative amount of noise. From this point forwards, unless otherwise stated, the listed power measurements are using a 1 ohm shunt.
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{60msci}
 	\end{center}
-	\caption{Connection event (2.3 volt supply)}
+	\caption{Connection event (2.8 volt supply)}
 	\label{fig:60msci}
+\end{figure}
+
+When operating at the highest achieved throughput (~215kbps), the total charge the device consumed is approximately 14.04mAh at 2.8V, or 39.3mWh. Two batteries of 1.4V each 620mAh in capacity, can in theory keep the system running for over 88 hours, or over 3.6 days of continuous use. Unfortunately, there will likely be a voltage drop as the incumbent charge decreases and hence current will increase to maintain charge delivery, accelerating the discharge rate.
+
+%\begin{lstlisting}
+%cumtrapz(time(420:1019), cur(420:1019)*100)*60000/3600
+%\end{lstlisting}
+
+To improve the power model further, values were taken for the peak and trough current consumption were read of the 1 ohm shunt waveform (Figures~ref{fig:length},~\ref{fig:lengthpkt} show better approximations for the current along with the packet length). The total number of packets counted per \ac{CE} for 60ms was 86, meaning approximately 1.7ms are spare ($60ms - 86 \times 0.676\mu s$) per \ac{CE}, mentioned in the \ref{Throughput} section as a device limitation. With no premature \ac{CE} termination, this should give a data rate of 230kbps, however, only an average of 213 kbps has been recorded, however for simplicity, the power analysis will assume all \ac{CE}s have no premature termination.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{length}
+	\end{center}
+	\caption{Cursor time delta shows full 20 byte notification packet length}
+	\label{fig:length}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{lengthpkt}
+	\end{center}
+	\caption{Cursor time delta shows round trip length}
+	\label{fig:lengthpkt}
+\end{figure}
+
+The values taken were 16.6mA for the radio transmission or reception, and 2.64mA for the periods in between the transmission and reception. The times allocated to these periods are the standard times presented previously, and measured from the waveform in micro seconds. The area under the profile generated by current and time plot is the consumption per 20 byte notification (Figure~\ref{fig:model}). For a single \ac{CE} of \ac{CI} 60ms, the calculated current consumed is multiplied by 86. There is also 1.76ms present at the end of every \ac{CE}, which also consumes power. Factoring this in, the whole model must be converted into hours. For a \ac{CI} of 60ms, there will be 60000 \ac{CE} events in one hour, hence the simple model can be calculated in a single line MATLAB command:
+
+\begin{lstlisting}
+cumtrapz(x_time_in_us/(3600*1000000), y_current)*60000*86 + (60000*1760/(3600*1000000))
+\end{lstlisting}
+
+where $x\_time\_in\_us$ is the x-axis and y\_current the y axis in Figure~\ref{fig:model}.
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{model}
+	\end{center}
+	\caption{Simple power model for a single full 20 byte notification}
+	\label{fig:model}
+\end{figure}
+
+
+Using this new model end result is a current consumption of 10.12 mAh, which contrasts the 14.04mAh measured with the 1ohm shunt and the 13.1 mAh measured with the 10 ohm shunt. This is a fair amount of variation. Another thing to consider is the \ac{ADC} consumption, which is approximately 1$\mu$A while powered down, but 1mA when converting. Figure~\ref{fig:adcpower} shows the chip powering up to communicate with the \ac{ADC} for a 25Hz acquisition rate (slow rate chosen for illustration). It is difficult to measure the \ac{ADC} current as it's only 1mA, which is 1mV. The \ac{ADC} current will never dominate as even if it was operating at higher frequencies over many channels, more data would be converted, but then sent, pushing the data rate and henec power consumption due to the radio up. If the \ac{ADC} is operating at frequencies greater than approximately 450 Hz (calculated from the 2.2ms wake up time of the chip), then the \ac{ADC} should remain powered on at all times. In such circumstance, 1mA is assumed to be constantly drawn by the \ac{ADC}. This threshold frequency will further be reduced due to the rush current (fixed cost) payed. As there are two \ac{ADC}s, this brings worst case current consumption of the entire system to approximately15mAh.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{adcpower}
+	\end{center}
+	\caption{At 25Hz, the chip powers up every 40ms to communicated with the \ac{ADC} and take a measurement}. 
+	\label{fig:adcpower}
 \end{figure}
 
 %\begin{lstlisting}
 %currentConsumption = cumtrapz(x, current*1000)*(1/(max(x)-min(x))) mAh
 %\end{lstlisting}
-
-The energy per bit at this throughput is 
-
 %currentConsumption = cumtrapz(x, current*1000)*(1/(max(x)-min(x))) mAh
 
+The energy per bit at this throughput is 
 
 Contrasting this to \ac{BTC}
 
 The idea of minimising energy per bit is not the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. To achieve the lowest energy per bit, the transmission rate needs to be at the highest throughput achievable on the hardware due to the fixed costs or sunk costs of waking the \ac{MCU} and preparing the device for radio transmission. However, consistently running at such throughput invalidates the use case for \ac{BLE}, as there are other technologies capable of transmitting at the same or higher throughputs for smaller energy requirements (e.g. \ac{BTC})
+
+
+At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per connection interval. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} which marginally increases the power consumption. 
+
+Finally, a brief mention of the \ac{ADC}
+
+
+
+
+
+
+
+
 
 
 \subsection{Device}
@@ -1448,7 +1512,7 @@ The layout can be shrunk further through reducing distances between components. 
 
 \subsection{Bill of materials}
 
-The cost of building the system, including no price breaks and sourcing from standard online suppliers such as Farnell, RS-Components, rapid online, etc.
+The cost of building the system, including no price breaks and sourcing from standard on-line suppliers such as Farnell, RS-Components,Rapid, etc.
 
 \begin{table}[H]
 \centering
@@ -1468,7 +1532,7 @@ As the number produced increases, the marginal cost will decrease and production
 \clearpage 
 \section{Conclusions and Future Work}
 
-This report and project has demonstrated that for a certain setups \ac{BLE} is a suitable technology for \ac{EEG} transmission. As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}. At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. A requirement of the device was the ability to capture and send 10kHz of data, requiring 80 kbps for a single channel at 8 bit upto 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all channels is 16 channels is approximately 1.6kHz, meaning a single upto around 800Hz per channel can be accurately measured as per the Nyquist condition. 
+This report and project has demonstrated that for a certain setups \ac{BLE} is a suitable technology for \ac{EEG} transmission. As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}. At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. A requirement of the device was the ability to capture and send 10kHz of data, requiring 80 kbps for a single channel at 8 bit up to 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all channels is 16 channels is approximately 1.6kHz, meaning a single up to around 800Hz per channel can be accurately measured as per the Nyquist condition. 
 
 Mention power here (finish up power analysis)
 find point of indifference between bl and ble
@@ -1499,26 +1563,25 @@ Despite over 3 weeks in waiting, the battery connectors sources from the United 
 
 As mentioned in the ref{Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable biomedical journal. 
 
-Future work stemming from this project includes investigating how the profile changes in different radio enviroments (e.g. increasing \ac{BER}). Gomez's\cite{Gomez2011} paper contains a throughput investigation in a 
+Future work stemming from this project includes investigating how the profile changes in different radio environments (e.g. increasing \ac{BER}). Gomez's\cite{Gomez2011} paper contains a throughput investigation in a 
 
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance
 Useful for CSR, monies worth out of me
 
 \begin{itemize}
-	\item Git verisioning control - For versioning and segmenting the workflow
+	\item Git versioning control - For versioning and segmenting the work flow
 	\item xIDE - CSRs integrated development suite for compiling and debugging CSR-stack based chips. This is where the firmware for the CSR1010 MCU was written
-	\item Wireshark - Invaluable in analysing the packets and control flow between BLE radios, unfortunately must be used offline
+	\item Wireshark - Invaluable in analysing the packets and control flow between BLE radios, unfortunately must be used off-line
 	\item SmartRF online packet sniffer - Useful as a low-speed packet sniffer. Extremely useful in the early days of the project, however the throughputs eventually obtained rendered the tool and hardware redundant as it was not capable of such speeds
-	\item Visual Studio 2013 - Primairly used for developing the tablet application. Highly useful for "knocking up" quick throughput expirements 
+	\item Visual Studio 2013 - Primarily used for developing the tablet application. Highly useful for "knocking up" quick throughput experiments 
 	\item Schematic capture and \ac{PCB} layout using EagleCAD software
 \end{itemize}
 
-The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it publically available online at the git repositry address 
+The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it publicly available on-line at the git repository address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
 \clearpage
 \section{Bibliography}
-\clearpage
 
 \nocite{*}
 
@@ -1527,7 +1590,7 @@ The large amount of both written and generated code is to vast to warrant being 
 \section{Appendix}
 Add final schematic
 Add final board
-
+Add older schem designs/boards
 
 \subsection{Acronyms}
 \begin{acronym}
@@ -1552,7 +1615,7 @@ Add final board
 	\acro{NESN}{Next Expected Sequence Number}
 	\acro{LOS}{line of sight}
 	\acro{SoC}{system on chip}
-	\acro{MCU}{microcontroller}
+	\acro{MCU}{micro-controller}
 	\acro{API}{application programming interface}
 	\acro{IDE}{integrated development environment}
 	\acro{OSAL}{operating system abstraction layer}
@@ -1581,6 +1644,7 @@ Add final board
 	\acro{ECG}{electrocardiogram}
 	\acro{CAD}{computer aided design}
 	\acro{RISC}{reduced instruction set computing}
+	\acro{BER}{bit error rate}
 \end{acronym} 
 \clearpage
 \section{User Guide}

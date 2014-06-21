@@ -37,6 +37,25 @@
   \endverb
 \endentry
 
+\entry{btspec}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {\ac{SIG}}{a.}%
+     {Bluetooth}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{aB1}
+  \strng{fullhash}{aB1}
+  \field{sortinit}{A}
+  \field{title}{Bluetooth Core Specification 4.1}
+  \verb{url}
+  \verb https://www.bluetooth.org/en-us/specification/adopted-specifications
+  \endverb
+  \field{year}{2013}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
 \entry{Antoniol1997}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -604,6 +623,24 @@
   \field{year}{2011}
 \endentry
 
+\entry{bleti}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Instruments}{I.}%
+     {Texas}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{IT1}
+  \strng{fullhash}{IT1}
+  \field{sortinit}{I}
+  \field{title}{Measuring Bluetooth Low Energy Power Consumption}
+  \verb{url}
+  \verb http://www.ti.com/lit/an/swra347a/swra347a.pdf
+  \endverb
+  \field{year}{2012}
+\endentry
+
 \entry{overlapproc}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -640,6 +677,55 @@
   \field{howpublished}{\url{https://github.com/guanix/arduinonrf8001}}
   \field{title}{nRF8001 support for Arduino}
   \field{year}{2013}
+\endentry
+
+\entry{Liu2012}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Liu}{L.}%
+     {Jia}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chen}{C.}%
+     {Canfeng}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ma}{M.}%
+     {Yan}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Bluetooth Low Energy,neighbor discovery,wireless body area networks}
+  \strng{namehash}{LJCCMY1}
+  \strng{fullhash}{LJCCMY1}
+  \field{sortinit}{L}
+  \field{abstract}{%
+  Bluetooth Low Energy (BLE) is a newly emerged technology targeting at
+  low-power, low-cost wireless communications within medium or short range.
+  Since BLE is well designed in favor of Wireless Body Area Networks (WBANs) or
+  Wireless Personal Area Networks (WPANs), fast network access has been
+  considered an important issue for users. This paper studies the performance
+  about BLE device discovery particularly with multiple devices. An analytical
+  model is developed, based on classical ALOHA analysis, in consideration of
+  three advertising channels of BLE. In addition, an enhanced mechanism is
+  proposed enabling BLE scanner/initiator to learn the network contention and
+  adjust parameters accordingly, so as to achieve lower latency. Through
+  extensive simulations, the model has been validated highly accurate, and the
+  proposed mechanism has shown its effectiveness in reducing unexpected long
+  latency in crowd BLE networks.%
+  }
+  \verb{doi}
+  \verb 10.1109/LCOMM.2012.073112.120877
+  \endverb
+  \field{isbn}{9781467363372}
+  \field{issn}{10897798}
+  \field{pages}{1439\bibrangedash 1441}
+  \field{title}{{Modeling neighbor discovery in Bluetooth Low Energy networks}}
+  \field{volume}{16}
+  \field{journaltitle}{IEEE Communications Letters}
+  \field{year}{2012}
 \endentry
 
 \entry{MacKensen2012}{inproceedings}{}

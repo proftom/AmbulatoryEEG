@@ -34,7 +34,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Batteries}{31}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Microcontroller}{33}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Micro-controller}{33}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4}Memory}{34}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
@@ -60,18 +60,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2}Power Analysis}{68}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Device}{73}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.3}Device}{75}{subsection.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Bill of materials}{73}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.4}Bill of materials}{76}{subsection.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Conclusions and Future Work}{74}{section.8}
+\contentsline {section}{\numberline {8}Conclusions and Future Work}{77}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Final Remarks}{75}{section.9}
+\contentsline {section}{\numberline {9}Final Remarks}{78}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Bibliography}{76}{section.10}
+\contentsline {section}{\numberline {10}Bibliography}{79}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Appendix}{79}{section.11}
+\contentsline {section}{\numberline {11}Appendix}{81}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Acronyms}{79}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.1}Acronyms}{81}{subsection.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}User Guide}{81}{section.12}
+\contentsline {section}{\numberline {12}User Guide}{84}{section.12}

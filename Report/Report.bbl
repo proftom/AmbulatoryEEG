@@ -866,6 +866,24 @@
   \field{year}{2010}
 \endentry
 
+\entry{hearaid}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Oticon}{O.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{O1}
+  \strng{fullhash}{O1}
+  \field{sortinit}{O}
+  \field{title}{Oticon Agil hearing aid product information}
+  \verb{url}
+  \verb http://www.oticon.com/~asset/cache.ashx?id=10915&type=14&format=web
+  \endverb
+  \field{year}{2012}
+\endentry
+
 \entry{Peng2011}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
@@ -979,6 +997,25 @@
   \field{volume}{1}
   \field{journaltitle}{Epilepsy and Behavior Case Reports}
   \field{year}{2013}
+\endentry
+
+\entry{roy}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Roy~Friedman}{R.~F.}%
+     {Yevgeny~Krivolapov}{Y.~K.}%
+     {}{}%
+     {Alex~Kogan}{A.~K.}}%
+  }
+  \strng{namehash}{RFAKYK1}
+  \strng{fullhash}{RFAKYK1}
+  \field{sortinit}{R}
+  \field{title}{On Power and Throughput Tradeoffs of WiFi and Bluetooth in
+  Smartphones}
+  \verb{url}
+  \verb http://www.cs.technion.ac.il/~sakogan/papers/infocom11.pdf
+  \endverb
+  \field{year}{2011}
 \endentry
 
 \entry{power}{misc}{}

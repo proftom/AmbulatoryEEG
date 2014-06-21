@@ -916,7 +916,7 @@ Each service and characteristic requires a \ac{UUID}, which is a string of 128 b
 
 When the program is compiled the GATT data flat file is translated into a managed binary data structure and the tool chain creates events that can be referenced in the C-program. For example, EEG\_ACQUISITION\_RATE is associated with the event handle HANDLE\_EEG\_ACQUISITION\_RATE, which is contained with the EEG service message pump AcqusitionHandleAccessWrite. AcqusitionHandleAccessWrite is in turn part of the more generic HandleAccessWrite that sits within the EEG service. Interestingly, this type of pattern is well suited to object oriented paradigm, however, the compiler (as with most embedded systems) was not C++ capable. 
 
-A shared data structure is used for each service provided. \ref{fig:lstlisting} shows the structure for the \ac{EEG} service. 
+A shared data structure is used for each service provided. \ref{lst:eegstruct} shows the structure for the \ac{EEG} service. 
 
 \begin{lstlisting}[language=C, caption=\ac{EEG} data structure,label={lst:eegstruct}]
 typedef struct
@@ -1052,7 +1052,7 @@ The high level tablet application was written for Microsoft's .NET framework pla
 
 The View is written in a markup language known as \ac{XAML}. This is a verbose, but rich markup that allows a \ac{GUI} to be highly flexible. It is what describes the view of the model (data) and binds to the view-model. The view-model, which is similar to the controller in the \ac{MVC} pattern is the code behind (C\#) which can be thought of as a "value converter", meaning it is tasked with exposing the model's data objects for easy consumption and manageability. This is subtly difference from the controller, which tells the view what to display and when. An example of the View-Model would be a collection (e.g. a list of \ac{EEG} measurements), that when mutated, automatically update the \ac{GUI}. In the context of \ac{XAML} and \ac{MVVM}, this is known as data binding, and allows the View to easily consume the model.
 
-In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acquisition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often associated with poor \ac{OOP} design, the use case here and simplicity makes sense. The SwapUInt16 method is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian). The eegChannels data member contains . However, the method eegNotification can be used to provide direct access to the incoming notifications, acting as the callback from notification events
+In the context of a \ac{BLE} service, the \ac{EEG} service is described by the data model shown in Figure~\ref{fig:classdiagram}. The model contains \ac{EEG} specific members such as the acquisition rate, channel map and the data for each channel. The model also contains some house cleaning members, such as the service and IsInitialised variables. As only one \ac{EEG} service can exist, it made sense to implement a singleton pattern to allow easy lifetime and access from the model to the view-model. While singletons are often associated with poor \ac{OOP} design, the simplicity afforded by their use here make sense for the implementation. The SwapUInt16 method is required when writing data back to the CSR1010, as the device word size 16 bit, with big endianess (x64 is little-endian). The eegChannels data member contains . However, the method eegNotification can be used to provide direct access to the incoming notifications, acting as the callback from notification events.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -1096,7 +1096,7 @@ The GenericAttributeNamespace provided by the .NET framework only provides funct
 The applications makes extensive use of the \ac{TPL} for a fluid and responsive \ac{GUI}. The \ac{TPL} uses asynchronous procedures to add parallelism and concurrency. This is particularly useful in this application, as the \ac{GUI} thread needs to be constantly updated from incoming data without preventing usability. Despite use of the \ac{TPL} further timing mechanisms were required to prevent interface lock up. When new data comes from the device, it will be transposed into the model. This will cause the data binding between the view and model to signal a change, meaning the view updates. Due to the high throughput, this mechanism can cause great delay, and hence, batching the updates is preferred.
 
 %cba to get c# print, c++ will do
-\begin{lstlisting}[language=C++, caption=Example batch update code ,label={lst:csharpeble}]
+\begin{lstlisting}[language=C++, caption=Batch update code (for generic types),label={lst:csharpeble}]
 
 	//For a single graph (can be called for each graph)
         private void batchUpdate(ThreadPoolTimer source)
@@ -1469,7 +1469,33 @@ where $x\_time\_in\_us$ is the x-axis and y\_current the y axis in Figure~\ref{f
 \end{figure}
 
 
-Using this new model end result is a current consumption of 10.12 mAh, which contrasts the 14.04mAh measured with the 1ohm shunt and the 13.1 mAh measured with the 10 ohm shunt. This is a fair amount of variation. Another thing to consider is the \ac{ADC} consumption, which is approximately 1$\mu$A while powered down, but 1mA when converting. Figure~\ref{fig:adcpower} shows the chip powering up to communicate with the \ac{ADC} for a 25Hz acquisition rate (slow rate chosen for illustration). It is difficult to measure the \ac{ADC} current as it's less than 1mA (0.7mA), which is less than 1mV over the shunt and shaded by noise. At all but low frequencies the \ac{ADC} current will never dominate. This is because as more data is captured more needs to be sent, pushing the data rate and henec power consumption due to the radio up. If the \ac{ADC} is operating at frequencies greater than approximately 450 Hz (calculated from the 2.2ms wake up time of the chip), then the \ac{ADC} should remain powered on at all times. In such circumstance, 1mA is assumed to be constantly drawn by the \ac{ADC}. This threshold frequency will further be reduced due to the rush current (fixed cost) payed. As there are two \ac{ADC}s, this brings worst case current consumption of the entire system to approximately 15.4mAh.
+Using this new model end result is a current consumption of 10.12 mAh, which contrasts the 14.04mAh measured with the 1ohm shunt and the 13.1 mAh measured with the 10 ohm shunt. This is a fair amount of variation. Contrasting \ac{BLE} throughput against power consumption to \ac{BTC} is an easy question, but a difficult task to comparatively measure. Unfortunately no data was available and no decent and affordable hardware was available during the project. Never the less an attempt is made to here from reviewing papers on throughput and energy consumption of \ac{BTC} devices \cite{juan} \cite{rahuli} \cite{roy} \cite{Siekkinen2012}. Unfortunately none listed measurements in the region of throughput this project is interested in, but interpolating data obtained at very low throughputs and that obtained at high throughputs, reveals that at around 200kbps, \ac{BTC} becomes more efficient (Figure~\ref{fig:powercon}). However, this should be taken lightly due to test setup, inaccuracies in the power model and lack of knowledge of \ac{BTC} operation.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{powercon}
+	\end{center}
+	\caption{Power consumption for }
+	\label{fig:powercon}
+\end{figure}
+
+Inspecting the lifetime of the system in days, reveals that a \ac{BTC} system lifetime remains fairly consistent as the acquisition rate increases. This is because the fixed cost of operating the \ac{BTC} link, known as the maintenance cost, is dominating the power consumption of \ac{BTC}. As the throughput increase \ac{BTC}'s maintenance cost is amortised sufficiently by the throughput energy consumption, so much so that it becomes more efficient that \ac{BLE}. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.9\textwidth]{lifetime}
+	\end{center}
+	\caption{Lifetime in days of system for 10 channels at a 8 bit resolution varying with the acquisition rate}. 
+	\label{fig:lifetime}
+\end{figure}
+
+%The data was calculated 
+%.000001956*3600*(3200*8/160) + (3600*floor(3200*8/floor(160*86))*1760/(3600*1000000))
+
+
+The idea of minimising energy per bit is not necessarily the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. To achieve the lowest energy per bit, the transmission rate needs to be at the highest throughput achievable on the hardware due to the fixed costs or sunk costs of waking the \ac{MCU} and preparing the device for radio transmission. However, consistently running at such throughput invalidates the use case for \ac{BLE}, as there are other technologies capable of transmitting at the same or higher throughputs for smaller energy requirements (e.g. \ac{BTC} or WiFi). 
+
+Another thing to consider is the \ac{ADC} consumption, which is approximately 1$\mu$A while powered down, but 1mA when converting. Figure~\ref{fig:adcpower} shows the chip powering up to communicate with the \ac{ADC} for a 25Hz acquisition rate (slow rate chosen for illustration). It is difficult to measure the \ac{ADC} current as it's less than 1mA (0.7mA), which is less than 1mV over the shunt and shaded by noise. At all but low frequencies the \ac{ADC} current will never dominate. This is because as more data is captured more needs to be sent, pushing the data rate and hence power consumption due to the radio up. If the \ac{ADC} is operating at frequencies greater than approximately 450 Hz (calculated from the 2.2ms wake up time of the chip), then the \ac{ADC} should remain powered on at all times. In such circumstance, 1mA is assumed to be constantly drawn by the \ac{ADC}. This threshold frequency will further be reduced due to the rush current (fixed cost) payed. As there are two \ac{ADC}s, this brings worst case current consumption of the entire system to approximately 15.4mAh.
 
 \begin{figure}[H]
 	\begin{center}
@@ -1479,22 +1505,13 @@ Using this new model end result is a current consumption of 10.12 mAh, which con
 	\label{fig:adcpower}
 \end{figure}
 
+
+
 %\begin{lstlisting}
 %currentConsumption = cumtrapz(x, current*1000)*(1/(max(x)-min(x))) mAh
 %\end{lstlisting}
 %currentConsumption = cumtrapz(x, current*1000)*(1/(max(x)-min(x))) mAh
 
-
-
-The idea of minimising energy per bit is not the true picture, as \ac{BTC} and WiFi have higher energy per bit ratios. To achieve the lowest energy per bit, the transmission rate needs to be at the highest throughput achievable on the hardware due to the fixed costs or sunk costs of waking the \ac{MCU} and preparing the device for radio transmission. However, consistently running at such throughput invalidates the use case for \ac{BLE}, as there are other technologies capable of transmitting at the same or higher throughputs for smaller energy requirements (e.g. \ac{BTC} or WiFi). 
-
-From reviewing literature on various Bluet
-Never the less an attempt is made to 
-
-Contrasting \ac{BLE} throughput against power consumption to \ac{BTC} is an easy question, but a difficult task to comparatively measure. Unfortunately no data was available and no decent and affordable hardware was available during the project. 
-
-
-.000001956*3600*(3200*8/160) + (3600*floor(3200*8/floor(160*86))*1760/(3600*1000000))
 
 At nominal operating conditions (10 channels, 8 bit resolution at 200Hz), the device must move 100 packets per \ac{CI} or 16kbps. This is very achievable and can be done within a single \ac{CI} of around 100ms. This would give about 1s of latency and require 2000 bytes of buffering. This latency can be reduced by decreasing the \ac{CI} which marginally increases the power consumption. From the graph and hand calculation, this corresponds to an consumption of 3.39mWh, or a lifetime of over 70 days. From the most suitable literature found \cite{rahuli} on \ac{BTC} power consumption, the best case power consumption for the same throughput can last around 7 days, assuming no voltage drop on the batteries. This is an order of magnitude difference and demonstrates \ac{BLE}'s suitability for traditional \ac{EEG} signals. 
 
@@ -1541,40 +1558,28 @@ As the number produced increases, the marginal cost will decrease and production
 \clearpage 
 \section{Conclusions and Future Work}
 
-This project and report has demonstrated the suitability of \ac{BLE} as a radio technology for \ac{EEG} transmission. As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}.
+This project and report has demonstrated the suitability of \ac{BLE} as a radio technology for \ac{EEG} transmission, having built and tested a working radio device capable to transmitting data equivalent to that measured of real \ac{EEG} signals. At nominal conditions, the power analysis predicts that the device can last over 70 days. The power consumption at nominal conditions is similar to that of a hearing aid device \cite{hearaid}, which also makes use of ZincAir batteries. Due to the size, weight and lifetime of the device, it is suggested the device can be considered wearable over ambulatory, as (i) ambulatory devices were traditionally larger portable pieces of equipment, (ii) wearables is the widely used word to describe personal networked devices worn on the body. 
 
- At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. This is easily achievable in the system built during this project. A requirement of the device was the ability to capture and send 10kHz of data for a single channel at 8 bit resolution. This requires 80 kbps for a single channel however, the system built is capable of transmitting up to 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all 16 channels is approximately 1.6kHz, meaning a single up to around 800Hz per channel can be accurately measured as per the Nyquist condition. 
+As the majority of interesting \ac{EEG} signals are observed at relatively low frequencies, typically in the range of 0.3 to 60Hz \cite{eeeman}, the throughput and hence the time the radio is powered up (where the vast majority of power is consumed) is small. At a 120Hz sampling rate, 8 bit resolution the required throughput is 15.36 kbps, increasing to 19.2 kbps for 10 bit resolution. This is easily achievable in the system built during this project. A requirement of the device was the ability to capture and send 10kHz of data for a single channel at 8 bit resolution. This requires 80 kbps for a single channel however, the system built is capable of transmitting up to 200 kbps for two channels at a 10 bit resolution. The maximum frequency supported by the system across all 16 channels is approximately 1.6kHz, meaning a single up to around 800Hz per channel can be accurately measured as per the Nyquist condition. 
 
 The project has further clarified the math behind the achievable throughputs, which has been found to vary in literature. The maximum achieved average throughput (approximately 213kbps) is the highest found from Internet forums to research journals. At this (full) throughput the device has over 2 days lifetime. This is a conservative estimate, and believed to actually be between 3 and 4 days, subject to a worst case average current draw of 14mA at 2.8V from two 620mAh capacity ZincAir batteries. That is to say, the device has gone far beyond the initial project requirements. Further, the total system weight (board components and batteries) is approximately 6.5grams.
 
 The achievable data rate depends on the capabilities of both ends of the link, which are out of control of the \ac{AEEG} device. It was observed that many smart phone devices could not handle more than 4 to 6 packets per \ac{CE}. The iPhone 4S for example, was found to handle on average approximately 6 packers per \ac{CE}. In the throughput section it was found that a \ac{CI} of approximately 60ms gave the highest throughput (approximately 91\% of the theoretical maximum). At approximately 6 packets per \ac{CE}, the maximum data rate achievable is 128kbps (54\% of the maximum throughput). At this figure, a sampling rate of 1000kHz per channels is achievable as the upper bound. This should be achievable in practice, as an average of 9 packets per \ac{CE} was found achievable at a \ac{CI} of 7.5ms (which is greater than 6). Nominal device operation (at 200Hz) is still very much achievable, but due to the 6 packet limitation, there will be an increase in power. This exact amount is subject to future work, as due to approximations in the power model varying to that of measured, an accurate answer is difficult to give.
 
-Ignoring constraints outside of the \ac{AEEG} devices control, to achieve high through, full size notifications (20 bytes of usable data), trade off between long \ac{CI} with marginally more throughput against risk of premature link termination. Further, the stack and application must be implemented in a way to communicate and control the dispatch of multiple notification packets per \ac{CE}. From the preliminary research the CSR1010 seemed like the only \ac{BLE} device capable of natively capable of doing this. \ac{TI}s device looks promising with a firmware soft switch and is suitable as future follow up work to this project, contrasting throughput of the CC254x against the CSR1010. Another piece of future work stemming from this project includes investigating how the profile changes in different radio environments (e.g. increasing \ac{BER}). Gomez's\cite{Gomez2011} paper contains a throughput investigation in error-prone links. 
+Ignoring constraints outside of the \ac{AEEG} devices control, to achieve high throughputs, full size notifications (20 bytes of usable data), trade off between long \ac{CI} with marginally more throughput against risk of premature link termination. Further, the stack and application must be implemented in a way to communicate and control the dispatch of multiple notification packets per \ac{CE}. From the preliminary research the CSR1010 seemed like the only \ac{BLE} device capable of natively capable of doing this. \ac{TI}s device looks promising with a firmware soft switch and is suitable as future follow up work to this project, contrasting throughput of the CC254x against the CSR1010. Another piece of future work stemming from this project includes investigating how the profile changes in different radio environments (e.g. increasing \ac{BER}). Gomez's\cite{Gomez2011} paper contains a throughput investigation in error-prone links. 
 
-Another way to improve throughput include compression techniques, for which there exists many informative resources, is use of lossless and lossy compression on \ac{EEG} data \cite{Antoniol1997} \cite{Wongsawat2006}. A foreseen issue with using compression, is that if compressed data is spread over multiple notifications, any data loss of a single notification, may result in the loss of a larger chunk of information due to the inability to decompress. 
-
-
-Mention power here (finish up power analysis)
-While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed in \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. 
-
-Comparison with TI
+Another way to improve throughput include compression techniques, for which there exists many informative resources, is use of lossless and lossy compression on \ac{EEG} data \cite{Antoniol1997} \cite{Wongsawat2006}. A foreseen issue with using compression, is that if compressed data is spread over multiple notifications, any data loss of a single notification, may result in the loss of a larger 'chunk' of information due to the dependence on the missing data to decompress the whole 'chunk' of data. 
 
  The system must power up frequently in order to communicate with the \ac{ADC} and requires 2.2ms to power up. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. Again, this is future work that may be useful when running the system at low frequencies. 
 
+While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. From the work currently done, while both \ac{BTC} and \ac{WiFI} can achieve higher energy per bit ratios, due to the higher connection maintenance cost associated with the technologies, \ac{BLE} achieves the greatest energy per bit, due to the easily amortisable connection maintenance for low throughputs (200kbps and below). 
+
+This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat.jpg}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
+
+Finally, as mentioned in the \ref{sec:Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable medical journal. 
 
 
-
-
-
-Combine with video
-
-
-This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring. Due to the size, weight and lifetime of the device, it is suggested the device can be considered wearable. At nominal conditions, the power analysis predicts that the device can last over 70 days. The power consumption at nominal conditions is similar to that of a hear aid device, which also makes use of ZincAir batteries. To make this device ready to the first patients, a front end is required along with a suitable hat for the device to be sewn into. 
-
-As mentioned in the \ref{sec:Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable biomedical journal. 
-
-
-
+\clearpage
 \section{Final Remarks}
 A vast array of technologies and tools were used throughout this project. Below highlights those that are non-trivial and were of significant importance
 Useful for CSR, monies worth out of me

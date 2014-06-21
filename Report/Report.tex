@@ -98,7 +98,7 @@ Final Year Project Report 2014\\[17pt]
 \vfill
 
 \centering
- \includegraphics[width=0.9\columnwidth,keepaspectratio]{assets/cover.jpg}
+ \includegraphics[width=0.9\columnwidth,keepaspectratio]{assets/front.png}
 
 \vfill
 
@@ -108,7 +108,7 @@ Project Title: & \textbf{A Wireless  Low Energy Ambulatory Electroencephalogram}
 Student: & \textbf{Thomas Alexander Morrison} \\[12pt]
 CID: & \textbf{00642176} \\[12pt]
 Course: & \textbf{EIE4} \\[12pt]
-Project Supervisor: & \textbf{Esther Rodriguez-Villegas} \\[12pt]
+Project Supervisor: & \textbf{Dr. Esther Rodriguez-Villegas} \\[12pt]
 Second Marker: & \textbf{Dr. Pantelis Georgiou} \\
 \end{tabular}
 \end{titlepage}
@@ -317,7 +317,7 @@ In \ac{BTC} the network topology used pico-nets, whereby one device has one mast
 	\label{fig:topology}
 \end{figure}
 
-Both BLE and BTC devices move through generic system states. The same abstract view can be applied to both technologies and is shown in. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for searching and discovering devices with no commitment to connecting. Such a use case might be suitable for devices that intermittently broadcast small amounts of information. Assuming that the master BLE device is in the initiating state, searching for a connectable device, and at the same time the BLE slave is in the advertising stage, periodically broadcasting information using advertisement packets; the two devices will find one another and may initiate a connection request.
+Both BLE and BTC devices move through generic system states. The same abstract view can be applied to both technologies and is shown in. Note that depending on the role of the device, the state moves right (master) or left (slave) from standby. It may appearing confusing to have another state for scanning which can only move into the standby state, but this is useful for searching and discovering devices with no commitment to connecting. Such a use case might be suitable for devices that intermittently broadcast small amounts of information. Assuming that the master BLE device is in the initiating state, searching for a connectible device, and at the same time the BLE slave is in the advertising stage, periodically broadcasting information using advertisement packets; the two devices will find one another and may initiate a connection request.
 
 \begin{figure}[h]
 	\begin{center}
@@ -355,7 +355,7 @@ Figure~\ref{fig:connection} shows a connection between two devices being initiat
 
 \end{itemize}
 
-It is highlighted that (at least initally) the slave interval is 0, meaning the slave should wake up every \ac{CE}. In packets numbers 243 and 244, the slave and master respectively have nothing to send, and simply acknowledge on another with an empty \ac{PDU}. The protocol realises flow control through the the lazy acknowledgment of \ac{SN} and \ac{NESN} bits, embedded into the header of every data channel.
+It is highlighted that (at least initially) the slave interval is 0, meaning the slave should wake up every \ac{CE}. In packets numbers 243 and 244, the slave and master respectively have nothing to send, and simply acknowledge on another with an empty \ac{PDU}. The protocol realises flow control through the the lazy acknowledgment of \ac{SN} and \ac{NESN} bits, embedded into the header of every data channel.
 
 \begin{figure}[!h]
 	\begin{center}
@@ -491,7 +491,7 @@ With 16 channels at an 8 bit resolution, the highest frequency measurable (accor
 A maximum support frequency running a solo channel is approximately 1328 Hz.
 
 \subsubsection{nRF51822}
-Another \ac{NS} product tested was the nRF51822. Information on the suppport packets per connection event was also not present in the datasheet\cite{nrf51822}. This device was found capable of receiving up to 6 packets per second, and this was verified by an engineer\cite{olme}. While a marked improvement over the nRF8001, this meant that the device was only capable of operating at 60\% of the maximum throughput capable as claimed in the specification. The maximum support frequency per channel for 16 channels at 8 bits resolution is 500Hz.
+Another \ac{NS} product tested was the nRF51822. Information on the suppport packets per connection event was also not present in the data sheet\cite{nrf51822}. This device was found capable of receiving up to 6 packets per second, and this was verified by an engineer\cite{olme}. While a marked improvement over the nRF8001, this meant that the device was only capable of operating at 60\% of the maximum throughput capable as claimed in the specification. The maximum support frequency per channel for 16 channels at 8 bits resolution is 500Hz.
 
 \clearpage
 
@@ -1502,7 +1502,7 @@ The values taken were 16.6mA for the radio transmission or reception, and 2.64mA
 cumtrapz(x_time_in_us/(3600*1000000), y_current)*60000*86 + (60000*1760/(3600*1000000))
 \end{lstlisting}
 
-where $x\_time\_in\_us$ is the x-axis and y\_current the y axis in Figure~\ref{fig:model}.
+where $x\_time\_in\_us$ is the x-axis and y\_current the y axis in Figure~\ref{fig:model}
 
 
 \begin{figure}[H]
@@ -1530,7 +1530,7 @@ Inspecting the lifetime of the system in days, reveals that a \ac{BTC} system li
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{lifetime}
 	\end{center}
-	\caption{Lifetime in days of system for 10 channels at a 8 bit resolution varying with the acquisition rate}. 
+	\caption{Lifetime in days of system for 10 channels at a 8 bit resolution varying with the acquisition rate}
 	\label{fig:lifetime}
 \end{figure}
 
@@ -1601,16 +1601,24 @@ The cost of building the system, including no price breaks and sourcing from sta
 \centering
 \caption{Bill of materials}
 \label{tbl:bom}
-\begin{tabular}{|p{1.1in}|p{1.1in}|p{1.1in}|p{1.1in}|} \hline 
-\textbf{Component Name} & \textbf{Value} & \textbf{Quantity} & \textbf{Unit Cost} \\ \hline 
-Needs to be filled in & 8 & 1500 & 192 \\ \hline  
-
-
+\begin{tabular}{|p{2.1in}|p{2.1in}|p{2.1in}|} \hline 
+\textbf{Component Name} & \textbf{Quantity} & \textbf{Unit Cost} \\ \hline 
+CSR1010 QFN32 & 1 &  £1.50\\ \hline  
+Crystal Toyocom TSX3225 & 1 & £1 \\ \hline 
+MC-146 32.768kHz 12.5pF SMT crystal & 1 & £0.80 \\ \hline 
+AT24C512C-SSHD 512K Serial EEPROM SO-8 Package & 1 & £0.95 \\ \hline 
+Inductor Ferrite Core (MMZ1005Y152C)  & 1 & £0.01 \\ \hline 
+Inductor Film Chip Coil (LQP15MN5N1B02) & 1 & £0.08 \\ \hline
+Ferrite (LQM2HPN4R7MGC) & X & £0.16\\ \hline 
+AD7997BRUZ-1 & 2 & £4.13 \\ \hline 
+Various Capacitors & X & ~£0.03  \\ \hline 
+PCB & 1 & £12.00 (10 at £120) \\ \hline 
+Total Estimated cost & 1 & £25  \\ \hline 
 
 \end{tabular}
 \end{table}
 
-As the number produced increases, the marginal cost will decrease and production fixed costs can be spread over more units. It is recommended, if this work is taken further, to use outside assembly for many units as assembly time for a board is at least 2 hours.
+Most of the cost is attributed to the \ac{PCB} and \ac{ADC}s. Postage has not been considered here. As the number produced increases, the marginal cost will decrease and production fixed costs can be spread over more units. It is recommended, if this work is taken further, to use outside assembly for many units as assembly time for a board is at least 2 hours.
 
 \clearpage 
 \section{Conclusions and Future Work}
@@ -1629,11 +1637,11 @@ Another way to improve throughput include compression techniques, for which ther
 
  The system must power up frequently in order to communicate with the \ac{ADC} and requires 2.2ms to power up. This means that when running the \ac{ADC} at more than approximately 450Hz, the device will need to remain powered up at all time. This is done automatically in the firmware. Further, due to the rush current, it may be desirable to have the device constantly awake before reaching this frequency, however this was not investigated, and the expected gain is expected to be small. Again, this is future work that may be useful when running the system at low frequencies. 
 
-While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. From the work currently done, while both \ac{BTC} and \ac{WiFI} can achieve higher energy per bit ratios, due to the higher connection maintenance cost associated with the technologies, \ac{BLE} achieves the greatest energy per bit, due to the easily amortisable connection maintenance for low throughputs (200kbps and below). Further, on the subject of power, a full battery lifetime and stress test has not been performed due to the battery connectors arriving last minute, despite almost a month in waiting. Investigating if the battery can source enough current over long periods is particularly important. 
+While difficult, due to limited literature and an inability to perform the necessary tests during this project, the crossover point (point of radio technology indifference) for the throughput versus power consumption (energy per bit) has not been found, nor has it been rigorously confirmed that at high \ac{BLE} throughputs \ac{BTC} is indeed a better technology as claimed \cite{sig}. Never the less a best attempt showed that this crossover point may exist at around 200kbps, however future work needs to be done to confirm this. As mentioned, a true like for like comparison between the technologies is difficult, however it is believed measuring the power consumption from a transmitting one way RFCOMM serial port profile between two \ac{BTC} devices should give very comparable result. From the work currently done, while both \ac{BTC} and WiFI can achieve higher energy per bit ratios, due to the higher connection maintenance cost associated with the technologies, \ac{BLE} achieves the greatest energy per bit, due to the easily amortisable connection maintenance for low throughputs (200kbps and below). Further, on the subject of power, a full battery lifetime and stress test has not been performed due to the battery connectors arriving last minute, despite almost a month in waiting. Investigating if the battery can source enough current over long periods is particularly important. 
 
 The application currently written for the Windows 8.1 operating system and is easily portable to the Windows 8.1 Phone devices. An issue discovered was that notifications are not necessarily handled by the Microsoft library in the order of arrival, and was found to be fairly regular. This means that \ac{EEG} data may not necessarily be displayed in the right order, despite being transmitted in the correct sequence (verified using WireShark application and sniffer). An immediate work around is to allocate an identifier on in the notification packet, but this consumes valuable throughput, and hence was not done. Rather, Microsoft has been contacted about the issue, and is looking into it. 
 
-This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat.jpg}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
+This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. It is also recommended to add a small push button and maybe a LED to aid usability during connectivity (but being sure to power off the LED once connection is established). The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat.jpg}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
 
 Finally, as mentioned in the \ref{sec:Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable medical journal. 
 
@@ -1665,9 +1673,21 @@ The large amount of both written and generated code is to vast to warrant being 
 In regards to code (repeated from above): The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it  available on-line at the git repository address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
 
-Add final schematic
-Add final board
-Add older schem designs/boards
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{coin.jpg}
+	\end{center}
+	\caption{Final board with coin for reference}. 
+	\label{fig:coin}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width = 0.8\textwidth]{first}
+	\end{center}
+	\caption{First attempt (large board, large vias, with SPI \ac{ADC}s for testing}. 
+	\label{fig:first}
+\end{figure}
 
 \subsection{Acronyms}
 \begin{acronym}
@@ -1727,7 +1747,7 @@ Add older schem designs/boards
 \section{User Guide}
 This is a brief guide in setting up, communicating and controlling the EEG sensor. The application currently only supports the Windows 8.1 operating system and higher, and no support is currently planned for other operating systems. 
 
-To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be navigated to be presing the windows start key, then typing Bluetooth Settings \footnote{Note: If Bluetooth Settings does not appear then your computer does not have a usable Bluetooth device installed. While you may of intalled a Bluetooth device, it is not running Microsoft's Bluetooth driver stack, and hence cannot be used with the appilcation until you either purchase a new Microsoft Bluetooth driver stack capable adapter or install the Microsoft Bluetooth driver stack (not covered here) for this device.} Insert batteries into the underside of EEG sensor device board. The device will immediately power up. Select pair, and the device will be installed. Once this is done please open the application. 
+To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be navigated to be pressing the windows start key, then typing Bluetooth Settings \footnote{Note: If Bluetooth Settings does not appear then your computer does not have a usable Bluetooth device installed. While you may of installed a Bluetooth device, it is not running Microsoft's Bluetooth driver stack, and hence cannot be used with the application until you either purchase a new Microsoft Bluetooth driver stack capable adapter or install the Microsoft Bluetooth driver stack (not covered here) for this device.} Insert batteries into the underside of EEG sensor device board. The device will immediately power up. Select pair, and the device will be installed. Once this is done please open the application. 
 
 \begin{figure}[H]
 	\begin{center}

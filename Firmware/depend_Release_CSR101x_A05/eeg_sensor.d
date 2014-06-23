@@ -34,7 +34,8 @@ depend_Release_CSR101x_A05/eeg_sensor.o: eeg_sensor.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/fault.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/nvm.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/buf_utils.h \
-  app_gatt.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/i2c.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/pio.h app_gatt.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
   eeg_service.h gap_service.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/bt_event_types.h \

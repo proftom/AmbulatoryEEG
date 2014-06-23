@@ -238,5 +238,9 @@ extern void HandleShortButtonPress(void);
 
 /* This function contains handling of extra long button press */
 extern void HandleExtraLongButtonPress(timer_id tid);
+
+extern void readChannels(const uint8 channel_map, uint8 *data);
 #endif /* __HR_SENSOR_H__ */
+
+
 

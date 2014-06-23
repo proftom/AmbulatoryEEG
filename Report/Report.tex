@@ -1638,9 +1638,7 @@ While difficult, due to limited literature and an inability to perform the neces
 
 The application currently written for the Windows 8.1 operating system and is easily portable to the Windows 8.1 Phone devices. An issue discovered was that notifications are not necessarily handled by the Microsoft library in the order of arrival, and was found to be fairly regular. This means that \ac{EEG} data may not necessarily be displayed in the right order, despite being transmitted in the correct sequence (verified using WireShark application and sniffer). An immediate work around is to allocate an identifier on in the notification packet, but this consumes valuable throughput, and hence was not done. Rather, Microsoft has been contacted about the issue, and is looking into it. 
 
-This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. It is also recommended to add a small push button and maybe a LED to aid usability during connectivity (but being sure to power off the LED once connection is established). The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Table~\ref{tbl:specac} lists the achieved specifications. 
-
-Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
+This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. It is also recommended to add a small push button and maybe a LED to aid usability during connectivity (but being sure to power off the LED once connection is established). The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
 
 Finally, as mentioned in the \ref{sec:Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable medical journal. 
 
@@ -1671,23 +1669,6 @@ The large amount of both written and generated code is to vast to warrant being 
 
 In regards to code (repeated from above): The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it  available on-line at the git repository address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
-
-\begin{table}[H]
-\centering
-\caption{Achieved Specification}
-\label{tbl:specac}
-\begin{tabular}{|p{2.5in}|p{2.5in}|} \hline 
-\textbf{Specification point} & \textbf{Comments} \\ \hline 
-2.5 day battery life & Voltage drop on ZincAir batteries assumed not to be too great for vast majority of lifetime. \\ \hline  
-2.8V supply  &  Two 620mAH 1.4V ZincAir batteries are used \\ \hline  
-10 meter range life & Achieved \\ \hline  
-8 or 10 bit resolution & Current only 8 bits are sent, despite 10 being measured. \\ \hline  
-Weight of less than 7 grams & Less than 6.5grams achieved \\ \hline  
-\ac{BLE} technology & Used as the only radio technology\\ \hline  
-Tablet application & Demo application created\\ \hline  
-50 by 50 by 10 mm & Half this size was achieved \\ \hline  
-\end{tabular}
-\end{table}
 
 \begin{figure}[H]
 	\begin{center}

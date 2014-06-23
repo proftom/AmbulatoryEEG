@@ -28,6 +28,7 @@
 #include <panic.h>
 #include <nvm.h>
 #include <buf_utils.h>
+#include <i2c.h>
 
 /*============================================================================*
  *  Local Header Files
@@ -185,6 +186,9 @@ static void hrMeasTimerHandler(timer_id tid);
  */
 static void idleDormantTimerExpiryHandler(timer_id tid);
 #endif /* ENABLE_DORMANT_MODE_FUNCTIONALITY */
+
+static int bitcount(uint8 byte);
+
 
 /*static uint8 writeASCIICodedNumber(uint32 value);
 ============================================================================*
@@ -2906,4 +2910,47 @@ extern bool AppProcessLmEvent(lm_event_code event_code,
     }
 
     return TRUE;
+}
+
+
+static int bitcount(uint8 byte)
+{ 
+      int bitCount=0;
+      while(byte)
+      {
+           bitCount += byte & 0x1u;
+           byte >>= 1;
+      }
+      return bitCount;
+ }
+
+extern void readChannels(const uint8 channel_map, uint8 *data) {
+    
+    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    I2cRawWriteByte((0b0100011 << 1) | 0);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    I2cRawWriteByte(0b01110010);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    /*Channel map*/
+    I2cRawWriteByte(channel_map >> 4);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    I2cRawWriteByte((channel_map << 4) | 0b1000);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    
+    /*Setup conversion register for read access*/
+    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    I2cRawWriteByte(0b01000110);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);    
+    I2cRawWriteByte(0b01110000);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    
+    /*read*/
+    I2cRawCommand( i2c_cmd_send_restart, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    I2cRawWriteByte(0b01000111);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    I2cRawRead(data, bitcount(channel_map)*2);
+    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    
+    I2cRawTerminate();
 }

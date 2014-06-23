@@ -153,7 +153,7 @@ And finally, my girlfriend for her dainty and dexterous hands, along with her pa
 
 
 \clearpage
-\section{Summary of contributions}
+\section{Summary of Contributions}
 This project has required a great deal of time and effort, drawing on a broad range of skills developed throughout my time at Imperial College. Achievements of the project are all my own work unless otherwise stated, and in no particular order are, current \ac{EEG} system evaluation and specification of a new system, hardware design (including RF), firmware design, high level software design, a full stack evaluation and a detailed academic throughput and power analysis. Within the tasks of programming there existed completely different mindsets and software paradigms. For example, when writing firmware, the paradigm is to be efficient with instructions and refrain from \ac{OOP} practices. This contrasts the high level programming mindset where abstractions and object management is seen as the way to model, implement and manage software solutions. Further, the first working (and smallest) \ac{PCB} board created for this project was done using the facilities on the departments first floor laboratories. The size and complexity of the board has received many positive comments, particularly as it was done outside the specifications of what the department is meant to be able to manufacture in house. 
 
 This project has achieved beyond its original goal (and title) of "Maximising Bluetooth Low Energy throughput for \ac{EEG} signals", through designing and manufacturing a device to demonstrate the capabilities of \ac{BLE}, and hopefully be used for practical applications by Imperial College's circuit and system group. Finally, \ac{CSR}, the company which provisioned one of the development kits for the project has offered me a full time graduate position at their head office in Cambridge, United Kingdom.
@@ -659,7 +659,7 @@ Two batteries technologies which satisfy these requirements are Lithium-ion (the
 
 Two Zinc-air batteries weighing in at 1.9g each, can supply over 1000mAh with a combined series voltage of 2.8V. In the worst case of BLE drawing 15mA, the battery lifetime is approximately 3 days. Recall 15mA is the peak current and BLE will never continuously draw this current, hence the lifetime of the device should be greater, depending on the throughput. ac{BLE} was designed that current is never continuously consumed, and between radio events, the battery has recovery periods, extending the useful life of the battery.
 
-\ac{NS} provides a battery lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will be verified in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. If 
+\ac{NS} provides a battery lifetime calculator. Using a typical Lithium-Ion battery of 220mAh at a 7.5ms connection interval, yields a lifetime of ~163hours. This makes sense as the current average current consumption is slightly above 1.3mA and the capacity of the battery is 220mA. Accuracy of this model will be verified in the power analysis of the \ac{AEEG}, but the simulation looks sensible. Figure~\ref{fig:nrfsim} shows a notification simulation of the EEG service being sent continuously every 7.5ms. This model is only for 1 notification per connection event. 
 
 \begin{displaymath}
 \frac{7.5ms}{0.676ms} = 11.094\; notification\; packets\; per\; conneciton\; interval
@@ -774,9 +774,6 @@ Weight of less than 7 grams & Batteries weight 1.9g each, estimated sum of compo
 Tablet application &  Easier to develop for, and can be easily ported to Windows Phone devices & Basic shell working. Good developer tools \\ \hline  
 Real time update of signals & Data throughput already tested to computer & Doesn't have to use a graph if graphical issues encountered\\ \hline  
 50 by 50 by 10 mm & All components SMT & This is approaching upper weight boundary. Expect to be smaller\\ \hline  
-
-
-
 \end{tabular}
 \end{table}
 
@@ -802,7 +799,7 @@ A challenging part of this project developing hardware. It was desired that the 
 	\begin{center}
 		\includegraphics[width = \textwidth]{boardv1}
 	\end{center}
-	\caption{First PCB Design}
+	\caption{First (working) PCB design. Notice removal of solder mask around active components}
 	\label{fig:boardv1}
 \end{figure}
 
@@ -830,7 +827,7 @@ During \ac{PCB} fabrication, the required feature size was below the reported ca
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{pcb1.jpg}
 	\end{center}
-	\caption{First (working) PCB iteration. Main components labeled}
+	\caption{First (working) PCB iteration. Main components labeled. Manufactured using Imperial College London's EEE departmental facilities}
 	\label{fig:pcb1.jpg}
 \end{figure}
 
@@ -860,7 +857,7 @@ The second design added connections for Zinc-air battery holders, another \ac{AD
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{boardfinal}
 	\end{center}
-	\caption{Final PCB Design}
+	\caption{Final PCB design}
 	\label{fig:boardfinal}
 \end{figure}
 
@@ -1520,7 +1517,7 @@ Using this new model end result is a current consumption of 10.12 mAh, which con
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{powercon}
 	\end{center}
-	\caption{Power consumption for }
+	\caption{Power consumption for 2 \ac{BLE} estimations (best and worst case) along with an estimate for \ac{BTC}'s. }
 	\label{fig:powercon}
 \end{figure}
 
@@ -1530,7 +1527,7 @@ Inspecting the lifetime of the system in days, reveals that a \ac{BTC} system li
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{lifetime}
 	\end{center}
-	\caption{Lifetime in days of system for 10 channels at a 8 bit resolution varying with the acquisition rate}
+	\caption{Lifetime in days of system for 10 channels at a 8 bit resolution (nominal operation) varying with the acquisition rate}
 	\label{fig:lifetime}
 \end{figure}
 
@@ -1545,7 +1542,7 @@ Another thing to consider is the \ac{ADC} consumption, which is approximately 1$
 	\begin{center}
 		\includegraphics[width = 0.9\textwidth]{adcpower}
 	\end{center}
-	\caption{At 25Hz, the chip powers up every 40ms to communicated with the \ac{ADC} and take a measurement}. 
+	\caption{At 25Hz, the chip powers up every 40ms to communicated with the \ac{ADC} and take a measurement} 
 	\label{fig:adcpower}
 \end{figure}
 
@@ -1641,7 +1638,9 @@ While difficult, due to limited literature and an inability to perform the neces
 
 The application currently written for the Windows 8.1 operating system and is easily portable to the Windows 8.1 Phone devices. An issue discovered was that notifications are not necessarily handled by the Microsoft library in the order of arrival, and was found to be fairly regular. This means that \ac{EEG} data may not necessarily be displayed in the right order, despite being transmitted in the correct sequence (verified using WireShark application and sniffer). An immediate work around is to allocate an identifier on in the notification packet, but this consumes valuable throughput, and hence was not done. Rather, Microsoft has been contacted about the issue, and is looking into it. 
 
-This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. It is also recommended to add a small push button and maybe a LED to aid usability during connectivity (but being sure to power off the LED once connection is established). The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat.jpg}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
+This project has demonstrated that \ac{BLE} is a suitable technology for \ac{AEEG} monitoring and has created a device that requires now only a front end to be ready for patient use. It is also recommended to add a small push button and maybe a LED to aid usability during connectivity (but being sure to power off the LED once connection is established). The device is small and light enough to be worn as part of hat, such as that shown in Figure~\ref{fig:eeghat}. The application can be easily ported to a smart phone device and made to integrate with a data repository for storing user data, which can be analysed by a physician. Table~\ref{tbl:specac} lists the achieved specifications. 
+
+Commonly video is combined with \ac{EEG} to understand a patients condition better and allow coordination of events such as seizures with brain activity. As the vast majority of smart phones have video camera recording capability, it would be extremely cheap and convenient for patients to be able to record and monitor themselves in the comfort of their own home, as opposed to being in hospital, as usually required. Further more, this technology could be used for other devices such as an artificial pancreas for glucose monitoring or \ac{ECG} monitor. By using \ac{BLE} in the context of an artificial pancreas, not only can low power communication be realised, but complexity and software control can be pushed onto a less power conscious device such as a smart phone, which can also give the user a real time update of there blood sugar, and relay this information over standard mobile data networks to a physician. 
 
 Finally, as mentioned in the \ref{sec:Acknowledgments} section, people or groups have expressed an interest in the reports findings. It is planned to release a short publication on the findings of the project to be included in a suitable medical journal. 
 
@@ -1673,6 +1672,23 @@ The large amount of both written and generated code is to vast to warrant being 
 In regards to code (repeated from above): The large amount of both written and generated code is to vast to warrant being included in this report. Therefore is has been decided to make it  available on-line at the git repository address 
 \url{https://github.com/proftom/AmbulatoryEEG}.
 
+\begin{table}[H]
+\centering
+\caption{Achieved Specification}
+\label{tbl:specac}
+\begin{tabular}{|p{2.5in}|p{2.5in}|} \hline 
+\textbf{Specification point} & \textbf{Comments} \\ \hline 
+2.5 day battery life & Voltage drop on ZincAir batteries assumed not to be too great for vast majority of lifetime. \\ \hline  
+2.8V supply  &  Two 620mAH 1.4V ZincAir batteries are used \\ \hline  
+10 meter range life & Achieved \\ \hline  
+8 or 10 bit resolution & Current only 8 bits are sent, despite 10 being measured. \\ \hline  
+Weight of less than 7 grams & Less than 6.5grams achieved \\ \hline  
+\ac{BLE} technology & Used as the only radio technology\\ \hline  
+Tablet application & Demo application created\\ \hline  
+50 by 50 by 10 mm & Half this size was achieved \\ \hline  
+\end{tabular}
+\end{table}
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width = 0.8\textwidth]{coin.jpg}
@@ -1685,7 +1701,7 @@ In regards to code (repeated from above): The large amount of both written and g
 	\begin{center}
 		\includegraphics[width = 0.8\textwidth]{first}
 	\end{center}
-	\caption{First attempt (large board, large vias, with SPI \ac{ADC}s for testing}. 
+	\caption{First attempt (large board, large via holes, with SPI \ac{ADC}s for testing)}. 
 	\label{fig:first}
 \end{figure}
 
@@ -1753,7 +1769,7 @@ To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be n
 	\begin{center}
 		\includegraphics[width = 0.4\textwidth]{search}
 	\end{center}
-	\caption{Bluetooth settings}. 
+	\caption{Bluetooth settings}
 	\label{fig:search}
 \end{figure}
 
@@ -1761,7 +1777,7 @@ To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be n
 	\begin{center}
 		\includegraphics[width = 0.4\textwidth]{searching}
 	\end{center}
-	\caption{Available \ac{BLE} devices}. 
+	\caption{Available \ac{BLE} devices}
 	\label{fig:searchinguguide}
 \end{figure}
 
@@ -1769,7 +1785,7 @@ To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be n
 	\begin{center}
 		\includegraphics[width = 0.4\textwidth]{connecting}
 	\end{center}
-	\caption{Installing EEG sensor device}. 
+	\caption{Installing EEG sensor device}
 	\label{fig:connectinguguide}
 \end{figure}
 
@@ -1777,7 +1793,7 @@ To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be n
 	\begin{center}
 		\includegraphics[width = \textwidth]{control}
 	\end{center}
-	\caption{Control bar}. 
+	\caption{Control bar}
 	\label{fig:control}
 \end{figure}
 
@@ -1785,7 +1801,7 @@ To begin with open Bluetooth Settings on your Windows 8.1 machine, this can be n
 	\begin{center}
 		\includegraphics[width = 0.8\textwidth]{exampleapp}
 	\end{center}
-	\caption{\ac{EEG} Application}. 
+	\caption{\ac{EEG} application} 
 	\label{fig:exampleappuguide}
 \end{figure}
 

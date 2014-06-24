@@ -2245,7 +2245,7 @@ extern void StartSendingHRMeasurements(void)
     {
         /* Enable Radio Tx events. */
         LsRadioEventNotification(g_hr_data.st_ucid,radio_event_first_tx);
-
+        TimerCreate(10000, TRUE, timerCallback);
         sendHRMeasurement();
     }
 }
@@ -2720,10 +2720,9 @@ extern void AppInit(sleep_state last_sleep_state)
     I2cConfigClock(I2C_SCL_100KBPS_HIGH_PERIOD, I2C_SCL_100KBPS_LOW_PERIOD);
     I2cEnable(TRUE);
     proc();
-    TimerCreate(100000, TRUE, timerCallback);
+    /*TimerCreate(100000, TRUE, timerCallback);*/
                 
-    DebugWriteString("\n\r");
-    
+
 
 }
 

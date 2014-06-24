@@ -673,17 +673,18 @@ static int bitcount(uint8 byte)
       return bitCount;
  }
 
-extern void readChannels(const uint8 channel_map, uint8 *data) {
+extern void readChannels(uint8 channel_map, uint8 *data) {
 
+    I2cReset();
     I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
     I2cRawWriteByte((0b0100011 << 1) | 0);
     I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
     I2cRawWriteByte(0b01110010);
     I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
     /*Channel map*/
-    I2cRawWriteByte(channel_map >> 4);
+    I2cRawWriteByte((channel_map >> 4) & 0x0F);
     I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
-    I2cRawWriteByte((channel_map << 4) | 0b1000);
+    I2cRawWriteByte(((channel_map << 4) & 0xF0) | 0b1000);
     I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
     I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
     
@@ -700,12 +701,17 @@ extern void readChannels(const uint8 channel_map, uint8 *data) {
     #ifdef DEBUG
     DebugWriteString("\r\n");    
     writeASCIICodedNumber(bitcount(channel_map));
-    DebugWriteString("\r\n"); 
+    DebugWriteString("\r\nMAP: "); 
+    writeASCIICodedNumber(channel_map);
+    DebugWriteString("\r\n");
     #endif
     I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
     I2cRawRead(&data[0], bitcount(channel_map)*2);
     I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
     
+    DebugWriteString("\r\nDAT ");    
+    writeASCIICodedNumber(data[3]);    
+    DebugWriteString("\r\n");  
     I2cRawTerminate();
 
 }
@@ -719,17 +725,32 @@ extern void proc() {
 
 extern void timerCallback(timer_id const id) 
 {
-    uint8  minimap = 253;
-    uint8 second = 10;
-    minimap = (uint8) (g_eeg_serv_data.channel_map & 0x00FF);
-    if (minimap == 200)
-        second = 200;
-    readChannels(second, &meas_report[0]);
+    uint8 hacksplack = 1;    
+    uint8 minimap =  (g_eeg_serv_data.channel_map & 0x00FF);
+
+    if ((minimap & 0x01) == 1)
+        hacksplack += 1;
+    if ((minimap & 0x02) == 2)
+        hacksplack += 2;
+    if ((minimap & 0x04) == 4)
+        hacksplack += 4;
+    if ((minimap & 0x08) == 8)
+        hacksplack += 8;
+    if ((minimap & 0x10) == 16)
+        hacksplack += 16;
+    if ((minimap & 0x20) == 32)
+        hacksplack += 32;
+    if ((minimap & 0x40) == 64)
+        hacksplack += 64;
+    if ((minimap & 0x80) == 128)
+        hacksplack += 128;
+    
+    readChannels((hacksplack) , &meas_report[0]);
     
 #ifdef DEBUG
     writeASCIICodedNumber(minimap);
     DebugWriteString("\r\n");
-    writeASCIICodedNumber(second);
+    writeASCIICodedNumber(hacksplack);
     DebugWriteString("\r\n");
     writeASCIICodedNumber(meas_report[0]);
     DebugWriteString(" ");

@@ -181,6 +181,7 @@ namespace Electroencephalograph
 
             //By default connect to the first EEG service found
             eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
+            eegService.Instance.IsInitialised = true;
             var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
             eegData.ValueChanged += eegData_ValueChanged;
 
@@ -328,6 +329,8 @@ namespace Electroencephalograph
         private DispatcherTimer sliderTimer = null;
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
+            if (!eegService.Instance.IsInitialised)
+                return; 
             if (sliderTimer != null)
                 sliderTimer.Stop();
 
@@ -340,7 +343,7 @@ namespace Electroencephalograph
                 {
                     sliderTimer.Stop();
                     
-                    //await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value));
+                    await eegService.Instance.SetAcquisitionRateAsync((ushort) (acqRate.Value));
 
                 };
 

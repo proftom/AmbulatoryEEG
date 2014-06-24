@@ -48,7 +48,7 @@
                     </TextBlock>
                 </StackPanel>
                 <AppBarSeparator Width="14"/>
-                <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"  Value="30" />
+                <Slider Width="300" VerticalAlignment="Center" x:Name="acqRate" ValueChanged="Slider_ValueChanged" Foreground="White"  Value="30" Maximum="1000" />
                 <AppBarButton Label="Save" Icon="Save" />
 
             </StackPanel>

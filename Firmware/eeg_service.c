@@ -35,7 +35,7 @@
 /*============================================================================*
  *  Private Data Types
  *============================================================================*/
-#define DEBUG
+
 /*Heart Rate service data type */
 typedef struct
 {
@@ -359,7 +359,7 @@ int i = 0;
 
     
     
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 1; i++) {
        /*DebugWriteString("\n\rTransmit.."); */
        GattCharValueNotification(ucid, 
               HANDLE_EEG_MEASUREMENT, 
@@ -698,20 +698,11 @@ extern void readChannels(uint8 channel_map, uint8 *data) {
     /*read*/
     I2cRawCommand( i2c_cmd_send_restart, TRUE, I2C_WAIT_CMD_TIMEOUT);
     I2cRawWriteByte(0b01000111);
-    #ifdef DEBUG
-    DebugWriteString("\r\n");    
-    writeASCIICodedNumber(bitcount(channel_map));
-    DebugWriteString("\r\nMAP: "); 
-    writeASCIICodedNumber(channel_map);
-    DebugWriteString("\r\n");
-    #endif
+
     I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
     I2cRawRead(&data[0], bitcount(channel_map)*2);
     I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
     
-    DebugWriteString("\r\nDAT ");    
-    writeASCIICodedNumber(data[3]);    
-    DebugWriteString("\r\n");  
     I2cRawTerminate();
 
 }
@@ -725,7 +716,7 @@ extern void proc() {
 
 extern void timerCallback(timer_id const id) 
 {
-    uint8 hacksplack = 1;    
+    uint8 hacksplack = 0;    
     uint8 minimap =  (g_eeg_serv_data.channel_map & 0x00FF);
 
     if ((minimap & 0x01) == 1)
@@ -745,10 +736,12 @@ extern void timerCallback(timer_id const id)
     if ((minimap & 0x80) == 128)
         hacksplack += 128;
     
+    if (hacksplack == 0)
+        hacksplack = 1;
     readChannels((hacksplack) , &meas_report[0]);
     
 #ifdef DEBUG
-    writeASCIICodedNumber(minimap);
+   /* writeASCIICodedNumber(minimap);
     DebugWriteString("\r\n");
     writeASCIICodedNumber(hacksplack);
     DebugWriteString("\r\n");
@@ -763,7 +756,17 @@ extern void timerCallback(timer_id const id)
     writeASCIICodedNumber(meas_report[4]);
     DebugWriteString(" ");
     writeASCIICodedNumber(meas_report[5]);
-    DebugWriteString("\r\n"); /**/
+    DebugWriteString("\r\n"); */
 #endif
-    TimerCreate(10000, TRUE, timerCallback);
+    
+    if ((g_eeg_serv_data.acquisition_rate < 1) || (g_eeg_serv_data.acquisition_rate > 900))
+        g_eeg_serv_data.acquisition_rate = 10000;
+
+    
+    TimerCreate((TIME) (((uint32) g_eeg_serv_data.acquisition_rate) * 100UL), TRUE, timerCallback);
+ #ifdef DEBUG   
+   
+    writeASCIICodedNumber(g_eeg_serv_data.acquisition_rate * 100UL);
+
+    #endif
 }

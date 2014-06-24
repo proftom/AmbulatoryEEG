@@ -22,7 +22,7 @@ namespace Electroencephalograph
         public UInt32 AcquisitionRate { get; set; }
 
         public List<eegChannel> eegChannels { get; set; }
-        public bool IsInitialised { get; private set; }
+        public bool IsInitialised { get; set; }
 
         public GattDeviceService service { get; set; }
         public GattCharacteristic characteristic { get; set; }
@@ -32,7 +32,7 @@ namespace Electroencephalograph
         {
             ChannelMap = channelMap;
             AcquisitionRate = acquisitionRate;
-            IsInitialised = true;
+            
         }
 
         public eegService() : this(0x0000, 0xFF) { }

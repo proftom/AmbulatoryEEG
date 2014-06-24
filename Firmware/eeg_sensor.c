@@ -2719,7 +2719,8 @@ extern void AppInit(sleep_state last_sleep_state)
     I2cInit(I2C_RESERVED_PIO , I2C_RESERVED_PIO , I2C_POWER_PIO_UNDEFINED, pio_mode_strong_pull_up);
     I2cConfigClock(I2C_SCL_100KBPS_HIGH_PERIOD, I2C_SCL_100KBPS_LOW_PERIOD);
     I2cEnable(TRUE);
-    proc();
+    
+
     /*TimerCreate(100000, TRUE, timerCallback);*/
                 
 

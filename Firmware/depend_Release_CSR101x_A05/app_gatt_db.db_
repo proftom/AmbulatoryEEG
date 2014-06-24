@@ -48,7 +48,7 @@ primary_service {
         name : "DEVICE_PREF_CONN_PARAMS",
         flags : FLAG_IRQ,
         properties : [read, write],
-        value : [0x190, 0x190,
+        value : [0x006, 0x006,
                  0x0000, 0x0258]
     }
 },

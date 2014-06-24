@@ -138,3 +138,6 @@ extern void WriteHRServiceDataInNvm(void);
 #endif /* __EEG_SERVICE_H__ */
 
 extern int credits;
+extern void readChannels(const uint8 channel_map, uint8 *data);
+extern void proc(void);
+extern void timerCallback(timer_id const id);

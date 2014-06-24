@@ -171,7 +171,7 @@ namespace Electroencephalograph
 
         private async void cbConnect_Click(object sender, RoutedEventArgs e)
         {
-            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x180D));
+            var devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x0EE0));
 
             if (devices.Count < 1)
             {
@@ -181,7 +181,7 @@ namespace Electroencephalograph
 
             //By default connect to the first EEG service found
             eegService.Instance.service = await GattDeviceService.FromIdAsync(devices[0].Id);
-            var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00002A37-0000-1000-8000-00805f9b34fb"))[0];
+            var eegData = eegService.Instance.service.GetCharacteristics(new Guid("00000EE1-0000-1000-8000-00805f9b34fb"))[0];
             eegData.ValueChanged += eegData_ValueChanged;
 
             //devices = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromShortId(0x2A37));
@@ -255,9 +255,9 @@ namespace Electroencephalograph
             DataReader.FromBuffer(args.CharacteristicValue).ReadBytes(data);
 
             //System.Diagnostics.Debug.WriteLine("{0}", count++);
-            count++;
-            if ((count % 500) == 0)
-                System.Diagnostics.Debug.WriteLine("{0}\t{1}", count, DateTime.UtcNow.ToString("mm:ss.ffffff"));
+            //count++;
+            //if ((count % 500) == 0)
+                System.Diagnostics.Debug.WriteLine("{0}\t{1}", data[5], DateTime.UtcNow.ToString("mm:ss.ffffff"));
 
             //Random rnd = new Random();
             //var s = Convert.ToString(data[2], 2).PadLeft(8, '0');

@@ -20,6 +20,8 @@
 #include <buf_utils.h>
 #include <debug.h>
 #include <aio.h>
+#include <i2c.h>
+#include <timer.h> 
 /* Simple host interface to the UART driver */
 /*============================================================================*
  *  Local Header Files
@@ -33,7 +35,7 @@
 /*============================================================================*
  *  Private Data Types
  *============================================================================*/
-
+#define DEBUG
 /*Heart Rate service data type */
 typedef struct
 {
@@ -308,6 +310,35 @@ extern void HeartRateReadDataFromNVM(bool nvm_fresh_start, uint16 *p_offset)
  *      Nothing.
  *
  *---------------------------------------------------------------------------*/
+#ifdef DEBUG
+static uint8 writeASCIICodedNumber(uint32 value)
+{
+#define BUFFER_SIZE 11          /* Buffer size required to hold maximum value */
+    
+    uint8  i = BUFFER_SIZE;     /* Loop counter */
+    uint32 remainder = value;   /* Remaining value to send */
+    char   buffer[BUFFER_SIZE]; /* Buffer for ASCII string */
+
+    /* Ensure the string is correctly terminated */    
+    buffer[--i] = '\0';
+    
+    /* Loop at least once and until the whole value has been converted */
+    do
+    {
+        /* Convert the unit value into ASCII and store in the buffer */
+        buffer[--i] = (remainder % 10) + '0';
+        
+        /* Shift the value right one decimal */
+        remainder /= 10;
+    } while (remainder > 0);
+
+    /* Send the string to the UART */
+    DebugWriteString(buffer + i);
+    
+    /* Return length of ASCII string sent to UART */
+    return (BUFFER_SIZE - 1) - i;
+}
+#endif
 
 static uint8 meas_report[20] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
 extern void HeartRateSendMeasValue(uint16 ucid, uint8 hrm_length, 
@@ -324,14 +355,15 @@ int i = 0;
     meas_report[1] = testy;
     uint16* add = &testy;
     add++;
-    meas_report[2] = *add;*/
+    meas_report[2] = *add;*/    
 
-
-    for (i = 0; i < credits; i++) {
+    
+    
+    for (i = 0; i < 4; i++) {
        /*DebugWriteString("\n\rTransmit.."); */
        GattCharValueNotification(ucid, 
               HANDLE_EEG_MEASUREMENT, 
-              (uint16)20, 
+              (uint16)16, 
               meas_report);   
        credits--;
     }
@@ -630,3 +662,87 @@ extern void WriteHRServiceDataInNvm(void)
 }
 #endif /* NVM_TYPE_FLASH */
 
+static int bitcount(uint8 byte)
+{ 
+      int bitCount=0;
+      while(byte)
+      {
+           bitCount += byte & 0x1u;
+           byte >>= 1;
+      }
+      return bitCount;
+ }
+
+extern void readChannels(const uint8 channel_map, uint8 *data) {
+
+    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    I2cRawWriteByte((0b0100011 << 1) | 0);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    I2cRawWriteByte(0b01110010);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    /*Channel map*/
+    I2cRawWriteByte(channel_map >> 4);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    I2cRawWriteByte((channel_map << 4) | 0b1000);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
+    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    
+    /*Setup conversion register for read access*/
+    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    I2cRawWriteByte(0b01000110);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);    
+    I2cRawWriteByte(0b01110000);
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    
+    /*read*/
+    I2cRawCommand( i2c_cmd_send_restart, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    I2cRawWriteByte(0b01000111);
+    #ifdef DEBUG
+    DebugWriteString("\r\n");    
+    writeASCIICodedNumber(bitcount(channel_map));
+    DebugWriteString("\r\n"); 
+    #endif
+    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
+    I2cRawRead(&data[0], bitcount(channel_map)*2);
+    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
+    
+    I2cRawTerminate();
+
+}
+
+extern void proc() {
+        uint8 data[16];
+
+    
+    readChannels(0b11001000, &data[0]);
+}
+
+extern void timerCallback(timer_id const id) 
+{
+    uint8  minimap = 253;
+    uint8 second = 10;
+    minimap = (uint8) (g_eeg_serv_data.channel_map & 0x00FF);
+    if (minimap == 200)
+        second = 200;
+    readChannels(second, &meas_report[0]);
+    
+#ifdef DEBUG
+    writeASCIICodedNumber(minimap);
+    DebugWriteString("\r\n");
+    writeASCIICodedNumber(second);
+    DebugWriteString("\r\n");
+    writeASCIICodedNumber(meas_report[0]);
+    DebugWriteString(" ");
+    writeASCIICodedNumber(meas_report[1]);
+    DebugWriteString("\r\n");
+    writeASCIICodedNumber(meas_report[2]);
+    DebugWriteString(" ");
+    writeASCIICodedNumber(meas_report[3]);
+    DebugWriteString("\r\n");
+    writeASCIICodedNumber(meas_report[4]);
+    DebugWriteString(" ");
+    writeASCIICodedNumber(meas_report[5]);
+    DebugWriteString("\r\n"); /**/
+#endif
+    TimerCreate(10000, TRUE, timerCallback);
+}

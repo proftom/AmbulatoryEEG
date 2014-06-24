@@ -20,11 +20,13 @@ depend_Release_CSR101x_A05/eeg_service.o: eeg_service.c \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/buf_utils.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/debug.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/uart.h \
-  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/aio.h app_gatt.h \
-  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
-  eeg_service.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/aio.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/i2c.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/pio.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/timer.h \
-  depend_Release_CSR101x_A05/app_gatt_db.h \
+  app_gatt.h \
+  C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/types.h \
+  eeg_service.h depend_Release_CSR101x_A05/app_gatt_db.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/main.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/sys_events.h \
   C:/CSR_uEnergy_SDK-2.3.0.31/tools/include/CSR101x_A05/sleep.h \

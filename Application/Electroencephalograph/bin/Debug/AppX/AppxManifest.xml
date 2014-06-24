@@ -31,7 +31,7 @@
     <Capability Name="internetClient" />
     <m2:DeviceCapability Name="bluetooth.genericAttributeProfile">
       <m2:Device Id="any">
-        <m2:Function Type="serviceId:00000EE4-0000-1000-8000-00805f9b34fb" />
+        <m2:Function Type="serviceId:00000EE0-0000-1000-8000-00805f9b34fb" />
         <m2:Function Type="serviceId:00001800-0000-1000-8000-00805f9b34fb" />
         <m2:Function Type="serviceId:00001801-0000-1000-8000-00805f9b34fb" />
         <m2:Function Type="serviceId:00002A04-0000-1000-8000-00805f9b34fb" />

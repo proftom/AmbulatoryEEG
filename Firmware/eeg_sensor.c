@@ -187,7 +187,7 @@ static void hrMeasTimerHandler(timer_id tid);
 static void idleDormantTimerExpiryHandler(timer_id tid);
 #endif /* ENABLE_DORMANT_MODE_FUNCTIONALITY */
 
-static int bitcount(uint8 byte);
+
 
 
 /*static uint8 writeASCIICodedNumber(uint32 value);
@@ -2661,8 +2661,8 @@ extern void AppInit(sleep_state last_sleep_state)
     /* Initialise the application timers */
     TimerInit(MAX_APP_TIMERS, (void*)app_timers);
     
-    DebugInit(1, NULL, NULL);    
-    
+    DebugInit(1, NULL, NULL);   
+
     /* Initialise GATT entity */
     GattInit();
 
@@ -2715,6 +2715,15 @@ extern void AppInit(sleep_state last_sleep_state)
     g_hr_data.state = app_state_init;
 
     GattAddDatabaseReq(gatt_db_length, p_gatt_db_pointer);
+    
+    I2cInit(I2C_RESERVED_PIO , I2C_RESERVED_PIO , I2C_POWER_PIO_UNDEFINED, pio_mode_strong_pull_up);
+    I2cConfigClock(I2C_SCL_100KBPS_HIGH_PERIOD, I2C_SCL_100KBPS_LOW_PERIOD);
+    I2cEnable(TRUE);
+    proc();
+    TimerCreate(100000, TRUE, timerCallback);
+                
+    DebugWriteString("\n\r");
+    
 
 }
 
@@ -2913,44 +2922,3 @@ extern bool AppProcessLmEvent(lm_event_code event_code,
 }
 
 
-static int bitcount(uint8 byte)
-{ 
-      int bitCount=0;
-      while(byte)
-      {
-           bitCount += byte & 0x1u;
-           byte >>= 1;
-      }
-      return bitCount;
- }
-
-extern void readChannels(const uint8 channel_map, uint8 *data) {
-    
-    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
-    I2cRawWriteByte((0b0100011 << 1) | 0);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
-    I2cRawWriteByte(0b01110010);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
-    /*Channel map*/
-    I2cRawWriteByte(channel_map >> 4);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
-    I2cRawWriteByte((channel_map << 4) | 0b1000);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);  
-    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
-    
-    /*Setup conversion register for read access*/
-    I2cRawCommand(i2c_cmd_send_start, TRUE, I2C_WAIT_CMD_TIMEOUT);
-    I2cRawWriteByte(0b01000110);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);    
-    I2cRawWriteByte(0b01110000);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
-    
-    /*read*/
-    I2cRawCommand( i2c_cmd_send_restart, TRUE, I2C_WAIT_CMD_TIMEOUT);
-    I2cRawWriteByte(0b01000111);
-    I2cRawCommand(i2c_cmd_wait_ack, TRUE, I2C_WAIT_ACK_TIMEOUT);
-    I2cRawRead(data, bitcount(channel_map)*2);
-    I2cRawCommand(i2c_cmd_send_stop, TRUE, I2C_WAIT_CMD_TIMEOUT);
-    
-    I2cRawTerminate();
-}
